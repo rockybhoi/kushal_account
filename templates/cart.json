@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "show_page_title": true,
+        "enable_cart_notes": false,
+        "show_tax_and_shipping": true,
+        "cart_terms_page": "",
+        "show_additional_checkout_buttons": true,
+        "show_backorder_text": true,
+        "show_shipping_calculator": false,
+        "shipping_calculator_default_country": "United States"
+      }
+    },
+    "40a9f92c-c8a8-440f-af2b-cf9d3404fc56": {
+      "type": "trust-icons",
+      "blocks": {
+        "2205c743-6a92-4f4b-a8fd-0cd5dcd18aa4": {
+          "type": "Icon",
+          "settings": {
+            "img": "shopify://shop_images/15-Day-Return-SVG_8eca4b76-49ff-4f8b-ac9a-4fcd45d62786.svg",
+            "title": "<p>15 Days Easy Return</p>"
+          }
+        },
+        "3a182cff-ed59-40f8-b28d-cc68909fc190": {
+          "type": "Icon",
+          "settings": {
+            "img": "shopify://shop_images/Free-Shipping-SVG_4ba54238-2532-4984-b2c9-fd4acf7e3926.svg",
+            "title": "<p>Free Shipping In India</p>"
+          }
+        },
+        "869c56db-0e6f-4f62-868f-46c5d45fe5e1": {
+          "type": "Icon",
+          "settings": {
+            "img": "shopify://shop_images/100_100.png",
+            "title": "<p>Secure Transaction</p>"
+          }
+        }
+      },
+      "block_order": [
+        "2205c743-6a92-4f4b-a8fd-0cd5dcd18aa4",
+        "3a182cff-ed59-40f8-b28d-cc68909fc190",
+        "869c56db-0e6f-4f62-868f-46c5d45fe5e1"
+      ],
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "40a9f92c-c8a8-440f-af2b-cf9d3404fc56"
+  ]
+}

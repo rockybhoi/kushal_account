@@ -1,0 +1,274 @@
+<style>
+ .user_review_img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+  .user_reating_img {
+    width: 100%;
+    max-width: 128px;
+    margin: 8px auto 0 auto;
+}
+  .review_text {
+    color: #3E3E3E;
+    text-align: center;
+    font-size: 17px;
+    max-width: 100%;
+    margin: 15px auto 0 auto;
+    padding: 0 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    letter-spacing: 1px;
+}
+ 
+  .ct-review-box {
+    transition: all 0.3s ease;
+    padding: 0px 0 0 0;
+    transform: scale(1);
+}
+ .ct-review .slick-active {
+    opacity: 0.4;
+}
+.ct-review  .slick-center {
+    opacity: 1;
+  padding: 0px 0 0 0;
+  transform: scale(1);
+}
+.ct-review  .slick-center  .review_text {
+        color: #3E3E3E;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+    max-width: 100%;
+    margin: 15px auto 0 auto;
+    padding: 0 35px;
+  }
+.ct-review  .slick-center .user_review_img {
+    max-width: 150px;
+      border: 1px solid #CF2228;
+    padding: 1px;
+  }
+ .ct-review-main {
+    position: relative;
+}
+  ul.revi-icon li svg {
+    width: 64px;
+    height: 64px;
+}
+  .ct-review {
+    padding: 0 72px;
+}
+  ul.revi-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+   .ct-review .slick-dots li button {
+    display: flex !important;
+    justify-content: center !important;
+    border-radius: 10px !important;
+    border: 0px solid #a02828 !important;
+    background: #d9d9d9 !important;
+    width: 8px !important;
+    margin-bottom: 0 !important;
+    height: 8px !important;
+    margin-left: 0px !important;
+}
+   .ct-review .slick-dots li {
+    height: 11px;
+    width: 13px;
+  }
+   .ct-review .slick-dots .slick-active button {
+    background-color: #5e5d5d!important;
+    opacity: 1 !important;
+} 
+   .ct-review .slick-dots .slick-active {
+     opacity: 1 !important;
+   } 
+   .ct-review .slick-dots {
+    margin: 15px 0 0 0;
+     display:none;
+  }
+  /* .ct-review-main .slick-track {
+    height: 350px;
+} */
+.coll_head {
+    text-align: center;
+    font-family: lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 52px 0 70px 0;
+    font-size: 29px;
+    margin-bottom: 20px;
+    color: rgba(69, 69, 69, 1);
+}
+    @media(max-width:1100px){
+    .ct-review-box {
+    padding: 0px 0 0 0;
+    transform: scale(1);
+}
+      .coll_head {
+    font-size: 18px;
+        font-weight:700;
+    margin: 31px 0 26px 0;
+        text-align:left;
+}
+      .ct-review  .user_review_img {
+    max-width: 92px !important;
+}
+      .user_reating_img {
+    max-width: 77px !important;
+    margin: 5px auto 0 auto !important;
+}
+      .ct-review .review_text {
+    font-size: 14px !important;
+    line-height: 16px !important;
+    letter-spacing: 1px !important;
+    max-width: 247px !important;
+    margin: 10px auto 0 auto !important;
+    padding: 0 0px !important;
+}
+      .ct-review .slick-dots li button {
+    height: 10px;
+    width: 10px;
+}
+      .ct-review .slick-dots li {
+    height: 11px;
+    width: 14px;
+}
+      ul.revi-icon li{
+        display:none;
+      }
+      .ct-review  .slick-center {
+    opacity: 1;
+  padding: 0px 0 0 0;
+  transform: scale(1);
+}
+        .ct-review-box {
+    transition: all 0s ease;
+    transform: scale(1);
+}
+       .ct-review .slick-active {
+    opacity:1;
+}
+   
+  }
+</style>
+<div class="ct-review-main">
+  <div class="ct-review-inner container container--not-mobile">
+    <div class="coll_head">Customer Reviews</div>
+    
+    <div class=" ct-review-main">
+    <div class="slider ct-review">
+      {% for block in section.blocks %}
+        <div class=" ct-review-box">
+          <img
+            loading="lazy"
+            src="{{ block.settings.image | img_url: '1024x1024' }}"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            class="rimage__image user_review_img"
+          >
+          <img
+            loading="lazy"
+            src="{{ block.settings.image1 | img_url: '1024x1024' }}"
+            width="{{ block.settings.image1.width }}"
+            height="{{ block.settings.image1.height }}"
+            alt="{{ block.settings.image1.alt | escape }}"
+            class="rimage__image user_reating_img"
+          >
+          <div class="review_text">{{ block.settings['re-text'] }}</div>
+        </div>
+      {% endfor %}
+    </div>
+      <ul class="revi-icon">
+        <li class="prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <path d="M39.1733 46.1063C39.4205 45.8596 39.6166 45.5665 39.7504 45.2439C39.8842 44.9214 39.9531 44.5755 39.9531 44.2263C39.9531 43.877 39.8842 43.5312 39.7504 43.2086C39.6166 42.886 39.4205 42.593 39.1733 42.3463L28.8266 31.9996L39.1733 21.6529C39.6719 21.1543 39.952 20.4781 39.952 19.773C39.952 19.0678 39.6719 18.3916 39.1733 17.8929C38.6747 17.3943 37.9984 17.1142 37.2933 17.1142C36.5881 17.1142 35.9119 17.3943 35.4133 17.8929L23.1733 30.133C22.9261 30.3797 22.7299 30.6727 22.5961 30.9953C22.4623 31.3179 22.3934 31.6637 22.3934 32.013C22.3934 32.3622 22.4623 32.708 22.5961 33.0306C22.7299 33.3532 22.9261 33.6462 23.1733 33.893L35.4133 46.1329C36.4266 47.1463 38.1333 47.1463 39.1733 46.1063Z" fill="#CF2228"/>
+          </svg>
+        </li>
+        <li class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <path d="M24.8267 17.8937C24.5795 18.1404 24.3834 18.4335 24.2496 18.7561C24.1158 19.0786 24.0469 19.4245 24.0469 19.7737C24.0469 20.123 24.1158 20.4688 24.2496 20.7914C24.3834 21.114 24.5795 21.407 24.8267 21.6537L35.1734 32.0004L24.8267 42.3471C24.3281 42.8457 24.048 43.5219 24.048 44.227C24.048 44.9322 24.3281 45.6084 24.8267 46.1071C25.3253 46.6057 26.0016 46.8858 26.7067 46.8858C27.4119 46.8858 28.0881 46.6057 28.5867 46.1071L40.8267 33.8671C41.0739 33.6203 41.2701 33.3273 41.4039 33.0047C41.5377 32.6821 41.6066 32.3363 41.6066 31.9871C41.6066 31.6378 41.5377 31.292 41.4039 30.9694C41.2701 30.6468 41.0739 30.3538 40.8267 30.1071L28.5867 17.8671C27.5734 16.8537 25.8667 16.8537 24.8267 17.8937Z" fill="#CF2228"/>
+          </svg>
+        </li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+  $('.ct-review').slick({
+    infinite: true,
+    slidesToShow: 3,
+    dots: true,
+    infinite: true,
+    arrows: true,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0px',
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    responsive: [
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 1,
+         arrows: false,
+      }
+    }
+  ]
+  });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Ct Review",
+  "settings": [],
+  "blocks":[{
+    "type":"review",
+    "name":"Review Box",
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "User Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Star Image"
+      },
+      {
+        "type": "html",
+        "id": "re-text",
+        "label": "Review Text"
+      }
+
+
+    ]
+  }],
+  "presets":[{
+    "name": "Ct Review"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput-jquery.min.js"></script>
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    <style>
+      .logo_no_link >a {
+        pointer-events: none;
+      }
+      /* Optional: Move the label back down when the input has content */
+      input#checkout_shipping_address_phone:valid + label[for="checkout_shipping_address_phone"] {
+        top: 5px; /* Adjust this value based on your design */
+      }
+      .iti__flag, .iti__arrow, .iti__selected-dial-code{
+        margin-top:10px;
+      }
+      .iti__country-list {
+        z-index: 3;
+      }
+
+      .floating-labels .field__input-wrapper--icon-right .field__label {
+          margin-top: 1.5px;
+      }
+    </style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WK9HNJD');</script>
+<!-- End Google Tag Manager -->
+
+    <script>
+  $(document).ready(function () {
+    $('#checkout_shipping_address_phone').intlTelInput({
+      separateDialCode: true,
+      nationalMode: true,
+      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+      initialCountry: 'in'
+    });
+  });
+</script>
+
+
+<script>
+  (function($) {
+  function address_checker(char){
+  	if(char >= 'A' && char <= 'Z')return true;
+    if(char >='a' && char <='z')return true;
+    if(char >='0' && char <='9')return true;
+    if(char == ' ')return true;
+    if(char == '-')return true;
+    if(char == ',')return true;
+    if(char == '\/')return true;
+    return false;
+  }
+  
+
+  $(document).on("page:load page:change", function() {
+   
+    if(Shopify.Checkout.step === "contact_information"){
+      const elem = document.getElementById('checkout_shipping_address_phone');
+      const zip = document.getElementById('checkout_shipping_address_zip');
+      const button = document.getElementById('continue_button');
+      const addr1 = document.getElementById('checkout_shipping_address_address1');
+      const name1 = document.getElementById('checkout_shipping_address_first_name');
+      const name2 = document.getElementById('checkout_shipping_address_last_name');
+      const addr2 = document.getElementById('checkout_shipping_address_address1');
+      const city = document.getElementById('checkout_shipping_address_city');
+      const error = document.createElement("p");
+      error.id = "phoneError"
+      error.style.color = 'red';
+      error.innerHTML = 'Enter phone number without country code';
+
+      $('#checkout_shipping_address_city').attr({ maxLength : 50 });
+     // $('#checkout_shipping_address_phone').attr({ minLength : 10 });
+
+      
+
+      $("#checkout_shipping_address_city").keypress(function(event){
+        var inputValue = event.charCode;
+        if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+            event.preventDefault();
+        }
+    });
+
+      if(elem){
+      	elem.parentNode.insertBefore(error, elem.nextSibling);
+      }
+     // error.style.display = 'none';
+      button.innerHTML = 'Continue to Payment';
+      elem.setAttribute('minlength', "10");
+      elem.setAttribute('placeholder', "");
+      elem.setAttribute('autocomplete', 'off');
+      elem.setAttribute('autocorrect', 'off');
+      elem.setAttribute('autofill', 'off');
+      const element = document.createElement("p");
+      element.innerHTML='Delivery code unserviceable';
+      element.style.display='none';
+      let serviceableCode = {};
+         zip.parentNode.insertBefore(element, zip.nextSibling);      
+      const validator = async () => {
+        let val = elem.value.replace(/[^0-9]/g, '');
+        let val2 = zip.value.replace(/[^0-9]/g, '');
+        const country = document.getElementById('checkout_shipping_address_country').value;
+        if(country === 'India'){
+        	zip.value = val2.substring(0,6);
+        }
+        if(val[0] !== '6' && val[0] !== '7' && val[0] !== '8' && val[0] !== '9'){
+        	val = '';
+        }
+        if(country === 'India'){
+        elem.value = val.substring(0,10);        
+        }
+        //Minimum length check  
+        // if(elem.value.length  && elem.value.length !== 10 && country === 'India'){
+        // 	error.style.display = 'initial';
+        // 	button.disabled = true;
+        //     elem.style.borderColor='#e52213';
+        // } 
+        if(elem.value.length  && elem.value.length == 10 && country === 'India'){
+        	error.style.display = 'none';
+        	button.disabled = false;
+            elem.style.borderColor='';
+        } 
+        
+   		const newVal1 = addr1.value.split('').filter(char => address_checker(char));
+        addr1.value = newVal1.join('');
+        const nameval1 = name1.value.split('').filter(char => address_checker(char));
+        name1.value = nameval1.join('');
+        const nameval2 = name2.value.split('').filter(char => address_checker(char));
+        name2.value = nameval2.join('');
+        const newVal2 = addr2.value.split('').filter(char => address_checker(char));
+        addr2.value = newVal2.join('');
+      	const newVal3 = city.value.split('').filter(char => address_checker(char));
+        city.value = newVal3.join('');
+      }
+      
+      window.addEventListener("load",(event) => {
+      	setInterval(() => validator(), 0);
+      })
+
+      elem.addEventListener("change", (event) => {
+			validator();
+      })
+
+      document.querySelectorAll('input').forEach(item => {
+  			item.addEventListener('input', event => {
+    			validator();
+  			})
+		})
+    }
+
+
+
+
+
+    if(Shopify.Checkout.step === "payment_method"){
+      
+    	const elem = document.getElementById('checkout_billing_address_phone');
+     	const zip = document.getElementById('checkout_billing_address_zip');
+      	const button = document.getElementById('continue_button');
+        const addr1 = document.getElementById('checkout_billing_address_address1');
+      const name1 = document.getElementById('checkout_billing_address_first_name');
+      const name2 = document.getElementById('checkout_billing_address_last_name');
+      const addr2 = document.getElementById('checkout_billing_address_address1');
+      const city = document.getElementById('checkout_billing_address_city');
+      const error = document.createElement("p");
+      error.innerHTML = 'Phone Number must be 10 digits without country code';
+
+      $('#checkout_billing_address_city').attr({ maxLength : 50 });
+     // $('#checkout_billing_address_phone').attr({ minLength : 10 });
+
+      
+
+      $("#checkout_billing_address_city").keypress(function(event){
+        var inputValue = event.charCode;
+        if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+            event.preventDefault();
+        }
+    });
+
+      if(elem){
+      	elem.parentNode.insertBefore(error, elem.nextSibling);
+      }
+     // error.style.display = 'none';
+      button.innerHTML = 'Continue to Payment';
+      elem.setAttribute('minlength', "10");
+      elem.setAttribute('placeholder', "");
+      elem.setAttribute('data-placeholder-label-required', "")
+      elem.setAttribute('data-placeholder-label-optional', "")
+      elem.setAttribute('data-backup', "")
+      elem.setAttribute('data-phone-formatter',false)
+      elem.setAttribute('data-phone-formatter-country-select',"")
+      elem.setAttribute('autocomplete', 'off');
+      elem.setAttribute('autocorrect', 'off');
+      elem.setAttribute('autofill', 'off');
+      const element = document.createElement("p");
+      element.innerHTML='Delivery code unserviceable';
+      element.style.display='none';
+      let serviceableCode = {};
+         zip.parentNode.insertBefore(element, zip.nextSibling);      
+      const validator = async () => {
+        let val = elem.value.replace(/[^0-9]/g, '');
+        let val2 = zip.value.replace(/[^0-9]/g, '');
+        const country = document.getElementById('checkout_billing_address_country').value;
+        if(country === 'India'){
+        	zip.value = val2.substring(0,6);
+        }
+        if(val[0] !== '6' && val[0] !== '7' && val[0] !== '8' && val[0] !== '9'){
+        	val = '';
+        }
+        if(country === 'India'){
+        elem.value = val.substring(0,10);        
+        }
+        //Minimum length check
+        // if(elem.value.length  && elem.value.length !== 10 && country === 'India'){
+        // 	error.style.display = 'initial';
+        // 	button.disabled = true;
+        //     elem.style.borderColor='#e52213';
+        // } 
+        if(elem.value.length  && elem.value.length == 10 && country === 'India'){
+        	error.style.display = 'none';
+        	button.disabled = false;
+            elem.style.borderColor='';
+        } 
+
+    
+        // else{
+        // 	error.style.display = 'none';
+        // }
+      // let serviceable = true;
+        
+    //    if((elem.value.length && elem.value.length === 10 && zip.value.length === 6 && serviceable) || country !== 'India'){
+      //  	button.disabled = false;
+      //    	button.removeAttribute('disabled');
+      //  } else {
+       //     button.disabled = true;
+      //      button.setAttribute('disabled', true);
+      //   } 
+   		const newVal1 = addr1.value.split('').filter(char => address_checker(char));
+        addr1.value = newVal1.join('');
+        const nameval1 = name1.value.split('').filter(char => address_checker(char));
+        name1.value = nameval1.join('');
+        const nameval2 = name2.value.split('').filter(char => address_checker(char));
+        name2.value = nameval2.join('');
+        const newVal2 = addr2.value.split('').filter(char => address_checker(char));
+        addr2.value = newVal2.join('');
+      	const newVal3 = city.value.split('').filter(char => address_checker(char));
+        city.value = newVal3.join('');
+      }
+      
+      window.addEventListener("load",(event) => {
+      	setInterval(() => validator(), 0);
+      })
+
+      elem.addEventListener("change", (event) => {
+			validator();
+      })
+
+      document.querySelectorAll('input').forEach(item => {
+  			item.addEventListener('input', event => {
+    			validator();
+  			})
+		})
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    // if(Shopify.Checkout.step === "shipping_method" && 'India' === 'India'){
+    // 	document.getElementById('continue_button').click();
+    // } else {
+    // 	document.body.style.opacity = 1;
+    // }
+  });
+
+
+})(Checkout.$);
+
+
+
+</script>
+
+<script>
+window['_fs_host'] = 'fullstory.com';
+window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+window['_fs_org'] = 'o-1NC4ZY-na1';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+    o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+    g.anonymize=function(){g.identify(!!0)};
+    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+    g.log = function(a,b){g("log",[a,b])};
+    g.consent=function(a){g("consent",!arguments.length||a)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+    g.setVars=function(n, p){g('setVars',[n,p]);};
+    g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
+    if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
+    g._v="1.3.0";
+})(window,document,window['_fs_namespace'],'script','user');
+</script>    
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hv01jfjrcf");
+</script>
+
+    
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header logo_no_link" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+    <!-- Begin Shopify–payment-cart JavaScript -->
+<script type="text/javascript">
+
+  var mid = '2765';
+
+  //1. Add this if need to show popup on cart page
+      var snapCartPrice = {{ cart.total_price | json }}
+  //This will be the element class name where we want to insert the UI
+      var snapCartElName = '#cartform .checkout-col'
+
+  //2. Add this if need to show popup on sidebar cart
+      var snapCartPrice = {{ cart.total_price | json }}
+  //This will be the element class name where we want to insert the UI
+      var snapCart = '.has--opened .mm-ajaxcart-button'
+
+  //3. Add this if need to show popup on product page
+      var snapProdDetail = {{ product | json }}
+  //This will be the element class name where we want to insert the UI    
+  var snapProdElName = '.product-form .lightly-spaced-row'
+
+  //targeted price 
+  var productTargetedPrice = '.product-form .lightly-spaced-row'
+  var productTargetedPriceVariant = '.product-form .lightly-spaced-row'
+
+
+  // phone number validation by CT
+  const inputPhoneNumber = document.querySelector("#checkout_shipping_address_phone");
+  let continueButton = document.getElementById('continue_button');
+  inputPhoneNumber.setAttribute('placeholder', '');
+  inputPhoneNumber.addEventListener("input", function() {
+    if(continueButton){
+      if(document.querySelector("#checkout_shipping_address_phone").value.length <= 10 ){
+      document.getElementById('phoneError').style.display = 'block'
+      continueButton.setAttribute('disabled', 'true');
+    } else {
+      document.getElementById('phoneError').style.display = 'none'
+      continueButton.removeAttribute('disabled');
+    } 
+    }
+  });
+
+  if(document.querySelector("#checkout_shipping_address_phone").value.length <= 10 ){
+      continueButton.setAttribute('disabled', 'true');
+    } else {
+      continueButton.removeAttribute('disabled');
+    }
+</script>
+<script src="https://assets.snapmint.com/assets/merchant/2765/snm_shopify_popup_min.js"></script>
+<!-- End Shopify-payment JavaScript -->
+  
+  </body>
+</html>

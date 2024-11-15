@@ -1,0 +1,506 @@
+<style>
+  .Round-collection-box-main .main_title {
+    font-family: Lato;
+    font-size: 29px;
+    margin-bottom: 20px;
+    color: #454545;
+    text-align:center;
+    line-height: normal;
+}
+  .Round-collection-box-main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 630px;
+}
+  .shop-by-type-tabing .Round-collection-box-inner {
+    display: none;
+    gap: 22px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+   .shop-by-type-tabing  .Round-collection-box-inner.active {
+      display: flex;
+    }
+  .Round-box {
+    width: calc(25% - 17px );
+    line-height: 0;
+}
+  a.Round-box:first-child{
+    margin-bottom:10px;
+  }
+.Round-box img {
+    border-radius: 100%;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgba(207, 34, 40, 1);
+    padding: 2px;
+      aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+  .Round-box-title {
+    color: rgba(69, 68, 68, 1);
+    margin-top: 8px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    text-align: center;
+}
+
+  ul.Round-collection_tabs {
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}
+  ul.Round-collection_tabs li .tab_main span{
+    border: 0.5px solid rgba(178, 178, 178, 1);
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    color: rgba(171, 171, 171, 1);
+    padding: 6px 17px;
+    display: inline-block;
+    border-left: 0;
+}
+ul.Round-collection_tabs li .active span {
+    color: rgba(69, 69, 69, 1);
+    background: rgba(255, 240, 240, 1);
+    border: 1px solid rgba(255, 159, 159, 1);
+}
+  ul.Round-collection_tabs li:first-child .tab_main span {
+    border-radius: 4px 0 0 4px;
+    border-left: 0.5px solid rgba(178, 178, 178, 1);
+}
+  ul.Round-collection_tabs li:last-child .tab_main span {
+    border-radius: 0 4px 4px 0;
+}
+  ul.Round-collection_tabs li:first-child .active span {
+    border-radius: 4px 0 0 4px;
+    border-left: 1px solid  !important;
+    border-color: rgba(255, 159, 159, 1) !important;
+}
+  .ul_2_active li:nth-child(1) span{
+    border-right: 0 !important;
+  }
+    .ul_3_active li:nth-child(2) span{
+    border-right: 0 !important;
+  }
+    .ul_4_active li:nth-child(3) span{
+    border-right: 0 !important;
+  }
+    .ul_5_active li:nth-child(4) span{
+    border-right: 0 !important;
+  }
+  .bottom_link {
+    width: 100%;
+    text-align: center;
+}
+  .bottom_link a {
+    color: rgba(69, 69, 69, 1);
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+    padding: 8px 22px;
+    display: inline-block;
+    border: 1px solid rgba(69, 69, 69, 1);
+    border-radius: 4px;
+}
+
+  
+ 
+    @media(max-width:750px){
+      .Round-collection-box-main .main_title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+        text-align:left;
+}
+  .Round-box-title {
+    font-size: 14px;
+    line-height: 18px;
+}
+      .Round-box:first-child{
+        margin-bottom:10px;
+      }
+     .shop-by-type-tabing  .Round-collection-box-inner {
+    gap: 10px;
+}
+      .Round-box {
+    width: calc(25% - 9px);
+}
+      .Round-collection-box-main {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+      .Round-box img {
+    border: 1px solid rgba(207, 34, 40, 1);
+    padding: 1px;
+}
+    }
+</style>
+<div class="Round-collection-box-main container">
+  {% if section.settings.title !=blank %}
+  <div class="main_title">{{ section.settings.title }}</div>
+    {% endif %}
+
+  <ul class="Round-collection_tabs ul_1_active">
+    {% for block in section.blocks %}
+      <li  class="{% if forloop.first %}active{% endif %}" data-id="{{ forloop.index }}"><div class=" tab_main {% if forloop.first %}active{% endif %}" href="#{{ section.id }}_{{ forloop.index }}"><span>{{ block.settings.heading }}</span></div></li>
+    {% endfor %}
+  </ul>
+
+  
+    {% for block in section.blocks %}
+  <div id="{{ section.id }}_{{ forloop.index }}" class="Round-collection-box-inner {% if forloop.first %}active{% endif %}">
+
+
+    
+          {% if block.settings.img1 !=blank %}
+              <a href="{{ block.settings.link1 }}" class="Round-box">
+                  {{ block.settings.img1 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title1 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img2 !=blank %}
+              <a href="{{ block.settings.link2 }}" class="Round-box">
+                  {{ block.settings.img2 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title2 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img3 !=blank %}
+              <a href="{{ block.settings.link3 }}" class="Round-box">
+                  {{ block.settings.img3 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title3 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img4 !=blank %}
+              <a href="{{ block.settings.link4 }}" class="Round-box">
+                  {{ block.settings.img4 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title4 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img5 !=blank %}
+              <a href="{{ block.settings.link5 }}" class="Round-box">
+                  {{ block.settings.img5 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title5 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img6 !=blank %}
+              <a href="{{ block.settings.link6 }}" class="Round-box">
+                  {{ block.settings.img6 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title6 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img7 !=blank %}
+              <a href="{{ block.settings.link7 }}" class="Round-box">
+                  {{ block.settings.img7 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title7 }}</div>
+              </a>
+          {% endif %}
+
+          {% if block.settings.img8 !=blank %}
+              <a href="{{ block.settings.link8 }}" class="Round-box">
+                  {{ block.settings.img8 | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+                <div class="Round-box-title">{{ block.settings.title8 }}</div>
+              </a>
+          {% endif %}
+{% if block.settings.botom_link !=blank %}
+  <div class="bottom_link">
+  <a  href="{{ block.settings.botom_link }}">{{ block.settings.botom_text }}</a>
+    
+  </div>  
+{% endif %}
+      
+  </div>
+    {% endfor %}
+</div>
+
+
+<script>
+$(document).ready(function() {
+    
+    $('ul.Round-collection_tabs li .tab_main').each(function(){
+    
+        jQuery(this).click(function(){
+          var prev_id=jQuery("ul.Round-collection_tabs li.active").attr("data-id");
+          jQuery("ul.Round-collection_tabs li .tab_main").removeClass("active");
+          jQuery("ul.Round-collection_tabs li").removeClass("active");
+          jQuery("ul.Round-collection_tabs").removeClass("ul_" + prev_id + "_active");
+          jQuery(".Round-collection-box-inner").removeClass("active")
+          var id_class=jQuery(this).attr("href");
+          jQuery(id_class).addClass("active");
+          jQuery(this).addClass("active");
+          jQuery(this).parent().addClass("active");       
+         var count_id=jQuery(this).parent().attr("data-id");
+          
+          jQuery(this).closest("ul").addClass("ul_" + count_id + "_active"); 
+      
+      })
+ 
+    })
+  
+    // $('ul.Round-collection_tabs').each(function(){
+    //     var active, content, links = $(this).find('a');
+    //     var ulElement = $(this);
+
+    //     // Function to update the UL class
+    //     function updateUlClass(index) {
+    //         ulElement.removeClass(function(index, className) {
+    //             return (className.match(/(^|\s)ul_\S+_active/g) || []).join(' ');
+    //         });
+    //         ulElement.addClass('ul_' + index + '_active');
+    //     }
+
+    //     // Initial setup
+    //     active = links.first().addClass('active').closest('li').addClass('li_active');
+    //     updateUlClass(1); // Set the class to ul_1_active initially
+    //     content = $(active.find('a').attr('href'));
+        
+    //     links.not(':first').each(function () {
+    //         $($(this).attr('href')).hide();
+    //     });
+        
+    //     $(this).find('a').click(function(e){
+    //         e.preventDefault();  // Prevent default anchor behavior
+            
+    //         // Remove 'active' and 'li_active' classes from the previously active elements
+    //         active.removeClass('active');
+    //         active.closest('li').removeClass('li_active');
+            
+    //         // Update active <a> and its parent <li>
+    //         active = $(this).addClass('active');
+    //         active.closest('li').addClass('li_active');
+            
+    //         // Hide the previously active content and show the new content
+    //         content.hide();
+    //         content = $($(this).attr('href'));
+    //         content.show();
+            
+    //         // Update the UL class based on the index of the active <li>
+    //         updateUlClass(active.closest('li').index() + 1);
+            
+    //         return false;
+    //     });
+    // });
+});
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "shop-by-type-tabing",
+    "class": "shop-by-type-tabing",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Main title"
+      }
+    ],
+    "blocks": [{
+      "type": "Collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Main Tab text"
+        },
+        {
+          "type": "url",
+          "id": "botom_link",
+          "label": "Bottom Button Link"
+        },
+        {
+          "type": "text",
+          "id": "botom_text",
+          "label": "Bottom Button Text"
+        },
+        {
+          "type": "header",
+          "content": "Collection 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "img1",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "img2",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title2",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "img3",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title3",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "img4",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title4",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "img5",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link5",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title5",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 6"
+        },
+        {
+          "type": "image_picker",
+          "id": "img6",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link6",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title6",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 7"
+        },
+        {
+          "type": "image_picker",
+          "id": "img7",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link7",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title7",
+          "label": "Collection text"
+        },
+
+
+         {
+          "type": "header",
+          "content": "Collection 8"
+        },
+        {
+          "type": "image_picker",
+          "id": "img8",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link8",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title8",
+          "label": "Collection text"
+        }
+
+      ]
+    }],
+    "presets": [{
+      "name": "shop-by-type-tabing"
+    }]
+  }
+{% endschema %}

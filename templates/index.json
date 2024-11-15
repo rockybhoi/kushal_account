@@ -1,0 +1,1359 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "end_sale_timer_jp39En": {
+      "type": "end-sale-timer",
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-left: 0; padding-right: 0;}"
+      ],
+      "settings": {
+        "head": "Last chance! Sale ends Soon!",
+        "time": "April 1 , 2024"
+      }
+    },
+    "sale_anncouncement_tDGLt6": {
+      "type": "Sale-Anncouncement",
+      "disabled": true,
+      "custom_css": [
+        ".Sale-Anncouncement {display: none;}",
+        "@media (max-width: 1100px) {.Sale-Anncouncement {display: block; }}"
+      ],
+      "settings": {}
+    },
+    "165208701194f9062b": {
+      "type": "mobile-collection-list",
+      "blocks": {
+        "3259ffa1-89ef-439b-9b76-28a28718abcf": {
+          "type": "collection",
+          "settings": {
+            "collection": "necklaces",
+            "collection_title": "",
+            "image": "shopify://shop_images/Necklace_f5f13872-4c06-41ec-8611-c718a82d406c.png"
+          }
+        },
+        "4a85f532-fe97-4a6e-b027-726886d5bae0": {
+          "type": "collection",
+          "settings": {
+            "collection": "bangles",
+            "collection_title": "",
+            "image": "shopify://shop_images/Bangles_d11e7f74-4ef9-4f70-8380-ef991f2d701d.png"
+          }
+        },
+        "8f33f098-37f5-4f94-bb2b-bc9395dcd8bd": {
+          "type": "collection",
+          "settings": {
+            "collection": "finger-rings",
+            "collection_title": "",
+            "image": "shopify://shop_images/Ring_dfd784cc-8e9c-4134-a518-dac13c1258ce.png"
+          }
+        },
+        "9f5b7ff1-1acf-46e3-be2a-25439b554297": {
+          "type": "collection",
+          "settings": {
+            "collection": "hathpans",
+            "collection_title": "Hathpan",
+            "image": "shopify://shop_images/Hathpool_4bc80661-060b-40c2-b7c7-d59e6bde8b4f.png"
+          }
+        },
+        "a047f4b3-a90d-4fd6-b012-c6d1a3aa0048": {
+          "type": "collection",
+          "settings": {
+            "collection": "earrings",
+            "collection_title": "",
+            "image": "shopify://shop_images/Earrings_a07036ae-512c-4284-be52-d85d9953bebb.png"
+          }
+        },
+        "04bc9973-d17f-4360-89d1-d23e44e7e468": {
+          "type": "collection",
+          "settings": {
+            "collection": "pendant-sets",
+            "collection_title": "",
+            "image": "shopify://shop_images/Pendant_f9bbad8a-bb24-4d43-ab25-8a4c2bd666fe.png"
+          }
+        },
+        "4ee86e2c-d7c0-4439-b1cf-b189dda0fbe9": {
+          "type": "collection",
+          "settings": {
+            "collection": "tikkas",
+            "collection_title": "",
+            "image": "shopify://shop_images/Mangtika_e5a0ea23-e376-4028-9823-85b8d6ece867.png"
+          }
+        },
+        "4e8553fa-d6b5-4fcd-8870-8683326f5605": {
+          "type": "collection",
+          "settings": {
+            "collection": "bajuband",
+            "collection_title": "Bajubands",
+            "image": "shopify://shop_images/Bajuband_e0f118aa-a91f-4dfa-ba9c-44d68b182847.png"
+          }
+        },
+        "5ff82020-39e2-4fba-bb28-b24e0fa222b0": {
+          "type": "collection",
+          "settings": {
+            "collection": "payals",
+            "collection_title": "",
+            "image": "shopify://shop_images/Payal_b0ee4de4-4b2f-4ee7-8a65-9bd69a7fe94b.png"
+          }
+        },
+        "collection_dDbU4H": {
+          "type": "collection",
+          "settings": {
+            "collection": "toe-rings",
+            "collection_title": "",
+            "image": "shopify://shop_images/Toe_Ring_116cd0d9-5041-4f64-af0b-b5569e4e9216.png"
+          }
+        },
+        "a5539708-bb87-4bd8-94be-cb8baee4a59b": {
+          "type": "collection",
+          "settings": {
+            "collection": "flat-50-off",
+            "collection_title": "",
+            "image": "shopify://shop_images/Flat_50.svg"
+          }
+        },
+        "collection_DrBFDa": {
+          "type": "collection",
+          "settings": {
+            "collection": "92-5-silver-temple-jewellery-flat-40-off",
+            "collection_title": "",
+            "image": "shopify://shop_images/Silver_Temple_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "3259ffa1-89ef-439b-9b76-28a28718abcf",
+        "4a85f532-fe97-4a6e-b027-726886d5bae0",
+        "8f33f098-37f5-4f94-bb2b-bc9395dcd8bd",
+        "9f5b7ff1-1acf-46e3-be2a-25439b554297",
+        "a047f4b3-a90d-4fd6-b012-c6d1a3aa0048",
+        "04bc9973-d17f-4360-89d1-d23e44e7e468",
+        "4ee86e2c-d7c0-4439-b1cf-b189dda0fbe9",
+        "4e8553fa-d6b5-4fcd-8870-8683326f5605",
+        "5ff82020-39e2-4fba-bb28-b24e0fa222b0",
+        "collection_dDbU4H",
+        "a5539708-bb87-4bd8-94be-cb8baee4a59b",
+        "collection_DrBFDa"
+      ],
+      "custom_css": [
+        ".collection-slider .product-block .image-cont img {border-radius: 100%; border: 3px solid #cf2228;}",
+        ".collection-slider .product-block .image-cont .rimage-wrapper {border-radius: 100%;}"
+      ],
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "grid": 5,
+        "use_alt_bg": true,
+        "show_view_all": false,
+        "full_width": false,
+        "mbl_title_link": 12
+      }
+    },
+    "slideshow_Viq7kG": {
+      "type": "slideshow",
+      "blocks": {
+        "image_PKAyqX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web_Banner_7.jpg",
+            "mobile_image": "shopify://shop_images/Mobile_6.jpg",
+            "slide_link": "shopify://pages/rakhi-gifts-for-sister"
+          }
+        },
+        "image_cACJ4k": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/website_ed09a8d4-7480-413c-b133-985dbdf71feb.jpg",
+            "mobile_image": "shopify://shop_images/mobile_7.jpg",
+            "slide_link": "shopify://pages/varamahalakshmi-jewellery"
+          }
+        },
+        "image_AgBViJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/desktop_3_181c9d7c-a2fc-4371-aabc-7c1add251ce2.jpg",
+            "mobile_image": "shopify://shop_images/mobile_2_19062f4b-6a9c-48bd-8d8b-d6086c35a691.jpg",
+            "slide_link": "shopify://pages/trend-meenakari-sparkles"
+          }
+        },
+        "image_TCJbeY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_-_2792_x_713_1.jpg",
+            "mobile_image": "shopify://shop_images/Mobile_-_1050_x_1230_1.jpg",
+            "slide_link": "shopify://collections/splendours-of-deccan"
+          }
+        },
+        "image_TTbPUC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_-_2792_x_713.jpg",
+            "mobile_image": "shopify://shop_images/Mobile_-_1050_x_1230.jpg",
+            "slide_link": "shopify://pages/wedding"
+          }
+        },
+        "image_tiHVg7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_bf93a406-ffef-47d3-9d03-d2a6a67c2227.jpg",
+            "mobile_image": "shopify://shop_images/2_1_24cfdebe-a54c-4a54-99be-02fed620ed91.jpg",
+            "slide_link": "shopify://collections/new-arrivals-antique"
+          }
+        },
+        "image_XF87wz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_3a54195e-1743-4c26-8d4b-39ff54bacf7f.jpg",
+            "mobile_image": "shopify://shop_images/5_1_d2e34166-daa5-4211-96e2-b761830ee899.jpg",
+            "slide_link": "shopify://collections/new-arrivals-in-zircon-jewellery"
+          }
+        },
+        "image_yWNDPN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/desktop_6_4ce38297-eed1-4a93-9361-a33172cff6e1.jpg",
+            "mobile_image": "shopify://shop_images/mobile_4_08104501-860c-4c3c-b75e-19e2779ff62a.jpg",
+            "slide_link": "shopify://collections/oxidized-silver-jewellery"
+          }
+        }
+      },
+      "block_order": [
+        "image_PKAyqX",
+        "image_cACJ4k",
+        "image_AgBViJ",
+        "image_TCJbeY",
+        "image_TTbPUC",
+        "image_tiHVg7",
+        "image_XF87wz",
+        "image_yWNDPN"
+      ],
+      "custom_css": [
+        ".container {padding-left: 0; padding-right: 0; margin-top: 0px;}",
+        "@media (max-width: 700px) {.fully-spaced-row--not-mobile {margin-top: 0; margin-bottom: 0; }}"
+      ],
+      "settings": {
+        "img_org": false,
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": false,
+        "mobile_overlay_under": false,
+        "overlay_style": "no_background",
+        "slide_transition": "slide",
+        "slide_navigation": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 6
+      }
+    },
+    "ct_image_deRaN9": {
+      "type": "CT-Image",
+      "blocks": {
+        "box_ekzxnr": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "",
+            "imgdesk": "shopify://shop_images/SBI_1.jpg",
+            "imgmob": "shopify://shop_images/SBI_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "box_ekzxnr"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "app_download_banner_LWwEb7": {
+      "type": "app-download-banner",
+      "settings": {
+        "android": "shopify://shop_images/android.png",
+        "iphone": "shopify://shop_images/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png"
+      }
+    },
+    "1651908197d942a981": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "25dfa777-c1a2-4eb2-a381-835784456cfd": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/PDP_20lakh.svg",
+            "image_size": "icon",
+            "text": "20 Lakh+ Customers",
+            "link_url": ""
+          }
+        },
+        "13a20ca0-f208-4dcd-b51f-d81dee065f2e": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/return.svg",
+            "image_size": "icon",
+            "text": "15 Days Return",
+            "link_url": ""
+          }
+        },
+        "4c3d16c7-0090-4bb8-88a9-068a0c1e91c1": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_48099251.svg",
+            "image_size": "icon",
+            "text": "Free Shipping Available",
+            "link_url": ""
+          }
+        },
+        "5ffc10fa-3993-463d-b48c-3ba990e5d288": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_48099503.svg",
+            "image_size": "icon",
+            "text": "Cash on Delivery",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "25dfa777-c1a2-4eb2-a381-835784456cfd",
+        "13a20ca0-f208-4dcd-b51f-d81dee065f2e",
+        "4c3d16c7-0090-4bb8-88a9-068a0c1e91c1",
+        "5ffc10fa-3993-463d-b48c-3ba990e5d288"
+      ],
+      "custom_css": [
+        ".container,.cbb-frequently-bought-container {padding: 0;}",
+        ".rimage-wrapper.lazyload--placeholder {background: none;}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "2051db59-2569-4e1b-ab7e-cbcb539306b6": {
+      "type": "recently_view_product",
+      "settings": {
+        "p-top": 20,
+        "p-bot": 20,
+        "heading": "Recently Viewed"
+      }
+    },
+    "1655801705e4a2ca70": {
+      "type": "image-with-link",
+      "blocks": {
+        "images_JA3UcH": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/01_12_08073a06-4b4a-40c8-8a6a-26567e04f33b.jpg",
+            "link": "shopify://collections/varamahalakshmi-temple-bangles-edit"
+          }
+        },
+        "images_4LRjCM": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/04_3_b96c29a5-0966-4820-ad8f-46537d807740.jpg",
+            "link": "shopify://collections/varamahalakshmi-temple-necklaces-edit"
+          }
+        },
+        "images_bzAFmM": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/03_8.jpg",
+            "link": "shopify://collections/varamahalakshmi-temple-earrings-edit"
+          }
+        },
+        "images_4CYdEq": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/02_10.jpg",
+            "link": "shopify://collections/varamahalakshmi-temple-finger-rings-edit"
+          }
+        },
+        "bf7649a3-62d6-4d51-a78c-fd0ad0873ab7": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/01_12_70a51217-9fdd-4c00-b36b-94aedeae72a2.jpg",
+            "link": "shopify://collections/varamahalakshmi-antique-bangles-edit"
+          }
+        },
+        "ae73640b-cacd-4a04-8c30-01632d7e4cf5": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/03_8_279351f5-2caa-4458-9273-8a30a8f66766.jpg",
+            "link": "shopify://collections/varamahalakshmi-antique-necklaces-edit"
+          }
+        },
+        "d959c31b-e325-4c11-85ec-786fac07dd67": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/02_10_964e314a-5f31-4fcf-8e75-da1875aeeaa2.jpg",
+            "link": "shopify://collections/varamahalakshmi-antique-earrings-edit"
+          }
+        },
+        "42e5a8c7-3c82-44f7-bc9d-af7d1bc108ae": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/04_3_0412c1b2-022d-48a4-9f88-3516bd1879c6.jpg",
+            "link": "shopify://collections/varamahalakshmi-antique-finger-rings-edit"
+          }
+        },
+        "images_zYWVxL": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/sectional_Banner-01_1.jpg",
+            "link": "shopify://collections/rakshabandhan-special-silver-jewellery"
+          }
+        },
+        "images_GNkdyD": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/sectional_Banner-02_1.jpg",
+            "link": "shopify://collections/rakhi-special-silver-necklaces"
+          }
+        },
+        "images_YGLmYq": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/sectional_Banner-03_1.jpg",
+            "link": "shopify://collections/rakshabandhan-special-pendant-gift-sets"
+          }
+        },
+        "images_V37WcG": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/sectional_Banner-04_1.jpg",
+            "link": "shopify://collections/rakshabandhan-special-necklace-gift-sets"
+          }
+        },
+        "images_DyQtx3": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1_27_8068964f-883e-4105-b821-21c97aec2c89.jpg",
+            "link": "shopify://collections/meenakari-sparkles-minimalistic-pendant-sets"
+          }
+        },
+        "images_GALtwd": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2_15_9d5c7db7-71fd-43cf-a6d9-858d6c68d144.jpg",
+            "link": "shopify://collections/meenakari-sparkles-elegant-kadas"
+          }
+        },
+        "images_HW4KQH": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/3_13_70e52765-2908-43b6-81a5-e77a8d7e23b3.jpg",
+            "link": "shopify://collections/meenakari-sparkles-statement-earrings"
+          }
+        },
+        "images_k6cHLD": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/4_8_ee6c0581-6ef9-4de6-ac91-fb649f3ad0ab.jpg",
+            "link": "shopify://collections/meenakari-sparkles-chic-finger-rings"
+          }
+        }
+      },
+      "block_order": [
+        "images_JA3UcH",
+        "images_4LRjCM",
+        "images_bzAFmM",
+        "images_4CYdEq",
+        "bf7649a3-62d6-4d51-a78c-fd0ad0873ab7",
+        "ae73640b-cacd-4a04-8c30-01632d7e4cf5",
+        "d959c31b-e325-4c11-85ec-786fac07dd67",
+        "42e5a8c7-3c82-44f7-bc9d-af7d1bc108ae",
+        "images_zYWVxL",
+        "images_GNkdyD",
+        "images_YGLmYq",
+        "images_V37WcG",
+        "images_DyQtx3",
+        "images_GALtwd",
+        "images_HW4KQH",
+        "images_k6cHLD"
+      ],
+      "settings": {
+        "number_of_column_desk": 4,
+        "number_of_column_mb": 2,
+        "section_padding_top": 24,
+        "section_padding_bottom": 24
+      }
+    },
+    "featured_collection_by9PiD": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "92.5 Silver Temple Edit",
+        "collection": "92-5-silver-temple-jewellery",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 5,
+        "rows": 4,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "image_with_link_zaxyJX": {
+      "type": "image-with-link",
+      "blocks": {
+        "images_cieKNx": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_2df36c52-a815-4792-86e6-72c609814c62.jpg",
+            "link": "shopify://collections/layered-zircon-necklaces"
+          }
+        },
+        "images_NLYbCA": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_6370afa6-00d6-494c-b3f4-7b9b6a0f92af.jpg",
+            "link": "shopify://collections/antique-short-necklaces"
+          }
+        },
+        "images_E8EqU8": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_23151188-e5ba-4066-8b1d-faf57933c7f4.jpg",
+            "link": "shopify://collections/chokers"
+          }
+        },
+        "images_NRLpbd": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_9e9d87fc-5411-4305-9ba1-98b9fa6b7bf9.jpg",
+            "link": "shopify://collections/long-necklaces"
+          }
+        },
+        "images_Kh7ED9": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_18_ffcfed0b-e03d-4122-a148-c341033d638d.jpg",
+            "link": "shopify://collections/oxidised-silver-necklaces"
+          }
+        },
+        "images_rcixGa": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_16_a2884e69-4c2f-470b-9b69-393d539d8e7d.jpg",
+            "link": "shopify://collections/silver-zircon-necklaces"
+          }
+        },
+        "images_AQzwFP": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_10_f3775a6a-ad3f-4624-8f63-66844016deef.jpg",
+            "link": "shopify://collections/92-5-sterling-silver-necklaces"
+          }
+        },
+        "images_rDJzBz": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_30_33dd83ed-e374-4cb3-a680-3bfe3a6f63c8.jpg",
+            "link": "shopify://collections/silver-temple-necklace"
+          }
+        }
+      },
+      "block_order": [
+        "images_cieKNx",
+        "images_NLYbCA",
+        "images_E8EqU8",
+        "images_NRLpbd",
+        "images_Kh7ED9",
+        "images_rcixGa",
+        "images_AQzwFP",
+        "images_rDJzBz"
+      ],
+      "settings": {
+        "number_of_column_desk": 4,
+        "number_of_column_mb": 2,
+        "section_padding_top": 24,
+        "section_padding_bottom": 24
+      }
+    },
+    "5819de4b-3b23-406f-8917-79bac4ea78d2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Dazzling Zircons",
+        "collection": "zircon-jewellery",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 5,
+        "rows": 4,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "1655802594c390c10e": {
+      "type": "image-with-link",
+      "blocks": {
+        "644e0736-1e0f-4a0e-9827-eecb2a51a1d3": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_1e131b5c-c2c9-4e9b-9f76-bb5bdbc7d55a.jpg",
+            "link": "shopify://collections/zircon-danglers"
+          }
+        },
+        "9e3b3deb-2871-4e13-b86d-360d4242f87e": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_095157cf-a08c-4db1-b331-d2be3046f130.jpg",
+            "link": "shopify://collections/jhumkas"
+          }
+        },
+        "14ed3c07-04c2-4ee9-916e-315dcf2dcdbd": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_fc9c1aaf-05ea-4bd6-885f-934317ba7e45.jpg",
+            "link": "shopify://collections/chandbalis"
+          }
+        },
+        "1b7cc30a-9615-4ae0-86bc-2083b454d0a0": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_ecc48845-6783-4d57-90a9-4659ba07add5.jpg",
+            "link": "shopify://collections/classy-studs"
+          }
+        },
+        "5908f1a4-c848-495a-9010-91e2b5e55072": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_ea489556-116c-4a9d-9baf-ec4be4eb936b.jpg",
+            "link": "shopify://collections/pair-bangles"
+          }
+        },
+        "7ebe80a6-bfff-4d83-83ae-c48032f12198": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_89ba2eaa-b7fb-4946-b6ea-75e2c33e4d61.jpg",
+            "link": "shopify://collections/92-5-changeable-bangles"
+          }
+        },
+        "d2f9c2ec-853e-43bd-b10b-81a9f03630a0": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_9b109764-36ab-4608-84ba-b04fd3824661.jpg",
+            "link": "shopify://collections/single-bangle"
+          }
+        },
+        "6872a3fb-c148-4901-83c9-3b4e1908eda6": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_37d450eb-f9ae-4914-aa66-24588b5c3135.jpg",
+            "link": "shopify://collections/kadas"
+          }
+        }
+      },
+      "block_order": [
+        "644e0736-1e0f-4a0e-9827-eecb2a51a1d3",
+        "9e3b3deb-2871-4e13-b86d-360d4242f87e",
+        "14ed3c07-04c2-4ee9-916e-315dcf2dcdbd",
+        "1b7cc30a-9615-4ae0-86bc-2083b454d0a0",
+        "5908f1a4-c848-495a-9010-91e2b5e55072",
+        "7ebe80a6-bfff-4d83-83ae-c48032f12198",
+        "d2f9c2ec-853e-43bd-b10b-81a9f03630a0",
+        "6872a3fb-c148-4901-83c9-3b4e1908eda6"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.image_with_link {padding-top: px !important; }}"
+      ],
+      "settings": {
+        "number_of_column_desk": 4,
+        "number_of_column_mb": 2,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50
+      }
+    },
+    "94e6de2d-053d-43f1-8484-21fc994c467c": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Bridal Bijoux",
+        "collection": "the-north-indian-bridal-edit",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 5,
+        "rows": 4,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "54682443-bc35-4053-987d-d843f56ee5da": {
+      "type": "image-with-link",
+      "blocks": {
+        "b1ad00ba-f292-4e8a-880b-e56c11102edb": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1_22_4b923d42-f356-44fa-a484-b22df1c3f058.jpg",
+            "link": "shopify://collections/zircon-jewellery-flat-20-0ff"
+          }
+        },
+        "817c308f-4721-464b-a6ac-0ca2208d57ad": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2_14_510b9249-11b3-4e74-ae7d-5e8bc363c571.jpg",
+            "link": "shopify://collections/92-5-silver-temple-jewellery-flat-20-off"
+          }
+        },
+        "49a26747-84af-4393-9e75-d7cc84663cf6": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/3_13_da480b93-b946-4799-9029-44be57e61e57.jpg",
+            "link": "shopify://collections/antique-jewellery-flat-20-off"
+          }
+        },
+        "0f2914b5-e776-4813-b5fd-3efa162fd9ad": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/4_6_8212a378-669b-4b29-b4a5-85dd2c17aa17.jpg",
+            "link": "shopify://collections/kundan-jewellery-flat-20-off"
+          }
+        },
+        "a1470a08-82fe-4756-a3b0-9259ab098f13": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_608b5830-bbd5-451e-bfb2-8006d1b846ee.jpg",
+            "link": "shopify://collections/trendy-jewellery-below-500"
+          }
+        },
+        "cca230cc-cee6-4aae-8b3f-d3db9016386b": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_02c07d26-079a-4a86-a128-d3560a50df8b.jpg",
+            "link": "shopify://collections/zircon-jewellery-below-1000"
+          }
+        },
+        "images_FEXVzh": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_83a529e4-ad10-47dd-8492-3acbd395849b.jpg",
+            "link": "shopify://collections/antique-jewellery-below-2500"
+          }
+        },
+        "images_gkGi9E": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_26a06980-5c2a-4e33-b784-9dc6f8f99e24.jpg",
+            "link": "shopify://collections/zircon-jewellery-below-5000"
+          }
+        },
+        "056cf8f2-a77b-4cde-bc67-b4cb25a313ad": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/the_ravishing_sangeet_look.jpg",
+            "link": "shopify://collections/flamboyant-glimmer-the-bridal-sangeet-statement"
+          }
+        },
+        "b343eb3b-7439-4a3a-9526-f6fdfb26df02": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/4_5.jpg",
+            "link": "shopify://collections/timeless-treasures-engagement-look"
+          }
+        },
+        "6179cc9b-ee58-4218-bd5a-e7fff6ad3abc": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/7_1.jpg",
+            "link": "shopify://collections/starlit-affection-cocktail-edit"
+          }
+        },
+        "75e3a37b-c82b-42ab-a8f0-67d6fb056cff": {
+          "type": "images",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/8_2.jpg",
+            "link": "shopify://collections/shop-similar-products-reception-look"
+          }
+        }
+      },
+      "block_order": [
+        "b1ad00ba-f292-4e8a-880b-e56c11102edb",
+        "817c308f-4721-464b-a6ac-0ca2208d57ad",
+        "49a26747-84af-4393-9e75-d7cc84663cf6",
+        "0f2914b5-e776-4813-b5fd-3efa162fd9ad",
+        "a1470a08-82fe-4756-a3b0-9259ab098f13",
+        "cca230cc-cee6-4aae-8b3f-d3db9016386b",
+        "images_FEXVzh",
+        "images_gkGi9E",
+        "056cf8f2-a77b-4cde-bc67-b4cb25a313ad",
+        "b343eb3b-7439-4a3a-9526-f6fdfb26df02",
+        "6179cc9b-ee58-4218-bd5a-e7fff6ad3abc",
+        "75e3a37b-c82b-42ab-a8f0-67d6fb056cff"
+      ],
+      "settings": {
+        "number_of_column_desk": 4,
+        "number_of_column_mb": 2,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50
+      }
+    },
+    "featured_collection_nQ4EfJ": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Ceremonious Antiques",
+        "collection": "antique-jewellery",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 5,
+        "rows": 4,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "eff944a0-d13a-4b5c-ab0a-28dc2f89db5d": {
+      "type": "image-with-link",
+      "blocks": {
+        "745d4709-6f44-41be-8436-a723c6e01819": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_4d29fdcb-1130-483a-9460-b14ab691bd04.jpg",
+            "link": "shopify://collections/red-colour-jewellery"
+          }
+        },
+        "2fc2f50e-fb79-408a-b60f-c91623692cbc": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_9e50ef8a-a9a6-4618-9306-0fb2c6abee87.jpg",
+            "link": "shopify://collections/green-colour-jewellery"
+          }
+        },
+        "20d6d561-f1eb-4409-b504-da6668dba701": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_804f71a4-e60b-4217-8fe6-ec5203b18222.jpg",
+            "link": "shopify://collections/mint-blue-jewellery"
+          }
+        },
+        "0f5d5c06-efff-49dd-a185-11ef01b9d626": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_04219f60-9fa6-44f8-8691-71658d6419ac.jpg",
+            "link": "shopify://collections/blue-colour-jewellery"
+          }
+        },
+        "images_aakLgb": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_4228c8ac-e0a4-4f38-8d07-46fbc92f160d.jpg",
+            "link": "shopify://collections/peacock-presence"
+          }
+        },
+        "images_dF74Kw": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_bfcd8518-ed3c-427c-8e07-54098c7c003a.jpg",
+            "link": "shopify://collections/elephant-elegance"
+          }
+        },
+        "images_NA8Pyg": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_340ca4b4-0a25-432e-9360-d021cdd3326b.jpg",
+            "link": "shopify://collections/heart-design-jewellery"
+          }
+        },
+        "images_x8HxAc": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_0a352843-5157-4a39-8d98-922967e0cf4a.jpg",
+            "link": "shopify://collections/butterfly-magic-trendy-collection"
+          }
+        }
+      },
+      "block_order": [
+        "745d4709-6f44-41be-8436-a723c6e01819",
+        "2fc2f50e-fb79-408a-b60f-c91623692cbc",
+        "20d6d561-f1eb-4409-b504-da6668dba701",
+        "0f5d5c06-efff-49dd-a185-11ef01b9d626",
+        "images_aakLgb",
+        "images_dF74Kw",
+        "images_NA8Pyg",
+        "images_x8HxAc"
+      ],
+      "settings": {
+        "number_of_column_desk": 4,
+        "number_of_column_mb": 2,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50
+      }
+    },
+    "1654588138de198484": {
+      "type": "collection-links",
+      "blocks": {
+        "64ba55ea-1bcd-4a73-8cd7-a6a4bc55d031": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/necklace.jpg",
+            "text": "Necklaces",
+            "link": "shopify://collections/necklaces"
+          }
+        },
+        "9531d9e6-14fc-442f-a128-3bc4f32a361f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/earrings.jpg",
+            "text": "Earrings",
+            "link": "shopify://collections/earrings"
+          }
+        },
+        "dcccaa1a-857e-4e42-a698-74a2ad9c2d51": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bangles_ca74e6a9-8878-4590-9856-5f3b6eacfe50.jpg",
+            "text": "Bangles",
+            "link": "shopify://collections/bangles"
+          }
+        },
+        "7431ff4a-ae88-4677-bec7-d807ba74a73a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/finger_ring.jpg",
+            "text": "Finger Rings",
+            "link": "shopify://collections/finger-rings"
+          }
+        },
+        "9c8756e8-8394-4b61-a4a9-f7dfec936f77": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hath_pan.jpg",
+            "text": "Hathpans",
+            "link": "shopify://collections/hathpans"
+          }
+        },
+        "e31c9626-5034-417d-aaeb-32ad2b97e7e4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pendant.jpg",
+            "text": "Pendants",
+            "link": "shopify://collections/chain-pendants"
+          }
+        },
+        "27a10585-ee41-4fae-9ae6-d91416022709": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maang_tikka.jpg",
+            "text": "Maang Tikkas",
+            "link": "shopify://collections/tikkas"
+          }
+        },
+        "49c4e396-b0ca-4d68-ac48-54c0b373135d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/toe_ring.jpg",
+            "text": "Toe Rings",
+            "link": "shopify://collections/toe-rings"
+          }
+        },
+        "a63945ff-ef51-4ef9-b45c-7b5495cc1b75": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bajuband.jpg",
+            "text": "Bajuband",
+            "link": "shopify://collections/bajuband"
+          }
+        },
+        "40a143b0-90b0-44c5-98ca-a6cfa23d8666": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/payal_f215f0fc-e356-49b9-981e-2e43d9685aa2.jpg",
+            "text": "Payal",
+            "link": "shopify://collections/payals"
+          }
+        }
+      },
+      "block_order": [
+        "64ba55ea-1bcd-4a73-8cd7-a6a4bc55d031",
+        "9531d9e6-14fc-442f-a128-3bc4f32a361f",
+        "dcccaa1a-857e-4e42-a698-74a2ad9c2d51",
+        "7431ff4a-ae88-4677-bec7-d807ba74a73a",
+        "9c8756e8-8394-4b61-a4a9-f7dfec936f77",
+        "e31c9626-5034-417d-aaeb-32ad2b97e7e4",
+        "27a10585-ee41-4fae-9ae6-d91416022709",
+        "49c4e396-b0ca-4d68-ac48-54c0b373135d",
+        "a63945ff-ef51-4ef9-b45c-7b5495cc1b75",
+        "40a143b0-90b0-44c5-98ca-a6cfa23d8666"
+      ],
+      "settings": {
+        "title": "Our Trending Categories",
+        "enable_carousel": true,
+        "grid": 9,
+        "use_alt_bg": false,
+        "font_size_title_link": 13
+      }
+    },
+    "image_with_link_4PD7An": {
+      "type": "image-with-link",
+      "blocks": {
+        "images_UR4CzF": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_29_8a77769a-1b46-4a60-af73-a4b93acaadea.jpg",
+            "link": "shopify://collections/92-5-sterling-silver-jewellery"
+          }
+        },
+        "images_nFqYj9": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_9_80e7cddf-e4df-4a54-802f-b8942d83e30c.jpg",
+            "link": "shopify://collections/zircon-party-wear-earrings-and-necklaces"
+          }
+        },
+        "images_Ww9AgE": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_15_ecbe14fa-26b0-4942-9fd5-6cd12528986f.jpg",
+            "link": "shopify://collections/trendy-jewellery"
+          }
+        },
+        "images_TGiLWA": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_17_f79add2d-9ccb-48ec-8059-5bcf877f9b0a.jpg",
+            "link": "shopify://collections/antique-jewellery"
+          }
+        },
+        "images_pFBWe9": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/1_22_ceba0fb2-b4aa-4c84-b9ec-b304bccbdfd8.jpg",
+            "link": "shopify://collections/ganesha-jewellery-collection"
+          }
+        },
+        "images_mQJF7k": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/2_14_f49b850e-6213-44f2-9d0c-e5edaa035f85.jpg",
+            "link": "shopify://collections/goddess-lakshmi-collection"
+          }
+        },
+        "images_wgJQeL": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/3_13_f328b969-f26a-4cfa-94da-f8dbfd7bb12c.jpg",
+            "link": "shopify://collections/divine-collection-krishna"
+          }
+        },
+        "images_9Uda9r": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/4_6_43d89589-59c9-4dc7-af5b-3a961f4e5032.jpg",
+            "link": "shopify://collections/kasu-collection"
+          }
+        }
+      },
+      "block_order": [
+        "images_UR4CzF",
+        "images_nFqYj9",
+        "images_Ww9AgE",
+        "images_TGiLWA",
+        "images_pFBWe9",
+        "images_mQJF7k",
+        "images_wgJQeL",
+        "images_9Uda9r"
+      ],
+      "settings": {
+        "number_of_column_desk": 4,
+        "number_of_column_mb": 2,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50
+      }
+    },
+    "1651918713939f2edd": {
+      "type": "background-video",
+      "settings": {
+        "video": "https://cdn.shopify.com/videos/c/o/v/f735324d15c345c68fce01173ed94457.mp4",
+        "placeholder_image": "shopify://shop_images/Thumbnail.jpg",
+        "subheading": "",
+        "title": "",
+        "title_size": 100,
+        "title_size_mobile": 40,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": false,
+        "button_label_1": "",
+        "button_url_1": "shopify://collections/bridal-collection-2024",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "top center",
+        "height_desktop": 720,
+        "height_mobile": 360,
+        "full_width": false,
+        "overlay_style": "no_background"
+      }
+    },
+    "1652270168449f38f3": {
+      "type": "background-video-mobile",
+      "settings": {
+        "video": "https://cdn.shopify.com/videos/c/o/v/f735324d15c345c68fce01173ed94457.mp4",
+        "autoplay": false,
+        "placeholder_image": "shopify://shop_images/Thumbnail.jpg",
+        "subheading": "",
+        "title": "",
+        "use_h1": false,
+        "text": "",
+        "button_label": "",
+        "button_link": "shopify://collections/bridal-collection-2024",
+        "button_style": "secondary",
+        "video_position": "left",
+        "text_alignment": "center",
+        "use_alt_bg": false
+      }
+    },
+    "165183474473f7d6a5": {
+      "type": "celebrity-star",
+      "blocks": {
+        "54f7ef67-2a49-4d4e-b3ab-09544eff9a97": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/mrunal_thakur.jpg",
+            "celeb_name": "Mrunal Thakur",
+            "celeb_info": "Mrunal Thakur looking adorable in Kushal's Kundan Necklace Set",
+            "button_label": "Buy Now",
+            "button_url": "shopify://collections/kundan-necklaces"
+          }
+        },
+        "35b0d3e6-5eeb-43ce-ab4d-7484ff6014ee": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/sunny1.jpg",
+            "celeb_name": "Sunny Leone",
+            "celeb_info": "Sunny Leone being the star she is with Kushal's Zircon Kada",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/zircon-kada-145116"
+          }
+        },
+        "7137fb72-9027-45be-97f3-1ddb0c6d27a5": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/06__1.jpg",
+            "celeb_name": "Jacqueline Fernandez",
+            "celeb_info": "The gorgeous Jacqueline Fernandez in our Trendy Hoops!",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/trendy-earring-159428"
+          }
+        },
+        "061f5332-5c96-4295-8644-967894f0344e": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/08__1.jpg",
+            "celeb_name": "Sreejita De",
+            "celeb_info": "Dazzle bright like Sreejita De in our Trendy Danglers!",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/trendy-earring-159432"
+          }
+        },
+        "83483789-87fb-4f4d-a05a-8cf0cfa4e460": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/03__1.jpg",
+            "celeb_name": "Avika Gor",
+            "celeb_info": "Avika Gor is a classic beauty in our Zircon Earrings",
+            "button_label": "Shop Similar",
+            "button_url": "shopify://collections/zircon-celeb-picks"
+          }
+        },
+        "21b2b349-ccb3-40b0-b9d7-66ac01858bae": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/02__1.jpg",
+            "celeb_name": "Barkha Singh",
+            "celeb_info": "Barkha Singh all glam in our Zircon Danglers!",
+            "button_label": "Buy Now",
+            "button_url": "https://www.kushals.com/products/zircon-earring-148508"
+          }
+        },
+        "32dee5b1-2bc6-42b1-a415-c2ce242d769f": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/05__1.jpg",
+            "celeb_name": "Aahana Kumra",
+            "celeb_info": "Aahana Kumra is red carpet ready with our Trendy Danglers",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/trendy-earring-159315"
+          }
+        },
+        "5fce874c-986f-4cad-929a-2bdab7bc3ed2": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/01__1.jpg",
+            "celeb_name": "Deepika Singh",
+            "celeb_info": "Deepika Singh vibrantly shining in our Zircon Danglers",
+            "button_label": "Shop Similar",
+            "button_url": "shopify://collections/zircon-danglers"
+          }
+        },
+        "776307fc-01fc-455a-ae13-91848aca1c08": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/04__1.jpg",
+            "celeb_name": "Divya Agarwal",
+            "celeb_info": "Keep it classy like Divya Agarwal with our Zircon Earrings",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/zircon-earring-152758"
+          }
+        },
+        "b821774d-67b7-43b7-bdb3-bb472512f5b9": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/shreya.jpg",
+            "celeb_name": "Shreya Ghoshal",
+            "celeb_info": "Shreya Ghoshal in-tune with elegance in Kushal's Antique Necklace!",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/antique-necklace-155725"
+          }
+        },
+        "26febab3-5008-4d53-8b61-ee681246b5b9": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/divya_agarwal.jpg",
+            "celeb_name": "Divya Agarwal",
+            "celeb_info": "Divya Agarwal in a stunning floral style with Kushal's Zircon Earring",
+            "button_label": "Shop Similar",
+            "button_url": "shopify://collections/stunning-zircon-earrings"
+          }
+        },
+        "e9b0011d-9dad-48f7-8399-d82228f18c34": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/kritika_khurana.jpg",
+            "celeb_name": "Kritika Khurana",
+            "celeb_info": "Kritika Khurana in a bold hue with Kushal's Trendy Finger Ring",
+            "button_label": "Shop Similar",
+            "button_url": "shopify://collections/trendy-picks-finger-rings"
+          }
+        },
+        "f5077746-e063-4a04-9c54-5e3371c3c3d6": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/elli.jpg",
+            "celeb_name": "Elli Avram",
+            "celeb_info": "Elli Avram Is all Glam in our beautiful Trendy Rings!",
+            "button_label": "Buy Now",
+            "button_url": "shopify://products/trendy-finger-ring-156387"
+          }
+        },
+        "187049ec-2050-4804-9461-9f1441c22b16": {
+          "type": "collection",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/neeti_mohan.jpg",
+            "celeb_name": "Neeti Mohan",
+            "celeb_info": "Neeti Mohan is all glamorous and traditional with Kushal's Zircon Earring",
+            "button_label": "Shop Similar",
+            "button_url": "shopify://collections/glam-zircon-earrings"
+          }
+        }
+      },
+      "block_order": [
+        "54f7ef67-2a49-4d4e-b3ab-09544eff9a97",
+        "35b0d3e6-5eeb-43ce-ab4d-7484ff6014ee",
+        "7137fb72-9027-45be-97f3-1ddb0c6d27a5",
+        "061f5332-5c96-4295-8644-967894f0344e",
+        "83483789-87fb-4f4d-a05a-8cf0cfa4e460",
+        "21b2b349-ccb3-40b0-b9d7-66ac01858bae",
+        "32dee5b1-2bc6-42b1-a415-c2ce242d769f",
+        "5fce874c-986f-4cad-929a-2bdab7bc3ed2",
+        "776307fc-01fc-455a-ae13-91848aca1c08",
+        "b821774d-67b7-43b7-bdb3-bb472512f5b9",
+        "26febab3-5008-4d53-8b61-ee681246b5b9",
+        "e9b0011d-9dad-48f7-8399-d82228f18c34",
+        "f5077746-e063-4a04-9c54-5e3371c3c3d6",
+        "187049ec-2050-4804-9461-9f1441c22b16"
+      ],
+      "settings": {
+        "title": "Catch The Light Like A Star",
+        "enable_carousel": true,
+        "grid": 5,
+        "use_alt_bg": true
+      }
+    },
+    "1663330873065010cc": {
+      "type": "custom-row",
+      "blocks": {
+        "ae1aa7e8-e1a0-4ccf-b308-709f05febe7d": {
+          "type": "html",
+          "settings": {
+            "width": "full",
+            "code": "<div class=\"elfsight-app-7a987017-7f35-4ec5-9a2c-c23ac39912e0\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "ae1aa7e8-e1a0-4ccf-b308-709f05febe7d"
+      ],
+      "custom_css": [
+        ".container {margin-top: 0px;}"
+      ],
+      "settings": {
+        "alignment": "middle"
+      }
+    },
+    "1652075930e43cd5fa": {
+      "type": "featured-custom-blog",
+      "settings": {
+        "title": "Looking for Inspiration?",
+        "blog": "fashion-jewellery-blog",
+        "enable_carousel": true,
+        "grid": 3,
+        "rows": 1,
+        "use_alt_bg": false,
+        "show_author": false,
+        "show_date": false,
+        "crop_ratio": "1.78",
+        "show_view_all": false
+      }
+    }
+  },
+  "order": [
+    "end_sale_timer_jp39En",
+    "sale_anncouncement_tDGLt6",
+    "165208701194f9062b",
+    "slideshow_Viq7kG",
+    "ct_image_deRaN9",
+    "app_download_banner_LWwEb7",
+    "1651908197d942a981",
+    "2051db59-2569-4e1b-ab7e-cbcb539306b6",
+    "1655801705e4a2ca70",
+    "featured_collection_by9PiD",
+    "image_with_link_zaxyJX",
+    "5819de4b-3b23-406f-8917-79bac4ea78d2",
+    "1655802594c390c10e",
+    "94e6de2d-053d-43f1-8484-21fc994c467c",
+    "54682443-bc35-4053-987d-d843f56ee5da",
+    "featured_collection_nQ4EfJ",
+    "eff944a0-d13a-4b5c-ab0a-28dc2f89db5d",
+    "1654588138de198484",
+    "image_with_link_4PD7An",
+    "1651918713939f2edd",
+    "1652270168449f38f3",
+    "165183474473f7d6a5",
+    "1663330873065010cc",
+    "1652075930e43cd5fa"
+  ]
+}

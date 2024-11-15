@@ -1,0 +1,1930 @@
+
+
+<style>
+  span.CT_switchers ,.ct_icon_filter{
+    display: none;
+}
+  .collection-bottom-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  .template-collection .sort-by-icon {
+    width: 84px;
+    height: 21px;
+    margin-right: 0px;
+    display: flex;
+}
+  .template-collection .sort-by-icon img {
+    width: 21px;
+        margin-right: 8px;
+}
+  
+
+  @media(max-width:750px){
+    .ct_gallery_main_first {
+    display: none;
+  }
+    .ct_gallery_main_first .CT_gallery__image{
+      min-width:0px !important;
+      max-width:0px !important;
+      width:0px !important;
+    }
+    
+    .template-collection span.link-dropdown__button-text {
+    margin-top: 30px;
+    display: block;
+    color: #ce000e;
+    font-weight: 500;
+    font-size: 13px;
+      font-family: "Inter", sans-serif;
+      text-transform: capitalize;
+}
+    .ct_icon_filter {
+    display: block;
+}
+    .CT_utility-bar__left svg:first-child {
+    display: none;
+}
+ .CT-Main_utility-bar {
+    left: 0%;
+    margin-bottom: 0 !important;
+    z-index: 11;
+    height: 67px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 22px 2px;
+}
+    .link-dropdown__button[aria-expanded=true] + .link-dropdown__options {
+    visibility: visible;
+    opacity: 1;
+    position: fixed !important;
+    bottom: -0px !important;
+    width: 100vw !important;
+    height: min-content;
+    top: inherit !important;
+    min-width: 100vw;
+    left: -0px !important;
+    z-index: 4;
+    right: inherit !important;
+      padding: 0;
+}
+.collection-bottom-filter {
+    border-radius: 0;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+    .sort-by-icon  img {
+    display: none;
+}
+ .CT_utility-bar__right svg.ct_icon_filter {
+    fill: #fff;
+    width: 19px;
+    height: 19px;
+}
+    .CT_utility-bar__right {
+    position: relative;
+}
+    #sort-dropdown-heading {
+    color: #1A1A1A !important;
+    font-family: 'Lato' !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    text-transform: capitalize !important;
+    padding-left: 10px !important;
+}
+    .template-collection .sort-by-icon {
+    width: 84px;
+}
+    /* .link-dropdown__button[aria-expanded=true] + .link-dropdown__options:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 7;
+} */
+
+    /* .CT_link-dropdown__button {
+    opacity: 0;
+    padding: 0 !important;
+    height: 46px !important;
+} */
+ .CT_link-dropdown__button {
+    opacity: 1;
+    padding: 0 !important;
+    height: 55px !important;
+    position: absolute !important;
+    top: -27px;
+    right: 0;
+    border: 0 !important;
+    text-align: center !important;
+    color: #ce1c22 !important;
+}
+    .CT_link-dropdown__button .link-dropdown__button-icon{
+       display:none;
+    }
+    .template-collection .link-dropdown {
+    width: 100% !important;
+}
+    .CT_utility-bar__right .sort-by-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    /* border: 1px solid #D7D7D7;
+    opacity: 0.8; */
+    background: #FFF;
+      pointer-events: none;
+      top: -5px;
+}
+    .collection-bottom-filter::before {
+    content: '';
+    width: 1px;
+    height: calc(100% - 24px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgb(242, 242, 253);
+    transform: translate(-50% , -50%);
+    z-index: 1;
+}
+    .CT_utility-bar__left .toggle-btn {
+    height: 46px;
+    height: 46px;
+    color: #1A1A1A !important;
+    font-family: 'Lato' !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    text-transform: capitalize !important;
+    padding-left: 10px !important;
+    }
+.CT_utility-bar__left a.toggle-btn {
+    border-radius: 0;
+    
+    background: #FFF;
+    padding: 0 23px !important;
+    margin-right: 0 !important;
+    margin-left: 8px !important;
+    justify-content: center;
+}
+    .link-dropdown__button[aria-expanded=true] + + .ct_fil_shade {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    z-index: 1;
+    left: 0;
+}
+    .ct_fill_active {
+    opacity: 0.75;
+    pointer-events: auto;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 3;
+}
+    .ct_active_sort {
+    z-index: 2;
+      transition: 0s cubic-bezier(.22,1,.36,1);
+}
+    .CT-Main_utility-bar.utility-bar.utility-bar--sticky-mobile-copy {
+    display: none;
+}
+.CT_short_link {
+    cursor: pointer;
+    padding: 13px 15px !important;
+    color: #343434 !important;
+    text-transform: capitalize;
+    font-weight: 400 !important;
+    font-family: 'Lato';
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(230, 230, 236);
+    height: 64px;
+    position: relative;
+}
+    .CT_short_link.link-dropdown__link--active {
+    background: #fff;
+    font-weight: 700 !important;
+}
+    span.ct-check-box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+    .CT_short_link.link-dropdown__link--active span.ct-check-box {
+    border: 6px solid #000;
+}
+    
+    .CT-main-collection-listing {
+    padding-bottom: 50px;
+}
+  }
+</style>
+
+
+
+
+<script>
+  window._izq.push(["trigger","collection_viewed",{ "collection_name":{{ collection.title }}, "collection_image":{{ collection.image }}, "collection_url":{{ collection.url }}, }])
+</script>
+<div
+  class="CT_collec_main   {% if section.settings.emi_price %} emi_price_show {% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template"
+  data-ajax-filtering="{{ section.settings.ajax_products }}"
+  data-components="accordion,modal,price-range"
+  data-cc-animate
+  class="main_collection_template"
+>
+  {% render 'PLP-Top-App-Box' %}
+
+  {% paginate collection.products by section.settings.coll_num_per_page_int %}
+    {%- liquid
+      if section.settings.show_image_behind_heading and collection.image
+        assign header_image_enabled = true
+      else
+        assign header_image_enabled = false
+      endif
+      assign current_sort = collection.sort_by | default: collection.default_sort_by
+
+      assign show_filters = section.settings.enable_filtering
+      if collection.filters == empty
+        assign show_filters = false
+      endif
+    -%}
+
+    {%- liquid
+      if section.settings.enable_subcoll and section.settings.subcoll_menu != blank
+        assign current_link_parent = false
+        for link in linklists[section.settings.subcoll_menu].links
+          if link.links != empty
+            if link.type == 'collection_link' and link.object.handle == collection.handle
+              assign current_link_parent = link
+              break
+            elsif link.type == 'catalog_link' and collection.handle == 'all'
+              assign current_link_parent = link
+              break
+            endif
+          endif
+          if link.links != blank and current_link_parent == false
+            for child_link in link.links
+              if child_link.type == 'collection_link' and child_link.object.handle == collection.handle
+                if child_link.links == empty
+                  assign current_link_parent = link
+                else
+                  assign current_link_parent = child_link
+                endif
+                break
+              endif
+              if child_link.type == 'catalog_link' and collection.handle == 'all'
+                if child_link.links == empty
+                  assign current_link_parent = link
+                else
+                  assign current_link_parent = child_link
+                endif
+                break
+              endif
+              if child_link.links != blank and current_link_parent == false
+                for child_child_link in child_link.links
+                  if child_child_link.type == 'collection_link' and child_child_link.object.handle == collection.handle
+                    assign current_link_parent = child_link
+                    break
+                  elsif child_child_link.type == 'catalog_link' and collection.handle == 'all'
+                    assign current_link_parent = child_link
+                    break
+                  endif
+                endfor
+              endif
+            endfor
+          endif
+        endfor
+      endif
+    -%}
+
+    {%- if current_link_parent -%}
+      {%- assign subcoll_count = 0 -%}
+      {% capture subcollection_html %}
+    {% if section.settings.subcoll_style == 'buttons' %}
+      <div class="container">
+        <div class="subcollection-links subcollection-links--buttons align-center lightly-spaced-row-above{% if header_image_enabled %} image-overlay__over{% endif %}">
+          {%- for link in current_link_parent.links -%}
+            {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
+              {%- assign subcoll_count = subcoll_count | plus: 1 -%}
+              <a class="btn btn--tertiary" href="{{ link.url }}">{{ link.title | escape }}</a>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {% else %}
+      {% unless section.settings.subcoll_gall_full_width %}
+        <div class="container ct_collec_container container--not-mobile lightly-spaced-row-above lightly-spaced-row-above--not-mobile">
+      {% endunless %}
+          
+          {%- assign subcoll_count_new = 0 -%}
+          {%- for link in current_link_parent.links -%}
+            {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
+          {%- assign subcoll_count_new = subcoll_count_new | plus: 1 -%}
+          {%- endunless -%}
+          {%- endfor -%}
+      <div class="subcollection-links subcollection-links--gallery {% if section.settings.subcoll_gall_full_width %}subcollection-links--is-full-width{% endif %} {% if section.settings.subcoll_gall_mobile_layout == 'hide' %}desktop-only{% endif %} {% if header_image_enabled %}subcollection-links--under-image-header{% endif %}">
+
+
+
+        <div class="ct_gallery_main_secend">
+         <div class="ct_gallery_main   "
+            >
+          {%- for link in current_link_parent.links -%}
+            {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
+              {%- assign subcoll_count = subcoll_count | plus: 1 -%}
+              <div class=" CT_gallery__image  CT_gallery__image_filter  ">
+               
+                <a class="image-overlay__image-link" href="{{ link.url }}">
+                  {%- liquid
+                    if link.object.featured_image
+                      assign subcoll_image = link.object.featured_image
+                    else
+                      assign subcoll_image = false
+                    endif
+                  -%}
+                  
+                  {%- if subcoll_image -%}
+                    <div class="ct-filter-border">
+                    <div class="gallery__image rimage-outer-wrapper rimage-background lazyload--manual fade-in"
+                       
+                      
+                        style="background-position: {{ section.settings.image_position }} ;background-image: url('{{ subcoll_image | img_url: '512x512' }}') ">
+                     
+                    </div>
+                      </div>
+                  {%- else -%}
+                    
+                    <div class="gallery__image placeholder-image dark">
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                  {%- endif -%}
+                  <div class="CT_overlay-text overlay-text overlay--v-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
+                    <div class="overlay-text__inner ">
+                      <div class="overlay-text__text">
+                        <h2 class="ct_overlay-text__title overlay-text__title h4-style">{{ link.title | capitalize }}</h2>
+                      </div>
+                      
+                      {% if collections[link.object.handle].metafields.my_fields.collection_description != blank %}
+                      <div class="overlay-metafield">
+                        <p class="overlay-text__rte rte">{{ collections[link.object.handle].metafields.my_fields.collection_description | truncate: 50 }}</p>
+                      </div>
+                      {% endif %}
+                      
+                   
+                    </div>
+                  </div>
+                 
+                </a>
+                
+              </div>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+        </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        <div class="ct_gallery_main_first ct_gallery_main gallery slick-slider-overlay-dots {% if section.settings.subcoll_gall_enable_margin %} gallery--with-margins{% endif %}{% if section.settings.subcoll_gall_full_width and section.settings.subcoll_gall_enable_margin %} gallery--with-vertical-outer-padding{% endif %}"
+            data-count="{{ subcoll_count_new }}" data-mobile-item-count="{{ section.settings.subcoll_gall_mobile_layout }}">
+          {%- for link in current_link_parent.links -%}
+            {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
+              {%- assign subcoll_count = subcoll_count | plus: 1 -%}
+              <div class="gallery__item CT_gallery__image  CT_gallery__image_filter 
+                  gallery__item-test
+                  gallery__item--shape-fixed
+                  gallery__item--shape-{{ section.settings.subcoll_gall_shape }}
+                  gallery__item-{{ forloop.index }}
+                  image-overlay
+                  image-overlay--bg-{{ section.settings.subcoll_gall_overlay_style }}
+                  image-overlay--edge-boxes
+                  lazyload--placeholder
+                  {% unless section.settings.subcoll_gall_full_width and section.settings.subcoll_gall_enable_margin == false %}image-overlay--edge-boxes--pad-to-corner{% endunless %}
+                  ">
+                <div class="zoom-effect-container">
+                <a class="image-overlay__image-link" href="{{ link.url }}">
+                  {%- liquid
+                    if link.object.featured_image
+                      assign subcoll_image = link.object.featured_image
+                    else
+                      assign subcoll_image = false
+                    endif
+                  -%}
+                  
+                  {%- if subcoll_image -%}
+                    <div class="ct-filter-border">
+                    <div class="gallery__image rimage-outer-wrapper rimage-background lazyload--manual fade-in"
+                        data-bgset="{% render 'bgset', image: subcoll_image %}"
+                        data-sizes="auto"
+                        data-parent-fit="cover"
+                        style="background-position: {{ section.settings.image_position }}">
+                      <noscript>
+                        <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: subcoll_image.aspect_ratio | times: 100 }}%">
+                          <img loading="lazy" src="{{ subcoll_image | img_url: '512x512' }}" alt="{{ subcoll_image.alt | escape }}" class="rimage__image">
+                        </div>
+                      </noscript>
+                    </div>
+                      </div>
+                  {%- else -%}
+                    
+                    <div class="gallery__image placeholder-image dark">
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                  {%- endif -%}
+                  <div class="CT_overlay-text overlay-text overlay--v-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
+                    <div class="overlay-text__inner ">
+                      <div class="overlay-text__text">
+                        <h2 class="ct_overlay-text__title overlay-text__title h4-style">{{ link.title | capitalize }}</h2>
+                      </div>
+                      
+                      {% if collections[link.object.handle].metafields.my_fields.collection_description != blank %}
+                      <div class="overlay-metafield">
+                        <p class="overlay-text__rte rte">{{ collections[link.object.handle].metafields.my_fields.collection_description | truncate: 50 }}</p>
+                      </div>
+                      {% endif %}
+                      
+                      {%- comment -%}
+                      <div class="overlay__button-row">
+                        <a class="overlay__button" href="{{ link.url }}">View All</a>
+                      </div>
+                      {%- endcomment -%}
+                      
+                    </div>
+                  </div>
+                  <div class="collection-opacity"></div>
+                </a>
+                </div>
+              </div>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+      {% unless section.settings.subcoll_gall_full_width %}
+        </div>
+      {% endunless %}
+    {% endif %}
+  {% endcapture %}
+      {%- liquid
+        if subcoll_count < 2
+          assign subcollection_html = ''
+        endif
+      -%}
+    {%- endif -%}
+
+    {% if header_image_enabled %}
+      
+      <div class="ct_coll_page-header page-header page-header--with-background page-header--background-desktop-only image-overlay image-overlay--bg-{{ section.settings.overlay_style }} page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
+
+      <div class="ct_header">
+      <div class="ct_header_title">{{ collection.title | escape }}
+
+
+     <div class="ct_header_countet">
+      <div class="ct_utility-bar" data-ajax-container data-ajax-scroll-to>
+      {% if section.settings.show_total and paginate.items > 0 %}
+          <div class="ct_utility-bar__centre">
+            <div class="ct_utility-bar__item">
+              <span style="text-transform: capitalize;">
+               ( {{- 'collections.general.product_count' | t: count: paginate.items -}} )
+              </span>
+            </div>
+          </div>
+        {% endif %}
+      </div>        
+      </div>      
+      
+      </div>
+
+      {% assign your_text_variable = collection.metafields.my_fields.collection_description %}
+{% assign words_array = your_text_variable | split: ' ' %}
+{% assign total_words = words_array %}
+
+  
+      
+  {% if collection.metafields.my_fields.collection_description !=blank %}
+      <div class="ct_header_desc    {% if total_words.size > 6 %}ct_header_desc_three{% endif %}">
+      <div class="ct_header_desc_text">      
+      {{ collection.metafields.my_fields.collection_description }}
+      </div>
+                          {% if total_words.size > 6 %}
+      <div class="ct_header_desc_btn">Read More</div>
+  {% endif %}
+      </div>
+  {% endif %}
+      
+      <script>
+      $(".ct_header_desc_btn").click(function(){
+          $(".ct_header_desc").addClass("ct_header_desc_active");
+        });
+      </script>
+      
+     
+      </div>
+      
+      
+      
+     
+{% comment %} <div class="CT-rimage-background rimage-background lazyload fade-in"
+          data-bgset="{% render 'bgset', image: collection.image %}"
+          data-sizes="auto"
+          data-parent-fit="cover">
+      </div>
+        {% endcomment %}
+        <div class="ct_page-header-background-mobile-only page-header-background-mobile-only image-overlay image-overlay--bg-{{ section.settings.overlay_style }} page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
+          <div
+            class="rimage-background lazyload fade-in"
+            data-bgset="{% render 'bgset', image: collection.image %}"
+            data-sizes="auto"
+            data-parent-fit="cover"
+          ></div>
+          <div
+            class="container overlay-text collection-header-img overlay-text--inline overlay--v-center overlay--h-center image-overlay__over"
+            data-cc-animate
+            data-cc-animate-delay="0.2s"
+          >
+            <div class="overlay-text__inner">
+              <div class="overlay-text__text">
+                <div class="desktop-only not-in-quickbuy" data-cc-animate data-cc-animate-delay="0.2s">
+                  <div class="page-header">
+                    {% render 'breadcrumbs', show_next_prev: true %}
+                  </div>
+                </div>
+                <h1 class="overlay-text__title super-large-text">{{ collection.title | escape }}</h1>
+
+                {% if collection.metafields.my_fields.collection_description != blank %}
+                  <div class="overlay-text__rte rte cf reading-width large-text">
+                    {{ collection.metafields.my_fields.collection_description }}
+                  </div>
+                {% endif %}
+                {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+                  <div class="overlay-text__rte rte cf align-center reading-width large-text">
+                    {{ collection.description }}
+                  </div>
+                {% endif %}
+                {%- if current_link_parent and section.settings.subcoll_style == 'buttons' -%}
+                  {{ subcollection_html }}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collection-img-bg"></div>
+      </div>
+    {% else %}
+
+        <div class="ct_header  ct_header_blak">
+      <div class="ct_header_title">{{ collection.title | escape }}
+
+
+     <div class="ct_header_countet">
+      <div class="ct_utility-bar" data-ajax-container data-ajax-scroll-to>
+      {% if section.settings.show_total and paginate.items > 0 %}
+          <div class="ct_utility-bar__centre">
+            <div class="ct_utility-bar__item">
+              <span style="text-transform: capitalize;">
+               ( {{- 'collections.general.product_count' | t: count: paginate.items -}} )
+              </span>
+            </div>
+          </div>
+        {% endif %}
+      </div>        
+      </div>      
+      
+      </div>
+
+{% assign your_text_variable = collection.metafields.my_fields.collection_description.length %}
+{% assign words_array = your_text_variable | split: " "  %}
+
+   {{ your_text_variable }}   
+
+      
+  {% if collection.metafields.my_fields.collection_description !=blank %}
+      <div class="ct_header_desc  {% if words_array.size > 6 %}ct_header_desc_three{% endif %}">
+      <div class="ct_header_desc_text">      
+      {{ collection.metafields.my_fields.collection_description }}
+      </div>
+    {% if words_array.size > 6 %}
+      <div class="{{ words_array }} ct_header_desc_btn">Read More</div>  
+      {% endif %}
+      </div>
+  {% endif %}
+      
+      <script>
+      $(".ct_header_desc_btn").click(function(){
+          $(".ct_header_desc").addClass("ct_header_desc_active");
+        });
+      </script>     
+     
+      </div>
+
+      
+
+      
+      {{ subcollection_html }}
+      <div class="CT_page-header_sec  page-header page-header--with-upper-spacing">
+        <div class="container">
+          <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
+
+          {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+            <div class="rte cf align-center reading-width">{{ collection.description }}</div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {%- if current_link_parent and header_image_enabled and section.settings.subcoll_style != 'buttons' -%}
+      {{ subcollection_html }}
+    {%- endif -%}
+
+    <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}">
+      <div class="CT-Main_utility-bar  utility-bar" data-ajax-container data-ajax-scroll-to>
+
+
+
+
+
+
+    <div class="collection-bottom-filter">
+        {% if collection.filters.size != 0 %}
+          <div class="utility-bar__left CT_utility-bar__left">
+            {% if section.settings.coll_show_sort or show_filters %}
+              <a
+                href="#"
+                class="toggle-btn ct_filter-toggle-btn utility-bar__item{% if section.settings.collapse_tag_sidebar_by_default == false %} toggle-btn--revealed-desktop{% endif %}{% if show_filters == false %} mobile-only-flex{% endif %}"
+                data-toggle-filters
+              >
+
+                <div class="ct_filter-toggle-btn-inner">
+                <span class="button-icon">{% render 'svg-filter' %}
+              <!-- <svg class="ct_icon_filter" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M2.5 5.83334H17.5" stroke="#292D32" stroke-width="1.11111" stroke-linecap="round"/>
+                  <path d="M5 10H15" stroke="#292D32" stroke-width="1.11111" stroke-linecap="round"/>
+                  <path d="M8.33334 14.1667H11.6667" stroke="#A02828" stroke-width="1.11111" stroke-linecap="round"/>
+                </svg> -->
+
+
+                  <svg class="ct_icon_filter ct_icon_filter_secend" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.77498 2.16248H15.225C16.0958 2.16248 16.8083 2.87498 16.8083 3.74581V5.48748C16.8083 6.12081 16.4125 6.91248 16.0167 7.30831L12.6125 10.3166C12.1375 10.7125 11.8208 11.5041 11.8208 12.1375V15.5416C11.8208 16.0166 11.5042 16.65 11.1083 16.8875L9.99998 17.6C8.97082 18.2333 7.54582 17.5208 7.54582 16.2541V12.0583C7.54582 11.5041 7.22915 10.7916 6.91248 10.3958L3.90415 7.22914C3.50832 6.83331 3.19165 6.12081 3.19165 5.64581V3.82498C3.19165 2.87498 3.90415 2.16248 4.77498 2.16248Z" stroke="#292D32" stroke-width="1.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.15292 2.16248L5.25 8.41664" stroke="#A02828" stroke-width="1.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+                    
+                <!-- <svg class="ct_icon_filter" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_7965_9388)">
+                <path d="M2.5 6.66669L12.5 6.66669M12.5 6.66669C12.5 8.0474 13.6193 9.16669 15 9.16669C16.3807 9.16669 17.5 8.0474 17.5 6.66669C17.5 5.28598 16.3807 4.16669 15 4.16669C13.6193 4.16669 12.5 5.28598 12.5 6.66669ZM7.5 13.3334L17.5 13.3334M7.5 13.3334C7.5 14.7141 6.38071 15.8334 5 15.8334C3.61929 15.8334 2.5 14.7141 2.5 13.3334C2.5 11.9526 3.61929 10.8334 5 10.8334C6.38071 10.8334 7.5 11.9526 7.5 13.3334Z" stroke="#000" stroke-width="1.25" stroke-linecap="square"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_7965_9388">
+                <rect width="20" height="20" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg> -->
+
+              </span>
+                <span>{{ 'collections.filtering.filter' | t }}</span>
+              </div>
+
+                  
+                {% liquid
+                  assign filter_count = 0
+                  for filter in collection.filters
+                    assign filter_count = filter_count | plus: filter.active_values.size
+                    if filter.type == 'price_range'
+                      if filter.min_value.value != null or filter.max_value.value != null
+                        assign filter_count = filter_count | plus: 1
+                      endif
+                    endif
+                  endfor
+                %}
+                {% if filter_count > 0 %}
+                  <span class="ct_toggle-btn__count  toggle-btn__count">{{ filter_count }} Applied</span>
+                  {% else %}
+                  <span class="ct_toggle-btn__count ct_toggle-btn__count_zero toggle-btn__count">0 Applied</span>
+                {% endif %}
+                <span class="toggle-btn__chevron">{% render 'svg-chevron-right', stroke_width: 1.3 %}</span>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if section.settings.show_total and paginate.items > 0 %}
+          <div class="utility-bar__centre CT_fil_utility-bar__centre desktop-only">
+            <div class="utility-bar__item">
+              <span style="text-transform: capitalize;">
+                {{- 'collections.general.product_count' | t: count: paginate.items -}}
+              </span>
+              found
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="utility-bar__right CT_utility-bar__right">
+          <div class="sort-by-icon ">
+            <img
+              loading="lazy"
+              src="https://cdn.shopify.com/s/files/1/0796/1959/files/Sort_By.svg?v=1652270059"
+              width="12"
+              height="12"
+            >
+    <!-- <svg class="ct_icon_filter" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M4.775 2.16251H15.225C16.0958 2.16251 16.8083 2.87501 16.8083 3.74584V5.48751C16.8083 6.12084 16.4125 6.91251 16.0167 7.30834L12.6125 10.3167C12.1375 10.7125 11.8208 11.5042 11.8208 12.1375V15.5417C11.8208 16.0167 11.5042 16.65 11.1083 16.8875L10 17.6C8.97084 18.2333 7.54584 17.5208 7.54584 16.2542V12.0583C7.54584 11.5042 7.22917 10.7917 6.9125 10.3958L3.90417 7.22917C3.50834 6.83334 3.19167 6.12084 3.19167 5.64584V3.82501C3.19167 2.87501 3.90417 2.16251 4.775 2.16251Z" stroke="#292D32" stroke-width="1.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.15292 2.16251L5.25 8.41667" stroke="#A02828" stroke-width="1.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> -->
+
+            <svg class="ct_icon_filter" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 5.83337H17.5" stroke="#292D32" stroke-width="1.11111" stroke-linecap="round"/>
+                    <path d="M5 10H15" stroke="#292D32" stroke-width="1.11111" stroke-linecap="round"/>
+                    <path d="M8.33337 14.1666H11.6667" stroke="#A02828" stroke-width="1.11111" stroke-linecap="round"/>
+                  </svg>
+
+                      
+    <!-- <svg class="ct_icon_filter" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_7965_2145)">
+<path d="M6.33333 3.33337V16.6667M6.33333 16.6667L3 13.3334M6.33333 16.6667L9.66667 13.3334M14.6667 16.6667V3.33337M14.6667 3.33337L11.3333 6.66671M14.6667 3.33337L18 6.66671" stroke="#000" stroke-width="1.25" stroke-linecap="square"/>
+</g>
+<defs>
+<clipPath id="clip0_7965_2145">
+<rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+</clipPath>
+</defs>
+</svg> -->
+    
+          <div class="" id="sort-dropdown-heading">{{ 'collections.sorting.title' | t | escape }}</div>
+          </div>
+          {% if section.settings.coll_show_sort %}
+            <span class="utility-bar__item ">
+              <div class="link-dropdown link-dropdown--right-aligned">
+                <button
+                  class="CT_link-dropdown__button  link-dropdown__button notabutton"
+                  aria-expanded="false"
+                  aria-controls="sort-dropdown-options"
+                  aria-describedby="sort-dropdown-heading"
+                >
+                  <span class="link-dropdown__button-text CT-link-dropdown__button-text">
+                    {%- for option in collection.sort_options -%}
+                      {%- if current_sort == option.value -%}
+                        {%- if option.name == 'Featured' -%}
+                          Recommended
+                          {%- elsif option.name == 'Date, new to old' -%}
+                          Latest
+                        {% else %}
+                          {{ option.name | escape }}
+                        {%- endif -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </span>
+                  <span class="link-dropdown__button-icon">{% render 'svg-chevron-down', stroke_width: 1.3 %}</span>
+                </button>
+            
+                <div class="link-dropdown__options  CT_link-dropdown__options" id="sort-dropdown-options">
+
+                  <div class="CT_link-dropdown__options-head">Sort By 
+                  <svg width="1em" height="1em" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+                  </div>
+
+                  
+                  {%- for option in collection.sort_options -%}
+
+                    {% unless   option.value == 'title-ascending' or option.value == 'title-descending' %}
+
+                    
+                    {%- if option.value != 'manual'
+                      or section.settings.coll_show_feat
+                      or collection.default_sort_by == 'manual'
+                    -%}
+                      <a
+                        href="{{ request.path | sort_by: option.value | escape }}"
+                        class="CT_short_link  ct-filter-name_{{ option.name | remove:"," | replace: ' ', '_' }} {{ current_sort }} link-dropdown__link{% if current_sort == option.value %} link-dropdown__link--active{% endif %}"
+                      >
+                        <span class="ct-check-box"></span>
+                        {%- if option.name == 'Featured' -%}
+                         <span class="ct_cl_sort"> Recommended </span>
+                        {%- elsif option.name == 'Date, new to old' -%}
+                         <span class="ct_cl_sort">  Latest </span>
+                        {% else %}
+                          <span class="ct_cl_sort"> {{ option.name | escape }} </span>
+                        {%- endif -%}
+                      </a>
+                    {%- endif -%}
+                      {% endunless %}
+                  {%- endfor -%}
+                </div>
+             <div class="ct_fil_shade" ></div>
+              </div>
+            </span>
+          {% endif %}
+
+
+</div>
+
+    
+
+    
+          <span class="CT_switchers utility-bar__item mobile-only">
+            <div class="layout-switchers">
+              <a
+                class="layout-switch layout-switch--two-columns{% if settings.prod_thumb_mob_per_row == '2' %} layout-switch--active{% endif %}"
+                href="#"
+              >
+                {%- render 'svg-grid', stroke_width: 1.3 -%}
+              </a>
+              <a
+                class="layout-switch layout-switch--one-column{% if settings.prod_thumb_mob_per_row == '1' %} layout-switch--active{% endif %}"
+                href="#"
+              >
+                {%- render 'svg-box', stroke_width: 1.3 -%}
+              </a>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false %} filter-container--show-filters-desktop{% endif %}"
+        data-ajax-container
+      >
+  
+        {% if section.settings.coll_show_sort or show_filters %}
+              
+          {% render 'faceted-filters',
+            current_sort: current_sort
+            filter_context: collection,
+            clear_url: collection.url,
+          %}
+        {% endif %}
+
+        <div class="filters-adjacent collection-listing CT-main-collection-listing">
+
+          <div class="ct_discount_fliter">
+            {%- for filter in collection.filters -%}
+              {% if filter.label == 'Discounts' %}
+                <ul>
+                    {%- for filter_value in filter.values -%}                      
+                      {%  assign fil_value_last_value= filter_value.label |  split: " "  | last  %}
+                      {%  assign fil_value= filter_value.label |  split: " "%}
+                       {% assign silver="" %} 
+                      {% if fil_value.first contains "%"  %}                          
+                        {%  assign fil_value= filter_value.label |  split: "%"%}                        
+                        {% assign final_value = fil_value.first %}
+                      {% else %}
+                        {% assign fil_value_split= fil_value[1] |  split: "%"%}
+                        {% assign silver = fil_value.first  %}
+                        {% assign final_value = fil_value_split %}
+                      {% endif %}
+
+
+
+                      {%- if filter.values.size > 1 -%}                      
+                        <li class="filter-group-display__list-item {% if filter_value.active %} filter_box-inner_active {% endif %}">                       
+                          <div class="filter_box ct_selected " data-value="{{ filter_value.label }}">
+                              <div class="filter_box-inner">                  
+                                <span class="ct_number">{{ final_value }}</span>  
+                                <div class="ct_per_main">
+                                    <span class="ct_persent">%</span>    
+                                    <span class="ct_off">{{ fil_value_last_value }}</span> 
+                                </div>
+                                    <span class="ct_silver">{{ silver  }}</span> 
+                              </div>
+                          </div>
+                        </li>
+                        {% endif %}                      
+                    {%- endfor -%}
+                </ul>
+                
+              {% endif %}
+          {%- endfor -%}
+
+          </div>
+
+          
+
+          {% assign check_page = false  %}
+          {% if collection.products.size == 0 %}
+            <h5 class="align-centre fully-spaced-row">{{ 'collections.general.no_matches' | t }}</h5>
+          {% else %}
+            <div
+              id="infinite-scroll-loop"
+              class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}"
+            >
+              {%- liquid
+                if settings.prod_thumb_shape == 'portrait-23'
+                  assign chosen_aspect_ratio = 0.67
+                elsif settings.prod_thumb_shape == 'portrait-45'
+                  assign chosen_aspect_ratio = 0.8
+                elsif settings.prod_thumb_shape == 'square'
+                  assign chosen_aspect_ratio = 1.0
+                elsif settings.prod_thumb_shape == 'landscape-54'
+                  assign chosen_aspect_ratio = 1.25
+                elsif settings.prod_thumb_shape == 'landscape-32'
+                  assign chosen_aspect_ratio = 1.50
+                elsif settings.prod_thumb_shape == 'tallest'
+                  assign chosen_aspect_ratio = 99
+                  for product in collection.products
+                    if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                      assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                    endif
+                  endfor
+                else
+                  assign chosen_aspect_ratio = 0
+                  for product in collection.products
+                    if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                      assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                    endif
+                  endfor
+                endif
+              -%}
+              
+{% assign ct_current_page = paginate.current_page %}
+{% assign flag_check = 0 %}
+              
+              {% if collection.title contains "The Ugadi Collection" %}
+                {% assign items_array_r = 'Antique Bangle 166017, Antique Matil 160227, Antique Necklace 165088, Antique Payal 167525, Antique Necklace 160764, Antique Payal 165519, Antique Matil 162036, Antique Payal 167716, Antique Payal 167717, Antique Necklace 155978, Antique Necklace 160210' %}
+                {% assign items_array = items_array_r | split: ", " %}
+
+                 {% assign ct_posi = 1  %}
+                {% for product_id in items_array %}
+                
+                  {% assign  prod_handle= product_id | handleize %}
+                  {% assign product = all_products[prod_handle] %}
+                
+                    {% if product != blank %}
+                    {% if current_sort  == "manual" or current_sort  == "best-selling"%}
+                          {% assign flag=false %}
+
+                      {%- if ct_posi == 6  and ct_current_page == 1  -%} 
+                        {% assign flag_check = 1 %}
+
+                        <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }} aaaa ">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '>
+                            
+                           </a>
+                        </div>
+
+                    
+                        
+                        
+                        {% endif %}
+                      {% render 'product-block',
+                                product: product,
+                                custom_aspect_ratio: chosen_aspect_ratio,
+                                animate: false,
+                         emi:section.settings.emi_price
+                              %}
+
+                       {% assign ct_posi = ct_posi  | plus:1 %}
+
+                      
+                          {% endif %}
+                    {% endif %}
+                      
+                  {% endfor %}
+
+                {% elsif collection.title contains "Iconics" %}
+                   {% assign products_array_iconincs = "Silver Temple Bangle 167574, Kundan Necklace 164032, Zircon Necklace 160310, Antique Necklace 169811, Silver Temple Bangle 134126, Antique Belt 157679, Kundan Necklace 164051, 92.5 Silver Zircon Bangle 158617, Zircon Necklace 162196, Silver Temple Necklace 165746, Zircon Necklace 162123, Antique Belt 167934, Silver Temple Bajuband 161979, Silver Temple Chain 167582, Antique Necklace 165088, Kundan Necklace 165821, Silver Temple Bangle 156550, Antique Necklace 169822, Zircon Necklace 160580, 92.5 Silver Bangle 162942, Kundan Necklace 149233, Antique Necklace 162740, Zircon Necklace 167825, Silver Temple Bangle 165980, Silver Temple Necklace 161754, Kundan Necklace 163990, Zircon Necklace 163840, Silver Temple Necklace 165715, Antique Choti 169565, Silver Temple Necklace 161622, Silver Temple Necklace 161637, Zircon Necklace 157910, Silver Temple Necklace 161847, Antique Necklace 169824, Silver Temple Necklace 158836, Zircon Necklace 157909, Zircon Necklace 163841, Silver Temple Chain 145847, Zircon Necklace 161783, Zircon Necklace 169359, Zircon Necklace 158022, Zircon Necklace 163774, Silver Temple Necklace 159554, Antique Necklace 167840, Silver Temple Pendant 162807, Antique Necklace 168705, Kundan Necklace 161345, Zircon Necklace 157929, Silver Temple Belt 163760, Silver Temple Bangle 166520, Antique Necklace 162016, Antique Necklace 162731, Silver Temple Necklace 162224, Silver Temple Chain 161649, Antique Belt 157677, Kundan Necklace 165871, 92.5 Silver Payal 158261, Antique Necklace 160035, Antique Necklace 162736, Silver Temple Chain 168054, Antique Necklace 163422, Kundan Bangle 164000, Silver Temple Necklace 162225, Silver Temple Chain 163622, Silver Temple Necklace 161949, Zircon Necklace 160312, Antique Necklace 168703, Silver Temple Bangle 163616, Zircon Necklace 158032, Silver Temple Chain 164609, Kundan Necklace 156626, Silver Temple Pendant 165679, Antique Necklace 167128" %}
+  
+                     {% assign items_array = products_array_iconincs | split: ", " %}
+                {% if  filter_count <=0   and  current_sort  == "manual" or current_sort  == "best-selling"%}
+                     
+                  {% paginate collection.products by 500 %}
+
+                  {% for product_id in items_array %}
+                    {% assign product = collection.products | where: 'title', product_id | first %}
+                    {% if product %} 
+                      {% render 'product-block',
+                                product: product,
+                                custom_aspect_ratio: chosen_aspect_ratio,
+                                animate: false,
+                                emi: section.settings.emi_price
+                      %}
+         {% endif %}
+                  {% endfor %}
+                  
+                  {% endpaginate %}
+                  {% else %}
+
+                       {% paginate collection.products by 500 %}
+
+                          {% assign ct_posi = 1  %}
+                        {% for product_id in items_array %}
+                          {% assign product = collection.products | where: 'title', product_id | first %}
+                          {% if product %}
+
+                     
+                            
+                            {% render 'product-block',
+                                      product: product,
+                                      custom_aspect_ratio: chosen_aspect_ratio,
+                                      animate: false,
+                                      emi: section.settings.emi_price
+                
+                            %}
+                             {% assign ct_posi = ct_posi  | plus:1 %}
+
+                            
+                          {% endif %}
+                        {% endfor %}
+                        
+                        {% endpaginate %}
+                     
+                  
+                  
+                  
+                  {% endif %}
+
+                
+              
+
+              {% elsif collection.title contains "Meenakari Sparkles" %}
+                    {% assign meena_string = "Meenakari Zircon Finger Ring 169708, Meenakari Zircon Kada 169693, Meenakari Zircon Pendant Earring 169735, Meenakari Zircon Kada 169684, Meenakari Zircon Pendant Earring 169733, Meenakari Zircon Finger Ring 169709, Meenakari Zircon Kada 169691, Meenakari Zircon Kada 169683, Meenakari Zircon Mangalsutra 169712, Meenakari  Zircon Earring 169730, Meenakari  Zircon Earring 169726, Meenakari  Zircon Earring 169722, Meenakari  Zircon Earring 169715, Meenakari  Zircon Earring 169782, Meenakari  Zircon Necklace 169705, Meenakari  Zircon Necklace 169781, Meenakari Zircon Pendant Earring 169731, Meenakari Zircon Pendant Earring 169732, Meenakari Zircon Necklace 169703, Meenakari  Zircon Necklace 169706, Meenakari Zircon Kada 169689" %}
+                     {% assign meena_items_array = meena_string | split: ", " %}
+                        {% assign flag=true %}
+                     {% paginate collection.products by 1000 %}
+
+                        {% assign ct_posi = 1  %}
+                        {% for product in collection.products %}
+                          
+                          {% if product.available %}
+                              {% if current_sort  == "manual" or current_sort  == "best-selling"%}
+                                {% assign flag=false %}
+                                  {% if meena_items_array contains product.title %}
+
+                                    {%- if ct_posi == 6  and ct_current_page == 1  -%} 
+                                      {% assign flag_check = 1 %}
+
+                                       <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }} cccc">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '>
+                            
+                           </a>
+                        </div>
+ 
+                                      {% endif %}
+                                    {% render 'product-block',
+                                      product: product,
+                                      custom_aspect_ratio: chosen_aspect_ratio,
+                                      animate: false,
+                                       emi:section.settings.emi_price
+                                    %}
+
+                                     {% assign ct_posi = ct_posi  | plus:1 %}
+                                    
+                                  {% endif %}
+                                {% endif %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endpaginate %}
+
+                <!-- vibe with parl collection -->
+                 {% elsif collection.title contains "Vibe In Pearls - Necklaces" %}
+                    {% assign meena_string = "Trendy Necklace 174195, Trendy Necklace 174139, Trendy Necklace 174344, Trendy Necklace 174340, Trendy Necklace 174138, Trendy Necklace 174227" %}
+                     {% assign meena_items_array = meena_string | split: ", " %}
+                        {% assign flag=true %}
+                     {% paginate collection.products by 1000 %}
+
+                        {% assign ct_posi = 1  %}
+                        {% for product in collection.products %}
+                          
+                          {% if product.available %}
+                              {% if current_sort  == "manual" or current_sort  == "best-selling"%}
+                                {% assign flag=false %}
+                                  {% if meena_items_array contains product.title %}
+
+                                    {%- if ct_posi == 6  and ct_current_page == 1  -%} 
+                                      {% assign flag_check = 1 %}
+
+                                       <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }} cccc">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '> 
+                           </a>
+                        </div>
+                          {% endif %}
+                                    {% render 'product-block',
+                                      product: product,
+                                      custom_aspect_ratio: chosen_aspect_ratio,
+                                      animate: false,
+                                       emi:section.settings.emi_price
+                                    %}
+                                  {% assign ct_posi = ct_posi  | plus:1 %}                                    
+                                  {% endif %}
+                                {% endif %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endpaginate %}
+
+
+
+                <!-- vibe with parl secend collection -->
+                 {% elsif collection.title contains "Vibe In Pearls - Earrings" %}
+                    {% assign meena_string = "Trendy Earring 174209, Trendy Earring 174200, Trendy Earring 174206, Trendy Earring 172071, Trendy Earring 174207" %}
+                     {% assign meena_items_array = meena_string | split: ", " %}
+                        {% assign flag=true %}
+                     {% paginate collection.products by 1000 %}
+
+                        {% assign ct_posi = 1  %}
+                        {% for product in collection.products %}
+                          
+                          {% if product.available %}
+                              {% if current_sort  == "manual" or current_sort  == "best-selling"%}
+                                {% assign flag=false %}
+                                  {% if meena_items_array contains product.title %}
+
+                                    {%- if ct_posi == 6  and ct_current_page == 1  -%} 
+                                      {% assign flag_check = 1 %}
+
+                                       <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }} cccc">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '> 
+                           </a>
+                        </div>
+                          {% endif %}
+                                    {% render 'product-block',
+                                      product: product,
+                                      custom_aspect_ratio: chosen_aspect_ratio,
+                                      animate: false,
+                                       emi:section.settings.emi_price
+                                    %}
+                                  {% assign ct_posi = ct_posi  | plus:1 %}                                    
+                                  {% endif %}
+                                {% endif %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endpaginate %}
+
+
+
+
+                     <!-- varamahalakshmi start -->
+                 {% elsif collection.title contains "Varamahalakshmi Jewellery Collection" or collection.title contains "Varamahalakshmi Special - Antique Accessories" or collection.title contains "Varamahalakshmi Edit - Lakshmi Bangles" or collection.title contains "Varamahalakshmi Edit - Lakshmi Earrings" or collection.title contains "Varamahalakshmi Edit - Lakshmi Necklaces" or collection.title contains "Varamahalakshmi Edit - Lakshmi Design Belts" or collection.title contains "Varamahalakshmi Antique Jewellery Edit" or collection.title contains "Varamahalakshmi Temple Jewellery Edit" or collection.title contains "Varamahalakshmi Special Earrings" or collection.title contains "Varamahalakshmi Special Necklaces" or collection.title contains "Varamahalakshmi Special Bangle Edit" or collection.title contains "Varamahalakshmi Special Maang Tikka Edit" or collection.title contains "Varamahalakshmi Special Accessories" or collection.title contains "Varamahalakshmi Temple Bangles Edit" or collection.title contains "Varamahalakshmi Temple Necklaces Edit" or collection.title contains "Varamahalakshmi Temple Earrings Edit" or collection.title contains "Varamahalakshmi Temple Finger Rings Edit" or collection.title contains "Varamahalakshmi Antique Bangles Edit" or collection.title contains "Varamahalakshmi Antique Necklaces Edit" or collection.title contains "Varamahalakshmi Antique Earrings Edit" or collection.title contains "Varamahalakshmi Antique Finger Rings Edit" %}
+
+               
+                
+                {% assign varma_string = "Antique Finger Ring 173905, Antique Tikka 172673, Silver Temple Necklace 155156, Silver Temple Necklace 155677, Silver Temple Bangle 163704, Silver Temple Bangle 164632, Silver Temple Tikka 169646, Silver Temple Bangle 172374, Antique Necklace 173564, Antique Necklace 173565, Antique Necklace 173581, Antique Necklace 173588, Antique Earring 173776, Antique Earring 173904, Antique Finger Ring 173905" %}
+                     {% assign items_array = varma_string | split: ", " %}
+                        {% assign flag=true %}
+                 {% assign ct_posi = 1  %}
+                     {% paginate collection.products by 1000 %}
+                 {% assign counter = 0  %}
+
+                       
+                        {% for product in collection.products %}
+                          
+                          {% if product.available %}
+                              {% if current_sort  == "manual" or current_sort  == "best-selling"%}
+                                {% assign flag=false %}
+                                  {% if items_array contains product.title %}
+                                    {% assign counter = counter | plus: 1 %}
+                                    {% render 'product-block',
+                                      product: product,
+                                      custom_aspect_ratio: chosen_aspect_ratio,
+                                      animate: false,
+                                       emi:section.settings.emi_price
+                                    %}
+
+                                    {%- if counter ==  6 and ct_current_page == 1  -%} 
+                                                    {% assign flag_check = 1 %}
+              
+                                                     <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }} cccc">
+                                        <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                                      
+                                          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                                          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '> 
+                                         </a>
+                                      </div>
+                                  {% assign ct_posi = ct_posi  | plus:1 %}  
+                                      
+                                        {% endif %}
+                                  {% endif %}
+                                {% endif %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endpaginate %}
+                <!-- varamahalakshmi End -->
+
+                
+
+
+                
+
+              {% else %}
+                
+          
+
+                 {% assign items_string = "92.5 Silver Bangle 162942, 92.5 Silver Bracelet 161165, 92.5 Silver Bracelet 161271, 92.5 Silver Bracelet 161273, 92.5 Silver Bracelet 164162, 92.5 Silver Bracelet 164166, 92.5 Silver Bracelet 164168, 92.5 Silver Bracelet 164170, 92.5 Silver Earring 135758, 92.5 Silver Earring 145019, 92.5 Silver Earring 150252, 92.5 Silver Earring 156723, 92.5 Silver Earring 158273, 92.5 Silver Earring 158284, 92.5 Silver Earring 158285, 92.5 Silver Earring 158288, 92.5 Silver Earring 158300, 92.5 Silver Earring 158302, 92.5 Silver Earring 161065, 92.5 Silver Earring 162949, 92.5 Silver Earring 162959, 92.5 Silver Earring 162968, 92.5 Silver Earring 162974, 92.5 Silver Earring 162998, 92.5 Silver Earring 164358, 92.5 Silver Kada 145024, 92.5 Silver Kada 146271, 92.5 Silver Kada 154585, 92.5 Silver Kada 157069, 92.5 Silver Kada 157070, 92.5 Silver Kada 158239, 92.5 Silver Kada 158241, 92.5 Silver Necklace 135787, 92.5 Silver Necklace 158245, 92.5 Silver Necklace 158246, 92.5 Silver Necklace 158248, 92.5 Silver Necklace 158297, 92.5 Silver Necklace 158303, 92.5 Silver Necklace 158305, 92.5 Silver Necklace 158306, 92.5 Silver Necklace 158308, 92.5 Silver Necklace 160850, 92.5 Silver Necklace 160869, 92.5 Silver Necklace 164285, 92.5 Silver Necklace 168070, 92.5 Silver Payal 164352, 92.5 Silver Zircon Bangle 154776, 92.5 Silver Zircon Bangle 158614, 92.5 Silver Zircon Earring 157377, 92.5 Silver Zircon Earring 157378, 92.5 Silver Zircon Earring 158440, 92.5 Silver Zircon Earring 159540, 92.5 Silver Zircon Earring 161472, 92.5 Silver Zircon Earring 161473, 92.5 Silver Zircon Finger Ring 156996, 92.5 Silver Zircon Necklace 154862, 92.5 Silver Zircon Necklace 157399, 92.5 Silver Zircon Necklace 158598, 92.5 Silver Zircon Necklace 158601, 92.5 Silver Zircon Necklace 159924, 92.5 Silver Zircon Necklace 163653, 92.5 Silver Zircon Necklace 163680, 92.5 Silver Zircon Necklace 163686, 92.5 Silver Zircon Pendant 157194, 92.5 Silver Zircon Tikka 161479, Antique Bajuband 165502, Antique Bajuband 166041, Antique Bangle 152084, Antique Bangle 155989, Antique Bangle 160741, Antique Bangle 161443, Antique Bangle 161444, Antique Bangle 162025, Antique Bangle 165495, Antique Bangle 165496, Antique Bangle 167841, Antique Belt 138918, Antique Belt 138919, Antique Belt 147746, Antique Belt 149024, Antique Belt 151799, Antique Belt 151838, Antique Belt 157679, Antique Belt 160281, Antique Belt 160804, Antique Belt 165799, Antique Belt 165801, Antique Belt 165805, Antique Belt 166057, Antique Belt 168281, Antique Belt 169749, Antique Choti 160278, Antique Earring 151769, Antique Earring 151815, Antique Earring 151936, Antique Earring 166013, Antique Hair Brooch 159962, Antique Hair Brooch 160236, Antique Kada 142036, Antique Kada 161995, Antique Kada 161999, Antique Kada 165524, Antique Mala 140501, Antique Mangalsutra 139976, Antique Mangalsutra 150337, Antique Matil 150512, Antique Matil 160227, Antique Matil 168712, Antique Necklace 139137, Antique Necklace 143390, Antique Necklace 143490, Antique Necklace 143522, Antique Necklace 148048, Antique Necklace 150318, Antique Necklace 150320, Antique Necklace 150323, Antique Necklace 150329, Antique Necklace 151729, Antique Necklace 151744, Antique Necklace 152569, Antique Necklace 152608, Antique Necklace 153388, Antique Necklace 153388, Antique Necklace 153395, Antique Necklace 154346, Antique Necklace 154349, Antique Necklace 155984, Antique Necklace 156008, Antique Necklace 157619, Antique Necklace 157656, Antique Necklace 158106, Antique Necklace 158110, Antique Necklace 158123, Antique Necklace 158137, Antique Necklace 158638, Antique Necklace 159947, Antique Necklace 160029, Antique Necklace 160033, Antique Necklace 160035, Antique Necklace 160147, Antique Necklace 160208, Antique Necklace 160263, Antique Necklace 160562, Antique Necklace 160564, Antique Necklace 160575, Antique Necklace 160577, Antique Necklace 160767, Antique Necklace 160783, Antique Necklace 160785, Antique Necklace 160822, Antique Necklace 160825, Antique Necklace 161413, Antique Necklace 161423, Antique Necklace 161424, Antique Necklace 162014, Antique Necklace 162020, Antique Necklace 162052, Antique Necklace 162053, Antique Necklace 162075, Antique Necklace 162078, Antique Necklace 162080, Antique Necklace 162733, Antique Necklace 162741, Antique Necklace 162745, Antique Necklace 162749, Antique Necklace 162834, Antique Necklace 163428, Antique Necklace 163438, Antique Necklace 164072, Antique Necklace 164081, Antique Necklace 164131, Antique Necklace 165021, Antique Necklace 165069, Antique Necklace 165070, Antique Necklace 165078, Antique Necklace 165080, Antique Necklace 165082, Antique Necklace 165091, Antique Necklace 165092, Antique Necklace 165484, Antique Necklace 165505, Antique Necklace 165547, Antique Necklace 165548, Antique Necklace 165602, Antique Necklace 166042, Antique Necklace 167122, Antique Necklace 167128, Antique Necklace 167129, Antique Necklace 167511, Antique Necklace 167516, Antique Necklace 167780, Antique Necklace 167887, Antique Necklace 167890, Antique Necklace 167930, Antique Necklace 167956, Antique Necklace 167960, Antique Necklace 167966, Antique Necklace 167975, Antique Necklace 167996, Antique Necklace 168013, Antique Necklace 168019, Antique Necklace 168024, Antique Necklace 168027, Antique Necklace 168031, Antique Necklace 168701, Antique Necklace 168702, Antique Necklace 168704, Antique Necklace 169803, Antique Necklace 169813, Antique Necklace 169817, Antique Necklace 169823, Antique Necklace 170532, Antique Payal 135595, Antique Payal 151369, Antique Payal 152618, Antique Payal 167525, Antique Sindhoor Dabi 162099, Antique Tikka 143517, Antique Tikka 153645, Antique Tikka 156000, Antique Tikka 165015, Antique Tikka 166039, Goddess Saraswati Idol 161731, Kundan Bangle 136408, Kundan Bangle 151015, Kundan Bangle 156585, Kundan Bangle 156586, Kundan Bangle 156587, Kundan Bangle 158621, Kundan Bangle 158622, Kundan Bangle 161488, Kundan Bangle 163997, Kundan Bangle 163999, Kundan Bangle 167038, Kundan Bangle 167781, Kundan Bracelet 161489, Kundan Bracelet 161490, Kundan Earring 145067, Kundan Earring 149151, Kundan Earring 156608, Kundan Earring 157257, Kundan Earring 160754, Kundan Earring 167062, Kundan Earring 167065, Kundan Kada 164001, Kundan Mangalsutra 161578, Kundan Necklace 139212, Kundan Necklace 139213, Kundan Necklace 140241, Kundan Necklace 147374, Kundan Necklace 149183, Kundan Necklace 149208, Kundan Necklace 149217, Kundan Necklace 151593, Kundan Necklace 151768, Kundan Necklace 154269, Kundan Necklace 156625, Kundan Necklace 156626, Kundan Necklace 156630, Kundan Necklace 158553, Kundan Necklace 158633, Kundan Necklace 160201, Kundan Necklace 161371, Kundan Necklace 161517, Kundan Necklace 161519, Kundan Necklace 161522, Kundan Necklace 161525, Kundan Necklace 164015, Kundan Necklace 164032, Kundan Necklace 164048, Kundan Necklace 164051, Kundan Necklace 164138, Kundan Necklace 165818, Kundan Necklace 165820, Kundan Necklace 165821, Kundan Necklace 168899, Kundan Necklace 168956, Kundan Tikka 154284, Kundan Tikka 156633, Kundan Tikka 164052, Silver Temple Bangle 155146, Silver Temple Bangle 157374, Silver Temple Bangle 161247, Silver Temple Bangle 163616, Silver Temple Bangle 164632, Silver Temple Bangle 165979, Silver Temple Bangle 165980, Silver Temple Bangle 166520, Silver Temple Bangle Pendant 158217, Silver Temple Bangle Pendant 165663, Silver Temple Chain 132308, Silver Temple Chain 150917, Silver Temple Chain 152796, Silver Temple Chain 161404, Silver Temple Chain 161651, Silver Temple Chain 162179, Silver Temple Chain 164609, Silver Temple Chain 167581, Silver Temple Chain 168054, Silver Temple Earring 143010, Silver Temple Earring 157207, Silver Temple Earring 158696, Silver Temple Earring 158818, Silver Temple Earring 158889, Silver Temple Earring 160624, Silver Temple Earring 160632, Silver Temple Earring 160833, Silver Temple Earring 161583, Silver Temple Earring 161586, Silver Temple Earring 161611, Silver Temple Earring 161759, Silver Temple Earring 163708, Silver Temple Earring 163767, Silver Temple Earring 164638, Silver Temple Earring 165452, Silver Temple Earring 165460, Silver Temple Earring 165465, Silver Temple Earring 165668, Silver Temple Earring 165671, Silver Temple Earring 166144, Silver Temple Earring 167558, Silver Temple Earring 167564, Silver Temple Earring 168064, Silver Temple Earring 168065, Silver Temple Earring 168066, Silver Temple Earring 168229, Silver Temple Earring 168240, Silver Temple Finger Ring 161461, Silver Temple Finger Ring 164676, Silver Temple Kada 147050, Silver Temple Kada 155621, Silver Temple Kada 155622, Silver Temple Kada 161674, Silver Temple Matil 152109, Silver Temple Matil 152395, Silver Temple Matil 161883, Silver Temple Necklace 150484, Silver Temple Necklace 150706, Silver Temple Necklace 151039, Silver Temple Necklace 151554, Silver Temple Necklace 157534, Silver Temple Necklace 158157, Silver Temple Necklace 158158, Silver Temple Necklace 158161, Silver Temple Necklace 158174, Silver Temple Necklace 158202, Silver Temple Necklace 158228, Silver Temple Necklace 158379, Silver Temple Necklace 158605, Silver Temple Necklace 161304, Silver Temple Necklace 161391, Silver Temple Necklace 161527, Silver Temple Necklace 161530, Silver Temple Necklace 161532, Silver Temple Necklace 161533, Silver Temple Necklace 161927, Silver Temple Necklace 161936, Silver Temple Necklace 161939, Silver Temple Necklace 161973, Silver Temple Necklace 162839, Silver Temple Necklace 163645, Silver Temple Necklace 163649, Silver Temple Necklace 164150, Silver Temple Necklace 164156, Silver Temple Necklace 165436, Silver Temple Necklace 165439, Silver Temple Necklace 165775, Silver Temple Necklace 166157, Silver Temple Pendant 154464, Silver Temple Pendant 154963, Silver Temple Pendant 155113, Silver Temple Pendant 155696, Silver Temple Pendant 158429, Silver Temple Pendant 160838, Silver Temple Pendant 161269, Silver Temple Pendant 161572, Silver Temple Pendant 161597, Silver Temple Pendant 161614, Silver Temple Pendant 161758, Silver Temple Pendant 162775, Silver Temple Pendant 164221, Silver Temple Pendant 164222, Silver Temple Pendant 165689, Silver Temple Pendant 165691, Silver Temple Pendant 165729, Silver Temple Pendant Earring 151996, Silver Temple Pendant Earring 155123, Silver Temple Tikka 151675, Silver Temple Tikka 152826, Silver Temple Tikka 155512, Silver Temple Tikka 155513, Silver Temple Tikka 157464, Silver Temple Tikka 158780, Silver Temple Tikka 158785, Silver Temple Tikka 158789, Silver Temple Tikka 169938, Trendy Kada 168435, Zircon Bangle 136402, Zircon Bangle 142376, Zircon Bangle 142402, Zircon Bangle 151638, Zircon Bangle 155207, Zircon Bangle 155448, Zircon Bangle 155458, Zircon Bangle 155474, Zircon Bangle 156639, Zircon Bangle 156640, Zircon Bangle 156702, Zircon Bangle 157314, Zircon Bangle 160461, Zircon Bangle 160462, Zircon Bangle 160463, Zircon Bangle 160468, Zircon Bangle 160511, Zircon Bangle 163907, Zircon Bangle 169408, Zircon Belt 148221, Zircon Belt 158049, Zircon Belt 165990, Zircon Bracelet 153555, Zircon Choti 158047, Zircon Choti 160275, Zircon Earring 151607, Zircon Earring 151858, Zircon Earring 154276, Zircon Earring 155250, Zircon Earring 155435, Zircon Earring 156610, Zircon Earring 157132, Zircon Earring 157787, Zircon Earring 157813, Zircon Earring 160480, Zircon Earring 163941, Zircon Earring 165116, Zircon Earring 168367, Zircon Hair Brooch 151245, Zircon Kada 158505, Zircon Matil 157116, Zircon Matil 162812, Zircon Necklace 151905, Zircon Necklace 154143, Zircon Necklace 155346, Zircon Necklace 156694, Zircon Necklace 157855, Zircon Necklace 157869, Zircon Necklace 157870, Zircon Necklace 157878, Zircon Necklace 157943, Zircon Necklace 157953, Zircon Necklace 157973, Zircon Necklace 157974, Zircon Necklace 157982, Zircon Necklace 158004, Zircon Necklace 158014, Zircon Necklace 158021, Zircon Necklace 158026, Zircon Necklace 158027, Zircon Necklace 158038, Zircon Necklace 160117, Zircon Necklace 160121, Zircon Necklace 160330, Zircon Necklace 160346, Zircon Necklace 160358, Zircon Necklace 160676, Zircon Necklace 160771, Zircon Necklace 160791, Zircon Necklace 162128, Zircon Necklace 162814, Zircon Necklace 163788, Zircon Necklace 163790, Zircon Necklace 163805, Zircon Necklace 163806, Zircon Necklace 163824, Zircon Necklace 163852, Zircon Necklace 165564, Zircon Necklace 165593, Zircon Necklace 166207, Zircon Necklace 167631, Zircon Necklace 167916, Zircon Necklace 169316, Zircon Necklace 169325, Zircon Necklace 169330, Zircon Necklace 169765, Zircon Necklace 169897, Zircon Necklace 170528, Zircon Payal 155308, Zircon Payal 155309, Zircon Payal 162134, Zircon Pendant Earring 151162, Zircon Pendant Earring 152713, Zircon Pendant Earring 155378, Zircon Pendant Earring 160448, Zircon Pendant Earring 169474, Zircon Pendant Earring 169478, Zircon Pendant Earring 169478" %}
+              {% assign items_array = items_string | split: ", " %}
+                {% assign flag=true %}
+             {% paginate collection.products by 1000 %}
+
+
+              
+
+
+
+
+                
+               
+                {% for product in collection.products %}
+
+               
+                  {% if product.available %}
+                      {% if current_sort  == "manual" or current_sort  == "best-selling"%}
+                        {% assign flag=false %}
+                          {% if items_array contains product.title %}
+
+                            {%- if ct_posi == 6 and ct_current_page == 1  -%} 
+                                {% assign flag_check = 1 %}
+                               <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }} dddd">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '>
+                            
+                           </a>
+                        </div>
+
+                       
+                              
+                              
+                              
+                              {% endif %}
+
+                            {% render 'product-block',
+                              product: product,
+                              custom_aspect_ratio: chosen_aspect_ratio,
+                              animate: false,
+                               emi:section.settings.emi_price
+                            %}
+                            {% assign ct_posi = ct_posi  | plus:1 %}
+                          {% endif %}
+                        {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endpaginate %}
+          {% endif %}
+
+               {% assign ct_posi = 1  %}
+               {% for product in collection.products %}
+                {% if product.available %}
+
+                   {% if flag  %}
+                      {% unless items_array contains product.title  %}
+
+
+                         {%- if ct_posi == 7  and ct_current_page == 1 and flag_check == 0  -%} 
+                          
+                         <div class="CT_product-block app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }}  dddddbbbb">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '>
+                            
+                           </a>
+                        </div>
+
+                     
+                        {% endif %}
+
+
+                        
+                        {% render 'product-block',
+                          product: product,
+                          custom_aspect_ratio: chosen_aspect_ratio,
+                          animate: false,
+                           emi:section.settings.emi_price
+                        %}
+                         {% assign ct_posi = ct_posi  | plus:1 %}
+                       
+                     {% endunless %}
+                    {% else %}
+                     {% unless items_array contains product.title  %}
+
+
+                         {%- if ct_posi == 5  and ct_current_page == 1  and flag_check == 0   -%} 
+                         <div class=" app-download-banner-inner collection-app-banner  collection-app-banner-{{ forloop.index }}  oooooo">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/android.png?v=1715767351" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ios_7fb0cd46-3ee8-4de8-8f7f-73b56ce94bfa.png?v=1715770047" alt="app-banner-android" class='app-banner app-banner-iphone  '>
+                            
+                           </a>
+                        </div>
+
+                     
+                        {% endif %}
+                      
+                        {% render 'product-block',
+                          product: product,
+                          custom_aspect_ratio: chosen_aspect_ratio,
+                          animate: false,
+                           emi:section.settings.emi_price
+                        %}
+                         {% assign ct_posi = ct_posi  | plus:1 %}
+                       
+                     {% endunless %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+
+
+
+
+              
+            </div>
+          {% endif %}
+          <div id="infinite-scroll-pagination" class="container" data-ajax-container style="text-align: center;">
+            {% if paginate.next %}
+              <a href="{{ paginate.next.url }}"
+                ><img
+                  loading="lazy"
+                  src="//cdn.shopify.com/s/files/1/0796/1959/files/loading.gif?v=1652268937"
+                  width="25px"
+                  height="25px"
+              ></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p>{{ collection.description }}</p>
+      </div>
+    </div>
+
+    {% comment %}<div class="container pagination-row" data-ajax-container>{% render 'pagination-control', paginate: paginate %}</div>{% endcomment %}
+  {% endpaginate %}
+
+  {% if collection.dDOMContentLoadedescription != blank and section.settings.coll_desc_pos == 'below' %}
+    <div class="container container--reading-width fully-spaced-row" data-cc-animate>
+      <div class="rte cf">{{ collection.description }}</div>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate({
+      container: '#infinite-scroll-loop',
+      pagination: '#infinite-scroll-pagination',
+      loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0796/1959/files/loading.gif?v=1652268937" loading="lazy"></center>'
+    });
+  });
+  $(document).ready(function(){
+    $(document).ajaxComplete(function( event, xhr, settings ) {
+      if(settings.url.includes("collections")){
+        var endlessScroll = new Ajaxinate({
+          container: '#infinite-scroll-loop',
+          pagination: '#infinite-scroll-pagination',
+          loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0796/1959/files/loading.gif?v=1652268937" loading="lazy"></center>'
+        });
+           jQuery(".CT_link-dropdown__button").click(function(){
+      if(jQuery(".ct_fil_shade").hasClass("ct_fill_active"))
+      {
+        jQuery(".ct_fil_shade").removeClass("ct_fill_active");
+        jQuery("#shopify-section-header").removeClass("ct_active_sort");
+        jQuery(".template-collection").removeClass("ct_active_sort_body");
+      }
+      else
+      {        
+        jQuery(".ct_fil_shade").addClass("ct_fill_active");
+        jQuery("#shopify-section-header").addClass("ct_active_sort");
+        jQuery(".template-collection").addClass("ct_active_sort_body");
+      }
+    })
+      }
+    });
+
+//     document.querySelectorAll(".ct_selected").forEach(function(element) {
+//     element.addEventListener("click", function() {
+//         var c_value = this.getAttribute("data-value");
+
+//         document.querySelectorAll(".ct_Discounts .filter-group__item .filter-group__checkbox").forEach(function(checkbox) {
+//             var filter_value = checkbox.value;
+//               console.log(filter_value+" == "+c_value)
+//             if (filter_value == c_value) {
+//                 checkbox.click();
+//             }
+//         });
+//     });
+// });
+
+
+    jQuery(document).on("click",".ct_selected",function(){
+    var c_value=jQuery(this).attr("data-value");
+    
+    jQuery(".ct_Discounts .filter-group__item .filter-group__checkbox").each(function(){
+            var filter_value=jQuery(this).val();
+            if(filter_value == c_value)
+            {
+                 jQuery(this).trigger("click");
+            }
+        })
+    })
+
+  });
+
+
+
+
+
+
+
+                          if ($(window).width() < 760) {
+                             if (navigator.userAgent.match(/Android|Opera Mini|IEMobile/i))
+                          {
+                             jQuery('.bottom_pop_inner').addClass('ct_Andriod_link');
+                            jQuery('.bottom_pop_inner').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+                            jQuery('.app-download-banner-inner a').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+                            
+                          }
+                          else
+                          {    
+                             jQuery('.bottom_pop_inner').addClass('ct_IOS_link');
+                                jQuery('.bottom_pop_inner').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+                                jQuery('.app-download-banner-inner a').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+                            
+                          }
+                          }
+                        
+</script>
+
+{% schema %}
+ {
+   "name": "Collection pages",
+"class": "collection--template-wrapper",
+   "settings": [
+     {
+       "type": "header",
+       "content": "Heading"
+     },
+     {
+       "type": "checkbox",
+       "id": "emi_price",
+       "label": "Snapmint Emi Price Show",
+       "default": false
+      },
+     {
+       "type": "checkbox",
+       "id": "show_image_behind_heading",
+       "label": "Show collection image behind heading",
+       "default": true
+     },
+     {
+       "type": "select",
+       "id": "heading_image_height",
+       "label": "Heading image height",
+       "options": [
+         {
+           "value": "small",
+           "label": "Compact"
+         },
+         {
+           "value": "medium",
+           "label": "Small"
+         },
+         {
+           "value": "large",
+           "label": "Medium"
+         },
+         {
+           "value": "huge",
+           "label": "Large"
+         }
+       ],
+       "default": "medium"
+     },
+     {
+       "id": "overlay_style",
+       "type": "select",
+       "label": "Overlay style",
+       "default": "shadow",
+       "options": [
+         {
+           "value": "full",
+           "label": "Tint"
+         },
+         {
+           "value": "box",
+           "label": "Box"
+         },
+         {
+           "value": "shadow",
+           "label": "Text shadow"
+         },
+         {
+           "value": "full image-overlay--bg-shadow",
+           "label": "Text shadow and tint"
+         },
+         {
+           "value": "no_background",
+           "label": "No background"
+         }
+       ]
+     },
+     {
+       "type": "header",
+       "content": "Layout"
+     },
+     {
+       "type": "range",
+       "id": "coll_num_per_page_int",
+       "min": 16,
+       "max": 50,
+       "step": 2,
+       "label": "Number of products to show per page",
+       "default": 24
+     },
+     {
+       "type": "range",
+       "id": "grid",
+       "label": "Products per row",
+       "min": 2,
+       "max": 5,
+       "step": 1,
+       "default": 4
+     },
+     {
+       "type": "checkbox",
+       "id": "show_vendor",
+       "label": "Show product vendors",
+       "default": false
+     },
+     {
+       "type": "checkbox",
+       "id": "show_total",
+       "label": "Show product total",
+       "default": true
+     },
+     {
+       "type": "select",
+       "id": "coll_desc_pos",
+       "label": "Description position",
+       "default": "above",
+       "options": [
+         {
+           "value": "above",
+           "label": "Below collection title"
+         },
+         {
+           "value": "below",
+           "label": "Below products"
+         }
+       ]
+     },
+     {
+       "type": "header",
+       "content": "Filters"
+     },
+     {
+       "type": "checkbox",
+       "id": "enable_filtering",
+       "label": "Enable filtering",
+       "info": "[Customize filters](\/admin\/menus)",
+       "default": true
+     },
+     {
+       "type": "checkbox",
+       "id": "collapse_tag_sidebar_by_default",
+       "label": "Collapse filter column",
+       "default": false
+     },
+     {
+       "type": "select",
+       "id": "collapse_filters_method",
+       "label": "Filter row collapse",
+       "default": "over-12",
+       "options": [
+         {
+           "value": "none",
+           "label": "None"
+         },
+         {
+           "value": "over-6",
+           "label": "Over 6 items"
+         },
+         {
+           "value": "over-12",
+           "label": "Over 12 items"
+         },
+         {
+           "value": "over-18",
+           "label": "Over 18 items"
+         },
+         {
+           "value": "all",
+           "label": "All rows"
+         }
+       ]
+     },
+     {
+       "type": "checkbox",
+       "id": "show_filter_counts",
+       "label": "Show filter counts",
+       "default": false
+     },
+     {
+       "type": "checkbox",
+       "id": "show_disabled_filters",
+       "label": "Show filters with zero results",
+       "default": true
+     },
+     {
+       "type": "checkbox",
+       "id": "ajax_products",
+       "label": "Filter and sort collections without loading a new page",
+       "default": true,
+       "info": "Some apps require this to be disabled"
+     },
+     {
+       "type": "checkbox",
+       "id": "enable_sticky_filter",
+       "label": "Enable stick on scroll",
+       "default": true
+     },
+     {
+       "type": "checkbox",
+       "id": "filter_two_columns",
+       "label": "Two column filter values",
+       "default": false
+     },
+     {
+       "type": "checkbox",
+       "id": "coll_show_sort",
+       "label": "Show sorting dropdown",
+       "default": true
+     },
+     {
+       "type": "checkbox",
+       "id": "coll_show_feat",
+       "label": "Show 'Featured' in sorting dropdown",
+       "default": false
+     },
+     {
+       "type": "header",
+       "content": "Subcollections"
+     },
+     {
+       "type": "paragraph",
+       "content": "The current collection is located in the menu, and any other collections within that dropdown menu are displayed. [Read more](https://cleancanvas.co.uk/support/symmetry/subcollections)"
+     },
+     {
+       "type": "checkbox",
+       "id": "enable_subcoll",
+       "label": "Enable subcollections",
+       "info": "A menu must be selected below",
+       "default": true
+     },
+     {
+       "type": "link_list",
+       "id": "subcoll_menu",
+       "label": "Subcollections menu",
+       "info": "This is usually your main menu",
+       "default": "main-menu"
+     },
+     {
+       "type": "select",
+       "id": "subcoll_style",
+       "label": "Subcollections style",
+       "default": "buttons",
+       "options": [
+         {
+           "value": "buttons",
+           "label": "Buttons"
+         },
+         {
+           "value": "gallery",
+           "label": "Gallery"
+         }
+       ]
+     },
+     {
+       "type": "header",
+       "content": "Subcollection gallery layout"
+     },
+     {
+       "type": "select",
+       "id": "subcoll_gall_shape",
+       "label": "Image shape",
+       "default": "sq",
+       "options": [
+         {
+           "value": "l-21",
+           "label": "Landscape (2x1)"
+         },
+         {
+           "value": "l-64",
+           "label": "Landscape (6x4)"
+         },
+	  {
+           "value": "l-4x3",
+           "label": "Landscape (4x3)"
+         },
+         {
+           "value": "l-5x4",
+           "label": "Landscape (5x4)"
+         },
+         {
+           "value": "sq",
+           "label": "Square (1x1)"
+         },
+         {
+           "value": "p-4x5",
+           "label": "Portrait (4x5)"
+         }
+       ]
+     },
+     {
+       "type": "select",
+       "id": "image_position",
+       "label": "Image alignment",
+       "info": "Used to keep the subject of your image in view",
+       "default": "center center",
+       "options": [
+         {
+           "value": "top left",
+           "label": "Top left"
+         },
+         {
+           "value": "top center",
+           "label": "Top center"
+         },
+         {
+           "value": "top right",
+           "label": "Top right"
+         },
+         {
+           "value": "center left",
+           "label": "Middle left"
+         },
+         {
+           "value": "center center",
+           "label": "Middle center"
+         },
+         {
+           "value": "center right",
+           "label": "Middle right"
+         },
+         {
+           "value": "bottom left",
+           "label": "Bottom left"
+         },
+         {
+           "value": "bottom center",
+           "label": "Bottom center"
+         },
+         {
+           "value": "bottom right",
+           "label": "Bottom right"
+         }
+       ]
+     },
+     {
+       "id": "subcoll_gall_enable_margin",
+       "type": "checkbox",
+       "label": "Add spacing",
+       "default": true
+     },
+     {
+       "id": "subcoll_gall_full_width",
+       "type": "checkbox",
+       "label": "Full page width",
+       "default": false
+     },
+     {
+       "id": "subcoll_gall_overlay_style",
+       "type": "select",
+       "label": "Overlay style",
+       "default": "shadow",
+       "options": [
+         {
+           "value": "full",
+           "label": "Tint"
+         },
+         {
+           "value": "box",
+           "label": "Box"
+         },
+         {
+           "value": "shadow",
+           "label": "Text shadow"
+         },
+         {
+           "value": "full image-overlay--bg-shadow",
+           "label": "Text shadow and tint"
+         },
+         {
+           "value": "no_background",
+           "label": "No background"
+         }
+       ]
+     },
+     {
+       "type": "select",
+       "id": "subcoll_gall_text_alignment",
+       "label": "Text overlay position",
+       "options": [
+         {
+           "value": "top left",
+           "label": "Top left"
+         },
+         {
+           "value": "top center",
+           "label": "Top center"
+         },
+         {
+           "value": "top right",
+           "label": "Top right"
+         },
+         {
+           "value": "center center",
+           "label": "Middle"
+         },
+         {
+           "value": "bottom left",
+           "label": "Bottom left"
+         },
+         {
+           "value": "bottom center",
+           "label": "Bottom center"
+         },
+         {
+           "value": "bottom right",
+           "label": "Bottom right"
+         }
+       ],
+       "default": "center center"
+     },
+     {
+       "type": "select",
+       "id": "subcoll_gall_mobile_layout",
+       "label": "Mobile layout",
+       "info": "Mobile layout always uses 5x4 images",
+       "default": "2",
+       "options": [
+         {
+           "value": "1",
+           "label": "1 item"
+         },
+         {
+           "value": "2",
+           "label": "2 items"
+         },
+         {
+           "value": "hide",
+           "label": "Hide"
+         }
+       ]
+     }
+   ]
+ }
+{% endschema %}

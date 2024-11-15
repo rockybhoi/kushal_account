@@ -1,0 +1,97 @@
+<style>
+.pearl-footer-text {
+    font-family: 'Lato';
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    padding: 0px 0 10px 0;
+    margin-top: -10px;
+    width: 100%;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+  .pearl-footer-inner {
+    display: flex;
+    align-items: center;
+}
+  .pearl-footer-left {
+    width: 55%;
+}
+  .pearl-footer-right {
+    width: 45%;
+    padding-left: 40px;
+}
+  
+  @media(min-width:750px){
+    .pearl-footer{
+      display:none;
+    }
+  }
+  @media(max-width:1024px){
+    .pearl-footer-right {
+    padding-left: 15px;
+}
+  }
+  @media(max-width:750px){
+    .pearl-footer-left {
+    display: none;
+}
+    .pearl-footer-right {
+    width: 100%;
+    padding-left: 0;
+      text-align:center;
+}
+    .pearl-footer-text {
+    font-size: 16px;
+    line-height: 26px;
+}
+  }
+  
+</style>
+<div class="pearl-footer-main">
+  <div class="pearl-footer-inner container ">
+  <div class="pearl-footer-left">
+    {% if section.settings.banner !=blank %}
+    {{
+          section.settings.banner
+          | image_url: width: 800
+          | image_tag: width: 800, height: 800, class: 'parl-footer-img'
+        }}
+    {% endif %}
+  </div>
+    
+  <div class="pearl-footer-right">
+    <div class="pearl-footer-text">{{ section.settings.text }}</div>
+    <a class="view-all-btn" href="{{ section.settings.link }}">Shop The Collection</a>
+  </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "pearl-footer",
+  "class": "pearl-footer",
+  "settings": [
+        {
+  "type": "textarea",
+  "id": "text",
+      "default": "These are the Artistic Details that stand against <br>the tests of time. Go bold, confident and gracious <br> with the beauty of Meenakari with Zircons",
+      "label": "sub-text"
+},
+    {
+        "type": "image_picker",
+        "id": "banner",
+        "label": "Image"
+      },
+    {
+        "type": "url",
+        "id": "link",
+        "label": "Button Link"
+      }
+  ],
+  "presets": [{
+    "name": "pearl-footer"
+  }]
+}
+{% endschema %}

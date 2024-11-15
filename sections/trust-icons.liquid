@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="inner-container">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="section-heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <div class="icon-list__wrapper">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.img != blank or block.settings.title != blank -%}
+          <div class="trust-icons__inner">
+            {%- if block.settings.img != blank -%}
+              <div class="trust__img">
+                <img
+                  src="{{ block.settings.img | image_url: width: block.settings.img.width }}"
+                  alt="{{ block.settings.img.alt }}"
+                  width="{{ block.settings.img.width }}" height="{{ block.settings.img.height }}">
+              </div>
+            {%- else -%}
+              <div class="trust__img">
+                {{ 'collection-1' | placeholder_svg_tag }}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <div class="icon__heading">
+                {{ block.settings.title }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{{ 'component-trust-icons.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Trust-icons",
+  "class": "trust-icon--section",
+  "max_blocks": 4,
+  "settings": [ 
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type":"richtext",
+          "id":"title",
+          "label":"Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Trust-icons List",
+      "name":"Trust-icons List"
+    }
+  ]
+}
+{% endschema %}

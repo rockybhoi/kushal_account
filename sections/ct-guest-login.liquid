@@ -1,0 +1,473 @@
+{{ 'account.css' | asset_url | stylesheet_tag: preload: true }}
+
+
+<div class="otp login ct_wrap_login" data-phone="" >
+    <div class="ct_btn_wrap">
+      <button class="ct_change_type ct_change_type_email" data-type="email">email</button>
+      <button class="ct_change_type" data-type="phone">phone</button>
+    </div>
+    <div class="ct_wrap_input ct_wrap_input_main" >
+      <h2>Login or Signup to get started</h2>
+      
+      <div class="ct_pre_no_main">
+        <span class="ct_pre_no">+91</span>
+        <input maxlength="10" pattern="[0-9]*" type="tel" placeholder="" name="phone" class="ct_mobile ct_otp ct_active ct_type" value="" fdprocessedid="glm8hx">
+        <label>Enter Mobile Number</label>
+      </div>
+        <span class="rb_checking_status" style="display:none"></span>
+      <span class="ct_no_error" style="display:none">Please enter the valid mobile number</span>
+    </div>
+    <div class="btn_wrap otp_submit_btn">
+      <button class="notify_me" disabled>Get otp</button>
+    </div>
+    <span class="ct_login_error"></span>
+</div>
+<div class="wrap_verify ct_wrap_verify_main" style="display:none">
+    <div class=" ct_wrap_input_main" >
+      <h2>Login or Signup to get started</h2>
+      <div class="ct_pre_no_main ct_pre_no_main_secend">
+        <input type="text" class="ct_text">
+        <label>Enter OTP</label>
+      </div>
+        <div class="ct_edit_number">OTP has been sent to <span class="ct_mobile_no_wrap"><span class="ct_mobile_no"></span> {% render 'edit-svg' %}</span> </div>
+      <span class="ct_verify_otp" style="display:none;">Please correct this otp</span>
+      <button class="verify" disabled>Continue</button>
+      <div class="ct_resend_btn">
+        <div id="otp-timer">
+          <p id="timer-display">Resend in 49 seconds</p>
+          <div id="resend-otp" style="display:none;">Resend OTP</div>
+      </div>
+      </div>
+    </div>
+</div>
+<div class="ct_wrap_success_main" style="display:none">
+  <div class="ct_wrap_success_inner">
+    <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M56 0C70.8521 0 85.0959 5.89998 95.598 16.402C106.1 26.9041 112 41.1479 112 56C112 70.8521 106.1 85.0959 95.598 95.598C85.0959 106.1 70.8521 112 56 112C41.1479 112 26.9041 106.1 16.402 95.598C5.89998 85.0959 0 70.8521 0 56C0 41.1479 5.89998 26.9041 16.402 16.402C26.9041 5.89998 41.1479 0 56 0ZM49.024 67.048L36.584 54.6C36.138 54.154 35.6086 53.8003 35.0259 53.5589C34.4432 53.3176 33.8187 53.1933 33.188 53.1933C32.5573 53.1933 31.9328 53.3176 31.3501 53.5589C30.7674 53.8003 30.238 54.154 29.792 54.6C28.8913 55.5007 28.3853 56.7223 28.3853 57.996C28.3853 59.2697 28.8913 60.4913 29.792 61.392L45.632 77.232C46.0767 77.6802 46.6058 78.0359 47.1886 78.2787C47.7715 78.5215 48.3966 78.6465 49.028 78.6465C49.6594 78.6465 50.2845 78.5215 50.8674 78.2787C51.4502 78.0359 51.9793 77.6802 52.424 77.232L85.224 44.424C85.6759 43.9799 86.0355 43.4507 86.2818 42.8669C86.5282 42.2832 86.6566 41.6564 86.6595 41.0228C86.6625 40.3892 86.5399 39.7612 86.299 39.1752C86.0581 38.5892 85.7035 38.0566 85.2557 37.6083C84.8079 37.16 84.2758 36.8048 83.6901 36.5632C83.1043 36.3215 82.4765 36.1983 81.8429 36.2005C81.2093 36.2027 80.5824 36.3303 79.9983 36.576C79.4143 36.8217 78.8847 37.1806 78.44 37.632L49.024 67.048Z" fill="#28BE7F"/>
+    </svg>
+    <h3>Logged in Successfully!</h3>
+  </div>
+</div>
+<form method="post" id="zecpe_customer_activation_form" action="/account/activate" style="visibility: hidden; height: 0; width: 0">
+    <input type="hidden" name="form_type" value="customer_activate">
+    <input type="hidden" name="utf8" value="✓">
+    <input type="hidden" name="customer[password]" value="123456" id="zecpe_activation_password">
+    <input type="hidden" name="customer[password_confirmation]" value="123456" id="zecpe_activation_confirm_password">
+    <input type="hidden" name="token" value="7001d3402aae4e0c9ed73b318032199c-1718946026" id="zecpe_activation_token">
+    <input type="hidden" name="id" value="8348481683747" id="zecpe_activation_customer_id">
+    <button>Activate</button>
+</form>
+
+<style>
+  input.ct_active.ct_type {
+    display: block;
+}
+  input.ct_type {
+    display: none;
+}
+</style>
+              
+<script>
+jQuery('input, select, textarea,email,password,tel').each(
+		function(index){  
+			var input = jQuery(this);
+          	input.on('focus', function() {
+                jQuery(this).parent().addClass("has-focus");
+            });
+          
+          input.on('focusout', function() {
+              if(jQuery(this).val() == '') {
+                  jQuery(this).parent().removeClass("has-focus");
+              }
+		   }); 
+          
+    });
+  
+   jQuery('input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="search"], select, textarea').each(
+          function(index){  
+              var input = jQuery(this);
+              if(input.val()=='')
+              {
+                  jQuery(input).parent().removeClass("has-focus");
+
+              }else
+              {
+                  jQuery(input).parent().addClass("has-focus");	
+              }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ jQuery(document).ready(function(){
+    jQuery(document).on("input", ".ct_active.ct_mobile", function(e) {
+       var $input = jQuery(this);
+       var value = $input.val().replace(/\D/g, ''); // Remove non-digit characters
+
+    // Ensure input only contains a maximum of 10 digits
+    if (value.length > 10) {
+        value = value.slice(0, 10);
+    }
+    
+    $input.val(value);
+
+    setTimeout(function() {
+        var firstDigit = value[0];
+
+        // Check the first digit condition
+        if (firstDigit <= 5 ) {
+            jQuery(".ct_mobile").addClass("ct_error");
+            jQuery(".ct_no_error").show();
+        } else {
+          if( value.length !== 10)
+          {
+            jQuery(".notify_me").attr("disabled", "disabled"); // Disable the button
+            jQuery(".ct_mobile").removeClass("ct_error");
+            jQuery(".ct_no_error").hide();
+          }
+          else
+          {
+            
+            jQuery(".ct_mobile").removeClass("ct_error");
+            jQuery(".ct_no_error").hide();
+            jQuery(".notify_me").removeAttr("disabled");
+          }
+        }
+    }, 100);
+
+    // Prevent non-numeric input
+    var charCode = (e.which) ? e.which : event.keyCode;
+    if (String.fromCharCode(charCode).match(/[^0-9]/g)) {
+        jQuery(".ct_no_error").hide();
+        return false;
+    }
+    });
+
+    jQuery(document).on("input", ".ct_text", function(e) {
+       var $input = jQuery(this);
+       var value = $input.val().replace(/\D/g, ''); // Remove non-digit characters
+
+    // Ensure input only contains a maximum of 10 digits
+    if (value.length > 4) {
+        value = value.slice(0, 4);
+    }
+    
+    $input.val(value);
+
+    setTimeout(function() {
+        var firstDigit = value[0];
+
+        // Check the first digit condition
+       
+          if( value.length !== 4)
+          {
+            jQuery(".verify").attr("disabled", "disabled"); // Disable the button
+          }
+          else
+          { 
+            jQuery(".verify").removeAttr("disabled");
+          }
+        
+    }, 100);
+
+    // Prevent non-numeric input
+    var charCode = (e.which) ? e.which : event.keyCode;
+    if (String.fromCharCode(charCode).match(/[^0-9]/g)) {
+        jQuery(".ct_no_error").hide();
+        return false;
+    }
+    });
+    jQuery(document).on("click",".ct_change_type",function(){
+       var ct_type=jQuery(this).attr("data-type");
+      jQuery(".ct_type").removeClass("ct_active");
+      jQuery(".ct_type[data-type="+ct_type+"]").addClass("ct_active")
+    })
+
+  jQuery('.notify_me').click(function() {
+  
+      	var mobile_no = jQuery(".ct_active.ct_type").val();
+          let countdownInterval;
+     var cust_contact_no_length=jQuery(".ct_active.ct_type").val().length
+     if(cust_contact_no_length == 10){
+       var flag_check=true;
+     }
+    else
+     {
+       var flag_check=false;
+     }
+    if(flag_check)
+    {
+      	var data = {
+      		"mobile_no": mobile_no,
+      		"method_call": "send_otp"
+      	}
+      jQuery(".rb_checking_status").text("Sending OTP ...");
+      jQuery(".rb_checking_status").show();
+      	$.ajax({
+      		url: "http://localhost/login/log.php",
+      		cache: false,
+      		type: "POST",
+      		data: data,
+      		dataType: "json",
+      		success: function(obj) {
+                if(obj.success)
+                {
+                  jQuery(".rb_checking_status").text("");
+                  jQuery(".rb_checking_status").hide();
+                  jQuery(".ct_wrap_login").attr("data-phone",mobile_no);
+                  jQuery(".ct_wrap_login").hide();
+                  jQuery(".wrap_verify ").show();
+                  jQuery(".ct_login_error").text("")
+                  jQuery(".ct_mobile_no_wrap .ct_mobile_no").text(mobile_no)
+                  //clearInterval(countdownInterval); 
+                    let timeLeft = 50;
+                    startCountdown(timeLeft);
+                }
+                else
+                {    
+                  jQuery(".rb_checking_status").hide();
+                  jQuery(".rb_checking_status").text("");
+      			  jQuery(".ct_login_error").text(obj.msg)
+                }
+      		}
+      	});
+    }
+    else
+    {
+      jQuery(".ct_no_error").show();
+    }
+  })
+   // Verify the OTP
+  jQuery('.verify').click(function() {
+    	var otp = jQuery(".ct_text").val();
+    	var mobile_no = jQuery(".ct_wrap_login").attr("data-phone");
+    	var data = {
+    		"otp": otp,
+    		"mobile_no": mobile_no,
+    		"method_call": "verify_otp"
+    	}
+    	$.ajax({
+    		url: "http://localhost/login/log.php",
+    		cache: false,
+    		type: "POST",
+    		data: data,
+    		dataType: "json",
+    		success: function(obj) {
+    			 console.log(obj);
+    			// var obj = jQuery.parseJSON(response);
+    			//var pass=atob(obj.p);
+              if(obj.success)
+              {
+                jQuery(".ct_edit_number").text("OTP Verified Successfully.")
+                if(obj.guest_login)
+                {
+                  jQuery(".ct_wrap_verify_main").hide();
+                  jQuery(".ct_wrap_success_main").show();
+                  jQuery("#zecpe_activation_password").val("123456");
+                  jQuery("#zecpe_activation_confirm_password").val("123456");
+                  jQuery("#zecpe_activation_token").val(obj.cust_url)
+                  jQuery("#zecpe_activation_customer_id").val(obj.id)
+                  jQuery("#zecpe_customer_activation_form button").trigger("click");   
+                }
+                else
+                {
+                  jQuery(".ct_wrap_verify_main").hide();
+                  jQuery(".ct_wrap_success_main").show(); 
+                  var pass = decode(obj.p);
+                  var email = decode(obj.e);
+                  var ct_token = obj.t;
+                  jQuery("#ct_CustomerEmail").val(email);
+                  jQuery("#ct_CustomerPassword").val(pass);
+      
+                  // Set a cookie
+                  setCookie('ct_token', ct_token, '2')
+                  sessionStorage.setItem("ct_token", ct_token);
+                  localStorage.setItem('ct_token', ct_token)
+                  // alert("test"); 
+      
+                  $("#cust_login_btn").click();
+                  document.getElementById("cust_login_btn").click();
+                  
+                }
+              }
+    		}
+    	});
+  })
+
+   // 
+  //  jQuery(".ct_mobile_no_wrap").click(function(){
+  //     clearInterval(countdownInterval); 
+  //     jQuery(".ct_mobile_no").text("");
+  //     jQuery(".ct_wrap_verify_main").hide();
+  //     jQuery(".ct_wrap_login").show();
+  // })
+
+
+    // Initial time in seconds (2 minutes)
+   // let timeLeft = 50;
+
+})
+
+  
+     let countdownInterval;  // Declare a global variable to store the interval ID
+        
+    function startCountdown(timeLeft) {
+        // Clear any previous interval just to ensure there is no leftover interval
+        if (countdownInterval) {
+            clearInterval(countdownInterval);
+        }
+    
+        countdownInterval = setInterval(function() {
+            // Calculate minutes and seconds
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+    
+            // Format seconds to have a leading zero if less than 10
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+    
+            // Update the display
+            $('#timer-display').text(`Resend in ${seconds} seconds`);
+    
+            // Decrease time left
+            timeLeft--;
+    
+            // When the countdown reaches zero
+            if (timeLeft < 0) {
+                jQuery("#timer-display").hide();
+                clearInterval(countdownInterval);  // Clear the interval
+                $('#resend-otp').show();  // Show the "Send OTP Again" button
+            }
+        }, 1000);  // 1000ms = 1 second
+    }
+    
+    // Clear the interval on click
+    jQuery(".ct_mobile_no_wrap").click(function() {
+        if (countdownInterval) {
+            clearInterval(countdownInterval);  // Clear interval if it exists
+            countdownInterval = null;  // Reset the variable
+        }
+        jQuery(".ct_mobile_no").text("");
+        jQuery(".ct_wrap_verify_main").hide();
+        jQuery(".ct_wrap_login").show();
+    });
+
+  
+
+    function decode(data)
+    {
+       var key= window.atob(window.atob(window.atob(data)))
+      return key;
+    }
+    function setCookie(name, value, days) {
+    	var expires = "";
+    	if (days) {
+    		var date = new Date();
+    		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    		expires = "; expires=" + date.toUTCString();
+    	}
+    	document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+  // function submit(e){
+  //   e.preventDefault();
+  //   console.log("tttttt");
+  //   return false;
+  // }
+
+  jQuery(document).on("click",".ct_get_btn",function(){
+    var phone=jQuery(".ct_phone").val();
+
+    	var data = {
+		"mobile_no": phone,
+		"method_call": "get_customer"
+      	}
+	$.ajax({
+		url: "http://localhost/login/log.php",
+		cache: false,
+		type: "POST",
+		data: data,
+		dataType: "json",
+		success: function(obj) {
+          if(obj.status == 200)
+          {
+            var li_html="";
+           jQuery.each(obj.data, (index, item) => {
+               console.log(item['node']['name']);
+             li_html+=`<li>${item['node']['name']}</li>`;
+          });
+
+            jQuery(".ct_orders_list .ct_orders").html(li_html);
+          }
+        }
+            
+        })
+  })
+  jQuery(document).on("click","#resend-otp",function(){
+
+    var mobile_no=jQuery(".ct_mobile_no").text();
+        var data = {
+      		"mobile_no": mobile_no,
+      		"method_call": "send_otp"
+      	}
+    $this=jQuery(this);
+    	$.ajax({
+      		url: "http://localhost/login/log.php",
+      		cache: false,
+      		type: "POST",
+      		data: data,
+      		dataType: "json",
+      		success: function(obj) {
+                if(obj.success)
+                {
+                  
+                  $this.hide();
+                   var timeLeft = 50;
+                    $('#resend-otp').hide(); 
+                    startCountdown(timeLeft);     
+                    jQuery("#timer-display").show();
+                }
+      		}
+      	});
+    
+          
+  })
+
+   
+    </script>
+
+              <form method="post" action="/account/login"  id="ct_customer_login" style="display:none" accept-charset="UTF-8" novalidate="novalidate">
+                    <input type="hidden" name="form_type" value="customer_login">
+                    <input type="hidden" name="utf8" value="✓">
+                    <input type="email" name="customer[email]" id="ct_CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
+                    <input type="password" value="" name="customer[password]" id="ct_CustomerPassword" autocomplete="current-password" placeholder="Password">
+                <button id="cust_login_btn">sign in</button>
+          </form>
+        
+    <form method="post" id="zecpe_customer_activation_form" action="/account/activate" style="visibility: hidden; height: 0; width: 0">
+      <input type="hidden" name="form_type" value="customer_activate">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="customer[password]" value="123456" id="zecpe_activation_password">
+      <input type="hidden" name="customer[password_confirmation]" value="123456" id="zecpe_activation_confirm_password">
+      <input type="hidden" name="token" value="" id="zecpe_activation_token">
+      <input type="hidden" name="id" value="" id="zecpe_activation_customer_id">
+      <button>Activate</button>
+    </form>
+
+{% schema %}
+  {
+    "name": "CT guest login",
+    "class": "CT-guest-login",
+    "settings": [],
+    "presets": [{
+    "name": "guest login"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,908 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "banner_with_button_ifeC9H": {
+      "type": "banner_with_button",
+      "disabled": true,
+      "settings": {
+        "desk": "shopify://shop_images/desktop_c62714b5-3cc4-459c-ae97-e7ff08586ef5.jpg",
+        "mobile": "shopify://shop_images/landing_page_onam_2.jpg",
+        "link": "shopify://collections/onam-jewellery-collection",
+        "link_text": ""
+      }
+    },
+    "slideshow_CUTQFn": {
+      "type": "slideshow",
+      "blocks": {
+        "image_TQgBPr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/landing_page_onam_web.jpg",
+            "mobile_image": "shopify://shop_images/landing_page_onam_2.jpg",
+            "slide_link": "shopify://collections/onam-jewellery-collection"
+          }
+        }
+      },
+      "block_order": [
+        "image_TQgBPr"
+      ],
+      "settings": {
+        "img_org": true,
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "cross_page_promos_MecBpm": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "custom_icon_KNraBi": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/shop_icon_ba31295f-c3ec-4b4d-b39d-f4b5fd351292.svg",
+            "image_size": "icon",
+            "text": "90+\nStores",
+            "link_url": ""
+          }
+        },
+        "custom_icon_btcpfT": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/20_lakh_d11c423d-51f5-44dd-bb34-7b6a091d1ff2.svg",
+            "image_size": "icon",
+            "text": "20 Lakh+\nHappy Customers",
+            "link_url": ""
+          }
+        },
+        "custom_icon_deCNXJ": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Assured_Quality.svg",
+            "image_size": "icon",
+            "text": "14+ Quality\nChecks",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_icon_KNraBi",
+        "custom_icon_btcpfT",
+        "custom_icon_deCNXJ"
+      ],
+      "custom_css": [
+        ".rimage-wrapper.lazyload--placeholder {background: none;}",
+        ".icon-with-caption {background: #fbfbfb; border: 1px solid #e5e5e5; border: 0px solid #e5e5e5; background: transparent;}",
+        ".container {opacity: 1; background: linear-gradient( 246deg, #e3e3e3 0%, rgba(227, 227, 227, 0) 103.16% ); margin-top: 0px; margin-bottom: 32px;}",
+        ".flexible-layout .column,.fixed-layout .column {margin-bottom: 0; padding: 10px 0;}",
+        "@media (max-width: 748px) {.icon-with-caption .icon-with-caption__text {width: 100%; } .flexible-layout {flex-direction: row; }}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "round_collection_box_d3fy8T": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_qNgq3j": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Bangles_1.png",
+            "link": "shopify://collections/onam-bangle-jewellery-collection",
+            "title": "Bangles"
+          }
+        },
+        "collection_M6bjWD": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Necklaces_1.png",
+            "link": "shopify://collections/grandeur-onam-necklaces",
+            "title": "Necklaces"
+          }
+        },
+        "collection_7gqKUA": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Earrings_1_e49fa0eb-cd31-4940-9408-067969199b16.png",
+            "link": "shopify://collections/onam-earring-picks",
+            "title": "Earrings"
+          }
+        },
+        "collection_kkX63Y": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Chain_1.png",
+            "link": "shopify://collections/onam-collection-grandeur-chains",
+            "title": "Chain"
+          }
+        },
+        "collection_6ihjAK": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Belt_sdf.png",
+            "link": "shopify://collections/onam-special-belt-designs",
+            "title": "Belt"
+          }
+        },
+        "collection_zT6DXC": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Tikkas.png",
+            "link": "shopify://collections/onam-special-maang-tikka-designs",
+            "title": "Tikka"
+          }
+        },
+        "collection_FfefzK": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Payals.png",
+            "link": "shopify://collections/onam-special-payal-designs",
+            "title": "Payal"
+          }
+        },
+        "collection_LY6fH3": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Finger_Rings.png",
+            "link": "shopify://collections/onam-special-antique-finger-ring-designs",
+            "title": "Finger Rings"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qNgq3j",
+        "collection_M6bjWD",
+        "collection_7gqKUA",
+        "collection_kkX63Y",
+        "collection_6ihjAK",
+        "collection_zT6DXC",
+        "collection_FfefzK",
+        "collection_LY6fH3"
+      ],
+      "settings": {
+        "title": "Explore Onam Collection",
+        "link-text": "",
+        "link": ""
+      }
+    },
+    "new_shop_the_look_VUwBH6": {
+      "type": "New-shop-the-look",
+      "settings": {
+        "video": "shopify://files/videos/KUSHAL 20 SEC_Square_Web.mp4",
+        "head": "Shop The Look",
+        "sec": "The Alluring Onam Look",
+        "sec_text": "",
+        "product_list": [
+          "antique-necklace-165473",
+          "antique-finger-ring-172456",
+          "antique-necklace-170548",
+          "antique-earring-176769"
+        ],
+        "coll_name": "Shop Similar"
+      }
+    },
+    "section_brecker_img_TwA46G": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        "@media (max-width: 750px) {.middle-bg-breck img {width: 200px; }}"
+      ],
+      "settings": {
+        "img": "shopify://shop_images/onavillu_7c89c9bf-6cea-4c05-9af4-074bde31cf72.png",
+        "text": "Celebrate the festive joy of Onam with our <br>handpicked Jewellery Collection",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "round_collection_box_JRmBCB": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_crjEbi": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Kaasu.png",
+            "link": "shopify://collections/onam-jewellery-edit-kaasu-designs",
+            "title": "Kaasu Coins"
+          }
+        },
+        "collection_kzQBaq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Maanga.png",
+            "link": "shopify://collections/onam-jewellery-edit-maanga-designs",
+            "title": "Maanga"
+          }
+        },
+        "collection_Vgnjbm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Peacock_d76a1928-5aec-4c7f-8d23-f8b82b6ecbf3.png",
+            "link": "shopify://collections/onam-jewellery-edit-peacock-designs",
+            "title": "Peacock"
+          }
+        },
+        "collection_rFrhCN": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/Chain_d1435c13-023b-4976-a224-e6520fd38ae5.png",
+            "link": "shopify://collections/onam-collection-grandeur-chains",
+            "title": "Chain"
+          }
+        },
+        "collection_NG7nnJ": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-rose-gold-zircon-earring-160400-37672376074396_fcb1c085-7e8e-4af7-b51d-0301ab6b4e6e.jpg",
+            "link": "shopify://collections/stellar-zircon-jhumkas",
+            "title": "Zircon"
+          }
+        },
+        "collection_9rCYiq": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/kundan-earring-white-gold-kundan-earring-151635-37651506069660_b5007a30-142c-4176-a47b-139cc8d3178e.jpg",
+            "link": "shopify://collections/kundan-jhumkas",
+            "title": "Kundan"
+          }
+        },
+        "collection_rLD93B": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/1714556248775_1714556245381_167233_402964_K_943ea593-7cac-47cf-99ea-ae152f95cb3e.jpg",
+            "link": "shopify://collections/trendy-jhumkas",
+            "title": "Trendy"
+          }
+        },
+        "collection_iCNQf3": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-gold-zircon-earring-155782-37651791577244_66eecbf8-1c90-40e5-9b37-58d412169dc2.jpg",
+            "link": "shopify://collections/jhumkas-with-matil",
+            "title": "With Matil"
+          }
+        }
+      },
+      "block_order": [
+        "collection_crjEbi",
+        "collection_kzQBaq",
+        "collection_Vgnjbm",
+        "collection_rFrhCN",
+        "collection_NG7nnJ",
+        "collection_9rCYiq",
+        "collection_rLD93B",
+        "collection_iCNQf3"
+      ],
+      "settings": {
+        "title": "Explore Enchanting Motifs",
+        "link-text": "",
+        "link": ""
+      }
+    },
+    "section_brecker_img_VFmMNV": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        "@media (max-width: 750px) {.middle-bg-breck img {width: 200px; }}"
+      ],
+      "settings": {
+        "img": "shopify://shop_images/Onathappan.png",
+        "text": "Capture your festivities in style<br> with our Antique Edit",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "12edfc74-7abe-4811-9f7b-933a65332d4c": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Pair.png",
+            "heading": "Pair",
+            "text": "",
+            "link": "shopify://collections/onam-special-pair-bangle-collection",
+            "link_text": "Explore"
+          }
+        },
+        "eaf55712-cda7-455b-af17-4a92a0fa7491": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Single_a130cf01-a3b0-4223-96b8-f2032adb5167.png",
+            "heading": "Single",
+            "text": "",
+            "link": "shopify://collections/onam-special-single-bangle-collection",
+            "link_text": "Explore"
+          }
+        },
+        "0748d546-8194-47f9-bb92-553a0cbdd539": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Peacock_Earring_1.jpg",
+            "heading": "Peacock",
+            "text": "The Flair of feathered elegance in a signature ethnic motif",
+            "link": "shopify://collections/peacock-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "760699d3-8a82-44aa-83db-85a1f4fc9159": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/ganesha_earring_1.jpg",
+            "heading": "Ganesha",
+            "text": "Let the wisdom of elephant-headed God shine through your Jhumkas",
+            "link": "shopify://collections/ganesha-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "49baafbf-d729-4708-a6f2-e99ad55347f6": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_1.png",
+            "heading": "Polki",
+            "text": "For the glimmering glow of raw-cut authenticity",
+            "link": "shopify://collections/kundan-jewellery",
+            "link_text": "Explore"
+          }
+        },
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_2.png",
+            "heading": "Meenakari",
+            "text": "Artistry etched through a spectrum of vibrancy",
+            "link": "shopify://collections/meenakari",
+            "link_text": "Explore"
+          }
+        },
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_7.png",
+            "heading": "Elephant",
+            "text": "Embrace wisdom through elephant details",
+            "link": "shopify://collections/elephant-elegance",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "12edfc74-7abe-4811-9f7b-933a65332d4c",
+        "eaf55712-cda7-455b-af17-4a92a0fa7491",
+        "0748d546-8194-47f9-bb92-553a0cbdd539",
+        "760699d3-8a82-44aa-83db-85a1f4fc9159",
+        "49baafbf-d729-4708-a6f2-e99ad55347f6",
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee",
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232"
+      ],
+      "custom_css": [
+        ".Wedding-Collection-head {font-family: \"Lato\"; padding-bottom: 20px; margin-top: 40px; font-size: 29px; color: rgba(69, 69, 69, 1);}",
+        ".Wedding-Collection {margin-bottom: 50px;}",
+        "@media (max-width: 750px) {.Wedding-Collection {margin-bottom: 45px; } .Wedding-Collection-head {margin-top: 15px; padding-bottom: 0; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "Festive Onam Bangles",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "new_shop_the_look_JBiwmV": {
+      "type": "New-shop-the-look",
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/STL.png",
+        "img_icon_banner_mob": "shopify://shop_images/STL.png",
+        "head": "Shop The Look",
+        "sec": "The Elevating Onam Look",
+        "sec_text": "",
+        "product_list": [
+          "antique-finger-ring-176770",
+          "antique-necklace-173895",
+          "antique-bangle-173874"
+        ],
+        "coll_name": "Collection Name"
+      }
+    },
+    "section_brecker_img_cBCaQF": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        "@media (max-width: 750px) {.middle-bg-breck img {width: 200px; }}"
+      ],
+      "settings": {
+        "img": "shopify://shop_images/Kathakalli.png",
+        "text": "Embrace the traditions of Onam <br>with our Opulent selects",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "round_collection_box_Ec74w3": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_nqnqQE": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Short.png",
+            "link": "shopify://collections/antique-onam-special-short-necklaces",
+            "title": "Short"
+          }
+        },
+        "collection_7nXqgm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Long.png",
+            "link": "shopify://collections/antique-onam-special-long-necklaces",
+            "title": "Long"
+          }
+        },
+        "collection_jbNH9g": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Chocker.png",
+            "link": "shopify://collections/antique-onam-special-choker-necklaces",
+            "title": "Chocker"
+          }
+        },
+        "collection_keUyfc": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Chain_d1435c13-023b-4976-a224-e6520fd38ae5.png",
+            "link": "shopify://collections/onam-collection-grandeur-chains",
+            "title": "Chain"
+          }
+        },
+        "collection_87dYmn": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-rose-gold-zircon-earring-160400-37672376074396_fcb1c085-7e8e-4af7-b51d-0301ab6b4e6e.jpg",
+            "link": "shopify://collections/stellar-zircon-jhumkas",
+            "title": "Zircon"
+          }
+        },
+        "collection_y3MEcB": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/kundan-earring-white-gold-kundan-earring-151635-37651506069660_b5007a30-142c-4176-a47b-139cc8d3178e.jpg",
+            "link": "shopify://collections/kundan-jhumkas",
+            "title": "Kundan"
+          }
+        },
+        "collection_U83JMQ": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/1714556248775_1714556245381_167233_402964_K_943ea593-7cac-47cf-99ea-ae152f95cb3e.jpg",
+            "link": "shopify://collections/trendy-jhumkas",
+            "title": "Trendy"
+          }
+        },
+        "collection_3QqQ9k": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-gold-zircon-earring-155782-37651791577244_66eecbf8-1c90-40e5-9b37-58d412169dc2.jpg",
+            "link": "shopify://collections/jhumkas-with-matil",
+            "title": "With Matil"
+          }
+        }
+      },
+      "block_order": [
+        "collection_nqnqQE",
+        "collection_7nXqgm",
+        "collection_jbNH9g",
+        "collection_keUyfc",
+        "collection_87dYmn",
+        "collection_y3MEcB",
+        "collection_U83JMQ",
+        "collection_3QqQ9k"
+      ],
+      "settings": {
+        "title": "Graceful Necklace Designs",
+        "link-text": "Shop All Necklaces",
+        "link": "shopify://collections/grandeur-onam-necklaces"
+      }
+    },
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534": {
+      "type": "ct-review",
+      "blocks": {
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "A pretty piece of craftmanship. Its not yellowish matte finish, but its golden antique finish. Worth the price."
+          }
+        },
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-170488-38144462586012.jpg",
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "Good quality and beautiful jumka. Love it"
+          }
+        },
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/temple-earring-ruby-oxidised-gold-silver-temple-earring-168074-38779825848476.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "This has pearls as well as red crystals. It's not heavy for its look and just quite traditional and festive due to coin pattern."
+          }
+        },
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-green-gold-antique-earring-169816-38779138211996.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Very nice pair of earrings, and I loved them. I can wear them with a sari as well as a salwar. Thank you Kushal!"
+          }
+        },
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-169742-37539908944028.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I liked the fusion of elephants and cz stones and the gold finish like real gold and elephant detailing is very nice.."
+          }
+        },
+        "fbbff485-6f70-4283-a0c8-495faddc4c17": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-green-gold-antique-earring-157659-38491002667164.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "The packing was very nice and safe. Look good and no damage. Stones are bright and not so much weight. Elegant."
+          }
+        },
+        "5be492c4-776d-4b02-b72c-08bdba684c29": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-167836-37886605721756.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "It's a wonderful jimikki very nice one.. Thanks"
+          }
+        },
+        "f53e78af-618a-433d-a3be-e20520f945b8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-green-gold-antique-earring-162071-37150954094748.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Looks very pleasing. Very nice product. Quality is too good.\nworth to buy."
+          }
+        },
+        "review_rQwbMp": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-earring-zircon-earring-163872-37680665198748.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Very beautiful &amp;cute earings,seems to very luxurious.. Thank you khushal team..."
+          }
+        },
+        "review_KAAU8L": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-167519-36954933690524.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I have bought a lot of jewelry from Kushal's and have always been happy with the quality."
+          }
+        }
+      },
+      "block_order": [
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735",
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b",
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed",
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e",
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f",
+        "fbbff485-6f70-4283-a0c8-495faddc4c17",
+        "5be492c4-776d-4b02-b72c-08bdba684c29",
+        "f53e78af-618a-433d-a3be-e20520f945b8",
+        "review_rQwbMp",
+        "review_KAAU8L"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "section_brecker_img_Ca8gY4": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        "@media (max-width: 750px) {.middle-bg-breck img {width: 200px; }}"
+      ],
+      "settings": {
+        "img": "shopify://shop_images/Boat.png",
+        "text": "Celebratory antiques select <br>for your joyful moments",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "wedding_collection_fXfA6t": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "box_JUgFjG": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/All_sdEarrings.png",
+            "heading": "All Earrings",
+            "text": "",
+            "link": "shopify://collections/onam-earring-picks",
+            "link_text": "Explore"
+          }
+        },
+        "box_wfdiGi": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Belt_3fc9002f-c0fb-4942-96cd-28a3d1ef3810.png",
+            "heading": "Kamarbands",
+            "text": "Adorn Your Waistline With <br>Traditional Belts",
+            "link": "shopify://collections/onam-special-belt-designs",
+            "link_text": "Explore"
+          }
+        },
+        "box_YGry44": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Tikka.png",
+            "heading": "Tikka",
+            "text": "Crown Your Look With <br>Bespoke Maang Tikkas",
+            "link": "shopify://collections/onam-special-maang-tikka-designs",
+            "link_text": "Explore"
+          }
+        },
+        "box_tMkmGX": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Payal_c9d50ca0-0a7b-4107-85bc-c264943d74a2.png",
+            "heading": "Payal",
+            "text": "Step In Elegance <br>With Festive Payals",
+            "link": "shopify://collections/onam-special-payal-designs",
+            "link_text": "Explore"
+          }
+        },
+        "box_JQRBF7": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/ring_e2f276d2-4598-44f0-b180-11f1c9df8c1a.png",
+            "heading": "Finger Ring",
+            "text": "Deck your fingers <br>with antique brilliance",
+            "link": "shopify://collections/onam-special-antique-finger-ring-designs",
+            "link_text": "Explore"
+          }
+        },
+        "box_eaBkWW": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_2.png",
+            "heading": "Meenakari",
+            "text": "Artistry etched through a spectrum of vibrancy",
+            "link": "shopify://collections/meenakari",
+            "link_text": "Explore"
+          }
+        },
+        "box_KprLGV": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_7.png",
+            "heading": "Elephant",
+            "text": "Embrace wisdom through elephant details",
+            "link": "shopify://collections/elephant-elegance",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "box_JUgFjG",
+        "box_wfdiGi",
+        "box_YGry44",
+        "box_tMkmGX",
+        "box_JQRBF7",
+        "box_eaBkWW",
+        "box_KprLGV"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "Indulge In Festive Accessories",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "best-seller-jhumkas",
+            "product_list": [
+              "antique-earring-138938",
+              "antique-earring-164104",
+              "antique-earring-160549",
+              "antique-earring-160552",
+              "antique-earring-139996"
+            ],
+            "view_text": "View All Jhumkas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 60px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Best Sellers"
+      }
+    },
+    "wedding_banner_arpEtM": {
+      "type": "wedding-banner",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "image": "shopify://shop_images/6272_x_2121.jpg",
+        "image_sec": "shopify://shop_images/1560_X_756.jpg"
+      }
+    },
+    "wsw_tabing_4UdYPL": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_izRxnX": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-antique-jhumkas",
+            "heading": "Antique",
+            "heading1": "Traditional • Gilded • Festive",
+            "sub": "For an adorable puja outfit, go for none other than a pair of <em><strong>antiques</strong></em>!",
+            "img1": "shopify://shop_images/antique-earring_2.jpg",
+            "img2": "shopify://shop_images/antique-earring_2.jpg"
+          }
+        },
+        "tabing_q34MyV": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-zircon-jhumkas",
+            "heading": "Zircon",
+            "heading1": "Shimmering • Unique • Bold",
+            "sub": "From statements pieces to floral elegance, find it all in <em><strong>stellar zircons!</strong></em>",
+            "img1": "shopify://shop_images/zircon-earring_1.jpg",
+            "img2": "shopify://shop_images/zircon-earring_1.jpg"
+          }
+        },
+        "tabing_D8UnEN": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-temple-jhumkas",
+            "heading": "Temple",
+            "heading1": "Auspicious • Elite  • Ethereal",
+            "sub": "Behold the presence of <em><strong>auspicious motifs</strong></em> through Temple jhumkas",
+            "img1": "shopify://shop_images/temple-earring_2.jpg",
+            "img2": "shopify://shop_images/temple-earring_2.jpg"
+          }
+        },
+        "tabing_9inVaH": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-silver-jhumkas",
+            "heading": "Silver",
+            "heading1": "Boho • Vintage •  Celebratory",
+            "sub": "92.5 Oxidised Silver for the <em><strong>vintage appeal!</strong></em>",
+            "img1": "shopify://shop_images/oxidised-silver_1.jpg",
+            "img2": "shopify://shop_images/oxidised-silver_1.jpg"
+          }
+        },
+        "tabing_ieGpcn": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-kundan-jhumkas",
+            "heading": "Kundan",
+            "heading1": "Regal • Historic • Artistic",
+            "sub": "For the ultimate queenly aesthetics, style a <em><strong>polki-studded wonder!</strong></em>",
+            "img1": "shopify://shop_images/kundan-earring_1.jpg",
+            "img2": "shopify://shop_images/kundan-earring_1.jpg"
+          }
+        },
+        "tabing_HKnBy3": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-trendy-jhumkas",
+            "heading": "Trendy",
+            "heading1": "Edgy • Unique • Casual",
+            "sub": "Your daily kurtis need this boost of <em><strong>desi earrings!</strong></em>",
+            "img1": "shopify://shop_images/trendy-earring.jpg",
+            "img2": "shopify://shop_images/trendy-earring.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_izRxnX",
+        "tabing_q34MyV",
+        "tabing_D8UnEN",
+        "tabing_9inVaH",
+        "tabing_ieGpcn",
+        "tabing_HKnBy3"
+      ],
+      "disabled": true,
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "Most Desired Jhumkas"
+      }
+    },
+    "pearl_footer_iJpGnN": {
+      "type": "pearl-footer",
+      "disabled": true,
+      "settings": {
+        "text": "Effortlessly vintage and just as lively, <br> these are the jhumkas that will give your <br> ethnic style a reminiscence of traditional lore.",
+        "link": "/collections/vibe-in-pearls"
+      }
+    },
+    "backgroung_banner_with_button_C7KXWL": {
+      "type": "Backgroung-banner-with-button",
+      "settings": {
+        "img": "shopify://shop_images/Group_48099262.png",
+        "link": "shopify://collections/onam-jewellery-collection"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_with_button_ifeC9H",
+    "slideshow_CUTQFn",
+    "cross_page_promos_MecBpm",
+    "round_collection_box_d3fy8T",
+    "new_shop_the_look_VUwBH6",
+    "section_brecker_img_TwA46G",
+    "round_collection_box_JRmBCB",
+    "section_brecker_img_VFmMNV",
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1",
+    "new_shop_the_look_JBiwmV",
+    "section_brecker_img_cBCaQF",
+    "round_collection_box_Ec74w3",
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534",
+    "section_brecker_img_Ca8gY4",
+    "wedding_collection_fXfA6t",
+    "pearls_collection_tabing_7xNG47",
+    "wedding_banner_arpEtM",
+    "wsw_tabing_4UdYPL",
+    "pearl_footer_iJpGnN",
+    "backgroung_banner_with_button_C7KXWL"
+  ]
+}

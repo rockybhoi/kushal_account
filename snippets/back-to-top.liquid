@@ -1,0 +1,19 @@
+<div class="back_to_top">
+    <a href=""></a>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){ 
+    if ($(this).scrollTop() > 200) { 
+        $('.back_to_top').addClass('active'); 
+    } else { 
+        $('.back_to_top').removeClass('active'); 
+    } 
+    }); 
+    $('.back_to_top').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+    return false; 
+    });
+});
+</script>

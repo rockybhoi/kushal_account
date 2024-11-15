@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "ee3e6893-cd5a-4731-afaf-7b4c1ec7f907": {
+      "type": "CT-Image",
+      "blocks": {
+        "11b3e18e-1be7-4117-8f57-519bd3ef6d5f": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner_full",
+            "max": "",
+            "imgdesk": "shopify://shop_images/2_8e7ed757-6aea-4bdc-8784-86ba6dc72215.jpg",
+            "imgmob": "shopify://shop_images/1_53cd9d4a-c72e-4c4f-8e75-67c87b101420.jpg"
+          }
+        },
+        "01da8045-a181-4a72-b6e7-74d41ba9ffc0": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "785",
+            "imgdesk": "shopify://shop_images/Frame_313.png",
+            "imgmob": "shopify://shop_images/Frame_329.png"
+          }
+        },
+        "5b6fd7ed-1e6b-4713-991d-7920a1a76c0f": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner_full",
+            "max": "",
+            "imgdesk": "shopify://shop_images/Orbit_mall-Indore_1.png",
+            "imgmob": "shopify://shop_images/Orbit_mall-Indore.png"
+          }
+        },
+        "03f053cc-3882-4ca4-9255-1334e8dd7e3a": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "1100",
+            "imgdesk": "shopify://shop_images/Group_339.png",
+            "imgmob": "shopify://shop_images/Group_330_1.png"
+          }
+        },
+        "6111e74a-cb2b-479a-a3c2-29b61dca09d3": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "800",
+            "imgdesk": "shopify://shop_images/Group_340.png",
+            "imgmob": "shopify://shop_images/Group_331.png"
+          }
+        },
+        "69cde8d3-8a18-43e6-8097-519a1734f4af": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "1100",
+            "imgdesk": "shopify://shop_images/Group_341.png",
+            "imgmob": "shopify://shop_images/Group_332.png"
+          }
+        },
+        "b0b4e772-e165-4286-b955-992b25f7ab2e": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "1100",
+            "imgdesk": "shopify://shop_images/Group_342.png",
+            "imgmob": "shopify://shop_images/Group_333.png"
+          }
+        },
+        "974e08bf-f930-4b0c-8521-c26a0f609acb": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "1100",
+            "imgdesk": "shopify://shop_images/Group_343.png",
+            "imgmob": "shopify://shop_images/Group_328_4af9430e-c7dc-42ff-ae04-e70be8f2ea33.png"
+          }
+        },
+        "51353719-30e2-438f-bf55-a4ceda66b0d0": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "1100",
+            "imgdesk": "shopify://shop_images/Group_344.png",
+            "imgmob": "shopify://shop_images/Group_334.png"
+          }
+        },
+        "adfde281-8789-4e40-989d-484663fc0a8f": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "1100",
+            "imgdesk": "shopify://shop_images/Group_345.png",
+            "imgmob": "shopify://shop_images/Group_335.png"
+          }
+        },
+        "32fca235-dd08-4048-9426-dbd0852a595b": {
+          "type": "Box",
+          "settings": {
+            "btn": false,
+            "style": "CT-Image-Inner-small",
+            "max": "900",
+            "imgdesk": "shopify://shop_images/Group_329_1.png",
+            "imgmob": "shopify://shop_images/Group_336.png"
+          }
+        },
+        "93560993-cf38-4fa3-9776-8df076943f1d": {
+          "type": "Box",
+          "settings": {
+            "btn": true,
+            "style": "CT-Image-Inner_full",
+            "max": "",
+            "imgdesk": "shopify://shop_images/Group_3466.png",
+            "imgmob": "shopify://shop_images/Group_338.png"
+          }
+        }
+      },
+      "block_order": [
+        "11b3e18e-1be7-4117-8f57-519bd3ef6d5f",
+        "01da8045-a181-4a72-b6e7-74d41ba9ffc0",
+        "5b6fd7ed-1e6b-4713-991d-7920a1a76c0f",
+        "03f053cc-3882-4ca4-9255-1334e8dd7e3a",
+        "6111e74a-cb2b-479a-a3c2-29b61dca09d3",
+        "69cde8d3-8a18-43e6-8097-519a1734f4af",
+        "b0b4e772-e165-4286-b955-992b25f7ab2e",
+        "974e08bf-f930-4b0c-8521-c26a0f609acb",
+        "51353719-30e2-438f-bf55-a4ceda66b0d0",
+        "adfde281-8789-4e40-989d-484663fc0a8f",
+        "32fca235-dd08-4048-9426-dbd0852a595b",
+        "93560993-cf38-4fa3-9776-8df076943f1d"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "ee3e6893-cd5a-4731-afaf-7b4c1ec7f907"
+  ]
+}

@@ -1,0 +1,384 @@
+<div class="gift_result_main">
+ 
+     
+</div>
+<style>
+.shopify-section.page-section-spacing {
+    display: none;
+}
+.gift-result-head {
+    color: #000;
+    text-align: center;
+    font-family: Rufina;
+    font-size: 49.222px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148.5%;
+    font-family: 'Rufina', serif;
+}
+.gift-result-sub-head {
+    font-family: 'Lato', sans-serif;    
+    margin-bottom: 13px;
+    color: #000;
+    text-align: center;
+    font-size: 26.369px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 46px;
+    line-height: 137.709%;
+}
+
+.gift-result-img-mob{
+    display: none;
+}
+.gift-result-img-desk{
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+}
+.gift-result-img-cart{
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+  .aud_play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart_open-img {
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.gift-result-box {
+    text-align: center;
+    position: relative;
+    margin-top: 0px;
+}
+.gift-result-box-card {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s;
+}
+
+.gift-result-open-ani {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+    max-width: 600px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+
+}
+.gift-result-open-ani img {
+    width: 100%;
+}
+.gift-result-box_active .gift-result-open-ani {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.gift-result-box_active .gift-result-box-card {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+img.gift-result_two {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    z-index: 5;
+}
+.gift-result-box_active .gift-result-img-desk {
+    margin: 90px auto 0 auto;
+}
+
+.gift-result_content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.gift-result_content-inner {
+    width: 90%;
+    background-color: #FFF7D7;
+    height: 370px;
+    transition: all 1s;
+    padding: 25px 20px;
+}
+.gift-result-box_active_sec  .gift-result_content-inner{
+    transform: translateY(-330px);   
+}
+
+.gift-result_content-inner-main {
+    background: rgba(255,255,255,0.76);
+    height: 100%;
+    padding: 17px 30px;
+}
+
+.gift-result_content-head {
+    color: #000;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.gift-result_content-text {
+    color: #313131;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146%;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.gift-result_content-footer {
+    color: #000;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+/* .gift-result_text{
+    display: none;
+}
+.gift-result_audio{
+    display: none;
+} */
+.aud_title , .vid_title{
+    color: #000;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.aud_text , .vid_text{
+    color: #313131;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 146%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+.vid_text{
+    margin: 0 auto 15px auto;
+}
+.aud_text span ,.vid_text span{
+    font-size: 15px;
+    display: block;
+}
+.aud_play svg {
+    width: 100%;
+    height: 100%;
+    max-width: 43px;
+    cursor: pointer;
+  margin-bottom: 10px;
+}
+.vid_btn {
+    border-radius: 100px;
+    background: var(--Pink-Gradient, linear-gradient(270deg, #E30058 7.05%, rgba(223, 0, 86, 0.93) 23.65%, rgba(218, 0, 84, 0.82) 33.57%, rgba(194, 0, 75, 0.00) 85.12%), #C71D22);
+    display: flex;
+    width: 121px;
+    height: 37px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    cursor: pointer;
+}
+.vid_title {
+    margin-top: 55px;
+}
+
+
+
+@media(max-width:750px){
+    .gift-result-box-card {
+        top: 50%;
+    }
+
+    .gift-result-open-ani {
+        top: 55%;
+    }
+    .gift-result-img-mob {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .gift-result-img-desk{
+        display: none;
+    }
+    .gift-result-img-cart {
+        max-width: calc(100% - 40px);
+    }
+    .cart_open-img {
+        max-width: 50px;
+        top: calc(50% - 5px);
+        left: calc(50% - 1px);
+    }
+    .gift-result-sub-head {
+        font-size: 15px;
+    }
+    .gift-result-head {
+        font-size: 28px;
+    }
+    .gift-result_content-inner {
+        height: 300px;
+    }
+    .gift-result-box_active_sec  .gift-result_content-inner {
+        transform: translateY(-330px);
+    }
+    img.gift-result_two {
+        left: 50% !important;
+        width: calc(100% - 40px);
+        transform: translateX(-50%);
+    }
+    img.gift-result_one {
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* .gift-result_content-box {
+    width: 100%;
+    height: 460px;
+    background: red;
+    transition: all 1s;
+} */
+
+
+/* .gift-result_content-box-one{
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    
+} */
+
+/* .gift-result-box_active_sec .gift-result_content-box{
+    transform: translateY(-200px);    
+} */
+
+  .gift-result-open--video-show{
+    border-radius: 20px;
+    background: #D9D9D9;
+    box-shadow: 0px 11px 18.9px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4.099999904632568px);
+  }
+</style>
+<script>
+ $(document).ready(function() {
+    $(document).on('click','.cart_open-img',function () {
+            $('.gift-result-box').addClass("gift-result-box_active");
+
+            window.setTimeout(function(){
+                $('.gift-result-box').addClass("gift-result-box_active_sec");
+            }, 800);
+
+        });
+  $(document).on('click','.vid_btn',function () {
+    jQuery(".ct_video_show").show();
+    jQuery(".ct_video_play_show").show();
+    jQuery(".ct_video_show").addClass("ct_show_active");
+    jQuery(".gift-result-open-ani").hide();
+  })
+   $(document).on('click','.ct_close_video',function () {
+      jQuery(".ct_video_show").removeClass("ct_show_active");
+      jQuery(".ct_video_show").hide();
+      jQuery(".ct_video_play_show").hide();
+     jQuery(".gift-result-open-ani").show();
+     
+   })
+   
+  var id=getUrlVars()["id"];
+  var shop_url="pkrct.myshopify.com";  
+  var url="https://gifting.kushals.com/new_gift_app/data_gift_request.php"
+  var data={                        
+                "shop_url":shop_url,               
+                "method_call":"get_result",
+                "uniq":id
+            }
+        
+        $.ajax({
+          type: "POST",  
+          url: url,    
+          data: data,                          
+          success: function (response) {
+            var obj = jQuery.parseJSON(response);       
+           jQuery('.gift_result_main').html(obj.data_html);
+          }
+       });
+
+
+ })
+  function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+</script>
+
+{% schema %}
+{
+  "name": "Gifting Result",
+  "class": "gifting_result",
+  
+  "settings": [],
+  "presets":[{
+  "name": "Gifting Result"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

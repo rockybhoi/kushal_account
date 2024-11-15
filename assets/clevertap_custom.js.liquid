@@ -1,0 +1,271 @@
+ jQuery(document).ready(function(){
+
+   var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+       function getLastWordFromURL() {
+            var url = window.location.href;
+            var parts = url.split('/');
+            var lastPart = parts[parts.length - 1] || parts[parts.length - 2]; // Handle trailing slash
+            return lastPart;
+        }
+    
+       
+
+     var page=__st.p;
+     
+   
+     if(page == "product")
+     {
+       var prod_id=__st.rid;
+       var prod_title=jQuery(".product-form .title-row .title").text();
+       var price=jQuery(".price-container .main-price-ct .current-price").text();
+       var amount= price.replace("₹ ", "");
+
+       var utm_source = getUrlParameter('utm_source');
+         if(utm_source != false)
+         {       
+          var utm_medium = getUrlParameter('utm_medium');
+          var utm_campaign=getUrlParameter('utm_campaign');
+         
+          var source="Social";
+         }
+       else
+         {
+           var utm_source="";
+           var utm_medium = "";
+          var utm_campaign="";
+          
+           var source="Direct";
+         }
+       
+       clevertap.event.push("Viewed Product", {
+                    "source":source,
+                    "product_id":prod_id,
+                    "product_name":prod_title,
+                    "product_category":"",
+                    "product_price":amount,
+                     "utm_campaign":utm_campaign,
+                     "utm_medium":utm_medium,
+                     "utm_source":utm_source
+                  });
+     }
+     else if(page == "collection")
+     {
+  
+        var utm_source = getUrlParameter('utm_source');
+         if(utm_source != false)
+         {       
+          var utm_medium = getUrlParameter('utm_medium');
+          var utm_campaign=getUrlParameter('utm_campaign');
+          var source_page="social";
+          var source="Social";
+         }
+       else
+         {
+           var utm_source="";
+           var utm_medium = "";
+          var utm_campaign="";
+           var source_page="";
+           var source="Direct";
+         }
+        var collection_title=jQuery(".container  .overlay-text__inner .overlay-text__title").text();
+        clevertap.event.push("Viewed Collection", {
+                      "source":source,
+                      "collection_title":collection_title,
+                        "source page":source_page,
+                       "utm_campaign":utm_source,
+                       "utm_medium":utm_medium,
+                       "utm_source":utm_source
+                    });
+     }
+     else if(page == "page")
+     {
+        var lastWord = getLastWordFromURL();
+         page = lastWord;
+     }
+    else
+     {
+         var lastWord = getLastWordFromURL();
+         page = lastWord;
+     }
+    jQuery(document).on("click", ".mm-ajaxcart-open", function(){
+      clevertap.event.push("Clicked Cart");
+    });
+
+   /******* Wishlisting Product Click Event *********/
+   jQuery(document).on("click", ".addcartbtn", function(){
+       var id =jQuery(this).attr("id");
+       var title = jQuery(this).closest(".ZoomyWishlistPageGrid").find(".zbodytitle a").text();
+       var price=jQuery(this).closest(".ZoomyWishlistPageGrid").find(".zprice").text();
+       var amount = price.replace("₹ ", "");
+    
+       clevertap.event.push("Add from wishlist to cart", {
+                    "Product name":title,
+                    "Product ID":id,
+                    "Category":"",
+                    "Product Price": amount
+                  });
+    });
+
+    /******* Recently Viewd Product Clicked *********/
+      jQuery(document).on("click", ".ct-recently-viewed li .card a:first", function(){
+        var title=jQuery(this).attr("data-title");
+           
+         clevertap.event.push("Clicked Recently Viewed", {
+                        "Product name":title,
+                        "Page Name":page
+                      });
+           });
+     /******* User Account icon  Clicked *********/
+     jQuery(document).on("click", ".header-account-link", function(){
+         clevertap.event.push("Clicked Profile Icon", {
+                        "interaction_type":page
+                      });
+     });
+
+   /******* User Wishlist icon  Clicked *********/
+     jQuery(document).on("click", ".header_hhrt", function(){
+         clevertap.event.push("Clicked Wishlist Icon", {
+                        "page name":page
+                      });
+     });
+
+  /******* User Header Wishlist icon  Clicked *********/
+     jQuery(document).on("click", ".header_hhrt", function(){
+         clevertap.event.push("Clicked Wishlist Icon", {
+                        "page name":page
+                      });
+     });
+  /******* Product Wishlist icon  Clicked *********/
+  jQuery(document).on("click",".zoomywishidheart .zoomycheck",function(){
+      var $this=jQuery(this).closest(".zoomywishid");
+      var title=$this.attr("data-title");
+      var prod_price=$this.attr("data-price");
+      var prod_id=$this.attr("data-product-id");
+      var page_url=__st.pageurl;
+    
+
+
+     clevertap.event.push("Clicked Wishlist Icon", {
+                        "wishlisted_product_type":"",
+                        "wishlisted_product_name":title,
+                        "wishlisted_product_price":prod_price,
+                        "wishlisted_product_id":prod_id,
+                        "page_url":page_url
+                      });
+  })
+ /******* Click on Begin Checkout button*********/
+  jQuery(document).on("click",".mm-checkout-button",function(){
+    clevertap.event.push("Begin Checkout");
+  })
+
+  /******* Click Remove button on cart drawer*********/
+  jQuery(document).on("click",".mm-ajaxcart-remove-item",function(){
+    clevertap.event.push("RemoveFromCart");
+  })
+  /******* Click on Banner *********/
+    jQuery(document).on("click",".mm-ajaxcart-remove-item.slick-current.slick-active a",function(){
+          
+      // clevertap.event.push("BannerClicked", {
+      //                   "BannerID":
+      //                   "BannerPosition":
+      //                   "DestinationPageURL":
+      //                   "BannerName":
+      //                 });
+    })
+
+   /******* Click on humburger menu *********/
+    jQuery(document).on("click","#pageheader .mobile-nav-toggle",function(){
+        clevertap.event.push("HamburgerMenuUsed");
+    })
+
+   /******* Click on Similar Product Click*********/
+   
+     jQuery(document).on("click",".CT_product-block .product-link",function(){
+       var prod_id=jQuery(this).closest(".CT_product-block").attr("data-product-id");
+        clevertap.event.push("SimilarProductClicked",{
+          "ProductID":prod_id
+        });
+    })
+
+   /******* Click on Product Image *********/
+    jQuery(document).on("click",".product-media  .CT-rimage__image",function(){
+      var prod_title=jQuery(".product-form .title-row .title").text();
+       clevertap.event.push("Product Image Clicked",{
+          "product_name":prod_title
+        });
+    })
+
+   /******* Click on Collection click  *********/
+   jQuery(document).on("click",".product-list a",function(){
+     var url=jQuery(this).attr("href");
+     
+      var parts = url.split('/');
+      var lastPart = parts[parts.length - 1] || parts[parts.length - 2]; // Handle trailing slash
+           
+     var current_page=window.location.href;
+     clevertap.event.push("Category Viewed",{
+          "Category Name":lastPart,
+          "Page URL": current_page,
+          "Landing Page URL":url
+        });
+   })
+   
+   /******* Click on Cart Icon click  *********/
+  jQuery(document).on("click",".mm-ajaxcart-open",function(){
+     clevertap.event.push("Clicked Cart");
+  })
+   
+   /******* Click on Banner Click  *********/
+  jQuery(document).on("click",".slick-track .ct_slide .image-overlay__image-link",function(){
+    var destination=jQuery(this).attr("href");
+    var banner_position=jQuery(this).closest(".ct_slide").attr("data-slick-index");
+    var segments = destination.split('/');
+    var banner_name = segments.pop() || segments.pop();  // Handles trailing slash
+    
+      clevertap.event.push("BannerClicked",{
+          "BannerID":banner_position,
+          "BannerPosition": banner_position,
+          "DestinationPageURL":destination,
+          "BannerName":banner_name
+        });
+  })
+
+   /******* Click on Location Click  *********/
+   jQuery(document).on("click",".ct_location",function(){
+      clevertap.event.push("Clicked Store Locator");
+   })
+   
+   /******* Click on Banner click  *********/
+    jQuery(document).on("click","img[data-image='ct-clever_image']",function(){
+      var page_url=window.location.href;
+      var banner_name=
+     clevertap.event.push("BannerClicked",{
+       "page_url":page_url,
+     })
+    });
+  /******* Click on collection sort by  *********/
+   jQuery(document).on("click",".CT_link-dropdown__options a",function(){
+    var ct_sort= jQuery(this).find(".ct_cl_sort").text();
+      var page_url=window.location.href;
+      clevertap.event.push("Sort Applied",{
+       "sort_type":ct_sort,
+       "landingpage_url":page_url ,
+     })
+   })
+   
+  });

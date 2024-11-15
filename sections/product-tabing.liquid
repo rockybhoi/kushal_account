@@ -1,0 +1,230 @@
+<style>
+ .tabing_btn {
+    margin: 18px 0 13px 0;
+    display: flex;
+   justify-content: center;
+}
+.tabing_btn  li a {
+    color: rgba(0, 0, 0, 1);
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-right: 12px;
+  transition: all 0.4s;
+    display: inline-block;
+}
+  .tab_btn.active {
+    background: rgba(42, 42, 42, 0.8);
+    border-color: rgba(42, 42, 42, 0.8) !important;
+    color: #fff;
+}
+  .tabing_box_main .main_title {
+    color: #454545;
+    font-family: "Lato", sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+}
+ .tabing_product_inner {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto !important;
+    width: 100%;
+}
+.tabing_product_inner .CT_product-block {
+    width: 288px;
+    min-width: 288px;
+    padding-right: 20px;
+}
+  .tabing_product_inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.tabing_product_inner {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+ .tabing_product .image-cont--with-secondary-image:hover .product-block__image--active {
+    opacity: 1 !important;
+}
+
+  
+ 
+    @media(max-width:750px){
+.tabing_box_main .main_title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+       .tabing_btn {
+   justify-content: flex-start;
+}
+      .tabing_product_inner .CT_product-block {
+    width: 185px;
+    min-width: 185px;
+    margin-right: 10px;
+        padding-right: 0px;
+}
+    }
+</style>
+<div class="tabing_box_main container">
+  {% if section.settings.title !=blank %}
+  <div class="main_title">{{ section.settings.title }}</div>
+    {% endif %}
+
+  <ul class="tabing_btn">
+    {% for block in section.blocks %}
+      <li  class="" data-id="{{ forloop.index }}"><a class=" tab_btn" href="#{{ section.id }}_{{ forloop.index }}"><span>{{ block.settings.title }}</span></a></li>
+    {% endfor %}
+  </ul>
+
+ 
+    {% for block in section.blocks %}
+      <div id="{{ section.id }}_{{ forloop.index }}" class="tabing_product">
+        <div class="tabing_product_inner items_scroll ">
+      
+         {% assign pro3 = block.settings.product_list %}
+          {% for product in pro3 %}
+            {% render 'product-block', numb: forloop.index, per_row: section.settings.grid, product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
+          {% endfor %} 
+              
+        {% if block.settings.botom_link !=blank %}
+          <div class="bottom_link">
+            <a  href="{{ block.settings.botom_link }}">{{ block.settings.botom_text }}</a>
+          </div>  
+        {% endif %}
+            
+        </div>
+      </div>
+    {% endfor %}
+
+</div>
+
+
+<script>
+
+
+    var sliders = document.querySelectorAll('.items_scroll');
+var isDown = false;
+var startX;
+var scrollLeft;
+
+sliders.forEach(slider => {
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse leave
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse up
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1; // scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    disableLinks(); // Disable links when scrolling horizontally
+  });
+});
+
+function disableLinks() {
+  var links = document.querySelectorAll('.items_scroll .CT_product-block');
+  links.forEach(link => {
+    link.style.pointerEvents = 'none'; // Disable link clicks
+  });
+}
+
+function enableLinks() {
+  var links = document.querySelectorAll('.items_scroll .CT_product-block');
+  links.forEach(link => {
+    link.style.pointerEvents = 'auto'; // Re-enable link clicks
+  });
+}
+
+
+
+
+
+
+  
+
+
+      $(document).ready(function() {
+    $('.tabing_btn').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "product-tabing",
+    "class": "product-tabing",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Main title",
+          "default": "Shop By Material"
+      }
+    ],
+    "blocks": [{
+      "type": "Product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tabing Text"
+        },
+
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Products",
+          "limit": 12
+        }
+
+      ]}],
+    "presets": [{
+    "name": "product-tabing"
+      
+    }]
+  }
+{% endschema %}

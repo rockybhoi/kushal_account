@@ -1,0 +1,583 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+  .wswtab img{
+    width:100%;
+  }
+  .mob_img{
+    display:none;
+  }
+  .WSW-Tabing-header {
+    color: #454545;
+    font-family: "Lato", sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+}
+.WSW-Tabing-main {
+    width: 100%;
+    overflow: hidden;
+}
+  /* .WSW-Tabing-header span{
+    color: #CF2228;
+} */
+  ul.tabswsw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 30px 0;
+    column-gap: 28px;
+}
+ul.tabswsw li a {
+    color: #000;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 24.538px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 14px 46px;
+    border-radius: 4px;
+    border: 1px solid #D60227;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+ul.tabswsw li a.active {
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 10px;
+    background: rgba(42, 42, 42, 0.8);
+}
+  .WSW-Tabing-tab-content {
+    width: 100%;
+}
+.WSW-Tabing-tab-content-text {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+  .WSW-Tabing-tab-content-inner {
+    position: relative;
+}
+.WSW-Tabing-head {
+    font-family: "Lato", sans-serif;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+ .WSW-Tabing-sub-head {
+    font-family: "Lato", sans-serif;
+    margin-top: 6px;
+    color: #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    max-width: 290px;
+}
+  .WSW-Tabing-sub-head em , .WSW-Tabing-sub-head strong{
+    font-style: italic;
+    font-weight: 700;
+}
+  a.ct_kinkk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+}
+  .desk_none{
+    display:none;
+  }
+  .wswtab {
+    position: relative;
+}
+  .wswtab img {
+    width: 100%;
+}
+  .WSW-Tabing-tab-content-inner {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 15px 0 15px;
+    gap: 20px;
+}
+  .wswtab {
+    width: 100%;
+    max-width: 27%;
+    min-width: 27%;
+}
+  .WSW-Tabing-tab-content-inner::-webkit-scrollbar {
+    display: none;
+}
+  .WSW-Tabing-tab-content-inner {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.WSW-Tabing-tab-content-inner::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+  .ws_tab_box{
+    position: relative;
+  }
+  .ctreview-box_ct_heading {
+    color: #CF2228;
+    text-align: center;
+    font-family: Lato;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 19px;
+    margin-top: 20px;
+}
+  .Center_box_added {
+    justify-content: center;
+}
+  .style-show {
+    position: relative;
+}
+   .style-show:after {
+     content:'';
+}
+ /* .style-show:after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -1px;
+    height: calc(100% + 8px);
+    width: 70px;
+    background: linear-gradient(270deg, #FFF7F7 23.41%, rgba(255, 247, 247, 0.00) 95.16%);
+    transform: rotate(0deg);
+    z-index: 1;
+   pointer-events: none;
+} 
+  
+  .style-show:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -1px;
+    height: calc(100% + 8px);
+    width: 60px;
+    background: linear-gradient(270deg, #FFF7F7 23.41%, rgba(255, 247, 247, 0.00) 95.16%);
+    transform: rotate(180deg);
+    z-index: 1;
+  pointer-events: none;
+} */
+
+  .WSW-Tabing-main-mother {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background: transparent;
+}
+
+   .WSW-Tabing-main-mother ul.tabswsw li a {
+    color: #000;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 24.538px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 14px 46px;
+    border-radius: 176.674px;
+    border: 1px solid #D60227;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #D9D8E7;
+}
+   
+   .WSW-Tabing-main-mother .style-show:after ,    .WSW-Tabing-main-mother .style-show:before{
+     display:none !important;
+   }
+
+   .WSW-Tabing-main-mother 
+
+
+  
+      @media(max-width:1450px){
+        
+      }
+  @media(max-width:1200px){
+    .wswtab {
+    width: 100%;
+    max-width: 350px;
+    min-width: 350px;
+}
+    .WSW-Tabing-head {
+    font-size: 1.4vw;
+}
+    .WSW-Tabing-sub-head {
+    font-size: 1.6vw;
+}
+  .WSW-Tabing-tab-content-text {
+    top: 2%;
+    left: 4.5%;
+}
+    .Center_box_added {
+    justify-content: inherit;
+}
+  }
+    @media(max-width:750px){
+
+     .WSW-Tabing-main-mother  ul.tabswsw li a {
+    font-size: 14px !important;
+    padding: 11px 20px !important;
+    white-space: pre;
+}
+
+ul.tabswsw li a.active {
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 10px;
+    background: rgba(42, 42, 42, 0.8);
+}
+      
+
+
+   .WSW-Tabing-main-mother   ul.tabswsw li a.active {
+    border-radius: 163.587px;
+    color: #29297C;
+    font-size: 14px;
+    padding: 11px 20px;
+    background: #fff;
+    border: 1px solid #29297C !important;
+}
+
+.WSW-Tabing-tab-content-text {
+    top: 5%;
+    left: 5.9%;
+}
+  .tabswsw::-webkit-scrollbar {
+    display: none;
+}
+  .tabswsw {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.tabswsw::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+      
+      .mob_img {
+    display: block;
+}
+      .mobile_none , img.desk_img {
+    display: none;
+}
+      .desk_none {
+    display: block;
+}
+      .wswtab {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+      .WSW-Tabing-tab-content-inner {
+    padding: 0 10px 0 10px;
+    gap: 0;
+}
+      .WSW-Tabing-head {
+    font-size: 3.5vw;
+}
+      .WSW-Tabing-sub-head {
+    font-size: 3.5vw;
+    max-width: 77%;
+}
+ul.tabswsw li a {
+    padding: 8px 10px;
+    white-space: pre;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+}
+ul.tabswsw {
+    margin: 15px 0 15px 0;
+    column-gap: 10px;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 15px;
+    justify-content: center;
+}
+    .WSW-Tabing-main-mother  ul.tabswsw {
+    justify-content: center;
+}
+.WSW-Tabing-header {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0 0 0 15px;
+}
+   .WSW-Tabing-main-mother  .WSW-Tabing-header {
+    font-size: 29px;
+    text-align: center;
+}
+      .WSW-Tabing-header span {
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 27.39px;
+    text-align: left;
+    color: #29297C;
+    font-family: 'Arista Pro';
+        font-weight: 700;
+}
+      .WSW-Tabing-main {
+    padding-bottom: 35px;
+        padding-top: 10px;
+}
+    }
+      @media(max-width:490px){
+        .WSW-Tabing-head {
+    font-size: 16px;
+}
+        .WSW-Tabing-sub-head {
+    font-size: 14px;
+    max-width: 85%;
+          margin-top: 3px;
+}
+
+      }
+        @media(max-width:374px){
+          .WSW-Tabing-head {
+    font-size: 3.20vw;
+}
+          .WSW-Tabing-sub-head {
+    font-size: 3.2vw;
+    max-width: 77%;
+    margin-top: 3px;
+}
+        }
+</style>
+
+<div class="WSW-Tabing-main {% if section.settings.mother %} WSW-Tabing-main-mother {% endif %} ">
+  <div class="WSW-Tabing-inner">
+    <div class="WSW-Tabing-header">
+     {{ section.settings.heading }}
+    </div>
+  </div>
+
+  <div class="WSW-Tabing-tab desk_none  {% if section.settings.stylee %} style-show {% endif %} " >
+     <ul class="tabswsw">
+       {% for block in section.blocks %}
+        <li><a href="#wswtab-{{ forloop.index }}{{ section.id }}">{{ block.settings.heading }}</a></li>
+       {% endfor %}
+      </ul>
+  </div>
+
+<div class="WSW-Tabing-tab-content mobile_none">
+  <div class="WSW-Tabing-tab-content-inner items_scroll_ct {% if section.blocks.size == 2 or section.blocks.size == 3 %} Center_box_added{% endif %}
+">
+           {% for block in section.blocks %}             
+    <div class="wswtab ctreview-box_ct">
+    <div class="ctreview-box_ct_heading">{{ block.settings.heading }}</div>
+
+      <div class="ws_tab_box">
+      <a href="{{ block.settings.link }}" class="ct_kinkk"></a>
+      <div class="WSW-Tabing-tab-content-text">        
+      <div class="WSW-Tabing-head">{{ block.settings.heading1 }}</div>
+      <div class="WSW-Tabing-sub-head">{{ block.settings.sub }}</div>
+      
+    </div>
+    <img src="{{ block.settings.img1 | img_url:'master' }}" class="desk_img" alt="">
+    <img src="{{ block.settings.img2| img_url:'master' }}" class="mob_img" alt="">
+        </div>
+    </div>
+    {% endfor %}
+   
+  </div>
+  </div>
+  
+  
+  <div class="WSW-Tabing-tab-content desk_none">
+  <div class="WSW-Tabing-tab-content-inner ">
+           {% for block in section.blocks %}             
+    <div class="wswtab" id="wswtab-{{ forloop.index }}{{ section.id }}">
+      <a href="{{ block.settings.link }}" class="ct_kinkk"></a>
+      <div class="WSW-Tabing-tab-content-text">        
+      <div class="WSW-Tabing-head">{{ block.settings.heading1 }}</div>
+      <div class="WSW-Tabing-sub-head">{{ block.settings.sub }}</div>
+      
+    </div>
+    <img src="{{ block.settings.img1 | img_url:'master' }}" class="desk_img" alt="">
+    <img src="{{ block.settings.img2| img_url:'master' }}" class="mob_img" alt="">
+    </div>
+    {% endfor %}
+   
+  </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.tabswsw').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+
+
+
+
+
+
+
+
+
+                    var sliders = document.querySelectorAll('.items_scroll_ct');
+  var isDown = false;
+  var startX;
+  var scrollLeft;
+
+  sliders.forEach(slider => {
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('active');
+      enableLinks(); // Re-enable links on mouse leave
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('active');
+      enableLinks(); // Re-enable links on mouse up
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1; // scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+      disableLinks(); // Disable links when scrolling horizontally
+    });
+  });
+
+  function disableLinks() {
+    var links = document.querySelectorAll('.items_scroll_ct  .ctreview-box_ct');
+    links.forEach(link => {
+      link.style.pointerEvents = 'none'; // Disable link clicks
+    });
+  }
+
+  function enableLinks() {
+    var links = document.querySelectorAll('.items_scroll_ct  .ctreview-box_ct');
+    links.forEach(link => {
+      link.style.pointerEvents = 'auto'; // Re-enable link clicks
+    });
+  }
+</script>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "WSW-Tabing",
+    "class": "WSW-Tabing",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "stylee",
+        "label": "Showdow style",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "mother",
+        "label": "mother page",
+        "default": false
+      },
+
+
+       {
+        "type": "text",
+        "id": "idd",
+        "label": "Section ID For tabing"
+      },
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading"
+      }
+
+    ],
+    "blocks":[{
+      "type":"Tabing",
+      "name":"Tabing",
+      "settings":[
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Full Image link"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Tab Text"
+        },
+        {
+          "type": "text",
+          "id": "heading1",
+          "label": "Heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "sub",
+          "label": "Sub-heading"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "img1",
+          "label": "image for desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "img2",
+          "label": "image for Mobile"
+        }
+      ]
+    }],
+    "presets":[{
+    "name": "WSW-Tabing"
+    }]
+  }
+{% endschema %}

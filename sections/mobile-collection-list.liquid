@@ -1,0 +1,204 @@
+<style>
+ .collection-list-mobile .collection-list-block .product-info .product-block__title {
+    font-size: {{ section.settings.mbl_title_link }}px; 
+  }
+
+  .ct_mobile_box {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+}
+  @media(max-width:750px){
+  .ct-product-block{
+        width: 22% !important;
+    min-width: 22% !important;
+  }
+    
+  }
+
+  .ct_mobile_box::-webkit-scrollbar {
+  display: none;
+}
+  .collection-list-mobile .collection-list-block .product-info .product-block__title {
+    line-height: normal;
+}
+  .ct-product-block .rimage-wrapper {
+    border-radius: 100%;
+}
+.ct-product-block img {
+    border-radius: 100% !important;
+    border: 0px solid #cf2228 !important;
+}
+</style>
+
+<div class="ct_mobile_box_main_perent section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.use_alt_bg %}use-alt-bg{% endif %} mobile-only" data-section-type="featured-collections">
+  <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
+    <div class="{% if section.settings.enable_carousel %}collection-slider{% endif %}">
+      <h2 class="hometitle h1-style align-center has-paging desktop-only" data-cc-animate data-cc-animate-delay="0.3s">
+        <a class="has-paging__title" href="{{ collection.url }}"><span>{{ section.settings.title | escape }}</span></a>
+        <div class="collection_slider-box">
+          {%- if section.settings.show_view_all -%}
+          <div class="view-all align-center" data-cc-animate data-cc-animate-delay="0.3s">
+            <a class="small-feature-link" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}</a>
+          </div>
+          {%- endif -%}
+          <div class="collection-chevron-icon">
+            {% if section.settings.enable_carousel %}<a class="prev" href="#">{% render 'svg-chevron-left' %}</a>{% endif %}
+            {% if section.settings.enable_carousel %}<a class="next" href="#">{% render 'svg-chevron-right' %}</a>{% endif %}
+          </div>
+        </div>
+      </h2>
+      <div class="ct_mobile_box_main collection-listing main-collection-list" data-cc-animate="cc-fade-in-up">
+        <div class="ct_mobile_box product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ section.settings.grid }} product-list--image-shape-{{ settings.coll_grid_image_shape }} {% if section.settings.enable_carousel %}carousel{% endif %}">
+          {% if section.blocks.size > 0 %}
+            {%- liquid
+              if settings.coll_grid_image_shape == 'portrait-23'
+                assign chosen_aspect_ratio = 0.67
+              elsif settings.coll_grid_image_shape == 'portrait-45'
+                assign chosen_aspect_ratio = 0.8
+              elsif settings.coll_grid_image_shape == 'square'
+                assign chosen_aspect_ratio = 1.0
+              elsif settings.coll_grid_image_shape == 'landscape-54'
+                assign chosen_aspect_ratio = 1.25
+              elsif settings.coll_grid_image_shape == 'landscape-32'
+                assign chosen_aspect_ratio = 1.50
+              elsif settings.coll_grid_image_shape == 'tallest'
+                assign chosen_aspect_ratio = 999
+                for block in section.blocks
+                  assign collection = collections[block.settings.collection]
+                  if collection != blank
+                    assign collection_image = block.settings.image | default: collection.featured_image
+                    if collection_image.aspect_ratio < chosen_aspect_ratio
+                      assign chosen_aspect_ratio = collection_image.aspect_ratio
+                    endif
+                  endif
+                endfor
+              else
+                assign chosen_aspect_ratio = 0
+                for block in section.blocks
+                  assign collection = collections[block.settings.collection]
+                  if collection != blank
+                    assign collection_image = block.settings.image | default: collection.featured_image
+                    if collection_image.aspect_ratio > chosen_aspect_ratio
+                      assign chosen_aspect_ratio = collection_image.aspect_ratio
+                    endif
+                  endif
+                endfor
+              endif
+            -%}
+
+            {% for block in section.blocks %}
+              {% assign collection = collections[block.settings.collection] %}
+
+              {% unless collection == blank %}
+                {% render 'collection-block', collection: collection, collection_title : block.settings.collection_title, custom_attrs: block.shopify_attributes, manual_image_load: section.settings.enable_carousel, custom_image: block.settings.image, custom_aspect_ratio: chosen_aspect_ratio %}
+              {% else %}
+                {% render 'onboarding-collection-block', forloop: forloop %}
+              {% endunless %}
+            {% endfor %}
+
+          {% else %}
+
+            {% for i in (1..6) %}
+              {% render 'onboarding-collection-block', forloop: forloop %}
+            {% endfor %}
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Collection list mobile",
+    "class": "section-collection-list collection-list-mobile",
+    "max_blocks": 20,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_carousel",
+        "label": "Enable carousel",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "grid",
+        "label": "Collections per row Mobile",
+        "min": 2,
+        "max": 6,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "checkbox",
+        "id": "use_alt_bg",
+        "label": "Use alternate section color",
+        "default": true
+      },
+	  {
+        "type": "checkbox",
+        "id": "show_view_all",
+        "label": "Show 'View all' link",
+        "default": true
+      },
+      {
+        "id": "full_width",
+        "type": "checkbox",
+        "label": "Full page width",
+        "default": true
+      },
+	  {
+        "type": "range",
+        "id": "mbl_title_link",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Title Font Size",
+        "default": 16
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Collection custom Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection list mobile",
+        "settings": {
+        },
+        "blocks": [
+        ]
+      }
+    ]
+  }
+{% endschema %}

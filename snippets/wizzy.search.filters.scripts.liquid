@@ -1,0 +1,17 @@
+<script src="{{ 'wizzyCustom.js' | asset_url }}" defer></script>
+<script src="{{ 'wizzyAnimatedPlaceHolder.js' | asset_url }}" defer></script>
+
+<script type="text/template" id="wizzy-search-results-product-new">
+  {% render 'wizzy.search.results.products.js' %}
+</script>
+<script type="text/template" id="wizzy-search-results-new">
+  {% render 'wizzy.search.results.js' %}
+</script>
+<script type="text/template" id="wizzy-search-wrapper-new">
+  {% render 'wizzy.search.wrapper.js' %}
+</script>
+<script type="text/template" id="wizzy-search-empty-results-new">
+  {% render 'wizzy.search.empty.results.js' %}
+</script>
+
+{% render 'wizzy.search.mobile' %}

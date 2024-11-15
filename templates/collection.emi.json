@@ -1,0 +1,155 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_banner_img_ENFVQf": {
+      "type": "collection-banner-img",
+      "settings": {
+        "img": "shopify://shop_images/Frame_48098302_29f73ea6-e5b3-40e2-a2a3-8680a516dd65.png"
+      }
+    },
+    "collection_banner_p6QQQX": {
+      "type": "collection-banner",
+      "blocks": {
+        "filter_box_33nWKt": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Component_88.png",
+            "text": "All"
+          }
+        },
+        "filter_box_RVr3MG": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Necklace_d4876fac-b39f-49bb-9ad2-6c51bf18bed3.png",
+            "text": "Necklace"
+          }
+        },
+        "filter_box_xXEhR4": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/512x512.png",
+            "text": "Earring"
+          }
+        },
+        "filter_box_L4fBTq": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Bangle.png",
+            "text": "Bangle"
+          }
+        },
+        "filter_box_NGfyJt": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Pendants.png",
+            "text": "Pendant"
+          }
+        },
+        "filter_box_iUJNzP": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Kada.png",
+            "text": "Kada"
+          }
+        },
+        "filter_box_zEVNgF": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Belt.png",
+            "text": "Belt"
+          }
+        },
+        "filter_box_nRJxhy": {
+          "type": "filter-box",
+          "settings": {
+            "img": "shopify://shop_images/Choti.png",
+            "text": "Choti"
+          }
+        }
+      },
+      "block_order": [
+        "filter_box_33nWKt",
+        "filter_box_RVr3MG",
+        "filter_box_xXEhR4",
+        "filter_box_L4fBTq",
+        "filter_box_NGfyJt",
+        "filter_box_iUJNzP",
+        "filter_box_zEVNgF",
+        "filter_box_nRJxhy"
+      ],
+      "settings": {}
+    },
+    "end_sale_timer_g77cWB": {
+      "type": "end-sale-timer",
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-left: 0; padding-right: 0;}"
+      ],
+      "settings": {
+        "head": "Last chance! Sale ends Soon!",
+        "time": "April 1, 2024"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "emi_price": true,
+        "show_image_behind_heading": true,
+        "heading_image_height": "large",
+        "overlay_style": "shadow",
+        "coll_num_per_page_int": 16,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": true,
+        "coll_desc_pos": "below",
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "none",
+        "show_filter_counts": true,
+        "show_disabled_filters": false,
+        "ajax_products": true,
+        "enable_sticky_filter": false,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_feat": true,
+        "enable_subcoll": true,
+        "subcoll_menu": "main-menu-new",
+        "subcoll_style": "gallery",
+        "subcoll_gall_shape": "l-21",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "no_background",
+        "subcoll_gall_text_alignment": "bottom left",
+        "subcoll_gall_mobile_layout": "2"
+      }
+    },
+    "25919216-ccf3-4ad7-9a89-6bb9f1de0997": {
+      "type": "faq-header",
+      "disabled": true,
+      "settings": {
+        "title": "FAQ",
+        "use_h1": false,
+        "text": "{{ collection.metafields.custom.faq | metafield_tag }}",
+        "show_search": false,
+        "show_index": false,
+        "index_heading": "How can we help?"
+      }
+    }
+  },
+  "order": [
+    "collection_banner_img_ENFVQf",
+    "collection_banner_p6QQQX",
+    "end_sale_timer_g77cWB",
+    "main",
+    "25919216-ccf3-4ad7-9a89-6bb9f1de0997"
+  ]
+}

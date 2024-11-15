@@ -1,0 +1,13 @@
+<script type='text/javascript'>let shop ='kushalsonline-com.myshopify.com'; let code = 'ae06ac870c9428b824ab48f7a7da6332dcbafd3e';</script>﻿<!-- Start : BrokenLink Redirect -->
+<script type="text/javascript">
+window.fetch("https://api-brokenlinkmanager.seoant.com/api/v1/receive_url?shop="+shop+"&code="+code+"&url="+window.location.pathname.replace(/%20/g,"-^-")+window.location.search.replace(/&/g,"-@-"))
+.then(response => response.json())
+.then(data => {
+    if(data.code == 200){
+        window.location.href = data.data
+    }
+}).catch(errot={
+
+})
+</script>
+<!-- END : BrokenLink Redirect -->

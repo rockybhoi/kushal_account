@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "end_sale_timer_g77cWB": {
+      "type": "end-sale-timer",
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-left: 0; padding-right: 0;}"
+      ],
+      "settings": {
+        "head": "Last chance! Sale ends Soon!",
+        "time": "April 1, 2024"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_image_behind_heading": true,
+        "heading_image_height": "large",
+        "overlay_style": "shadow",
+        "coll_num_per_page_int": 16,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": true,
+        "coll_desc_pos": "below",
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "none",
+        "show_filter_counts": true,
+        "show_disabled_filters": false,
+        "ajax_products": true,
+        "enable_sticky_filter": false,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_feat": true,
+        "enable_subcoll": true,
+        "subcoll_menu": "main-menu-new",
+        "subcoll_style": "gallery",
+        "subcoll_gall_shape": "l-21",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "no_background",
+        "subcoll_gall_text_alignment": "bottom left",
+        "subcoll_gall_mobile_layout": "2"
+      }
+    },
+    "25919216-ccf3-4ad7-9a89-6bb9f1de0997": {
+      "type": "faq-header",
+      "disabled": true,
+      "settings": {
+        "title": "FAQ",
+        "use_h1": false,
+        "text": "{{ collection.metafields.custom.faq | metafield_tag }}",
+        "show_search": false,
+        "show_index": false,
+        "index_heading": "How can we help?"
+      }
+    }
+  },
+  "order": [
+    "end_sale_timer_g77cWB",
+    "main",
+    "25919216-ccf3-4ad7-9a89-6bb9f1de0997"
+  ]
+}

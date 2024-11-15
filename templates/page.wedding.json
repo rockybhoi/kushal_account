@@ -1,0 +1,1120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "swiper_js_yxRUtE": {
+      "type": "Swiper-js",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "sale_anncouncement_CbDKtN": {
+      "type": "Sale-Anncouncement",
+      "disabled": true,
+      "custom_css": [
+        ".Sale-Anncouncement {display: none;}",
+        "@media (max-width: 1100px) {.Sale-Anncouncement {display: block; }}"
+      ],
+      "settings": {}
+    },
+    "6d004e6e-2ff7-4b19-b11f-f96fd8ff575a": {
+      "type": "wedding-head",
+      "settings": {
+        "img": "shopify://shop_images/Asset_1_4x-8.png"
+      }
+    },
+    "136af06e-1048-4f58-b710-c8708d3c2bdc": {
+      "type": "Wedding-Collection-Video",
+      "blocks": {
+        "4b868ed3-7636-44d3-8bf7-947279e6ebb0": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/fc98964fc7b54d0db810d2063e6c1b58.mp4",
+            "image": "shopify://shop_images/Kushal_s5557_Mehendi.jpg",
+            "heading": "Haldi and Mehendi",
+            "text": "Vivid sparkles that radiate your glowing aura!",
+            "link": "shopify://collections/haldi-mehendi-collection-2024",
+            "link_text": "Explore"
+          }
+        },
+        "7eac715a-3429-4b85-b2e9-2c5d84fd692f": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/ca681cdf0e654534af34da01b0ca1380.mp4",
+            "image": "shopify://shop_images/Reception.jpg",
+            "heading": "Reception",
+            "text": "For your adorable ending note and new beginnings!",
+            "link": "shopify://collections/reception-rendezvous-elegance",
+            "link_text": "Explore"
+          }
+        },
+        "9dc054fa-daa9-4616-b6bb-55cd5dc698f3": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/2acb432c8c4e4e43a78fdfa612eac331.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "eb258afd-083a-462f-83d1-0116a3b779a4": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/b7a50a7d012547968a610325185f2127.mp4",
+            "image": "shopify://shop_images/Kushal_s5396_Sangeeth.jpg",
+            "heading": "Engagement",
+            "text": "A shine that complements your excitement!",
+            "link": "shopify://collections/zircon-engagement-collection-2024",
+            "link_text": "Explore"
+          }
+        },
+        "1dfcb5ea-86e8-443c-9906-5dc5c751d5e9": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/40d76517ed374130999509a496f217cd.mp4",
+            "image": "shopify://shop_images/Kushal_s6071_Cocktail.jpg",
+            "heading": "Cocktail",
+            "text": "A shimmer that deserves a memorable toast!",
+            "link": "shopify://collections/the-cocktail-edit",
+            "link_text": "Explore"
+          }
+        },
+        "841f8d26-ef0b-439a-8862-aae8be0ee5bf": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "40f0ffee-38ef-4f3e-a0f1-75c2b88c5c20": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "226d9b94-3d1e-4ed4-aab6-6c03acc8c0e0": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "a3a660a2-c958-4c02-8df7-1a1f927b52cb": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "ad8903bb-bea6-4001-8b77-ecffeab0b58c": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "4b868ed3-7636-44d3-8bf7-947279e6ebb0",
+        "7eac715a-3429-4b85-b2e9-2c5d84fd692f",
+        "9dc054fa-daa9-4616-b6bb-55cd5dc698f3",
+        "eb258afd-083a-462f-83d1-0116a3b779a4",
+        "1dfcb5ea-86e8-443c-9906-5dc5c751d5e9",
+        "841f8d26-ef0b-439a-8862-aae8be0ee5bf",
+        "40f0ffee-38ef-4f3e-a0f1-75c2b88c5c20",
+        "226d9b94-3d1e-4ed4-aab6-6c03acc8c0e0",
+        "a3a660a2-c958-4c02-8df7-1a1f927b52cb",
+        "ad8903bb-bea6-4001-8b77-ecffeab0b58c"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection-head {font-weight: 500; text-align: center; padding: 0 10px 20px 10px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "mother": false,
+        "head": "CEREMONIES",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "a516682f-2a4d-47e2-9b0f-62ee6293a62b": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "29fdc1ed-74e4-48f5-8f33-e88f38a86f02": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "873e2d92-8f5a-4da9-aa4b-3a6bd8dbd74e": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Kushal_s5557_Mehendi.jpg",
+            "heading": "Haldi and Mehendi",
+            "text": "Vivid sparkles that radiate your glowing aura!",
+            "link": "shopify://collections/haldi-mehendi-collection-2024",
+            "link_text": "Explore"
+          }
+        },
+        "d8f96dce-ae55-48ad-9469-55412a394d70": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Kushal_s5396_Sangeeth.jpg",
+            "heading": "Engagement",
+            "text": "A shine that complements your excitement!",
+            "link": "shopify://collections/zircon-engagement-collection-2024",
+            "link_text": "Explore"
+          }
+        },
+        "b1d14a91-0253-4ed4-a961-d6a9762d541d": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Kushal_s6071_Cocktail.jpg",
+            "heading": "Cocktail",
+            "text": "A shimmer that deserves a memorable toast!",
+            "link": "shopify://collections/the-cocktail-edit",
+            "link_text": "Explore"
+          }
+        },
+        "37e0ad89-e17d-4426-9489-efb7b20b732e": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Reception.jpg",
+            "heading": "Reception",
+            "text": "For your adorable ending note and new beginnings!",
+            "link": "shopify://collections/reception-rendezvous-elegance",
+            "link_text": "Explore"
+          }
+        },
+        "7241d471-ae6a-4c67-9571-3c8742dcb658": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Kushal_s5062_Fin_4d1050d2-23de-4c57-bcda-aed9972d90ce.jpg",
+            "heading": "Mehendi",
+            "text": "Effortless, intricate and ethnic, just like your Mehendi!",
+            "link": "shopify://collections/the-henna-harmony-mehendi-edit",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "29fdc1ed-74e4-48f5-8f33-e88f38a86f02",
+        "873e2d92-8f5a-4da9-aa4b-3a6bd8dbd74e",
+        "d8f96dce-ae55-48ad-9469-55412a394d70",
+        "b1d14a91-0253-4ed4-a961-d6a9762d541d",
+        "37e0ad89-e17d-4426-9489-efb7b20b732e",
+        "7241d471-ae6a-4c67-9571-3c8742dcb658"
+      ],
+      "disabled": true,
+      "settings": {
+        "velen_active": false,
+        "head": "CEREMONIES THAT CELEBRATE YOU!",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "9a62de5d-2a7e-4cd9-8345-e59da04fdbb7": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "e6cc9f0f-5e31-4779-8a94-4be3f86a544f": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1.png",
+            "image_size": "icon",
+            "text": "Handpicked For\nWeddings",
+            "link_url": ""
+          }
+        },
+        "49720c0e-e044-43c4-80dd-98484b3be78a": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-1.png",
+            "image_size": "icon",
+            "text": "Fine\nDesigns",
+            "link_url": ""
+          }
+        },
+        "93f62b7e-d455-47ea-98bb-af80747867d1": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Free-Shipping-SVG_a637e216-9b53-4aff-a893-fd4171199058.png",
+            "image_size": "icon",
+            "text": "Express \nDelivery",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "e6cc9f0f-5e31-4779-8a94-4be3f86a544f",
+        "49720c0e-e044-43c4-80dd-98484b3be78a",
+        "93f62b7e-d455-47ea-98bb-af80747867d1"
+      ],
+      "custom_css": [
+        ".rimage-wrapper.lazyload--placeholder {background: none;}",
+        ".icon-with-caption {background: #fbfbfb; border: 1px solid #e5e5e5; border: 0px solid #e5e5e5; background: transparent;}",
+        ".container {opacity: 0.7; background: linear-gradient( 246deg, #e3e3e3 0%, rgba(227, 227, 227, 0) 103.16% ); margin-top: 70px;}",
+        ".flexible-layout .column,.fixed-layout .column {margin-bottom: 0; padding: 10px 0;}",
+        "@media (max-width: 748px) {.icon-with-caption .icon-with-caption__text {width: 100%; } .flexible-layout {flex-direction: row; }}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "29d63148-d9d6-4aad-89e3-da1aed142366": {
+      "type": "wedding-story",
+      "blocks": {
+        "b8c9456a-c495-4d92-b132-38b24cde6ef1": {
+          "type": "Box",
+          "settings": {
+            "link": "shopify://collections/antique-bridal",
+            "image": "shopify://shop_images/Mask_group-1_8afccf9a-c931-4a48-a5b7-26111bf56420.jpg",
+            "text": "Antique"
+          }
+        },
+        "db084a9c-cbcd-4ca5-9551-00b059e0e5fc": {
+          "type": "Box",
+          "settings": {
+            "link": "shopify://collections/bridal-kundan",
+            "image": "shopify://shop_images/Mask_group-1_1_e80ac21d-1b48-4417-8b85-e04afdb9eac3.jpg",
+            "text": "Kundan"
+          }
+        },
+        "b3c6136f-2cc1-430d-bfaf-fb327678f254": {
+          "type": "Box",
+          "settings": {
+            "link": "shopify://collections/zircon-bridal",
+            "image": "shopify://shop_images/Mask_group_29218271-a5b5-494c-984d-81be215a55ea.jpg",
+            "text": "Zircon"
+          }
+        },
+        "a306df10-ab07-4dd5-af15-c5b79c33c2f2": {
+          "type": "Box",
+          "settings": {
+            "link": "shopify://collections/bridal-silver-temple",
+            "image": "shopify://shop_images/158361_-_Silver_Temple_2aa87e56-9855-4c5b-9b95-c0f1211d6494.jpg",
+            "text": "92.5 Silver Temple"
+          }
+        },
+        "e6701675-09d5-4374-b58b-e05b51f89235": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/navratri-special-color-jewellery-grey",
+            "image": "shopify://shop_images/image_11_1.png",
+            "text": "92.5 Silver"
+          }
+        },
+        "cdc94321-ec38-4fe0-aea9-2b91078c2a26": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/navratri-special-color-jewellery-grey",
+            "image": "shopify://shop_images/image_13_7.png",
+            "text": "Mangalsutra"
+          }
+        }
+      },
+      "block_order": [
+        "b8c9456a-c495-4d92-b132-38b24cde6ef1",
+        "db084a9c-cbcd-4ca5-9551-00b059e0e5fc",
+        "b3c6136f-2cc1-430d-bfaf-fb327678f254",
+        "a306df10-ab07-4dd5-af15-c5b79c33c2f2",
+        "e6701675-09d5-4374-b58b-e05b51f89235",
+        "cdc94321-ec38-4fe0-aea9-2b91078c2a26"
+      ],
+      "settings": {
+        "head": "BRIDAL TROUSSEAU SELECTION"
+      }
+    },
+    "e38987fc-5068-40ab-9ce1-cad4be29cc78": {
+      "type": "Wedding-Collection-Video",
+      "blocks": {
+        "e3b55a71-d6be-4a2f-b071-55b289ef2f8f": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/be766f11d2aa4499b8b16165ff3a4980.mp4",
+            "image": "shopify://shop_images/Mask_group_044bc0a1-ab9e-4b2f-ad0f-2973a4f933b1.png",
+            "heading": "Muhurtham Grandeur",
+            "text": "Jewellery that speaks of your rooted South Indian heritage",
+            "link": "shopify://collections/the-regal-antique-south-bride",
+            "link_text": "Explore"
+          }
+        },
+        "89e0c558-3260-4588-9adf-95d7bddec78c": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/3866a35143f74e4e846606741743744a.mp4",
+            "image": "shopify://shop_images/Mask_group-1_9461336c-2df1-4279-8976-ee3cf69b8a78.png",
+            "heading": "Shaadi Selects",
+            "text": "Regal intricacies for the North Indian bride and her alluring lehenga",
+            "link": "shopify://collections/the-north-indian-bridal-edit",
+            "link_text": "Explore"
+          }
+        },
+        "f0e45aae-7f48-478c-bc3e-6bf0d5bf6d3e": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/ae859cbfe43b4481b98f632f4d3c262d.mp4",
+            "image": "shopify://shop_images/Mask_group-2_5160a760-29bd-483d-ae6b-47fdfb8dd8b5.png",
+            "heading": "Lagna Sparkles",
+            "text": "Trousseau meant for the Marathi mulgi and her adorable mundavlya",
+            "link": "shopify://collections/the-marathi-lagna-sparkles",
+            "link_text": "Explore"
+          }
+        },
+        "d6654a00-7b02-47da-a69e-8dd17bfd9af9": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/2acb432c8c4e4e43a78fdfa612eac331.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "ae2b105a-9d91-4772-a1e2-61de90edbdf8": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/ca681cdf0e654534af34da01b0ca1380.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "393d4e18-baff-48c7-a283-87ffd747351c": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "886c7f5f-7a08-4dd9-8068-e902913b881d": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "0df52255-bc37-4425-9f97-4d91965961eb": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "063090d7-f427-4fa9-84b8-c8323abaeb04": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "7d8589c3-30ef-43a3-90a4-60f649febfc3": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "e3b55a71-d6be-4a2f-b071-55b289ef2f8f",
+        "89e0c558-3260-4588-9adf-95d7bddec78c",
+        "f0e45aae-7f48-478c-bc3e-6bf0d5bf6d3e",
+        "d6654a00-7b02-47da-a69e-8dd17bfd9af9",
+        "ae2b105a-9d91-4772-a1e2-61de90edbdf8",
+        "393d4e18-baff-48c7-a283-87ffd747351c",
+        "886c7f5f-7a08-4dd9-8068-e902913b881d",
+        "0df52255-bc37-4425-9f97-4d91965961eb",
+        "063090d7-f427-4fa9-84b8-c8323abaeb04",
+        "7d8589c3-30ef-43a3-90a4-60f649febfc3"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection-head {font-weight: 500; text-align: center; padding: 0 10px 20px 10px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "mother": false,
+        "head": "ADORN YOUR LEGACY",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "4d269dfc-a285-447a-aa5c-b42e07317bc1": {
+      "type": "wedding-banner",
+      "settings": {
+        "link": "shopify://collections/the-bride-squad-glamour",
+        "image": "shopify://shop_images/Web_banner_ec0db01b-19f7-4ab3-bd97-b6bf9676e733_1.png",
+        "image_sec": "shopify://shop_images/Banner_1_8a7ab321-59b0-4bb0-8e03-1121b673a44b.png"
+      }
+    },
+    "round_collection_box_JRmBCB": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_NG7nnJ": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/18ff6ce7ac1e33967dc03f52d5585689.jpg",
+            "link": "shopify://collections/bridal-matils",
+            "title": "Matil"
+          }
+        },
+        "collection_crjEbi": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/cbbd47ca270cbe2aff12be47e79817e6.jpg",
+            "link": "shopify://collections/bridal-maang-tikkas-1",
+            "title": "Maang Tikka"
+          }
+        },
+        "collection_kzQBaq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/0d89a2d8a0d3db562f28a4c3b8e4f15d.jpg",
+            "link": "shopify://collections/bridal-hathpans",
+            "title": "Hathpan"
+          }
+        },
+        "collection_Vgnjbm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/4418109e6c85131607a3b72a54c91d92.jpg",
+            "link": "shopify://collections/bridal-bajubandh",
+            "title": "Bajuband"
+          }
+        },
+        "collection_rLD93B": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/2221e6409d0748cadbbcb8783640fdf9.jpg",
+            "link": "shopify://collections/bridal-toe-rings",
+            "title": "Toe Rings"
+          }
+        },
+        "collection_9rCYiq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/b7a9930442b5806fbde8aec8f523662e.jpg",
+            "link": "shopify://collections/bridal-payal",
+            "title": "Payal"
+          }
+        },
+        "collection_rFrhCN": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/848699a673ca238d0c62a0c0503050d7.jpg",
+            "link": "shopify://collections/bridal-kamarbandh",
+            "title": "Kamarbandh"
+          }
+        },
+        "collection_iCNQf3": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/19b5b7e2f7748ce1f71b02d7a75c1223.png",
+            "link": "shopify://collections/exclusive-bridal-naths",
+            "title": "Naths"
+          }
+        }
+      },
+      "block_order": [
+        "collection_NG7nnJ",
+        "collection_crjEbi",
+        "collection_kzQBaq",
+        "collection_Vgnjbm",
+        "collection_rLD93B",
+        "collection_9rCYiq",
+        "collection_rFrhCN",
+        "collection_iCNQf3"
+      ],
+      "settings": {
+        "title": "Shop Bridal Accessories"
+      }
+    },
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "12edfc74-7abe-4811-9f7b-933a65332d4c": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6_4.png",
+            "heading": "Manga",
+            "text": "Mango motifs that exude an auspicious aura",
+            "link": "shopify://collections/manga-mala-for-your-auspicious-celebrations",
+            "link_text": "Explore"
+          }
+        },
+        "eaf55712-cda7-455b-af17-4a92a0fa7491": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Motif_5.png",
+            "heading": "Gandaberunda",
+            "text": "Garner the blessings of Vishnu through the two-headed bird",
+            "link": "shopify://collections/gandaberunda-for-your-timely-festivities",
+            "link_text": "Explore"
+          }
+        },
+        "760699d3-8a82-44aa-83db-85a1f4fc9159": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Motif_6.png",
+            "heading": "Guttapusalu",
+            "text": "Beaded arrangement that emulates harmony",
+            "link": "shopify://collections/guttupusalu-collection",
+            "link_text": "Explore"
+          }
+        },
+        "0748d546-8194-47f9-bb92-553a0cbdd539": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Layer_0.png",
+            "heading": "Peacock",
+            "text": "The unmatched grandeur of feathered beauty",
+            "link": "shopify://collections/peacock-presence",
+            "link_text": "Explore"
+          }
+        },
+        "49baafbf-d729-4708-a6f2-e99ad55347f6": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Motif_1.png",
+            "heading": "Polki",
+            "text": "For the glimmering glow of raw-cut authenticity",
+            "link": "shopify://collections/kundan-jewellery",
+            "link_text": "Explore"
+          }
+        },
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Motif_2.png",
+            "heading": "Meenakari",
+            "text": "Artistry etched through a spectrum of vibrancy",
+            "link": "shopify://collections/meenakari",
+            "link_text": "Explore"
+          }
+        },
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Motif_7.png",
+            "heading": "Elephant",
+            "text": "Embrace wisdom through elephant details",
+            "link": "shopify://collections/elephant-elegance",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "12edfc74-7abe-4811-9f7b-933a65332d4c",
+        "eaf55712-cda7-455b-af17-4a92a0fa7491",
+        "760699d3-8a82-44aa-83db-85a1f4fc9159",
+        "0748d546-8194-47f9-bb92-553a0cbdd539",
+        "49baafbf-d729-4708-a6f2-e99ad55347f6",
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee",
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection-head {font-weight: 500; text-align: center; padding: 0 10px 20px 10px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "TRENDING BRIDAL STYLES",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "3f77a909-2d3b-4a70-a8aa-7fe4c5e9e982": {
+      "type": "wedding-banner",
+      "disabled": true,
+      "settings": {
+        "link": "#",
+        "image": "shopify://shop_images/Group_292.png",
+        "image_sec": "shopify://shop_images/Mask_group_12.png"
+      }
+    },
+    "c6efb7d9-2cf1-46b6-9a13-254ec215d894": {
+      "type": "Shop-The-Look",
+      "blocks": {
+        "d242d8b8-2fc8-4c65-8582-3598cdd0df6a": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Mehendi",
+            "sub_text": "Be in your glowing aura with the best sunny hued details",
+            "image": "shopify://shop_images/Group_1000006742.png",
+            "product_list": [
+              "kundan-hathpan-161499",
+              "kundan-bangle-161488",
+              "kundan-bangle-161337",
+              "kundan-finger-ring-161552",
+              "kundan-finger-ring-163377",
+              "kundan-belt-161342"
+            ]
+          }
+        },
+        "7ff6e390-d438-4dca-a773-65b3188e7e3c": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Sangeet",
+            "sub_text": "Put a ring on it with the most gracious Zircon sparkles!",
+            "image": "shopify://shop_images/Mask_group_1.jpg",
+            "product_list": [
+              "zircon-finger-ring-163976",
+              "zircon-finger-ring-157806",
+              "zircon-bracelet-145799",
+              "zircon-necklace-163849",
+              "zircon-earring-160410"
+            ]
+          }
+        },
+        "ac03dc5f-0484-4f48-abbb-30b9bb7080ee": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Muhurtham 92.5",
+            "sub_text": "Handpicked 92.5 Silver Temples for your inclination towards your heritage",
+            "image": "shopify://shop_images/Mask_group-1.jpg",
+            "product_list": [
+              "antique-bajuband-162720",
+              "antique-hair-brooch-159962",
+              "antique-tikka-162094",
+              "antique-necklace-162739",
+              "antique-matil-162036",
+              "antique-necklace-154692",
+              "antique-belt-162715",
+              "antique-payal-158087",
+              "antique-finger-ring-158077",
+              "antique-bangle-161443",
+              "antique-finger-ring-152585"
+            ]
+          }
+        },
+        "afba7d92-7cfc-40c5-b87e-b674bbfc79eb": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Lagna Selects",
+            "sub_text": "Malas, naths and tikkas that have the true Marathi appeal",
+            "image": "shopify://shop_images/Mask_group.jpg",
+            "product_list": [
+              "antique-payal-152617",
+              "silver-temple-bangle-163616",
+              "antique-tikka-153645",
+              "silver-temple-necklace-166131",
+              "silver-temple-necklace-161262",
+              "silver-temple-earring-154944",
+              "antique-finger-ring-166028",
+              "antique-bajuband-157629",
+              "antique-belt-155039",
+              "antique-bangle-150357"
+            ]
+          }
+        },
+        "9827cbd9-fd5c-456d-a9b6-17faf38de00a": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Shaadi",
+            "sub_text": "Chooda, chokers and belts to enhance your spotlight lehenga!",
+            "image": "shopify://shop_images/Mask_group-2.jpg",
+            "product_list": [
+              "kundan-hathpan-161499",
+              "kundan-finger-ring-156596",
+              "kundan-finger-ring-158546",
+              "kundan-bangle-162704",
+              "kundan-bangle-156585",
+              "kundan-tikka-161508",
+              "kundan-bangle-158521",
+              "kundan-payal-164149",
+              "kundan-belt-161504"
+            ]
+          }
+        },
+        "ed5e4530-7c9f-44fe-9780-b3eac7c01ad1": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Zircon Bridal",
+            "sub_text": "A unique Zircon take on the traditional Muhurtham style",
+            "image": "shopify://shop_images/Mask_group-1_1_67b47c1a-11f1-4946-bb0c-e61076657347.jpg",
+            "product_list": [
+              "zircon-tikka-163961",
+              "zircon-hair-brooch-149096",
+              "zircon-finger-ring-163979",
+              "zircon-necklace-161783",
+              "zircon-bajuband-160269",
+              "zircon-finger-ring-163978",
+              "zircon-necklace-162818",
+              "zircon-matil-158649",
+              "zircon-necklace-156761",
+              "zircon-belt-148211",
+              "zircon-belt-158049",
+              "zircon-bangle-163909"
+            ]
+          }
+        },
+        "763ed30d-b995-4edb-a673-a7ea8e253a1b": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Cocktail",
+            "sub_text": "Sparkle your outfit with a modish set of Zircons",
+            "image": "shopify://shop_images/Group_303_12222b51-b877-4092-940b-bc6ad387d59c.jpg",
+            "product_list": [
+              "zircon-necklace-160309",
+              "zircon-finger-ring-160396",
+              "zircon-kada-160442"
+            ]
+          }
+        },
+        "d602373d-579f-4854-9eb1-732494315f13": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "btn_text": "Reception",
+            "sub_text": "For the stylish ending note, embraced by statement embellishments",
+            "image": "shopify://shop_images/Mask_group-3.jpg",
+            "product_list": []
+          }
+        }
+      },
+      "block_order": [
+        "d242d8b8-2fc8-4c65-8582-3598cdd0df6a",
+        "7ff6e390-d438-4dca-a773-65b3188e7e3c",
+        "ac03dc5f-0484-4f48-abbb-30b9bb7080ee",
+        "afba7d92-7cfc-40c5-b87e-b674bbfc79eb",
+        "9827cbd9-fd5c-456d-a9b6-17faf38de00a",
+        "ed5e4530-7c9f-44fe-9780-b3eac7c01ad1",
+        "763ed30d-b995-4edb-a673-a7ea8e253a1b",
+        "d602373d-579f-4854-9eb1-732494315f13"
+      ],
+      "disabled": true,
+      "settings": {
+        "mother": false
+      }
+    },
+    "cbf1c2f4-5adf-4b96-99b2-7855ba7180bd": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "d42915a5-09eb-4fd3-82a1-c2bb3ce1c4af": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/3_9_96c6bee1-2246-4eed-9923-ff67c1381fa5.jpg",
+            "heading": "The Rajasthani Bride",
+            "text": "Behold Royal Abode of Grandeur as seen through her Majestic Aura",
+            "link": "shopify://collections/grandeur-for-royalty-the-rajasthani-bridal-collection",
+            "link_text": "Explore"
+          }
+        },
+        "3143c771-11b4-43b4-a238-cf3f65f1f406": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Jisma.png",
+            "heading": "The Malayali Bride",
+            "text": "A true embodiment of Goddess Lakshmi in God's own Country",
+            "link": "shopify://collections/imperial-legacy-the-malayali-bridal-collection",
+            "link_text": "Explore"
+          }
+        },
+        "9112b8fd-3037-4256-88e0-c1355e0690b3": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/2_173e8b56-23be-4fe6-b2d1-57a926deed4d.jpg",
+            "heading": "The Kannadiga Bride",
+            "text": "Adorning her Ritualistic Heritage etched through Auspiciousness",
+            "link": "shopify://collections/ritualistic-heritage-the-kannadiga-bridal-collection",
+            "link_text": "Explore"
+          }
+        },
+        "bbaa4a55-e0c5-42ca-9752-d2528ef42072": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/8_5f5299a8-bfdb-48b2-b285-d2d2b3d50017.jpg",
+            "heading": "The Christian Bride",
+            "text": "Holy Matrimony Zircon Shimmers draped in       Pure Elegance",
+            "link": "shopify://collections/subtle-sparkles-the-holy-matrimony-selects",
+            "link_text": "Explore"
+          }
+        },
+        "b8dbd83f-e6e9-4f7a-99ec-7bc8fe6988b3": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/5_d1641be6-a585-45ca-bc9c-c75abd2eb3dc.jpg",
+            "heading": "The Tamil Bride",
+            "text": "Enhancing her Kancheevaram Silk with Gilded Temple Wonders",
+            "link": "shopify://collections/timeless-tales-the-tamilian-bridal-collection",
+            "link_text": "Explore"
+          }
+        },
+        "0bd13184-7a86-4a16-9121-be04a3df33d5": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/1_12_0feeeb06-52cb-4d24-b592-1eacc0d5825d.jpg",
+            "heading": "The Bihari Bride",
+            "text": "Culturally Inclined for upholding her traditional Legacy",
+            "link": "shopify://collections/cultural-inclinations-the-bihari-bridal-collection",
+            "link_text": "Explore"
+          }
+        },
+        "96c96b64-85ad-43ae-ae5c-5a56d3030b9c": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/9_7b8065ce-02c4-4883-9354-4b2a99370ecc.jpg",
+            "heading": "One of a Kind Bride",
+            "text": "Carving her own path to a Blissful Ever-After",
+            "link": "shopify://collections/bespoke-grace-create-your-bridal-collection",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "d42915a5-09eb-4fd3-82a1-c2bb3ce1c4af",
+        "3143c771-11b4-43b4-a238-cf3f65f1f406",
+        "9112b8fd-3037-4256-88e0-c1355e0690b3",
+        "bbaa4a55-e0c5-42ca-9752-d2528ef42072",
+        "b8dbd83f-e6e9-4f7a-99ec-7bc8fe6988b3",
+        "0bd13184-7a86-4a16-9121-be04a3df33d5",
+        "96c96b64-85ad-43ae-ae5c-5a56d3030b9c"
+      ],
+      "custom_css": [
+        ".Wedding-Collection-box {max-width: 380px; min-width: 380px;}",
+        ".Wedding-Collection-head {padding-top: 90px;}",
+        ".wead-content {border-radius: 0px 0px 20.914px 20.914px;}",
+        ".main_coll_img {border-radius: 20px;}",
+        "@media (max-width: 750px) {.Wedding-Collection-head {padding-top: 50px; font-weight: 500; text-align: center; padding-bottom: 20px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "REAL BRIDES OF KUSHAL'S",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "0f786ce0-f3f5-4be8-90ac-0236c3984d5c": {
+      "type": "wedding-contect",
+      "disabled": true,
+      "settings": {}
+    },
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534": {
+      "type": "ct-review",
+      "blocks": {
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-bangle-ruby-green-2-6-antique-bangle-159984-36531817250972_ff681171-a9de-468b-a947-d44c65a7d784.jpg",
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "Awesome and Fabulous . Superior quality. Perfect delivery."
+          }
+        },
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-finger-ring-antique-finger-ring-151694-36325822333084_7e188168-97e5-4e99-ab4e-36d8499e4123.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Awesome collection, I love it"
+          }
+        },
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/kundan-tikka-kundan-tikka-145175-33860110450844_b1f5b822-3347-4944-9f9b-2218642a9367.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "As seen as the picture. good quality… no complaints"
+          }
+        },
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-earring-white-black-polish-zircon-earring-151104-35650094497948_37d72182-484a-4958-bda4-6f093462ffa5.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "A super cute intricate work earing .... loved it . Thanks kushals for giving such beautiful jewelry 😍"
+          }
+        },
+        "fbbff485-6f70-4283-a0c8-495faddc4c17": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-tikka-ruby-gold-zircon-tikka-146300-33828551458972_1841d21b-882a-4086-bdf9-a1ace8d2015e.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "A pleasure browsing their collection."
+          }
+        },
+        "5be492c4-776d-4b02-b72c-08bdba684c29": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-ruby-antique-earring-137058-36345130221724_065efec0-6080-42ce-b3e6-2361cd26acad.jpg",
+            "image1": "shopify://shop_images/Group_113_2_00bcc78d-a863-48e6-9630-2cb602fe20b7.png",
+            "re-text": "Beautiful work and craftsmanship, size and colour as in picture"
+          }
+        },
+        "f53e78af-618a-433d-a3be-e20520f945b8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-belt-ruby-antique-belt-138554-35973972066460_168acc73-1130-4b95-948b-8df782d75558.jpg",
+            "image1": "shopify://shop_images/Group_113_2_efbe9876-a556-41bc-8eb7-db3fa9bb043b.png",
+            "re-text": ""
+          }
+        },
+        "cd49dd8e-f3e1-4657-9773-f4aaaa0c1edc": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-finger-ring-antique-finger-ring-151695-34703607201948_528df5ea-1b30-4539-8455-668ac7c3a076.jpg",
+            "image1": "shopify://shop_images/Group_113_2_c1325738-5c43-4fb1-ba48-708b3b7d8561.png",
+            "re-text": "Almost like real gold 👍❤️"
+          }
+        },
+        "57429262-2ae7-4d4f-b1bd-efc11a64cd53": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-payal-antique-payal-150387-35973514789020_fc23030e-7f49-4d21-a68e-bef4865f9572.jpg",
+            "image1": "shopify://shop_images/Group_113_2_c7b6fa8b-9628-4c11-9828-7cd0f31ff6ef.png",
+            "re-text": "All the jewelry that being delivered is really nice as shown in images."
+          }
+        },
+        "51aabfe8-335a-47c0-b7d4-65ec482aa8f8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/kundan-earring-green-kundan-earring-147403-36530656608412_845a4a77-a62c-453d-8712-29a38e3d0a84.jpg",
+            "image1": "shopify://shop_images/Group_113_2_c7b6fa8b-9628-4c11-9828-7cd0f31ff6ef.png",
+            "re-text": "Excellent.. I loved it"
+          }
+        },
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-necklace-ruby-green-swarnika-necklace-137083-29437777150108_121b1edb-01f9-4a20-b1bb-6732c0327237.jpg",
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "I have been shopping since a decade maybe and I own some very unique beautiful pieces from your store.... Thank you 🙏🏻"
+          }
+        },
+        "fdf5e373-7d57-42c9-91d2-c880ced617cd": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-necklace-na-antique-necklace-132131-19850552148124_497b29ed-b230-4c0d-b13d-1f3ecc0b6ebd.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Awesome design , excellent very fine and detailed carvings, looking very sophisticated one."
+          }
+        },
+        "4b8d1b1e-39af-446c-8c63-573a4f01218b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-mangalsutra-zircon-mangalsutra-137613-31389812818076_2bf197a5-b84a-4e06-80de-4299d445a916.jpg",
+            "image1": "shopify://shop_images/Group_113_2_00bcc78d-a863-48e6-9630-2cb602fe20b7.png",
+            "re-text": "Beautiful mangalsutra... value for money.. go for it."
+          }
+        }
+      },
+      "block_order": [
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b",
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed",
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e",
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f",
+        "fbbff485-6f70-4283-a0c8-495faddc4c17",
+        "5be492c4-776d-4b02-b72c-08bdba684c29",
+        "f53e78af-618a-433d-a3be-e20520f945b8",
+        "cd49dd8e-f3e1-4657-9773-f4aaaa0c1edc",
+        "57429262-2ae7-4d4f-b1bd-efc11a64cd53",
+        "51aabfe8-335a-47c0-b7d4-65ec482aa8f8",
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735",
+        "fdf5e373-7d57-42c9-91d2-c880ced617cd",
+        "4b8d1b1e-39af-446c-8c63-573a4f01218b"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.coll_head {text-align: center; }}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "swiper_js_yxRUtE",
+    "main",
+    "sale_anncouncement_CbDKtN",
+    "6d004e6e-2ff7-4b19-b11f-f96fd8ff575a",
+    "136af06e-1048-4f58-b710-c8708d3c2bdc",
+    "a516682f-2a4d-47e2-9b0f-62ee6293a62b",
+    "9a62de5d-2a7e-4cd9-8345-e59da04fdbb7",
+    "29d63148-d9d6-4aad-89e3-da1aed142366",
+    "e38987fc-5068-40ab-9ce1-cad4be29cc78",
+    "4d269dfc-a285-447a-aa5c-b42e07317bc1",
+    "round_collection_box_JRmBCB",
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1",
+    "3f77a909-2d3b-4a70-a8aa-7fe4c5e9e982",
+    "c6efb7d9-2cf1-46b6-9a13-254ec215d894",
+    "cbf1c2f4-5adf-4b96-99b2-7855ba7180bd",
+    "0f786ce0-f3f5-4be8-90ac-0236c3984d5c",
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534"
+  ]
+}

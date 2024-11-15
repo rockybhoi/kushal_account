@@ -1,0 +1,706 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "swiper_js_UgTBPT": {
+      "type": "Swiper-js",
+      "settings": {}
+    },
+    "21c3d43b-5e3b-4069-8f8f-faecd795e8b2": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15930314162332__21c3d43b-5e3b-4069-8f8f-faecd795e8b2-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Necklace_2_6f7e1879-87c8-466c-bf3e-4c1e6ec5fd5b.jpg",
+            "mobile_image": "shopify://shop_images/03_5_c6d9664f-0038-4002-bd74-37c54abcfcc5.jpg",
+            "slide_link": "shopify://collections/92-5-sterling-silver-necklaces"
+          }
+        },
+        "81eee036-35fc-40f1-af9f-ddf7e64d9120": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/earrings_1_92644a6a-a178-4c38-9047-689ca626e47c.jpg",
+            "mobile_image": "shopify://shop_images/01_5_971be487-96fc-4df7-9fd5-dea2489a677d.jpg",
+            "slide_link": "shopify://collections/92-5-sterling-silver-earrings"
+          }
+        }
+      },
+      "block_order": [
+        "template--15930314162332__21c3d43b-5e3b-4069-8f8f-faecd795e8b2-image-1",
+        "81eee036-35fc-40f1-af9f-ddf7e64d9120"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 500,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "instant",
+        "slide_navigation": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "2600da46-10cf-417a-a1e0-c93a4f43916b": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "25dfa777-c1a2-4eb2-a381-835784456cfd": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Trust-SVG_9ccd55a7-9769-4184-8ad7-88367413b64c.svg",
+            "image_size": "icon",
+            "text": "1 Million+ Customers",
+            "link_url": ""
+          }
+        },
+        "13a20ca0-f208-4dcd-b51f-d81dee065f2e": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/15-Day-Return-SVG.svg",
+            "image_size": "icon",
+            "text": "15 Days Return",
+            "link_url": ""
+          }
+        },
+        "4c3d16c7-0090-4bb8-88a9-068a0c1e91c1": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_104_9c2e21c5-c361-4958-a09d-7fde2e9b5dc6.svg",
+            "image_size": "icon",
+            "text": "92.5 Silver",
+            "link_url": ""
+          }
+        },
+        "5ffc10fa-3993-463d-b48c-3ba990e5d288": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/COD-SVG_8bd257d3-8d3f-4ad0-a9b7-28fe5942d2c2.svg",
+            "image_size": "icon",
+            "text": "Cash on Delivery",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "25dfa777-c1a2-4eb2-a381-835784456cfd",
+        "13a20ca0-f208-4dcd-b51f-d81dee065f2e",
+        "4c3d16c7-0090-4bb8-88a9-068a0c1e91c1",
+        "5ffc10fa-3993-463d-b48c-3ba990e5d288"
+      ],
+      "custom_css": [
+        ".container,.cbb-frequently-bought-container {padding: 70px 0;}",
+        ".rimage-wrapper.lazyload--placeholder {background: none;}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "b3a42990-7b19-445a-9afd-6fb62b023397": {
+      "type": "Highlight-sterling-silver",
+      "blocks": {
+        "ae737b0b-c880-4309-8907-5e20855c0b00": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Group_104.png",
+            "img_text": "92.5 Silver"
+          }
+        },
+        "7523bc29-7c71-4aa6-b87c-00146b631bba": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Group_105.png",
+            "img_text": "10 Lakh Customer"
+          }
+        },
+        "119c7c7a-a648-4b9e-9fa9-196d50a96fa8": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Group_106.png",
+            "img_text": "Easy Return"
+          }
+        }
+      },
+      "block_order": [
+        "ae737b0b-c880-4309-8907-5e20855c0b00",
+        "7523bc29-7c71-4aa6-b87c-00146b631bba",
+        "119c7c7a-a648-4b9e-9fa9-196d50a96fa8"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "00a187d0-9f84-44d7-a6bb-da14bc2fe2cb": {
+      "type": "Shop-by-category",
+      "blocks": {
+        "50b7bb37-5ffd-40f2-9991-e51774ca6954": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/silver-earring-white-rodium-92-5-silver-earring-164383-36533226307740.webp",
+            "img_text": "Earrings",
+            "collection": "92-5-sterling-silver-earrings"
+          }
+        },
+        "ef8609b9-c76b-4677-86ef-13bd746cce63": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/image_8_4.png",
+            "img_text": "Necklace",
+            "collection": "92-5-sterling-silver-necklaces"
+          }
+        },
+        "bd2cb27e-c2d2-46b1-b111-0e684692f74d": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/silver-finger-ring-white-rodium-6-92-5-silver-finger-ring-161108-36299290771612.webp",
+            "img_text": "Finger Ring",
+            "collection": "92-5-sterling-silver-finger-rings"
+          }
+        },
+        "1d23508c-4b72-42a5-9836-16f0ecbe2e22": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/silver-bracelet-white-rodium-92-5-silver-bracelet-164163-36568983077020.webp",
+            "img_text": "Bracelet",
+            "collection": "92-5-sterling-silver-bracelets"
+          }
+        },
+        "6ab06bcc-6b60-49e0-a7c3-083f5000c73d": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/silver-kada-white-rodium-92-5-silver-kada-145025-36479485673628.webp",
+            "img_text": "Kada",
+            "collection": "92-5-sterling-silver-kada"
+          }
+        },
+        "06587707-0395-4017-8b48-da1d60e39b5e": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/silver-pendant-set-white-rodium-92-5-silver-pendant-earring-164585-36607141740700.webp",
+            "img_text": "Pendant",
+            "collection": "92-5-sterling-silver-pendant-set"
+          }
+        },
+        "431d93e4-41a2-4f6b-b220-525f99fe2ce4": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/silver-payal-rodium-92-5-silver-payal-164353-36489299394716.webp",
+            "img_text": "Payal",
+            "collection": "92-5-sterling-silver-payal"
+          }
+        }
+      },
+      "block_order": [
+        "50b7bb37-5ffd-40f2-9991-e51774ca6954",
+        "ef8609b9-c76b-4677-86ef-13bd746cce63",
+        "bd2cb27e-c2d2-46b1-b111-0e684692f74d",
+        "1d23508c-4b72-42a5-9836-16f0ecbe2e22",
+        "6ab06bcc-6b60-49e0-a7c3-083f5000c73d",
+        "06587707-0395-4017-8b48-da1d60e39b5e",
+        "431d93e4-41a2-4f6b-b220-525f99fe2ce4"
+      ],
+      "settings": {
+        "head": "SHOP BY CATEGORY"
+      }
+    },
+    "1bd12e6a-4afd-4cde-8588-de55f11bf776": {
+      "type": "Collection-tab",
+      "blocks": {
+        "15902504-1775-4d1b-a9fd-f71863d39846": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/earring.svg",
+            "coll_name": "Earring",
+            "collection": "92-5-sterling-silver-earrings-best-sellers"
+          }
+        },
+        "3202dd2a-1c9b-4b16-a68d-dddeaefb9792": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Necklace_1.svg",
+            "coll_name": "Necklace",
+            "collection": "92-5-sterling-silver-necklaces-best-sellers"
+          }
+        },
+        "38321a94-d1b5-4fdb-b18e-bce0e1df5c27": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Finger_Ring.svg",
+            "coll_name": "Finger Ring",
+            "collection": "92-5-sterling-silver-finger-rings-best-sellers"
+          }
+        },
+        "bf920253-09e3-4cde-ade9-ab93a870d055": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Bracelet_1.svg",
+            "coll_name": "Bracelet",
+            "collection": "92-5-sterling-silver-finger-bracelets-best-sellers"
+          }
+        },
+        "0ce0dce8-653c-49e9-8673-8ff796343c25": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Kada_1.svg",
+            "coll_name": "Kada",
+            "collection": "92-5-sterling-silver-finger-kadas-best-sellers"
+          }
+        },
+        "325073e1-4910-4ca7-9dcc-a74682930894": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Pendant.svg",
+            "coll_name": "Pendant Set",
+            "collection": "92-5-sterling-silver-pendant-sets-best-sellers"
+          }
+        },
+        "d4c48455-7bbd-41ec-b3ba-dee82c19b146": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Payal.svg",
+            "coll_name": "Payal",
+            "collection": "92-5-sterling-silver-payals-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "15902504-1775-4d1b-a9fd-f71863d39846",
+        "3202dd2a-1c9b-4b16-a68d-dddeaefb9792",
+        "38321a94-d1b5-4fdb-b18e-bce0e1df5c27",
+        "bf920253-09e3-4cde-ade9-ab93a870d055",
+        "0ce0dce8-653c-49e9-8673-8ff796343c25",
+        "325073e1-4910-4ca7-9dcc-a74682930894",
+        "d4c48455-7bbd-41ec-b3ba-dee82c19b146"
+      ],
+      "settings": {
+        "full_width": true,
+        "id": "",
+        "title": "OUR BESTSELLERS",
+        "collection": "92-5-sterling-silver-earrings-best-sellers",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "a464a17b-05a3-4083-9a56-81c79a152b8b": {
+      "type": "Shop-by-Price",
+      "blocks": {
+        "c0bbacd0-154a-49f9-9a2e-38edb5540e81": {
+          "type": "img",
+          "settings": {
+            "collection": "92-5-sterling-silver-jewellery-under-999",
+            "image": "shopify://shop_images/Group_141.png"
+          }
+        },
+        "fd477c63-1308-4512-ba3b-f671aafbacb0": {
+          "type": "img",
+          "settings": {
+            "collection": "92-5-sterling-silver-jewellery-between-1000-1499",
+            "image": "shopify://shop_images/Group_142.png"
+          }
+        },
+        "99341e50-89c4-4c2a-8c46-c3ea9c57ede0": {
+          "type": "img",
+          "settings": {
+            "collection": "92-5-sterling-silver-jewellery-above-rs-1500",
+            "image": "shopify://shop_images/Group_143.png"
+          }
+        }
+      },
+      "block_order": [
+        "c0bbacd0-154a-49f9-9a2e-38edb5540e81",
+        "fd477c63-1308-4512-ba3b-f671aafbacb0",
+        "99341e50-89c4-4c2a-8c46-c3ea9c57ede0"
+      ],
+      "settings": {
+        "title": "SHOP BY PRICE"
+      }
+    },
+    "3efe3326-e5cf-4e4f-9de9-0e716dcd4831": {
+      "type": "Shop-by-Polish",
+      "blocks": {
+        "776d2646-5cfc-480e-8b4e-7ac980bcc7d2": {
+          "type": "Collection",
+          "settings": {
+            "maintitle": "SILVER",
+            "image1": "shopify://shop_images/silver-earring-white-rodium-92-5-silver-earring-145019-37667807428764_49afdbd3-4918-4b20-abb9-953e63550c1a.jpg",
+            "title1": "Earring",
+            "url1": "92-5-sterling-silver-earrings-rodium",
+            "image2": "shopify://shop_images/silver-necklace-white-rodium-92-5-silver-necklace-164489-36503145447580.webp",
+            "title2": "Necklace",
+            "url2": "92-5-sterling-silver-necklace-rodium",
+            "image3": "shopify://shop_images/silver-finger-ring-white-rodium-6-92-5-silver-finger-ring-161108-36299290771612.webp",
+            "title3": "Finger Ring",
+            "url3": "92-5-sterling-silver-finger-rings-rodium",
+            "image4": "shopify://shop_images/silver-bracelet-white-rodium-92-5-silver-bracelet-164163-36568983077020.webp",
+            "title4": "Bracelet",
+            "url4": "92-5-sterling-silver-bracelets-rodium",
+            "image5": "shopify://shop_images/silver-kada-white-rodium-92-5-silver-kada-157070-37668200218780_999ca3ff-8b0d-4ea2-8e10-3479b1d323a4.jpg",
+            "title5": "Kada",
+            "url5": "92-5-sterling-silver-kada-rodium",
+            "image6": "shopify://shop_images/silver-pendant-set-white-rodium-92-5-silver-pendant-earring-164585-36607141740700.webp",
+            "title6": "Pendant",
+            "url6": "92-5-sterling-silver-pendant-set-rodium",
+            "image7": "shopify://shop_images/silver-payal-rodium-92-5-silver-payal-164353-36489299394716.webp",
+            "title7": "Payal",
+            "url7": "92-5-sterling-silver-payal-rodium",
+            "image8": "shopify://shop_images/Group_163_2.svg",
+            "title8": "",
+            "url8": "92-5-sterling-silver-jewellery-rodium"
+          }
+        },
+        "ce29717a-724c-4291-bc80-8024d024ae31": {
+          "type": "Collection",
+          "settings": {
+            "maintitle": "ROSE GOLD",
+            "image1": "shopify://shop_images/silver-earring-white-rose-gold-92-5-silver-earring-161012-36268730974364.webp",
+            "title1": "Earring",
+            "url1": "92-5-sterling-silver-earrings-rose-gold",
+            "image2": "shopify://shop_images/silver-necklace-white-rose-gold-92-5-silver-necklace-164498-36503159210140.webp",
+            "title2": "Necklace",
+            "url2": "92-5-sterling-silver-necklace-rose-gold",
+            "image3": "shopify://shop_images/silver-finger-ring-92-5-silver-finger-ring-161108-36299290640540.webp",
+            "title3": "Finger Ring",
+            "url3": "",
+            "image4": "shopify://shop_images/silver-bracelet-white-rose-gold-92-5-silver-bracelet-161285-36479605244060.webp",
+            "title4": "Bracelet",
+            "url4": "92-5-sterling-silver-finger-rings-rose-gold",
+            "image5": "shopify://shop_images/silver-kada-92-5-silver-kada-157069-36479618089116.webp",
+            "title5": "Kada",
+            "url5": "92-5-sterling-silver-kada-rose-gold",
+            "image6": "shopify://shop_images/silver-pendant-set-white-rose-gold-92-5-silver-pendant-earring-164591-36607054643356.webp",
+            "title6": "Pendant",
+            "url6": "92-5-sterling-silver-pendant-set-rose-gold",
+            "title7": "-",
+            "url7": "",
+            "image8": "shopify://shop_images/Group_163_2.svg",
+            "title8": "",
+            "url8": "92-5-sterling-silver-jewellery-rose-gold"
+          }
+        },
+        "6b6f1d01-5906-4be7-a0ec-367faafd77dc": {
+          "type": "Collection",
+          "settings": {
+            "maintitle": "GOLD",
+            "image1": "shopify://shop_images/silver-earring-white-gold-92-5-silver-earring-164373-36533248393372.webp",
+            "title1": "Earring",
+            "url1": "92-5-sterling-silver-earrings-gold",
+            "image2": "shopify://shop_images/silver-necklace-white-gold-92-5-silver-necklace-160978-36479529287836.webp",
+            "title2": "Necklace",
+            "url2": "92-5-sterling-silver-necklace-gold",
+            "image3": "shopify://shop_images/silver-finger-ring-white-gold-92-5-silver-finger-ring-164324-36503114907804.webp",
+            "title3": "Finger Ring",
+            "url3": "92-5-sterling-silver-finger-rings-gold",
+            "image4": "shopify://shop_images/silver-bracelet-white-gold-92-5-silver-bracelet-161271-36654811742364.webp",
+            "title4": "Bracelet",
+            "url4": "92-5-sterling-silver-bracelets-gold",
+            "image5": "shopify://shop_images/silver-kada-white-gold-92-5-silver-kada-160840-36479577915548.webp",
+            "title5": "Kada",
+            "url5": "92-5-sterling-silver-kada-gold",
+            "image6": "shopify://shop_images/silver-pendant-set-white-gold-92-5-silver-pendant-earring-164595-36627752222876.webp",
+            "title6": "Pendant",
+            "url6": "92-5-sterling-silver-pendant-set-gold",
+            "title7": "-",
+            "url7": "",
+            "image8": "shopify://shop_images/Group_163_2.svg",
+            "title8": "",
+            "url8": "92-5-sterling-silver-jewellery-gold"
+          }
+        }
+      },
+      "block_order": [
+        "776d2646-5cfc-480e-8b4e-7ac980bcc7d2",
+        "ce29717a-724c-4291-bc80-8024d024ae31",
+        "6b6f1d01-5906-4be7-a0ec-367faafd77dc"
+      ],
+      "settings": {
+        "title": "SHOP BY POLISH"
+      }
+    },
+    "93b3dbfb-9205-45db-8c07-d518d5c56c59": {
+      "type": "Collection-tab",
+      "blocks": {
+        "102a96ae-e181-4401-96af-afcba7a7bf45": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/earring.svg",
+            "coll_name": "Earring",
+            "collection": "92-5-sterling-silver-earrings-new-arrivals"
+          }
+        },
+        "7d598b5d-74b4-4768-9ccd-84cbb584dd52": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Necklace_1.svg",
+            "coll_name": "Necklace",
+            "collection": "92-5-sterling-silver-necklace-new-arrivals"
+          }
+        },
+        "f1e648d8-410f-4da1-b2e3-badb26818366": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Payal_31399ab2-258d-4fb6-8bc2-d451ed769a47.svg",
+            "coll_name": "Payal",
+            "collection": "92-5-sterling-silver-payals-new-arrivals"
+          }
+        },
+        "ae4df5c3-0fb6-4a7e-95f9-55871a73390a": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Finger_Ring.svg",
+            "coll_name": "Finger Ring",
+            "collection": "92-5-sterling-silver-finger-rings-new-arrivals"
+          }
+        },
+        "bae6e179-2a3e-4b9f-947b-3dcd865917ba": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/kada.svg",
+            "coll_name": "Kada",
+            "collection": "92-5-sterling-silver-kadas-new-arrivals"
+          }
+        },
+        "520dd55f-5004-4d77-a196-30a36b3de3ac": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Bracelet_1.svg",
+            "coll_name": "Bracelet",
+            "collection": "92-5-sterling-silver-bracelets-new-arrivals"
+          }
+        },
+        "8cff3f66-cbb5-4c23-9cf5-f731de09a314": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Pendant.svg",
+            "coll_name": "Pendant Set",
+            "collection": "92-5-sterling-silver-pendants-new-arrivals"
+          }
+        },
+        "02e0f8a5-3c70-4d7c-a0d7-6c59f65b68e1": {
+          "type": "Collection",
+          "settings": {
+            "img_icon": "shopify://shop_images/Payal.svg",
+            "coll_name": "Payal",
+            "collection": "92-5-sterling-silver-payals-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "102a96ae-e181-4401-96af-afcba7a7bf45",
+        "7d598b5d-74b4-4768-9ccd-84cbb584dd52",
+        "f1e648d8-410f-4da1-b2e3-badb26818366",
+        "ae4df5c3-0fb6-4a7e-95f9-55871a73390a",
+        "bae6e179-2a3e-4b9f-947b-3dcd865917ba",
+        "520dd55f-5004-4d77-a196-30a36b3de3ac",
+        "8cff3f66-cbb5-4c23-9cf5-f731de09a314",
+        "02e0f8a5-3c70-4d7c-a0d7-6c59f65b68e1"
+      ],
+      "settings": {
+        "full_width": true,
+        "id": "sec",
+        "title": "JUST IN",
+        "collection": "",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "39e44227-2e83-4c16-b798-6a7ecf27c0b0": {
+      "type": "ct-review",
+      "blocks": {
+        "c1fb0c3e-1040-41f2-8e60-003c4221be9d": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_27_2.png",
+            "image1": "shopify://shop_images/Group_113.png",
+            "re-text": "“Awesome this ear rings, too big , wear to ears too big, thank you for kushal’s fashion”"
+          }
+        },
+        "94f5b51a-95f0-4e94-95fb-2e41ca3f8d52": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_27_2.png",
+            "image1": "shopify://shop_images/Group_113.png",
+            "re-text": "“Awesome this ear rings, too big , wear to ears too big, thank you for kushal’s fashion”"
+          }
+        },
+        "c2de6bf6-415b-4b47-8f1c-de8a68a9337c": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_27_2.png",
+            "image1": "shopify://shop_images/Group_113.png",
+            "re-text": "“Awesome this ear rings, too big , wear to ears too big, thank you for kushal’s fashion”"
+          }
+        },
+        "2524ad62-e4cc-4f26-ac66-e5b17242f09b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_27_2.png",
+            "image1": "shopify://shop_images/Group_113.png",
+            "re-text": "“Awesome this ear rings, too big , wear to ears too big, thank you for kushal’s fashion”"
+          }
+        },
+        "fbc12cb3-15b1-4007-9ef2-2afb6fed99c7": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_27_2.png",
+            "image1": "shopify://shop_images/Group_113.png",
+            "re-text": "“Awesome this ear rings, too big , wear to ears too big, thank you for kushal’s fashion”"
+          }
+        }
+      },
+      "block_order": [
+        "c1fb0c3e-1040-41f2-8e60-003c4221be9d",
+        "94f5b51a-95f0-4e94-95fb-2e41ca3f8d52",
+        "c2de6bf6-415b-4b47-8f1c-de8a68a9337c",
+        "2524ad62-e4cc-4f26-ac66-e5b17242f09b",
+        "fbc12cb3-15b1-4007-9ef2-2afb6fed99c7"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "1698293357293a3ccb": {
+      "type": "apps",
+      "blocks": {
+        "61cb8c86-8aae-45a0-b1cf-a270ea1abfe4": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-card-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "mobileItemsPerView": 1,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 1,
+            "border_color": "#000000",
+            "productIds": ""
+          }
+        },
+        "e57c5a33-34db-4e04-91c8-c4ecf166e871": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "max_width": 1920,
+            "text_color": "#000000",
+            "background_color": "#ffffff",
+            "arrows_color": "#000000",
+            "dots_color": "#000000",
+            "button_color": "#000000",
+            "show_more": true,
+            "only_photos": false,
+            "use_widget_font": true,
+            "product_handle": ""
+          }
+        },
+        "96e63419-fae6-4c79-9722-6938e5dc1401": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-gallery-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 60,
+            "itemsPerView": 5,
+            "mobileItemsPerView": 1,
+            "imageRatio": "1",
+            "reviewerNameColor": "#ffffff",
+            "starsColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "none",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
+          }
+        },
+        "e5cf527e-8a8f-4e2e-910d-b064a2e1a0ea": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "61cb8c86-8aae-45a0-b1cf-a270ea1abfe4",
+        "e57c5a33-34db-4e04-91c8-c4ecf166e871",
+        "96e63419-fae6-4c79-9722-6938e5dc1401",
+        "e5cf527e-8a8f-4e2e-910d-b064a2e1a0ea"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "16986473392ca2d74b": {
+      "type": "apps",
+      "blocks": {
+        "63bcbaa0-3754-440e-903e-42c5cf12c6ab": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1440
+          }
+        },
+        "e4bd033e-88a1-4994-9c36-994745103b8a": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "63bcbaa0-3754-440e-903e-42c5cf12c6ab",
+        "e4bd033e-88a1-4994-9c36-994745103b8a"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".jdgm-carousel-wrapper {width: 100%;}"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "swiper_js_UgTBPT",
+    "21c3d43b-5e3b-4069-8f8f-faecd795e8b2",
+    "2600da46-10cf-417a-a1e0-c93a4f43916b",
+    "b3a42990-7b19-445a-9afd-6fb62b023397",
+    "00a187d0-9f84-44d7-a6bb-da14bc2fe2cb",
+    "1bd12e6a-4afd-4cde-8588-de55f11bf776",
+    "a464a17b-05a3-4083-9a56-81c79a152b8b",
+    "3efe3326-e5cf-4e4f-9de9-0e716dcd4831",
+    "93b3dbfb-9205-45db-8c07-d518d5c56c59",
+    "39e44227-2e83-4c16-b798-6a7ecf27c0b0",
+    "1698293357293a3ccb",
+    "16986473392ca2d74b"
+  ]
+}

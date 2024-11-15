@@ -1,0 +1,16 @@
+{% if template contains 'product' %} 
+<script>
+  window.addEventListener('sswhelperload', () => { 
+    if (typeof sswRun === 'function') {
+      sswRun(function(){
+        var WishlistButton = setInterval(function(){
+          if(ssw('#widget-fave-html').length){
+            ssw('#widget-fave-html').insertAfter(ssw('.quantity-submit-row.input-row.has-spb'));
+            clearInterval(WishlistButton);
+          }
+        }, 1000);
+      });
+    }
+  })
+</script>
+{% endif %}

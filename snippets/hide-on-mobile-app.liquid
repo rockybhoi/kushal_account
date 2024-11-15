@@ -1,0 +1,58 @@
+
+<script>
+  var inMobileApp = false;
+  if (window.navigator.userAgent.includes('[co.shopney.preview]') || window.navigator.userAgent.includes('[co.kushals]') || window.navigator.userAgent.includes('[co.kushals]')) {
+      inMobileApp = true;
+  }
+  
+  if (inMobileApp){
+		var css = '.breadcrumbs{ display: none !important; }  #fc_widget { display: none !important; } .loox-float-toggler-container  { display: none !important; } #shopify-section-header { display: none !important; } #swym-plugin { display: none !important; } #dummy-chat-button-iframe { display: none !important; }  #omnisend-dynamic-container { display: none !important; } #smile-ui-container { display: none !important; } #shopify-section-announcement { display: none; } #shopify-section-popup { display: none; } #shopify-section-header { display: none; }  #shopify-section-footer { display: none; } #pagefooter { display: none; }',
+			head = document.head || document.getElementsByTagName('head')[0],
+			style = document.createElement('style');
+			head.appendChild(style);
+			style.type = 'text/css';
+			if (style.styleSheet){
+			  // This is required for IE8 and below.
+			  style.styleSheet.cssText = css;
+			} else {
+			  style.appendChild(document.createTextNode(css));
+			}    
+	
+		var sbInt = setInterval(function(){
+		
+		if($(".smartbanner").length>0){
+		  $(".smartbanner").hide();
+		  $("html").css("margin-top", "0px");
+		}
+		if($("#omnisend-dynamic-container").length>0){
+			$("#omnisend-dynamic-container").css("display", "none");
+}
+		if($("#remodal-overlay").length>0){
+	$("#remodal-overlay").css("display", "none !important");
+}
+		if($("#remodal-wrapper").length>0){
+		  $("#remodal-wrapper").css("display", "none !important");
+		}
+		if($("#smile-ui-container").length>0){
+		  $("#smile-ui-container").css("display", "none !important");
+		}
+		if($("#wh-widget-send-button").length>0){
+		  $("#wh-widget-send-button").css("display", "none !important");
+		}
+		if($(".fancybox-wrapper").length>0){
+		  $(".fancybox-wrapper").css("display", "none");
+		}
+		if($("#rawa-widget").length>0){
+		  $("#omnisend-dynamic-container").css("display", "none");
+		}        
+        if($(".header-wrapper").length>0){
+		  $(".header-wrapper").hide();
+		  $("html").css("display", "none !important");
+		}  
+		}, 1);
+
+		setTimeout(function() {
+		clearInterval(sbInt);
+		}, 10000);
+  }
+</script>

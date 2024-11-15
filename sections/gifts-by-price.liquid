@@ -1,0 +1,73 @@
+<div class="gifts-by-price-main">
+    <div class="gifts-by-price-inner container">
+      <div class="gifts-by-price-head">{{ section.settings.heading }}</div>
+      <div class="gby-price_content">
+        <a href="{{ section.settings.link1 }}" class="gby-price-left">{{ section.settings.first }}</a>
+        <a href="{{ section.settings.link2 }}" class="gby-price-middle">{{ section.settings.seccend }}</a>
+        <a href="{{ section.settings.link3 }}" class="gby-price-right">{{ section.settings.last }}</a>
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "gifts-by-price",
+    "class": "gifts-by-price",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Main heading",
+        "default": "Gifts By Price"
+      },
+      {
+        "type": "header",
+        "content": "Link 1"
+      },
+      {
+        "type": "textarea",
+        "id": "first",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "link1",
+        "label": "Text Link"
+      },
+       {
+        "type": "header",
+        "content": "Link 2"
+      },
+      {
+        "type": "textarea",
+        "id": "seccend",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "link2",
+        "label": "Text Link"
+      },
+       {
+        "type": "header",
+        "content": "Link 3"
+      },
+      {
+        "type": "textarea",
+        "id": "last",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "link3",
+        "label": "Text Link"
+      }
+
+
+
+    ],
+    "presets": [{
+          "name": "gifts-by-price"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,135 @@
+<!-- Cancel popup -->
+<div class="order_cancel_main">
+  <div class="order_cancel_inner">
+    <div class="order_pop_close order_pop_close_icon">{% render 'svg-x' %}</div>
+    <h3>Cancel Product</h3>
+    <p>Are you sure you want to cancel this product?<br>
+      Canceling this product will cancel all items in shipment as they're sent together in the same package (AWB: 8573842948).</p>
+    <div class="cancel_product_img">
+      <img src="https://www.kushals.com/cdn/shop/files/trendy-zircon-earring-aqua-gold-trendy-earring-162418-36752450355356.jpg?v=1699309893">
+      <img src="https://www.kushals.com/cdn/shop/files/trendy-zircon-earring-aqua-gold-trendy-earring-162418-36752450355356.jpg?v=1699309893">
+      <img src="https://www.kushals.com/cdn/shop/files/trendy-zircon-earring-aqua-gold-trendy-earring-162418-36752450355356.jpg?v=1699309893">
+    </div>
+    <div class="order_foorer_btn">
+      <button class="order_pop_close">Close</button>
+      <button class="order_cancel_btn">Cancel Item</button>
+    </div>
+  </div>
+</div>
+
+{% capture product_details%}
+     <div class="cancel_item_count">Cancel Item</div>
+    {% for line_item in order.line_items %}
+            {% if line_item.fulfillment.tracking_number == ct_param_value %}
+             
+              <div class="cancel_item_content">
+                <div class="cancel_item_img">
+                  <img src="{{ line_item.product.featured_image | img_url: 'master' }}">
+                  </div>
+                <div class="cancel_item_left">
+                  <div class="item_title">{{ line_item.product.title }}</div>
+                  <div class="item_quantity">Qty: {{ line_item.quantity }}</div>
+                  {% if line_item.product.variants.size > 1 %}
+                    <div class="item_varient">{{ line_item.variant.title }}</div>
+                  {% endif %}
+                  <div class="item_price">
+                    {{ line_item.final_price | money }}
+                    <div class="payment_type">| {{ order.gateway }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+{% endcapture %}
+
+<div class="order_cancel_main_content">
+  <div class="order_cancel_inner_content">
+    <div class="order_cancel_header" style='display:none'>
+      <svg width="80" height="78" viewBox="0 0 80 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="40.125" cy="38.8125" rx="39.375" ry="38.8125" fill="#04A686"/>
+        <path d="M24.375 39.1677L34.8604 49.5033L55.8684 28.832" stroke="white" stroke-width="5.625" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2>Order Cancelled</h2>
+        {{ product_details }}
+      <div class="cancel_item_footer">
+        <div class="cancel_item_footer_box">
+          <h2>Refund Details</h2>
+          <p>Refund will be processed to the same account from where the payment was made.</p>
+        </div>
+        <div class="cancel_item_footer_box">
+          <h2>Notification</h2>
+          <p>You will receive an email/sms confirming the cancellation of order shortly.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cancel_item_main">
+      
+      {{ product_details }}
+      <div class="cancel_item_body">
+        <h2>Why do you want to cancel ?</h2>
+        <p>Please choose the reason for cancellation.</p>
+        <select class="ct_select_reason">
+          <option value="">Select Reason for Cancellation*</option>
+          <option value="1">Product not required anymore</option>
+          <option value="2">Ordered by mistake</option>
+          <option value="3">Found better price elsewhere</option>
+          <option value="4">Delayed delivery date</option>
+          <option value="5">Incorrect size ordered</option>
+          <option value="6">Duplicate order</option>
+        </select>
+        <textarea name="" id="" class="ct_comment" placeholder="Additional Comments"></textarea>
+      </div>
+      <div class="cancel_item_footer_btn">
+        <button class="cancal_back">Back</button>
+        <button class="cancal_submit ct_cancel_btn ct_disabled" disabled data-id="{{ order.id }}">Cancel Item</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  jQuery(document).ready(function(){
+    jQuery(document).on("click",".ct_cancel_btn",function(){
+      var check_select_option=$('.ct_select_reason').val();
+      if(check_select_option != "")
+      {
+        var order_id=$(this).attr("data-id");
+        var select_reason=$('.ct_select_reason').find(":selected").text();
+        var customer_comment=$('.ct_comment').val();
+        
+           var data={
+             "order_id":order_id,
+             "reason":select_reason,
+             "comment":customer_comment,
+             "method_call":"cancel_order"
+           }
+          $.ajax({
+                type: "POST",  
+                url: "data_gift_request.php",                  
+                data: data,                          
+                success: function (response) {
+                  var obj = jQuery.parseJSON(response); 
+                  if(obj.success)
+                  {
+                        
+                  }
+                }
+           });
+        
+        
+      }
+    })  
+
+    $('.ct_select_reason').on('change', function() {
+         var check_select_option=$(this).val();
+          if(check_select_option != "")
+          {
+            jQuery(".ct_cancel_btn").removeClass("ct_disabled");
+            jQuery(".ct_cancel_btn").removeAttr("disabled");            
+          }else
+          {
+            jQuery(".ct_cancel_btn").addClass("ct_disabled");
+             jQuery(".ct_cancel_btn").attr("disabled", true);                     
+          }
+      });
+  })
+</script>

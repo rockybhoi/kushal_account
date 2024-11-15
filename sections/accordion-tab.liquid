@@ -1,0 +1,226 @@
+{%- liquid
+  assign content = section.settings.content
+  if section.settings.page != blank
+    assign content = pages[section.settings.page].content
+  endif
+-%}
+
+<div data-section-type="accordion-tabs" data-components="accordion">
+  <div class="container">
+    <div class="accordion-tabs">
+      <div class="product-detail-accordion{% unless section.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}">
+        {%- capture accordion_title -%}
+          {%- if section.settings.icon == blank -%}
+            {{- section.settings.title -}}
+          {%- else -%}
+            <div class="with-icon">
+              {% render 'icon', icon: section.settings.icon, size: 'small' %}
+              <span class="with-icon__beside">{{ section.settings.title }}</span>
+            </div>
+          {%- endif -%}
+        {%- endcapture -%}
+        {% render 'accordion', allow_multi_open: true, add_content_class: 'rte cf', first_item_open: section.settings.open, item1_title: accordion_title, item1_content: content %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Accordion tab",
+  "tag": "section",
+  "class": "accordion-tab-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Collapsible tab"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "Icon",
+      "default": "",
+      "options": [
+        {
+          "value": "",
+          "label": "No icon"
+        },
+        {
+          "value": "award",
+          "label": "Award"
+        },
+        {
+          "value": "box",
+          "label": "Box"
+        },
+        {
+          "value": "briefcase",
+          "label": "Briefcase"
+        },
+        {
+          "value": "calendar",
+          "label": "Calendar"
+        },
+        {
+          "value": "chat_bubble",
+          "label": "Chat bubble"
+        },
+        {
+          "value": "check_mark",
+          "label": "Check mark"
+        },
+        {
+          "value": "check_mark_in_circle",
+          "label": "Check mark in circle"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        },
+        {
+          "value": "credit_card",
+          "label": "Credit card"
+        },
+        {
+          "value": "dollar_sign",
+          "label": "Dollar sign"
+        },
+        {
+          "value": "dryer",
+          "label": "Dryer"
+        },
+        {
+          "value": "eye",
+          "label": "Eye"
+        },
+        {
+          "value": "feather",
+          "label": "Feather"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "iron",
+          "label": "Iron"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf"
+        },
+        {
+          "value": "leather",
+          "label": "Leather"
+        },
+        {
+          "value": "lock",
+          "label": "Lock"
+        },
+        {
+          "value": "map_pin",
+          "label": "Map pin"
+        },
+        {
+          "value": "pants",
+          "label": "Pants"
+        },
+        {
+          "value": "percent",
+          "label": "Percent"
+        },
+        {
+          "value": "plane",
+          "label": "Plane"
+        },
+        {
+          "value": "price_tag",
+          "label": "Price tag"
+        },
+        {
+          "value": "question_mark",
+          "label": "Question mark"
+        },
+        {
+          "value": "return",
+          "label": "Return"
+        },
+        {
+          "value": "ruler",
+          "label": "Ruler"
+        },
+        {
+          "value": "scissors",
+          "label": "Scissors"
+        },
+        {
+          "value": "shirt",
+          "label": "Shirt"
+        },
+        {
+          "value": "shoe",
+          "label": "Shoe"
+        },
+        {
+          "value": "silhouette",
+          "label": "Silhouette"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "washing",
+          "label": "Washing"
+        },
+        {
+          "value": "nots",
+          "label": "Nots"
+        },
+        {
+          "value": "jewellery",
+          "label": "Jewellery"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Tab content",
+      "default": "<p>Collapsible tab content</p>"
+    },
+    {
+      "type": "page",
+      "id": "page",
+      "label": "Tab content from page"
+    },
+    {
+      "type": "checkbox",
+      "id": "open",
+      "label": "Open",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_in_quickbuy",
+      "label": "Show in quick buy",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion tab"
+    }
+  ]
+}
+{% endschema %}

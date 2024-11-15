@@ -1,0 +1,589 @@
+<style>
+          .ct_pearl-box {
+            width: calc(33.33% - 8px);
+        }
+      .ct_pearl-box img {
+        width: 100%;
+        border-radius: 10px;
+    }
+        .ct_pearl-text-box {
+          opacity: 0 !important;
+      }
+      .swiper-slide.ct_pearl-text-box.swiper-slide-thumb-active {
+        opacity: 1 !important;
+      }
+        .ct_pearl-box_main{
+          position: relative;
+          line-height:0;
+        }
+        .ct_dot-ani_1 {
+          position: absolute;
+
+          width: 30px;
+          height: 30px;
+          background-color: rgba(255, 255, 255, 1);
+          border-radius: 100%;
+          animation: pulse 2s infinite;
+      }
+     .ct_dot-ani {
+       opacity: 0;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(63, 63, 78, 1);
+    border-radius: 100%;
+    animation: pulse 2s infinite;
+    border: 6px solid rgb(255 255 255);
+}
+        @keyframes pulse {
+        0%   {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);}
+        100% {box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}
+      }
+      .ct_pearl-box .swiper-slide-shadow-right  , .ct_pearl-box  .swiper-slide-shadow-left{
+        background-image: inherit;
+    }
+      .slider-change-text {
+        color: rgba(69, 69, 69, 1);
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        padding: 0 10px;
+    }
+      .ct_pearl-card_head{
+        width: 100%;
+        color: #000;
+        font-family: Lato, sans-serif !important;
+        font-size: 33px;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        line-height: normal !important;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      .ct_pearl-card-slider-text {
+        margin-bottom: 15px;
+    }
+      .ct_pearl-card-slider {
+        margin-bottom: 32px;
+    }
+  .ct_pro-list-inner .product-block .product-info {
+    padding: 7px 10px 0 10px;
+}
+    .dot-products {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.2s;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 99999;
+      height: 100vh;
+      width: 100%;
+  }
+    .dot-products.dot_products_active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+  }
+  .ct_blocker-sec{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ct_pro-list {
+    width: 100%;
+    max-width: 360px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+    background: #fff;
+}
+  .ct_pro-list  .CT_product-block {
+    padding-bottom: 30px;
+}
+ .ct_pro-list  .product-block .block-inner {
+    margin: 0;
+}
+  .ct_pro-list  .product-block__image .rimage__image {
+    border-radius: 0;
+}
+  .ct_data_inner_header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 10px 7px 10px;
+}
+  .ct_data_inner_header span {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: left;
+}
+.ct_pearl_heading {
+    text-align: center;
+    color: rgb(255 255 255);
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 10px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+  .ct_pearl-card-slider-text {
+    display: none;
+}
+  .ct_pearl_heading svg {
+    width: 40px;
+}
+
+
+      @media(max-width:750px){
+        /* .ct_pearl-card-slider-text {
+    display: block;
+} */
+   
+        .ct_pearl_heading {
+          font-size: 16px;
+}
+          .ct_data_inner_header {
+    display: flex;
+          }
+        .ct_pearl-card_head {
+        font-size: 18px;
+        text-align: left;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+        .ct_pearl-card-slider-main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+.ct_pro-list {
+    width: 100%;
+    background: #fff;
+    max-width: 100%;
+    min-height: auto;
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0 !important;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(100%);
+    transition-delay: 0.2s;
+    transition: all 0.3s;
+    width: 100%;
+    overflow: auto;
+}
+        .dot-products.dot_products_active .ct_pro-list {
+    transform: translateY(0%);
+}
+        .ct_pro-list  .CT_product-block {
+    padding-bottom: 20px;
+    min-width: calc(45vw - 10px);
+    margin-left: 10px;
+    padding-top: 10px;
+}
+        .ct_pro-list-inner {
+    height: 100%;
+    background: #fff;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+      }
+</style>
+
+<div class="container ct_pearl-card-slider-main ">
+  <div class="ct_pearl-card_head">Shop The Look</div>
+  <div class="swiper ct_pearl-card-slider-text ">
+    <div class="swiper-wrapper ">
+      {% for block in section.blocks %}
+        <div class="swiper-slide ct_pearl-text-box">
+          <div class="slider-change-text">{{ block.settings.text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="swiper ct_pearl-card-slider ">
+    <div class="swiper-wrapper ">
+      {% for block in section.blocks %}
+        <div class="swiper-slide ct_pearl-box ct_pearl-box_{{ forloop.index }} " data-id="data-{{ forloop.index }}">
+          <div class="ct_pearl-box_main">
+            <img src="{{ block.settings.img | img_url:'master' }}">
+            <div class="ct_pearl_heading ct_dot-ani-btn">
+              {{ block.settings.text }}
+            <svg width="45" height="12" viewBox="0 0 45 12" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 5.16895C0.585786 5.16895 0.25 5.50473 0.25 5.91895C0.25 6.33316 0.585786 6.66895 1 6.66895V5.16895ZM44.5303 6.44928C44.8232 6.15638 44.8232 5.68151 44.5303 5.38862L39.7574 0.615644C39.4645 0.322751 38.9896 0.322751 38.6967 0.615644C38.4038 0.908538 38.4038 1.38341 38.6967 1.6763L42.9393 5.91895L38.6967 10.1616C38.4038 10.4545 38.4038 10.9294 38.6967 11.2222C38.9896 11.5151 39.4645 11.5151 39.7574 11.2222L44.5303 6.44928ZM1 6.66895H44V5.16895H1V6.66895Z" fill="white"></path> </svg>
+            </div>
+
+            {% if block.settings.dot1 %}
+              <div data-click="{{ section.id }}_click"
+                class="ct_dot-ani ct_dot-ani_1"
+                style=" top: {{ block.settings.top1 }}%; left: {{ block.settings.left1 }}%; transform: translate(-{{ block.settings.left1 }}%, -{{ block.settings.top1 }}%); "
+              ></div>
+            {% endif %}
+            {% if block.settings.dot2 %}
+              <div
+                class="ct_dot-ani ct_dot-ani_2"
+                style=" top: {{ block.settings.top2 }}%; left: {{ block.settings.left2 }}%; transform: translate(-{{ block.settings.left2 }}%, -{{ block.settings.top2 }}%); "
+              ></div>
+            {% endif %}
+            {% if block.settings.dot3 %}
+              <div
+                class="ct_dot-ani ct_dot-ani_3"
+                style=" top: {{ block.settings.top3 }}%; left: {{ block.settings.left3 }}%; transform: translate(-{{ block.settings.left3 }}%, -{{ block.settings.top3 }}%); "
+              ></div>
+            {% endif %}
+            {% if block.settings.dot4 %}
+              <div
+                class="ct_dot-ani ct_dot-ani_4"
+                style=" top: {{ block.settings.top4 }}%; left: {{ block.settings.left4 }}%; transform: translate(-{{ block.settings.left4 }}%, -{{ block.settings.top4 }}%); "
+              ></div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="ct_data_products">
+  
+{% for block in section.blocks %}
+<div class="dot-products dot-products_{{ forloop.index }}"  data-id="data-{{ forloop.index }}">
+  
+  <div class="ct_blocker-sec"></div>
+  <div class="ct_pro-list hover-img-false ">
+    <div class="ct_data_inner_header">
+        <span>{{ block.settings.text }}</span>
+        <svg class="close_pop_sec" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.4998 21.0837C16.7707 21.0837 21.0832 16.7712 21.0832 11.5003C21.0832 6.22949 16.7707 1.91699 11.4998 1.91699C6.229 1.91699 1.9165 6.22949 1.9165 11.5003C1.9165 16.7712 6.229 21.0837 11.4998 21.0837Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M8.78809 14.2123L14.2123 8.78809" stroke="#A02828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M14.2123 14.2123L8.78809 8.78809" stroke="#A02828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+  <div class="ct_pro-list-inner  ">
+  
+  {% assign pro3 = block.settings.product_list %}
+  {% for product in pro3 %}
+    {% render 'product-block',
+      numb: forloop.index,
+      per_row: section.settings.grid,
+      product: product,
+      manual_image_load: section.settings.enable_carousel,
+      custom_aspect_ratio: chosen_aspect_ratio,
+      no_swiping: section.settings.enable_carousel,
+      no_quick_buy_markup: section.settings.enable_carousel
+    %}
+  {% endfor %}
+    </div>
+    </div>
+</div>
+
+  {% endfor %}
+</div>
+<script>
+  var btn1 = document.querySelector('.ct_dot-ani-btn');
+        var btn2 = document.querySelector('[data-click="{{ section.id }}_click"]');
+
+        btn1.addEventListener('click', function(){
+            btn2.click();
+        });
+
+  
+    $(function () {
+            $(".ct_dot-ani").on("click", function () {
+                
+                var data_id=$(this).closest(".ct_pearl-box").attr("data-id");
+                      // console.log(data_id);          
+                $(".ct_data_products .dot-products[data-id='"+data_id+"']").addClass("dot_products_active");
+              $body.addClass('mm-no-scroll');
+            })
+        });
+
+  jQuery(document).on("click", ".close_pop_sec", function() {
+    $(this).closest('.dot_products_active').find(".ct_blocker-sec").trigger('click');  // Trigger a click on the ct_blocker
+});
+
+
+$('.ct_blocker-sec').click(function() {
+    var parentElement = $(this).parent();
+     if (parentElement.hasClass('dot_products_active')) {
+        parentElement.removeClass('dot_products_active');
+    }
+ if ($('body').hasClass('mm-no-scroll')) {
+        $('body').removeClass('mm-no-scroll');
+    }
+});
+
+</script>
+
+<script>
+     var swiper2 = new Swiper(".ct_pearl-card-slider-text", {
+      spaceBetween: 10,
+      watchSlidesProgress: true,
+        slidesPerView: 1,
+       effect: "fade",
+    });
+
+  setTimeout(function(){
+      var swipervide = new Swiper(".ct_pearl-card-slider", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "1.2",
+        initialSlide: 1,
+      loop: false,
+
+        thumbs: {
+        swiper: swiper2,
+      },
+      on: {
+             slideChange: darkNav    // is this needed?
+            },
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -35,
+        depth: 150,
+        modifier: 1,
+        slideShadows: true
+      },
+        breakpoints: {
+            640: {
+              slidesPerView: "auto",
+              spaceBetween: 12,
+              centeredSlides: false,
+              loop: false,
+              effect: false,
+                thumbs: {
+        swiper: swiper2,
+      },
+            }
+          },
+    });
+
+
+
+
+  },500)
+
+
+
+  var clbtn = document.querySelector('.ct_pearl_heading');
+
+clbtn.addEventListener('click', function() {
+    // Start from the clbtn element
+    var currentElement = clbtn;
+
+    // Loop to find the nearest .ct_dot-ani_1 element
+    while (currentElement) {
+        // Look for the .ct_dot-ani_1 sibling
+        var nearestChildBottom = currentElement.parentElement.querySelector('.ct_dot-ani_1');
+        
+        // If found, click the element
+        if (nearestChildBottom) {
+            nearestChildBottom.click();
+            return; // Exit the function after clicking
+        }
+
+        // Move up to the parent element
+        currentElement = currentElement.parentElement;
+    }
+
+    console.log('No nearest .ct_dot-ani_1 found');
+});
+
+
+
+     document.querySelectorAll('.ct_pearl_heading').forEach(heading => {
+            heading.addEventListener('click', function() {
+                let nearestDot = heading.nextElementSibling;
+                if (nearestDot && nearestDot.classList.contains('ct_dot-ani')) {
+                    nearestDot.click();
+                }
+            });
+        });
+
+        // For testing purpose: Add click event to ct_dot-ani to show an alert
+        // document.querySelectorAll('.ct_dot-ani').forEach(dot => {
+        //     dot.addEventListener('click', function() {
+        //         alert('ct_dot-ani clicked!');
+        //     });
+        // });
+
+
+
+  
+</script>
+
+{% schema %}
+{
+  "name": "pearl-card-slider",
+  "class": "pearl-card-slider",
+  "settings": [],
+  "blocks": [{
+    "type": "image",
+    "name": "slider box",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "collection name"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "dot1",
+        "label": "Dot one",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "top1",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Fist Top Dot",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "left1",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Fist left Dot",
+        "default": 40
+      },
+
+      {
+        "type": "checkbox",
+        "id": "dot2",
+        "label": "Dot Two",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "top2",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Secend Top Dot",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "left2",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Secend left Dot",
+        "default": 50
+      },
+
+      {
+        "type": "checkbox",
+        "id": "dot3",
+        "label": "Dot Three",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "top3",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Three Top Dot",
+        "default": 70
+      },
+      {
+        "type": "range",
+        "id": "left3",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Three left Dot",
+        "default": 70
+      },
+
+
+     {
+        "type": "checkbox",
+        "id": "dot4",
+        "label": "Dot four",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "top4",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Four Top Dot",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "left4",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Four left Dot",
+        "default": 80
+      },
+      {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 5
+      }
+
+
+    ]
+  }],
+  "presets": [
+    {
+        "name": "pearl-card-slider"
+    }
+  ]
+}
+{% endschema %}

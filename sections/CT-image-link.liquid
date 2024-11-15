@@ -1,0 +1,44 @@
+<style>
+  .CT-image-link img{
+    width:100%;
+  }
+  .CT-image-link {
+    margin-top: 30px;
+}
+</style>
+
+
+<div class="CT-image-link">
+<div class="container container--not-mobile">
+  <a href="{{ section.settings.link }}">
+  <img src="{{ section.settings.img  | img_url:'master'  }}" />
+  </a>
+</div>
+  
+</div>
+{% schema %}
+  {
+    "name": "CT-image-link",
+    "settings": [
+       {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+       {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+    ],
+    "presets":[{
+          "name": "CT-image-link"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

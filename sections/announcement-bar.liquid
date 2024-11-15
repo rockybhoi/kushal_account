@@ -1,0 +1,152 @@
+
+{% if section.settings.announcement_show or section.settings.show_language_selector or section.settings.show_country_selector or section.settings.menu != blank %}
+  <div id="section-id-{{ section.id }}" class="announcement-bar{% if section.settings.announcement_show %} announcement-bar--with-announcement{% endif %}{% if section.settings.announcement_text.size > 45 and section.settings.menu != blank %} announcement-bar--tablet-wrap{% endif %}" data-section-type="announcement-bar" data-cc-animate>
+    {% style %}
+      #section-id-{{ section.id }} {
+        background: {{ section.settings.announcement_bar_col }};
+        color: {{ section.settings.announcement_text_col }};
+      }
+    {% endstyle %}
+
+    {%- capture announcement_html -%}
+      {%- if section.settings.announcement_show -%}
+        {%- if section.settings.announcement_link != blank -%}
+          <a class="announcement-bar__link" href="{{ section.settings.announcement_link }}">
+        {%- endif -%}
+        <div class="announcement-bar__inner">{{ section.settings.announcement_text }}</div>
+        {%- if section.settings.announcement_link != blank -%}
+          </a>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endcapture -%}
+
+    <div class="container container--no-max">
+      <div class="announcement-bar__left">
+        {% if section.settings.show_social_icons %}
+          {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x30', container_class: 'desktop-only' %}
+        {% endif %}
+      </div>
+
+      <div class="announcement-bar__middle hola">
+        {{ announcement_html }}
+      </div>
+
+      <div class="announcement-bar__right">
+        {% if section.settings.menu != blank %}
+          <span class="inline-menu ct_inline-menu desktop-only">
+            {% for link in linklists[section.settings.menu].links %}
+              {%- assign link_title = link.title | handle -%}
+              <a class="ddd inline-menu__link announcement-bar__link" {% if link_title == 'track-orders' %}target=”_blank”{% endif %} href="{{ link.url }}">
+                {% if link.title == "Locate Stores" %}
+                <svg class="locate-stores-svg" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4921 11.8035C9.84363 11.8035 9.20972 11.6112 8.67054 11.251C8.13136 10.8907 7.71112 10.3786 7.46296 9.77952C7.2148 9.18041 7.14987 8.52117 7.27638 7.88517C7.40289 7.24916 7.71516 6.66495 8.17369 6.20641C8.63223 5.74787 9.21644 5.4356 9.85245 5.30909C10.4885 5.18258 11.1477 5.24751 11.7468 5.49567C12.3459 5.74383 12.858 6.16407 13.2182 6.70325C13.5785 7.24244 13.7708 7.87634 13.7708 8.52481C13.7698 9.39406 13.424 10.2274 12.8093 10.8421C12.1947 11.4567 11.3613 11.8025 10.4921 11.8035ZM10.4921 6.55758C10.103 6.55758 9.72267 6.67296 9.39916 6.88912C9.07565 7.10528 8.82351 7.41252 8.67461 7.77199C8.52572 8.13145 8.48676 8.52699 8.56267 8.9086C8.63857 9.2902 8.82593 9.64073 9.10105 9.91585C9.37618 10.191 9.7267 10.3783 10.1083 10.4542C10.4899 10.5301 10.8855 10.4912 11.2449 10.3423C11.6044 10.1934 11.9116 9.94125 12.1278 9.61775C12.344 9.29424 12.4593 8.91389 12.4593 8.52481C12.4588 8.00323 12.2514 7.50316 11.8826 7.13434C11.5137 6.76553 11.0137 6.5581 10.4921 6.55758Z" fill="#A02828"/>
+                <path d="M11.6756 18.2764C11.0558 19.0073 9.92815 19.0074 9.30834 18.2764L4.96014 13.1483C4.88328 13.0504 4.80721 12.9518 4.73194 12.8526C3.787 11.6079 3.27653 10.0875 3.27882 8.5247C3.27882 6.61164 4.03877 4.77695 5.39151 3.42421C6.74424 2.07148 8.57894 1.31152 10.492 1.31152C12.405 1.31152 14.2397 2.07148 15.5925 3.42421C16.9452 4.77695 17.7052 6.61164 17.7052 8.5247C17.7075 10.0868 17.1972 11.6065 16.2527 12.8506L16.252 12.8526C16.252 12.8526 16.0553 13.111 16.0258 13.1457L11.6756 18.2764ZM5.77851 12.0624C5.77982 12.0624 5.93195 12.2644 5.96671 12.3077L10.492 17.6448L15.0232 12.3005C15.052 12.2644 15.2061 12.0605 15.2061 12.0605C15.978 11.0435 16.3952 9.80145 16.3937 8.5247C16.3937 6.95947 15.7719 5.45835 14.6651 4.35157C13.5583 3.24479 12.0572 2.62301 10.492 2.62301C8.92676 2.62301 7.42565 3.24479 6.31887 4.35157C5.21209 5.45835 4.5903 6.95947 4.5903 8.5247C4.58893 9.80224 5.0059 11.045 5.77851 12.0624Z" fill="#5E5E5E"/>
+              </svg>
+                {% else %}
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.7161 14.2236H5.49609" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.7161 10.0371H5.49609" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.25109 5.86035H5.49609" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9085 0.75C12.9085 0.75 5.23149 0.754 5.21949 0.754C2.45949 0.771 0.750488 2.587 0.750488 5.357V14.553C0.750488 17.337 2.47249 19.16 5.25649 19.16C5.25649 19.16 12.9325 19.157 12.9455 19.157C15.7055 19.14 17.4155 17.323 17.4155 14.553V5.357C17.4155 2.573 15.6925 0.75 12.9085 0.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {% endif %}
+                <span class="link-title ddd">{{ link.title }}</span>
+              </a>
+            {% endfor %}
+                 <div class="ct_menu_line"></div>
+              <a href="https://track.kushals.com/returns" class="ct_return_center">
+              <img src="https://www.kushals.com/cdn/shop/files/return.svg?v=172130302400"  >
+                <span>Returns Center</span>
+              </a>        
+          </span>
+        {% endif %}
+        {% if section.settings.show_language_selector or section.settings.show_country_selector %}
+          <div class="header-disclosures desktop-only">
+            {% render 'localization', input_prefix: 'annbar' %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+
+{% schema %}
+  {
+    "name": "Announcement bar",
+    "class": "section-announcement-bar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "announcement_show",
+        "label": "Show announcement",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "announcement_text",
+        "label": "Text",
+        "default": "Announce something here"
+      },
+      {
+        "type": "url",
+        "id": "announcement_link",
+        "label": "Link"
+      },
+      {
+        "type": "color",
+        "id": "announcement_bar_col",
+        "label": "Bar",
+        "default": "#4a4a4a"
+      },
+      {
+        "type": "color",
+        "id": "announcement_text_col",
+        "label": "Text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Links"
+      },
+      {
+        "type": "paragraph",
+        "content": "Links, social media icons, and localization options will show in the menu on mobile"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_social_icons",
+        "label": "Show social media links",
+        "default": true
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "info": "This menu won't show dropdown items"
+      },
+      {
+        "type": "header",
+        "content": "Country/Region Selector",
+        "info": "To add a country/region, go to your [payment settings.](/admin/settings/payments)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_country_selector",
+        "label": "Enable country/region selector",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Language Selector",
+        "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_language_selector",
+        "label": "Enable language selector",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

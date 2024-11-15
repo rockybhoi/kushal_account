@@ -1,0 +1,73 @@
+  <style>
+        #heart-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateX(0);
+            z-index: 9999;
+            pointer-events: none;
+          display: block !important;
+        }
+
+        .heart {
+            width: 32px;
+            height: 32px;
+            background: url('https://cdn.shopify.com/s/files/1/0796/1959/files/hh_a237e49b-7fc2-4c53-8fc3-ea0cff5caac4.png?v=1707127422') no-repeat center/contain;
+            position: absolute;
+            animation: floatHeart 2s ease-out forwards;
+          display: block !important;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) scale(0);
+                opacity: 1;
+            }
+            70% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+      <div id="heart-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('click', function(e) {
+                for (let i = 0; i < 5; i++) {
+                    createHeart(e.clientX + Math.random() * 20 , e.clientY + Math.random() * 100);
+                }
+            });
+        });
+
+        function createHeart(x, y) {
+            var heartContainer = document.getElementById('heart-container');
+
+            var heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = x - 20 + 'px'; // Adjusting for the half-width of the heart
+            heart.style.top = y - 80 + 'px'; // Adjusting for the half-height of the heart
+            heartContainer.appendChild(heart);
+
+            setTimeout(function() {
+                heart.remove();
+            }, 2000); // Remove the heart after the animation duration
+        }
+    </script>
+
+
+
+{% schema %}
+  {
+    "name": "CT-Heart-fun-sec",
+    "settings": [],
+    "presets":[{
+      "name": "CT-Heart-fun-sec"
+    }]
+  }
+{% endschema %}

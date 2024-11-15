@@ -1,0 +1,242 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "slideshow_KmaN7p": {
+      "type": "slideshow",
+      "blocks": {
+        "image_6tizk3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/web_store.jpg",
+            "mobile_image": "shopify://shop_images/mobile_store.jpg",
+            "slide_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_6tizk3"
+      ],
+      "custom_css": [
+        ".ct-dots-main {display: none;}",
+        ".container {padding-left: 0; padding-right: 0; margin-top: 0px;}",
+        "@media (max-width: 700px) {.fully-spaced-row--not-mobile {margin-top: 0; margin-bottom: 0; }}"
+      ],
+      "settings": {
+        "img_org": true,
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "section_brecker_img_J7wfFC": {
+      "type": "section-brecker-img",
+      "disabled": true,
+      "custom_css": [
+        ".brecker-img-inner {margin: 50px 0 0 0;}",
+        "@media (max-width: 750px) {.brecker-img-inner {margin: 0px 0 0 0; }}"
+      ],
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099178.png",
+        "text": "",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "cross_page_promos_GYKXt6": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "custom_icon_K9ETeg": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/shop.png",
+            "image_size": "icon",
+            "text": "90+ Stores\nAcross India",
+            "link_url": ""
+          }
+        },
+        "custom_icon_Xrf9rH": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Assured_Quality.svg",
+            "image_size": "icon",
+            "text": "18+ Years Of\nLegacy",
+            "link_url": ""
+          }
+        },
+        "custom_icon_Cnz7tC": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/20lakh_112x112_8faeb0e5-f176-48d5-87b0-a86e5bce9939.svg",
+            "image_size": "icon",
+            "text": "20 Lakh+ Happy\nCustomers",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_icon_K9ETeg",
+        "custom_icon_Xrf9rH",
+        "custom_icon_Cnz7tC"
+      ],
+      "custom_css": [
+        ".rimage-wrapper.lazyload--placeholder {background: none;}",
+        ".icon-with-caption {background: #fbfbfb; border: 1px solid #e5e5e5; border: 0px solid #e5e5e5; background: transparent;}",
+        ".container {opacity: 1; background: linear-gradient( 246deg, #e3e3e3 0%, rgba(227, 227, 227, 0) 103.16% ); margin-top: 0px;}",
+        ".flexible-layout .column,.fixed-layout .column {margin-bottom: 0; padding: 10px 0;}",
+        "@media (max-width: 748px) {.icon-with-caption .icon-with-caption__text {width: 100%; } .flexible-layout {flex-direction: row; }}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "near_store_BA8qVC": {
+      "type": "near-store",
+      "settings": {}
+    },
+    "video_banner_with_mute_button_RNaakk": {
+      "type": "Video-banner-with-mute-button",
+      "settings": {
+        "video": "shopify://files/videos/Store Video_Web.mp4"
+      }
+    },
+    "wedding_collection_MJqRTw": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "box_qkfEkG": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099137.png",
+            "heading": "Earrings",
+            "text": "Every design is an intricate work defining the beauty of our traditional and culture",
+            "link": "shopify://collections/varamahalakshmi-special-earrings",
+            "link_text": "Explore"
+          }
+        },
+        "box_KQh4bT": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099138_26b42a5e-bfde-452b-88e3-4da0cb18af63.png",
+            "heading": "Necklaces",
+            "text": "Adorn your traditional attires with the beauty of Goddess Lakshmi",
+            "link": "shopify://collections/varamahalakshmi-special-necklaces",
+            "link_text": "Explore"
+          }
+        },
+        "box_wbRBgU": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099139.png",
+            "heading": "Bangles",
+            "text": "Embrace the Divine Goddess in you with our handpicked selects of bangles",
+            "link": "shopify://collections/varamahalakshmi-special-bangle-edit",
+            "link_text": "Explore"
+          }
+        },
+        "box_D4Gn7M": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099140.png",
+            "heading": "Maang Tikka",
+            "text": "Made for your traditional moments, adorn yourself in our curated picks",
+            "link": "shopify://collections/varamahalakshmi-special-maang-tikka-edit",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "box_qkfEkG",
+        "box_KQh4bT",
+        "box_wbRBgU",
+        "box_D4Gn7M"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection {margin: 32px 0; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "Explore Godly Designs",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "varamahalakshmi-special-accessories",
+            "product_list": [
+              "antique-finger-ring-166032",
+              "antique-sindhoor-dabi-162711",
+              "silver-temple-tikka-169646",
+              "antique-tikka-172329",
+              "antique-finger-ring-172457"
+            ],
+            "view_text": "View All Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 50px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; } .style_main_head {margin-bottom: 15px; font-weight: 700; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Divine Accessories You Love"
+      }
+    },
+    "section_brecker_img_dgLetJ": {
+      "type": "section-brecker-img",
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099240.png",
+        "text": "This Varamahalakshmi Vratam <br>Adorn the Goddess In You",
+        "link": "shopify://collections/varamahalakshmi-collection",
+        "link-text": "Shop The Collection"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_KmaN7p",
+    "section_brecker_img_J7wfFC",
+    "cross_page_promos_GYKXt6",
+    "near_store_BA8qVC",
+    "video_banner_with_mute_button_RNaakk",
+    "wedding_collection_MJqRTw",
+    "pearls_collection_tabing_7xNG47",
+    "section_brecker_img_dgLetJ"
+  ]
+}

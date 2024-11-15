@@ -1,0 +1,167 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    .image_box_trend img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+  }
+  .image_box_trend {
+    width: 323px;
+    line-height: 0;
+    padding-left: 4px;
+}
+.slider-icon-tr {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    flex-direction: row-reverse;
+}
+  .slider-icon-tr svg {
+    width: 34px;
+    height: 34px;
+    fill: transparent;
+}
+  .tr-next {
+    margin-left: 16px;
+}
+  .tr-prev {
+    margin-right: 16px;
+}
+  .trend-meenakari-lookbook-main {
+    margin-top: -1px;
+    position: relative;
+    background: #fff;
+}
+  .ct-trend-meenakari-head {
+    font-family: Lato;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.10000000149011612px;
+    text-align: center;
+    padding: 7px 0;
+}
+.ct-trend-meenakari-head span {
+    font-family: Rastanty Cortez;
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.10000000149011612px;
+    text-align: left;
+    padding: 0px 0 0 8px;
+}
+  .trend-meenakari-lookbook .last-collection-link-white {
+    height: 40px !important;
+}
+  div#shopify-section-template--16660564869276__trend_meenakari_lookbook_R6yA7J {
+    max-width: 500px;
+    margin: 0 auto;
+}
+  .slider-icon-tr .swiper-button-disabled {
+    opacity: 0.4;
+}
+   .tr-prev ,.tr-next,.tr-prev:focus-visible , .tr-next:focus-visible{
+    outline: inherit !important;
+  }
+</style>
+
+<div class="trend-meenakari-lookbook-main" id="trend-meenakari-lookbook-main">
+  <div class="ct-trend-meenakari-head">Meenakari Sparkles <span>lookbook</span></div>
+  <div class="swiper ct-trend-meenakari">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide image_box_trend">
+          <img src="{{ block.settings.img | image_url: width: 900 }}">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="slider-icon-tr">
+    
+      <div class="tr-next">
+      <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17.1538" cy="17" r="16.3462" transform="rotate(-180 17.1538 17)" stroke="#848484" stroke-width="1.30769"/>
+        <path d="M13.231 7.84619L21.4729 16.3236C21.9765 16.8416 21.9646 17.6698 21.4464 18.1731L13.231 26.1539" stroke="#C41011" stroke-width="1.30769" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="tr-prev">
+      <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17.8462" cy="17" r="16.3462" stroke="#848484" stroke-width="1.30769"/>
+        <path d="M21.769 26.1538L13.5271 17.6764C13.0235 17.1584 13.0354 16.3302 13.5536 15.8269L21.769 7.84612" stroke="#C41011" stroke-width="1.30769" stroke-linecap="round"/>
+      </svg>
+    </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="last-collection-link-white"></div>
+        <div class="last-collection-link">
+          <div class="last-collection-link-content" >
+            These are the <span>Artistic Details</span> that stand against 
+the tests of time. Go bold, confident and gracious 
+with the beauty of <span>Meenakari with Zircons</span>
+          </div>
+
+          <div class="last-collection-link-content_secend" >
+            Explore a Meenakari Sparkle meant for you
+          </div>
+          
+    <a class="last-collection-link-anchor" href="{{ section.settings.last-link }}">Shop the Collection</a>
+  </div>
+
+
+
+
+
+      
+
+
+<script>
+  var tr_slider = new Swiper(".ct-trend-meenakari", {
+    slidesPerView: "auto",
+    spaceBetween: 4,
+    freeMode: false,
+    navigation: {
+      nextEl: ".tr-next",
+      prevEl: ".tr-prev",
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "trend-meenakari-lookbook",
+  "class": "trend-meenakari-lookbook",
+  "settings": [
+    {
+      "type": "url",
+      "id": "last-link",
+      "label": "Last Shop all link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        }
+
+      ]
+    }
+  ],
+  "presets": [{
+  "name": "trend-meenakari-lookbook"
+  }
+  ]
+}
+{% endschema %}

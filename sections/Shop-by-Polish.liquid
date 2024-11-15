@@ -1,0 +1,472 @@
+<style>
+  ul.tabs {
+      border-bottom: 0px solid #DDDDDD;
+      padding: 0;
+      display: flex;
+      margin: 47px 0 0 0;
+  }
+.tab_main_perent {
+    display: flex;
+}
+
+  
+  .tabs-main ul.tabs li {
+      margin: 0 8px 0 0;
+  }
+    ul.tabs li:last-child {
+      margin: 0 0px 0 0;
+  }
+
+
+  ul.tabs:before, ul.tabs:after {
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+  }
+  ul.tabs:after {
+    clear: both;
+  }
+    .coll_head {
+      color: #000;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 1.7px;
+      margin-top: 80px;
+  }
+   .custom_tabing .container {
+      padding-top: 15px;
+  }
+  .poltab_main {
+    display: flex;
+}
+  .poltab_main a {
+    width: 100%;
+    display: inline-block;
+    max-width: 16%;
+    margin-right:12px;
+  }
+  .poltab_main a:last-child {
+    margin-right:0px;
+}
+  .poltab_main a img {
+    width: 100%;
+    border-radius: 100%;
+    border:3px solid #CF2228;
+}
+  .poltab_main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.tabs-main  ul.tabs li a {
+        display: inline-block;
+    text-align: center;
+    padding: 9px 45px;
+    white-space: pre;
+    width: auto;
+    border: 0.5px solid #CF2228;
+    font-size: 20.002px;
+    font-style: normal;
+    color: #CF2228;
+    font-weight: 600;
+    line-height: 20.002px;
+    letter-spacing: 1.7px;
+}
+ .tabs-main ul.tabs li a.active {
+    border-color: #CF2228;
+    border: 0.5px solid #CF2228 !important;
+    background: #CF2228;
+    color: #fff !important;
+}
+  .poltab-head {
+    color: #616161;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+  .polish_mainn ul.tabs {
+    margin-bottom: 40px !important;
+    margin-top: 20px !important;
+}
+  .polish_mainn  .poltab_main a {
+    max-width: 150px;
+}
+  @media(max-width:750px){
+
+    .poltab_main {
+    flex-wrap: wrap;
+}
+    .poltab_main a {
+        max-width: calc(25% - 8px) !important;
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+    .poltab_main a:nth-child(4){
+    margin-right: 0px; 
+    }
+        .poltab_main a:last-child{
+    margin-right: 0px; 
+    }
+    .poltab_main a:nth-child(5),.poltab_main a:nth-child(6),.poltab_main a:nth-child(7),.poltab_main a:nth-child(8){
+    margin-top: 30px; 
+    }
+    .poltab-head {
+    font-size: 12px;
+    }
+    .poltab_main {
+    justify-content: center;
+}
+  }
+</style>
+
+<div class="tabs-main polish_mainn">
+  <div class="container" >
+  <div class="coll_head">{{ section.settings.title }}</div>
+
+  <div class="tab_main_perent">  
+  <ul class="tabs">
+    {% for block in section.blocks %}
+      <li>
+        <a href="#poltab-{{ forloop.index }}">{{ block.settings.maintitle }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+    </div>
+    
+
+  {% for block in section.blocks %}
+    <div id="poltab-{{ forloop.index }}" class="poltab_main">
+      
+      <a href="{{ block.settings.url1.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image1 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image1.width }}"
+          height="{{ block.settings.image1.height }}"
+          alt="{{ block.settings.image1.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title1 }}</div>
+      </a>
+      <a href="{{ block.settings.url2.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image2 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image2.width }}"
+          height="{{ block.settings.image2.height }}"
+          alt="{{ block.settings.image2.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title2 }}</div>
+      </a>
+      <a href="{{ block.settings.url3.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image3 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image3.width }}"
+          height="{{ block.settings.image3.height }}"
+          alt="{{ block.settings.image3.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title3 }}</div>
+      </a>
+      <a href="{{ block.settings.url4.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image4 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image4.width }}"
+          height="{{ block.settings.image4.height }}"
+          alt="{{ block.settings.image4.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title4 }}</div>
+      </a>
+      <a href="{{ block.settings.url5.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image5 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image5.width }}"
+          height="{{ block.settings.image5.height }}"
+          alt="{{ block.settings.image5.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title5 }}</div>
+      </a>
+      <a href="{{ block.settings.url6.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image6 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image6.width }}"
+          height="{{ block.settings.image6.height }}"
+          alt="{{ block.settings.image6.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title6 }}</div>
+      </a>
+    {% if block.settings.image7 !=blank %}
+      <a href="{{ block.settings.url7.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image7 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image7.width }}"
+          height="{{ block.settings.image7.height }}"
+          alt="{{ block.settings.image7.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title7 }}</div>
+      </a>
+      {% endif %}
+
+      <a href="{{ block.settings.url8.url }}" class="poltab">
+        <img
+          loading="lazy"
+          src="{{ block.settings.image8 | img_url: '1024x1024' }}"
+          width="{{ block.settings.image8.width }}"
+          height="{{ block.settings.image8.height }}"
+          alt="{{ block.settings.image8.alt | escape }}"
+          class="rimage__image"
+        >
+        <div class="poltab-head">{{ block.settings.title8 }}</div>
+      </a>
+    </div>
+  {% endfor %}
+
+    </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+
+
+    $('ul.tabs').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Shop-by-Polish",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    }
+
+  ],
+  "blocks":[{
+  "type":"Collection",
+  "name":"Collection",
+  "limit":7,
+  "settings":[
+    {
+      "type": "text",
+      "id": "maintitle",
+      "label": "Main Tab Title"
+    },
+    {
+      "type":"header",
+      "content":"Collection 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url1",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 2"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url2",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 3"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url3",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 4"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title4",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url4",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 5"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image5",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title5",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url5",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 6"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image6",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title6",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url6",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 7"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image7",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title7",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url7",
+      "label": "Collection"
+    },
+    {
+      "type":"header",
+      "content":"Collection 8"
+    },
+
+
+    {
+      "type": "image_picker",
+      "id": "image8",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title8",
+      "label": "Collection Name"
+    },
+    {
+      "type": "collection",
+      "id": "url8",
+      "label": "Collection"
+    }
+
+
+    
+  ]
+}],
+  "presets":[{
+  "name": "Shop-by-Polish"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,30 @@
+<div class="collection-banner_inner">
+  <div class="container">
+    <img
+      class="ct_collection_banner"
+      src="{{ section.settings.img | image_url: width: 1080 }}"
+      width="{{ section.settings.img.width }}"
+      height="{{ section.settings.img.height }}"
+    >
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "collection-banner-img",
+    "settings": [
+       {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Banner Image"
+    }
+    ],
+     "presets": [
+    {
+          "name": "collection-banner-img"
+    }
+  ]
+    
+  }
+{% endschema %}

@@ -1,0 +1,157 @@
+<style>
+ .mobile-product-list .collection-list-block .product-info .product-block__title {
+    font-size: {{ section.settings.mbl_title_link }}px; 
+  }
+</style>
+<div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.use_alt_bg %}use-alt-bg{% endif %} mobile-only" data-section-type="featured-collections">
+  <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %} strongly-spaced-row">
+    <div class="{% if section.settings.enable_carousel %}collection-slider{% endif %}">
+      <h2 class="hometitle h1-style align-center has-paging desktop-only" data-cc-animate data-cc-animate-delay="0.3s">
+        <a class="has-paging__title" href="{{ collection.url }}"><span>{{ section.settings.title | escape }}</span></a>
+        <div class="collection_slider-box">
+          <div class="collection-chevron-icon">
+            {% if section.settings.enable_carousel %}<a class="prev" href="#">{% render 'svg-chevron-left' %}</a>{% endif %}
+            {% if section.settings.enable_carousel %}<a class="next" href="#">{% render 'svg-chevron-right' %}</a>{% endif %}
+          </div>
+        </div>
+      </h2>
+      <div class="collection-listing main-collection-list" data-cc-animate="cc-fade-in-up">
+        <div class="mobile-product-list product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.coll_grid_image_shape }} {% if section.settings.enable_carousel %}carousel{% endif %}">
+          {% if section.blocks.size > 0 %}
+            {%- liquid
+              if settings.coll_grid_image_shape == 'portrait-23'
+                assign chosen_aspect_ratio = 0.67
+              elsif settings.coll_grid_image_shape == 'portrait-45'
+                assign chosen_aspect_ratio = 0.8
+              elsif settings.coll_grid_image_shape == 'square'
+                assign chosen_aspect_ratio = 1.0
+              elsif settings.coll_grid_image_shape == 'landscape-54'
+                assign chosen_aspect_ratio = 1.25
+              elsif settings.coll_grid_image_shape == 'landscape-32'
+                assign chosen_aspect_ratio = 1.50
+              elsif settings.coll_grid_image_shape == 'tallest'
+                assign chosen_aspect_ratio = 999
+                for block in section.blocks
+                  assign collection = block.settings.image
+                  if collection != blank
+                    assign collection_image = block.settings.image
+                    if collection_image.aspect_ratio < chosen_aspect_ratio
+                      assign chosen_aspect_ratio = collection_image.aspect_ratio
+                    endif
+                  endif
+                endfor
+              else
+                assign chosen_aspect_ratio = 0
+                for block in section.blocks
+                  assign collection = block.settings.image
+                  if collection != blank
+                    assign collection_image = block.settings.image
+                    if collection_image.aspect_ratio > chosen_aspect_ratio
+                      assign chosen_aspect_ratio = collection_image.aspect_ratio
+                    endif
+                  endif
+                endfor
+              endif
+            -%}
+
+            {% for block in section.blocks %}
+              {% assign collection = block.settings.image %}
+
+              {% unless collection == blank %}
+                {% render 'collection-link', collection: collection, custom_attrs: block.shopify_attributes, manual_image_load: section.settings.enable_carousel, custom_image: block.settings.image, custom_text: block.settings.text, custom_url: block.settings.link, custom_aspect_ratio: chosen_aspect_ratio %}
+              {% else %}
+                {% render 'onboarding-collection-block', forloop: forloop %}
+              {% endunless %}
+            {% endfor %}
+
+          {% else %}
+
+            {% for i in (1..6) %}
+              {% render 'onboarding-collection-block', forloop: forloop %}
+            {% endfor %}
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Collection link mobile",
+    "class": "section-collection-link-mobile collection-list-mobile",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_carousel",
+        "label": "Enable carousel",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "grid",
+        "label": "Collections per row desktop",
+        "min": 2,
+        "max": 6,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "checkbox",
+        "id": "use_alt_bg",
+        "label": "Use alternate section color",
+        "default": true
+      },
+	  {
+        "type": "range",
+        "id": "mbl_title_link",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Title Font Size",
+        "default": 16
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+	      {
+            "type": "text",
+            "id": "text",
+            "label": "Title"
+          },
+		  {
+            "type":"url",
+            "id":"link",
+            "label":"Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection link mobile",
+        "settings": {
+        },
+        "blocks": [
+        ]
+      }
+    ]
+  }
+{% endschema %}

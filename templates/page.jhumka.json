@@ -1,0 +1,490 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "banner_with_button_ifeC9H": {
+      "type": "banner_with_button",
+      "settings": {
+        "desk": "shopify://shop_images/Feature_banner_5.jpg",
+        "mobile": "shopify://shop_images/jumkha_banner_70e1deea-8479-4eb6-8684-95b9714b233c.png",
+        "link": "shopify://collections/jhumkas",
+        "link_text": "Shop The Collection"
+      }
+    },
+    "round_collection_box_JRmBCB": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_crjEbi": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/antique-earring-ruby-green-gold-antique-earring-151815-38464339148956_2ee5732a-4d53-436b-b6dc-d96d59f15ab0.jpg",
+            "link": "shopify://collections/gold-jhumka",
+            "title": "Gold"
+          }
+        },
+        "collection_kzQBaq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/silver-earring-ruby-green-oxidised-silver-92-5-silver-earring-158289-37669897371804_6c194475-b9b2-4ca6-a194-13bc8909dd3c.jpg",
+            "link": "shopify://collections/silver-jhumkas",
+            "title": "Silver"
+          }
+        },
+        "collection_Vgnjbm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-rose-gold-zircon-earring-156610-37668143366300_f2a80fd3-003a-4c55-afbc-e3cc61df154c.jpg",
+            "link": "shopify://collections/rose-gold-jhumkas",
+            "title": "Rose Gold"
+          }
+        },
+        "collection_rFrhCN": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/temple-earring-ruby-oxidised-gold-silver-temple-earring-160632-37085562831004_2f38189e-076d-4665-a561-fbea10fd06b6.jpg",
+            "link": "shopify://collections/temple-jhumkas",
+            "title": "Traditional"
+          }
+        },
+        "collection_NG7nnJ": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-rose-gold-zircon-earring-160400-37672376074396_fcb1c085-7e8e-4af7-b51d-0301ab6b4e6e.jpg",
+            "link": "shopify://collections/stellar-zircon-jhumkas",
+            "title": "Zircon"
+          }
+        },
+        "collection_9rCYiq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/kundan-earring-white-gold-kundan-earring-151635-37651506069660_b5007a30-142c-4176-a47b-139cc8d3178e.jpg",
+            "link": "shopify://collections/kundan-jhumkas",
+            "title": "Kundan"
+          }
+        },
+        "collection_rLD93B": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/1714556248775_1714556245381_167233_402964_K_943ea593-7cac-47cf-99ea-ae152f95cb3e.jpg",
+            "link": "shopify://collections/trendy-jhumkas",
+            "title": "Trendy"
+          }
+        },
+        "collection_iCNQf3": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/zircon-earring-white-gold-zircon-earring-155782-37651791577244_66eecbf8-1c90-40e5-9b37-58d412169dc2.jpg",
+            "link": "shopify://collections/jhumkas-with-matil",
+            "title": "With Matil"
+          }
+        }
+      },
+      "block_order": [
+        "collection_crjEbi",
+        "collection_kzQBaq",
+        "collection_Vgnjbm",
+        "collection_rFrhCN",
+        "collection_NG7nnJ",
+        "collection_9rCYiq",
+        "collection_rLD93B",
+        "collection_iCNQf3"
+      ],
+      "settings": {
+        "title": "Shop By Style"
+      }
+    },
+    "new_shop_the_look_VUwBH6": {
+      "type": "New-shop-the-look",
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "img_icon_banner_mob": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "head": "Shop The Look",
+        "sec": "An Ode to the Past",
+        "sec_text": "A part of our heritage and rich cultural heritage, add a style of the past in your attire with our curated 92.5 Silver Temple Jhumkas.",
+        "product_list": [
+          "silver-temple-earring-165516",
+          "silver-temple-earring-167026",
+          "silver-temple-earring-168243",
+          "silver-temple-earring-161863"
+        ],
+        "coll_name": "Shop Similar"
+      }
+    },
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534": {
+      "type": "ct-review",
+      "blocks": {
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "A pretty piece of craftmanship. Its not yellowish matte finish, but its golden antique finish. Worth the price."
+          }
+        },
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-170488-38144462586012.jpg",
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "Good quality and beautiful jumka. Love it"
+          }
+        },
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/temple-earring-ruby-oxidised-gold-silver-temple-earring-168074-38779825848476.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "This has pearls as well as red crystals. It's not heavy for its look and just quite traditional and festive due to coin pattern."
+          }
+        },
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-green-gold-antique-earring-169816-38779138211996.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Very nice pair of earrings, and I loved them. I can wear them with a sari as well as a salwar. Thank you Kushal!"
+          }
+        },
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-169742-37539908944028.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I liked the fusion of elephants and cz stones and the gold finish like real gold and elephant detailing is very nice.."
+          }
+        },
+        "fbbff485-6f70-4283-a0c8-495faddc4c17": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-green-gold-antique-earring-157659-38491002667164.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "The packing was very nice and safe. Look good and no damage. Stones are bright and not so much weight. Elegant."
+          }
+        },
+        "5be492c4-776d-4b02-b72c-08bdba684c29": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-167836-37886605721756.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "It's a wonderful jimikki very nice one.. Thanks"
+          }
+        },
+        "f53e78af-618a-433d-a3be-e20520f945b8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-green-gold-antique-earring-162071-37150954094748.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Looks very pleasing. Very nice product. Quality is too good.\nworth to buy."
+          }
+        },
+        "review_rQwbMp": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-earring-zircon-earring-163872-37680665198748.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Very beautiful &amp;cute earings,seems to very luxurious.. Thank you khushal team..."
+          }
+        },
+        "review_KAAU8L": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-167519-36954933690524.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I have bought a lot of jewelry from Kushal's and have always been happy with the quality."
+          }
+        }
+      },
+      "block_order": [
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735",
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b",
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed",
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e",
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f",
+        "fbbff485-6f70-4283-a0c8-495faddc4c17",
+        "5be492c4-776d-4b02-b72c-08bdba684c29",
+        "f53e78af-618a-433d-a3be-e20520f945b8",
+        "review_rQwbMp",
+        "review_KAAU8L"
+      ],
+      "settings": {}
+    },
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "12edfc74-7abe-4811-9f7b-933a65332d4c": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Floral_earring_1.jpg",
+            "heading": "Floral",
+            "text": "A share of nature in your jhumkas, arranged in a pleasing shine",
+            "link": "shopify://collections/floral-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "eaf55712-cda7-455b-af17-4a92a0fa7491": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/antique-earring_a3bca9e9-3b23-4651-8b2e-55ebd4a67389.jpg",
+            "heading": "Lakshmi",
+            "text": "Auspicious selections for a blessed dangler",
+            "link": "shopify://collections/lakshmi-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "0748d546-8194-47f9-bb92-553a0cbdd539": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Peacock_Earring_1.jpg",
+            "heading": "Peacock",
+            "text": "The Flair of feathered elegance in a signature ethnic motif",
+            "link": "shopify://collections/peacock-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "760699d3-8a82-44aa-83db-85a1f4fc9159": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/ganesha_earring_1.jpg",
+            "heading": "Ganesha",
+            "text": "Let the wisdom of elephant-headed God shine through your Jhumkas",
+            "link": "shopify://collections/ganesha-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "49baafbf-d729-4708-a6f2-e99ad55347f6": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_1.png",
+            "heading": "Polki",
+            "text": "For the glimmering glow of raw-cut authenticity",
+            "link": "shopify://collections/kundan-jewellery",
+            "link_text": "Explore"
+          }
+        },
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_2.png",
+            "heading": "Meenakari",
+            "text": "Artistry etched through a spectrum of vibrancy",
+            "link": "shopify://collections/meenakari",
+            "link_text": "Explore"
+          }
+        },
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_7.png",
+            "heading": "Elephant",
+            "text": "Embrace wisdom through elephant details",
+            "link": "shopify://collections/elephant-elegance",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "12edfc74-7abe-4811-9f7b-933a65332d4c",
+        "eaf55712-cda7-455b-af17-4a92a0fa7491",
+        "0748d546-8194-47f9-bb92-553a0cbdd539",
+        "760699d3-8a82-44aa-83db-85a1f4fc9159",
+        "49baafbf-d729-4708-a6f2-e99ad55347f6",
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee",
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232"
+      ],
+      "custom_css": [
+        ".Wedding-Collection-head {font-family: \"Lato\"; padding-bottom: 20px; margin-top: 40px; font-size: 29px; color: rgba(69, 69, 69, 1);}",
+        ".Wedding-Collection {margin-bottom: 50px;}",
+        "@media (max-width: 750px) {.Wedding-Collection {margin-bottom: 45px; } .Wedding-Collection-head {margin-top: 15px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "Trending Jhumka Styles",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "new_shop_the_look_VUwBH67": {
+      "type": "New-shop-the-look",
+      "disabled": true,
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "img_icon_banner_mob": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "head": "Shop The Look",
+        "sec": "Collection Name",
+        "sec_text": "Picture yourself basking in the sun's golden rays, sand between your toes, and laughter filling the air. Introducing our \"Vibe in Pearls\" Collection - Trendy Picks for your Vacay Style!",
+        "product_list": [
+          "92-5-silver-bracelet-156741",
+          "92-5-silver-bracelet-157412",
+          "92-5-silver-bracelet-157413",
+          "92-5-silver-bracelet-157414"
+        ],
+        "coll_name": "Collection Name"
+      }
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "best-seller-jhumkas",
+            "product_list": [
+              "antique-earring-138938",
+              "antique-earring-164104",
+              "antique-earring-160549",
+              "antique-earring-160552",
+              "antique-earring-139996"
+            ],
+            "view_text": "View All Jhumkas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 60px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Best Sellers"
+      }
+    },
+    "wedding_banner_arpEtM": {
+      "type": "wedding-banner",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "image": "shopify://shop_images/6272_x_2121.jpg",
+        "image_sec": "shopify://shop_images/1560_X_756.jpg"
+      }
+    },
+    "wsw_tabing_4UdYPL": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_izRxnX": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-antique-jhumkas",
+            "heading": "Antique",
+            "heading1": "Traditional • Gilded • Festive",
+            "sub": "For an adorable puja outfit, go for none other than a pair of <em><strong>antiques</strong></em>!",
+            "img1": "shopify://shop_images/antique-earring_2.jpg",
+            "img2": "shopify://shop_images/antique-earring_2.jpg"
+          }
+        },
+        "tabing_q34MyV": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-zircon-jhumkas",
+            "heading": "Zircon",
+            "heading1": "Shimmering • Unique • Bold",
+            "sub": "From statements pieces to floral elegance, find it all in <em><strong>stellar zircons!</strong></em>",
+            "img1": "shopify://shop_images/zircon-earring_1.jpg",
+            "img2": "shopify://shop_images/zircon-earring_1.jpg"
+          }
+        },
+        "tabing_D8UnEN": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-temple-jhumkas",
+            "heading": "Temple",
+            "heading1": "Auspicious • Elite  • Ethereal",
+            "sub": "Behold the presence of <em><strong>auspicious motifs</strong></em> through Temple jhumkas",
+            "img1": "shopify://shop_images/temple-earring_2.jpg",
+            "img2": "shopify://shop_images/temple-earring_2.jpg"
+          }
+        },
+        "tabing_9inVaH": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-silver-jhumkas",
+            "heading": "Silver",
+            "heading1": "Boho • Vintage •  Celebratory",
+            "sub": "92.5 Oxidised Silver for the <em><strong>vintage appeal!</strong></em>",
+            "img1": "shopify://shop_images/oxidised-silver_1.jpg",
+            "img2": "shopify://shop_images/oxidised-silver_1.jpg"
+          }
+        },
+        "tabing_ieGpcn": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-kundan-jhumkas",
+            "heading": "Kundan",
+            "heading1": "Regal • Historic • Artistic",
+            "sub": "For the ultimate queenly aesthetics, style a <em><strong>polki-studded wonder!</strong></em>",
+            "img1": "shopify://shop_images/kundan-earring_1.jpg",
+            "img2": "shopify://shop_images/kundan-earring_1.jpg"
+          }
+        },
+        "tabing_HKnBy3": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-popular-trendy-jhumkas",
+            "heading": "Trendy",
+            "heading1": "Edgy • Unique • Casual",
+            "sub": "Your daily kurtis need this boost of <em><strong>desi earrings!</strong></em>",
+            "img1": "shopify://shop_images/trendy-earring.jpg",
+            "img2": "shopify://shop_images/trendy-earring.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_izRxnX",
+        "tabing_q34MyV",
+        "tabing_D8UnEN",
+        "tabing_9inVaH",
+        "tabing_ieGpcn",
+        "tabing_HKnBy3"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "Most Desired Jhumkas"
+      }
+    },
+    "pearl_footer_iJpGnN": {
+      "type": "pearl-footer",
+      "settings": {
+        "text": "Effortlessly vintage and just as lively, <br> these are the jhumkas that will give your <br> ethnic style a reminiscence of traditional lore.",
+        "link": "/collections/vibe-in-pearls"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_with_button_ifeC9H",
+    "round_collection_box_JRmBCB",
+    "new_shop_the_look_VUwBH6",
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534",
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1",
+    "new_shop_the_look_VUwBH67",
+    "pearls_collection_tabing_7xNG47",
+    "wedding_banner_arpEtM",
+    "wsw_tabing_4UdYPL",
+    "pearl_footer_iJpGnN"
+  ]
+}

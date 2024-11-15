@@ -1,0 +1,564 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "swiper_js_yxRUtE": {
+      "type": "Swiper-js",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "ct_mother_day_header_JKBRFG": {
+      "type": "ct-mother-day-header",
+      "settings": {
+        "img": "shopify://shop_images/MD_4x-8_1.png"
+      }
+    },
+    "ct_video_sec_qXXDrT": {
+      "type": "CT-Video-Sec",
+      "custom_css": [
+        "@media (min-width: 750px) {.my_video_background_banner {display: none; }}"
+      ],
+      "settings": {
+        "link": "shopify://collections/mothers-day",
+        "video": "shopify://files/videos/Square StopMotion_Web.mp4",
+        "mob-video": "shopify://files/videos/Square StopMotion_Web.mp4",
+        "autoplay": true
+      }
+    },
+    "wsw_tabing_4UdYPL": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_izRxnX": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/mothers-day-special-antique-new-arrivals",
+            "heading": "Antique",
+            "heading1": "Classy • Elite • Unique",
+            "sub": "",
+            "img1": "shopify://shop_images/Frame_48098314.png",
+            "img2": "shopify://shop_images/Frame_48098314.png"
+          }
+        },
+        "tabing_q34MyV": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/mothers-day-special-zircon-new-arrivals",
+            "heading": "Zircon",
+            "heading1": "Enticing • Modish • Elegant",
+            "sub": "",
+            "img1": "shopify://shop_images/Frame_48098313.png",
+            "img2": "shopify://shop_images/Frame_48098313.png"
+          }
+        },
+        "tabing_HKnBy3": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/mothers-day-special-kundan-new-arrivals",
+            "heading": "Kundan",
+            "heading1": "Queenly • Lavish • Majestic",
+            "sub": "",
+            "img1": "shopify://shop_images/Frame_48098312_2.png",
+            "img2": "shopify://shop_images/Frame_48098312_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_izRxnX",
+        "tabing_q34MyV",
+        "tabing_HKnBy3"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": true,
+        "idd": "",
+        "heading": "Shop New<span></span>"
+      }
+    },
+    "ct_banner_c3fGaF": {
+      "type": "CT-Banner",
+      "disabled": true,
+      "custom_css": [
+        ".CT-Banner-main {text-align: center;}"
+      ],
+      "settings": {
+        "link": "",
+        "dimg": "shopify://shop_images/WA_Banner_-_Cart_1.png",
+        "mimg": "shopify://shop_images/Mobile_banner_2_a3859fab-b679-4fb6-8269-65bfd20d1980.webp",
+        "video": "https://cdn.shopify.com/videos/c/o/v/542e9c180e6f4489af34be65e6d963b7.mp4"
+      }
+    },
+    "ct_mother_shop_product_tabbing_yJrVUk": {
+      "type": "ct_mother_shop_product_tabbing",
+      "blocks": {
+        "collection_XzNFrn": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Necklace",
+            "collection": "ravishing-necklace-sets-for-mothers-day",
+            "product_list": [
+              "antique-necklace-143396",
+              "antique-necklace-162138",
+              "zircon-necklace-170759",
+              "kundan-necklace-170771",
+              "zircon-necklace-163779",
+              "kundan-necklace-167544",
+              "zircon-necklace-167844",
+              "zircon-necklace-169552",
+              "zircon-necklace-169333",
+              "zircon-necklace-167825"
+            ]
+          }
+        },
+        "collection_M7Czcy": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Earrings",
+            "collection": "mothers-day-special-earrings-edition",
+            "product_list": [
+              "kundan-earring-167065",
+              "antique-earring-167873",
+              "antique-earring-165100",
+              "kundan-earring-167064",
+              "kundan-earring-161654",
+              "kundan-earring-167063",
+              "zircon-earring-169411",
+              "zircon-earring-169465",
+              "antique-earring-163395",
+              "antique-earring-167995"
+            ]
+          }
+        },
+        "collection_QBzRAQ": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Bangles",
+            "collection": "enchanting-mothers-day-bangles",
+            "product_list": [
+              "zircon-bangle-156639",
+              "kundan-bangle-167781",
+              "zircon-bangle-152695",
+              "zircon-bangle-155459",
+              "antique-bangle-166017",
+              "zircon-bangle-160469",
+              "antique-bangle-160747",
+              "kundan-bangle-163998",
+              "zircon-bangle-160465",
+              "zircon-bangle-160128"
+            ]
+          }
+        },
+        "collection_VmbkjJ": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Kadas",
+            "collection": "kadas-for-her-ravishing-styles",
+            "product_list": [
+              "zircon-kada-170843",
+              "zircon-kada-173144",
+              "antique-kada-173500",
+              "zircon-kada-163935",
+              "zircon-kada-163934",
+              "kundan-kada-165839",
+              "antique-kada-172370",
+              "zircon-kada-169378",
+              "zircon-kada-169384",
+              "zircon-kada-169379"
+            ]
+          }
+        },
+        "collection_qxmPa8": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Rings",
+            "collection": "statement-sparkles-of-mothers-day-rings",
+            "product_list": [
+              "kundan-finger-ring-167055",
+              "zircon-finger-ring-169506",
+              "zircon-finger-ring-169885",
+              "antique-finger-ring-166030",
+              "zircon-finger-ring-163967",
+              "zircon-finger-ring-163964",
+              "antique-finger-ring-166022",
+              "zircon-finger-ring-164121",
+              "zircon-finger-ring-160390",
+              "kundan-finger-ring-167061"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "collection_XzNFrn",
+        "collection_M7Czcy",
+        "collection_QBzRAQ",
+        "collection_VmbkjJ",
+        "collection_qxmPa8"
+      ],
+      "custom_css": [
+        ".tab_main_perent-mother {display: flex;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "mother": true,
+        "id": "",
+        "sec": "",
+        "title": "Shop By Products",
+        "collection": "",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "cross_page_promos_7p3yWh": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "custom_icon_gtaPh8": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1.png",
+            "image_size": "icon",
+            "text": "Handpicked For \nMother's Day",
+            "link_url": ""
+          }
+        },
+        "custom_icon_kHLibJ": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-1.png",
+            "image_size": "icon",
+            "text": "Fine\nDesigns",
+            "link_url": ""
+          }
+        },
+        "custom_icon_MbBQLw": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Free-Shipping-SVG_a637e216-9b53-4aff-a893-fd4171199058.png",
+            "image_size": "icon",
+            "text": "Express\nDelivery",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_icon_gtaPh8",
+        "custom_icon_kHLibJ",
+        "custom_icon_MbBQLw"
+      ],
+      "custom_css": [
+        ".rimage-wrapper.lazyload--placeholder {background: none;}",
+        ".icon-with-caption {background: #fbfbfb; border: 1px solid #e5e5e5; border: 0px solid #e5e5e5; background: transparent;}",
+        ".container {opacity: 0.7; background: linear-gradient( 245.73deg, #eae9f6 0%, rgba(234, 233, 246, 0) 103.16% ); margin-top: 20px;}",
+        ".flexible-layout .column,.fixed-layout .column {margin-bottom: 0; padding: 10px 0;}",
+        "@media (max-width: 748px) {.icon-with-caption .icon-with-caption__text {width: 100%; } .flexible-layout {flex-direction: row; }}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "ct_mother_shop_new_JJBjWL": {
+      "type": "ct_mother_shop_new",
+      "blocks": {
+        "tabing_6xbWHX": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections",
+            "heading": "Antique",
+            "heading1": "Traditional  Mysterious  Feminine",
+            "sub": "Embodies the elegance and craftsmanship of bygone eras",
+            "img1": "shopify://shop_images/754a9ff6f804256f51bb299835c32d46.png",
+            "img2": "shopify://shop_images/754a9ff6f804256f51bb299835c32d46.png"
+          }
+        },
+        "tabing_MKaUny": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/2022-92-5-silver-office-collection",
+            "heading": "Zircon",
+            "heading1": "Traditional  Mysterious  Feminine",
+            "sub": "Embodies the elegance and craftsmanship of bygone eras",
+            "img1": "shopify://shop_images/754a9ff6f804256f51bb299835c32d46.png",
+            "img2": "shopify://shop_images/754a9ff6f804256f51bb299835c32d46.png"
+          }
+        },
+        "tabing_CGkWnR": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/92-5-changeable-bangles",
+            "heading": "Trendy",
+            "heading1": "Traditional  Mysterious  Feminine",
+            "sub": "Embodies the elegance and craftsmanship of bygone eras",
+            "img1": "shopify://shop_images/754a9ff6f804256f51bb299835c32d46.png",
+            "img2": "shopify://shop_images/754a9ff6f804256f51bb299835c32d46.png"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_6xbWHX",
+        "tabing_MKaUny",
+        "tabing_CGkWnR"
+      ],
+      "disabled": true,
+      "settings": {
+        "stylee": true,
+        "idd": "shop_new",
+        "heading": "Shop New"
+      }
+    },
+    "ct_mother_shop_product_tabbing_jnr4gg": {
+      "type": "ct_mother_shop_product_tabbing",
+      "blocks": {
+        "collection_fnnqLR": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Necklace",
+            "collection": "mothers-day-best-sellers-necklace",
+            "product_list": [
+              "antique-necklace-160783",
+              "antique-necklace-152608",
+              "antique-necklace-165547",
+              "zircon-necklace-170528",
+              "antique-necklace-167975",
+              "zircon-necklace-169897",
+              "antique-necklace-158110",
+              "kundan-necklace-168899",
+              "antique-necklace-165093",
+              "antique-necklace-165022"
+            ]
+          }
+        },
+        "collection_3UyhDX": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Earring",
+            "collection": "mothers-day-best-sellers-earrings",
+            "product_list": [
+              "antique-earring-155742",
+              "antique-earring-165012",
+              "antique-earring-161431",
+              "antique-earring-167941",
+              "antique-earring-158644",
+              "antique-necklace-169789",
+              "antique-earring-159961",
+              "antique-earring-160813",
+              "antique-earring-160720",
+              "antique-earring-167873"
+            ]
+          }
+        },
+        "collection_WcryTG": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Bangle",
+            "collection": "mothers-day-best-sellers-bangles",
+            "product_list": [
+              "antique-bangle-165496",
+              "zircon-bangle-160468",
+              "zircon-bangle-156639",
+              "antique-bangle-167841",
+              "kundan-bangle-167781",
+              "kundan-bangle-167038",
+              "antique-bangle-164067",
+              "antique-bangle-164068",
+              "antique-bangle-155993",
+              "zircon-bangle-152695"
+            ]
+          }
+        },
+        "collection_cgEU7X": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Kada",
+            "collection": "mothers-day-best-sellers-kada",
+            "product_list": [
+              "kundan-kada-164001",
+              "antique-kada-169843",
+              "zircon-kada-169882",
+              "zircon-kada-169881",
+              "zircon-kada-163934",
+              "zircon-kada-170361",
+              "zircon-kada-163924",
+              "zircon-kada-170356",
+              "antique-kada-170781",
+              "zircon-kada-171216"
+            ]
+          }
+        },
+        "collection_C46iiC": {
+          "type": "Collection",
+          "settings": {
+            "coll_name": "Rings",
+            "collection": "mothers-day-best-sellers-finger-rings",
+            "product_list": [
+              "zircon-finger-ring-160396",
+              "antique-finger-ring-166030",
+              "antique-finger-ring-153776",
+              "zircon-finger-ring-160395",
+              "antique-finger-ring-167772",
+              "antique-finger-ring-166031",
+              "kundan-finger-ring-163377",
+              "zircon-finger-ring-157729",
+              "zircon-finger-ring-163967",
+              "antique-finger-ring-166029"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "collection_fnnqLR",
+        "collection_3UyhDX",
+        "collection_WcryTG",
+        "collection_cgEU7X",
+        "collection_C46iiC"
+      ],
+      "custom_css": [
+        ".tab_main_perent-mother {display: flex;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "mother": true,
+        "id": "best_seller",
+        "sec": "",
+        "title": "Shop Bestsellers",
+        "collection": "",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "136af06e-1048-4f58-b710-c8708d3c2bdc": {
+      "type": "Wedding-Collection-Video",
+      "blocks": {
+        "4b868ed3-7636-44d3-8bf7-947279e6ebb0": {
+          "type": "Box",
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/Frame_48098309.png",
+            "heading": "Antique",
+            "text": "",
+            "link": "shopify://collections/allures-of-mothers-day-antiques",
+            "link_text": "Explore"
+          }
+        },
+        "7eac715a-3429-4b85-b2e9-2c5d84fd692f": {
+          "type": "Box",
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/Frame_48098310_b51ca473-8fa1-49f7-a6ba-7db71a656c09.png",
+            "heading": "Zircon",
+            "text": "",
+            "link": "shopify://collections/dazzling-zircons-for-mothers-day-gifts",
+            "link_text": "Explore"
+          }
+        },
+        "9dc054fa-daa9-4616-b6bb-55cd5dc698f3": {
+          "type": "Box",
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/Frame_48098311_8a89d776-8f43-479d-a9e5-430aeedb8304.png",
+            "heading": "Kundan",
+            "text": "",
+            "link": "shopify://collections/regal-charms-of-mothers-day-gifts",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "4b868ed3-7636-44d3-8bf7-947279e6ebb0",
+        "7eac715a-3429-4b85-b2e9-2c5d84fd692f",
+        "9dc054fa-daa9-4616-b6bb-55cd5dc698f3"
+      ],
+      "disabled": true,
+      "settings": {
+        "velen_active": false,
+        "mother": true,
+        "head": "Shop By Category",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "ct_shop_by_category_slider_RjwMfC": {
+      "type": "ct-shop-by-category-slider",
+      "blocks": {
+        "box_FQnB7h": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48098309.png",
+            "heading": "Antique",
+            "text": "",
+            "link": "shopify://collections/allures-of-mothers-day-antiques",
+            "link_text": "Explore"
+          }
+        },
+        "box_zGgM94": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48098310_b51ca473-8fa1-49f7-a6ba-7db71a656c09.png",
+            "heading": "Zircon",
+            "text": "",
+            "link": "shopify://collections/dazzling-zircons-for-mothers-day-gifts",
+            "link_text": "Explore"
+          }
+        },
+        "box_tzzedL": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48098311_8a89d776-8f43-479d-a9e5-430aeedb8304.png",
+            "heading": "Kundan",
+            "text": "",
+            "link": "shopify://collections/regal-charms-of-mothers-day-gifts",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "box_FQnB7h",
+        "box_zGgM94",
+        "box_tzzedL"
+      ],
+      "settings": {}
+    },
+    "mother_day_footer_nxAiQB": {
+      "type": "mother-day-footer",
+      "settings": {
+        "img": "shopify://shop_images/Group_480990311.png",
+        "link": "shopify://collections/mothers-day",
+        "linkt": "Shop The Ideal Gift"
+      }
+    }
+  },
+  "order": [
+    "swiper_js_yxRUtE",
+    "main",
+    "ct_mother_day_header_JKBRFG",
+    "ct_video_sec_qXXDrT",
+    "wsw_tabing_4UdYPL",
+    "ct_banner_c3fGaF",
+    "ct_mother_shop_product_tabbing_yJrVUk",
+    "cross_page_promos_7p3yWh",
+    "ct_mother_shop_new_JJBjWL",
+    "ct_mother_shop_product_tabbing_jnr4gg",
+    "136af06e-1048-4f58-b710-c8708d3c2bdc",
+    "ct_shop_by_category_slider_RjwMfC",
+    "mother_day_footer_nxAiQB"
+  ]
+}

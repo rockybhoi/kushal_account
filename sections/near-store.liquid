@@ -1,0 +1,379 @@
+<style>
+  .more-store-pages .store-more-box {
+    min-width: calc(25% - 6px);
+    max-width: calc(25% - 6px);
+}
+  .more-store-pages .store-more-head span {
+    font-family: Lato;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 32.4px;
+    text-align: left;
+}
+  .more-store-pages {
+    padding: 32px 0;
+}
+  @media(max-width:1200px){
+.more-store-pages .store-more-box {
+    min-width: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+}   
+    .more-store-pages .store-more-content {
+    flex-wrap: wrap;
+}
+  }
+  @media(max-width:750px){
+  .more-store-pages .store-more-box {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+}
+     .more-store-pages .store-more-head span {
+    font-size: 18px;
+    line-height: 21px;
+}
+  }
+</style>
+<div class="more-store-pages">
+  <div class="container">
+    <div class="more-store ct_more_store ct_more_store_product">
+    </div>
+  </div>
+</div>
+            <script>
+              // Function to get store reviews
+              async function getStoreReviews() {
+                  if (navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(showPosition_store, showError);
+                  } else {
+                      console.log("Geolocation is not supported by this browser.");
+                  }
+              }
+              
+              // Function to call store API
+              async function callStoreAPI() {
+                 // const url = `${storeApiUrl}/near-by?latitude=${latitude}&longitude=${longitude}&distance=15`;
+                   var get_lat_lng=localStorage.getItem('location_store');
+                     var obj = JSON.parse(get_lat_lng);
+
+                
+                  
+                      var lat=obj.latitude;
+                      var lan=obj.longitude;
+                
+                    if(obj.postal != "" && obj.postal != null && obj.store != "" )
+                    {
+                     
+                     var url = `${storeApiUrl}/near-by?latitude=${lat}&longitude=${lan}&distance=15`;
+                    }
+                    else
+                    { 
+                     
+                      
+                      var url = `${storeApiUrl}/near-by?city=${obj.state}&distance=15`;
+                    }
+                 
+                try {
+                      const response = await $.get(url);
+                      return response;
+                  } catch (error) {
+                      throw new Error('Error fetching store data: ' + error.message);
+                  }
+              }
+              
+              // Function to handle errors
+              function showError(error) {
+                  let latitude, longitude;
+                  if (error.code === error.PERMISSION_DENIED) {
+                      console.log("User denied the request for Geolocation.");
+                      const locationStore = localStorage.getItem('location_store');
+                      const locationData = JSON.parse(locationStore);
+                      latitude = locationData.latitude;
+                      longitude = locationData.longitude;
+                      handleStoreData(latitude, longitude);
+                  } else {
+                      console.log(`Geolocation error: ${error.message}`);
+                  }
+              }
+              
+              // Function to show position
+              function showPosition_store(position) {
+                  const { latitude, longitude } = position.coords;
+                  handleStoreData(latitude, longitude);
+              }
+              
+              // Function to handle store data
+              async function handleStoreData(latitude, longitude) {
+                  try {
+                      const data = await callStoreAPI(latitude, longitude);
+                      if (data.storeList.length > 0) {
+                          updateStoreHTML(data.storeList, data);
+                      } else {
+                          $(".ct_more_store").hide();
+                      }
+                  } catch (error) {
+                      console.error(error);
+                  }
+              }
+              
+              // Function to update HTML with store data
+              function updateStoreHTML(storeList, data) {
+           
+                  let storeHTML = '';
+                  const storesToShow = storeList.slice(0, 4); // Show only up to 5 stores
+                    if(storesToShow.length < 4)
+                    {
+                      var hidden_class="hidden";
+                    }
+                    else
+                    {
+                      var hidden_class="";
+                    }
+                var jsonString = localStorage.getItem('location_store');;
+                var jsonObject = JSON.parse(jsonString);
+                if(jsonObject['state'] != "")
+                        {
+                          var store_city=`<a href="https://www.kushals.com/pages/store/${data.slug}">View All</a>`;
+                            
+                        }
+                        else
+                        {
+                          var store_city=`<a href="https://www.kushals.com/pages/stores/">View All</a>`;
+                          
+                        }
+             
+                  storesToShow.forEach(store => {
+
+                      var openingTime = convertTo12HourFormat(store.openingTime);
+                      var closingTime = convertTo12HourFormat(store.closingTime);
+                      var open_time=openingTime.split(" ");
+                      var close_time=closingTime.split(" ");
+                    
+                      var time_check_store_open_close=updateStoreTime(open_time[0], store.closingTime, closingTime);
+                        
+                        
+                       if(jsonObject['state'] != "")
+                        {
+                          var city=jsonObject['state']+"-"+store.slug;
+                        }
+                        else
+                        {
+                          var city="";
+                        }
+                    
+                      storeHTML += `
+                          <div class="store-more-box store-more-box-product">
+                         
+
+                          <div class="store-more-box-inner">
+                              <a class="store_pro-link ct_store_click" data-store="${store.name}" href="https://www.kushals.com/pages/store-details/${city}">
+                                  <div class="store-more-box-head">
+                                      <div class="store-more-name">
+                                          <span>${store.name}</span>
+                                      </div>
+                                      <div class="store-more-star">
+                                          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/google.png?v=1721205440" width="30" height="30">
+                                          <span>${store.rating}</span>
+                                      </div>
+                                  </div>
+                                  <div class="store-more-text">
+                                      ${store.address}
+                                  </div>
+                              </a>
+                              <div class="call-dir-main">
+                                
+                                 <a href="tel:+91${store.phone}" class="ct_store_call" data-store="${store.name}">
+                                  <div class="call-main">
+                                    <div class="call-icon">
+                                      <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/fluent_call-28-regular_8421deb0-ea92-4d83-b8eb-83dd7c87b04b.png?v=1720074796" alt="">
+                                    </div>
+                                    <span>Call Store</span>
+                                  </div>
+                                </a>
+                                <div class="direction-main">
+                                  <div class="direction-icon">
+                                    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="">
+                                  </div>
+                                  <span><a class="ct_store_map" data-store="${store.name}" href="${store.direction}" target="_blank">Get Direction</a>
+                                  </span>
+                                </div>
+
+                                 ${time_check_store_open_close}
+                               
+
+                                
+                                
+                                </div>
+                              <div class="store-more-footer">
+                                  <div class="store-more-direction">
+                                      <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="Direction Icon">
+                                      <span><a href="${store.direction}"  target="_blank">Direction</a></span>
+                                  </div>
+                                  <div class="store-more-call">
+                                      <a href="tel:+91${store.phone}" class="ct_store_call" data-store="${store.name}">
+                                          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/fluent_call-28-regular.png?v=1719300254" alt="Call Icon">
+                                          <span>Call +91-${store.phone}</span>
+                                      </a>
+                                  </div>
+                              </div>
+                              </div>
+                              
+
+                              
+                          </div>`;
+                  });
+              
+                  const finalHTML = `
+                      <div class="store-more-head">
+                          <span>Stores Near You To Assist</span>
+                          <div class="store-more-all ct_all_store ${hidden_class}">${store_city}</div>
+                      </div>
+                      <div class="store-more-content">${storeHTML}</div>`;
+              
+                  $(".ct_more_store").html(finalHTML);
+                $(".ct_more_store").show();
+              }
+
+
+              
+          // Function to convert time to 12-hour format
+          function convertTo12HourFormat(time) {
+              let [hours, minutes] = time.split(':').map(Number);
+              const period = hours >= 12 ? 'PM' : 'AM';
+              hours = hours % 12 || 12; // Convert hour to 12-hour format
+              return `${hours}:${minutes.toString().padStart(2, '0')} ${period}`;
+          }
+          
+          
+          function updateStoreTime(open_time, close_time, store_close_time) {
+          
+            var currentTime = new Date();
+            var openingDate = new Date(currentTime);
+            var closingDate = new Date(currentTime);
+            var closingDate_new = new Date(close_time);
+          
+          
+            // Parse opening time
+            var [openHours, openMinutes, openSeconds] = open_time.split(':').map(Number);
+            openSeconds = openSeconds || 0; // Default to 0 if seconds are not provided
+            openingDate.setHours(openHours, openMinutes, openSeconds);
+          
+            // Parse closing time
+            var [closeHours, closeMinutes, closeSeconds] = close_time.split(':').map(Number);
+            closeSeconds = closeSeconds || 0; // Default to 0 if seconds are not provided
+            closingDate.setHours(closeHours, closeMinutes, closeSeconds);
+          
+            // Adjust for cases where the closing time is past midnight
+            if (closingDate <= openingDate) {
+                closingDate.setDate(closingDate.getDate() + 1);
+            }
+          
+            var check_store_time;
+          
+            console.log(`Current Time: ${currentTime}`);
+            console.log(`Opening Time: ${openingDate}`);
+            console.log(`Closing Time: ${closingDate}`);
+          
+            if (currentTime >= openingDate && currentTime < closingDate) {
+                check_store_time = `<div class="open-close-store"> <div class="dot"></div> <span>Open</span> </div>`;
+            } else {
+                check_store_time = `<div class="open-close-store close_store"> <div class="dot"></div> <span>Closed</span> </div>`;
+            }
+          
+            return check_store_time;
+          }
+              
+              // Initiate the process
+              handleStoreData("123", "321");
+
+              
+
+            </script>
+               <script>
+                       jQuery(document).ready(function(){
+                         if(localStorage.getItem('pin') != undefined)
+                         {
+                           var pin_get=localStorage.getItem('pin');
+                           jQuery(".clickpost-edd__drop_pincode-input").val(pin_get);
+                            pin_checker(pin_get);
+                         }
+                         jQuery(document).on("input", ".clickpost-edd__form .clickpost-edd__drop_pincode-input", function () {
+                              const input_pin_number = jQuery(".clickpost-edd__drop_pincode-input").val();
+                            if (input_pin_number.length === 6) {
+                               pin_check(input_pin_number)
+                              pin_checker(input_pin_number);
+                            }
+                          else if(input_pin_number == "")
+                          {
+                             jQuery(".ct_msg_show").hide()
+                          }
+                          }); 
+                         // jQuery(document).on("click", ".clickpost-edd__form .clickpost-edd__submit-button", function () {
+                         //      const pin_number = jQuery(".clickpost-edd__drop_pincode-input").val();
+                         //      pin_checker(pin_number);
+                           
+                         //  });
+                         
+                       });
+                      function pin_checker(pin_number) {
+                          if (pin_number.length === 6) {
+                            jQuery(".clickpost-edd__drop_pincode-input").val(pin_number);
+                              jQuery(".clickpost-edd__form .clickpost-edd__submit-button").trigger("click");
+                          } 
+                      }
+                      
+                      function count_date(c_date_no) {
+                          const d = new Date();
+                          d.setDate(d.getDate() + c_date_no);
+                      
+                          const date = d.getDate();
+                          const monthNames = [
+                              "January", "February", "March", "April", "May", "June",
+                              "July", "August", "September", "October", "November", "December"
+                          ];
+                          const month = monthNames[d.getMonth()];
+                      
+                          const weekdayNames = [
+                              "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+                          ];
+                          const weekday = weekdayNames[d.getDay()];
+                      
+                          return { date, week: weekday, month };
+                      }
+                  jQuery(document).on("click",".ct_store_call",function(){
+                    var store_name=jQuery(this).attr("data-store");
+                             clevertap.event.push("Call_Store", {
+                                       "CallStore_Name":store_name
+                                });
+                  });
+
+                     jQuery(document).on("click",".ct_store_click",function(){
+                        var store_name=jQuery(this).attr("data-store");
+                                 clevertap.event.push("Store_Name", {
+                                           "Store Name":store_name
+                                    });
+                      })
+                  jQuery(document).on("click",".ct_store_map",function(){
+                    var store_name=jQuery(this).attr("data-store");
+                             clevertap.event.push("Store_Name_Direction", {
+                                       "Store Name direction":store_name
+                                });
+                  })
+
+                 jQuery(document).on("click",".ct_all_store a",function(){
+                             clevertap.event.push("MoreStores");
+                  })
+
+                      </script>   
+
+
+{% schema %}
+  {
+    "name": "near-store",
+    "class": "near-store",
+    "settings": [],
+    "presets": [{
+    "name": "near-store"
+    }]
+  }
+{% endschema %}

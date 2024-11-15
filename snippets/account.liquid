@@ -1,0 +1,133 @@
+
+  
+
+            
+ 
+    <div class="order-box-content" id="tab-1">
+      <div class="order-box-content_inneer">
+        
+        <div class="order-box_backBtn">
+          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292885 6.70711C-0.097616 6.31661 -0.097616 5.68341 0.292885 5.29291L5.29289 0.292891C5.68342 -0.0976303 6.31658 -0.0976302 6.70711 0.292891C7.09763 0.683421 7.09763 1.31658 6.70711 1.70711L2.41419 6.00001L6.70711 10.2929C7.09763 10.6834 7.09763 11.3166 6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292885 6.70711Z" fill="#454545"/>
+          </svg>
+          <span>Return to Profile</span>
+        </div>
+        <div class="order-box_header">
+          <span>All Orders ({{ customer.orders_count }})</span>
+        </div>
+        <script>
+           var order_myarray = []; 
+        </script>
+        <div class="order-box_mid_content">
+          {% for order in customer.orders %}
+            <div class="ct_order_dit ct_order_{{ order.name }}">
+              <div class="ct_order_id">Order id: #{{ order.name  }}</div>
+
+                <script>
+                 order_myarray.push('{{order.name}}');
+              </script>
+
+              {% for line_item in order.line_items %}
+                {% assign sku_url= "?sku=" | append : line_item.sku   %}
+                <a class="rd_link_{{ line_item.sku }}" href="{{ order.customer_url | append : sku_url }}">
+                  <div class="ct_order_product_main">
+                    <svg class="ct_order_product_main_side_svg" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.594289 5.90913C0.264804 5.57964 0.264804 5.04538 0.594289 4.71589L4.81304 0.497126C5.14255 0.167624 5.67678 0.167624 6.00629 0.497126C6.33579 0.826637 6.33579 1.36087 6.00629 1.69038L2.38414 5.31251L6.00629 8.93465C6.33579 9.26414 6.33579 9.7984 6.00629 10.1279C5.67678 10.4574 5.14255 10.4574 4.81304 10.1279L0.594289 5.90913Z" fill="#454545" />
+                    </svg>
+                    <img class="ct_order_product_img" src="{{ line_item.product.featured_image | img_url:'master' }}">
+  
+                    <div class="ct_order_product_content">
+                      <div class="order_product_title">{{ line_item.product.title }}</div>
+                      <div class="order_total">
+                        {{ line_item.final_line_price | money }}
+  
+                        {% comment %}
+                        {%- if settings.cart_currency_code_enabled -%}
+                          {{- order.total_price | money_with_currency -}}
+                        {%- else -%}
+                          {{- order.total_price | money -}}
+                        {%- endif -%}
+                        {% endcomment %}
+                        
+                        <div class="payment_type">| {{ order.gateway }}</div>
+                      </div>
+                      
+  
+                      <div class="order_status">
+                        <div class="order_status_inner ct_sku_{{ line_item.sku }}">
+                          <span class="ct_left_status">{{ order.financial_status_label }} </span>
+                          <span class="ct_right_status">{{ order.financial_status }}</span>
+                        </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </a>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+
+         <script>
+
+                        jQuery(document).ready(function(){
+                  
+                          var settings = {
+                              "url": "https://dev-middleware.technoboost.in/api/v1/customer/order-tracking",
+                              "method": "POST",
+                              "timeout": 0,
+                              "headers": {
+                                "Content-Type": "application/json"
+                              },
+                              "data": JSON.stringify({
+                                "orderIds":order_myarray
+                              }),
+                            };
+                      
+                      $.ajax(settings).done(function (response) {
+                         $.each(response,function(i, val){
+                            if(val.dateTime == null)
+                            {
+                              // jQuery(`.ct_order_${i}  .order_status_inner .ct_left_status`).text(val.status);
+                              // jQuery(`.ct_order_${i} .order_status_inner .ct_right_status`).text(val.remark);                          
+                            }
+                            else
+                            {
+                              $.each(val.orderTrackDetailDTOS, function(s, sk_val){
+                                console.log(s)
+                                console.log(sk_val);
+                                
+                                var link_a=jQuery(`.ct_order_dit .rd_link_${s}`).attr("href");
+                                var link_generate=`${link_a}&waybill=${sk_val.wayBillNumber}`;
+                                jQuery(`.ct_order_dit .rd_link_${s}`).attr('href', link_generate)
+                                jQuery(`.ct_order_${i} .order_status_inner.ct_sku_${s} .ct_left_status`).text(sk_val.status);
+                                jQuery(`.ct_order_${i} .order_status_inner.ct_sku_${s} .ct_right_status`).text(sk_val.remark);            
+                              })
+                            }
+                          })
+                          var res=response;
+                          
+                          // var result=res['{{order.name}}'];
+                          // console.log(result)
+                          // if(result.dateTime == null)
+                          // {
+                          //   jQuery(".order_status_inner ct_left_status").text(result.status);
+                          //   jQuery(".order_status_inner ct_right_status").text(result.remark);                          
+                          // }
+                          // else
+                          // {
+                            
+                          // }
+                          });
+                    });
+                      
+                    </script>
+      </div>
+    </div>
+
+
+
+    
+ 
+
+

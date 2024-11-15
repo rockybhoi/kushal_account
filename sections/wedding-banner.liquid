@@ -1,0 +1,104 @@
+<style>
+  .ct_wedding_bg {   
+    background-image: url({{ 'weading_bg.png' | asset_img_url: 'master' }});
+    background-size: 100%;
+          background-repeat: no-repeat;
+    background-repeat-y: repeat;
+}
+  .wedding-banner-mobile{
+    display:none;
+  }
+  .wedding-banner-inner img{
+    height:auto;
+    width:100%;
+      border-radius: 4px;
+  }
+.wedding-banner-inner {
+    margin-top: 130px;
+    margin-bottom: 90px;
+  width: 100%;
+    max-width: 1566px;
+  padding: 0;
+}
+        @media(max-width:1100px){
+          .wedding-banner-inner {
+    margin-top: 33px;
+    margin-bottom: 33px;
+    padding: 0 10px;
+}
+        }
+  
+  @media(max-width:750px){
+      .ct_wedding_bg {   
+    background-image: url({{ 'wedding_bg_mobile.png' | asset_img_url: 'master' }});    
+}
+    .wedding-banner-desktop{
+    display:none;
+  }
+    .wedding-banner-mobile{
+    display:block;
+  }
+  }
+
+  
+</style>
+
+<div class="wedding-banner">
+    <div class="wedding-banner-inner container">
+      <a href="{{ section.settings.link }}">
+      <img
+              loading="lazy"
+              src="{{ section.settings.image | image_url: width: 1920 }}"
+              data-src="{{ section.settings.image | image_url: width: 1920 }}"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              alt="{{ section.settings.image.alt }}"
+              data-image='ct-clever_image'
+              class="lazy lazyImage wedding-banner-desktop"
+            >
+            <img
+              loading="lazy"
+              src="{{ section.settings.image_sec | image_url: width: 750 }}"
+              data-src="{{ section.settings.image_sec | image_url: width: 750 }}"
+              width="{{ section.settings.image_sec.width }}"
+              height="{{ section.settings.image_sec.height }}"
+              alt="{{ section.settings.image_sec.alt }}"
+              data-image='ct-clever_image'
+              class=" wedding-banner-mobile"
+            >
+          </a>
+    </div>
+  </div>
+
+
+{% schema %}
+  {
+    "name": "wedding-banner",
+    "settings": [
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Banner Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Banner Image For Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_sec",
+        "label": "Banner Image For Mobile"
+      }
+    ],
+    "presets":[{
+          "name": "wedding-banner"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

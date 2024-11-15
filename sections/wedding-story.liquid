@@ -1,0 +1,191 @@
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  .Story_Wedding-Collection-box {
+    width: 180px;
+}
+  .Story_main_coll_img_main {
+    line-height: 0;
+    border-radius: 100%;
+    border: 1px solid #CF2228;
+    background: #fff;
+    padding: 1px;
+}
+  .Story_main_coll_img_main img{
+    border-radius: 100%;
+        width: 100%;
+    height: 100%;
+}
+  .Story_Wedding-Collection-box a .Story_wead-content-text {
+    color: #454444;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 27.738px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 8px;
+}
+  .Story_Wedding-Collection-head {
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    margin: 94px 0 64px 0;
+    width: 100%;
+}
+.Story_Wedding-Collection-inner {
+    display: inline-flex;
+    width: auto;
+    overflow: hidden;
+    overflow-x: auto;
+}
+  .Story_Wedding-Collection-box {
+        width: 180px;
+    max-width: 180px;
+    margin-right: 17px;
+    min-width: 180px;
+}
+    .Story_Wedding-Collection-box:last-child{
+    margin-right: 0px;
+    }
+  .Story_Wedding-Collection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+}
+
+      .wead-content-head {
+        color: #FFF;
+        text-align: center;
+        font-size: 27.828px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .Wedding-Collection-head {
+      width: 100%;
+      color: #000;
+      text-align: center;
+        font-family: 'Inter', sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-bottom: 47px;
+  }
+
+  .Wedding-Collection {
+      display: flex;
+      justify-content: center;
+    flex-wrap: wrap;
+  }
+
+      @media(max-width:1100px){
+        .Story_Wedding-Collection-head {
+    font-size: 20px;
+          font-weight: 500;
+    margin: 33px 0 18px 0;
+}
+        .Story_Wedding-Collection-box a .Story_wead-content-text {
+    font-size: 13px;
+    margin-top: 6px;
+}
+        .Story_Wedding-Collection-box {
+    width: 80px;
+    max-width: 80px;
+    margin-right: 8px;
+    min-width: 80px;
+}
+        .Story_Wedding-Collection {
+    margin-bottom: 40px;
+}
+        .Story_Wedding-Collection-box:last-child {
+    margin-right: 20px;
+}
+               .Story_Wedding-Collection-box:first-child {
+    margin-left: 20px;
+}
+      }
+</style>
+
+<div class="Story_Wedding-Collection">
+  <div class="Story_Wedding-Collection-head">{{ section.settings.head }}</div>
+
+  <div class="Story_Wedding-Collection-inner items_scroll">
+    {% for block in section.blocks %}
+      <div class="Story_Wedding-Collection-box ctreview-box">
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}">
+            <div class="Story_main_coll_img_main">
+            <img
+              loading="lazy"
+              src="{{ block.settings.image | image_url: width: 200 }}"
+              data-src="{{ block.settings.image | image_url: width: 200 }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              alt="{{ block.settings.image.alt }}"
+              class="lazy lazyImage Story_main_coll_img"
+            >
+            </div>
+
+            <div class="Story_wead-content-text">{{ block.settings.text }}</div>
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Wedding-Collection",
+  "settings": [
+    {
+          "type": "text",
+          "id": "head",
+          "label": "Heading"
+      }
+  ],
+  "blocks":[{
+    "type":"Box",
+    "name":"Collection Box",
+    "limit":6,
+    "settings":[
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Collection link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Collection Image"
+      },    
+      
+      {
+          "type": "text",
+          "id": "text",
+          "label": "Sub-text"
+      }
+
+
+
+    ]
+  }],
+  "presets":[{
+        "name": "Wedding-Story-Collection"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

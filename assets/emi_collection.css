@@ -1,0 +1,203 @@
+ .collection-banner img{
+    width:100%;
+    height:auto;
+  }
+  .collection-filter-img {
+    width: 100px;
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+}
+.collection-filter{
+  display: flex;
+    width: 100%;
+    overflow: auto;
+}
+ .collection-filter-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    padding: 4px;
+}
+  .collection-filter-main {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+}
+  .collection-filter-box {
+    margin-right: 10px;
+    cursor: pointer;
+}
+  .filter-loader-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #514F4F1A;
+    border-radius: 100px;
+}
+
+
+/* .ct_active_filter .filter-loader {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+    position: absolute;
+  
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+ */
+
+.collection-banner {
+    /* position: sticky;
+    top: 151px; */
+    /* z-index: 3; */
+    background: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.collection-banner_inner .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ct_active_filter .filter-loader {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #cf2228 94%, #0000) top / 8px 8px no-repeat, conic-gradient(#0000 70%, #cf2228);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+    animation: l13 4s infinite linear;
+    position: absolute;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+.collection-filter-text {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: #454444;
+    margin-top: 4px;
+}
+
+.ct_active_filter  .collection-filter-text {
+    color: #C71D22;
+    font-weight: 700;
+}
+
+.ct_active_filter .filter-loader-bg {
+    border: 3px solid #CF222833;
+}
+.collection-banner .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.emi_price_show .collection-listing .CT_product-block .price-wishlist {
+    display: none;
+}
+.emi-price-top span {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+    color: #000000;
+}
+.emi-price-top {
+    font-family: Lato;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.2px;
+    text-align: left;
+    color: rgba(0,0,0,0.5);
+}
+.emi-price-bottom {
+    display: flex;
+  align-items: baseline;
+  margin-top: 4px;
+}
+.emi-mrp-text {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-align: center;
+    opacity: 0.4;
+    color: #3E3E3E;
+}
+.emi-sale-price {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    opacity: 0.7;
+    color: #000000;
+  margin: 0 4px;
+}
+.emi-mrp-price {
+    color: #000000;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+    text-align: left;
+    opacity: 0.4;
+  position: relative;
+}
+.emi-mrp-price:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,1);
+    position: absolute;
+    top: 7px;
+    left: 0;
+    transform: rotate(9deg);
+}
+.emi-price-main {
+    margin-top: -4px;
+}
+
+
+@media(max-width:1024px){
+  .collection-banner {
+    top: 132px;
+  }
+} 
+@media(max-width:750px){ 
+  .collection-banner {
+    top: 140px;
+}
+.collection-filter-box:first-child{
+  margin-left: 10px;
+}
+.collection-filter-img {
+    width: 90px;
+}
+.collection-filter-main::-webkit-scrollbar  , .collection-filter::-webkit-scrollbar {
+  display: none;
+}
+.collection-filter-main , .collection-filter{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+  .collection-filter-text {
+    font-size: 13px;
+    line-height: 15.73px;
+}
+  .ct_collection_banner {
+    height: 115px !important;
+    object-fit: cover;
+    object-position: center;
+}
+}

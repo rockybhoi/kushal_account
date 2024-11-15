@@ -1,0 +1,131 @@
+<style>
+  .image_link_{{ section.id }}.image_with_link{padding-top:{{ section.settings.section_padding_top }}px;padding-bottom: {{ section.settings.section_padding_bottom }}px;}
+  .image_with_link_blk{margin-right:0;}
+  .image_with_link_wrap{padding-bottom:30px;}
+  .image_with_link_blk figure{line-height:0;}
+  .image_with_link_blk img{width:100%;object-fit:cover;}
+  .image_with_link_blk li{list-style:none;}
+  
+  @media (max-width:767px){
+    .image_with_link .collection-listing .images__mb_one .product-block {width: 100%;}
+    .image_with_link .collection-listing .images__mb_two .product-block {width: 50%;}
+    .image_with_link .collection-listing .images__mb_three .product-block{width: 33.33%;}
+    .image_with_link .collection-listing .images__mb_four .product-block{width: 25%;}
+    .image_with_link_wrap{padding-bottom:16px;}
+  }
+</style>
+
+<div class="image_with_link ct-image_with_link image_link_{{ section.id }}">
+  <div class="container">
+    {%- assign mb_grid = section.settings.number_of_column_mb -%}
+    {%- if mb_grid == 1 -%}
+    {%- assign mobile = 'mb_one' -%}
+    {%- elsif mb_grid == 2 -%}
+    {%- assign mobile = 'mb_two' -%}
+    {%- elsif mb_grid == 3 -%}
+    {%- assign mobile = 'mb_three' -%}
+    {%- else -%}
+    {%- assign mobile = 'mb_four' -%}
+    {%- endif -%}
+    <div class="collection-listing">
+      <ul class="product-list product-list--per-row-{{ section.settings.number_of_column_desk }} image_with_link_blk images__{{ mobile }}">
+        {%- for block in section.blocks -%}
+        <li class="product-block">
+          <div class="image_with_link_wrap">
+            {%- if block.settings.link != blank or block.settings.image != blank -%}
+            {%- if block.settings.link != blank %}
+
+               {% assign url =  block.settings.link  %}
+              {% assign parts = url | split: "/" %}
+              {% assign result = parts | last %}
+              
+              
+              <a  aria-label="{{ result }}"  href="{{ block.settings.link }}">{% endif %}
+              <figure>
+                <img loading="lazy" src="{{ block.settings.image | image_url: width: 1 }}" data-src="{{ block.settings.image | image_url: width: 1 }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" alt="{{ block.settings.image.alt }}" class="dddd  lazy lazyImage" />
+
+       
+              
+              </figure>
+            {%- if block.settings.link != blank %} </a>{% endif %}
+            {%- endif -%}
+          </div>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with Links",
+    "settings": [
+      {
+        "type": "range",
+        "id": "number_of_column_desk",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "label": "Number of Column in Desktop",
+        "default": 2
+      },
+	  {
+        "type": "range",
+        "id": "number_of_column_mb",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "label": "Number of Column in Mobile",
+        "default": 2
+      },
+	  {
+        "type": "range",
+        "id": "section_padding_top",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "label": "Section Padding Top",
+        "default": 50
+      },
+	  {
+        "type": "range",
+        "id": "section_padding_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "label": "Section Padding Bottom",
+        "default": 50
+      }
+	],
+	"blocks":[
+      {
+        "name":"Images",
+        "type":"images",
+        "settings": [
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          },
+          {
+            "type":"url",
+            "id":"link",
+            "label":"Link"
+          }
+        ]
+      }
+	],
+	"presets": [
+      {
+      	"name":"Image with Links"
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

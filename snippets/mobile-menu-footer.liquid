@@ -1,0 +1,111 @@
+<style>
+  @media(min-width:750px){
+    .header_footer_menu_main{
+      display:none;
+    }
+  }
+  @media(max-width:750px){
+    .mobile-navigation-drawer__footer{
+      display:none;
+    }
+    .ct_mobile-navigation-drawer .navigation--main {
+    position: relative;
+    height: 100%;
+    margin-bottom: 0;
+}
+    .navigation__tier-1-container {
+    max-height: calc(100% - 148px);
+    overflow: auto;
+}
+  }
+
+  .header_footer_menu_main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    background: #CF222866;
+    height: 1px;
+}
+.header_footer_menu .menu_box img {
+    width: 20px;
+}
+.header_footer_menu .menu_box {
+    display: flex;
+    align-items: center;
+  margin-bottom: 16px;
+}
+  .header_footer_menu .menu_box:last-child{
+  margin-bottom: 0px;
+  }
+  .header_footer_menu_inner {
+    position: relative;
+}
+  .header_footer_menu {
+    padding: 10px 10px 10px 10px;
+}
+.header_footer_menu .menu_box span {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #454545;
+    padding: 0 0 0 4px;
+}
+  .header_footer_social img {
+    width: 28px;
+}
+.header_footer_social {
+    display: inline-flex;
+    gap: 12px;
+    line-height: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+  .header_footer_menu_main {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    bottom: 0;
+    z-index: 1;
+}
+  
+</style>        
+  <div class="header_footer_menu_main">
+      <div class="header_footer_menu_inner">
+        <div class="header_footer_menu">
+          <a href="https://track.kushals.com/" class="menu_box">
+            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/location-information_1.png?v=1727162533" alt="" />
+            <span>Track Your Order</span>
+          </a>
+          <a href="https://track.kushals.com/returns" class="menu_box">
+            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/return-box-shipping-distribution-order-logistics-shipment_1.png?v=1727162532" alt="" />
+            <span>Return Center</span>
+          </a>
+          <a href="/pages/stores" class="menu_box">
+            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/store_1.png?v=1727162533" alt="" />
+            <span>Locate Store</span>
+          </a>
+          <a href="/pages/contact-us" class="menu_box">
+            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/24-support.png?v=1727162533" alt="" />
+            <span>Contact Us</span>
+          </a>
+        </div>
+        <div class="header_footer_social">
+            <a href="https://www.facebook.com/KushalsFashionJewellery/" class="social_link">
+                <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/facebook-with-circle.png?v=1727162532" alt="">
+            </a>
+            <a href="https://instagram.com/kushalsfashionjewellery" class="social_link">
+                <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/instagram-with-circle.png?v=1727162532" alt="">
+            </a>
+            <a href="https://in.pinterest.com/KushalsFashionJewellery" class="social_link">
+                <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/pinterest-with-circle.png?v=1727162532" alt="">
+            </a>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,113 @@
+<style>
+  .my_video_background_banner , .my_video_background_banner  video{
+    width: 100%;
+    border-radius: 4px;
+}
+  div#audio-control {
+    border: 1px solid #A19F9F30;
+    background: #29292930;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+  .my_video_background_banner {
+    position: relative;
+    line-height: 0;
+}
+  div#audio-control svg {
+    width: 20px;
+    height: auto;
+}
+  .muted .play_svg {
+    display: none;
+}
+  .unmuted .play_mute_svg{
+    display: none;
+  }
+  @media(max-width:750px){
+   .my_video_background_banner , .my_video_background_banner  video{
+    border-radius: 0px;
+}
+    .Video-banner-with-mute-button .container {
+    padding: 0;
+}
+    .my_video_background_banner video {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+    .my_video_background_banner {
+    margin-bottom: 32px;
+}
+  }
+</style>
+
+<div class="container">
+  <div class="my_video_background_banner">
+
+    <video-media autoplay class="Desk-slide-video " >
+    
+      {{-
+        section.settings.video
+        | video_tag:
+          playsinline: true,
+          autoplay: true,
+          preload: 'metadata',
+          muted:true,
+          loop:true,
+          controls: false,
+          image_size: '800x',
+          id:'myVideo'
+      -}}
+    </video-media>
+     <div id="audio-control" class="muted">
+       <svg class="play_svg" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.4259 0.0823184C10.2229 0.000505833 9.99943 -0.0209299 9.78385 0.0207261C9.56827 0.0623821 9.37024 0.165257 9.21482 0.316336L5.09444 4.31986H1.11111C0.816426 4.31986 0.533811 4.43365 0.325437 4.63621C0.117063 4.83876 0 5.11349 0 5.39994V12.6005C0 12.887 0.117063 13.1617 0.325437 13.3643C0.533811 13.5668 0.816426 13.6806 1.11111 13.6806H5.09444L9.21482 17.6841C9.3702 17.835 9.5681 17.9377 9.7835 17.9793C9.99891 18.0209 10.2222 17.9995 10.4251 17.9178C10.628 17.8362 10.8014 17.6979 10.9235 17.5204C11.0456 17.343 11.1109 17.1343 11.1111 16.9209V1.0796C11.1111 0.866157 11.0459 0.657518 10.924 0.480023C10.802 0.302529 10.6287 0.164137 10.4259 0.0823184ZM8.88889 14.3035L6.34074 11.8373C6.13257 11.6346 5.85014 11.5207 5.55556 11.5204H2.22222V6.48003H5.55556C5.85014 6.47978 6.13257 6.36582 6.34074 6.1632L8.88889 3.68801V14.3035ZM20 9.00023C19.9989 10.2074 19.6738 11.3933 19.0567 12.4409C18.4396 13.4884 17.5519 14.3612 16.4815 14.9731C16.2288 15.0938 15.9384 15.1167 15.6689 15.0373C15.3995 14.9578 15.1711 14.7818 15.03 14.545C14.8889 14.3082 14.8456 14.0281 14.9088 13.7614C14.9719 13.4946 15.1369 13.2612 15.3704 13.1082C16.1052 12.6864 16.7142 12.0857 17.1373 11.3653C17.5604 10.6449 17.7829 9.82976 17.7829 9.00023C17.7829 8.1707 17.5604 7.35551 17.1373 6.63512C16.7142 5.91472 16.1052 5.31402 15.3704 4.8923C15.1369 4.73929 14.9719 4.50583 14.9088 4.23911C14.8456 3.97239 14.8889 3.6923 15.03 3.45546C15.1711 3.21861 15.3995 3.04267 15.6689 2.96321C15.9384 2.88374 16.2288 2.90666 16.4815 3.02735C17.5519 3.63922 18.4396 4.51207 19.0567 5.55961C19.6738 6.60715 19.9989 7.7931 20 9.00023Z" fill="white"></path> </svg>
+      <svg class="play_mute_svg" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.4259 3.08232C10.2229 3.00051 9.99943 2.97907 9.78385 3.02073C9.56827 3.06238 9.37024 3.16526 9.21482 3.31634L5.09444 7.31986H1.11111C0.816426 7.31986 0.533811 7.43365 0.325437 7.63621C0.117063 7.83876 0 8.11349 0 8.39994V15.6005C0 15.887 0.117063 16.1617 0.325437 16.3643C0.533811 16.5668 0.816426 16.6806 1.11111 16.6806H5.09444L9.21482 20.6841C9.3702 20.835 9.5681 20.9377 9.7835 20.9793C9.99891 21.0209 10.2222 20.9995 10.4251 20.9178C10.628 20.8362 10.8014 20.6979 10.9235 20.5204C11.0456 20.343 11.1109 20.1343 11.1111 19.9209V4.0796C11.1111 3.86616 11.0459 3.65752 10.924 3.48002C10.802 3.30253 10.6287 3.16414 10.4259 3.08232ZM8.88889 17.3035L6.34074 14.8373C6.13257 14.6346 5.85014 14.5207 5.55556 14.5204H2.22222V9.48003H5.55556C5.85014 9.47978 6.13257 9.36582 6.34074 9.1632L8.88889 6.68801V17.3035ZM20 12.0002C19.9989 13.2074 19.6738 14.3933 19.0567 15.4409C18.4396 16.4884 17.5519 17.3612 16.4815 17.9731C16.2288 18.0938 15.9384 18.1167 15.6689 18.0373C15.3995 17.9578 15.1711 17.7818 15.03 17.545C14.8889 17.3082 14.8456 17.0281 14.9088 16.7614C14.9719 16.4946 15.1369 16.2612 15.3704 16.1082C16.1052 15.6864 16.7142 15.0857 17.1373 14.3653C17.5604 13.6449 17.7829 12.8298 17.7829 12.0002C17.7829 11.1707 17.5604 10.3555 17.1373 9.63512C16.7142 8.91472 16.1052 8.31402 15.3704 7.8923C15.1369 7.73929 14.9719 7.50583 14.9088 7.23911C14.8456 6.97239 14.8889 6.6923 15.03 6.45546C15.1711 6.21861 15.3995 6.04267 15.6689 5.96321C15.9384 5.88374 16.2288 5.90666 16.4815 6.02735C17.5519 6.63922 18.4396 7.51207 19.0567 8.55961C19.6738 9.60715 19.9989 10.7931 20 12.0002Z" fill="white"></path> <path d="M1 3.4328L18.5188 20.4294" stroke="white" stroke-width="2" stroke-linecap="round"></path> </svg>
+     </div>
+   
+  </div>
+</div>
+
+
+<script>
+$('#audio-control').click(function(){
+    if( $("#myVideo").prop('muted') ) {
+        $("#myVideo").prop('muted', false);
+        // $(this).text('Mute');
+        $(this).removeClass('muted').addClass('unmuted'); // Add this line
+    } else {
+        $("#myVideo").prop('muted', true);
+        // $(this).text('Unmute');
+        $(this).removeClass('unmuted').addClass('muted'); // Add this line
+    }
+});
+
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "Video-with-mute-button",
+    "class": "Video-banner-with-mute-button",
+    "settings": [
+           {
+        "type": "video",
+        "id": "video",
+        "label": "Video",
+        "info": "Replaces external video if both are set."
+      }
+    ],
+    "presets": [{
+    "name": "Video-with-mute-button"
+    
+    }]
+  }
+{% endschema %}

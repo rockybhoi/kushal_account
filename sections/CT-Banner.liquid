@@ -1,0 +1,203 @@
+<style>
+  .CT-Banner-main img{
+    width:100%;
+    height:100%;
+  }
+  .m_img{
+    display:none;
+    width: 100%;
+  }
+  img.CT_dektop {
+    width: 100%;
+}
+  @media(max-width:750px){
+  .d_img{
+    display:none;
+  }
+  .m_img{
+    display:block;
+  }
+  }
+
+
+
+
+
+
+
+
+
+.CTmodal {
+    display: none;
+    position: fixed;
+    z-index: 8050 !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+  button#open-popup {
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 3% auto 0 auto;
+    padding: 0;
+    line-height: 0;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+
+@keyframes modalopen {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+.close-button {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+  z-index: 1;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.CTmodal video {
+    width: 100%;
+    border-radius: 10px ;
+}
+  span.close-button svg {
+    width: 50px;
+    height: 50px;
+    fill: transparent;
+}
+  
+
+@media(max-width:600px){
+ .modal-content {
+    width: 90%;
+    max-height: 100% !important;
+    aspect-ratio: 1/1 !important;
+}
+  span.close-button svg {
+    width: 40px;
+    height: 40px;
+}
+  .modal-content {
+    margin: 30% auto 10% auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<div class="CT-Banner-main">
+ 
+     <button id="open-popup">
+  <img class="d_img" src="{{ section.settings.dimg | img_url:'master' }}" alt="{{ section.settings.dimg }}">
+  <img class="m_img" src="{{ section.settings.mimg | img_url:'master' }}" alt="{{ section.settings.mimg }}">
+     </button>
+
+
+
+<div id="video-popup" class="CTmodal">
+    <div class="modal-content">
+        <span class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44" viewBox="0 0 43 44" fill="none">
+            <path d="M21.4688 40.2441C31.0938 40.2441 38.9688 32.1816 38.9688 22.3274C38.9688 12.4733 31.0938 4.41077 21.4688 4.41077C11.8438 4.41077 3.96875 12.4733 3.96875 22.3274C3.96875 32.1816 11.8438 40.2441 21.4688 40.2441Z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16.5166 27.3978L26.4216 17.257" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M26.4216 27.3978L16.5166 17.257" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <video id="video" width="100%" height="auto" muted autoplay loop  muted  playsinline>
+            <source src="{{ section.settings.video }}" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+  
+  </div>
+
+
+  <script>
+    var modal = document.getElementById("video-popup");
+var btn = document.getElementById("open-popup");
+var span = document.getElementsByClassName("close-button")[0];
+var video = document.getElementById("video");
+
+btn.onclick = function() {
+    modal.style.display = "block";
+    video.play();
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+    video.pause();
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        video.pause();
+    }
+}
+
+  </script>
+
+{% schema %}
+  {
+    "name": "CT-Banner",
+    "class": "CT-Banner",
+    "settings": [
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Banner Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "dimg",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mimg",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "video",
+        "label": "Video Link",
+        "default":"https://cdn.shopify.com/videos/c/o/v/542e9c180e6f4489af34be65e6d963b7.mp4"
+      }
+
+    ],
+    "presets": [{
+          "name": "CT-Banner"
+    }]
+  }
+{% endschema %}

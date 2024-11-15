@@ -1,0 +1,132 @@
+{{ 'emi_collection.css' | asset_url | stylesheet_tag: preload: true }}
+
+
+
+<div class="collection-filter">
+  <div class="container">
+    <div class="collection-filter-main">
+       {% for block in section.blocks %}
+        <div class="collection-filter-box">
+          <div class="collection-filter-img">
+            <div class="filter-loader"></div>
+            <div class="filter-loader-bg"></div>
+            <img
+              src="{{ block.settings.img | image_url: width: 200 }}"
+              width="{{ block.settings.img.width }}"
+              height="{{ block.settings.img.height }}"
+            >
+          </div>
+          <div class="collection-filter-text">
+            {{ block.settings.text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+jQuery(document).ready(function(){
+
+var str1 = window.location.href;
+var active_flag = true;
+  jQuery(".collection-filter-main .collection-filter-box .collection-filter-text").each(function(){
+    var tag_list_name=jQuery.trim(jQuery(this).text());
+    console.log(tag_list_name+" -- "+str1);
+      if(str1.indexOf(tag_list_name) != -1){
+          jQuery(".collection-filter-box").removeClass("ct_active_filter");
+          jQuery(this).closest(".collection-filter-box").addClass("ct_active_filter")
+        active_flag = false;
+      }
+      
+  })
+  if(active_flag)
+  {
+          jQuery(".collection-filter-box:first").addClass("ct_active_filter");
+    
+  }
+
+  
+  jQuery(".collection-filter-main .collection-filter-box").each(function(){
+    
+    jQuery(this).click(function(){
+     // jQuery(".filter-group__clear-row .filter-group__clear-link").click();
+
+          
+            
+                jQuery(".collection-filter-box").removeClass("ct_active_filter");
+                  var tag_title=jQuery.trim(jQuery(this).text());
+                  if(tag_title == "All")
+                  {
+                    jQuery(this).addClass("ct_active_filter");
+                    jQuery(".filter-group__clear-row .filter-group__clear-link").click();
+                  }
+                  else
+                  {        
+                    jQuery(this).addClass("ct_active_filter");
+                             jQuery(".ct_Product.Type .filter-group__items .filter-group__item .filter-group__checkbox").each(function(){
+                                var filter_name=jQuery.trim(jQuery(this).text());
+      
+                             // console.log(filter_name+" ==------ "+tag_title)
+                               if(this.checked)                                
+                                {
+                                    console.log(filter_name+" ==------ "+tag_title)
+                                  
+                                    jQuery(this).click();
+                                  
+                                }
+                            })
+                    
+                    
+                    
+                    jQuery(".ct_Product.Type .filter-group__items .filter-group__item .filter-group__checkbox").each(function(){
+                        var filter_name=jQuery.trim(jQuery(this).val());
+                        
+                        if(filter_name.indexOf(tag_title) != -1){
+                       // console.log(filter_name +" == "+tag_title);
+                            jQuery(this).click();
+                        }
+                      })  
+                        
+                    
+                  }
+         
+      })
+  })
+})
+</script>
+{% schema %}
+{
+  "name": "collection-banner",
+  "class": "collection-banner",
+  "settings": [
+   
+
+
+  ],
+  "blocks": [
+    {
+      "type": "filter-box",
+      "name": "filter-box",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Filter Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Filter Heading"
+        }
+
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+          "name": "collection-banner"
+    }
+  ]
+}
+{% endschema %}

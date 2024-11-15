@@ -1,0 +1,57 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WK9HNJD');</script>
+<!-- End Google Tag Manager -->
+
+
+<script id='fm-cart-token-script'>  function getCartToken() {
+  let idx = document.cookie.indexOf('cart=');
+  if (idx == -1) {
+      return null;
+  }
+  let end = document.cookie.indexOf(';', idx);
+  return document.cookie.substring(idx + 5, end);
+}
+var shopifyCartEvent = {{ cart | json }};
+{% for cartItem in cart.items  %}
+  {%- assign myProduct = cartItem.product -%}
+  var myProductRef={{myProduct|json}}
+ {%- assign myProductCollections = myProduct.collections -%}
+ var myProductCollectionsRef={{myProductCollections|json}}
+  for(let i=0;i<shopifyCartEvent.items.length;i++){
+    if(shopifyCartEvent.items[i].product_id===myProductRef.id){
+      let collList=[]
+    for(let j=0;j<myProductCollectionsRef.length;j++){
+      collList.push(myProductCollectionsRef[j].title)
+    }
+    shopifyCartEvent.items[i].collections=collList
+  }
+}
+{% endfor %}
+
+{% if customer %}
+shopifyCartEvent.customer = {
+  id: '{{ customer.id }}',
+  'name': '{{ customer.name }}',
+  'email': '{{ customer.email }}',
+  'mobile': '{{ customer.phone }}',
+  'first_name': '{{ customer.first_name }}',
+  'last_name': '{{ customer.last_name }}',
+  'total_orders': {{ customer.orders_count }},
+  'last_order': '{{ customer.last_order }}',
+  'total_spent': {{ customer.total_spent }},
+  'address_list': {{ customer.addresses | json }},
+  'accepts_marketing': {{ customer.accepts_marketing }}
+}
+{% endif %}
+
+var tId = "";
+tId = setInterval(function () {
+  try {
+    shopifyCartEvent.token = getCartToken();
+    FM.trackMasEvent("shopify.added_product_to_cart", true, shopifyCartEvent);
+    clearInterval(tId);
+  } catch (err) {
+    // console.error("FM not loaded yet", err);
+  }
+}, 300);</script>
+

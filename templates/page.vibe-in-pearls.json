@@ -1,0 +1,311 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "swiper_js_rHcbkE": {
+      "type": "Swiper-js",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "video_banner_tgXLxw": {
+      "type": "video-banner",
+      "settings": {
+        "link": "shopify://collections/vibe-in-pearls",
+        "video": "shopify://files/videos/Web Desktop.mp4",
+        "logobanner": "shopify://shop_images/Logo_Black_1_f60a8581-2109-487e-ac18-ca23f5b05d35.png",
+        "text": "Our collection becomes your ultimate sidekick, <br>complementing your\ncasual yet chic vacation looks effortlessly! \n<br>Introducing our \"Vibe in Pearls\" Collection. <br>Trendy Picks for your Vacay Style!"
+      }
+    },
+    "pearl_card_slider_eqUaTW": {
+      "type": "pearl-card-slider",
+      "blocks": {
+        "image_qkBP9V": {
+          "type": "image",
+          "settings": {
+            "text": "An Evening Gala with Pearls",
+            "img": "shopify://shop_images/Group_48099142.jpg",
+            "dot1": true,
+            "top1": 46,
+            "left1": 40,
+            "dot2": true,
+            "top2": 29,
+            "left2": 68,
+            "dot3": false,
+            "top3": 70,
+            "left3": 70,
+            "dot4": false,
+            "top4": 80,
+            "left4": 80,
+            "product_list": [
+              "trendy-pearl-necklace-174195",
+              "trendy-pearl-earring-172145"
+            ]
+          }
+        },
+        "image_QAVtth": {
+          "type": "image",
+          "settings": {
+            "text": "Party Poolside in Pearls",
+            "img": "shopify://shop_images/Group_48099141.jpg",
+            "dot1": true,
+            "top1": 28,
+            "left1": 49,
+            "dot2": true,
+            "top2": 46,
+            "left2": 60,
+            "dot3": true,
+            "top3": 61,
+            "left3": 31,
+            "dot4": false,
+            "top4": 64,
+            "left4": 33,
+            "product_list": [
+              "trendy-pearl-earring-174236",
+              "trendy-pearl-necklace-174185",
+              "trendy-pearl-finger-ring-174212"
+            ]
+          }
+        },
+        "image_kpTfhE": {
+          "type": "image",
+          "settings": {
+            "text": "Vacay Evening in Pearls",
+            "img": "shopify://shop_images/Group_48099137.jpg",
+            "dot1": true,
+            "top1": 68,
+            "left1": 29,
+            "dot2": true,
+            "top2": 42,
+            "left2": 81,
+            "dot3": false,
+            "top3": 17,
+            "left3": 24,
+            "dot4": false,
+            "top4": 80,
+            "left4": 80,
+            "product_list": [
+              "trendy-pearl-necklace-174337",
+              "trendy-pearl-earring-174231"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "image_qkBP9V",
+        "image_QAVtth",
+        "image_kpTfhE"
+      ],
+      "settings": {}
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "vibe-in-pearls-necklaces",
+            "product_list": [
+              "trendy-pearl-necklace-174227",
+              "trendy-pearl-necklace-174340",
+              "trendy-necklace-174138",
+              "trendy-pearl-necklace-174139",
+              "trendy-pearl-necklace-174344"
+            ],
+            "view_text": "View All Necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 60px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Necklaces"
+      }
+    },
+    "new_shop_the_look_xEneLb": {
+      "type": "New-shop-the-look",
+      "disabled": true,
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/1_4_0f8c575e-f793-46a1-85c3-93ccb85cc355.png",
+        "img_icon_banner_mob": "shopify://shop_images/Kushal_-3565_1.png",
+        "head": "Shop The Look",
+        "sec": "Party Poolside in Pearls",
+        "sec_text": "",
+        "product_list": [
+          "trendy-pearl-finger-ring-174212",
+          "trendy-pearl-earring-174236",
+          "trendy-pearl-necklace-174185"
+        ],
+        "coll_name": "Party Poolside in Pearls"
+      }
+    },
+    "new_shop_the_look_wd9U4D": {
+      "type": "New-shop-the-look",
+      "settings": {
+        "video": "shopify://files/videos/Web Desktop_2.mp4",
+        "head": "Shop The Look",
+        "sec": "Golden Hour Pearl-Perfection",
+        "sec_text": "Picture yourself basking in the sun's golden rays, sand between your toes, and laughter filling the air. Introducing our \"Vibe in Pearls\" Collection - Trendy Picks for your Vacay Style!",
+        "product_list": [
+          "trendy-pearl-necklace-174185",
+          "trendy-pearl-earring-174860",
+          "trendy-pearl-finger-ring-174569",
+          "trendy-pearl-finger-ring-174210"
+        ],
+        "coll_name": "Golden Hour Pearl-Perfection"
+      }
+    },
+    "pearls_collection_tabing_dDcEna": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_qPU8t7": {
+          "type": "Collection-tab",
+          "settings": {
+            "img_icon": "shopify://shop_images/Group_48099005_72761b69-7f96-40cc-afc4-d45fa6dda99b.png",
+            "heading": "",
+            "collection": "vibe-in-pearls-earrings",
+            "product_list": [
+              "trendy-pearl-earring-174200",
+              "trendy-pearl-earring-174209",
+              "trendy-pearl-earring-174206",
+              "trendy-pearl-earring-172071",
+              "trendy-pearl-earring-174207"
+            ],
+            "view_text": "View All Earrings"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_qPU8t7"
+      ],
+      "custom_css": [
+        ".collection-listing {padding-bottom: 60px;}",
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Earrings"
+      }
+    },
+    "new_shop_the_look_4dnmEK": {
+      "type": "New-shop-the-look",
+      "settings": {
+        "video": "shopify://files/videos/Web Desktop_1.mp4",
+        "head": "Shop The Look",
+        "sec": "Resort-Ready with Pearls",
+        "sec_text": "Picture yourself basking in the sun's golden rays, sand between your toes, and laughter filling the air. Introducing our \"Vibe in Pearls\" Collection - Trendy Picks for your Vacay Style!",
+        "product_list": [
+          "trendy-pearl-earring-174200",
+          "trendy-pearl-necklace-174270",
+          "trendy-pearl-finger-ring-174215",
+          "trendy-pearl-finger-ring-174212"
+        ],
+        "coll_name": "Resort-Ready with Pearls"
+      }
+    },
+    "pearls_collection_tabing_f64G6R": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_gpTEWD": {
+          "type": "Collection-tab",
+          "settings": {
+            "img_icon": "shopify://shop_images/Group_48099005_72761b69-7f96-40cc-afc4-d45fa6dda99b.png",
+            "heading": "",
+            "collection": "vibe-in-pearls-accessories",
+            "product_list": [
+              "trendy-bracelet-174197",
+              "trendy-bracelet-174196",
+              "trendy-pearl-finger-ring-174215",
+              "trendy-pearl-finger-ring-174214",
+              "trendy-bracelet-174198"
+            ],
+            "view_text": "View All Kadas, Bracelets, and Rings"
+          }
+        },
+        "collection_tab_pLeJXP": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "",
+            "product_list": [],
+            "view_text": "View All Necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_gpTEWD",
+        "collection_tab_pLeJXP"
+      ],
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 0px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Kadas, Bracelets and Rings"
+      }
+    },
+    "new_shop_the_look_iNRmht": {
+      "type": "New-shop-the-look",
+      "disabled": true,
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/Kushal_-0335o.png",
+        "img_icon_banner_mob": "shopify://shop_images/Screenshot_2024-06-03_at_3.40_1.jpg",
+        "head": "Shop The Look",
+        "sec": "Vacay Evening in Pearls",
+        "sec_text": "",
+        "product_list": [
+          "trendy-pearl-necklace-174337",
+          "trendy-pearl-earring-174231"
+        ],
+        "coll_name": "Vacay Evening in Pearls"
+      }
+    },
+    "pearl_footer_dRCxB7": {
+      "type": "pearl-footer",
+      "settings": {
+        "text": "Wearing the Vibe in Pearls Necklaces<br>may cause excessive compliments.<br>Shop now and risk looking fabulous!",
+        "banner": "shopify://shop_images/Kushal_-3483_copy_2_1.png"
+      }
+    }
+  },
+  "order": [
+    "swiper_js_rHcbkE",
+    "main",
+    "video_banner_tgXLxw",
+    "pearl_card_slider_eqUaTW",
+    "pearls_collection_tabing_7xNG47",
+    "new_shop_the_look_xEneLb",
+    "new_shop_the_look_wd9U4D",
+    "pearls_collection_tabing_dDcEna",
+    "new_shop_the_look_4dnmEK",
+    "pearls_collection_tabing_f64G6R",
+    "new_shop_the_look_iNRmht",
+    "pearl_footer_dRCxB7"
+  ]
+}

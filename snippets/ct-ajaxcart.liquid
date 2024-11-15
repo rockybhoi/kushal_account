@@ -1,0 +1,577 @@
+
+{{ 'ct-gift.css' | asset_url | stylesheet_tag }}
+ <!-- Snapmint Products JS data Start -->
+          <script>
+            var prod_arr=[];
+          </script>
+        <!-- Snapmint Products JS data End-->
+
+{% if cart.item_count > 0 %}
+  <div class="mm-ajaxcart-body template-cart">
+    <div class="mm-ajaxcart-header page-header cart--header">
+      <h2 class="majortitle">
+        Cart <span>({{ cart.item_count }})</span>
+      </h2>
+
+      <button class="mm-ajaxcart-close" aria-label="close-cart">
+        {% render 'svg-x', stroke_width: 1.3 %}
+      </button>
+    </div>
+{% assign  snap_compare = "" %}
+    <ul class="mm-ajaxcart-items">
+      
+      {% for item in cart.items %}
+        {% liquid
+          assign custom = item.product.tags
+          assign customProduct_tags = item.product.tags | join: ','
+          assign custom_product = false
+          for property in item.properties
+            if property.first == 'customized'
+              assign custom_product = true
+            endif
+          endfor
+        %}
+        {% assign product_tags = item.product.tags | join: ',' %}
+
+        <!-- Snapmint Products JS data Start -->
+          <script>
+        //    var single_prod_arr=[];
+            var cart_items = {
+              "sku": '{{ item.sku }}',
+              "name": '{{ item.title }}',
+              "quantity": '{{ item.quantity }}',
+              "unit_price":'{{ item.final_price | divided_by : 100 }}',
+              "imei1": "{{ item.id  }}" 
+              };
+         
+          prod_arr.push(cart_items);
+       // console.log(prod_arr);
+          </script>
+       
+          
+                {% assign snap_compare_price = item.product.compare_at_price | money_without_currency %}
+                {% assign snap_compare_cp_price = snap_compare_price  | remove:","%}
+              {% assign snap_compare = snap_compare  | plus: snap_compare_cp_price%}
+       
+        <!-- Snapmint Products JS data End-->
+       
+        <li
+          class="mm-ajaxcart-item ajaxcartItem"
+          data-key="{{ item.key }}"
+          data-line="{{ forloop.index }}"
+          {% if custom_product == true %}
+            data-quantity="{{ item.quantity }}" data-custom-product="true"
+          {% endif %}
+          {% if customProduct_tags contains 'customize-text' %}
+            data-addOnproduct="{{ item.variant_id }}"
+          {% endif %}
+        >
+          <div class="mm-ajaxcart-item-image">
+            <img src="{{ item | img_url: 'x200' }}" alt="{{ item.image.alt | escape }}">
+
+          
+            <!-- STart THE TAG CODING   -->
+                    {% assign price_ct=item.product.price | money_without_currency  %}
+                  {% assign limited_discount=false %}
+                  {% assign limited_price=false %}
+                  {% assign bargain=false %}
+            
+                  {%- assign savingsd = item.product.compare_at_price | minus: item.product.price | times: 100.0 | divided_by: item.product.compare_at_price | round  -%}
+                
+                {% assign f_price=item.product.price | money_without_currency  %}
+                {% assign final_price_remove=f_price | remove:","  %}
+                {% assign final_price=final_price_remove | plus:0  %}
+  
+                {% if savingsd >= 10 and savingsd <= 50  %}
+                       {% assign limited_discount= true %}
+                    {% endif %}
+              {% if final_price >= 1300 and final_price <= 2000  %}
+                 {% assign limited_price= true %}
+              {% endif %}
+              {% if final_price > 2000   %}
+                 {% assign bargain= true %}
+              {% endif %}
+
+
+
+              <div class="ct_custom_badge coll">
+                {% if item.product.tags contains "Rakshabandhan24" %}
+                <span class="ct-rakhi_badge ct-rakhi_cart_badge">Rakhi Special</span>
+                 {% else %}
+                
+              {% if item.product.metafields.custom.best_seller_badge == true %}
+                <div class="ct_best_badge ct_best_badge_cart">Bestseller</div> 
+                
+                {% else %}
+
+             
+                  {% assign fast_sell=true %}
+                   
+            
+                {% if limited_price and  limited_discount %}
+                   <div class="ct_tag limited_tag">  
+                          Limited Deal
+                      </div>
+                  {% assign fast_sell=false %}
+                {% endif %}                   
+                
+             
+                
+                {% if bargain and  limited_discount %}
+                  {% comment %}
+                  <div class="ct_tag bargain_tag">
+                        <!-- Bargain Buy -->
+                    Price Crash
+                   </div>
+                {% endcomment %}
+                   {% assign fast_sell=false %}
+                {% endif %}       
+
+
+                 {% if item.product.metafields.custom.best_seller_badge == true %}
+                
+                    {% else %}
+                      {% assign pro_quantity = item.product.variants.first.inventory_quantity %}
+                    {% if pro_quantity <= 3 and fast_sell and final_price >= 1000  %}
+                    <div  class="ct_sell_badge ct_sell_badge-cart">Selling Fast</div>   
+                  {% endif %}
+                {% endif %} 
+                
+              {% endif %} 
+              {% endif %} 
+              
+                </div>
+
+            <!-- END THE TAG CODING   -->
+
+
+
+            
+          </div>
+          <div class="mm-ajaxcart-item-info">
+            <div class="mm-ajaxcart-info-header">
+              <div>
+                {% if product_tags contains 'customize-text' %}
+                  <div class="mm-ajaxcart-item-name">
+                    <a>{{ item.product.title }}</a>
+                  </div>
+                {% else %}
+                  <div class="mm-ajaxcart-item-name">
+                    <a href="{{ item.url }}">{{ item.product.title }}</a>
+                  </div>
+                {% endif %}
+
+                <div class="variant_option">
+                  {% for option in item.options_with_values %}
+                    {% unless option.name == 'Title' %}
+                      <p>{{ option.name }}: {{ option.value }}</p>
+                    {% endunless %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+
+                          <div class="ct_cart_dis-main" >
+            <p class="mm-ajaxcart-item-price cart-item__column cart-item__price">
+            <span class="money">{{ item.product.price | money }}</span>
+            {% if item.product.compare_at_price > item.price %}
+              <span class="cart_compare_at-price">
+                {{ item.product.compare_at_price | money_without_trailing_zeros }}
+              </span>
+
+              <div class="ct_cart_dis" >
+            {% if item.product.compare_at_price > item.price %}
+              <span class="product-label product-label--sale ">
+                <span class="CT_parsent_off_ CT_parsent_off_product">{{ item.product.compare_at_price | minus: item.price | times: 100.0  | divided_by: item.product.compare_at_price | round}}% off</span>
+              </span>
+              {% if item.product.compare_at_price > item.price %}
+                    {%- assign discount_amountc = item.product.compare_at_price | minus: item.price -%} 
+
+                 {%- assign discount_amountpr = discount_amountc | money_without_currency  | remove:',' -%}
+                    {%- assign discount_amountmn = discount_amountpr | plus:0  -%}
+                  
+
+                   {%- if discount_amountmn > 1000 -%}
+                    
+
+
+
+                
+                    <div class="CT_price_off">
+                      <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ddd.png?v=1710506104?width=18"  loading="lazy" />
+                        Big Save <span> {{ discount_amountc | money | remove: ' ' }}</span>
+                    </div>                               
+                {%- endif %}              
+                {%- endif %}              
+            {% endif %}
+                                </div>
+                              
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+            {% endif %}
+          </p>
+        </div>
+
+            
+          </div>
+
+          <div class="mm-ajaxcart-info-body">
+
+
+           
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+            
+
+              {% unless product_tags contains 'abc' %}
+                <div class="mm-ajaxcart-item-quantity-main">
+                <div class="mm-ajaxcart-item-quantity">
+                  <span class="{% if item.quantity > 1 %}quantity-minus {% else %} mm-ajaxcart-remove-item {% endif %}"   data-line="{{ forloop.index }}"
+                data-name="{{ item.product.title }}" >
+                    {% render 'svg-minus' %}
+                  </span>
+                  <input
+                    class="quantity-input qty"
+                    data-key="{{ item.key }}"
+                    data-line="{{ forloop.index }}"
+                    type="number"
+                    value="{{ item.quantity }}"
+                    min="1"
+                    pattern="[0-9]*"
+                  >
+                  <span class="quantity-plus">
+                    {% render 'svg-plus' %}
+                  </span>
+                </div>
+{% assign variant = item.variant %}
+{% assign inventory_quantity = variant.inventory_quantity | default: 0 %}
+
+{% if inventory_quantity < 10 %}
+  <p class="ajex_left"><img src="https://cdn.shopify.com/s/files/1/0796/1959/files/box-time.png?v=1702456418"> Hurry, Only<span> {{ inventory_quantity }}</span> left</p>
+{% endif %}
+                  </div>
+              {% endunless %}
+
+              <button
+                class="mm-ajaxcart-remove-item discout_check ct_{{ item.variant_id }}"
+                data-line="{{ forloop.index }}"
+                data-name="{{ item.product.title }}"
+              >
+                  {% render 'delete-icon' %}
+                <span>remove</span>
+              </button>
+            </div>
+
+            {% if product_tags contains 'customize-text' %}
+              <span class="personalized_quantity">Quantity: {{ item.quantity }} X&nbsp </span>
+            {% endif %}
+          <div style="display:none" class="ct_available_gifting ct_{{ item.product_id }}"><span>Gifting option is added <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+  <path d="M13.0767 6.28461L12.2834 5.36294C12.1317 5.18794 12.0092 4.86127 12.0092 4.62794V3.63627C12.0092 3.01794 11.5017 2.51044 10.8834 2.51044H9.8917C9.6642 2.51044 9.3317 2.38794 9.1567 2.23627L8.23503 1.44294C7.83253 1.09877 7.17337 1.09877 6.76503 1.44294L5.8492 2.24211C5.6742 2.38794 5.3417 2.51044 5.1142 2.51044H4.10503C3.4867 2.51044 2.9792 3.01794 2.9792 3.63627V4.63377C2.9792 4.86127 2.8567 5.18794 2.71087 5.36294L1.92337 6.29044C1.58503 6.69294 1.58503 7.34627 1.92337 7.74877L2.71087 8.67627C2.8567 8.85127 2.9792 9.17794 2.9792 9.40544V10.4029C2.9792 11.0213 3.4867 11.5288 4.10503 11.5288H5.1142C5.3417 11.5288 5.6742 11.6513 5.8492 11.8029L6.77087 12.5963C7.17337 12.9404 7.83253 12.9404 8.24087 12.5963L9.16253 11.8029C9.33753 11.6513 9.6642 11.5288 9.89753 11.5288H10.8892C11.5075 11.5288 12.015 11.0213 12.015 10.4029V9.41127C12.015 9.18377 12.1375 8.85127 12.2892 8.67627L13.0825 7.75461C13.4209 7.35211 13.4209 6.68711 13.0767 6.28461ZM9.9267 5.91711L7.1092 8.73461C7.02753 8.81627 6.9167 8.86294 6.80003 8.86294C6.68337 8.86294 6.57253 8.81627 6.49087 8.73461L5.0792 7.32294C4.91003 7.15377 4.91003 6.87377 5.0792 6.70461C5.24837 6.53544 5.52837 6.53544 5.69753 6.70461L6.80003 7.80711L9.30837 5.29877C9.47753 5.12961 9.75753 5.12961 9.9267 5.29877C10.0959 5.46794 10.0959 5.74794 9.9267 5.91711Z" fill="#08A217"/>
+</svg></span></div>
+          <div class="ct_cart_no_add_gift ct_cart_gift ct_new_{{ item.product_id }}" data-sku="{{ item.sku }}" data-var-id="{{ item.variant_id }}" data-prod-id="{{ item.product_id }}">
+             
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+
+    <!-- -----------upsell--------- -->
+    {% assign cross_sellHandles = '' %}
+    {% for item in cart.items %}
+      {% for tag in item.product.tags %}
+        {% if tag contains 'upsell__' %}
+          {% assign handle = tag | split: '__' | last %}
+          {% assign cross_sellHandles = cross_sellHandles | append: handle | append: ',' %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% assign cross_sellHandles = cross_sellHandles | split: ',' | uniq %}
+    {% if cross_sellHandles.size > 0 %}
+      <div class="mm_ajax_upsell">
+        <h3 class="mm_upsell-title ">Product Recommendation</h3>
+        <ul class="mm-upsell">
+          <li class="upsell_product">
+            {% for cross_sellHandle in cross_sellHandles %}
+              {% assign cross_sellProduct = all_products[cross_sellHandle] %}
+              {% assign skipLoop = false %}
+              {% for item in cart.items %}
+                {% if item.product.handle == cross_sellHandle %}
+                  {% assign skipLoop = true %}
+                {% endif %}
+              {% endfor %}
+              {% unless skipLoop %}
+                {% if cross_sellProduct.available %}
+                  <div class="upsell--product">
+                    {% render 'upsell-card', product: cross_sellProduct, show_quick_add: true, add_button: true %}
+                  </div>
+                {% endif %}
+              {% endunless %}
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+    {% endif %}
+    <!-- -----------------endupsell------------ -->
+
+ 
+
+  
+
+
+
+<div class="ct_ajax_cart">
+    <div class="ct_gift_box_html" style="display: none">
+      
+    </div>
+          
+    <div class="ct_gift_tab" style="display:none">
+      <!-- <div class="ct_edit"><label class="ct_edit_label">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+        <path d="M4.5 12.375V21.375C4.5 21.9717 4.73705 22.544 5.15901 22.966C5.58097 23.3879 6.15326 23.625 6.75 23.625H20.25C20.8467 23.625 21.419 23.3879 21.841 22.966C22.2629 22.544 22.5 21.9717 22.5 21.375V12.375" stroke="#D60227" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.5 6.1875C13.5 5.14321 13.0852 4.14169 12.3467 3.40327C11.6083 2.66484 10.6068 2.25 9.5625 2.25C8.81658 2.25 8.10121 2.54632 7.57376 3.07376C7.04632 3.60121 6.75 4.31658 6.75 5.0625C6.75 5.80842 7.04632 6.52379 7.57376 7.05124C8.10121 7.57868 8.81658 7.875 9.5625 7.875H13.5M13.5 6.1875V7.875M13.5 6.1875C13.5 5.14321 13.9148 4.14169 14.6533 3.40327C15.3917 2.66484 16.3932 2.25 17.4375 2.25C18.1834 2.25 18.8988 2.54632 19.4262 3.07376C19.9537 3.60121 20.25 4.31658 20.25 5.0625C20.25 5.43184 20.1773 5.79757 20.0359 6.1388C19.8946 6.48003 19.6874 6.79007 19.4262 7.05124C19.1651 7.3124 18.855 7.51957 18.5138 7.66091C18.1726 7.80225 17.8068 7.875 17.4375 7.875H13.5" stroke="#D60227" stroke-linejoin="round"/>
+        <path d="M13.5 12.375V23.625M3.375 7.875H23.625V12.375H3.375V7.875Z" stroke="#D60227" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+  Gifting Summary</label><button class="ct_cart_edit">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M6.40629 5.97449H5.63073C5.21934 5.97449 4.8248 6.13791 4.53391 6.4288C4.24301 6.7197 4.07959 7.11424 4.07959 7.52562V14.5057C4.07959 14.9171 4.24301 15.3117 4.53391 15.6026C4.8248 15.8934 5.21934 16.0569 5.63073 16.0569H12.6108C13.0222 16.0569 13.4168 15.8934 13.7077 15.6026C13.9986 15.3117 14.162 14.9171 14.162 14.5057V13.7302" stroke="#D60227" stroke-width="0.886364" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.3863 4.42329L15.713 6.74999M16.7871 5.65257C17.0926 5.34711 17.2642 4.93282 17.2642 4.50085C17.2642 4.06887 17.0926 3.65458 16.7871 3.34913C16.4817 3.04367 16.0674 2.87207 15.6354 2.87207C15.2034 2.87207 14.7891 3.04367 14.4837 3.34913L7.95728 9.85227V12.179H10.284L16.7871 5.65257Z" stroke="#D60227" stroke-width="0.886364" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Edit</button></div>  -->
+      <div class="ct_design_Gift_Main" style="display:none">
+      </div>
+    </div>  
+</div>
+
+     <div class="trust-icon--section_cartt">
+    <div class="container">
+      <div class="inner-container">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="section-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        <div class="icon-list__wrapper">      
+          <div class="trust-icons__inner">
+              <div class="trust__img">
+                <img src="https://www.kushals.com/cdn/shop/files/return.svg?v=172130302400" alt="">
+              </div>  
+              <div class="icon__heading">15 Days<br>Free Exchange</div>
+          </div>      
+          <div class="trust-icons__inner">
+              <div class="trust__img">
+                <img src="https://www.kushals.com/cdn/shop/files/Group_48099251.svg?v=172130305600" alt="">
+              </div>  
+              <div class="icon__heading">Free Shipping<br>Available </div>
+          </div>      
+          <div class="trust-icons__inner">
+              <div class="trust__img">
+                <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Secured_Checkout.svg?v=1721307480" alt="">
+              </div>  
+              <div class="icon__heading">Secured<br>Checkout</div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+    <!-- <div class="checkout-subtotal-container__left column column--half">
+            
+              <div class="checkout-note">
+                <label for="note">{{ 'cart.label.note' | t }}</label>
+                <div class="textareawrapper"><textarea id="note" onpaste="return false;" maxlength="255" name="note">{{ cart.note }}</textarea></div>
+              </div>
+            
+    </div> -->
+{% comment  %}
+    {% section "gift_box_2" %}
+  {% endcomment  %}
+
+      </div>
+  <div class="mm-ajaxcart-bottom">
+
+
+     {% comment %}     
+    
+    <!-- STart 2.0 snapmint-->
+{%  assign ct_cart_total=  cart.total_price | money_without_currency  | remove:','  %}
+   {% assign ct_cart_total= ct_cart_total  | plus : 0%}
+    {% if ct_cart_total >= 4000 %}
+        <div class="snap_emi_txt_minicart_widget"></div>
+        <span class="snapmint_lowest_emi_value_minicart_widget hidden" style="display:none;" data-snapmint-price="{{ cart.total_price | money_without_currency  | remove:',' -}}" data-snapmint-subvention="false" data-snapmintskuid="productsku" data-snapmint-Page="minicart"></span>
+    {% endif %}
+    <!-- END 2.0 snapmint-->
+     {% endcomment %}     
+  
+    
+    
+    
+    <div class="mm-ajaxcart-button">   
+      
+      <div class="theme-money">
+      <!-- <div class="theme-money-mrp" >MRP</div> -->
+        <div class="theme-money-text">
+          {% assign total_price= cart.total_price | money_without_currency | remove:',' %}
+          {% assign total_price=total_price| plus:0 %}
+        <span class="theme-money-price" data-price="{{ total_price }}">{{ cart.total_price | money_without_trailing_zeros -}}</span>
+         
+               {% comment %}     
+          {% assign snap_compare= snap_compare | plus:0 %}
+          {% if snap_compare > total_price %}
+              <span class="theme-money-price-mrp" >₹ {{ snap_compare }}</span>
+          {% endif %}
+               {% endcomment %}     
+          
+        <!-- <span class="theme-money-text-inner" >(Incl. of all taxes)</span> -->
+          </div>
+      </div>
+      <cart-form>
+        <div class="wrap_ct_bottom  wrap_ct_bottom_full_width ">
+          
+            <a href="/checkout" class="mm-checkout-button ">{{ 'cart.general.checkout' | t }}</a>
+            <!-- <a 
+              href="/checkout"
+              class="mm-checkout-button "
+              {% if customer %}
+                data-magicx="inactive"
+              {% endif %}
+            >
+              Pay Now
+            </a> -->
+      
+      
+          
+          
+     {% comment %}     
+        
+          <!-- STart 2.0 snapmint-->
+           {% if ct_cart_total >= 4000 %}
+              <div class="ct_wrap_snap">
+                <div class="snap_emi_txt_minicart"></div>
+                <span class="snapmint_lowest_emi_value_minicart hidden" style="display:none;" data-snapmint-price="{{ cart.total_price | money_without_currency  | remove:',' -}}" data-snapmint-subvention="false" data-snapmintskuid="productsku" data-snapmint-Page="minicart"></span>
+              </div>
+          {% endif %}
+     {% endcomment %}     
+  
+
+
+
+          
+
+          
+        </div>
+      </cart-form>
+    <script>
+      // var Cartitems = {
+      //       cart_total:{{ cart.total_price | money_without_currency -}},
+      //       shipping_fees:100,
+      //       shipping_title:flat_rate,
+      //       discount_code:xyz,
+      //       discount_value:100,
+      //       products: prod_arr
+      // };
+
+      // var Cartitems = {
+      //                 "cart_total":"{{ cart.total_price | money_without_currency | remove:"," -}}",
+      //                 "shipping_fees":"",
+      //                 "shipping_title":"",
+      //                 "discount_code":"",
+      //                 "discount_value":"",
+      //                 "products": prod_arr
+      //           };
+
+      //  loadSnapPayPopup({{ cart.total_price | money_without_currency | remove:"," -}})
+
+
+      clevertap.profile.push({
+         "Site": {
+           "cart val": "{{ total_price }}"
+         }
+        });
+    </script>
+    
+    
+    
+    <!-- End 2.0 snapmint -->
+
+
+
+      
+    </div>
+  </div>
+{% else %}
+  <div class="mm-emptycart">
+
+<div class="mm-ajaxcart-body template-cart">
+    <div class="mm-ajaxcart-header page-header cart--header">
+      <h1 class="majortitle">
+        Cart <span>({{ cart.item_count }})</span>
+      </h1>
+
+      <button class="mm-ajaxcart-close" aria-label="close-cart">
+        {% render 'svg-x', stroke_width: 1.3 %}
+      </button>
+    </div></div>
+
+
+
+    
+    <div class="mm-emptycart-content">
+      <p class="emptycart-header">Your cart is currently empty</p>
+      <div class="empty_cart-heading">
+        {{ settings.empty_cart_heading }}
+      </div>
+
+      <div class="emptycart-collection">
+        {% for mycollection in settings.collection_list %}
+          <div class="empty-cart-product">
+            <a href="{{mycollection.url  }}">
+              <div class="empty-cart-product-image">
+                <img src="{{ mycollection.image | image_url }}">
+              </div>
+            </a>
+            <div class="empty-product-title">{{ mycollection.title }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+{% endif %}

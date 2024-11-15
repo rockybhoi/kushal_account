@@ -1,0 +1,693 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "slideshow_KmaN7p": {
+      "type": "slideshow",
+      "blocks": {
+        "image_6tizk3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web_Banner_copy_3.jpg",
+            "mobile_image": "shopify://shop_images/mob_1_copy.jpg",
+            "slide_link": "shopify://collections/rakshabandhan-collection"
+          }
+        }
+      },
+      "block_order": [
+        "image_6tizk3"
+      ],
+      "custom_css": [
+        ".ct-dots-main {display: none;}",
+        ".container {padding-left: 0; padding-right: 0; margin-top: 0px;}",
+        "@media (max-width: 700px) {.fully-spaced-row--not-mobile {margin-top: 0; margin-bottom: 0; }}"
+      ],
+      "settings": {
+        "img_org": false,
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "banner_with_button_ifeC9H": {
+      "type": "banner_with_button",
+      "disabled": true,
+      "settings": {
+        "desk": "shopify://shop_images/Feature_banner_5.jpg",
+        "mobile": "shopify://shop_images/jumkha_banner_70e1deea-8479-4eb6-8684-95b9714b233c.png",
+        "link": "shopify://collections/jhumkas",
+        "link_text": "Shop The Collection"
+      }
+    },
+    "cross_page_promos_GYKXt6": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "custom_icon_K9ETeg": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/20_lakh_d11c423d-51f5-44dd-bb34-7b6a091d1ff2.svg",
+            "image_size": "icon",
+            "text": "20 Lakh+\nHappy Customers",
+            "link_url": ""
+          }
+        },
+        "custom_icon_Xrf9rH": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/global.svg",
+            "image_size": "icon",
+            "text": "Worldwide \nShipping",
+            "link_url": ""
+          }
+        },
+        "custom_icon_Cnz7tC": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Express.svg",
+            "image_size": "icon",
+            "text": "Express \nDelivery",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_icon_K9ETeg",
+        "custom_icon_Xrf9rH",
+        "custom_icon_Cnz7tC"
+      ],
+      "custom_css": [
+        ".rimage-wrapper.lazyload--placeholder {background: none;}",
+        ".icon-with-caption {background: #fbfbfb; border: 1px solid #e5e5e5; border: 0px solid #e5e5e5; background: transparent;}",
+        ".container {opacity: 1; background: linear-gradient( 246deg, #e3e3e3 0%, rgba(227, 227, 227, 0) 103.16% ); margin-top: 0px; margin-bottom: 32px;}",
+        ".flexible-layout .column,.fixed-layout .column {margin-bottom: 0; padding: 10px 0;}",
+        "@media (max-width: 748px) {.icon-with-caption .icon-with-caption__text {width: 100%; } .flexible-layout {flex-direction: row; }}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "shop_by_type_tabing_bkKnen": {
+      "type": "shop-by-type-tabing",
+      "blocks": {
+        "collection_YTa9Pi": {
+          "type": "Collection",
+          "settings": {
+            "heading": "Zircon",
+            "botom_link": "shopify://collections/rakshabandhan-special-zircon-jewellery",
+            "botom_text": "View All Zircon Gifts",
+            "img1": "shopify://shop_images/Gift_51c8089a-c6ad-411a-8cc4-e3654727cb9a.png",
+            "link1": "shopify://collections/rakshabandhan-gift-ideas",
+            "title1": "Gift Sets",
+            "img2": "shopify://shop_images/Pendant_b5a2c03e-1c5b-4a78-8b1c-8b2bfe55f803.png",
+            "link2": "shopify://collections/rakhi-pendant",
+            "title2": "Pendant Sets",
+            "img3": "shopify://shop_images/Necklaces.png",
+            "link3": "shopify://collections/rakhi-necklace",
+            "title3": "Necklaces",
+            "img4": "shopify://shop_images/Bracelets.png",
+            "link4": "shopify://collections/bangle-rakhi",
+            "title4": "Bracelets",
+            "link5": "",
+            "title5": "",
+            "link6": "",
+            "title6": "",
+            "link7": "",
+            "title7": "",
+            "link8": "",
+            "title8": ""
+          }
+        },
+        "collection_CrqXRF": {
+          "type": "Collection",
+          "settings": {
+            "heading": "Silver",
+            "botom_link": "shopify://collections/rakshabandhan-special-silver-jewellery",
+            "botom_text": "View All Silver Gifts",
+            "img1": "shopify://shop_images/Earrings_si.png",
+            "link1": "shopify://collections/rakhi-special-silver-earrings",
+            "title1": "Earrings",
+            "img2": "shopify://shop_images/Necklaces_ec8b7a9b-0464-4656-ad01-250980e8d039.png",
+            "link2": "shopify://collections/rakhi-special-silver-necklaces",
+            "title2": "Necklaces",
+            "img3": "shopify://shop_images/Bracelets_si.png",
+            "link3": "shopify://collections/rakhi-special-silver-bracelets",
+            "title3": "Bracelets",
+            "link4": "",
+            "title4": "",
+            "link5": "",
+            "title5": "",
+            "link6": "",
+            "title6": "",
+            "link7": "",
+            "title7": "",
+            "link8": "",
+            "title8": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_YTa9Pi",
+        "collection_CrqXRF"
+      ],
+      "settings": {
+        "title": "Shop By Type"
+      }
+    },
+    "round_collection_box_JRmBCB": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_crjEbi": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Frame_48099126_4d2604cc-f500-43da-ad4b-15fc5fcb19b3.png",
+            "link": "shopify://collections/rakshabandhan-gift-ideas",
+            "title": "Gift Sets"
+          }
+        },
+        "collection_kzQBaq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/zircon-pendant-set-white-rose-gold-pink-mint-meenakari-zircon-pendant-earring-169739-38425976078492-Photoroom.png",
+            "link": "shopify://collections/rakhi-pendant",
+            "title": "Pendant Sets"
+          }
+        },
+        "collection_Vgnjbm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/zircon-necklace-white-rose-gold-zircon-necklace-173251-38780500148380-removebg-preview.png",
+            "link": "shopify://collections/rakhi-necklace",
+            "title": "Necklaces"
+          }
+        },
+        "collection_rFrhCN": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/zircon-kada-white-rose-gold-zircon-kada-174692-38869868511388-removebg-preview.png",
+            "link": "shopify://collections/bangle-rakhi",
+            "title": "Bracelets"
+          }
+        }
+      },
+      "block_order": [
+        "collection_crjEbi",
+        "collection_kzQBaq",
+        "collection_Vgnjbm",
+        "collection_rFrhCN"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop By Type"
+      }
+    },
+    "wedding_collection_video_6fGXxt": {
+      "type": "Wedding-Collection-Video",
+      "blocks": {
+        "box_ktYypm": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/e90abb75ea5e4b86b2a09e0affcaafd6.mp4",
+            "image": "shopify://shop_images/Golden_dawn.png",
+            "heading": "Golden Dawn Rakh<br>Gift Set",
+            "text": "",
+            "link": "shopify://products/golden-dawn-gift-set",
+            "link_text": "Explore"
+          }
+        },
+        "box_jw4eBP": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/f1ea69b688894a8e96117494fd8ce5c3.mp4",
+            "image": "shopify://shop_images/Ocean_Breeze.png",
+            "heading": "Ocean Breeze Rakhi<br> Gift Set",
+            "text": "",
+            "link": "shopify://products/zircon-earring-170745-rg",
+            "link_text": "Explore"
+          }
+        },
+        "box_AeQHaP": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/a5f044591cd64d5ca77fb6734edaf950.mp4",
+            "image": "shopify://shop_images/3.3_b1a661bc-518a-42be-bbe8-beb8f3a3b1b7.png",
+            "heading": "Mystic Charm Rakhi<br>Gift Set",
+            "text": "",
+            "link": "shopify://products/mystic-charm-gift-set",
+            "link_text": "Explore"
+          }
+        },
+        "box_zCetQL": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/b7a50a7d012547968a610325185f2127.mp4",
+            "image": "shopify://shop_images/Kushal_s5396_Sangeeth.jpg",
+            "heading": "Engagement",
+            "text": "A shine that complements your excitement!",
+            "link": "shopify://collections/zircon-engagement-collection-2024",
+            "link_text": "Explore"
+          }
+        },
+        "box_UNYjXN": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/40d76517ed374130999509a496f217cd.mp4",
+            "image": "shopify://shop_images/Kushal_s6071_Cocktail.jpg",
+            "heading": "Cocktail",
+            "text": "A shimmer that deserves a memorable toast!",
+            "link": "shopify://collections/the-cocktail-edit",
+            "link_text": "Explore"
+          }
+        },
+        "box_JqGCTT": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "box_tQXde3": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "box_xtn7bi": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "box_hWFeEC": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "box_DzRC8W": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "box_ktYypm",
+        "box_jw4eBP",
+        "box_AeQHaP",
+        "box_zCetQL",
+        "box_UNYjXN",
+        "box_JqGCTT",
+        "box_tQXde3",
+        "box_xtn7bi",
+        "box_hWFeEC",
+        "box_DzRC8W"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection-head {font-size: 18px; font-weight: 700; padding-bottom: 5px; text-align: left; padding-left: 10px; padding-top: 0; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "mother": false,
+        "head": "Necklaces Gift Sets",
+        "sec_tit": "",
+        "sbtext": "",
+        "head_link": "",
+        "style_sec": false
+      }
+    },
+    "video_banner_with_mute_button_mT4xEm": {
+      "type": "Video-banner-with-mute-button",
+      "settings": {
+        "video": "shopify://files/videos/JB Web_Resize.mp4"
+      }
+    },
+    "pearls_collection_tabing_4JBcj9": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_7BFqJk": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "rakshabandhan-gift-ideas",
+            "product_list": [
+              "celestial-charm-gift-set",
+              "golden-dawn-gift-set",
+              "blushing-bloom-gift-set",
+              "halo-glow-gift-set",
+              "zircon-pendant-earring-169738-rg"
+            ],
+            "view_text": "View All Gifts"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_7BFqJk"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".pearls-tab-box {display: none;}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Gifts"
+      }
+    },
+    "ct_banner_TCCWxf": {
+      "type": "CT-Banner",
+      "custom_css": [
+        ".CT-Banner-main {margin-top: 50px;}",
+        "@media (max-width: 750px) {.CT-Banner-main {margin-top: 32px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "dimg": "shopify://shop_images/Frame_48099136.png",
+        "mimg": "shopify://shop_images/Frame_48099134.png",
+        "video": "https://cdn.shopify.com/videos/c/o/v/3ba54b18749046b281f175c56458f241.mp4"
+      }
+    },
+    "gifts_by_price_CaGQRi": {
+      "type": "gifts-by-price",
+      "settings": {
+        "heading": "Shop By Price",
+        "first": "Under <b>₹1000</b>",
+        "link1": "shopify://collections/rakshabandhan-gifts-for-sister-under-1000",
+        "seccend": "<b>₹1000 - ₹2599</b>",
+        "link2": "shopify://collections/gift-for-sister-on-rakshabandhan-under-2500",
+        "last": "Above <b>₹2599</b>",
+        "link3": "shopify://collections/rakhi-gift-for-sister-above-2500"
+      }
+    },
+    "136af06e-1048-4f58-b710-c8708d3c2bdc": {
+      "type": "Wedding-Collection-Video",
+      "blocks": {
+        "4b868ed3-7636-44d3-8bf7-947279e6ebb0": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/8911316b4a724d47b809e91ee06798ee.mp4",
+            "image": "shopify://shop_images/1.1_8e656970-2508-4149-b324-bef8a5b02dd4.png",
+            "heading": "Halo Glow Rakhi<br>Gift Set",
+            "text": "",
+            "link": "shopify://products/halo-glow-gift-set",
+            "link_text": "Explore"
+          }
+        },
+        "7eac715a-3429-4b85-b2e9-2c5d84fd692f": {
+          "type": "Box",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/564c6876845144afaa52888383266fbc.mp4",
+            "image": "shopify://shop_images/2.2.png",
+            "heading": "Sunset Silhouette Rakhi<br>Gift Set",
+            "text": "",
+            "link": "shopify://products/zircon-pendant-earring-169738-rg",
+            "link_text": "Explore"
+          }
+        },
+        "9dc054fa-daa9-4616-b6bb-55cd5dc698f3": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/3.3.png",
+            "heading": "Celestial Charm RakhiGift Set",
+            "text": "",
+            "link": "shopify://products/celestial-charm-gift-set",
+            "link_text": "Explore"
+          }
+        },
+        "eb258afd-083a-462f-83d1-0116a3b779a4": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/b7a50a7d012547968a610325185f2127.mp4",
+            "image": "shopify://shop_images/Kushal_s5396_Sangeeth.jpg",
+            "heading": "Engagement",
+            "text": "A shine that complements your excitement!",
+            "link": "shopify://collections/zircon-engagement-collection-2024",
+            "link_text": "Explore"
+          }
+        },
+        "1dfcb5ea-86e8-443c-9906-5dc5c751d5e9": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/40d76517ed374130999509a496f217cd.mp4",
+            "image": "shopify://shop_images/Kushal_s6071_Cocktail.jpg",
+            "heading": "Cocktail",
+            "text": "A shimmer that deserves a memorable toast!",
+            "link": "shopify://collections/the-cocktail-edit",
+            "link_text": "Explore"
+          }
+        },
+        "841f8d26-ef0b-439a-8862-aae8be0ee5bf": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "40f0ffee-38ef-4f3e-a0f1-75c2b88c5c20": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "226d9b94-3d1e-4ed4-aab6-6c03acc8c0e0": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "a3a660a2-c958-4c02-8df7-1a1f927b52cb": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        },
+        "ad8903bb-bea6-4001-8b77-ecffeab0b58c": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/d2457d994db54103b6528a9ebf3bcd72.mp4",
+            "image": "shopify://shop_images/Kushal_s5981_Muhurtham.jpg",
+            "heading": "Big Day!",
+            "text": "Sparkles to celebrate YOU!",
+            "link": "shopify://collections/the-enchanting-zircon-south-indian-bridal-selects",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "4b868ed3-7636-44d3-8bf7-947279e6ebb0",
+        "7eac715a-3429-4b85-b2e9-2c5d84fd692f",
+        "9dc054fa-daa9-4616-b6bb-55cd5dc698f3",
+        "eb258afd-083a-462f-83d1-0116a3b779a4",
+        "1dfcb5ea-86e8-443c-9906-5dc5c751d5e9",
+        "841f8d26-ef0b-439a-8862-aae8be0ee5bf",
+        "40f0ffee-38ef-4f3e-a0f1-75c2b88c5c20",
+        "226d9b94-3d1e-4ed4-aab6-6c03acc8c0e0",
+        "a3a660a2-c958-4c02-8df7-1a1f927b52cb",
+        "ad8903bb-bea6-4001-8b77-ecffeab0b58c"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection-head {font-weight: 500; text-align: center; padding: 0 10px 20px 10px; } .Wedding-Collection-head {font-size: 18px; font-weight: 700; padding-bottom: 5px; text-align: left; padding-left: 10px; padding-top: 32px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "mother": false,
+        "head": "Pendant Gift Set",
+        "sec_tit": "",
+        "sbtext": "",
+        "head_link": "",
+        "style_sec": false
+      }
+    },
+    "wedding_banner_CgtHha": {
+      "type": "wedding-banner",
+      "settings": {
+        "link": "shopify://collections/rakshabandhan-special-sterling-silver",
+        "image": "shopify://shop_images/web_copy.jpg",
+        "image_sec": "shopify://shop_images/mob_copy_b642a43e-3641-442d-be74-4744822fb1d5.jpg"
+      }
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "rakhi-necklace",
+            "product_list": [
+              "zircon-necklace-173275",
+              "zircon-necklace-173262",
+              "zircon-necklace-173261",
+              "zircon-necklace-173250",
+              "zircon-necklace-173859"
+            ],
+            "view_text": "View All Necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 60px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Necklaces"
+      }
+    },
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534": {
+      "type": "ct-review",
+      "blocks": {
+        "review_KAAU8L": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-nath-zircon-nath-134650-30078986158236.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I gifted this for rakhi to my sister in law. And it was an absolute stunner. She loved it! And ofcourse, I have been a kushal's loyal customer, loved it's products and throught there was nothing better than this to be gifted. The design is great, unique! And ofcourse the stone is 🤩"
+          }
+        },
+        "5be492c4-776d-4b02-b72c-08bdba684c29": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-necklace-ruby-gold-zircon-necklace-156759-36532595130524.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "It's amazing...my sister really loved it 😍"
+          }
+        },
+        "f53e78af-618a-433d-a3be-e20520f945b8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/zircon-kada-lavender-rose-gold-zircon-kada-155384-37651972325532.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I gifted that kada for my sister birthday she loved it.. 😍it just awesome 👌"
+          }
+        },
+        "review_DYRUeD": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/silver-earring-white-rose-gold-92-5-silver-earring-164383-37682036408476.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I gifted this to my sister. She loved it"
+          }
+        }
+      },
+      "block_order": [
+        "review_KAAU8L",
+        "5be492c4-776d-4b02-b72c-08bdba684c29",
+        "f53e78af-618a-433d-a3be-e20520f945b8",
+        "review_DYRUeD"
+      ],
+      "settings": {}
+    },
+    "pearl_footer_iJpGnN": {
+      "type": "pearl-footer",
+      "disabled": true,
+      "settings": {
+        "text": "Effortlessly vintage and just as lively, <br> these are the jhumkas that will give your <br> ethnic style a reminiscence of traditional lore.",
+        "link": "/collections/vibe-in-pearls"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_KmaN7p",
+    "banner_with_button_ifeC9H",
+    "cross_page_promos_GYKXt6",
+    "shop_by_type_tabing_bkKnen",
+    "round_collection_box_JRmBCB",
+    "wedding_collection_video_6fGXxt",
+    "video_banner_with_mute_button_mT4xEm",
+    "pearls_collection_tabing_4JBcj9",
+    "ct_banner_TCCWxf",
+    "gifts_by_price_CaGQRi",
+    "136af06e-1048-4f58-b710-c8708d3c2bdc",
+    "wedding_banner_CgtHha",
+    "pearls_collection_tabing_7xNG47",
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534",
+    "pearl_footer_iJpGnN"
+  ]
+}

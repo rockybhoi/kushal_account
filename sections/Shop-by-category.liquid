@@ -1,0 +1,132 @@
+<style>
+  .Shop-by-category-inner img {
+        width: 100%;
+    border-radius: 100%;
+    max-width: 156px;
+    margin: 0 auto;
+    border: 3px solid #CF2228;
+}
+ 
+  .Shop-by-category-inner span {
+    color: #616161;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+        margin-top: 3px;
+}
+  .Shop-by-category-inner a {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right:10px;
+    width:100%;
+    max-width:15%;
+}
+    .Shop-by-category-inner a:last-child {
+    margin-right:0px;
+}
+  .Shop-by-category-inner {
+    display: flex;
+    justify-content: center;
+}
+  .head-cat {
+    color: #000;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    margin-bottom: 45px;
+    font-size: 29px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+  @media(max-width:750px){
+     .Shop-by-category-inner span {
+    font-size: 12px;
+}
+    .Shop-by-category-inner a {
+    margin-right: 10px;
+    max-width: calc(25% - 10px);
+}
+    .head-cat {
+    font-size: 26px;
+    }
+    
+    .Shop-by-category-inner img {
+    width: 100%;
+    max-width: 100%;
+      border-radius: 100%;
+}
+    .Shop-by-category-inner {
+    flex-wrap: wrap;
+          /* max-width: 400px; */
+    }
+  }
+</style>
+<div class="Shop-by-category">
+  <h2 class="head-cat container">{{ section.settings.head }}</h2>
+  <div class="Shop-by-category-inner container">
+    {% for block in section.blocks %}
+      {% if block.settings.image != blank %}
+        <a href="{{ block.settings.collection.url }}">
+          <img loading="lazy" src="{{ block.settings.image | img_url: '1024x1024' }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" alt="{{ block.settings.image.alt | escape }}" class="rimage__image">
+          <span>{{ block.settings.img_text }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+
+{% schema %}
+{
+  "name": "Shop-by-category",
+  "settings": [
+    {
+        "type": "text",
+        "id": "head",
+        "label": "Main Top Heading",
+      "default":"Shop By Category"
+      }
+  ],
+  "blocks":[{
+    "type":"img",
+    "name":"Box",
+    "limit":8,
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "img_text",
+        "label": "Heading"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+
+
+    ]
+  }],
+  "presets":[{
+        "name": "Shop-by-category"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,171 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+
+<div class="product-recommendations collection-slider-row"
+    id="view_similar"
+    data-section-id="{{ section.id }}"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&limit={{ section.settings.pro_per_row }}&product_id={{ product.id }}"
+    data-components="accordion,modal"
+    data-cc-animate>
+
+  {% if recommendations.performed and recommendations.products_count > 0 %}
+  <div class="product_recommendations_wrap container {% if section.settings.enable_carousel %} container--not-mobile{% endif %} fully-spaced-row">
+    <div class="{% if section.settings.enable_carousel %}collection-slider{% endif %}">
+    <h4 class="align-center hometitle">{{ section.settings.title }}
+    
+    <svg class="ct_dev_close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <path d="M16 29.3333C23.3334 29.3333 29.3334 23.3333 29.3334 16C29.3334 8.66667 23.3334 2.66667 16 2.66667C8.66669 2.66667 2.66669 8.66667 2.66669 16C2.66669 23.3333 8.66669 29.3333 16 29.3333Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12.2267 19.7733L19.7734 12.2267" stroke="#A02828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.7734 19.7733L12.2267 12.2267" stroke="#A02828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </h4>
+    
+      <div class="collection-listing related-collection" data-cc-animate="cc-fade-in-up">
+        <div class="carousel product_recommendations_slider product-list product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
+          {%- liquid
+            if settings.prod_thumb_shape == 'portrait-23'
+              assign chosen_aspect_ratio = 0.67
+            elsif settings.prod_thumb_shape == 'portrait-45'
+              assign chosen_aspect_ratio = 0.8
+            elsif settings.prod_thumb_shape == 'square'
+              assign chosen_aspect_ratio = 1.0
+            elsif settings.prod_thumb_shape == 'landscape-54'
+              assign chosen_aspect_ratio = 1.25
+            elsif settings.prod_thumb_shape == 'landscape-32'
+              assign chosen_aspect_ratio = 1.50
+            elsif settings.prod_thumb_shape == 'tallest'
+              assign chosen_aspect_ratio = 99
+              for product in recommendations.products
+                if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                  assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                endif
+              endfor
+            else
+              assign chosen_aspect_ratio = 0
+              for product in recommendations.products
+                if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                  assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                endif
+              endfor
+            endif
+          -%}
+          {%- for product in recommendations.products -%}
+            {% render 'product-block2', product: product, custom_aspect_ratio: chosen_aspect_ratio,no_quick_buy_markup: section.settings.enable_carousel %}
+          {%- endfor -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
+  <div class="quickbuy-container">
+    <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+    <div class="inner"></div>
+  </div>
+  {% endif %}
+  
+  {% endif %}
+</div>
+
+<script type="text/javascript" src="{{ 'owl.carousel.min.js' | asset_url }}" defer></script>
+{% javascript %}
+var loadProductRecommendationsIntoSection = function() {
+  // Look for an element with class 'product-recommendations'
+  var productRecommendationsSection = document.querySelector(".product-recommendations");
+  if (productRecommendationsSection === null) { return; }
+  // Create request and submit it using Ajax
+  var request = new XMLHttpRequest();
+  request.open("GET", productRecommendationsSection.dataset.url);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 300) {
+      var container = document.createElement("div");
+      container.innerHTML = request.response;
+      productRecommendationsSection.innerHTML = container.querySelector(".product-recommendations").innerHTML;
+      theme.ProductBlockManager.loadImages(productRecommendationsSection);
+      theme.initAnimateOnScroll();
+     jQuery('.carousel').owlCarousel({
+              loop:false,
+              items: 10,
+              margin:0,
+              nav:true,
+      		navText: [
+                '<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.20996 16.619L1.59091 8.99991L9.20996 1.38086" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+                '<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1.35355 0.646447C1.15829 0.451184 0.841709 0.451184 0.646447 0.646447C0.451184 0.841709 0.451184 1.15829 0.646447 1.35355L1.35355 0.646447ZM5 5L5.35355 5.35355C5.54882 5.15829 5.54882 4.84171 5.35355 4.64645L5 5ZM0.646447 8.64645C0.451184 8.84171 0.451184 9.15829 0.646447 9.35355C0.841709 9.54882 1.15829 9.54882 1.35355 9.35355L0.646447 8.64645ZM0.646447 1.35355L4.64645 5.35355L5.35355 4.64645L1.35355 0.646447L0.646447 1.35355ZM4.64645 4.64645L0.646447 8.64645L1.35355 9.35355L5.35355 5.35355L4.64645 4.64645Z" fill="#888888"></path></svg>',
+              ],
+      		dots:false,
+              responsive: {
+      			0: {
+      				items: 2                                        
+      			},
+      			767: {
+      				items: 4
+      			},
+      			1000: {
+      				items: 5
+      			}
+      		}                                   
+      	  });
+      
+	  
+    }
+  };
+  request.send();
+};
+// fetch when section reloads in editor
+document.addEventListener("shopify:section:load", function(event) {
+  if (document.querySelector('[data-section-id="' + event.detail.sectionId + '"].product-recommendations')) {
+    loadProductRecommendationsIntoSection();
+
+   
+  }
+});
+// Fetching the recommendations on page load
+loadProductRecommendationsIntoSection();
+
+
+
+
+  
+      
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Product recommendations",
+    "class": "section-product-recommendations",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "You may also like"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Show product vendor",
+        "default": false
+      },
+	  {
+        "type": "checkbox",
+        "id": "enable_carousel",
+        "label": "Enable carousel",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "pro_per_row",
+        "label": "Products per row",
+        "min": 2,
+        "max": 6,
+        "step": 1,
+        "default": 5
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,70 @@
+<style>
+ 
+  .app-download-banner-inner img {
+    width: 100%;
+    height: auto;
+}
+
+  .ct_Andriod_link .app-banner-iphone {
+    display:none;
+  }
+    .ct_IOS_link .app-banner-android {
+    display:none;
+  }
+  @media(min-width:750px){
+     .app-download-banner-inner {
+    display: none;
+}
+  }
+</style>
+<div class="app-download-banner-inner">
+  <a href="{{ section.settings.full }}" class="bottom_pop_inner ">
+   {{- section.settings.android | image_url: width: '1100' | image_tag:   fetchpriority: 'high',    sizes: 'min(100vw, 1100px)', widths: '1100', class: 'app-banner app-banner-android ' -}}
+   {{- section.settings.iphone | image_url: width: '1100' | image_tag:   fetchpriority: 'high',    sizes: 'min(100vw, 1100px)', widths: '1100', class: 'app-banner app-banner-iphone ' -}}
+  </a>
+</div>
+
+<script>
+
+  if ($(window).width() < 760) {
+     if (navigator.userAgent.match(/Android|Opera Mini|IEMobile/i))
+  {
+     jQuery('.bottom_pop_inner').addClass('ct_Andriod_link');
+    jQuery('.bottom_pop_inner').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+    jQuery('.app-download-banner-inner a').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+    
+  }
+  else
+  {    
+     jQuery('.bottom_pop_inner').addClass('ct_IOS_link');
+        jQuery('.bottom_pop_inner').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+        jQuery('.app-download-banner-inner a').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+    
+  }
+  }
+
+</script>
+
+{% schema %}
+  {
+    "name": "app-download-banner",
+    "class": "app-download-banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "android",
+        "label": "android banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "iphone",
+        "label": "iphone banner"
+      }
+
+
+    ],
+    "presets": [{
+    "name": "app-download-banner"
+    }]
+  }
+{% endschema %}

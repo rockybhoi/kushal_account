@@ -1,0 +1,380 @@
+<div class="ctt_{{ page_title  }}_main account-container">
+  {% render 'account_sidebar' %}
+
+    <div class="account_right_detils">
+      {% render 'account' %}
+        {% render 'ct_customer_profile' %}
+      
+    </div>
+
+  
+
+</div>
+
+
+<script>
+  //   $(document).ready(function() {
+  //   $('.account_left_content').each(function(){
+  //     var active, content, links = $(this).find('a');
+  //     active = links.first().addClass('active');
+  //     content = $(active.attr('href'));
+  //     links.not(':first').each(function () {
+  //       $($(this).attr('href')).hide();
+  //     });
+  //     $(this).find('a').click(function(e){
+  //       active.removeClass('active');
+  //       content.removeClass('active');
+  //       content.hide();
+  //       active = $(this);
+  //       content = $($(this).attr('href'));
+  //       active.addClass('active');
+  //       content.addClass('active');
+  //       content.show();
+  //       return false;
+  //     });
+  //   });
+  // });
+  
+
+  
+
+    if ($(window).width() < 750) {
+        $('.order-box, .order-box-content').removeClass('active');
+      
+      $('.order-box-1').on('click', function() {
+        $('.account_right_detils').addClass('active_box');
+        $('.account_left_content').addClass('log_remove');
+    });
+       $('.order-box_backBtn').on('click', function() {
+        $('.account_right_detils').removeClass('active_box');
+        $('.account_left_content').removeClass('log_remove');
+         
+    });
+
+
+
+      jQuery(".account_left_content .ctt_Account").click(function(e){
+          e.preventDefault();
+      })
+      
+    };
+    
+
+ 
+
+</script>
+
+<script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+<script type="text/javascript" charset="utf-8">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $('.address-delete').on('click', function(evt) {
+      evt.preventDefault();
+      var $el = $(this);
+      var target = $el.data('target');
+      var confirmMessage = $el.data('confirm-message');
+
+      if (
+        confirm(confirmMessage || 'Are you sure you wish to delete this address?')
+      ) {
+        Shopify.postLink(target, {
+          parameters: { _method: 'delete' }
+        });
+      }
+    });
+
+    $('.address-edit-toggle').on('click', function(evt) {
+      evt.preventDefault();
+      var formId = $(this).data('form-id');
+      var $editButton = $(this);
+      var $editAddress = $('#edit_address_' + formId);
+      var isExpanded = $editButton.attr('aria-expanded') === 'true';
+
+      $editAddress.toggleClass('hidden');
+      $editButton.attr('aria-expanded', !isExpanded).focus();
+
+
+
+
+
+  const elem1 = document.getElementById('address_phone_'+formId);
+  const zip1 = document.getElementById('address_zip_'+formId);
+    const element1 = document.createElement("p");
+     const error1 = document.createElement("p");
+        error1.innerHTML = 'Please enter at max 10 digits without country code';
+        element1.innerHTML='Delivery code unserviceable';
+        element1.style.display='none';
+  let serviceableCode1 = {};
+           zip1.parentNode.insertBefore(element1, zip1.nextSibling);
+        const validator1 = async () => {
+          let val1 = elem1.value.replace(/[^0-9]/g, '');
+          let val21 = zip1.value.replace(/[^0-9]/g, '');
+          const country1 = document.getElementById('address_country_'+formId).value;
+          if(country1 === 'India'){
+          	zip1.value = val21.substring(0,6);
+          }
+          if(val1[0] !== '6' && val1[0] !== '7' && val1[0] !== '8' && val1[0] !== '9'){
+          	val1 = '';
+          }
+          if(country1 === 'India'){
+          elem1.value = val1.substring(0,10);
+          }
+          if(elem1.value.length  && elem1.value.length !== 10 && country1 === 'India'){
+          	error1.style.display = 'initial';
+          	//button.disabled = true;
+          }
+        }
+    window.addEventListener("load",(event) => {
+        	setInterval(() => validator1(), 0);
+        })
+
+        elem.addEventListener("change", (event) => {
+  			validator1();
+        })
+
+        document.querySelectorAll('input').forEach(item => {
+    			item.addEventListener('input', event => {
+      			validator1();
+    			})
+  		})
+
+        $('#address_city_'+formId).attr({ maxLength : 50 });
+       // $('#address_phone_new').attr({ minLength : 10 });
+
+
+
+      //   $("#address_city_"+formId).keypress(function(event){
+      //     var inputValue = event.charCode;
+      //     if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+      //         event.preventDefault();
+      //     }
+      // });
+
+
+
+    $("#address_city_"+formId).on('keypress', function (event) {
+      var regex = new RegExp("^[a-zA-Z ]+$");
+      var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+      if (!regex.test(key)) {
+         event.preventDefault();
+         return false;
+      }
+  });
+
+
+
+
+
+
+
+
+    });
+
+    // initialize observers on address selectors
+    new Shopify.CountryProvinceSelector('address_country_new', 'address_province_new', {hideElement: 'address_province_container_new'});
+    {% for address in customer.addresses %}
+      new Shopify.CountryProvinceSelector('address_country_{{address.id}}', 'address_province_{{address.id}}', {hideElement: 'address_province_container_{{address.id}}'});
+    {% endfor %}
+  });
+</script>
+
+<!-- Script for address validation -->
+
+<script>
+      // function address_checker(char){
+      // 	if(char >= 'A' && char <= 'Z')return true;
+      //   if(char >='a' && char <='z')return true;
+      //   if(char >='0' && char <='9')return true;
+      //   if(char == ' ')return true;
+      //   if(char == '-')return true;
+      //   if(char == ',')return true;
+      //   if(char == '\/')return true;
+      //   return false;
+      // }
+
+        	// const elem = document.getElementById('address_phone_new');
+         // 	const zip = document.getElementById('address_zip_new');
+         //  	const button = document.getElementById('continue_button');
+         //    const addr1 = document.getElementById('address_address2_new');
+         //  const name1 = document.getElementById('address_first_name_new');
+         //  const name2 = document.getElementById('address_last_name_new');
+         //  const addr2 = document.getElementById('address_address1_new');
+         //  const city = document.getElementById('address_city_new');
+         //  const error = document.createElement("p");
+         //  error.innerHTML = 'Please enter at max 10 digits without country code';
+
+
+    // const element = document.createElement("p");
+    //       element.innerHTML='Delivery code unserviceable';
+    //       element.style.display='none';
+    //       let serviceableCode = {};
+    //          zip.parentNode.insertBefore(element, zip.nextSibling);
+    //       const validator = async () => {
+    //         let val2 = zip.value.replace(/[^0-9]/g, '');
+    //         const country = document.getElementById('address_country_new').value;
+    //         if(country === 'India'){
+    //         	zip.value = val2.substring(0,6);
+    //         }
+
+      // edit address phonenumber validation
+      $(document).on('click','#address_tables [type="submit"]',function(){
+        let phonenumber = $(this).parents('form').find('input[name="address[phone]"]').val();
+        if(phonenumber.length == 10){
+          $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid #d9d9d9');
+          return true;
+        } else {
+          $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid red');
+          return false;
+        }
+      });
+
+      // clear phonenumber error
+      $(document).on('keyup','#address_tables input[name="address[phone]"]', function(){
+          let value = $(this).val();
+        if(value.length == 10){
+          $(this).css('border','1px solid #d9d9d9');
+        } else {
+          $(this).css('border','1px solid red');
+        }
+      });
+
+      // add address phonenumber validation
+      $(document).on('click','#add_address [type="submit"]',function(){
+        let phonenumber = $(this).parents('form').find('input[name="address[phone]"]').val();
+        if(phonenumber.length == 10){
+          $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid #d9d9d9');
+          return true;
+        } else {
+          $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid red');
+          return false;
+        }
+      });
+
+      // clear phonenumber error
+      $(document).on('keyup','#add_address input[name="address[phone]"]', function(){
+          let value = $(this).val();
+        if(value.length == 10){
+          $(this).css('border','1px solid #d9d9d9');
+        } else {
+          $(this).css('border','1px solid red');
+        }
+      });
+
+      const elem = document.getElementById('address_phone_new');
+    const zip = document.getElementById('address_zip_new');
+      const element = document.createElement("p");
+       const error = document.createElement("p");
+          error.innerHTML = 'Please enter at max 10 digits without country code';
+          element.innerHTML='Delivery code unserviceable';
+          element.style.display='none';
+    let serviceableCode = {};
+             zip.parentNode.insertBefore(element, zip.nextSibling);
+          const validator = async () => {
+            let val = elem.value.replace(/[^0-9]/g, '');
+            let val2 = zip.value.replace(/[^0-9]/g, '');
+            const country = document.getElementById('address_country_new').value;
+            if(country === 'India'){
+            	zip.value = val2.substring(0,6);
+            }
+            if(val[0] !== '6' && val[0] !== '7' && val[0] !== '8' && val[0] !== '9'){
+            	val = '';
+            }
+            if(country === 'India'){
+            elem.value = val.substring(0,10);
+            }
+            if(elem.value.length  && elem.value.length !== 10 && country === 'India'){
+            	error.style.display = 'initial';
+            	//button.disabled = true;
+            }
+          }
+      window.addEventListener("load",(event) => {
+          	setInterval(() => validator(), 0);
+          })
+
+          elem.addEventListener("change", (event) => {
+    			validator();
+          })
+
+          document.querySelectorAll('input').forEach(item => {
+      			item.addEventListener('input', event => {
+        			validator();
+      			})
+    		})
+
+          $('#address_city_new').attr({ maxLength : 50 });
+         // $('#address_phone_new').attr({ minLength : 10 });
+
+
+
+        //   $("#address_city_new").keypress(function(event){
+        //     var inputValue = event.charCode;
+        //     if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+        //         event.preventDefault();
+        //     }
+        // });
+
+
+
+      $('#address_city_new').on('keypress', function (event) {
+        var regex = new RegExp("^[a-zA-Z ]+$");
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+           event.preventDefault();
+           return false;
+        }
+    });
+
+
+
+
+  // addresh click to add border class
+  const listItems = document.querySelectorAll("#address_tables .address_table");
+  listItems.forEach((item) => {
+    item.addEventListener("click", function() {
+      listItems.forEach((element) => element.classList.remove("click_active"));
+
+      this.classList.add("click_active");
+    });
+  });
+
+
+
+   // input focus Js start
+
+jQuery('input, select, textarea,email,password,tel').each(
+		function(index){  
+			var input = jQuery(this);
+          	input.on('focus', function() {
+                jQuery(this).parent().addClass("has-focus");
+            });
+          
+          input.on('focusout', function() {
+              if(jQuery(this).val() == '') {
+                  jQuery(this).parent().removeClass("has-focus");
+              }
+		   }); 
+          
+    });
+  
+   jQuery('input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="search"], select, textarea').each(
+          function(index){  
+              var input = jQuery(this);
+              if(input.val()=='')
+              {
+                  jQuery(input).parent().removeClass("has-focus");
+
+              }else
+              {
+                  jQuery(input).parent().addClass("has-focus");	
+              }
+              //console.log('Type: ' + input.attr('type') + 'Name: ' + input.attr('name') + 'Value: ' + input.val());
+      });
+ // input focus Js End
+</script>
+
+
+{% schema %}
+  {
+    "name": "account",
+    "settings": []
+  }
+{% endschema %}

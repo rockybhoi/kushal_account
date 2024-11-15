@@ -1,0 +1,394 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "swiper_js_t3TyrK": {
+      "type": "Swiper-js",
+      "settings": {}
+    },
+    "ct_video_xTUCVd": {
+      "type": "Ct-Video",
+      "settings": {
+        "link": "shopify://collections/valentines-day-special-collection",
+        "video_d": "https://cdn.shopify.com/videos/c/o/v/00d55c500467499db91f0e79d3841706.mp4",
+        "video_m": "https://cdn.shopify.com/videos/c/o/v/7dac57867b754c55ab57862116100587.mp4"
+      }
+    },
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "0748d546-8194-47f9-bb92-553a0cbdd539": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Necklace_set.png",
+            "heading": "Necklaces",
+            "text": "For her Date Night Styles",
+            "link": "shopify://collections/necklaces-for-a-forever-moment",
+            "link_text": "Explore"
+          }
+        },
+        "760699d3-8a82-44aa-83db-85a1f4fc9159": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Earrings_1.png",
+            "heading": "Earrings",
+            "text": "For Your Special Moments",
+            "link": "shopify://collections/valentines-day-special-earrings",
+            "link_text": "Explore"
+          }
+        },
+        "eaf55712-cda7-455b-af17-4a92a0fa7491": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Bracelets_1.png",
+            "heading": "Bracelets",
+            "text": "For Your Unconditional Love",
+            "link": "shopify://collections/bracelets-to-lock-in-promises",
+            "link_text": "Explore"
+          }
+        },
+        "12edfc74-7abe-4811-9f7b-933a65332d4c": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Rings_8b13cfae-7b9c-42e2-ab42-46ca635fb2af.png",
+            "heading": "Rings",
+            "text": "For Her Million Dollar Smile",
+            "link": "shopify://collections/promises-of-love-with-rings",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "0748d546-8194-47f9-bb92-553a0cbdd539",
+        "760699d3-8a82-44aa-83db-85a1f4fc9159",
+        "eaf55712-cda7-455b-af17-4a92a0fa7491",
+        "12edfc74-7abe-4811-9f7b-933a65332d4c"
+      ],
+      "custom_css": [],
+      "settings": {
+        "velen_active": true,
+        "head": "Shop By",
+        "sec_tit": "Products",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "ct_banner_AW64D4": {
+      "type": "CT-Banner",
+      "custom_css": [
+        ".CT-Banner {padding: 47px 0 0px 0;}"
+      ],
+      "settings": {
+        "link": "shopify://pages/akshya-tritiya-2023-bringing-home-prosperity-with-us",
+        "dimg": "shopify://shop_images/Group_407_1.png",
+        "mimg": "shopify://shop_images/Group_407_2.png",
+        "video": "https://cdn.shopify.com/videos/c/o/v/d0c5c6ddfa334f619da69be27dbe2518.mp4"
+      }
+    },
+    "e38987fc-5068-40ab-9ce1-cad4be29cc78": {
+      "type": "Wedding-Collection-Video",
+      "blocks": {
+        "e3b55a71-d6be-4a2f-b071-55b289ef2f8f": {
+          "type": "Box",
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/Sterling_silver.png",
+            "heading": "92.5 Sterling Silver",
+            "text": "Elite Sterling Silver Love",
+            "link": "shopify://collections/92-5-sterling-silver-picks-for-vday",
+            "link_text": "Explore"
+          }
+        },
+        "89e0c558-3260-4588-9adf-95d7bddec78c": {
+          "type": "Box",
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/Zircon.png",
+            "heading": "Zircon Selects",
+            "text": "Magnifying Zircon Shimmers",
+            "link": "shopify://collections/zircon-picks-for-valentines-day",
+            "link_text": "Explore"
+          }
+        },
+        "f0e45aae-7f48-478c-bc3e-6bf0d5bf6d3e": {
+          "type": "Box",
+          "settings": {
+            "video_link": "",
+            "image": "shopify://shop_images/Trendy_edits.png",
+            "heading": "Trendy Edit",
+            "text": "In-Vogue Love Selects",
+            "link": "shopify://collections/trendy-picks-for-valentines-day",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "e3b55a71-d6be-4a2f-b071-55b289ef2f8f",
+        "89e0c558-3260-4588-9adf-95d7bddec78c",
+        "f0e45aae-7f48-478c-bc3e-6bf0d5bf6d3e"
+      ],
+      "custom_css": [
+        ".Wedding-Collection-head {padding-top: 47px;}",
+        ".CT_swiper-pagination {display: none;}"
+      ],
+      "settings": {
+        "velen_active": true,
+        "head": "Shop By",
+        "sec_tit": "Sparkles",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "velentine_icon_njm9Mp": {
+      "type": "Velentine-Icon",
+      "custom_css": [
+        ".Velentine-Icon-main {padding-bottom: 40px;}"
+      ],
+      "settings": {
+        "icon1": "shopify://shop_images/1_3e64deae-8660-4de9-8af1-376965ff6522.png",
+        "icontext1": "Exclusive V-Day Packaging",
+        "icon2": "shopify://shop_images/1_1_5625b3b2-1712-4b86-a422-0a7f5ada0752.png",
+        "icontext2": "Personalized Messaging",
+        "icon3": "shopify://shop_images/Free-Shipping-SVG_39a103eb-db76-49fd-a7a0-46a52e7d1e9c.png",
+        "icontext3": "FreeShipping"
+      }
+    },
+    "slideshow_PkVCT4": {
+      "type": "slideshow",
+      "blocks": {
+        "image_R68Ah6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_839.png",
+            "mobile_image": "shopify://shop_images/Frame_841.png",
+            "slide_link": "https://www.kushals.com/pages/what-she-wants"
+          }
+        }
+      },
+      "block_order": [
+        "image_R68Ah6"
+      ],
+      "custom_css": [
+        ".strongly-spaced-row,.fully-spaced-row--medium {margin: 0 auto; padding: 50px 0 0 0;}"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 420,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "instant",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "wedding_collection_L4QF6e": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "box_ABCfbw": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Timeless_Classics.png",
+            "heading": "Timeless Classics",
+            "text": "Timeless Classics for Your Eternal Love",
+            "link": "shopify://collections/jewellery-for-lavishing-hearts",
+            "link_text": "Explore"
+          }
+        },
+        "box_ALH6Rg": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Contemporary.png",
+            "heading": "Contemporary Trendy",
+            "text": "Contemporary Selects for Your Vogue Gifts",
+            "link": "shopify://collections/valentines-day-special-collection",
+            "link_text": "Explore"
+          }
+        },
+        "box_xVK76p": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Promise_for_the_future_f01a91b1-53a8-4e00-89ac-b3d73b719ef5.png",
+            "heading": "Promise for the Future",
+            "text": "A Promise of Eternity",
+            "link": "shopify://collections/zircons-for-unbreakable-promises",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "box_ABCfbw",
+        "box_ALH6Rg",
+        "box_xVK76p"
+      ],
+      "custom_css": [
+        "@media (max-width: 600px) {.velen_active {padding-top: 99px; margin-top: -70px; }}"
+      ],
+      "settings": {
+        "velen_active": true,
+        "head": "Shop By",
+        "sec_tit": "Collection",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "velentine_tab_GfwaPc": {
+      "type": "Velentine-Tab",
+      "blocks": {
+        "box_WqgaHG": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Heart Design",
+            "title": "92.5 Silver Necklace",
+            "sub_text": "",
+            "image": "shopify://shop_images/Heart_chain.png",
+            "btn_lnk": "shopify://collections/romantic-finds-heart-necklaces",
+            "title2": "92.5 Silver Earring",
+            "sub_text2": "",
+            "image2": "shopify://shop_images/heart_48a02cd2-ed52-4baf-a326-60b7fa37eb75.png",
+            "btn_lnk2": "shopify://collections/posh-heart-earrings",
+            "title3": "92.5 Silver Bracelet",
+            "sub_text3": "",
+            "image3": "shopify://shop_images/silver-bracelet-white-gold-92-5-silver-bracelet-168189-37416393605276.png",
+            "btn_lnk3": "shopify://collections/bracelets-to-shine",
+            "title4": "92.5 Silver Finger Ring",
+            "sub_text4": "",
+            "image4": "shopify://shop_images/Ring_hk.png",
+            "btn_lnk4": "shopify://collections/rings-of-love",
+            "title5": "",
+            "sub_text5": "",
+            "btn_lnk5": "#",
+            "title6": "",
+            "sub_text6": "",
+            "btn_lnk6": "#"
+          }
+        },
+        "box_DPBhqQ": {
+          "type": "Box",
+          "settings": {
+            "btn_text": "Infinity Design",
+            "title": "92.5 Silver Necklace",
+            "sub_text": "",
+            "image": "shopify://shop_images/Infinity_1.png",
+            "btn_lnk": "shopify://collections/infinity-necklace-finds",
+            "title2": "92.5 Silver Bracelet",
+            "sub_text2": "",
+            "image2": "shopify://shop_images/Infinity_2.png",
+            "btn_lnk2": "shopify://collections/love-of-bracelets",
+            "title3": "92.5 Silver Earring",
+            "sub_text3": "",
+            "image3": "shopify://shop_images/Infinity_3.png",
+            "btn_lnk3": "shopify://collections/forever-adorned-earrings",
+            "title4": "",
+            "sub_text4": "",
+            "btn_lnk4": "",
+            "title5": "",
+            "sub_text5": "",
+            "btn_lnk5": "",
+            "title6": "",
+            "sub_text6": "",
+            "btn_lnk6": ""
+          }
+        }
+      },
+      "block_order": [
+        "box_WqgaHG",
+        "box_DPBhqQ"
+      ],
+      "settings": {
+        "head": "Love That",
+        "head-sb": "Shines"
+      }
+    },
+    "slideshow_A4RJtW": {
+      "type": "slideshow",
+      "blocks": {
+        "image_nLwCwL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_839_8ac2b67d-752e-41a2-b02f-13bf324c6223.png",
+            "mobile_image": "shopify://shop_images/Frame_841_e14feb9b-8691-49bc-871b-024f44b54cfb.png",
+            "slide_link": "shopify://pages/what-she-wants"
+          }
+        }
+      },
+      "block_order": [
+        "image_nLwCwL"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "ct_banner_bg_4RzBBf": {
+      "type": "CT-Banner-BG",
+      "custom_css": [],
+      "settings": {
+        "link1": "shopify://collections/valentines-day-pick-under-999",
+        "link2": "shopify://collections/valentines-day-selection-under-1499",
+        "link3": "shopify://collections/valentines-day-selection-above-1500"
+      }
+    },
+    "ct_banner_CcDDfa": {
+      "type": "CT-Banner",
+      "disabled": true,
+      "settings": {
+        "link": "shopify://pages/akshya-tritiya-2023-bringing-home-prosperity-with-us",
+        "dimg": "shopify://shop_images/Group_410_1.png",
+        "mimg": "shopify://shop_images/Group_410_1.png",
+        "video": "https://cdn.shopify.com/videos/c/o/v/542e9c180e6f4489af34be65e6d963b7.mp4"
+      }
+    },
+    "ct_video_ExcRWA": {
+      "type": "Ct-Video",
+      "settings": {
+        "link": "",
+        "video_d": "",
+        "video_m": "",
+        "img_d": "shopify://shop_images/Group_410_1.png",
+        "img_m": "shopify://shop_images/Group_410_1.png"
+      }
+    }
+  },
+  "order": [
+    "swiper_js_t3TyrK",
+    "ct_video_xTUCVd",
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1",
+    "main",
+    "ct_banner_AW64D4",
+    "e38987fc-5068-40ab-9ce1-cad4be29cc78",
+    "velentine_icon_njm9Mp",
+    "slideshow_PkVCT4",
+    "wedding_collection_L4QF6e",
+    "velentine_tab_GfwaPc",
+    "slideshow_A4RJtW",
+    "ct_banner_bg_4RzBBf",
+    "ct_banner_CcDDfa",
+    "ct_video_ExcRWA"
+  ]
+}

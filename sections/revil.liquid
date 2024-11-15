@@ -1,0 +1,2325 @@
+<style>
+    .heightt{
+      height:50vh;
+    }
+    .devvdj ,  .dev-2{
+      opacity:0;
+    }
+  .revil {
+      height: 150vh;
+      text-align: center;
+      /* background: #fff; */
+  }
+    .revil img {
+      position: sticky;
+      top: 280px;
+      width:143px;
+  }
+   .devvdj {
+      position: sticky;
+      top: 220px;
+  }
+    .dev-2{
+      position: sticky;
+      top: 705px;
+    }
+   .devvdj span {
+      margin: 0px 0 0 -160px;
+      padding: 0px 10px 0 0;
+      color: #000;
+      text-align: right;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26.187px;
+  }
+    .spann{
+      position: relative;
+    }
+    .devvdj .spann::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border-radius: 100%;
+  }
+
+    .devvdj .spann::before {
+         content: '';
+      width: 30px;
+      position: absolute;
+      top: 8px;
+      right: -49px;
+      height: 130px;
+      border-style: dashed;
+      border: 0;
+      border-top: 1px dashed #000;
+      border-color: #000;
+      border-right: 1px dashed #000;
+  }
+  .dev-2 span {
+      color: #000;
+      text-align: center;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26.187px;
+    margin: 0px 0 0 40px;
+  }
+
+    i.spann-2 {
+      position: relative;
+  }
+  .spann-2::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 86px;
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border-radius: 100%;
+  }
+    .spann-2::before {
+          content: '';
+      width: 1px;
+      position: absolute;
+      bottom: 30px;
+      left: 90px;
+      height: 100px;
+      border-style: dashed;
+      border: 0;
+      border-color: #000;
+      border-right: 1px dashed #000;
+  }
+    .revil-main{
+      position: relative;
+      height:200vh;
+    }
+
+   .five-banner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+     opacity: 0;
+      top: 0;
+  }
+  .six-banner {
+      width: 100%;
+      height: 50vh;
+      background-color: #80aebc;
+      position: relative;
+      z-index: -3;
+  }
+
+
+  .five-banner-main {
+      width: 100%;
+      /* height: calc(100vh - 142px); */
+      position: sticky;
+      top: 68px;
+      padding-bottom: 20px;
+    background-color: #80aebc;
+  }
+
+    .five-banner-bg {
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+    .five-header-text span {
+      color: #32464D;
+      text-align: center;
+      font-family: 'Rastanty Cortez';
+      font-size: 63px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0.1px;
+  }
+    .five-header-text {
+      text-align: center;
+      /* padding: 12px 0 0 0; */
+  }
+    .five-header-text div {
+      display: flex;
+      width: 251px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #32464D;
+      text-align: center;
+      font-family: 'Lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      margin: 0 auto;
+  }
+  .five-img {
+      text-align: center;
+      margin-top: 15px;
+  }
+    .product_list_main {
+      display: flex;
+      overflow: auto;
+      padding: 0 20px 0 8px;
+      margin-top: 50px;
+      align-items: center;
+  }
+  .product_list {
+      width: 47%;
+      min-width: 47%;
+      border-radius: 16px;
+      overflow: hidden;
+    margin-left: 8px;
+    padding-bottom: 12px;
+    border-radius: 16px;
+  background: radial-gradient(68.66% 68.69% at 50% 31.35%, rgba(255, 255, 255, 0.90) 0%, rgba(254, 254, 254, 0.90) 35.21%, rgba(198, 198, 198, 0.00) 100%), radial-gradient(127.15% 83.44% at 50% 30.74%, #FFF 15%, rgba(255, 252, 252, 0.72) 52.23%, rgba(255, 255, 255, 0.58) 100%);
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.25) inset;
+  }
+  .product_list_title {
+      font-family: 'Lato';
+      padding: 8px 15px 0 15px;
+      display: inline-block;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      color: #000;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+  }
+  .product_list_price {
+      padding: 0px 15px 8px 15px;
+      color: #000;
+      text-align: center;
+      font-family: 'lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 15px;
+      letter-spacing: 0.1px;
+  }
+    .product_list_img {
+      line-height: 0;
+      text-align:center;
+      
+  }
+  /* .product_list_img img {
+    width: 130px;
+    height: 130px;
+} */
+  .product_list_btn {
+      width: calc(100% - 27px);
+      display: block;
+      margin: 0 auto;
+      border: 0.653px solid #FFF;
+      opacity: 0.9;
+      padding: 3px 0;
+      border-radius: 65.263px;
+      background: #FFF;
+      box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.14);
+      color: #010101;
+      text-align: center;
+      font-family: Lato;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 13.053px;
+      letter-spacing: 0.065px;
+  }
+
+
+    .saven-banner {
+      /* height: calc(100vh - 140px); */
+      position: relative;
+  }
+.saven-banner-fist {
+    text-align: center;
+    padding: 160px 0 0 0;
+    height: calc(100vh - 68px);
+    position: sticky;
+    top: 68px;
+    background-color: #fff;
+}
+  .saven-banner-secend {
+      position: sticky;
+      top: 68px;
+      left: 0;
+    opacity: 0;
+      width: 100%;
+  }
+  /* .saven-banner-secend {
+      position: absolute;
+      top: 140px;
+      left: 0;
+      opacity: 0;
+    height:850px;
+      width: 100%;
+  } */
+
+
+    .saven-banner-three {
+      height: calc(100vh - 140px);
+      background: #FFDCE8;
+  }
+
+    .saven-banner-fist img {
+      position: sticky;
+      top: 160px;
+  }
+
+    .saven-banner-banner-bg {
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+    .saven-banner-header-text {
+      text-align: center;
+      /* padding: 12px 0 0 0; */
+  }
+    .saven-banner-header-text span {
+      color: #664345;
+      text-align: center;
+      font-family: 'Rastanty Cortez';
+      font-size: 63px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0.1px;
+  }
+    .saven-banner-header-text div {
+      display: flex;
+      width: 251px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #664345;
+      text-align: center;
+      font-family: 'Lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      margin: 0 auto;
+  }
+    .saven-banner-img {
+      text-align: center;
+      margin-top: 40px;
+  }
+    .saven-banner-secend-main {
+      background: #FFDCE8;
+  }
+  .saven-banner-header  .product_list_main {
+      padding: 0 20px 20px 8px;
+  }
+    /* .saven-banner-header .product_list {
+      border-radius: 16px;
+      border: 1px solid #A36D70;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .eight-banner {
+      /* height: calc(100vh - 140px); */
+      position: relative;
+  }
+  .eight-banner-fist {
+      text-align: center;
+      padding: 175px 0 0 0;
+      height: calc(100vh - 68px);
+      position: sticky;
+      top: 68px;
+    background-color: #fff;
+  }
+  .eight-banner-secend {
+      /* height: 250px;
+      background: aquamarine; */
+      position: sticky;
+      top: 68px;
+      left: 0;
+    opacity: 0;
+      width: 100%;
+  }
+
+    .eight-banner-three {
+      height: calc(100vh - 140px);
+      background: #8DC5E0;
+  }
+
+    .eight-banner-fist img {
+      position: sticky;
+      top: 150px;
+  }
+
+    .eight-banner-banner-bg {
+      margin: -25px 0 0 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+    .eight-banner-header-text {
+      text-align: center;
+      /* padding: 12px 0 0 0; */
+  }
+    .eight-banner-header-text span {
+      color: #527383;
+      text-align: center;
+      font-family: 'Rastanty Cortez';
+      font-size: 63px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0.1px;
+  }
+    .eight-banner-header-text div {
+      display: flex;
+      width: 251px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #527383;
+      text-align: center;
+      font-family: 'Lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      margin: 0 auto;
+  }
+    .eight-banner-img {
+      text-align: center;
+      padding-top: 80px;
+  }
+    .eight-banner-secend-main {
+      background: #8DC5E0;
+  }
+  .eight-banner-header  .product_list_main {
+      padding: 0 20px 20px 8px;
+  }
+    /* .eight-banner-header .product_list {
+      border-radius: 16px;
+  border: 1px solid #527383;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+      .nine-banner {
+      /* height: calc(100vh - 140px); */
+      position: relative;
+  }
+  .nine-banner-fist {
+      text-align: center;
+      padding: 145px 0 0 0;
+      height: calc(100vh - 68px);
+      position: sticky;
+      top: 68px;
+    background-color: #fff;
+  }
+  .nine-banner-secend {
+      /* height: 250px;
+      background: aquamarine; */
+      position: sticky;
+      top: 68px;
+      left: 0;
+    opacity: 0;
+      width: 100%;
+  }
+
+  .nine-banner-three {
+    height: calc(120vh - 140px);
+    background: #DBD4CC;
+}
+
+    .nine-banner-fist img {
+      position: sticky;
+      top: 150px;
+  }
+
+    .nine-banner-banner-bg {
+      margin: -10px 0 0 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+    .nine-banner-header-text {
+      text-align: center;
+      /* padding: 12px 0 0 0; */
+  }
+    .nine-banner-header-text span {
+      color: #706A63;
+      text-align: center;
+      font-family: 'Rastanty Cortez';
+      font-size: 63px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0.1px;
+  }
+    .nine-banner-header-text div {
+      display: flex;
+      width: 251px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #706A63;
+      text-align: center;
+      font-family: 'Lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      margin: 0 auto;
+  }
+    .nine-banner-img {
+      text-align: center;
+      padding-top: 40px;
+  }
+    .nine-banner-secend-main {
+      background: #DBD4CC;
+  }
+  .nine-banner-header  .product_list_main {
+      padding: 0 20px 20px 8px;
+  }
+    /* .nine-banner-header .product_list {
+     border-radius: 16px;
+  border: 1px solid #706A63;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .last-banner {
+      /* height: calc(100vh - 140px); */
+      position: relative;
+  }
+  .last-banner-fist {
+      text-align: center;
+      padding: 149px 0 0 0;
+      height: calc(100vh - 68px);
+      position: sticky;
+      top: 68px;
+    background-color: #fff;
+  }
+  .last-banner-secend {
+      /* height: 250px;
+      background: aquamarine; */
+      position: sticky;
+      top: 68px;
+      left: 0;
+    opacity: 0;
+      width: 100%;
+  }
+
+    .last-banner-three {
+      height: calc(100vh - 140px);
+      background: #CBD0FF;
+  }
+
+    .last-banner-fist img {
+      position: sticky;
+      top: 150px;
+  }
+
+    .last-banner-banner-bg {
+      margin: -10px 0 0 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+    .last-banner-header-text {
+      text-align: center;
+      /* padding: 12px 0 0 0; */
+  }
+    .last-banner-header-text span {
+      color: #555A86;
+      text-align: center;
+      font-family: 'Rastanty Cortez';
+      font-size: 63px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0.1px;
+  }
+    .last-banner-header-text div {
+      display: flex;
+      width: 251px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #555A86;
+      text-align: center;
+      font-family: 'Lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      margin: 0 auto;
+  }
+    .last-banner-img {
+      text-align: center;
+      padding-top: 40px;
+  }
+    .last-banner-secend-main {
+      background: #CBD0FF;
+  }
+  .last-banner-header  .product_list_main {
+      padding: 0 20px 20px 8px;
+  }
+    /* .last-banner-header .product_list {
+    border-radius: 16px;
+  border: 1px solid #555A86;
+  } */
+  .product_list_main a.view-all {
+      color: #fff;
+      text-align: center;
+      font-family: 'Lato';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+      background: #6c9199;
+      box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.25) inset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @-webkit-keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+  a.view-all {
+      position: relative;
+      z-index: 0;
+      border-radius: 100px;
+      overflow: hidden;
+      transform: rotate(45deg);
+      width: 110px !important;
+      min-width: 110px !important;
+      height: 110px !important;
+  }
+  a.view-all::before {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      background-color: #6c9199;
+      background-repeat: no-repeat;
+      background-size: 50% 50%, 50% 50%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(255 255 255) 50%, rgba(255, 255, 255, 0) 100%);
+      -webkit-animation: rotate 8s linear infinite;
+      animation: rotate 8s linear infinite;
+  }
+  a.view-all::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 3px;
+      top: 3px;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      background: #80aebc;
+      border-radius: 100px;
+  }
+    a.view-all span {
+      transform: rotate(-45deg);
+  }
+  /* .view-all-btn {
+      min-width: 190px;
+  } */
+
+
+
+
+
+
+
+    .text_animaction {
+      height: 100vh;
+      background-color: #f9f9f9;
+  }
+    .toTop[data-scroll] {
+      transition: all .7s ease-out;
+  }
+    .toTop[data-scroll=in] {
+      opacity: 1;
+      transform: translateY(0);
+  }
+    .text_animaction .text {
+      width: 305px;
+  }
+  .text_animaction .text h2 {
+      color: #FFF;
+      font-style: normal;
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.10000000149011612px;
+      text-align: left;
+  }
+    .text_animaction .text h2 span {
+      opacity: .2;
+  }
+    .video-bg_img {
+      background-size: cover;
+      height: calc(100vh - 68px);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: sticky;
+      top: 68px;
+  }
+
+    .text_animaction_bg .container {
+      position: absolute;
+      top: 70%;
+  }
+    video.video-bg_video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+  }
+    .five-img img {
+      width: 143px;
+  }
+
+
+  .saven-banner-fist img ,.saven-banner-img img{
+      width: 316px;
+  }
+    .eight-banner-fist img ,.eight-banner-img img{
+      width: 275px;
+  }
+    .nine-banner-fist img ,.nine-banner-img img  ,.last-banner-fist img ,.last-banner-img img {
+      width: 350px;
+    }
+
+      .saven-banner-header a.view-all::before {
+      background-color: #a86c6e;
+      }
+    .saven-banner-header a.view-all::after {
+      background: #FFDCE8;
+    }
+
+
+       .eight-banner-header .view-all::before {
+      background-color: #649bb0;
+      }
+    .eight-banner-header  a.view-all::after {
+      background: #8dc6e0;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  .product_list_main::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .product_list_main {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+
+
+
+       .nine-banner-header .view-all::before {
+      background-color: #b9b2a9;
+      }
+    .nine-banner-header a.view-all::after {
+      background: #dbd4cb;
+    }
+
+       .last-banner-header .view-all::before {
+      background-color: #555A86;
+      }
+    .last-banner-header a.view-all::after {
+      background: #CBD0FF;
+    }
+
+
+
+  /* .saven-banner-header  .product_list_main {
+      transform: translateX(80%);
+  } */
+    .saven-banner-img img ,.eight-banner-img img ,.nine-banner-img img ,.last-banner-img img ,.five-img img{
+     
+      opacity: 0;
+  }
+
+
+
+    .five-header  , .saven-banner-header , .eight-banner-header  ,.nine-banner-header ,.last-banner-header {
+      width: 100%;
+      overflow: hidden;
+  }
+    .five-header .product_list_main , .saven-banner-header  .product_list_main , .eight-banner-header  .product_list_main  ,.nine-banner-header  .product_list_main ,.last-banner-header .product_list_main {
+      transform: translateX(70%);
+  }
+
+   .saven-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.37; */
+    background-color: #FFF8F3;
+    z-index: -1;
+}
+
+  .revil-main-desktop {
+    display: none;
+}
+.saven_img_lable_main i {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.saven_img_lable_main i::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110px;
+    border-style: dashed;
+    border: 0;
+    border-color: #000;
+    border-right: 1px dashed #000;
+}
+.saven_img_lable_main i::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 100%;
+}
+  /* .saven_img_lable {
+    margin: 100px 0 0 0;
+    opacity: 0;
+} */
+  .last-collection-link-white{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        width: 100%;
+    height: 75px;
+    margin-bottom: -1px;
+  }
+.last-collection-link {
+    background: #fff;
+    text-align: center;
+    padding: 4px 0 60px 0;
+}
+  .last-collection-link a {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: left;
+    color: #000;
+    border: 1px solid #c71d22;
+    border-radius: 100px;
+    padding: 11px 24px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .eight_img_lable_main i {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.eight_img_lable_main i::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90px;
+    border-style: dashed;
+    border: 0;
+    border-color: #000;
+    border-right: 1px dashed #000;
+}
+.eight_img_lable_main i::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 100%;
+}
+  .eight_img_lable {
+    margin: 130px 0 0 0;
+    opacity: 0;
+}
+  
+
+
+
+  .nine_img_lable_main i {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.nine_img_lable_main i::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110px;
+    border-style: dashed;
+    border: 0;
+    border-color: #000;
+    border-right: 1px dashed #000;
+}
+.nine_img_lable_main i::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 100%;
+}
+  .nine_img_lable {
+    margin: 130px 0 0 0;
+    opacity: 0;
+}
+
+
+  .last_img_lable_main i {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.last_img_lable_main i::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90px;
+    border-style: dashed;
+    border: 0;
+    border-color: #000;
+    border-right: 1px dashed #000;
+}
+.last_img_lable_main i::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 100%;
+}
+  .last_img_lable {
+    margin: 67px 0 0 0;
+    opacity: 0;
+}
+  .last-collection-link-content span {
+    font-family: Rastanty Cortez;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+}
+  .last-collection-link-content {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin: -20px auto 0 auto;
+    max-width: 280px;
+}
+  .last-collection-link-content_secend {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+  .saven_img_lable_main span , .eight_img_lable_main span ,.nine_img_lable_main span , .last_img_lable_main span{
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26.19px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+{% comment %}
+    @media(min-width:750px){
+      .text_animaction_bg .container {
+      top: 46%;
+  }
+      .text_animaction .text h2 {
+      font-size: 34.26px;
+      font-weight: 600;
+      line-height: 53.52px;
+      letter-spacing: 0.21409836411476135px;
+      text-align: left;
+  }
+      .text_animaction .text {
+      width: 605px;
+  }
+      .video-bg_img {
+      height: calc(100vh - 151px);
+      top: 151px;
+  }
+      .revil-main {
+      display: none;
+  }
+.revil-main-desktop-left-content {
+    background-size: 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 665px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revil-main-desktop-main {
+    display: flex;
+    background-color: #81AEBC;
+    height: 100%;
+}
+.revil-main-desktop-left {
+    min-width: 670px;
+    max-width: 670px;
+    width: 100%;
+}
+      .product_list_btn {
+    padding: 6px 0;
+      }
+.revil-main-desktop-left-content img {
+    width: 210px;
+  }
+      /* .revil-main-desktop {
+    width: 100%;
+    height: calc(100vh - 152px);
+} */
+      .revil-main-desktop-left-head span {
+    font-family: Rastanty Cortez;
+    font-size: 93.96px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1491379290819168px;
+    text-align: center;
+}
+      .revil-main-desktop-left-head {
+    text-align: center;
+}
+      .revil-main-desktop-left-head div {
+    font-family: 'Lato';
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.28px;
+    letter-spacing: 0.1491379290819168px;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+      .revil-main-desktop-right {
+    width: 100%;
+    max-width: calc(100% - 670px);
+}
+      .revil-main-desktop-right .product_list_main {
+    flex-wrap: wrap;
+}
+      .revil-main-desktop-right .product_list_main {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+      .revil-main-desktop-right .product_list_main .product_list_first {
+    min-width: calc(33.33% - 13px);
+    margin: 0;
+}
+ }
+{% endcomment %}
+
+
+  @media(max-width:750px){
+  .revil img {
+    top: 195px;
+}
+  .devvdj {
+    top: 160px;
+}
+  .dev-2 {
+    top: 625px;
+}
+}
+
+
+  
+</style>
+
+<!-- <div class="last-text">
+  <section class="text_animaction_bg text_animaction ptb_90 toTop" data-scroll>
+    <div
+      class="video-bg_img"
+      style=" background-image: url(&quot;https://cdn.shopify.com/s/files/1/0796/1959/files/169784_1.png?v=1712833751&quot;); "
+    >
+      <video class="video-bg_video" loop muted autoplay playsinline>
+        <source src="https://cdn.shopify.com/videos/c/o/v/aa8093180d1244d5ab18730ce7c16211.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <div class="text toTop" data-scroll>
+        
+        <h3 id="text_ani-heading">Crafting a Vivid Paradise </h3>
+        <h2 id="text_ani"></h2>
+      </div>
+    </div>
+  </section>
+</div> -->
+
+<div class="revil-main-desktop">
+  <div class="revil-main-desktop-main">
+    <div class="revil-main-desktop-left">
+      <div class="revil-main-desktop-left-head">
+        <span>Illuminating Kadas</span>
+        <div>Embrace the vibrant reflections crafted in sleek signature styles</div>
+      </div>
+
+      <div class="revil-main-desktop-left-content" style=" background-image: url(https://cdn.shopify.com/s/files/1/0796/1959/files/5_1_2.png?v=1713166921); ">
+        <div class="dds-img">
+        <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Curves_1_1.png?v=1712642791" alt="">
+          </div>
+      </div>
+    </div>
+    <div class="revil-main-desktop-right">
+      <div class="product_list_main">
+        {% assign pro = section.settings.product_list %}
+        {% for product in pro %}
+          <div class="product_list  product_list_first">
+            <a href="{{ product.url }}">
+            <div class="product_list_img">
+              <div class="product_list_wishlist"></div>
+              
+              
+              <img src="{{ product.featured_image | img_url:'master' }}">
+            </div>
+            <div class="product_list_title">{{ product.title }}</div>
+            <div class="product_list_price">{{ product.price | money_with_currency }}</div>
+            <span class="product_list_btn">Shop Now</span>
+            </a>
+          </div>
+        {% endfor %}
+
+        {% if section.settings.link1 != blank %}
+          <div class="product_list_first   view-all-btn">
+            <a href="{{ section.settings.link1 }}" class=" view-all">
+              <span>View all</span>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="revil-main">
+  <div class="revil">
+    <div class="devvdj"><span>Meenakari Enamel</span><i class="spann"></i></div>
+    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Layer_1_dff07fe0-e207-4a37-b58f-14e51bdf114b.png?v=1712575233&width=300">
+    <div class="dev-2"><i class="spann-2"></i><span>Zircon Stone</span></div>
+    <div
+      class="saven-bg"
+    ></div>
+
+    <!-- <div class="heightt"></div> -->
+  </div>
+
+  <div class="five-banner">
+    <div class="five-banner-main">
+      <div
+        class="five-banner-bg"
+      >
+        <div class="five-header">
+          <div class="five-header-text">
+            <span>Illuminating Kadas</span>
+            <div>Embrace the vibrant reflections crafted in sleek signature styles</div>
+          </div>
+          <div class="five-img">
+            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Curves_1_1.png?v=1712642791&width=300">
+          </div>
+          <div class="product_list_main">
+            {% assign pro = section.settings.product_list %}
+            {% for product in pro %}
+              <div class="product_list  product_list_first">
+                <a href="{{ product.url }}">
+                <div class="product_list_img">
+                  <div class="product_list_wishlist"></div>
+                  {% if product.metafields.custom.trending_png_upload !=blank %}
+                  <img src="{{ product.metafields.custom.trending_png_upload | image_url: width: 250 }}">
+                    {% else %}
+                  <img src="{{ product.featured_image | img_url:'master' }}">
+                    {% endif %}
+                </div>
+                <div class="product_list_title">{{ product.title }}</div>
+                <div class="product_list_price">{{ product.price | money_with_currency }}</div>
+                <span class="product_list_btn">Shop Now</span>
+                </a>
+              </div>
+            {% endfor %}
+
+            {% if section.settings.link1 != blank %}
+              <div class="product_list_first   view-all-btn">
+                <a href="{{ section.settings.link1 }}" class=" view-all">
+                  <span>View all</span>
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="six-banner"></div>
+</div>
+
+<div class="saven-banner">
+  <div class="saven-banner-fist">
+    <div class="saven-banner-fist-img">
+      <div class="saven_img_lable-first">
+      <div class="saven_img_lable_main-first"><i class=""></i><span>Unique Detailing</span></div>
+    </div>
+      
+    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Layer_1_1.png?v=1712729818&width=300">
+    <div class="saven_img_lable">
+      <div class="saven_img_lable_main"><i class=""></i><span>Elegant Designs</span></div>
+    </div>
+</div>
+    <div
+      class="saven-bg"
+    ></div>
+  </div>
+  <div class="saven-banner-secend">
+    <div class="saven-banner-secend-main">
+      <div class="saven-banner-banner-main">
+        <div class="saven-banner-header-text">
+          <span>Radiant Earrings</span>
+          <div>Finest details in appealing colours, narrating history in each dangler</div>
+        </div>
+        <div
+          class="saven-banner-banner-bg">
+          <div class="saven-banner-header">
+            <div class="saven-banner-img">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/169716_1_1.png?v=1712735052&width=300">
+            </div>
+            <div class="product_list_main">
+              {% assign pro1 = section.settings.product_list1 %}
+              {% for product in pro1 %}
+                <div class="product_list  product_list_first">
+                  <a href="{{ product.url }}">
+                  <div class="product_list_img">
+                    <div class="product_list_wishlist"></div>
+                    {% if product.metafields.custom.trending_png_upload !=blank %}
+                  <img src="{{ product.metafields.custom.trending_png_upload | image_url: width: 250 }}">
+                    {% else %}
+                  <img src="{{ product.featured_image | img_url:'master' }}">
+                    {% endif %}
+                  </div>
+                  <div class="product_list_title">{{ product.title }}</div>
+                  <div class="product_list_price">{{ product.price | money_with_currency }}</div>
+                  <span class="product_list_btn">Shop Now</span>
+                  </a>
+                </div>
+              {% endfor %}
+
+              {% if section.settings.link2 != blank %}
+                <div class="product_list_first   view-all-btn">
+                  <a href="{{ section.settings.link2 }}" class=" view-all">
+                    <span>View all</span>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="saven-banner-three"></div>
+</div>
+
+<div class="eight-banner">
+  <div class="eight-banner-fist">
+
+    <div class="eight-banner-fist-img">
+      <div class="eight_img_lable-first">
+      <div class="eight_img_lable_main-first"><i class=""></i><span>Artistic Fusion</span></div>
+    </div>
+    
+    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Layer_1_2.png?v=1712740685&width=300">
+
+    <div class="eight_img_lable">
+    <div class="eight_img_lable_main"><i class=""></i><span>Gilded Details</span></div>
+    </div>
+    </div>
+    
+    <div
+      class="saven-bg"></div>
+  </div>
+  <div class="eight-banner-secend">
+    <div class="eight-banner-secend-main">
+      <div class="eight-banner-banner-main">
+        <div class="eight-banner-header-text">
+          <span>Heavenly Rings</span>
+          <div>Cast a spectrum of cosmic hues with glimmers of grace.</div>
+        </div>
+        <div
+          class="eight-banner-banner-bg">
+          <div class="eight-banner-header">
+            <div class="eight-banner-img">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/169709_1_1.png?v=1712740686&width=300">
+            </div>
+            <div class="product_list_main">
+              {% assign pro2 = section.settings.product_list2 %}
+              {% for product in pro2 %}
+                <div class="product_list">
+                  <a href="{{ product.url }}">
+                  <div class="product_list_img">
+                    <div class="product_list_wishlist"></div>
+                    {% if product.metafields.custom.trending_png_upload !=blank %}
+                  <img src="{{ product.metafields.custom.trending_png_upload | image_url: width: 250}}">
+                    {% else %}
+                  <img src="{{ product.featured_image | img_url:'master' }}">
+                    {% endif %}
+                  </div>
+                  <div class="product_list_title">{{ product.title }}</div>
+                  <div class="product_list_price">{{ product.price | money_with_currency }}</div>
+                  <span class="product_list_btn">Shop Now</span>
+                  </a>
+                </div>
+              {% endfor %}
+
+              {% if section.settings.link3 != blank %}
+                <div class="product_list_first   view-all-btn">
+                  <a href="{{ section.settings.link3 }}" class=" view-all">
+                    <span>View all</span>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="eight-banner-three"></div>
+</div>
+
+
+
+
+
+
+<div class="last-banner">
+  <div class="last-banner-fist">
+
+
+    <div class="last-banner-fist-img">
+      <div class="last_img_lable-first">
+      <div class="last_img_lable_main-first"><i class=""></i><span>Abstract Art</span></div>
+    </div>
+
+    
+    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Layer_1_4.png?v=1712750022&width=300">
+    <div class="last_img_lable">
+    <div class="last_img_lable_main"><i class=""></i><span>Geometric Motifs</span></div>
+    </div>
+
+    </div>
+
+      
+    <div
+      class="saven-bg"
+      
+    ></div>
+  </div>
+  <div class="last-banner-secend">
+    <div class="last-banner-secend-main">
+      <div class="last-banner-banner-main">
+        <div class="last-banner-header-text">
+          <span>Ethereal Pendant Sets</span>
+          <div>A prismatic keepsake for all your optimistic endeavours!</div>
+        </div>
+        <div
+          class="last-banner-banner-bg">
+          <div class="last-banner-header">
+            <div class="last-banner-img">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Color_Balance_1_1.png?v=1712750023&width=300">
+            </div>
+            <div class="product_list_main">
+              {% assign pro4 = section.settings.product_list4 %}
+              {% for product in pro4 %}
+                <div class="product_list">
+                  <a href="{{ product.url }}">
+                  <div class="product_list_img">
+                    <div class="product_list_wishlist"></div>
+                    {% if product.metafields.custom.trending_png_upload !=blank %}
+                  <img src="{{ product.metafields.custom.trending_png_upload | image_url: width: 250 }}">
+                    {% else %}
+                  <img src="{{ product.featured_image | img_url:'master' }}">
+                    {% endif %}
+                  </div>
+                  <div class="product_list_title">{{ product.title }}</div>
+                  <div class="product_list_price">{{ product.price | money_with_currency }}</div>
+                  <span class="product_list_btn">Shop Now</span>
+                  </a>
+                </div>
+              {% endfor %}
+
+              {% if section.settings.link5 != blank %}
+                <div class="product_list_first   view-all-btn">
+                  <a href="{{ section.settings.link5 }}" class=" view-all">
+                    <span>View all</span>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+
+    
+    
+  </div>
+  <div class="last-banner-three"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nine-banner">
+  <div class="nine-banner-fist">
+
+
+    <div class="nine-banner-fist-img">
+      <div class="nine_img_lable-first">
+      <div class="nine_img_lable_main-first"><i class=""></i><span>Centerstage Shimmers</span></div>
+    </div>
+    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Layer_1_3.png?v=1712744353&width=300">
+
+    <div class="nine_img_lable">
+    <div class="nine_img_lable_main"><i class=""></i><span>Glistening Finish</span></div>
+    </div>
+
+    </div>
+
+
+      
+    <div
+      class="saven-bg"
+     
+    ></div>
+  </div>
+  <div class="nine-banner-secend">
+    <div class="nine-banner-secend-main">
+      <div class="nine-banner-banner-main">
+        <div class="nine-banner-header-text">
+          <span>Vivid Necklaces</span>
+          <div>An assemblage of mosaics and shimmers enamelled in harmony</div>
+        </div>
+        <div
+          class="nine-banner-banner-bg">
+          <div class="nine-banner-header">
+            <div class="nine-banner-img">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Curves_2_1.png?v=1712744353&width=300">
+            </div>
+            <div class="product_list_main">
+              {% assign pro3 = section.settings.product_list3 %}
+              {% for product in pro3 %}
+                <div class="product_list">
+                  <a href="{{ product.url }}">
+                  <div class="product_list_img">
+                    <div class="product_list_wishlist"></div>
+                    {% if product.metafields.custom.trending_png_upload !=blank %}
+                  <img src="{{ product.metafields.custom.trending_png_upload | image_url: width: 250 }}">
+                    {% else %}
+                  <img src="{{ product.featured_image | img_url:'master' }}">
+                    {% endif %}
+                  </div>
+                  <div class="product_list_title">{{ product.title }}</div>
+                  <div class="product_list_price">{{ product.price | money_with_currency }}</div>
+                  <span class="product_list_btn">Shop Now</span>
+                  </a>
+                </div>
+              {% endfor %}
+
+              {% if section.settings.link4 != blank %}
+                <div class="product_list_first   view-all-btn">
+                  <a href="{{ section.settings.link4 }}" class=" view-all">
+                    <span>View all</span>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+                 <div class="last-collection-link-white"></div>
+        <!-- <div class="last-collection-link">
+          <div class="last-collection-link-content" >
+            These are the <span>Artistic Details</span> that stand against 
+the tests of time. Go bold, confident and gracious 
+with the beauty of <span>Meenakari with Zircons</span>
+          </div>
+
+          <div class="last-collection-link-content_secend" >
+            Explore a Meenakari Sparkle meant for you
+          </div>
+          
+    <a class="last-collection-link-anchor" href="{{ section.settings.last-link }}">Shop the Collection</a>
+  </div> -->
+
+
+
+
+
+      
+    </div>
+
+
+
+    
+  </div>
+  <div class="nine-banner-three"></div>
+
+  
+</div>
+
+
+
+
+
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+  
+
+  gsap.to(".saven_img_lable", {
+    scrollTrigger: {
+      trigger: ".saven-banner-secend",
+      // markers: true,
+      start: "top 50%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+  gsap.to(".saven_img_lable-first", {
+    scrollTrigger: {
+      trigger: ".saven-banner-secend",
+      // markers: true,
+      start: "top 70%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+    gsap.to(".eight_img_lable-first", {
+    scrollTrigger: {
+      trigger: ".eight-banner-secend",
+      // markers: true,
+      start: "top 70%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+
+      gsap.to(".last_img_lable-first", {
+    scrollTrigger: {
+      trigger: ".last-banner-secend",
+      // markers: true,
+      start: "top 70%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+    gsap.to(".nine_img_lable-first", {
+    scrollTrigger: {
+      trigger: ".nine-banner-secend",
+      // markers: true,
+      start: "top 70%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+
+    gsap.to(".eight_img_lable", {
+    scrollTrigger: {
+      trigger: ".eight-banner-secend",
+      // markers: true,
+      start: "top 50%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+
+
+      gsap.to(".nine_img_lable", {
+    scrollTrigger: {
+      trigger: ".nine-banner-secend",
+      // markers: true,
+      start: "top 50%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+
+        gsap.to(".last_img_lable", {
+    scrollTrigger: {
+      trigger: ".last-banner-secend",
+      // markers: true,
+      start: "top 50%",
+      end: "+=30",
+      scrub: 0.5,
+    },
+         opacity: 1,
+  });
+
+
+  
+
+
+  // let sections = gsap.utils.toArray(".product_list_first");
+
+  // gsap.to(sections, {
+  //   xPercent: -100 * (sections.length - 1),
+  //   ease: "none",
+  //   scrollTrigger: {
+  //     trigger: ".saven-banner-secend",
+  //     pin: true,
+  //     scrub: 2,
+  //     markers: true,
+  //      start: "top top",
+  //     snap: 1 / (sections.length - 1),
+  //     end: () => "+=200"
+  //   }
+  // });
+
+
+
+
+gsap.to(".saven-banner-header  .product_list_main ", {
+    scrollTrigger: {
+      trigger: ".saven-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+         x: 0
+  });
+
+
+
+
+            gsap.to(".eight-banner-header   .product_list_main ", {
+    scrollTrigger: {
+      trigger: ".eight-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+
+         x: 0
+
+  });
+
+            gsap.to(".nine-banner-header   .product_list_main ", {
+    scrollTrigger: {
+      trigger: ".nine-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+
+         x: 0
+
+  });
+
+            gsap.to(".last-banner-header  .product_list_main ", {
+    scrollTrigger: {
+      trigger: ".last-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+
+         x: 0
+
+  });
+
+
+              gsap.to(".five-header  .product_list_main ", {
+    scrollTrigger: {
+      trigger: ".six-banner",
+      // markers: true,
+      start: "top 100%",
+      end: "+=30",
+      scrub: 1,
+    },
+
+         x: 0
+
+  });
+
+
+
+         gsap.to(".saven-banner-header-text", {
+    scrollTrigger: {
+      trigger: ".saven-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+         opacity: 1,
+         duration: 1,
+         y: 20
+
+  });
+
+
+         gsap.to(".saven-banner-img img", {
+    scrollTrigger: {
+      trigger: ".saven-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=10",
+      scrub: 1.5,
+      ease: "power1.out"
+    },
+          duration: 1,
+    opacity: 1,
+  });
+
+
+
+
+
+
+           gsap.to(".eight-banner-header-text", {
+    scrollTrigger: {
+      trigger: ".eight-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+         opacity: 1,
+         duration: 1,
+         y: 20
+  });
+
+
+         gsap.to(".eight-banner-img img", {
+    scrollTrigger: {
+      trigger: ".eight-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=10",
+      scrub: 1.5,
+      ease: "power1.out"
+    },
+          duration: 1,
+    opacity: 1,
+  });
+
+
+
+
+             gsap.to(".nine-banner-header-text", {
+    scrollTrigger: {
+      trigger: ".nine-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+         opacity: 1,
+         duration: 1,
+         y: 20
+  });
+
+
+          gsap.to(".nine-banner-img img", {
+     scrollTrigger: {
+       trigger: ".nine-banner-three",
+       // markers: true,
+       start: "top 90%",
+       end: "+=10",
+       scrub: 1.5,
+       ease: "power1.out"
+    },
+           duration: 1,
+  opacity: 1,
+   });
+
+
+
+               gsap.to(".last-banner-header-text", {
+    scrollTrigger: {
+      trigger: ".last-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+         opacity: 1,
+         duration: 1,
+         y: 20
+  });
+
+
+         gsap.to(".last-banner-img img", {
+    scrollTrigger: {
+      trigger: ".last-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=10",
+      scrub: 1.5,
+      ease: "power1.out"
+    },
+          duration: 1,
+    opacity: 1,
+  });
+
+
+
+
+
+   gsap.to(".intro-heading", {
+  
+        opacity: 1,
+        duration: 1,
+        y: 20
+  });
+
+
+
+
+  
+ 
+  gsap.to(".five-header-text", {
+    scrollTrigger: {
+     trigger: ".six-banner",
+      // markers: true,
+      start: "top 100%",
+      end: "+=30",
+      scrub: 1.5,
+      ease: "power1.out"
+    },
+        opacity: 1,
+         duration: 1,
+         y: 10
+  });
+
+
+           gsap.to(".five-img img", {
+    scrollTrigger: {
+     trigger: ".six-banner",
+      // markers: true,
+      start: "top 100%",
+      end: "+=30",
+      scrub: 1.5,
+      ease: "power1.out"
+    },
+        duration: 1,
+    opacity: 1,
+  });
+
+
+
+
+
+
+
+    //===================== scene 2 Code Start ====================
+        var tween2 = new TimelineMax();
+        var str1 =
+          "Meenakari is the craft of painting metal surfaces by enamelling.  The word meenakari is comprised of 'Meena' meaning ‘paradise’ and Kari means to ‘place one thing over another’. Meenakari is thus placing paradise onto a base.";
+
+        const split_string = str1.split(" ");
+        var outputDiv = document.getElementById("text_ani");
+        var spanElements = [];
+
+        for (var i = 0; i < split_string.length; i++) {
+          var span = document.createElement("span");
+          span.textContent = split_string[i] + " ";
+          spanElements.push(span);
+          outputDiv.appendChild(span);
+        }
+
+
+        var timeline = new TimelineMax();
+        spanElements.forEach((span, index) => {
+          // timeline.to(span, 0.5, { fontWeight: 600, opacity: 1, delay: index * 0.2 });
+          timeline.to(span, 0.5, {  opacity: 1, delay: index * 0.2 });
+        });
+
+
+        var controller = new ScrollMagic.Controller();
+
+
+
+
+        var scene2 = new ScrollMagic.Scene({
+          triggerElement: ".text_animaction",
+          duration: 500,
+          triggerHook: 0,
+          markers: false
+        })
+          .setTween(timeline)
+          // .addIndicators()
+          .setPin(".text_animaction")
+          .addTo(controller);
+        // ======================== scene 2 Code End =====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  gsap.to(".devvdj", {
+    scrollTrigger: {
+      trigger: ".revil",
+      // markers: true,
+      start: "top 100",
+      end: "+=50",
+      scrub: 1,
+    },
+    opacity: 1,
+
+  });
+    gsap.to(".dev-2", {
+    scrollTrigger: {
+      trigger: ".revil",
+      // markers: true,
+      start: "top -10%",
+      end: "+=50",
+      scrub: 1,
+    },
+    opacity: 1,
+
+  });
+
+      gsap.to(".revil", {
+    scrollTrigger: {
+      trigger: ".six-banner",
+      // markers: true,
+      start: "top 100%",
+      end: "+=30",
+      scrub: 2,
+    },
+    opacity: 0,
+      pointerEvents: "none"
+
+  });
+
+      gsap.to(".five-banner", {
+    scrollTrigger: {
+     trigger: ".six-banner",
+      // markers: true,
+      start: "top 100%",
+      end: "+=30",
+      scrub: 1,
+    },
+        opacity: 1,
+  });
+
+
+
+      gsap.to(".saven-banner-fist", {
+    scrollTrigger: {
+      trigger: ".saven-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+    opacity: 0,
+
+  });
+
+        gsap.to(".saven-banner-secend", {
+    scrollTrigger: {
+      trigger: ".saven-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+          opacity: 1,
+
+  });
+
+
+
+
+
+        gsap.to(".eight-banner-fist", {
+    scrollTrigger: {
+      trigger: ".eight-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+    opacity: 0,
+
+  });
+
+        gsap.to(".eight-banner-secend", {
+    scrollTrigger: {
+      trigger: ".eight-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+          opacity: 1,
+
+  });
+
+
+
+
+
+
+
+          gsap.to(".nine-banner-fist", {
+    scrollTrigger: {
+      trigger: ".nine-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+    opacity: 0,
+
+  });
+
+        gsap.to(".nine-banner-secend", {
+    scrollTrigger: {
+      trigger: ".nine-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=10",
+      scrub: 1,
+    },
+          opacity: 1,
+
+  });
+
+
+
+
+
+            gsap.to(".last-banner-fist", {
+    scrollTrigger: {
+      trigger: ".last-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+    opacity: 0,
+
+  });
+
+        gsap.to(".last-banner-secend", {
+    scrollTrigger: {
+      trigger: ".last-banner-three",
+      // markers: true,
+      start: "top 90%",
+      end: "+=30",
+      scrub: 1,
+    },
+          opacity: 1,
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "revil",
+  "class": "revil-maint",
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 4
+    },
+    {
+      "type": "url",
+      "id": "link1",
+      "label": "View All link"
+    },
+
+    {
+      "type": "product_list",
+      "id": "product_list1",
+      "label": "Products",
+      "limit": 4
+    },
+    {
+      "type": "url",
+      "id": "link2",
+      "label": "View All link"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list2",
+      "label": "Products",
+      "limit": 4
+    },
+    {
+      "type": "url",
+      "id": "link3",
+      "label": "View All link"
+    },
+        {
+      "type": "product_list",
+      "id": "product_list4",
+      "label": "Products",
+      "limit": 4
+    },
+    {
+      "type": "url",
+      "id": "link5",
+      "label": "View All link"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list3",
+      "label": "Products",
+      "limit": 4
+    },
+    {
+      "type": "url",
+      "id": "link4",
+      "label": "View All link"
+    },
+
+    {
+      "type": "url",
+      "id": "last-link",
+      "label": "Last Shop all link"
+    }
+
+  ],
+  "presets": [
+    {
+          "name": "revil"
+    }
+  ]
+}
+{% endschema %}

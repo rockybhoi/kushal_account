@@ -1,0 +1,73 @@
+<style>
+  .mother-day-footer-inner img{
+    width:100%;
+    max-width:600px;
+    height:auto;
+  }
+  .mother-day-footer-inner {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 50px 0;
+}
+  .mother-day-footer-inner a {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: left;
+    color: #000;
+    background: #FFFFFF;
+    border: 1px solid #CACEFD;
+    padding: 11px 23px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 100px;
+}
+  @media(max-width:750px){
+    .mother-day-footer-inner img{
+    max-width:334px;
+  }
+  }
+  
+</style>
+
+
+<div class="mother-day-footer-inner">
+  <img src="{{ section.settings.img | img_url:'master' }}"  width="{{ section.settings.img.width }}" height="{{ section.settings.img.height }}">
+ {% if section.settings.link !=blank %} <a href="{{ section.settings.link }}">{{ section.settings.linkt }}</a>{% endif %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "mother-day-footer",
+    "class": "mother-day-footer",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "linkt",
+        "label": "Button text"
+      }
+
+
+
+    ],
+    "presets": [{
+    "name": "mother-day-footer"
+    }]
+  }
+{% endschema %}

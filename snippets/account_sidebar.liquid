@@ -1,0 +1,241 @@
+  <div class="account_left_content">
+    <div class="account_profile">
+    <div class="account_profile_left">
+      
+      <span>Hey,</span>
+      <!-- <h2>{{ customer.name }}</h2> -->
+      
+         {% for address in customer.addresses %}
+            {% if address == customer.default_address %}
+              <h2> {{ address.first_name }}  </h2>
+              <p>{{ address.phone }}</p>
+              <p>{{ customer.email }}</p>
+            {% endif %}
+          {% endfor %}
+      
+      <!-- <p>{{ customer.default_address.phone }}</p> -->
+    </div>
+    <div class="account_profile_right">
+      <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/user_12.png?v=1727247717">
+      <div class="edit_btn">Edit</div>
+    </div>
+
+      <div class="side_edit_main">
+        <div class="side_edit_bg"></div>
+      <div class="side_edit_inner">
+      <div class="side_edit_header">
+        <h4>Edit Personal Details</h4>
+        {% render 'svg-x' %}
+      </div>
+      <div class="side_edit_body">
+          {% for address in customer.addresses %}
+            {% if address == customer.default_address %}
+              {% form 'customer_address', address %}
+
+                <div class="side_edit_input">
+                  <input type="text"  id="address_first_name" name="address[first_name]" value="{{ address.first_name }}">
+                  <label >Name</label>
+                </div>
+                <div class="side_edit_input">
+                  <input type="text" id="address_phone" value="{{ address.phone }}" name="address[phone]"  placeholder="Phone">
+                </div>
+                <!-- <div class="side_edit_input">
+                  <input type="email" id="customer_email" name="customer[email]" value="{{ customer.email }}" placeholder="Email">
+                </div> -->
+
+                <div class="side_edit_footer">
+                <button class=" Cancel_btn">Cancel</button>
+                <button type="submit" class="btn">Save</button>
+                </div>
+              {% endform %}
+              {% endif %}
+          {% endfor %}
+      </div>
+        
+      </div>
+        
+      </div>
+
+{% comment %}
+  {% for address in customer.addresses %}
+      {% if address == customer.default_address %}
+        {% form 'customer_address', address %}
+          <!-- Address Fields -->
+          <label for="address_first_name">First Name</label>
+          <input type="text" id="address_first_name" name="address[first_name]" value="{{ address.first_name }}">
+      
+        
+          <button type="submit" class="btn">Update Address</button>
+        {% endform %}
+        {% endif %}
+    {% endfor %}
+{% endcomment %}
+    
+
+
+
+    </div>
+
+    <a href="/account" class=" ctt_{{ page_title  }} {% unless page_title == "Addresses" %}active {% endunless %}  order-box order-box-1  ">
+      <div class="order_icon">
+        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.16064 10.3887L15.75 17.0955L27.2606 10.428" stroke="#454545" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15.75 28.9864V17.082" stroke="#CF2228" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.0335 3.8797L6.02471 7.7647C4.43658 8.64407 3.13721 10.8491 3.13721 12.6603V20.0759C3.13721 21.8872 4.43658 24.0922 6.02471 24.9716L13.0335 28.8697C14.5297 29.6966 16.9841 29.6966 18.4803 28.8697L25.4891 24.9716C27.0772 24.0922 28.3766 21.8872 28.3766 20.0759V12.6603C28.3766 10.8491 27.0772 8.64407 25.4891 7.7647L18.4803 3.86657C16.971 3.0397 14.5297 3.0397 13.0335 3.8797Z" stroke="#454545" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="order_content">
+        <div class="order_count">Orders ({{ customer.orders_count }})</div>
+        <span>Check your order status</span>
+      </div>
+      <div class="order_side_icon">
+        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.594289 5.90913C0.264804 5.57964 0.264804 5.04538 0.594289 4.71589L4.81304 0.497126C5.14255 0.167624 5.67678 0.167624 6.00629 0.497126C6.33579 0.826637 6.33579 1.36087 6.00629 1.69038L2.38414 5.31251L6.00629 8.93465C6.33579 9.26414 6.33579 9.7984 6.00629 10.1279C5.67678 10.4574 5.14255 10.4574 4.81304 10.1279L0.594289 5.90913Z" fill="#454545" />
+        </svg>
+      </div>
+    </a>
+
+    <a href="https://www.kushals.com/account/addresses" class="{% if page_title == "Addresses" %}active {% endif %} order-box order-box-2 ">
+      <div class="order_icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.0381 9.81641C18.0381 8.05417 17.338 6.3641 16.0919 5.11801C14.8459 3.87192 13.1558 3.17188 11.3936 3.17188C9.63132 3.17188 7.94125 3.87192 6.69516 5.11801C5.44907 6.3641 4.74902 8.05417 4.74902 9.81641C4.74902 12.5421 6.92991 16.0947 11.3936 20.3502C15.8572 16.0947 18.0381 12.5421 18.0381 9.81641ZM11.3936 22.3672C5.979 17.4458 3.27246 13.2612 3.27246 9.81641C3.27246 7.66256 4.12807 5.59693 5.65107 4.07393C7.17407 2.55093 9.23971 1.69531 11.3936 1.69531C13.5474 1.69531 15.613 2.55093 17.136 4.07393C18.659 5.59693 19.5146 7.66256 19.5146 9.81641C19.5146 13.2612 16.8081 17.4458 11.3936 22.3672Z" fill="#454545"/>
+          <path d="M11.3936 12.0312C11.981 12.0312 12.5443 11.7979 12.9597 11.3825C13.375 10.9672 13.6084 10.4038 13.6084 9.81641C13.6084 9.22899 13.375 8.66564 12.9597 8.25027C12.5443 7.83491 11.981 7.60156 11.3936 7.60156C10.8061 7.60156 10.2428 7.83491 9.82742 8.25027C9.41206 8.66564 9.17871 9.22899 9.17871 9.81641C9.17871 10.4038 9.41206 10.9672 9.82742 11.3825C10.2428 11.7979 10.8061 12.0312 11.3936 12.0312ZM11.3936 13.5078C10.4145 13.5078 9.47561 13.1189 8.78334 12.4266C8.09106 11.7344 7.70215 10.7954 7.70215 9.81641C7.70215 8.83738 8.09106 7.89846 8.78334 7.20619C9.47561 6.51391 10.4145 6.125 11.3936 6.125C12.3726 6.125 13.3115 6.51391 14.0038 7.20619C14.696 7.89846 15.085 8.83738 15.085 9.81641C15.085 10.7954 14.696 11.7344 14.0038 12.4266C13.3115 13.1189 12.3726 13.5078 11.3936 13.5078Z" fill="#CF2228"/>
+          <path d="M6.22559 20.8906H16.5615C17.0537 20.8906 17.2998 21.1367 17.2998 21.6289C17.2998 22.1211 17.0537 22.3672 16.5615 22.3672H6.22559C5.7334 22.3672 5.4873 22.1211 5.4873 21.6289C5.4873 21.1367 5.7334 20.8906 6.22559 20.8906Z" fill="#454545"/>
+        </svg>
+      </div>
+      <div class="order_content">
+        <div class="order_count">Address ({{ customer.addresses_count }})</div>
+        <span>Saved Address</span>
+      </div>
+      <div class="order_side_icon">
+        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.594289 5.90913C0.264804 5.57964 0.264804 5.04538 0.594289 4.71589L4.81304 0.497126C5.14255 0.167624 5.67678 0.167624 6.00629 0.497126C6.33579 0.826637 6.33579 1.36087 6.00629 1.69038L2.38414 5.31251L6.00629 8.93465C6.33579 9.26414 6.33579 9.7984 6.00629 10.1279C5.67678 10.4574 5.14255 10.4574 4.81304 10.1279L0.594289 5.90913Z" fill="#454545" />
+        </svg>
+      </div>
+    </a>
+
+    <a href="/pages/stores" class="order-box order-box-3 ">
+      <div class="order_icon">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.33765 11.8262V16.246C3.33765 20.6659 5.10952 22.4377 9.52937 22.4377H14.8351C19.255 22.4377 21.0269 20.6659 21.0269 16.246V11.8262" stroke="#454545" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.1877 12.5938C13.9891 12.5938 15.318 11.127 15.1409 9.32563L14.4912 2.75H9.89413L9.2346 9.32563C9.05741 11.127 10.3863 12.5938 12.1877 12.5938Z" stroke="#454545" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.399 12.5938C20.3874 12.5938 21.8443 10.9794 21.6474 9.00078L21.3718 6.29375C21.0174 3.73438 20.0331 2.75 17.454 2.75H14.4517L15.1407 9.65047C15.3081 11.2747 16.7748 12.5938 18.399 12.5938Z" stroke="#454545" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.92715 12.5938C7.55137 12.5938 9.01809 11.2747 9.17559 9.65047L9.39215 7.475L9.86465 2.75H6.86231C4.28324 2.75 3.29887 3.73438 2.94449 6.29375L2.67871 9.00078C2.48184 10.9794 3.93871 12.5938 5.92715 12.5938Z" stroke="#454545" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.1875 17.5156C10.5436 17.5156 9.72656 18.3327 9.72656 19.9766V22.4375H14.6484V19.9766C14.6484 18.3327 13.8314 17.5156 12.1875 17.5156Z" stroke="#CF2228" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="order_content">
+        <div class="order_count">Stores</div>
+        <!-- <span>Saved Address</span> -->
+      </div>
+      <div class="order_side_icon">
+        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.594289 5.90913C0.264804 5.57964 0.264804 5.04538 0.594289 4.71589L4.81304 0.497126C5.14255 0.167624 5.67678 0.167624 6.00629 0.497126C6.33579 0.826637 6.33579 1.36087 6.00629 1.69038L2.38414 5.31251L6.00629 8.93465C6.33579 9.26414 6.33579 9.7984 6.00629 10.1279C5.67678 10.4574 5.14255 10.4574 4.81304 10.1279L0.594289 5.90913Z" fill="#454545" />
+        </svg>
+      </div>
+    </a>
+
+
+    <a href="/pages/contact-us" class="order-box order-box-4 ">
+      <div class="order_icon">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.7188 19.407H16.9706C16.1831 19.407 15.435 19.7122 14.8837 20.2634L13.2005 21.9271C12.4327 22.685 11.1825 22.685 10.4147 21.9271L8.7314 20.2634C8.18015 19.7122 7.42219 19.407 6.64453 19.407H5.90625C4.27219 19.407 2.95312 18.0978 2.95312 16.4834V5.74388C2.95312 4.1295 4.27219 2.82031 5.90625 2.82031H17.7188C19.3528 2.82031 20.6719 4.1295 20.6719 5.74388V16.4834C20.6719 18.088 19.3528 19.407 17.7188 19.407Z" stroke="#454545" stroke-width="1.07386" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.89209 9.85702C6.89209 8.94155 7.64022 8.19336 8.55569 8.19336C9.47115 8.19336 10.2193 8.94155 10.2193 9.85702C10.2193 11.7076 7.59099 11.9045 7.01021 13.6665C6.89209 14.0308 7.19724 14.395 7.58115 14.395H10.2193" stroke="#CF2228" stroke-width="1.07386" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15.7912 14.3852V8.76444C15.7912 8.50851 15.6239 8.28204 15.3778 8.21314C15.1317 8.14423 14.8659 8.24267 14.7281 8.45923C14.0194 9.60111 13.2516 10.9005 12.5822 12.0424C12.4739 12.2294 12.4739 12.4755 12.5822 12.6625C12.6905 12.8496 12.8972 12.9676 13.1236 12.9676H16.7363" stroke="#CF2228" stroke-width="1.07386" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="order_content">
+        <div class="order_count">Contact Us</div>
+        <!-- <span>Saved Address</span> -->
+      </div>
+      <div class="order_side_icon">
+        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.594289 5.90913C0.264804 5.57964 0.264804 5.04538 0.594289 4.71589L4.81304 0.497126C5.14255 0.167624 5.67678 0.167624 6.00629 0.497126C6.33579 0.826637 6.33579 1.36087 6.00629 1.69038L2.38414 5.31251L6.00629 8.93465C6.33579 9.26414 6.33579 9.7984 6.00629 10.1279C5.67678 10.4574 5.14255 10.4574 4.81304 10.1279L0.594289 5.90913Z" fill="#454545" />
+        </svg>
+      </div>
+    </a>
+
+    <a href="/pages/privacy-policy" class="order-box order-box-5 ">
+      <div class="order_icon">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.6719 7.79688V17.6406C20.6719 20.5938 19.1953 22.5625 15.75 22.5625H7.875C4.42969 22.5625 2.95312 20.5938 2.95312 17.6406V7.79688C2.95312 4.84375 4.42969 2.875 7.875 2.875H15.75C19.1953 2.875 20.6719 4.84375 20.6719 7.79688Z" stroke="#454545" stroke-width="1.26562" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14.2734 5.33594V7.30469C14.2734 8.3875 15.1594 9.27344 16.2422 9.27344H18.2109" stroke="#454545" stroke-width="1.26562" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.875 13.7031H11.8125" stroke="#454545" stroke-width="1.26562" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.875 17.6406H15.75" stroke="#CF2228" stroke-width="1.26562" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="order_content">
+        <div class="order_count">Policies</div>
+        <!-- <span>Saved Address</span> -->
+      </div>
+      <div class="order_side_icon">
+        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.594289 5.90913C0.264804 5.57964 0.264804 5.04538 0.594289 4.71589L4.81304 0.497126C5.14255 0.167624 5.67678 0.167624 6.00629 0.497126C6.33579 0.826637 6.33579 1.36087 6.00629 1.69038L2.38414 5.31251L6.00629 8.93465C6.33579 9.26414 6.33579 9.7984 6.00629 10.1279C5.67678 10.4574 5.14255 10.4574 4.81304 10.1279L0.594289 5.90913Z" fill="#454545" />
+        </svg>
+      </div>
+    </a>
+
+    
+
+
+            
+            <a class="ct_log_out" href="/account/logout">Log out</a>
+            
+  </div>
+
+
+  <script>
+    $('.edit_btn').on('click', function() {
+        $('.side_edit_main').addClass('active');
+    });
+    
+  
+    $('.side_edit_header svg').on('click', function() {
+        $('.side_edit_main').removeClass('active');
+    });
+    
+    $('.Cancel_btn').on('click', function() {
+        $('.side_edit_main').removeClass('active');
+    });
+    
+    $('.side_edit_bg').on('click', function() {
+        $('.side_edit_main').removeClass('active');
+    });
+
+
+
+     // input focus Js start
+
+jQuery('input, select, textarea,email,password,tel').each(
+		function(index){  
+			var input = jQuery(this);
+          	input.on('focus', function() {
+                jQuery(this).parent().addClass("has-focus");
+            });
+          
+          input.on('focusout', function() {
+              if(jQuery(this).val() == '') {
+                  jQuery(this).parent().removeClass("has-focus");
+              }
+		   }); 
+          
+    });
+  
+   jQuery('input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="search"], select, textarea').each(
+          function(index){  
+              var input = jQuery(this);
+              if(input.val()=='')
+              {
+                  jQuery(input).parent().removeClass("has-focus");
+
+              }else
+              {
+                  jQuery(input).parent().addClass("has-focus");	
+              }
+              //console.log('Type: ' + input.attr('type') + 'Name: ' + input.attr('name') + 'Value: ' + input.val());
+      });
+ // input focus Js End
+
+    
+
+  </script>

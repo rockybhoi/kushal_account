@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "pre_sale_3tRhQy": {
+      "type": "pre-sale",
+      "blocks": {
+        "time_fxW9Hd": {
+          "type": "time",
+          "settings": {
+            "head": "Sale Goes Live In",
+            "time": "March 31, 2024"
+          }
+        },
+        "banner_XyBTcx": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/image_28_3.png"
+          }
+        },
+        "slider_AWkQAU": {
+          "type": "slider",
+          "settings": {
+            "image-one1": "shopify://shop_images/Group_451.png",
+            "image-two1": "shopify://shop_images/Group_433.png",
+            "headd1": "8000+ Unique Designs",
+            "image-one2": "shopify://shop_images/Group_495.png",
+            "image-two2": "shopify://shop_images/Group_492.png",
+            "headd2": "40,000+ Unique Designs",
+            "image-one3": "shopify://shop_images/Group_496.png",
+            "image-two3": "shopify://shop_images/Group_493.png",
+            "headd3": "Across all Jewellery Types",
+            "image-one4": "shopify://shop_images/Group_497.png",
+            "image-two4": "shopify://shop_images/Group_494.png",
+            "headd4": "Latest Trends on Offer",
+            "headd5": "",
+            "headd6": ""
+          }
+        }
+      },
+      "block_order": [
+        "time_fxW9Hd",
+        "banner_XyBTcx",
+        "slider_AWkQAU"
+      ],
+      "settings": {}
+    },
+    "cross_page_promos_4FafEi": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "custom_icon_gG9wLC": {
+          "type": "custom-icon",
+          "settings": {
+            "image_size": "icon",
+            "text": "",
+            "link_url": ""
+          }
+        },
+        "custom_icon_g3FcjW": {
+          "type": "custom-icon",
+          "settings": {
+            "image_size": "icon",
+            "text": "",
+            "link_url": ""
+          }
+        },
+        "custom_icon_F7HKy9": {
+          "type": "custom-icon",
+          "settings": {
+            "image_size": "icon",
+            "text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_icon_gG9wLC",
+        "custom_icon_g3FcjW",
+        "custom_icon_F7HKy9"
+      ],
+      "disabled": true,
+      "settings": {
+        "visibility": "all"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pre_sale_3tRhQy",
+    "cross_page_promos_4FafEi"
+  ]
+}

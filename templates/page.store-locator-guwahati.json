@@ -1,0 +1,1477 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "1ec3d596-1267-4de8-8525-37eeebb00197": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Store-Locator-watercolour_1cf7d896-5265-45b2-bdd4-87524b5919fe.jpg",
+        "mobile_image": "shopify://shop_images/kushals-watercolour-1024x1024.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "",
+        "title_size": 28,
+        "title_size_mobile": 24,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": false,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "8738a4d9-bd64-4eb3-8abe-7503febd8850": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15830090350748__8738a4d9-bd64-4eb3-8abe-7503febd8850-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7775.2603424844965!2d77.56512994161314!3d12.995489949288059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1623aa0ee039%3A0xae667327f14adcb7!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1704276445902!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Malleshwaram",
+            "review_text": "4.5 (757)",
+            "map_address": "<p>ARS Rao Complex,<br/>8th Cross, Malleshwaram,<br/>Bangalore 560 003</p>",
+            "store_phone": "<p><a href=\"tel: +91-8867906240\" target=\"_blank\" title=\"tel: +91-8867906240\">Call +91-8867906240</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/tWji7ezQu5Qda4qQ6\" title=\"https://maps.app.goo.gl/tWji7ezQu5Qda4qQ6\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-8867906240"
+          }
+        },
+        "b86b4264-b774-447a-9213-d36cff0c4334": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15546.925477382889!2d77.6458784!3d13.0527635!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x89951adda0bf6ce1!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1675839929801!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Hennur Road",
+            "review_text": "4.9 (421)",
+            "map_address": "<p>SRK Nagar Post, 6 Survey No 33,<br/>Hennur Bagalur Main Road,<br/>Bangalore 560 077</p>",
+            "store_phone": "<p><a href=\"tel: +91-8971722820\" target=\"_blank\" title=\"tel: +91-8971722820\">Call +91-8971722820</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/dir//Kushal's+Fashion+Jewellery+unit+F+62,63,+1st+floor,+Mantri+square+mall+Sampige+Rd,+Seshadripuram+Bengaluru,+Karnataka+560003/@12.9916664,77.5707071,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bae162301f37665:0xb17cd7beb73e1a22\" target=\"_blank\" title=\"https://www.google.com/maps/dir//Kushal's+Fashion+Jewellery+unit+F+62,63,+1st+floor,+Mantri+square+mall+Sampige+Rd,+Seshadripuram+Bengaluru,+Karnataka+560003/@12.9916664,77.5707071,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bae162301f37665:0xb17cd7beb73e1a22\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-8971722820"
+          }
+        },
+        "c1bf91c3-da25-42d5-bfa5-fa1b0f7ac6d1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7778.708500964746!2d77.56179441051823!3d12.88492778799184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15fdb636778b%3A0x2f20f300aed4a037!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1671785905322!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Forum Falcon Mall",
+            "review_text": "4.9 (213)",
+            "map_address": "<p>2nd Floor, Forum Falcon Mall,<br/>Anjanadri Layout, Konanakunte,<br/>Bangalore 560 062</p>",
+            "store_phone": "<p><a href=\"tel: +91-6364915818\" target=\"_blank\" title=\"tel: +91-6364915818\">Call +91-6364915818</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/uqiCQ263TFnREsy59\" target=\"_blank\" title=\"https://maps.app.goo.gl/uqiCQ263TFnREsy59\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-6364915818"
+          }
+        },
+        "c060b08e-a47d-4e6d-93cd-df17a815d8d3": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.611459954046!2d77.6965046!3d12.996684799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x96f6671d28d6cfc7!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1655699362986!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Phoenix Marketcity Mall",
+            "review_text": "4.9 (405)",
+            "map_address": "<p>2nd Floor, Phoenix Mall,<br/>Mahadevpura, Whitefield,<br/>Bangalore 560 048</p>",
+            "store_phone": "<p><a href=\"tel: +91-6366343528\" target=\"_blank\" title=\"tel: +91-6366343528\">Call +91-6366343528</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps?ll=12.996685,77.696505&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=10877995324896890823\" target=\"_blank\" title=\"https://www.google.com/maps?ll=12.996685,77.696505&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=10877995324896890823\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-6366343528"
+          }
+        },
+        "9f3b6bc9-71cf-484d-bf33-37b6fa5279ff": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.6933595364703!2d77.5544861!3d13.0110277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3a0d08df9fce55f!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1642400464717!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Orion Mall",
+            "review_text": "4.9 (1,431)",
+            "map_address": "<p>1st Floor, Orion mall,<br/>Dr Rajkumar Road, Rajajinagar,<br/>Bangalore 560 055</p>",
+            "store_phone": "<p><a href=\"tel:  +91-8951994534\" target=\"_blank\" title=\"tel:  +91-8951994534\">Call +91-8951994534</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps?ll=13.010911,77.555051&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=17555260655693260127\" target=\"_blank\" title=\"https://www.google.com/maps?ll=13.010911,77.555051&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=17555260655693260127\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:  +91-8951994534"
+          }
+        },
+        "7bfd2beb-ef05-4afe-a9ec-368042a16238": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8377043219803!2d77.6058359497154!3d12.982230218114214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1689d67734c1%3A0x9922f7d9b00a04db!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879155215\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Commercial Street",
+            "review_text": "4.6 (1,193)",
+            "map_address": "<p>#47, Opposite Planet Fashion,<br/>Commercial Street,<br/>Bangalore 560 001</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360789206\" target=\"_blank\" title=\"tel:+91-6360789206\">Call +91-6360789206</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.982225,77.60803,14z/data=!4m6!3m5!1s0x3bae1689d67734c1:0x9922f7d9b00a04db!8m2!3d12.982225!4d77.60803!16s%2Fg%2F11dxj07d4b?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.982225,77.60803,14z/data=!4m6!3m5!1s0x3bae1689d67734c1:0x9922f7d9b00a04db!8m2!3d12.982225!4d77.60803!16s%2Fg%2F11dxj07d4b?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360789206"
+          }
+        },
+        "c97316ed-20e2-4263-b646-42ed3f4788ac": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.689627557264!2d77.56844864971555!3d12.991692517908845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162301f37665%3A0xb17cd7beb73e1a22!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879261242\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Mantri Square Mall",
+            "review_text": "4.5 (943)",
+            "map_address": "<p>First Floor, Mantri Square,<br/>Sampige Road, Malleshwaram,<br/>Bangalore 560 003</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360775871\" target=\"_blank\" title=\"tel:+91-6360775871\">Call +91-6360775871</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.991666,77.570707,14z/data=!4m6!3m5!1s0x3bae162301f37665:0xb17cd7beb73e1a22!8m2!3d12.9916664!4d77.5707071!16s%2Fg%2F1pv1y5w58?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.991666,77.570707,14z/data=!4m6!3m5!1s0x3bae162301f37665:0xb17cd7beb73e1a22!8m2!3d12.9916664!4d77.5707071!16s%2Fg%2F1pv1y5w58?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360775871"
+          }
+        },
+        "7d0bf77e-4825-4c43-85f6-e83412c708d3": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.634092997518!2d77.58170494971492!3d12.931223219218612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15986da73d21%3A0xfb5a3d1357eeeb23!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879332184\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Jayanagar",
+            "review_text": "4.4 (1,558)",
+            "map_address": "<p>#242, Opp. Bata Showroom,<br/>9th Main, 3rd Block, Jayanagar,<br/>Bangalore 560 011</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360781794\" target=\"_blank\" title=\"tel:+91-6360781794\">Call +91-6360781794</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.931202,77.583997,14z/data=!4m6!3m5!1s0x3bae15986da73d21:0xfb5a3d1357eeeb23!8m2!3d12.9312021!4d77.5839969!16s%2Fg%2F1pycmz1z8?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.931202,77.583997,14z/data=!4m6!3m5!1s0x3bae15986da73d21:0xfb5a3d1357eeeb23!8m2!3d12.9312021!4d77.5839969!16s%2Fg%2F1pycmz1z8?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360781794"
+          }
+        },
+        "1dc022b1-72ba-4c7d-a524-8e870c9d3dde": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.53163960578!2d77.62505294971496!3d12.937796219076537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1443a8172891%3A0x90f3560926d2830c!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879382210\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Koramangala",
+            "review_text": "4.7 (964)",
+            "map_address": "<p>Opp. Lifestyle, Sony World Junction,<br/>100 Feet Road, Koramangala,<br/>Bangalore 560 034</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360775036\" target=\"_blank\" title=\"tel:+91-6360775036\">Call +91-6360775036</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.937791,77.627247,14z/data=!4m6!3m5!1s0x3bae1443a8172891:0x90f3560926d2830c!8m2!3d12.937791!4d77.627247!16s%2Fg%2F11c2jm18n6?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.937791,77.627247,14z/data=!4m6!3m5!1s0x3bae1443a8172891:0x90f3560926d2830c!8m2!3d12.937791!4d77.627247!16s%2Fg%2F11c2jm18n6?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360775036"
+          }
+        },
+        "c281083d-a646-4450-b938-95160c091bf8": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9165602119806!2d77.64955294971475!3d12.9130842196104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae149d33e1d76f%3A0xec9e948a96420bdb!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879409890\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "HSR Layout",
+            "review_text": "4.2 (1,310)",
+            "map_address": "<p>#2611, 27th main,<br/>Sector 1, HSR layout,<br/>Bangalore 560 102</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360766743\" target=\"_blank\" title=\"tel:+91-6360766743\">Call +91-6360766743</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.913066,77.651693,14z/data=!4m6!3m5!1s0x3bae149d33e1d76f:0xec9e948a96420bdb!8m2!3d12.9130661!4d77.6516927!16s%2Fg%2F11b7y75bc9?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.913066,77.651693,14z/data=!4m6!3m5!1s0x3bae149d33e1d76f:0xec9e948a96420bdb!8m2!3d12.9130661!4d77.6516927!16s%2Fg%2F11b7y75bc9?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360766743"
+          }
+        },
+        "ccb39db5-ad50-4cc7-b584-1c84d221d897": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31101.036367961326!2d77.53728976214121!3d12.99552987756768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d961d5c6be3%3A0x7ac09924861b1ffa!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879490914\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Basaveshwaranagar",
+            "review_text": "4.7 (1,088)",
+            "map_address": "<p>#338/A, 1st Cross Road,<br/>4th Block, Basaveshwaranagar<br/>Bangalore 560 079</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360785825\" target=\"_blank\" title=\"tel:+91-6360785825\">Call +91-6360785825</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.993566,77.538986,11z/data=!4m6!3m5!1s0x3bae3d961d5c6be3:0x7ac09924861b1ffa!8m2!3d12.9935658!4d77.5389855!16s%2Fg%2F11f54mwbtz?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.993566,77.538986,11z/data=!4m6!3m5!1s0x3bae3d961d5c6be3:0x7ac09924861b1ffa!8m2!3d12.9935658!4d77.5389855!16s%2Fg%2F11f54mwbtz?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360785825"
+          }
+        },
+        "9329edc6-939c-4cec-8295-1aa6f6af42b9": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.570575092041!2d77.56763994971563!3d12.999295217743832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1623aa0ee039%3A0xae667327f14adcb7!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879536646\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Malleshwaram",
+            "review_text": "4.5 (750)",
+            "map_address": "<p>#66, Above Sindoora Silks,<br/>8th Cross, Malleshwaram,<br/>Bangalore 560 055</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360775078\" target=\"_blank\" title=\"tel:+91-6360775078\">Call +91-6360775078</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.999314,77.569853,14z/data=!4m6!3m5!1s0x3bae1623aa0ee039:0xae667327f14adcb7!8m2!3d12.9993136!4d77.5698525!16s%2Fg%2F1tdsh6k7?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.999314,77.569853,14z/data=!4m6!3m5!1s0x3bae1623aa0ee039:0xae667327f14adcb7!8m2!3d12.9993136!4d77.5698525!16s%2Fg%2F1tdsh6k7?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360775078"
+          }
+        },
+        "ac0c2519-cd52-4462-8c24-2763111bcb72": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.95620133094!2d77.63909094971534!3d12.974653218278515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a60f21f62f%3A0x6277f1972747cee7!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879566317\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Indiranagar",
+            "review_text": "4.5 (788)",
+            "map_address": "<p>#59, 100 Feet Road,<br/>Opp. Amway, Indiranagar,<br/>Bangalore 560 038</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360766761\" target=\"_blank\" title=\"tel:+91-6360766761\">Call +91-6360766761</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.974648,77.641285,14z/data=!4m6!3m5!1s0x3bae16a60f21f62f:0x6277f1972747cee7!8m2!3d12.974648!4d77.641285!16s%2Fg%2F11gc9g38tb?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.974648,77.641285,14z/data=!4m6!3m5!1s0x3bae16a60f21f62f:0x6277f1972747cee7!8m2!3d12.974648!4d77.641285!16s%2Fg%2F11gc9g38tb?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360766761"
+          }
+        },
+        "1b965723-25ab-43ec-bc07-08cc2b88da34": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.003426973716!2d77.59901904972571!3d12.907500919730833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae151b9a9d196d%3A0x342a0b604d705b4f!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1525326763510\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Vega City Mall",
+            "review_text": "4.6 (934)",
+            "map_address": "<p>2nd  floor, Vega City Mall,<br/>Bannerghatta Main Road, JP Nagar<br/>3rd Phase, Bangalore 560 076</p><p></p>",
+            "store_phone": "<p><a href=\"tel:+91-6360783375\" target=\"_blank\" title=\"tel:+91-6360783375\">Call +91-6360783375</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.907496,77.601213,14z/data=!4m6!3m5!1s0x3bae151b9a9d196d:0x342a0b604d705b4f!8m2!3d12.9074957!4d77.6012131!16s%2Fg%2F11f4m4r__k?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.907496,77.601213,14z/data=!4m6!3m5!1s0x3bae151b9a9d196d:0x342a0b604d705b4f!8m2!3d12.9074957!4d77.6012131!16s%2Fg%2F11f4m4r__k?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360783375"
+          }
+        },
+        "ca641b23-04c6-4df9-a7c8-e4c9445b23dc": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15546.249299528048!2d77.5868041!3d13.0635078!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3ca4a30af24c9cdf!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1525765322436\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Sahakar Nagar",
+            "review_text": "4.6 (837)",
+            "map_address": "<p>849/2, A block, 60 Feet Rd<br/>1st Main Rd, Sahakar Nagar<br/>Bangalore 560 092</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360779237\" target=\"_blank\" title=\"tel:+91-6360779237\">Call +91-6360779237</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.9945082,77.5885316,11z/data=!4m6!3m5!1s0x3bae198e039349c1:0x3ca4a30af24c9cdf!8m2!3d13.0634117!4d77.5868145!16s%2Fg%2F11hdjc7dnf?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.9945082,77.5885316,11z/data=!4m6!3m5!1s0x3bae198e039349c1:0x3ca4a30af24c9cdf!8m2!3d13.0634117!4d77.5868145!16s%2Fg%2F11hdjc7dnf?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360779237"
+          }
+        },
+        "154af673-0759-427b-b15f-6d4d33f6ccc4": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62192.34940125167!2d77.5412357!3d13.0342813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae178c7ac9d741%3A0x3f7416c597d3235e!2sKushals+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1535730406817\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "New BEL Road",
+            "review_text": "4.5 (237)",
+            "map_address": "<p>24, New BEL Road,<br/>Mathikere<br/>Bangalore 560 094</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360787504\" target=\"_blank\" title=\"tel:+91-6360787504\">Call +91-6360787504</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushals+Fashion+Jewellery/@13.032537,77.56954,10z/data=!4m6!3m5!1s0x3bae178c7ac9d741:0x3f7416c597d3235e!8m2!3d13.0325373!4d77.5695402!16s%2Fg%2F11glx0w9gz?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushals+Fashion+Jewellery/@13.032537,77.56954,10z/data=!4m6!3m5!1s0x3bae178c7ac9d741:0x3f7416c597d3235e!8m2!3d13.0325373!4d77.5695402!16s%2Fg%2F11glx0w9gz?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360787504"
+          }
+        },
+        "120209e9-5ad5-41b0-9450-dcca84d7376a": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.075653403233!2d77.59290921482332!3d13.094391790775369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x41056f12f413cef3!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1539102994990\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "RMZ Galleria Mall",
+            "review_text": "4.5 (584)",
+            "map_address": "<p>First Floor, RMZ Galleria Mall,<br/>Ambedkar Colony, Yelahanka,<br/>Bangalore 560 064</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360775899\" target=\"_blank\" title=\"tel:+91-6360775899\">Call +91-6360775899</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.094408,77.594886,14z/data=!4m6!3m5!1s0x3bae193344dc7f7f:0x41056f12f413cef3!8m2!3d13.0944083!4d77.5948862!16s%2Fg%2F11gnq823wx?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.094408,77.594886,14z/data=!4m6!3m5!1s0x3bae193344dc7f7f:0x41056f12f413cef3!8m2!3d13.0944083!4d77.5948862!16s%2Fg%2F11gnq823wx?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360775899"
+          }
+        },
+        "6f6913b5-14cc-46b3-b770-4d0db307a296": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.027512707259!2d77.60768111482196!3d12.970091290856823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbcf2a2a4d685740a!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1541128728754\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Garuda Mall",
+            "review_text": "4.9 (265)",
+            "map_address": "<p>2nd Floor, Garuda Mall,<br/>Magrath Rd, Ashok Nagar,<br/>Bangalore 560 025</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360766726\" target=\"_blank\" title=\"tel:+91-6360766726\">Call +91-6360766726</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.970091,77.60987,14z/data=!4m6!3m5!1s0x3bae1735b26f9a6d:0xbcf2a2a4d685740a!8m2!3d12.9700913!4d77.6098698!16s%2Fg%2F11ff5jp8mt?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.970091,77.60987,14z/data=!4m6!3m5!1s0x3bae1735b26f9a6d:0xbcf2a2a4d685740a!8m2!3d12.9700913!4d77.6098698!16s%2Fg%2F11ff5jp8mt?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360766726"
+          }
+        },
+        "1a3b3785-1bc0-4356-9a43-915ca6fa42bc": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.726254824741!2d77.7260505144296!3d12.989352618003936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae110c7708b32f%3A0x97d2ff6bd431b336!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1551985409905\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Nexus Shantiniketan Mall",
+            "review_text": "4.7 (312)",
+            "map_address": "<p>2nd Floor, Nexus Shantiniketan Mall,<br/>Whitefield Main Road,<br/>Bangalore 560 067</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360782561\" target=\"_blank\" title=\"tel:+91-6360782561\">Call +91-6360782561</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.989076,77.727532,19z/data=!4m6!3m5!1s0x3bae110c7708b32f:0x97d2ff6bd431b336!8m2!3d12.9893474!4d77.7282392!16s%2Fg%2F11fk13w2k3?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.989076,77.727532,19z/data=!4m6!3m5!1s0x3bae110c7708b32f:0x97d2ff6bd431b336!8m2!3d12.9893474!4d77.7282392!16s%2Fg%2F11fk13w2k3?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360782561"
+          }
+        },
+        "916e77de-d3de-4912-a2fa-c309f5a69fdd": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.424802115164!2d77.56897611482172!3d12.944646990873576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x681ee10c803b1f0e!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1555845785654!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "DVG Road",
+            "review_text": "4.8 (982)",
+            "map_address": "<p>No. 6, Shambu Towers, D.V.G Road,<br/>Gandhi Bazaar,<br/>Bangalore 560 004</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360791698\" target=\"_blank\" title=\"tel:+91-6360791698\">Call +91-6360791698</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.944955,77.571763,18z/data=!4m6!3m5!1s0x3bae152afb38505f:0x681ee10c803b1f0e!8m2!3d12.944647!4d77.5711648!16s%2Fg%2F11h10t1mb3?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.944955,77.571763,18z/data=!4m6!3m5!1s0x3bae152afb38505f:0x681ee10c803b1f0e!8m2!3d12.944647!4d77.5711648!16s%2Fg%2F11h10t1mb3?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360791698"
+          }
+        },
+        "85b540b4-fca8-4e3a-a2ac-9696d37ae83a": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62221.55348017733!2d77.48554137910158!3d12.917547500000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f009d1f9833%3A0xc7587252a14217d7!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1573924179117!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "RR Nagar",
+            "review_text": "4.7 (773)",
+            "map_address": "<p>Jawaharlal Nehru Rd, RR Nagar,<br/>opp. Balakrishna Rangamandira<br/>Bangalore 560 098</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360777573\" target=\"_blank\" title=\"tel:+91-6360777573\">Call  +91-6360777573</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.91754,77.520615,13z/data=!4m6!3m5!1s0x3bae3f009d1f9833:0xc7587252a14217d7!8m2!3d12.9175399!4d77.5206145!16s%2Fg%2F11fph_k4z4?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.91754,77.520615,13z/data=!4m6!3m5!1s0x3bae3f009d1f9833:0xc7587252a14217d7!8m2!3d12.9175399!4d77.5206145!16s%2Fg%2F11fph_k4z4?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360777573"
+          }
+        },
+        "5f7db2db-c285-40c7-bab6-a86945ef910d": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124425.07843557464!2d77.48510966580459!3d12.953689394296482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f4e40c0750f%3A0xed1322932f878c94!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1628497504313!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Kathriguppe",
+            "review_text": "4.8 (759)",
+            "map_address": "<p>24 G, Opp. Big Bazaar,<br/>Kathriguppe Main Rd<br/>Bangalore 560 085</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360785821\" target=\"_blank\" title=\"tel:+91-6360785821\">Call +91-6360785821</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.926695,77.550529,12z/data=!4m6!3m5!1s0x3bae3f4e40c0750f:0xed1322932f878c94!8m2!3d12.9266945!4d77.550529!16s%2Fg%2F11rsfwfrqc?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.926695,77.550529,12z/data=!4m6!3m5!1s0x3bae3f4e40c0750f:0xed1322932f878c94!8m2!3d12.9266945!4d77.550529!16s%2Fg%2F11rsfwfrqc?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360785821"
+          }
+        },
+        "086b812b-6ec7-499b-babd-79ddc9d3ff85": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124401.43261030872!2d77.57884915921436!3d13.000942616002794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae174c4b1891f9%3A0x58db2d4f0d045c3d!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1628497992788!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Kammanahalli",
+            "review_text": "4.8 (492)",
+            "map_address": "<p>Surya Arcade, 416, CMR Main Rd<br/>HRBR Layout 2nd Block, Kammanahalli,<br/>Bangalore 560 043</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360771744\" target=\"_blank\" title=\"tel:+91-6360771744\">Call +91-6360771744</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.022335,77.63815,12z/data=!4m6!3m5!1s0x3bae174c4b1891f9:0x58db2d4f0d045c3d!8m2!3d13.0223347!4d77.6381502!16s%2Fg%2F11q8wzvw2b?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.022335,77.63815,12z/data=!4m6!3m5!1s0x3bae174c4b1891f9:0x58db2d4f0d045c3d!8m2!3d13.0223347!4d77.6381502!16s%2Fg%2F11q8wzvw2b?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360771744"
+          }
+        },
+        "1e989b4a-7340-4462-9efe-40ddcf082a1d": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4582668188104!2d77.58980417468862!3d13.070117312711467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1937887401b7%3A0xe3e643c387c8c2cc!2sKushals%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1700549624492!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Mall of Asia",
+            "review_text": "4.9 (21)",
+            "map_address": "<p>S 06, 239/240, Mall of Asia,<br/>Byatarayanapura, Yelahanka Taluk<br/>Bangalore 560 092</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867992852\" target=\"_blank\" title=\"tel:+91-8867992852\">Call +91-8867992852</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/sz6ewNEu4h6cmp7J7\" target=\"_blank\" title=\"https://maps.app.goo.gl/sz6ewNEu4h6cmp7J7\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867992852"
+          }
+        },
+        "location_RQxgXJ": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31113.632007062555!2d77.5627180611128!3d12.89460009445992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6bf16d927dd3%3A0xb0fe861b566395ad!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1705490332081!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Meenakshi Mall",
+            "review_text": "4.9(34)",
+            "map_address": "<p>F003, Royal Meenakshi Mall,<br/>Bannerghatta Rd, Hulimavu,<br/>Bangalore 560 076</p>",
+            "store_phone": "<p><a href=\"tel:+91-8792925176\" target=\"_blank\" title=\"tel:+91-8792925176\">Call +91-8792925176</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/C5J72LEVmz25xnPR7\" target=\"_blank\" title=\"https://maps.app.goo.gl/C5J72LEVmz25xnPR7\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8792925176"
+          }
+        }
+      },
+      "block_order": [
+        "template--15830090350748__8738a4d9-bd64-4eb3-8abe-7503febd8850-location-1",
+        "b86b4264-b774-447a-9213-d36cff0c4334",
+        "c1bf91c3-da25-42d5-bfa5-fa1b0f7ac6d1",
+        "c060b08e-a47d-4e6d-93cd-df17a815d8d3",
+        "9f3b6bc9-71cf-484d-bf33-37b6fa5279ff",
+        "7bfd2beb-ef05-4afe-a9ec-368042a16238",
+        "c97316ed-20e2-4263-b646-42ed3f4788ac",
+        "7d0bf77e-4825-4c43-85f6-e83412c708d3",
+        "1dc022b1-72ba-4c7d-a524-8e870c9d3dde",
+        "c281083d-a646-4450-b938-95160c091bf8",
+        "ccb39db5-ad50-4cc7-b584-1c84d221d897",
+        "9329edc6-939c-4cec-8295-1aa6f6af42b9",
+        "ac0c2519-cd52-4462-8c24-2763111bcb72",
+        "1b965723-25ab-43ec-bc07-08cc2b88da34",
+        "ca641b23-04c6-4df9-a7c8-e4c9445b23dc",
+        "154af673-0759-427b-b15f-6d4d33f6ccc4",
+        "120209e9-5ad5-41b0-9450-dcca84d7376a",
+        "6f6913b5-14cc-46b3-b770-4d0db307a296",
+        "1a3b3785-1bc0-4356-9a43-915ca6fa42bc",
+        "916e77de-d3de-4912-a2fa-c309f5a69fdd",
+        "85b540b4-fca8-4e3a-a2ac-9696d37ae83a",
+        "5f7db2db-c285-40c7-bab6-a86945ef910d",
+        "086b812b-6ec7-499b-babd-79ddc9d3ff85",
+        "1e989b4a-7340-4462-9efe-40ddcf082a1d",
+        "location_RQxgXJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Bangalore",
+        "counter_text": "Stores in Bangalore",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "2c056c3e-f3e0-4b55-8c2f-e1bb1015063b": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15830090350748__2c056c3e-f3e0-4b55-8c2f-e1bb1015063b-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475.56309902135314!2d78.4882273!3d17.5311373!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8567e36f0d4f%3A0x43f6c2f5d57c77ad!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1683783924952!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Kompally",
+            "review_text": "4.9 (279)",
+            "map_address": "<p>Shop 9, GF, Raichandani Mall,<br/>Ruby Block, Brundavan Colony,<br/>Hyderabad 500 014</p>",
+            "store_phone": "<p><a href=\"tel: +91-8147343220\" target=\"_blank\" title=\"tel: +91-8147343220\">Call +91-8147343220</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps?ll=17.530989,78.488222&z=18&t=m&hl=en&gl=IN&mapclient=embed&cid=4897316005916473261\" target=\"_blank\" title=\"https://www.google.com/maps?ll=17.530989,78.488222&z=18&t=m&hl=en&gl=IN&mapclient=embed&cid=4897316005916473261\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-8147343220"
+          }
+        },
+        "b6cf6f3c-0814-4e65-9af4-bed11e9a5844": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.467900609625!2d78.55337996977539!3d17.47803740000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b4e9c5becad%3A0x3182bd498ab0ff1a!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1683022184786!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "A.S. Rao Nagar",
+            "review_text": "4.9 (126)",
+            "map_address": "<p>267/P, 1-1-259/267/A-1-1-259,<br/>Dr. AS Rao Nagar Rd, Kapra,<br/>Hyderabad 500 062</p>",
+            "store_phone": "<p><a href=\"tel: +91-7899107711\" target=\"_blank\" title=\"tel: +91-7899107711\">Call +91-7899107711</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.478105,78.561943,12z/data=!4m6!3m5!1s0x3bcb9b4e9c5becad:0x3182bd498ab0ff1a!8m2!3d17.4781049!4d78.5619431!16s%2Fg%2F11kj_89c5p?hl=en&entry=ttu\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.478105,78.561943,12z/data=!4m6!3m5!1s0x3bcb9b4e9c5becad:0x3182bd498ab0ff1a!8m2!3d17.4781049!4d78.5619431!16s%2Fg%2F11kj_89c5p?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-7899107711"
+          }
+        },
+        "27c76364-b4fc-47fd-8d81-ae92f7ac7ec1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15232.27350607579!2d78.5439173!3d17.3604425!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xda52b9321396f0f6!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1677311043389!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Kothapet",
+            "review_text": "5.0 (349)",
+            "map_address": "<p>Pillar A1631, Shop 11, 8-99, 68/1,<br/>LB Nagar Service Rd, Kothapet,<br/>Hyderabad 500 035</p>",
+            "store_phone": "<p><a href=\"tel:+91-8147176918\" target=\"_blank\" title=\"tel:+91-8147176918\">Call +91-8147176918</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.360445,78.543918,15z/data=!4m6!3m5!1s0x3bcb9996b4b4e273:0xda52b9321396f0f6!8m2!3d17.3604452!4d78.5439176!16s%2Fg%2F11sjf_909_?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.360445,78.543918,15z/data=!4m6!3m5!1s0x3bcb9996b4b4e273:0xda52b9321396f0f6!8m2!3d17.3604452!4d78.5439176!16s%2Fg%2F11sjf_909_?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8147176918"
+          }
+        },
+        "16c99e31-9514-4f29-b7e0-cd4be1f21ecd": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21532.07584867983!2d78.48824184232699!3d17.442033968243408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9bf1525dbd63%3A0x34f82e05be0b14c6!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1671785874851!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Parklane",
+            "review_text": "4.9 (185)",
+            "map_address": "<p>115, SD Road, Parklane,<br/>Kalasiguda, Secunderabad,<br/>Hyderabad 500 003</p>",
+            "store_phone": "<p><a href=\"tel:+91-6366875512\" target=\"_blank\" title=\"tel:+91-6366875512\">Call +91-6366875512</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.441535,78.490011,14z/data=!4m6!3m5!1s0x3bcb9bf1525dbd63:0x34f82e05be0b14c6!8m2!3d17.441535!4d78.490011!16s%2Fg%2F11sd3s4g_5?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.441535,78.490011,14z/data=!4m6!3m5!1s0x3bcb9bf1525dbd63:0x34f82e05be0b14c6!8m2!3d17.441535!4d78.490011!16s%2Fg%2F11sd3s4g_5?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6366875512"
+          }
+        },
+        "c6520311-a83c-4073-81df-439826df3bf5": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6403.999138780322!2d78.42544088861989!3d17.371398181699714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31167e7ce3367f44!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1666354873744!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Attapur",
+            "review_text": "4.8 (182)",
+            "map_address": "<p>Pillar No: 120, No: 4-3, 146/1,<br/>Somi Reddy Nagar, Attapur,<br/>Hyderabad 500 048</p>",
+            "store_phone": "<p><a href=\"tel:+91-9731418733\" target=\"_blank\" title=\"tel:+91-9731418733\">Call +91-9731418733</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.371439,78.42961,16z/data=!4m6!3m5!1s0x3bcb97a240d1ea41:0x31167e7ce3367f44!8m2!3d17.3714386!4d78.4296097!16s%2Fg%2F11thsqmxf0?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.371439,78.42961,16z/data=!4m6!3m5!1s0x3bcb97a240d1ea41:0x31167e7ce3367f44!8m2!3d17.3714386!4d78.4296097!16s%2Fg%2F11thsqmxf0?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-9731418733"
+          }
+        },
+        "198c0827-6673-4649-87db-ec57012547fb": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3806.6237470873116!2d78.4551693!3d17.4298351!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3bcdb2fdd7bf536d!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1662966104126!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Punjagutta",
+            "review_text": "4.9 (327)",
+            "map_address": "<p>SBR Souk 5, 6-3-883,<br/>Greenlands Road, Punjagutta,<br/>Hyderabad 500 082</p>",
+            "store_phone": "<p><a href=\"tel:+91-6366285761 \" target=\"_blank\" title=\"tel:+91-6366285761 \">Call +91-6366285761</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.429669,78.455314,17z/data=!4m6!3m5!1s0x3bcb91ca78803a63:0x3bcdb2fdd7bf536d!8m2!3d17.429669!4d78.455314!16s%2Fg%2F11tbvbkyks?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.429669,78.455314,17z/data=!4m6!3m5!1s0x3bcb91ca78803a63:0x3bcdb2fdd7bf536d!8m2!3d17.429669!4d78.455314!16s%2Fg%2F11tbvbkyks?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6366285761"
+          }
+        },
+        "d830a02a-fad4-4b61-96c8-11b9ea20d14c": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15226.461907101755!2d78.39994004095442!3d17.430231592706512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e9c152babc50250!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1577897151510!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Jubilee Hills",
+            "review_text": "4.8 (386)",
+            "map_address": "<p>Plot 715/A, Opposite Croma,<br/>Road No. 36, Jubilee Hills,<br/>Hyderabad 500 034</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360792559\" target=\"_blank\" title=\"tel:+91-6360792559\">Call +91-6360792559</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.436364,78.401263,15z/data=!4m6!3m5!1s0x3bcb911527b69ea3:0x1e9c152babc50250!8m2!3d17.4363636!4d78.4012625!16s%2Fg%2F11j1dvgqwb?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.436364,78.401263,15z/data=!4m6!3m5!1s0x3bcb911527b69ea3:0x1e9c152babc50250!8m2!3d17.4363636!4d78.4012625!16s%2Fg%2F11j1dvgqwb?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360792559"
+          }
+        },
+        "05d7556b-9a70-467d-a8c2-871d0cb4c2cd": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60916.560894120455!2d78.4278288!3d17.3981025!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99101fbf6af5%3A0xc4b7b7f275d0ae91!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1555949791213!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Himayatnagar",
+            "review_text": "4.7 (245)",
+            "map_address": "<p>3-6-423/6, Liberty Road,<br/>HimayathNagar<br/>Hyderabad 500 029</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360785873\" target=\"_blank\" title=\"tel:+91-6360785873\">Call +91-6360785873</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.404498,78.481546,13z/data=!4m6!3m5!1s0x3bcb99101fbf6af5:0xc4b7b7f275d0ae91!8m2!3d17.4044982!4d78.4815457!16s%2Fg%2F11fk4jymh0?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.404498,78.481546,13z/data=!4m6!3m5!1s0x3bcb99101fbf6af5:0xc4b7b7f275d0ae91!8m2!3d17.4044982!4d78.4815457!16s%2Fg%2F11fk4jymh0?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360785873"
+          }
+        },
+        "7401aea0-8b71-4b1d-87b4-df64c5694ab5": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.488422406501!2d78.38667211487775!3d17.484182988020684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfa828ea0d87b26c1!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1581439977079!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Nexus Sujana Mall",
+            "review_text": "4.9 (730)",
+            "map_address": "<p>2nd Floor, Forum Sujana Mall<br/>Kukatpally,<br/>Hyderabad 500 085</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360792556\" target=\"_blank\" title=\"tel:+91-6360792556\">Call +91-6360792556</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.484183,78.388861,17z/data=!4m6!3m5!1s0x3bcb9153ca83d215:0xfa828ea0d87b26c1!8m2!3d17.484183!4d78.3888608!16s%2Fg%2F11j2jc95dm?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.484183,78.388861,17z/data=!4m6!3m5!1s0x3bcb9153ca83d215:0xfa828ea0d87b26c1!8m2!3d17.484183!4d78.3888608!16s%2Fg%2F11j2jc95dm?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360792556"
+          }
+        },
+        "8da382cb-5134-436b-a088-8b96edc27870": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0464386186245!2d78.36195021487735!3d17.457491288036557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb937128d9c27f%3A0xb5d2b55a49f0cb13!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1546624429745\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Sarath City Mall",
+            "review_text": "4.7 (486)",
+            "map_address": "<p>3F-128, Third Floor<br/>Sarath City Capital Mall, Kondapur<br/>Hyderabad 500 084</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360792563\" target=\"_blank\" title=\"tel:+91-6360792563\">Call +91-6360792563</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.457837,78.363827,17z/data=!4m6!3m5!1s0x3bcb937128d9c27f:0xb5d2b55a49f0cb13!8m2!3d17.4578368!4d78.3638267!16s%2Fg%2F11h2lkrqf1?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.457837,78.363827,17z/data=!4m6!3m5!1s0x3bcb937128d9c27f:0xb5d2b55a49f0cb13!8m2!3d17.4578368!4d78.3638267!16s%2Fg%2F11h2lkrqf1?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360792563"
+          }
+        },
+        "73aad85d-83c4-49b8-86fe-3a9a846e71b5": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6424377450167!2d78.44816424977905!3d17.42893900613578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915b71c76e69%3A0x8e31e0b6946e8830!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1525765481930\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Next Galleria Mall",
+            "review_text": "4.7 (769)",
+            "map_address": "<p>Unit L4-10&11, 3rd Floor,<br/>Next Galleria Mall, Punjagutta,<br/>Hyderabad 500 082</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360787524\" target=\"_blank\" title=\"tel:+91-6360787524\">Call +91-6360787524</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.428998,78.45035,17z/data=!4m6!3m5!1s0x3bcb915b71c76e69:0x8e31e0b6946e8830!8m2!3d17.4289979!4d78.4503503!16s%2Fg%2F11hdcpgj97?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.428998,78.45035,17z/data=!4m6!3m5!1s0x3bcb915b71c76e69:0x8e31e0b6946e8830!8m2!3d17.4289979!4d78.4503503!16s%2Fg%2F11hdcpgj97?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360787524"
+          }
+        },
+        "ff08b83f-53ba-4573-a1c3-97fc5ef4f0b7": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.245938149968!2d78.55287575038874!3d17.399981106963274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e2636f9eab%3A0xf18293c7ce04e669!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1577897189675!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "DSL Virtue Mall",
+            "review_text": "4.7 (229)",
+            "map_address": "<p>2nd Floor, DSL Virtue Mall<br/>Near Cricket Stadium, Uppal<br/>Hyderabad 500 039</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360790077\" target=\"_blank\" title=\"tel:+91-6360790077\">Call +91-6360790077</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.399976,78.55507,17z/data=!4m6!3m5!1s0x3bcb99e2636f9eab:0xf18293c7ce04e669!8m2!3d17.399976!4d78.5550698!16s%2Fg%2F11fr0jhx24?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.399976,78.55507,17z/data=!4m6!3m5!1s0x3bcb99e2636f9eab:0xf18293c7ce04e669!8m2!3d17.399976!4d78.5550698!16s%2Fg%2F11fr0jhx24?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360790077"
+          }
+        },
+        "b61ffafd-d552-48db-b8bb-8b47d19723dd": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.5862334539506!2d78.56484907776208!3d17.33550176188797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba1897cf728a7%3A0x68f33d8b64c8e6a3!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1694176454528!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Vanasthalipuram",
+            "review_text": "4.7 (33)",
+            "map_address": "<p>Plot No. 11, Vanasthalipuram Rd,<br/>AK Residency,<br/>Hyderabad 500 070</p>",
+            "store_phone": "<p><a href=\"tel: +91-8867992854\" target=\"_blank\" title=\"tel: +91-8867992854\">Call +91-8867992854</a></p>",
+            "store_map": "<p><a href=\"https://goo.gl/maps/ewDvHEUZcvLdU5Xr9\" title=\"https://goo.gl/maps/ewDvHEUZcvLdU5Xr9\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-8867992854"
+          }
+        }
+      },
+      "block_order": [
+        "template--15830090350748__2c056c3e-f3e0-4b55-8c2f-e1bb1015063b-location-1",
+        "b6cf6f3c-0814-4e65-9af4-bed11e9a5844",
+        "27c76364-b4fc-47fd-8d81-ae92f7ac7ec1",
+        "16c99e31-9514-4f29-b7e0-cd4be1f21ecd",
+        "c6520311-a83c-4073-81df-439826df3bf5",
+        "198c0827-6673-4649-87db-ec57012547fb",
+        "d830a02a-fad4-4b61-96c8-11b9ea20d14c",
+        "05d7556b-9a70-467d-a8c2-871d0cb4c2cd",
+        "7401aea0-8b71-4b1d-87b4-df64c5694ab5",
+        "8da382cb-5134-436b-a088-8b96edc27870",
+        "73aad85d-83c4-49b8-86fe-3a9a846e71b5",
+        "ff08b83f-53ba-4573-a1c3-97fc5ef4f0b7",
+        "b61ffafd-d552-48db-b8bb-8b47d19723dd"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Hyderabad",
+        "counter_text": "Stores in Hyderabad",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "5217d647-0112-46a6-bd6b-da6884241636": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832634327196__5217d647-0112-46a6-bd6b-da6884241636-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6849122979206!2d80.21480924971553!3d12.991993717902393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526762497d4041%3A0x698db4f674269275!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879617770\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Phoenix MarketCity",
+            "review_text": "4.7 (1083)",
+            "map_address": "<p>2nd Floor, Phoenix Marketcity<br/>Velacheri,<br/>Chennai 600 042</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360775822\" target=\"_blank\" title=\"tel:+91-6360775822\">Call +91-6360775822</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.991837,80.216636,17z/data=!4m6!3m5!1s0x3a526762497d4041:0x698db4f674269275!8m2!3d12.9918365!4d80.2166361!16s%2Fg%2F124t4ws4j?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.991837,80.216636,17z/data=!4m6!3m5!1s0x3a526762497d4041:0x698db4f674269275!8m2!3d12.9918365!4d80.2166361!16s%2Fg%2F124t4ws4j?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360775822"
+          }
+        },
+        "6b30642f-8661-4703-afe4-8e9acca3a12d": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.641159714056!2d80.26233094971616!3d13.058498216455233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52663d5ab3c205%3A0xc674f5b23728952a!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879661558\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Express Avenue",
+            "review_text": "4.7 (580)",
+            "map_address": "<p>S-243, 2nd Floor, Express Avenue,<br/>Whites Road, Royapettah,<br/>Chennai 600 014</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360785060\" target=\"_blank\" title=\"tel:+91-6360785060\">Call +91-6360785060</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.058776,80.264588,17z/data=!4m6!3m5!1s0x3a52663d5ab3c205:0xc674f5b23728952a!8m2!3d13.0587757!4d80.2645879!16s%2Fg%2F124t251ky?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.058776,80.264588,17z/data=!4m6!3m5!1s0x3a52663d5ab3c205:0xc674f5b23728952a!8m2!3d13.0587757!4d80.2645879!16s%2Fg%2F124t251ky?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360785060"
+          }
+        },
+        "edeafeae-bc7c-433a-a9ea-6b3657364468": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.495388049779!2d80.24959034971562!3d13.004094417639568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526792f83fe5f7%3A0x7c884c4648ae5dac!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879692760\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Adyar",
+            "review_text": "4.7 (607)",
+            "map_address": "<p>Old 2A, New 9, 3rd Cross St,<br/>Kasturba Nagar, Adyar,<br/>Chennai 600 020</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360784225\" target=\"_blank\" title=\"tel:+91-6360784225\">Call +91-6360784225</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.004089,80.251784,17z/data=!4m6!3m5!1s0x3a526792f83fe5f7:0x7c884c4648ae5dac!8m2!3d13.0040892!4d80.2517844!16s%2Fg%2F11fz9wsp6d?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.004089,80.251784,17z/data=!4m6!3m5!1s0x3a526792f83fe5f7:0x7c884c4648ae5dac!8m2!3d13.0040892!4d80.2517844!16s%2Fg%2F11fz9wsp6d?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360784225"
+          }
+        },
+        "1187f991-a08f-48fd-a4ad-f3a720c31fe2": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2918112151724!2d80.19488520007816!3d13.08068334073915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52656fbfb04d3f%3A0xe4e98841e7fa8dce!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1529501173056\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "VR Chennai",
+            "review_text": "4.7 (521)",
+            "map_address": "<p>S-35, 2nd Floor, VR Chennai,<br/>Jawaharlal Nehru road, Anna Nagar,<br/>Chennai 600 040</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360768409\" target=\"_blank\" title=\"tel:+91-6360768409\">Call +91-6360768409</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.080718,80.196491,17z/data=!4m6!3m5!1s0x3a52656fbfb04d3f:0xe4e98841e7fa8dce!8m2!3d13.080718!4d80.1964911!16s%2Fg%2F11f6dj8xzj?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.080718,80.196491,17z/data=!4m6!3m5!1s0x3a52656fbfb04d3f:0xe4e98841e7fa8dce!8m2!3d13.080718!4d80.1964911!16s%2Fg%2F11f6dj8xzj?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360768409"
+          }
+        },
+        "566a754e-1476-4fb1-b121-644140737e6f": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62191.848884496634!2d80.19556318494901!3d13.036272998153308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267913e467481%3A0xd3df31fcacdf434!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1546624535948\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "T-Nagar",
+            "review_text": "4.8 (678)",
+            "map_address": "<p>No. 110, Ranga Complex,<br/>Pondy Bazaar, T-Nagar,<br/>Chennai 600 017</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360775831\" target=\"_blank\" title=\"tel:+91-6360775831\">Call +91-6360775831</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.041248,80.234994,13z/data=!4m6!3m5!1s0x3a5267913e467481:0xd3df31fcacdf434!8m2!3d13.0412479!4d80.2349943!16s%2Fg%2F11h2ll25gh?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.041248,80.234994,13z/data=!4m6!3m5!1s0x3a5267913e467481:0xd3df31fcacdf434!8m2!3d13.0412479!4d80.2349943!16s%2Fg%2F11h2ll25gh?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360775831"
+          }
+        },
+        "d32e8c8b-76f4-4194-b055-e8488d725b0a": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1092531245517!2d80.22712041482058!3d12.83621609094477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0a93647753cac92!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1555845798782!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Marina Mall, OMR",
+            "review_text": "4.8 (511)",
+            "map_address": "<p>1st Floor, The Marina Mall,<br/>Old Mahabalipuram Road, Egattur<br/>Chennai 603 103</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360783991\" target=\"_blank\" title=\"tel:+91-6360783991\">Call +91-6360783991</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.836216,80.229309,17z/data=!4m6!3m5!1s0x3a525b5e7fb425d7:0xa0a93647753cac92!8m2!3d12.8362161!4d80.2293091!16s%2Fg%2F11h10st68f?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.836216,80.229309,17z/data=!4m6!3m5!1s0x3a525b5e7fb425d7:0xa0a93647753cac92!8m2!3d12.8362161!4d80.2293091!16s%2Fg%2F11h10st68f?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360783991"
+          }
+        },
+        "ad57f74f-3296-4a55-9847-eb23d799630e": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7683484267714!2d80.20694437507784!3d13.05041198727226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267302bdf2ab7%3A0xe4c9f94aff35529e!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1704278255254!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Nexus Vijaya Mall",
+            "review_text": "New Store",
+            "map_address": "<p>Shop No. 2F-225, 183,<br/>Nexus Vijaya Mall, Arcot Rd, Vadapalani,<br/>Chennai 600 026</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867685046\" target=\"_blank\" title=\"tel:+91-8867685046\">Call +91-8867685046</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/bQ2JXbhVf7enhErd8\" target=\"_blank\" title=\"https://maps.app.goo.gl/bQ2JXbhVf7enhErd8\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867685046"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832634327196__5217d647-0112-46a6-bd6b-da6884241636-location-1",
+        "6b30642f-8661-4703-afe4-8e9acca3a12d",
+        "edeafeae-bc7c-433a-a9ea-6b3657364468",
+        "1187f991-a08f-48fd-a4ad-f3a720c31fe2",
+        "566a754e-1476-4fb1-b121-644140737e6f",
+        "d32e8c8b-76f4-4194-b055-e8488d725b0a",
+        "ad57f74f-3296-4a55-9847-eb23d799630e"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Chennai",
+        "counter_text": "Stores in Chennai",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "d0ad24df-f800-4546-a3f1-c34067ebc203": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832634327196__d0ad24df-f800-4546-a3f1-c34067ebc203-location-1": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/Phoenix-Indore_d10e752a-ef65-43e7-80be-ee15975c0add.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14718.028691799464!2d75.9365121!3d22.7465521!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962e330d80fe91f%3A0x255643912c0641c3!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1683783951531!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Phoenix Citadel Mall",
+            "review_text": "4.7 (85)",
+            "map_address": "<p>F57, Phoenix Citadel Mall,<br/>MR 10 Road Junction,<br/>Indore 452 016</p>",
+            "store_phone": "<p><a href=\"tel:+91-8147729034\" target=\"_blank\" title=\"tel:+91-8147729034\">Call +91-7065937576</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@22.746258,75.935557,15z/data=!4m6!3m5!1s0x3962e330d80fe91f:0x255643912c0641c3!8m2!3d22.7462582!4d75.9355571!16s%2Fg%2F11t_t7rtpb?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@22.746258,75.935557,15z/data=!4m6!3m5!1s0x3962e330d80fe91f:0x255643912c0641c3!8m2!3d22.7462582!4d75.9355571!16s%2Fg%2F11t_t7rtpb?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7065937576"
+          }
+        },
+        "11c328c1-38b0-4f4d-ac97-d3f791292274": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/IMG_20230810_155349_7edc48c5-c530-4db5-bafc-7b20b2aabbef.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d235500.79944603503!2d75.8053568!3d22.7393897!3m2!1i1024!2i768!4f13.1!2m1!1sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1693311204577!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+            "location_name": "Sapna Sangeetha",
+            "review_text": "4.9 (50)",
+            "map_address": "<p>Shop No. 5-6, Vatsalya Chamber,<br/>Sapna Sangeetha Road, Snehnagar,<br/>Indore 452 003</p>",
+            "store_phone": "<p><a href=\"tel:+91-7065937622\" title=\"tel:+91-7065937622\">Call:+91-7065937622</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/JoAQbqWc3nD2LD6u6\" title=\"https://maps.app.goo.gl/JoAQbqWc3nD2LD6u6\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7065937622"
+          }
+        },
+        "802e5288-3a52-462d-91be-2f732db9158d": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/Orbit_mall-Indore_fa86a4b8-b78d-4286-827a-957b5bf6e3dd.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.3685847984552!2d75.84827857489329!3d22.6773189291249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd68ae1e6cdb%3A0x989c4e84caf4b82a!2sOrbit%20mall!5e0!3m2!1sen!2sin!4v1695898138560!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "C21 Orbit Mall",
+            "review_text": "New Store",
+            "map_address": "<p>SF-21, 263, <br/>C21 Orbit Mall, AB Rd,<br/>Indore 452 010</p>",
+            "store_phone": "<p><a href=\"tel:+91-7065937710\" target=\"_blank\" title=\"tel:+91-7065937710\">Call +91-7065937710</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/No9av5GW359AugiJ9\" target=\"_blank\" title=\"https://maps.app.goo.gl/No9av5GW359AugiJ9\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7065937710"
+          }
+        },
+        "6645241d-0a2c-4c75-a68d-4a1fe355cfba": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14722.65232385762!2d75.9152996!3d22.7035829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962e3c5cce5dcc1%3A0x9770ae9ce2cb3293!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1704194110789!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Scheme 140",
+            "review_text": "New Store",
+            "map_address": "<p>Showroom-6, Sahil Elite, Rcm-08,<br/>Sector B, Scheme No 140, <br/>Indore 452 016</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867906238\" title=\"tel:+91-8867906238\">Call +91-8867906238</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/qndDygz6UT6k7GXbA\" target=\"_blank\" title=\"https://maps.app.goo.gl/qndDygz6UT6k7GXbA\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867906238"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832634327196__d0ad24df-f800-4546-a3f1-c34067ebc203-location-1",
+        "11c328c1-38b0-4f4d-ac97-d3f791292274",
+        "802e5288-3a52-462d-91be-2f732db9158d",
+        "6645241d-0a2c-4c75-a68d-4a1fe355cfba"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Indore",
+        "counter_text": "Stores in Indore",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "66c01b46-56cd-4de8-9e46-e0c493938240": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832634327196__66c01b46-56cd-4de8-9e46-e0c493938240-location-1": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/Viman_nagar-Pune.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15129.045267763335!2d73.9166943!3d18.562254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c191f450fe4d%3A0x7299358b0521085b!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1681361386988!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Phoenix Marketcity",
+            "review_text": "4.8 (78)",
+            "map_address": "<p>F-52, 1st Floor,<br/>Viman Nagar Raod,<br/>Pune 411 014</p>",
+            "store_phone": "<p><a href=\"tel:+91-706567314\" target=\"_blank\" title=\"tel:+91-7065674053\">Call +91-7065674053</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@18.561616,73.916916,15z/data=!4m6!3m5!1s0x3bc2c191f450fe4d:0x7299358b0521085b!8m2!3d18.5616156!4d73.9169157!16s%2Fg%2F11kjclqmgl?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@18.561616,73.916916,15z/data=!4m6!3m5!1s0x3bc2c191f450fe4d:0x7299358b0521085b!8m2!3d18.5616156!4d73.9169157!16s%2Fg%2F11kjclqmgl?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7065674053"
+          }
+        },
+        "5021dc9d-6727-4da6-99e9-93769244a4f4": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/Pimpri_-_pune_b3604d20-8c35-402d-8610-8119ca0ccaad.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.855780381386!2d73.8045454!3d18.6319318!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4f6c3541f2d399a!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1673327297417!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Pimpri-Chinchwad",
+            "review_text": "4.8 (156)",
+            "map_address": "<p>Survey No 35, Gera Imperium Oasis,<br/>Morewadi, Pimpri Colony,<br/>Pune 411 018</p>",
+            "store_phone": "<p><a href=\"tel:+91-6366875510\" target=\"_blank\" title=\"tel:+91-6366875510\">Call +91-7065673914</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@18.631098,73.802053,15z/data=!4m6!3m5!1s0x3bc2b99fc81c8a97:0xb4f6c3541f2d399a!8m2!3d18.6310975!4d73.8020534!16s%2Fg%2F11sdynw7sc?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@18.631098,73.802053,15z/data=!4m6!3m5!1s0x3bc2b99fc81c8a97:0xb4f6c3541f2d399a!8m2!3d18.6310975!4d73.8020534!16s%2Fg%2F11sdynw7sc?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6366875510"
+          }
+        },
+        "eb5abcf2-90a7-4ddf-aa43-176cd21a274b": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/pune_Sapna_Sangeetha_Phoenix_Wakad_22432d9a-6476-484f-8eb0-61b5975efe55.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932346.8784955693!2d73.02400234915719!3d15.741482009470271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90de4450943%3A0x1e23af80b7acf79a!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1700550373117!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Mall of Millenium",
+            "review_text": "New Store",
+            "map_address": "<p>S 03, Mall of Millenium, Pune- Bangalore Highway<br/>Shankar Kalat Nagar, Wakad,<br/>Pune 411 057<br/></p>",
+            "store_phone": "<p><a href=\"tel:+91-7065674178\" target=\"_blank\" title=\"tel:+91-7065674178\">Call +91-7065674178</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/xh7be6eZQX1X4PmT6\" target=\"_blank\" title=\"https://maps.app.goo.gl/xh7be6eZQX1X4PmT6\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7899103344"
+          }
+        },
+        "location_VhLnzk": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932965.1347914934!2d73.08905607680909!3d15.709491371078892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1323b2247af%3A0xc914f8bf3d8ed4ca!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1706597595906!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Koregaon Park",
+            "review_text": "New Store",
+            "map_address": "<p>7, N Main Rd, opposite Lane<br/>Number 5, Liberty Phase 2,<br/>Kavadewadi, Koregaon Park,<br/>Pune 411 001</p>",
+            "store_phone": "<p><a href=\"tel:+91-7204586350\" target=\"_blank\" title=\"tel:+91-7204586350\">Call +91-7204586350</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/JVoYPfGNwpdqn3d36\" target=\"_blank\" title=\"https://maps.app.goo.gl/JVoYPfGNwpdqn3d36\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7204586350"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832634327196__66c01b46-56cd-4de8-9e46-e0c493938240-location-1",
+        "5021dc9d-6727-4da6-99e9-93769244a4f4",
+        "eb5abcf2-90a7-4ddf-aa43-176cd21a274b",
+        "location_VhLnzk"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Pune",
+        "counter_text": "Stores in Pune",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "f33ba064-8a87-441e-b507-428943c6ea6f": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832634327196__f33ba064-8a87-441e-b507-428943c6ea6f-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.572874364716!2d76.28350157417967!3d9.969449573561388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08732b25a78275%3A0x28fee60d22f976ad!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1689850290861!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "MG Road",
+            "review_text": "5.0 (22)",
+            "map_address": "<p>718, Jewel Jn, 62-3623,<br/>Mahatma Gandhi Rd, Ernakulam<br/>Kochi 682 011</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867992851\" target=\"_blank\" title=\"tel:+91-8867992851\">Call +91-8867992851</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@9.969444,76.286077,17z/data=!4m6!3m5!1s0x3b08732b25a78275:0x28fee60d22f976ad!8m2!3d9.9694443!4d76.2860765!16s%2Fg%2F11v0xt91cm?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@9.969444,76.286077,17z/data=!4m6!3m5!1s0x3b08732b25a78275:0x28fee60d22f976ad!8m2!3d9.9694443!4d76.2860765!16s%2Fg%2F11v0xt91cm?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867992851"
+          }
+        },
+        "46e8c3cb-2628-4ff4-86e0-f2dd26406de4": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.883721308634!2d76.30616794969129!3d10.026453275295687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080db0ffffffff%3A0xd7e1c3156364ddf8!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879979430\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Lulu Mall",
+            "review_text": "4.7 (1,123)",
+            "map_address": "<p>2nd Floor, LULU Mall,<br/>Edapally Junction,<br/>Kochi 682 024</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360767623\" title=\"tel:+91-6360767623\">Call +91-6360767623</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@10.026448,76.308362,17z/data=!4m6!3m5!1s0x3b080db0ffffffff:0xd7e1c3156364ddf8!8m2!3d10.026448!4d76.308362!16s%2Fg%2F12hldycjy?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@10.026448,76.308362,17z/data=!4m6!3m5!1s0x3b080db0ffffffff:0xd7e1c3156364ddf8!8m2!3d10.026448!4d76.308362!16s%2Fg%2F12hldycjy?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360767623"
+          }
+        },
+        "6a6135da-4f6c-4950-a2e7-57b5c34f151f": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.877689111876!2d76.31517517465001!3d9.944133473994297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873d997c4c9b5%3A0x1adc8f73e23c6aa8!2sForum%20Kochi!5e0!3m2!1sen!2sin!4v1704193602974!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Forum Mall",
+            "review_text": "New Store",
+            "map_address": "<p>2nd Floor, Forum Mall, Vyttila, <br/>Aroor Bypass, Maradu, <br/>Kochi 682 304</p>",
+            "store_phone": "<p><a href=\"tel:+91-6366792944\" title=\"tel:+91-6366792944\">Call +91-6366792944</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/4asTBgAija5BuLrw8\" target=\"_blank\" title=\"https://maps.app.goo.gl/4asTBgAija5BuLrw8\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6366792944"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832634327196__f33ba064-8a87-441e-b507-428943c6ea6f-location-1",
+        "46e8c3cb-2628-4ff4-86e0-f2dd26406de4",
+        "6a6135da-4f6c-4950-a2e7-57b5c34f151f"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Kochi",
+        "counter_text": "Stores in kochi",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "be781806-50de-4090-b410-58004c37bea6": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832634327196__be781806-50de-4090-b410-58004c37bea6-location-1": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/Viman_nagar-Pune.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.0995536112623!2d76.64835594970913!3d12.309082232357792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf700dc8f2405d%3A0x8f42a04060d587ef!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879827210\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "URS Road",
+            "review_text": "4.7 (2,400)",
+            "map_address": "<p>#17, URS Road,<br/>Subbarayanakere, Shivarampet,<br/>Mysore 570 001</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360771790\" target=\"_blank\" title=\"tel:+91-6360771790\">Call +91-6360771790</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.309148,76.650643,17z/data=!4m6!3m5!1s0x3baf700dc8f2405d:0x8f42a04060d587ef!8m2!3d12.309148!4d76.6506431!16s%2Fg%2F11c0xp5bhx?hl=en-US&entry=ttu\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.309148,76.650643,17z/data=!4m6!3m5!1s0x3baf700dc8f2405d:0x8f42a04060d587ef!8m2!3d12.309148!4d76.6506431!16s%2Fg%2F11c0xp5bhx?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360771790"
+          }
+        },
+        "dde8e7e4-979f-4fb7-88d7-a18fe0512df9": {
+          "type": "location",
+          "settings": {
+            "Store_image": "shopify://shop_images/Pimpri_-_pune_b3604d20-8c35-402d-8610-8119ca0ccaad.jpg",
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7796.369188473372!2d76.65323689278294!3d12.30335244747585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf70220169b93b%3A0x9f3d63d14ff39f0!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513879884407\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Mall of Mysore",
+            "review_text": "4.8 (876)",
+            "map_address": "<p>SF-12, Second Floor,<br/>Mall of Mysore, Indranagar, M.G.Road,<br/>Mysore 570 010</p><p></p>",
+            "store_phone": "<p><a href=\"tel:+91-6360771803\" target=\"_blank\" title=\"tel:+91-6360771803\">Call +91-6360771803</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.297986,76.665297,16z/data=!4m6!3m5!1s0x3baf70220169b93b:0x9f3d63d14ff39f0!8m2!3d12.2979863!4d76.6652972!16s%2Fg%2F1pt_j8yb_?hl=en-US&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.297986,76.665297,16z/data=!4m6!3m5!1s0x3baf70220169b93b:0x9f3d63d14ff39f0!8m2!3d12.2979863!4d76.6652972!16s%2Fg%2F1pt_j8yb_?hl=en-US&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360771803"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832634327196__be781806-50de-4090-b410-58004c37bea6-location-1",
+        "dde8e7e4-979f-4fb7-88d7-a18fe0512df9"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Mysore",
+        "counter_text": "Stores in Mysore",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "87b9b1ec-223c-454d-90bb-a8dbd66d4959": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832634327196__87b9b1ec-223c-454d-90bb-a8dbd66d4959-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15528.511139562315!2d74.7479611!3d13.3423263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbbdb9663bb1d%3A0x4b8980178c4adc31!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1689850229032!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Thenkepete",
+            "review_text": "5.0 (48)",
+            "map_address": "<p>G05, Govind Ballabh Pant Rd,<br/>Thenkpete, Maruthi Veethika,<br/>Udupi 576 101</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867906241\" target=\"_blank\" title=\"tel:+91-8867906241\">Call +91-8867906241</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.342326,74.747961,15z/data=!4m6!3m5!1s0x3bbcbbdb9663bb1d:0x4b8980178c4adc31!8m2!3d13.3423263!4d74.7479611!16s%2Fg%2F11kqdwkrq3?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@13.342326,74.747961,15z/data=!4m6!3m5!1s0x3bbcbbdb9663bb1d:0x4b8980178c4adc31!8m2!3d13.3423263!4d74.7479611!16s%2Fg%2F11kqdwkrq3?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867906241"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832634327196__87b9b1ec-223c-454d-90bb-a8dbd66d4959-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Udupi",
+        "counter_text": "Stores in Udupi",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "5e9a5b9f-f902-442b-8c62-2712e89e6830": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__5e9a5b9f-f902-442b-8c62-2712e89e6830-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14323.388267416647!2d91.7639651!3d26.1691097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59be32fbf9ab%3A0xfdcfc4ec1091c4c9!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1715155592315!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "GS Road - Guwahati",
+            "review_text": "New Store",
+            "map_address": "<p>Ground Floor, Astha Plaza,<br/>Opposite SB Deorah College,<br/>GS Rd, Ulubari, Guwahati, <br/>Assam 781 007</p>",
+            "store_phone": "<p><a href=\"tel:+91-7204016940\" target=\"_blank\" title=\"tel:+91-7204016940\">Call +91-7204016940</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/cBqH1PJ4rXcoUMqW8\" target=\"_blank\" title=\"https://maps.app.goo.gl/cBqH1PJ4rXcoUMqW8\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7204016940"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__5e9a5b9f-f902-442b-8c62-2712e89e6830-location-1"
+      ],
+      "settings": {
+        "heading": "Guwahati",
+        "counter_text": "Stores in Guwahati",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "fecd7701-f0ee-4962-b366-4cd0736ad111": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__fecd7701-f0ee-4962-b366-4cd0736ad111-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998340.2030314994!2d75.91687403898452!3d11.973933221563174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8591c3641f1a9%3A0x4c367973b2bf1d01!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1712309880970!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "RS Puram",
+            "review_text": "4.7 (1,068)",
+            "map_address": "<p>No 160, TV Samy Road (West),<br/>Opp. Cafe Coffee Day, <br/>RS Puram, Coimbatore, <br/>Tamil Nadu 641 002</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360768411\" target=\"_blank\" title=\"tel:+91-6360768411\">Call +91-6360768411</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/VgxBU1MdgGsGX2tJ6\" target=\"_blank\" title=\"https://maps.app.goo.gl/VgxBU1MdgGsGX2tJ6\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360768411"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__fecd7701-f0ee-4962-b366-4cd0736ad111-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Coimbatore",
+        "counter_text": "Stores in Coimbatore",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "d034cd52-6949-4b67-a8a2-d6c2653169ae": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__d034cd52-6949-4b67-a8a2-d6c2653169ae-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.122470564338!2d76.92381271478277!3d8.48747139389765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb9c9d181585%3A0x685b6a01c5c68365!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1628862170487!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Mall of Travancore",
+            "review_text": "4.7 (367)",
+            "map_address": "<p>FF-44, 1st Floor,<br/>Mall of Travancore, Chakkai,<br/>Trivandrum 695 024</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360772629\" target=\"_blank\" title=\"tel:+91-6360772629\">Call +91-6360772629</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@8.487471,76.92601,17z/data=!4m6!3m5!1s0x3b05bb9c9d181585:0x685b6a01c5c68365!8m2!3d8.4874715!4d76.92601!16s%2Fg%2F11g0_gpk69?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@8.487471,76.92601,17z/data=!4m6!3m5!1s0x3b05bb9c9d181585:0x685b6a01c5c68365!8m2!3d8.4874715!4d76.92601!16s%2Fg%2F11g0_gpk69?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360772629"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__d034cd52-6949-4b67-a8a2-d6c2653169ae-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Trivandrum",
+        "counter_text": "Stores in Trivandrum",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "6287fa66-5115-46e7-8bab-8a99626e68b6": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__6287fa66-5115-46e7-8bab-8a99626e68b6-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.560910856212!2d72.5295399498629!3d23.03988892138988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84b738f54663%3A0x5f28f47d3aa47641!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1513880003388\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "AhmedabadOne Mall",
+            "review_text": "4.7 (436)",
+            "map_address": "<p>S-27, 2nd Floor,<br/>AhmedabadOne Mall, Vastrapura,<br/>Ahmedabad 380 054</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360782473\" target=\"_blank\" title=\"tel:+91-7065937059\">Call +91-7065937059</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@23.039884,72.531734,17z/data=!4m6!3m5!1s0x395e84b738f54663:0x5f28f47d3aa47641!8m2!3d23.039884!4d72.531734!16s%2Fg%2F1yfj43p65?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@23.039884,72.531734,17z/data=!4m6!3m5!1s0x395e84b738f54663:0x5f28f47d3aa47641!8m2!3d23.039884!4d72.531734!16s%2Fg%2F1yfj43p65?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-7065937059"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__6287fa66-5115-46e7-8bab-8a99626e68b6-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Ahmedabad",
+        "counter_text": "Stores in Ahmedabad",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "6be0bbae-0be2-4bc1-aafb-f86195c1fb18": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__6be0bbae-0be2-4bc1-aafb-f86195c1fb18-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5651066105343!2d74.84073191482092!3d12.871341890921702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b2cb69d4c6f%3A0x3217548023ae45d8!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1543593801940\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "City Centre Mall",
+            "review_text": "4.9 (780)",
+            "map_address": "<p>2nd floor, City Centre Mall,<br/>KS Rao Road, Hampankatta,<br/>Mangalore 575 001</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360768443\" target=\"_blank\" title=\"tel:+91-6360768443\">Call +91-6360768443</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.871342,74.842921,17z/data=!4m6!3m5!1s0x3ba35b2cb69d4c6f:0x3217548023ae45d8!8m2!3d12.8713419!4d74.8429206!16s%2Fg%2F11h1_0w8m5?hl=en-GB&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@12.871342,74.842921,17z/data=!4m6!3m5!1s0x3ba35b2cb69d4c6f:0x3217548023ae45d8!8m2!3d12.8713419!4d74.8429206!16s%2Fg%2F11h1_0w8m5?hl=en-GB&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360768443"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__6be0bbae-0be2-4bc1-aafb-f86195c1fb18-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Mangalore",
+        "counter_text": "Stores in Mangalore",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "d3eb6f8f-22d6-4abb-be23-83da7c3e2664": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__d3eb6f8f-22d6-4abb-be23-83da7c3e2664-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30603.47574171061!2d80.62081612427204!3d16.504149471253086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb594f3cf5bb%3A0xf1443435925af890!2sKushal's+Fashion+Jewellery!5e0!3m2!1sen!2sin!4v1560697588526!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Gayathrinagar",
+            "review_text": "4.7 (1,103)",
+            "map_address": "<p>Imperial VSN, 59-13-34/1A,<br/>Gayathrinagar Main Road,<br/>Vijaywada 520 008</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360781763\" target=\"_blank\" title=\"tel:+91-6360781763\">Call +91-6360781763</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@16.501303,80.656355,14z/data=!4m6!3m5!1s0x3a35fb594f3cf5bb:0xf1443435925af890!8m2!3d16.5013031!4d80.6563546!16s%2Fg%2F11flk9kq8q?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@16.501303,80.656355,14z/data=!4m6!3m5!1s0x3a35fb594f3cf5bb:0xf1443435925af890!8m2!3d16.5013031!4d80.6563546!16s%2Fg%2F11flk9kq8q?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360781763"
+          }
+        },
+        "location_deWbL8": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951977.861791834!2d76.4607861960165!3d14.692597166148875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fbf8fe9d20d1%3A0xeb391f9f0444d65d!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1712838261090!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "MG Road",
+            "review_text": "New Store",
+            "map_address": "<p>D, 39-1-5/6, MG Rd, <br/>Beside Balaji Towers, Labbipet,<br/>Vijayawada 520 010</p>",
+            "store_phone": "<p><a href=\"tel:+91-7204010492\" target=\"_blank\" title=\"tel:+91-7204010492\">Call +91-7204010492</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/qaTtK9LCmAgo6Wet6\" target=\"_blank\" title=\"https://maps.app.goo.gl/qaTtK9LCmAgo6Wet6\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7204010492"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__d3eb6f8f-22d6-4abb-be23-83da7c3e2664-location-1",
+        "location_deWbL8"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Vijayawada",
+        "counter_text": "Stores in Vijayawada",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "16c3ea0d-63a7-421a-b745-29e863fc4fdb": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__16c3ea0d-63a7-421a-b745-29e863fc4fdb-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15351.865225141435!2d74.50375813065094!3d15.858368115270814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf6763d7505403%3A0x5794f2daa33b8dfe!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1618597217257!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "BR Ambedkar Road",
+            "review_text": "4.7 (1,269)",
+            "map_address": "<p>Shop No. 6, Opp BIMS Hospital,<br/>BR Ambedkar Rd, Sadashivnagar,<br/>Belgaum 590 001</p>",
+            "store_phone": "<p><a href=\"tel: +91-6360784144\" target=\"_blank\" title=\"tel: +91-6360784144\">Call +91-6360784144</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@15.870025,74.512083,15z/data=!4m6!3m5!1s0x3bbf6763d7505403:0x5794f2daa33b8dfe!8m2!3d15.8700245!4d74.5120832!16s%2Fg%2F11n960gvyg?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@15.870025,74.512083,15z/data=!4m6!3m5!1s0x3bbf6763d7505403:0x5794f2daa33b8dfe!8m2!3d15.8700245!4d74.5120832!16s%2Fg%2F11n960gvyg?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel: +91-6360784144"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__16c3ea0d-63a7-421a-b745-29e863fc4fdb-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Belgaum",
+        "counter_text": "Stores in Belgaum",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "694a53dd-4606-4fdb-afb6-b6b6cb181f34": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__694a53dd-4606-4fdb-afb6-b6b6cb181f34-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3866062.853042633!2d78.6253473!3d18.8670186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943bc318813f3%3A0x577f293fead73b7!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1628861397704!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Siripuram",
+            "review_text": "4.9 (799)",
+            "map_address": "<p>S-3, Ground floor,<br/>Sampath Vinayaka Temple Rd,<br/>Vizag 530 003</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360773434\" target=\"_blank\" title=\"tel:+91-6360773434\">Call +91-6360773434</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.724633,83.314337,7z/data=!4m6!3m5!1s0x3a3943bc318813f3:0x577f293fead73b7!8m2!3d17.7246331!4d83.3143365!16s%2Fg%2F11rspp63zg?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.724633,83.314337,7z/data=!4m6!3m5!1s0x3a3943bc318813f3:0x577f293fead73b7!8m2!3d17.7246331!4d83.3143365!16s%2Fg%2F11rspp63zg?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360773434"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__694a53dd-4606-4fdb-afb6-b6b6cb181f34-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Vizag",
+        "counter_text": "Stores in Vizag",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "fbe80b93-f8df-4087-8e3d-e8585930887c": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__fbe80b93-f8df-4087-8e3d-e8585930887c-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3815.352057595391!2d81.7870246!3d17.0063928!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a392667203c1%3A0x3364a18b1b4d4e14!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1668662825362!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Danavai Peta",
+            "review_text": "4.9 (668)",
+            "map_address": "<p>No 75-8-6, Round Park Road,<br/>Gandhipuram, Danavai Peta,<br/>Rajamahendravaram 533 103</p>",
+            "store_phone": "<p><a href=\"tel:+91-9731418753\" target=\"_blank\" title=\"tel:+91-9731418753\">Call +91-9731418753</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.006393,81.787025,17z/data=!4m6!3m5!1s0x3a37a392667203c1:0x3364a18b1b4d4e14!8m2!3d17.0063928!4d81.7870246!16s%2Fg%2F11sbhktq_y?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@17.006393,81.787025,17z/data=!4m6!3m5!1s0x3a37a392667203c1:0x3364a18b1b4d4e14!8m2!3d17.0063928!4d81.7870246!16s%2Fg%2F11sbhktq_y?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appoinment",
+            "btn_link": "tel:+91-9731418753"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__fbe80b93-f8df-4087-8e3d-e8585930887c-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Rajahmundry",
+        "counter_text": "Stores in Rajahmundry",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "1f12bfcd-1227-4e3a-8d1c-47bbca605023": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__1f12bfcd-1227-4e3a-8d1c-47bbca605023-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.5506338208106!2d75.14063111432836!3d15.346636962473433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d7be147c47fb%3A0xc78c6e889b1782d5!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1632295799038!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Koppikar Road",
+            "review_text": "4.8 (1,252)",
+            "map_address": "<p>CTS-2538, Ground Floor<br/>Umachigi Complex, Koppikar Road,<br/>Hubli 580 023</p>",
+            "store_phone": "<p><a href=\"tel:+91-6360768418\" target=\"_blank\" title=\"tel:+91-6360768418\">Call +91-6360768418</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@15.346632,75.14282,17z/data=!4m6!3m5!1s0x3bb8d7be147c47fb:0xc78c6e889b1782d5!8m2!3d15.3466318!4d75.1428198!16s%2Fg%2F11qh96lq3l?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@15.346632,75.14282,17z/data=!4m6!3m5!1s0x3bb8d7be147c47fb:0xc78c6e889b1782d5!8m2!3d15.3466318!4d75.1428198!16s%2Fg%2F11qh96lq3l?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6360768418"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__1f12bfcd-1227-4e3a-8d1c-47bbca605023-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Hubli",
+        "counter_text": "Stores in Hubli",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "c58752b5-ddea-441f-bfee-181ff2c3c833": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15832888049820__c58752b5-ddea-441f-bfee-181ff2c3c833-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19863.72437369449!2d80.43686125500379!3d16.309845051476096!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a75a9281f8c25%3A0x1d4ba85c5505b21a!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1672656976048!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Lakshmipuram",
+            "review_text": "4.9 (455)",
+            "map_address": "<p>Door No: 5-87, 130/A,<br/>Lakshmipuram Main Rd, Brodipet,<br/>Guntur 522 007</p>",
+            "store_phone": "<p><a href=\"tel:+91-6364898812\" target=\"_blank\" title=\"tel:+91-6364898812\">Call +91-6364898812</a></p>",
+            "store_map": "<p><a href=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@16.308549,80.434346,14z/data=!4m6!3m5!1s0x3a4a75a9281f8c25:0x1d4ba85c5505b21a!8m2!3d16.3085493!4d80.434346!16s%2Fg%2F11k4nsl8zd?hl=en&entry=ttu\" target=\"_blank\" title=\"https://www.google.com/maps/place/Kushal's+Fashion+Jewellery/@16.308549,80.434346,14z/data=!4m6!3m5!1s0x3a4a75a9281f8c25:0x1d4ba85c5505b21a!8m2!3d16.3085493!4d80.434346!16s%2Fg%2F11k4nsl8zd?hl=en&entry=ttu\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6364898812"
+          }
+        }
+      },
+      "block_order": [
+        "template--15832888049820__c58752b5-ddea-441f-bfee-181ff2c3c833-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Guntur",
+        "counter_text": "Stores in Guntur",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "dd9dfff5-8d02-4c74-8d7b-219d3eaf3345": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15840338346140__dd9dfff5-8d02-4c74-8d7b-219d3eaf3345-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.03293085883!2d75.32271677482045!3d19.880831326214647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb99481a1e1d89%3A0xff50c092bd8ba30f!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1694228682280!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Nirala Bazar",
+            "review_text": "New Store",
+            "map_address": "<p>Shardashram Colony,<br/>Nirala Bazar, <br/>Aurangabad 431 001</p>",
+            "store_phone": "<p><a href=\"tel:+91-7065937059\" target=\"_blank\" title=\"tel:+91-7065937059\">Call +91-7065937059</a></p>",
+            "store_map": "<p><a href=\"https://goo.gl/maps/EDrGtbEjFw7NWK248\" target=\"_blank\" title=\"https://goo.gl/maps/EDrGtbEjFw7NWK248\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-7065937059"
+          }
+        }
+      },
+      "block_order": [
+        "template--15840338346140__dd9dfff5-8d02-4c74-8d7b-219d3eaf3345-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Aurangabad",
+        "counter_text": "Stores in Aurangabad",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "77f6bf3d-6f15-4525-a88c-e3a8d312c15c": {
+      "type": "store-locator",
+      "blocks": {
+        "template--15840338346140__77f6bf3d-6f15-4525-a88c-e3a8d312c15c-location-1": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62041.23498737175!2d79.34483315820314!3d13.622615900000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b087bbdbeb3%3A0x51ef62d479553e7!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1694229697434!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+            "location_name": "Royal Nagar",
+            "review_text": "4.9 (100)",
+            "map_address": "<p>Air Bypass Rd,<br/>Royal Nagar,<br/>Tirupati 517 507</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867906228\" target=\"_blank\" title=\"tel:+91-8867906228\">Call +91-8867906228</a></p>",
+            "store_map": "<p><a href=\"https://goo.gl/maps/3sZQnPatsim2qf7W9\" target=\"_blank\" title=\"https://goo.gl/maps/3sZQnPatsim2qf7W9\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867906228"
+          }
+        }
+      },
+      "block_order": [
+        "template--15840338346140__77f6bf3d-6f15-4525-a88c-e3a8d312c15c-location-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Tirupati",
+        "counter_text": "Stores in Tirupati",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "store_locator_pJ9deJ": {
+      "type": "store-locator",
+      "blocks": {
+        "location_HxdeMF": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950448.803533267!2d73.27328157098063!3d14.77690562590531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1012800881f93%3A0x5eba0776f7e4488a!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1705065229588!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Rajarampuri",
+            "review_text": "New Store",
+            "map_address": "<p>Shop No. 9, C.S. No.1737, 6 Mahalaxminagar, <br/>Rajarampuri, Kolhapur, Brunch,<br/>Maharashtra 416 008</p>",
+            "store_phone": "<p><a href=\"tel:+91-8867685043\" target=\"_blank\" title=\"tel:+91-8867685043\">Call +91-8867685043</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/Qi4CJb99SoHNwMrH7\" target=\"_blank\" title=\"https://maps.app.goo.gl/Qi4CJb99SoHNwMrH7\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-8867685043"
+          }
+        }
+      },
+      "block_order": [
+        "location_HxdeMF"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Kolhapur",
+        "counter_text": "",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "store_locator_3deq6d": {
+      "type": "store-locator",
+      "blocks": {
+        "location_9dPH7L": {
+          "type": "location",
+          "settings": {
+            "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.9689744916727!2d81.0130605!3d26.809116499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be366382edaa3%3A0x8c5f665f2c016ca3!2sKushal's%20Fashion%20Jewellery!5e0!3m2!1sen!2sin!4v1705065448738!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\"></iframe>",
+            "location_name": "Phoenix Palassio",
+            "review_text": "New Store",
+            "map_address": "<p>2nd floor, S-22, Phoenix Palassio,<br/>Sector-7, Amar Shaheed Path, Gomti Nagar,<br/>Lucknow, Ardonamau,<br/>Uttar Pradesh 226 010</p>",
+            "store_phone": "<p><a href=\"tel:+91-6366792946\" target=\"_blank\" title=\"tel:+91-6366792946\">Call +91-6366792946</a></p>",
+            "store_map": "<p><a href=\"https://maps.app.goo.gl/ctsJXNReVugKHXGH8\" target=\"_blank\" title=\"https://maps.app.goo.gl/ctsJXNReVugKHXGH8\">Find Direction</a></p>",
+            "btn_text": "Book Appointment",
+            "btn_link": "tel:+91-6366792946"
+          }
+        }
+      },
+      "block_order": [
+        "location_9dPH7L"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Lucknow",
+        "counter_text": "",
+        "text_color": "",
+        "btn_color": "#ff1919",
+        "btn_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1ec3d596-1267-4de8-8525-37eeebb00197",
+    "8738a4d9-bd64-4eb3-8abe-7503febd8850",
+    "2c056c3e-f3e0-4b55-8c2f-e1bb1015063b",
+    "5217d647-0112-46a6-bd6b-da6884241636",
+    "d0ad24df-f800-4546-a3f1-c34067ebc203",
+    "66c01b46-56cd-4de8-9e46-e0c493938240",
+    "f33ba064-8a87-441e-b507-428943c6ea6f",
+    "be781806-50de-4090-b410-58004c37bea6",
+    "87b9b1ec-223c-454d-90bb-a8dbd66d4959",
+    "5e9a5b9f-f902-442b-8c62-2712e89e6830",
+    "fecd7701-f0ee-4962-b366-4cd0736ad111",
+    "d034cd52-6949-4b67-a8a2-d6c2653169ae",
+    "6287fa66-5115-46e7-8bab-8a99626e68b6",
+    "6be0bbae-0be2-4bc1-aafb-f86195c1fb18",
+    "d3eb6f8f-22d6-4abb-be23-83da7c3e2664",
+    "16c3ea0d-63a7-421a-b745-29e863fc4fdb",
+    "694a53dd-4606-4fdb-afb6-b6b6cb181f34",
+    "fbe80b93-f8df-4087-8e3d-e8585930887c",
+    "1f12bfcd-1227-4e3a-8d1c-47bbca605023",
+    "c58752b5-ddea-441f-bfee-181ff2c3c833",
+    "dd9dfff5-8d02-4c74-8d7b-219d3eaf3345",
+    "77f6bf3d-6f15-4525-a88c-e3a8d312c15c",
+    "store_locator_pJ9deJ",
+    "store_locator_3deq6d"
+  ]
+}

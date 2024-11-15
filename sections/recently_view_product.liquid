@@ -1,0 +1,668 @@
+<style>
+
+  .ct-recently-viewed li {
+        width: 100%;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-top: 0px;
+    max-width: 287px;
+    padding-left: 20px;
+    min-width: 287px;
+}
+  .ct-recently-viewed li img {
+    width: 100%;
+}
+  .close {
+        position: absolute;
+    top: -1px;
+    display: flex;
+    display: none;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    align-items: center;
+    justify-content: center;
+    right: -1px;
+    fill: #FFF;
+}
+  .close svg {
+    width: 11px;
+    height: 11px;
+}
+  ul.ct-recently-viewed {
+   display: flex;
+    margin: 0 0 0 0px;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto !important;
+}
+  .ct-recently-viewed::-webkit-scrollbar {
+    display: none;
+}
+  .ct-product-recent-heading {
+    font-size: 29px;
+}
+.ct-recently-viewed li .card__heading a {
+    line-height: 24px;
+    min-height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    color: #000;
+    font-family: 'Lato';
+    padding-top: 4px;
+}
+  .ct-pro-main-price {
+    font-family: 'Lato' !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    text-transform: capitalize !important;
+    margin-right: 7px !important;
+}
+  /* .ct-recently-viewed li:first-child  {
+        margin-left: -11px;
+} */
+  .ct_hide{
+    display:none;
+  }
+  .ct-content-info {
+    padding: 0 0 0 2px;
+}
+  @media(max-width:990px){
+   
+  }
+  @media(max-width:750px){
+    .ct-product-recent-heading {
+    font-size: 26px;
+      padding:0 10px ;
+}
+ .ct-recently-viewed li {
+    padding-left: 10px;
+ }
+.ct-recently-viewed li .card__heading a {
+    margin: 3px 0 0 0;
+    font-family: Lato!important;
+    font-size: 12px!important;
+    font-weight: 400;
+    line-height: 14px!important;
+    letter-spacing: 0em;
+    text-align: left;
+}
+    .ct_recent .card__heading {
+    margin-bottom: 6px;
+}
+ .ct-pro-main-price {
+    color: #000;
+    font-family: Lato;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 800 !important;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-right: 2px;
+}
+  }
+  @media(max-width:575px){
+    .ct-recently-viewed li {
+    max-width: 47.5%;
+    min-width: 47.5%;
+    }
+  }
+  @media(max-width:374px){
+    .ct-recently-viewed li {
+    max-width: 150px;
+    min-width: 150px;
+    }
+  }
+
+
+  .ct-mainp-recent-view_product .ct-product-recent-heading {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+  .ct-mainp-recent-view_product .ct-recently-viewed li:first-child {
+    margin-left: 0;
+}
+  .ct-mainp-recent-view_product .ct-recently-viewed li .card__heading a{
+    color:#000;
+  }
+  .ct-mainp-recent-view_product .card__heading{
+    margin-bottom: 0px;
+  } 
+ @media(max-width:1476px){
+    .ct-mainp-recent-view_product .ct-recently-viewed li {
+    max-width: 20%;
+    min-width: 20%;
+}
+ }
+   @media(max-width:999px){
+    .ct-mainp-recent-view_product .ct-recently-viewed li {
+    max-width: 25%;
+    min-width: 25%;
+}
+     .ct-mainp-recent-view_product .ct-product-recent-heading {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+ }
+     @media(max-width:767px){
+       .ct-mainp-recent-view_product .ct-product-recent-heading {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+       .product-block .image-cont {
+    border-radius: 6px;
+}
+       .related_CPB-image img {
+    border-radius: 6px;
+}
+       .ct-mainp-recent-view_product .card__heading {
+    margin-bottom: 2px;
+}
+.ct-mainp-recent-view_product .ct-recently-viewed li {
+    max-width: 47.5%;
+    min-width: 47.5%;
+}
+     }
+
+
+  h3.CT_rec_card__heading {
+    margin-bottom: 0;
+}
+  .ct_compare_css_false {
+    display: none !important;
+}
+  
+</style>
+
+
+
+<div id="ct-results-seen" class=" {% if template.name != "product" %}{% else %} ct-mainp-recent-view_product {% endif %}  for_JS ct-mainp-recent-view " style="padding:{{ section.settings.p-top }}px 0 {{ section.settings.p-bot }}px 0">
+  <div class="ct-mainp-recent-view-inner container">
+      <h2 class="ct-product-recent-heading  hometitle h1-style">  
+
+        {% if customer %}
+        {{ customer.first_name }}, you {{ section.settings.heading | escape }}
+        {% else %}
+        {{ section.settings.heading | escape }}
+        {% endif %}
+        
+        </h2>
+      <ul class="ct-recently-viewed  items_scroll" role="list"">
+      <!-- Recently viewed products will appear here -->
+      </ul>
+  </div>
+</div>
+
+                
+
+
+<script>
+
+
+  
+function setRecentlyViewedProducts() {
+{% assign show_discount="deavtive" %}
+   {% if product.compare_at_price > product.price %}
+      {% assign show_discount="avtive" %}
+    {% endif %}
+
+
+  
+                  {% assign price_ct=prod_variant.price | money_without_currency  %}
+                  {% assign limited_discount=false %}
+                  {% assign limited_price=false %}
+                  {% assign bargain=false %}
+                  {% assign bestSel = "" %}
+                  {% assign ct_best_class= "" %}
+                  {% assign ct_rakhi= "" %}
+              
+                  {%- assign savingsd = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round  -%}
+                
+                {% assign f_price=product.price | money_without_currency  %}
+                {% assign final_price_remove=f_price | remove:","  %}
+                {% assign final_price=final_price_remove | plus:0  %}
+  
+                {% if savingsd >= 10 and savingsd <= 50  %}
+                       {% assign limited_discount= true %}
+                    {% endif %}
+              {% if final_price >= 1300 and final_price <= 2000  %}
+                 {% assign limited_price= true %}
+              {% endif %}
+              {% if final_price > 2000   %}
+                 {% assign bargain= true %}
+              {% endif %}
+
+
+
+
+   
+        {% if product.tags contains "Rakshabandhan24" %}
+            {% assign bestSel= "Rakhi Special" %}
+           {% assign ct_best_class= "ct-rakhi_badge" %}
+          
+          {% else %}
+          
+              {% if product.metafields.custom.best_seller_badge == true %}
+               
+                 {% assign bestSel= "Bestseller "  %}
+                   {% assign ct_best_class= "ct_best_badge" %}
+                {% else %}
+
+             
+                  {% assign fast_sell=true %}
+                   
+            
+                {% if limited_price and  limited_discount %}
+                 
+                    {% assign bestSel= " Limited Deal" %}        
+                        {% assign ct_best_class= "limited_tag" %}
+                  {% assign fast_sell=false %}
+                {% endif %}                   
+                
+             
+                
+                {% if bargain and  limited_discount %}
+              
+                      {% assign bestSel= "Price Crash" %}        
+                        {% assign ct_best_class= "bargain_tag" %}
+                   {% assign fast_sell=false %}
+                {% endif %}       
+
+
+                 {% if product.metafields.custom.best_seller_badge == true %}
+                
+                    {% else %}
+                      {% assign pro_quantity = product.variants.first.inventory_quantity %}
+                    {% if pro_quantity <= 3 and fast_sell and final_price >= 1000 %}
+                  
+                       {% assign bestSel= "Selling Fast" %}        
+                        {% assign ct_best_class= "ct_sell_badge" %}
+                  {% endif %}
+                {% endif %} 
+                
+              {% endif %} 
+              {% endif %} 
+            
+
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  {%  assign prod_variant = product.variants.first %}
+  {% assign savings = "" %}
+  {% assign compare_price = "" %}
+  {% assign compare_price_css = "false" %}
+  
+  
+      {%- if prod_variant.compare_at_price > prod_variant.price -%}          
+          {%- assign savings = prod_variant.compare_at_price | minus: prod_variant.price | times: 100.0 | divided_by: prod_variant.compare_at_price | round | append: '% OFF' -%}
+          {% assign compare_price = product.compare_at_price | money_with_currency  %}   
+        {% assign compare_price_css = "true" %}
+        {% endif %}
+
+  {% assign discount_amount_final="" %}
+                {% assign discount_price_show=false %}
+   {%- if prod_variant.compare_at_price > prod_variant.price -%}
+                    {%- assign discount_amount = prod_variant.compare_at_price | minus: prod_variant.price   -%}
+                    {%- assign discount_amountpr = discount_amount | money_without_currency  | remove:',' -%}
+                    {%- assign discount_amountmn = discount_amountpr | plus:0  -%}
+                  
+                       {%- if discount_amountmn > 1000 -%}
+                             {% assign discount_price_show=true %}
+                         {% assign discount_amount_final= discount_amount | money | remove: ' ' %}
+                       {% endif %}
+  {% endif %}
+
+
+  {% assign colors = '' %}
+    {% for variant in product.variants %}
+      {% unless colors contains variant.option1 %}
+        {% assign colors = colors | append: variant.option1 | append: ',' %}
+      {% endunless %}
+    {% endfor %}
+    
+    {% assign unique_colors = colors | split: ',' | uniq %}
+    {% assign total_unique_colors = unique_colors.size %}
+        {% assign total_variant=""  %}
+                      {% assign class_variant = false %}
+        {% if total_unique_colors > 1 %}
+             {% assign total_variant=total_unique_colors  %}
+                {% assign class_variant = true %}
+          {% else %}
+              {% assign total_variant = "" %}
+          {% assign class_variant = false %}
+            
+    {% endif %}
+                     
+                    {% assign meta = ""%}
+                      {% assign meta_true = false%}
+                    {% if product.metafields.theme.label !=blank %}  
+                        {% assign meta = product.metafields.theme.label  %}
+                        {% assign meta_true = true  %}
+                      
+                      {% endif %}
+  
+
+  
+  {% if product.title %}
+  const productData = {
+    productId:"{{ product.id }}",
+    proque:"{{ product.variants.first.inventory_quantity }}",
+    productTitle: "{{ product.title }}",
+    productImg: "{{ product.featured_media | image_url: width: 450 }}",
+    imgWidth:"{{ product.featured_media.width }}",
+    imgHeight:"{{ product.featured_media.height }}",
+    productPrice: "{{ product.price | money_with_currency }}",
+    productCPrice: "{{compare_price }}",
+    compare_price_css: "{{ compare_price_css }}",
+    productUrl: "{{ product.url }}",
+    productDiscount:"{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}",
+    productImageAltText: "{{product.featured_media.alt | escape }}",
+    productShowDiscount:"{{ show_discount }}",
+    best_sel:"{{ bestSel }}",
+    save_off:"{{ savings }}",
+    dis_save:"{{ discount_price_show }}",
+    discount_price_value:"{{ discount_amount_final }}",
+    type_class:"{{ ct_best_class }}",
+    total_variant: "{{ total_variant }}",
+    variant_class: "{{ class_variant  }}",
+    meta : "{{ meta }}",
+    meta_true_val: "{{ meta_true }}",
+  };
+  
+  const productList = [];
+  let jsonResp, jsonRespArr, jsonRespArrStr;
+  const numberOfProducts = 100;
+  productList.push(productData);
+  const currProductPageTitle = productData.productTitle;
+  const productDataString = JSON.stringify(productList);
+  const localData = localStorage.getItem("recentlyViewedProduct");
+
+  
+  if (localData === null) {
+    
+    localStorage.setItem("recentlyViewedProduct", productDataString);
+  } else if (localData) {
+    
+    const oldProductData = localStorage.getItem("recentlyViewedProduct");
+    const countProductData = (oldProductData.match(/productTitle/g) || []).length;
+    const sameProduct = oldProductData.includes(currProductPageTitle);
+    if (countProductData < numberOfProducts && sameProduct == false) {
+      jsonResp = JSON.parse(oldProductData);
+      jsonRespArr = jsonResp.concat(productList);
+      jsonRespArrStr = JSON.stringify(jsonRespArr);
+      localStorage.setItem("recentlyViewedProduct", jsonRespArrStr);
+    } else if (countProductData >= numberOfProducts && sameProduct == false) {
+      jsonResp = JSON.parse(oldProductData);
+      jsonResp.shift();
+      jsonRespArr = jsonResp.concat(productList);
+      jsonRespArr = JSON.stringify(jsonRespArr);
+      localStorage.setItem("recentlyViewedProduct", jsonRespArr);
+    }
+  }
+  {% endif %}
+}
+
+setRecentlyViewedProducts();
+const localViewed = localStorage.recentlyViewedProduct;
+  console.log(localViewed);
+  
+function getRecentlyViewedProducts() {
+  const productData = JSON.parse(localStorage.getItem("recentlyViewedProduct"));
+  const recentlyViewedHtml = [];
+
+                        
+    console.log(productData+" == ");  
+  if(productData != null)
+  {
+    const main_remove = document.getElementById("ct-results-seen");
+    main_remove.classList.remove("ct_hide");
+  
+  productData.map(item => {    
+    console.log(item);
+    recentlyViewedHtml.unshift(`
+    
+    <li class="grid__item ct_recent product_quantity_${ item.proque }"> 
+
+
+    
+    <span class="close" data-id="${ item.productId }">    
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4948 5.64478C16.5696 5.57005 16.629 5.48131 16.6695 5.38363C16.71 5.28594 16.7309 5.18124 16.731 5.07548C16.7311 4.96972 16.7103 4.86499 16.6699 4.76726C16.6295 4.66953 16.5702 4.58071 16.4955 4.50588C16.4207 4.43106 16.332 4.37168 16.2343 4.33115C16.1366 4.29062 16.0319 4.26973 15.9262 4.26966C15.8204 4.2696 15.7157 4.29036 15.618 4.33077C15.5202 4.37118 15.4314 4.43045 15.3566 4.50518L10.5 9.36178L5.64478 4.50518C5.49366 4.35406 5.2887 4.26917 5.07498 4.26917C4.86127 4.26917 4.6563 4.35406 4.50518 4.50518C4.35406 4.6563 4.26917 4.86127 4.26917 5.07498C4.26917 5.2887 4.35406 5.49366 4.50518 5.64478L9.36178 10.5L4.50518 15.3552C4.43036 15.43 4.371 15.5188 4.3305 15.6166C4.29001 15.7144 4.26917 15.8192 4.26917 15.925C4.26917 16.0308 4.29001 16.1356 4.3305 16.2334C4.371 16.3311 4.43036 16.42 4.50518 16.4948C4.6563 16.6459 4.86127 16.7308 5.07498 16.7308C5.18081 16.7308 5.28559 16.71 5.38336 16.6695C5.48112 16.629 5.56996 16.5696 5.64478 16.4948L10.5 11.6382L15.3566 16.4948C15.5077 16.6457 15.7126 16.7304 15.9262 16.7303C16.1398 16.7302 16.3446 16.6452 16.4955 16.4941C16.6464 16.343 16.7311 16.1381 16.731 15.9245C16.7309 15.7109 16.6459 15.5061 16.4948 15.3552L11.6382 10.5L16.4948 5.64478Z" fill="#fff"></path>
+      </svg>
+    </span>
+     <div class="ct_custom_badge ">
+            <div class="rec-bage ct_tag ${item.type_class}">${item.best_sel}</div>
+      </div>
+      
+				<div class="pr_CPB-product-wishlist ct_hart_icon ct_hart_icon-media">
+					<div class="zoomywishid zoomywishid-${item.productId}" data-product-id="${item.productId}" data-handle = "" data-image="${item.productImg}"  data-variantname="" data-title="${item.productTitle}" data-variant="" data-price="${item.productCPrice}">
+						<div class="zoomywishidheart" style="position:relative;">
+							<input type="checkbox" data-id="${item.productId}" class="zoomycheck checkbox-'${item.productId}" id="checkbox-'${item.productId}">
+							<label for="checkbox-'${item.productId}"><p class="zooomywishmsg zooomywishmsg-'${item.productId}"><i class="fa  fa-heart-o" style="color: #000000;"></i>
+							</label>
+						</div>
+					</div>
+				</div>
+
+    <a class="" href="${item.productUrl}" data-title="${item.productTitle}">
+     <div class="ct-recent-pro-box card-wrapper underline-links-hover">     
+      <div class="card card--standard card--media " style="--ratio-percent: 100%;">
+  
+    
+            
+      
+        <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 100%;">
+         <div style="position:static" class="card__media">
+         
+         <div class="ct_rec_media media media--transparent media--hover-effect">
+    		  <img class="motion-reduce lazyImage" src="${item.productImg}" width="${item.imgWidth}" height="${item.imgHeight}"  loading="lazy" alt="${item.productImageAltText}"/>
+
+        <div class="ct_cart_color_varient ct_${item.variant_class}"> 
+       <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/kushals_varient_icon_8421bbfe-7f4b-41ac-b69a-283332d3ee31.svg?v=1709097181"/>
+       ${item.total_variant}+
+    </div>
+         </div>
+         </div>
+       </div>
+       <div class="ct-content-info card__content">
+       <div class="card__information">
+       <h3 class="CT_rec_card__heading card__heading h5">
+       <a class="full-unstyled-link" href="${item.productUrl}">${item.productTitle}</a></h3>
+         <div class="card-information">
+           <div class="price ">
+             <div class="price__container ct_rec_price__container">
+               
+                
+               <div class="ct_rec_price-item">
+               <div class="price-item price-item--regular">
+                   <span  class="ct-pro-main-price">${item.productPrice}</span>                   
+               </div>
+               <span class=" product-price__item CT-product-price__compare product-price__compare theme-money ">${item.productCPrice}</span>
+               <div class="CT_parsent_off_   CTT_${item.save_off} ct_compare_css_${ item.compare_price_css }">
+                   ${item.save_off}
+               </div>
+               </div>
+
+
+
+               <div class="ct_product_overlay-main" >
+                 <div class="ct_product_overlay ct_${item.meta_true_val}">
+                   <span>${ item.meta }</span>
+                 </div>
+               
+
+               <div class="CT_price_off ct_${item.dis_save} ">
+                 <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/ddd.png?v=1710506104?width=18" loading="lazy" />
+                   Big Save 
+                   <span> ${item.discount_price_value} </span>
+                
+              </div>
+              </div>
+
+              
+             </div>
+           </div>
+         </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </a>
+    </li>
+    
+   `);
+  });
+  const newProductData = `${recentlyViewedHtml.join("")}`;
+  const fullContent = document.getElementsByClassName("ct-recently-viewed");
+  fullContent[0].innerHTML = newProductData;
+  }
+  else
+  {
+    const main = document.getElementById("ct-results-seen");
+    main.classList.add("ct_hide");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var t = getRecentlyViewedProducts();
+  console.log(t+"=====");
+});
+
+  jQuery(document).on('click','.close',function(){
+    var id=jQuery(this).attr('data-id');
+    var json = JSON.parse(localStorage["recentlyViewedProduct"]);
+        for (i=0;i<json.length;i++)
+          {
+                if (json[i].productId == id) 
+                {
+                  jQuery(this).closest('li').remove();
+                  json.splice(i,1);
+                  var count_li=jQuery('.ct_recent').length;
+                  if(count_li > 0)
+                  {
+                    jQuery('#ct-results-seen').removeClass('ct_hide')  
+                  }
+                  else
+                  {
+                    jQuery('#ct-results-seen').addClass('ct_hide')
+                  }
+                  localStorage["recentlyViewedProduct"] = JSON.stringify(json);                  
+                }
+          }
+})
+
+
+
+
+
+  
+var sliders = document.querySelectorAll('.items_scroll');
+var isDown = false;
+var startX;
+var scrollLeft;
+
+sliders.forEach(slider => {
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse leave
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse up
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1; // scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    disableLinks(); // Disable links when scrolling horizontally
+  });
+});
+
+function disableLinks() {
+  var links = document.querySelectorAll('.items_scroll a');
+  links.forEach(link => {
+    link.style.pointerEvents = 'none'; // Disable link clicks
+  });
+}
+
+function enableLinks() {
+  var links = document.querySelectorAll('.items_scroll a');
+  links.forEach(link => {
+    link.style.pointerEvents = 'auto'; // Re-enable link clicks
+  });
+}
+</script>
+
+
+{% schema %}
+  {
+    "name": "Main Recent Products",
+    "settings": [
+      {
+          "type": "range",
+          "id": "p-top",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Top Padding",
+          "default": 0
+        },
+          {
+          "type": "range",
+          "id": "p-bot",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Bottom Padding",
+          "default": 0
+        },
+      {
+      "type": "text",
+      "id": "heading",
+      "label": "Title"
+    }
+    ],
+    "presets":[{
+      "name": "Main Recent Products"
+    }]
+    
+  }
+{% endschema %}

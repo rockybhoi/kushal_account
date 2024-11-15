@@ -1,0 +1,122 @@
+{{ 'account.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% section 'account' %}
+{% comment %}
+<div id="admin_header"  data-cc-animate>
+  <div class="action_link action_return note opposing-items" id='return_to_store'>
+    <a href="{{ routes.root_url }}">{{ 'customer.general.return' | t }}</a>
+    <a href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a>
+  </div>
+  <h2 class="title">{{ 'customer.account.title' | t }}</h2>
+</div>
+
+<div id="customer_sidebar" data-cc-animate>
+  <div id="customer_detail" class="group">
+    <h5 class="name">{{ customer.name }}</h5>
+    <p class="email note">{{ customer.email }}</p>
+    <div class="address note lightly-spaced-row">
+      {% if customer.default_address != nil %}
+        <p>{{ customer.default_address.address1 }}</p>
+        {% if customer.default_address.address2 != "" %}
+          <p>{{ customer.default_address.address2 }}</p>
+        {% endif %}
+        <p>{{ customer.default_address.city }}, {% if address.province_code %}{{ customer.default_address.province_code }}, {% endif %}{{customer.default_address.country}}</p>
+        <p>{{ customer.default_address.zip }}</p>
+        <p>{{ customer.default_address.phone }}</p>
+      {% endif %}
+    </div>
+
+    <a id="view_address" href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a>
+  </div>
+</div>
+
+<div id="customer_orders" data-cc-animate>
+  {% paginate customer.orders by 20 %}
+  {% if customer.orders.size != 0 %}
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th class="order_number">{{ 'customer.orders.order_number' | t }}</th>
+        <th class="date">{{ 'customer.orders.date' | t }}</th>
+        <th class="payment_status">{{ 'customer.orders.payment_status' | t }}</th>
+        <th class="fulfillment_status">{{ 'customer.orders.fulfillment_status' | t }}</th>
+        <th class="total">{{ 'customer.orders.total' | t }}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for order in customer.orders %}
+      <tr class="{% if order.cancelled %}cancelled_order{% endif %}">
+        <td class="responsive-table__cell-head">
+          <span class="responsive-table__cell-label">{{ 'customer.orders.order_number' | t }}</span>
+          {{ order.name | link_to: order.customer_url }}
+          <span class="mobile-only-ib">- {{ order.created_at | date: format: 'month_date_year' }}</span>
+          <span class="responsive-table__cell-head__icon">{% render 'svg-chevron-right' %}</span>
+        </td>
+        <td class="desktop-only">
+          <span class="note">{{ order.created_at | date: format: 'month_date_year' }}</span>
+        </td>
+        <td class="responsive-table__first-mobile-cell">
+          <span class="responsive-table__cell-label">{{ 'customer.orders.payment_status' | t }}</span>
+          <span class="status_{{ order.financial_status }}">{{ order.financial_status_label }}</span>
+        </td>
+        <td>
+          <span class="responsive-table__cell-label">{{ 'customer.orders.fulfillment_status' | t }}</span>
+          <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status_label }}</span>
+        </td>
+        <td>
+          <span class="responsive-table__cell-label">{{ 'customer.orders.total' | t }}</span>
+          <span class="total">
+            {%- if settings.cart_currency_code_enabled -%}
+              {{- order.total_price | money_with_currency -}}
+            {%- else -%}
+              {{- order.total_price | money -}}
+            {%- endif -%}
+          </span>
+
+          <div class="responsive-table__more">
+            <a href="{{ order.customer_url }}">{{ 'customer.orders.full_details_html' | t }}</a>
+          </div>
+        </td>
+        <td>
+          <a href="#" class="individual_order">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect fill="none" height="256" width="256"/><path d="M156,128a28,28,0,1,1-28-28A28.1,28.1,0,0,1,156,128ZM128,76a28,28,0,1,0-28-28A28.1,28.1,0,0,0,128,76Zm0,104a28,28,0,1,0,28,28A28.1,28.1,0,0,0,128,180Z"/></svg>
+          </a>
+          <ul class="idividual_order_menu">
+            <li><a href="{{ order.customer_url }}">{{ 'customer.order.order_detail' | t }}</a></li>
+            <li><a href="https://kushals.clickpost.ai/my-order?order_id={{order.name}}" target="blank">{{ 'customer.order.track_order' | t }}</a></li>
+            <!--             <li><a href="https://returns.richcommerce.co/return/new?c=kushalsfashionjewellery&orderNumber={{ order.name | url_param_escape }}&orderEmail={{ order.email | url_param_escape }}" target="blank">{{ 'customer.order.return_order' | t }}</a></li> -->
+           {% if  order.fulfillment_status_label == 'Partially fulfilled' or order.fulfillment_status_label == 'Fulfilled' %}
+            <li><a href="https://kushals.clickpost.ai/returns?order_id={{ order.name | url_param_escape }}&mobile={{ customer.default_address.phone | url_param_escape }}" target="blank">{{ 'customer.order.return_order' | t }}</a></li>
+          {% endif %}
+            <li><a href="https://wa.me/919591321696" target="blank">{{ 'customer.order.customer_support' | t }}</a></li>
+          </ul>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p>{{ 'customer.orders.none' | t }}</p>
+  {% endif %}
+
+  <div class="pagination-row">{% render 'pagination-control', paginate: paginate %}</div>
+  {% endpaginate %}
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.individual_order').on('click',function(e){
+      e.preventDefault();
+      $(this).next('.idividual_order_menu').toggle();
+      $(this).parents('#customer_orders .responsive-table tr').siblings().find('.idividual_order_menu').hide();
+    });
+    $(document).click(function() {
+      var container = $(".idividual_order_menu,.individual_order");
+      if (!container.is(event.target) && !container.has(event.target).length) {
+          $(".idividual_order_menu").hide();
+      }
+    });
+  });
+</script>
+{% endcomment %}

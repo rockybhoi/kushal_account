@@ -1,0 +1,75 @@
+<style>
+  .my_video_background_banner , .my_video_background_banner  video{
+    width: 100%;
+}
+</style>
+
+<div class="container">
+  <div class="my_video_background_banner">
+    {% if section.settings.link !=blank %}
+    <a href="{{ section.settings.link }}">
+      {% endif %}
+    <video-media
+      {% if section.settings.autoplay %}
+        autoplay
+      {% endif %}
+      class="Desk-slide-video "
+    >
+      {%- if section.settings.autoplay -%}
+        {%- assign show_controls = false -%}
+      {%- else -%}
+        {%- assign show_controls = true -%}
+      {%- endif -%}
+      {{-
+        section.settings.video
+        | video_tag:
+          playsinline: true,
+          autoplay: true,
+          preload: 'metadata',
+          muted: section.settings.autoplay,
+          loop: section.settings.autoplay,
+          controls: false,
+          image_size: '800x'
+      -}}
+    </video-media>
+      {% if section.settings.link !=blank %}
+      </a>
+        {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CT-Video-Sec",
+  "class": "CT-Video-Sec",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Video link"
+    },
+
+           {
+        "type": "video",
+        "id": "video",
+        "label": "Video",
+        "info": "Replaces external video if both are set."
+      },
+      {
+        "type": "video",
+        "id": "mob-video",
+        "label": "Mobile Video"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay",
+        "info": "Video are muted to allow autoplay. For best results, do not add any content on top of the video when autoplay is enabled.",
+        "default": true
+      }
+  ],
+  "presets": [{
+    "name": "CT-Video-Sec"
+  }]
+}
+{% endschema %}

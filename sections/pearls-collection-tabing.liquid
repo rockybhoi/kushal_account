@@ -1,0 +1,596 @@
+<style>
+.pearls-tab-box-content {
+  display: none;
+}
+.pearls-tab-box-content.active {
+  display: block;
+}
+.pearls-collection-listing .product-block {
+  width: 16.66%;
+  min-width: 16.66%;
+}
+.image-cont--with-secondary-image .product-block__image .rimage-background {
+  border-radius: 6px;
+}
+.active-img {
+  animation: l3 2s infinite linear;
+  display: none;
+}
+a.pearls-tab-link.active .active-img {
+  display: block;
+}
+a.pearls-tab-link.active img.non-active-img {
+  display: none;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.img_icon-inner img {
+  width: 100%;
+  height: 100%;
+}
+.img_icon-main img {
+  width: 100%;
+}
+a.pearls-tab-link {
+  width: 100px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.img_icon-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_icon-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(81, 79, 79, 0.1);
+  border-radius: 100%;
+}
+  a.pearls-tab-link.active .img_icon-inner {
+    border-color: rgba(207, 34, 40, 1);
+}
+img.collection-img {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+.pearls-heading {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.73px;
+  text-align: center;
+  color: rgba(69, 68, 68, 1);
+  margin: 5px 0 0 0;
+}
+a.pearls-tab-link.active .pearls-heading {
+  color: rgba(199, 29, 34, 1);
+  font-weight: 700;
+}
+.pearls-tab-box {
+  margin: 10px auto 40px auto;
+  display: flex;
+  justify-content: center;
+}
+img.top-collection-img {
+  width: 100%;
+  max-width: 350px;
+}
+.top-banner-img {
+  text-align: center;
+  padding: 50px 0 50px 0;
+}
+.pearls-tab-box-content .collection-listing .product-list {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+  .first-product .product-block {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+  .remain_product .product-block {
+    width: 50%;
+    min-width: 50%;
+    margin-bottom: 20px;
+}
+  .remain_product {
+    display: flex;
+    flex-wrap: wrap;
+}
+ .remain_product {
+    width: 49%;
+}
+  .first-product {
+    width: 51%;
+}
+img.bottom-collection-img {
+  margin-top: 32px;
+  width: 100%;
+  height: 100%;
+}
+.pearls-collection-listing video {
+  height: 100%;
+  width: 100%;
+  margin-top: 32px;
+}
+.style_head {
+  white-space: nowrap;
+  text-align: center;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border-radius: 6px;
+  border: 1.888px solid #d7d7d7;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 12px 15px;
+  margin-right: 8px;
+  cursor: pointer;
+  color: #000;
+}
+.active .style_head {
+  color: #fff;
+  border: 1.888px solid rgb(42 42 42) !important;
+  opacity: 0.8;
+  background-color: #2a2a2a;
+}
+.style_main_head {
+    font-family: Lato, sans-serif !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 100%;
+    color: #454545;
+    font-size: 29px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.pearls-tab-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.pearls-tab-box {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+  a.view-all-btn {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(69, 69, 69, 1);
+    padding: 12px 18px;
+    border: 1px solid rgba(69, 69, 69, 1);
+    border-radius: 6px;
+    margin-top: 0px;
+    display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  /* .pearls-collection-listing .product-block {
+    width: 33.33%;
+    min-width: 33.33%;
+    margin-bottom: 20px;
+  } */
+}
+@media (min-width: 750px) {
+  .pearls-tab-box-content .collection-listing .product-list {
+  justify-content: center;
+}
+  .mobile_show_only{
+    display:none;
+  }
+}
+@media (max-width: 750px) {
+  .remain_product , .first-product{
+   width:auto;
+    display: none;  
+}
+  .mobile_show_only {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+}
+  .remain_product {
+    flex-wrap: nowrap !important;
+}
+  .pearls-tab-box-content .collection-listing .product-list {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+}
+  a.view-all-btn {
+    margin: 0 0 20px 0;
+}
+   
+  .pearls-tab-box-content .collection-listing .product-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.pearls-tab-box-content .collection-listing .product-list {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+  .pearls-collection-listing .product-block {
+    width: calc(50% - 5px);
+    min-width: calc(50% - 5px);
+    margin-bottom: 20px;
+    padding-left: 0px;
+  }
+
+  .pearls-collection-listing .product-block:nth-child(3){
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+  .style_main_head {
+    font-size: 18px;
+    text-align: left;
+    padding: 0 10px;
+    margin-bottom: 12px;
+    margin-top: 32px;
+    font-weight: 700 !important;
+  }
+  .style_head {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 1px 15px;
+    height: 36px;
+    border-radius: 4px;
+  }
+  .pearls-tab-box {
+    margin: 10px auto 22px auto;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+  }
+  .pearls-tab-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pearls-tab-product {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  a.pearls-tab-link:first-child,
+  .pearls-tab-link-st-2:first-child {
+    margin-left: 10px;
+  }
+}
+</style>
+
+<div class="pearls-tab ct_{{ section.id }}">
+  <div class="pearls-tab-inner container">
+    {% if section.settings.style %}
+      {% else %}
+
+      {% if section.settings.img_icon !=blank %}
+        
+      <div class="top-banner-img">
+        <a href="{{ section.settings.link }}">
+          {{
+            section.settings.img_icon
+            | image_url: width: 1600
+            | image_tag: width: 1600, height: 1600, class: 'top-collection-img'
+          }}
+        </a>
+      </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="pearls-tab-box-main">
+      {% if section.settings.style %}
+        {% if section.settings.title !=blank %}
+        <div class="style_main_head">{{ section.settings.title }}</div>
+          {% endif %}
+      {% endif %}
+      <div class="pearls-tab-box">
+        {% if section.settings.style %}
+          {% for block in section.blocks %}
+            <a class="pearls-tab-link-st-2" href="#pearls-{{ forloop.index }}-{{ section.id }}">
+              {% if block.settings.heading !=blank %}
+              <div class="style_head">{{ block.settings.heading }}</div>
+              {% endif %}
+            </a>
+          {% endfor %}
+
+        {% else %}
+          {% for block in section.blocks %}
+            <a class="pearls-tab-link" href="#pearls-{{ forloop.index }}-{{ section.id }}">
+              {% if block.settings.img_icon != blank %}
+                <div class="img_icon-main">
+                  <div class="img_icon-inner">
+                    <!-- <img
+                      src="https://cdn.shopify.com/s/files/1/0796/1959/files/Group_48098996.png?v=1717157559"
+                      class="non-active-img"
+                    >
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0796/1959/files/Group_48098992.png?v=1717157559"
+                      class="active-img"
+                    > -->
+                  </div>
+
+                  {{
+                    block.settings.img_icon
+                    | image_url: width: 400
+                    | image_tag: width: 300, height: 300, class: 'collection-img'
+                  }}
+                </div>
+              {% endif %}
+              <div class="pearls-heading">{{ block.settings.heading }}</div>
+            </a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+    <div class="pearls-tab-product">
+      {% for block in section.blocks %}
+        <div
+          class="pearls-tab-box-content {% if forloop.index == 1 %} active {% endif %}"
+          id="pearls-{{ forloop.index }}-{{ section.id }}"
+        >
+          <div class="collection-listing pearls-collection-listing">
+            <div class="product-list ">
+              {% if block.settings.collection == blank %}
+                {% for i in (1..product_limit) %}
+                  {% render 'onboarding-product-block', forloop: forloop %}
+                {% endfor %}
+              {% else %}
+                {%- liquid
+                  if settings.prod_thumb_shape == 'portrait-23'
+                    assign chosen_aspect_ratio = 0.67
+                  elsif settings.prod_thumb_shape == 'portrait-45'
+                    assign chosen_aspect_ratio = 0.8
+                  elsif settings.prod_thumb_shape == 'square'
+                    assign chosen_aspect_ratio = 1.0
+                  elsif settings.prod_thumb_shape == 'landscape-54'
+                    assign chosen_aspect_ratio = 1.25
+                  elsif settings.prod_thumb_shape == 'landscape-32'
+                    assign chosen_aspect_ratio = 1.50
+                  elsif settings.prod_thumb_shape == 'tallest'
+                    assign chosen_aspect_ratio = 99
+                    for product in block.settings.collection.products limit: product_limit
+                      if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  else
+                    assign chosen_aspect_ratio = 0
+                    for product in collection.products limit: product_limit
+                      if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  endif
+                -%}
+                {% comment %}
+                {% for product in block.settings.collection.products limit: 5 %}
+                  {% render 'product-block',
+                    numb: forloop.index,
+                    per_row: section.settings.grid,
+                    product: product,
+                    manual_image_load: section.settings.enable_carousel,
+                    custom_aspect_ratio: chosen_aspect_ratio,
+                    no_swiping: section.settings.enable_carousel,
+                    no_quick_buy_markup: section.settings.enable_carousel
+                  %}
+                {% endfor %}
+                {% endcomment %}
+                
+
+                 {% assign pro3 = block.settings.product_list %}
+                    <div class="first-product">
+                      {% assign first_product = pro3 | first %}
+                      {% render 'product-block',
+                        numb: 1,
+                        per_row: section.settings.grid,
+                        product: first_product,
+                        manual_image_load: section.settings.enable_carousel,
+                        custom_aspect_ratio: chosen_aspect_ratio,
+                        no_swiping: section.settings.enable_carousel,
+                        no_quick_buy_markup: section.settings.enable_carousel
+                      %}
+                    </div>
+                  <div class="remain_product">
+                    {% for product in pro3 %}
+                        {% unless forloop.index == 1  %}
+                            {% render 'product-block',
+                            numb: forloop.index,
+                            per_row: section.settings.grid,
+                            product: product,
+                            manual_image_load: section.settings.enable_carousel,
+                            custom_aspect_ratio: chosen_aspect_ratio,
+                            no_swiping: section.settings.enable_carousel,
+                            no_quick_buy_markup: section.settings.enable_carousel
+                          %}
+                        {% endunless %}
+                    {% endfor %}
+                  </div>
+
+                <div class="mobile_show_only">
+                  {% for product in pro3 %}
+                    {% render 'product-block',
+                      numb: forloop.index,
+                      per_row: section.settings.grid,
+                      product: product,
+                      manual_image_load: section.settings.enable_carousel,
+                      custom_aspect_ratio: chosen_aspect_ratio,
+                      no_swiping: section.settings.enable_carousel,
+                      no_quick_buy_markup: section.settings.enable_carousel
+                    %}
+                  {% endfor %}
+                  </div>
+
+                
+              {% endif %}
+            </div>
+
+            {% if block.settings.img_icon_banner != blank %}
+              {{
+                block.settings.img_icon_banner
+                | image_url: width: 1600
+                | image_tag: width: 1600, height: 1600, class: 'bottom-collection-img'
+              }}
+            {% elsif block.settings.video != blank %}
+              {{
+                block.settings.video
+                | media_tag:
+                  autoplay: 'autoplay',
+                  loop: 'loop',
+                  muted: 'muted',
+                  playsinline: 'playsinline',
+                  controls: false
+              }}
+            {% endif %}
+         <a class="view-all-btn" href='{{ block.settings.collection.url }}'>{{ block.settings.view_text }}</a>
+          </div>
+
+        
+        </div>
+      {% endfor %}
+    </div>
+                       
+
+
+                        
+  </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    $('.ct_{{ section.id }} .pearls-tab-box').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        //$($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        $(".ct_{{ section.id }} .pearls-tab-box-content").removeClass('active');
+          content = $($(this).attr('href'));
+       // content.hide();
+        active = $(this);
+
+        active.addClass('active');
+        content.addClass('active');
+        return false;
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "pearls-collection-tabing",
+  "class": "pearls-collection-tabing",
+  "settings": [
+     {
+        "type": "image_picker",
+        "id": "img_icon",
+        "label": "Top Image"
+      },
+     {
+        "type": "url",
+        "id": "link",
+        "label": "Top image link"
+      },
+    {
+          "type": "header",
+          "content": "Top header Tabing style 2"
+        },
+        {
+          "type": "checkbox",
+          "id": "style",
+          "label": "style 2",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "style 2 heading",
+          "default": "Shop By Price Range"
+        }
+
+  ],
+  "blocks": [
+    {
+      "type": "Collection-tab",
+      "name": "Collection-tab",
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "img_icon",
+        "label": "Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Collection Name"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+         {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 5
+      },
+        {
+        "type": "text",
+        "id": "view_text",
+        "default": "View All Necklaces",
+        "label": "View all button text"
+      },
+        
+        {
+        "type": "image_picker",
+        "id": "img_icon_banner",
+        "label": "Banner Image"
+      },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "A Shopify-hosted video"
+        }
+
+
+
+      ]
+    }
+  ],
+  "presets": [{
+  "name": "pearls-collection-tabing"
+  }
+  ]
+}
+{% endschema %}

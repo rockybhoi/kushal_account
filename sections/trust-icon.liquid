@@ -1,0 +1,52 @@
+<div class="trust-icon-main">
+  <div class="trust-icon-inner">
+    {% for block in section.blocks %}
+      <div class="trust-icon-box">
+        <div class="icon-img" >
+        <img src="{{ block.settings.img | img_url:'master' }}" width="{{ block.settings.img.width }}" height="{{ block.settings.img.height }}">
+        </div>
+        <div class="trust-content" >
+        <div class="trust-content-one" >{{ block.settings.heading }}</div>
+        <div class="trust-content-secend" >{{ block.settings.sec }}</div>
+          
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "trust-icon",
+  "class": "trust-icon",
+  "settings": [],
+  "blocks": [{
+    "type":"box",
+    "name":"box",
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "image_with_text_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "sec",
+        "label": "Sub-heading"
+      }
+
+
+
+    ]
+  }],
+  "presets":[{
+  "name": "trust-icon"
+
+  }]
+}
+{% endschema %}

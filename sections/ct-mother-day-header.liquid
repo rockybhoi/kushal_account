@@ -1,0 +1,52 @@
+<style>
+  .template--ct-titlemothers-day main.wizzy-main-content {
+    background: linear-gradient(90deg, rgba(157, 153, 214, 0.25) -38.49%, rgba(255, 255, 255, 0.3) 52.73%, rgba(157, 153, 214, 0.25) 147.67%);
+}
+  @font-face {
+    font-family: 'Arista Pro';
+    src: url('https://cdn.shopify.com/s/files/1/0796/1959/files/AristaProAlternate-Thin.woff2?v=1714469804') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+  .ct-mother-day-header-inner {
+    text-align: center;
+    padding: 0 10px;
+}
+  .ct-mother-day-header-inner img{
+    width:100%;
+    max-width:500px;
+    margin-top: 50px;
+  }
+  @media(max-width:750px){
+    .ct-mother-day-header-inner img {
+    max-width: 270px;
+    margin-top: 50px;
+}
+  }
+</style>
+
+<div class="ct-mother-day-header-inner">
+  <img src="{{ section.settings.img | img_url:'master' }}" width="{{ section.settings.img.width }}" height="{{ section.settings.img.height }}">
+</div>
+
+
+{% schema %}
+  {
+    "name": "ct-mother-day-header",
+    "class": "ct-mother-day-header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      }
+
+    ],
+    "presets": [{
+    "name": "ct-mother-day-header"
+      
+    }]
+  }
+{% endschema %}

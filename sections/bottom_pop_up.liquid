@@ -1,0 +1,474 @@
+<style>
+ @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+@media (min-width: 750px) {
+  .bottom_pop_up,
+  .side_fixx {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .bottom_pop_head_top {
+    text-align: center;
+    padding: 12px 0 25px 0;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .bottom_pop_head_top span {
+    font-weight: 800;
+  }
+  .template-suffix-store-details .bottom_pop_up {
+    display: none;
+}
+  .template-suffix-store-details.Scroll_stop_pop {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+  .store_img-inner {
+    width: 100%;
+    max-width: 100%;
+    display: none;
+  }
+
+  .bottom_pop_up_active:before {
+    content: "";
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.38);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    z-index: 11111;
+    pointer-events: all;
+    display: none;
+  }
+  .template-product .bottom_pop_up_active:before {
+    display: none;
+  }
+
+  .bottom_pop_up {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 11111111111111111111111111111111111111111111111111;
+    border-radius: 0;
+    padding: 7px;
+    background: rgba(0, 0, 0, 0.89);
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom_pop_close {
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    display: flex;
+    cursor: pointer;
+    height: 42px;
+    width: 42px;
+    align-items: center;
+    justify-content: center;
+    fill: #fff;
+  }
+  .bottom_pop_close svg {
+    width: 100%;
+    height: 100%;
+  }
+  .review_img {
+    margin: 3px 0 0 0;
+    width: 100%;
+    max-width: 120px;
+  }
+  .bottom_pop_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .bottom_pop_link {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 0;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bottom_pop_head {
+    font-size: 18px;
+    color: #cf2228;
+    width: 100%;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+  }
+  .bottom_pop_head strong {
+    color: #000;
+  }
+  .palystore {
+    max-width: 79px;
+    width: 100%;
+  }
+  .appstore {
+    width: 100%;
+    max-width: 63px;
+  }
+  .playMain {
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 152px;
+    height: 42px;
+    padding: 10px 10px 16px 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0 6px 0;
+    border-radius: 42.804px;
+    background: #cf2228;
+    box-shadow: 1.2971px 2.59421px 9.07973px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .bottom_pop_code-main {
+    text-align: center;
+    padding-top: 12px;
+  }
+  .ct_pop_botom_btn a {
+    display: flex !important;
+    padding: 13px 0px 15px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 42.804px;
+    background: #cf2228;
+    box-shadow: 1.297px 2.594px 9.7px 0px #000;
+    color: #fff;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  .POP_colse_botom {
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .ct_pop_botom_btn {
+    margin-top: 31%;
+    width: 100%;
+    padding: 0 43px;
+  }
+  .store_img {
+    width: 214px;
+  }
+  .bottom_pop_code {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+  .bottom_pop_code svg {
+    width: 45px;
+    height: 45px;
+  }
+  .bottom_pop_head-inner {
+    max-width: 50%;
+    margin: 0 auto;
+    letter-spacing: normal;
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid #838383;
+    color: #333;
+    font-size: 20.903px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bottom_pop_head-inner span {
+    color: #333;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .bottom_pop_head-bottom {
+    width: 100%;
+    max-width: 215px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .bottom_pop_head-bottom span {
+    width: 100%;
+    display: inline-flex;
+    height: 62px;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    margin-top: 11px;
+    padding-top: 0;
+    border-radius: 10px;
+    border: 1px dashed #fff;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25.269px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .side_fixx {
+    display: none;
+    color: #fff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    background: #000;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    position: fixed;
+    bottom: 25px;
+    z-index: 1111;
+    width: 85px;
+    right: -25px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+  }
+  .side_fixx:before {
+    content: "";
+    width: 2px;
+    background: #fff;
+    position: absolute;
+    height: 12px;
+    transform: rotateZ(90deg) translateX(-50%);
+    top: 24px;
+    left: 50%;
+  }
+  .side_fixx strong {
+    font-weight: 500;
+    color: #fff;
+    padding-left: 2px;
+  }
+  
+  .side_fixx.pop_active {
+    /* display: flex; */
+    bottom: 250px;
+  }
+}
+
+.POP_colse_botom.bottom_pop_close {
+  position: inherit;
+  display: inherit;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  fill: #fff;
+}
+.Scroll_stop_pop {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+   
+</style>
+
+<div class="side_fixx     pop_active ">
+  {{ section.settings.top_side }}
+</div>
+<div class="bottom_pop_up ct_popup {% unless template.name == "product" %}   {% endunless %} ">
+  <div class="bottom_pop_close">
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44" viewBox="0 0 43 44" fill="none">
+  <path d="M21.4688 40.2441C31.0938 40.2441 38.9688 32.1816 38.9688 22.3274C38.9688 12.4733 31.0938 4.41077 21.4688 4.41077C11.8438 4.41077 3.96875 12.4733 3.96875 22.3274C3.96875 32.1816 11.8438 40.2441 21.4688 40.2441Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.5166 27.3978L26.4216 17.257" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26.4216 27.3978L16.5166 17.257" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+  </div>
+  <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+    <div class="bottom_pop_head_top">
+      Save ₹200
+    </div>
+    {% if section.settings.textt != blank %}
+      <div class="bottom_pop_head">
+        <!-- <div class="bottom_pop_head-inner">
+          <span>App Exclusive!</span><br>
+          ₹200 Off
+        </div> -->
+        <div class="bottom_pop_head-bottom">
+          App exclusive code <br>
+          <span>APP200</span>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="bottom_pop_link">
+      {% if section.settings.dosco != blank %}
+        <div class="bottom_pop_code-main">
+          <div class="bottom_pop_code">           
+            <div class="store_img">
+              <img class="store_img-inner ct_iphone notlazy" loading="eager" src="{{ section.settings.appimage | image_url: width: 200 }}" data-src="{{ section.settings.appimage | image_url: width: 200 }}" width="{{ section.settings.appimage.width }}" height="{{ section.settings.appimage.height }}" alt="{{ section.settings.appimage.alt }}"/>
+              <img class="store_img-inner ct_android notlazy" loading="eager" src="{{ section.settings.goimage | image_url: width: 200 }}" data-src="{{ section.settings.goimage | image_url: width: 200 }}" width="{{ section.settings.goimage.width }}" height="{{ section.settings.goimage.height }}" alt="{{ section.settings.goimage.alt }}"  />
+              <img class="review_img notlazy" alt="review_img" loading="eager" src="https://cdn.shopify.com/s/files/1/0796/1959/files/Group_35_2.png?v=1718782503" data-src="https://cdn.shopify.com/s/files/1/0796/1959/files/Group_35_2.png?v=1718782503" width="120" height="19" />
+            </div>
+          </div>
+        </div>
+      {% endif %}    
+    </div>
+  </a>
+    <div class="ct_pop_botom_btn">
+      <a href="{{ section.settings.full }}">Switch to the App</a>
+      <div class="POP_colse_botom bottom_pop_close">Continue with Browser</div>
+    </div>
+</div>
+
+<script>
+  if ($(window).width() < 760) {        
+  jQuery('.bottom_pop_close').on('click',function(){
+    jQuery('.bottom_pop_up').hide();
+      jQuery('#shopify-section-bottom_pop_up').removeClass("bottom_pop_up_active");
+      jQuery('.side_fixx').addClass("pop_active");
+    jQuery('body').removeClass("Scroll_stop_pop");    
+  });
+  jQuery('.side_fixx').on('click',function(){
+    jQuery('.bottom_pop_up').show();
+    jQuery('body').addClass("Scroll_stop_pop");
+    jQuery('body').addClass("bottom_pop_active");
+    jQuery('#shopify-section-bottom_pop_up').addClass("bottom_pop_up_active");
+    jQuery('.side_fixx').removeClass("pop_active")
+  })
+   var isshow = localStorage.getItem('isshow');
+    if (isshow== null) {
+        jQuery('body').addClass("Scroll_stop_pop");
+        localStorage.setItem('isshow', 1);             
+    }
+  else
+    {
+      jQuery('.bottom_pop_up').hide();
+      jQuery('.ct_popup').removeClass('pop_active')
+      jQuery('#shopify-section-bottom_pop_up').removeClass("bottom_pop_up_active");
+      jQuery('.side_fixx').addClass('pop_active')     
+    }
+  if (navigator.userAgent.match(/Android|Opera Mini|IEMobile/i))
+  {
+     jQuery('.bottom_pop_inner').addClass('Andriod_link');
+     jQuery('.ct-complete-checkout-main').addClass('ct-complete-checkout-main_Andriod');
+    jQuery('.bottom_pop_inner').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+    jQuery('.ct_pop_botom_btn a').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+    jQuery('.store_img .ct_android').show();
+  }
+  else
+  {    
+     jQuery('.bottom_pop_inner').addClass('IOS_link');
+    jQuery('.ct-complete-checkout-main').addClass('ct-complete-checkout-main_IOS');
+        jQuery('.bottom_pop_inner').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+        jQuery('.ct_pop_botom_btn a').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+    jQuery('.store_img .ct_iphone').show();
+  }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "bottom pop up",
+
+  "settings": [
+    {
+      "type": "url",
+      "id": "full",
+      "label": "Full Link"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "top_side",
+      "label": "Side Heading"
+    },
+
+    {
+  "type": "html",
+  "id": "textt",
+  "label": "Heading"
+},
+
+
+    {
+      "type": "text",
+      "id": "dosco",
+      "label": "Discount Code",
+      "default": "Lorem 123"
+    },
+    {
+      "type": "url",
+      "id": "linkone",
+      "label": "Play Store Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "goimage",
+      "label": "Play Store Image"
+    },
+
+    {
+      "type": "url",
+      "id": "linktwo",
+      "label": "App Store Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "appimage",
+      "label": "App Store Image"
+    }
+
+
+
+  ],
+  "presets":[{
+    "name": "bottom pop up"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

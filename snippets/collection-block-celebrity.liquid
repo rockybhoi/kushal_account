@@ -1,0 +1,40 @@
+<div class="product-block collection-block celebrity-block" {{ custom_attrs }} {% if animate %}data-cc-animate{% endif %}>
+  <div class="block-inner">
+  {% if link != blank or button_url != blank %}
+    <a  aria-label="{{ celeb_name }}"  class="product-link ct_celebrity_link" href="{% if link != blank %}{{ link }}{% else %}{{ button_url }}{% endif %}">
+  {% endif %}
+      <div class="image-cont">
+
+        {% if custom_image != blank %}
+          <div class="product-block__image product-block__image--primary product-block__image--active">
+            {% render 'responsive-image', image: custom_image, manual_image_load: manual_image_load, aspect_ratio: custom_aspect_ratio, cover: true, no_max_width: true %}
+          </div>
+        {% else %}
+          <div class="placeholder-image placeholder-image--shape-{{ settings.coll_grid_image_shape }}">{{ 'collection-1' | placeholder_svg_tag }}</div>
+        {% endif %}
+      </div>
+      <div class="celebrity-opacity"></div>
+      <div class="celebrity-info">
+        {% if celeb_name != blank %}
+        <div class="celebrity__title">{{ celeb_name }}</div>
+        {% endif %}
+        
+        {% if celeb_info != blank %}
+        <div class="celebrity__text">{{ celeb_info }}</div>
+        {% endif %}
+        
+        {%- if button_label != blank -%}
+        <div class="celebrity__button-row">
+          {% if button_url != blank %}
+          <a class="celebrity__button" href="{{ button_url }}">{{ button_label }}</a>
+          {% else %}
+          <p class="celebrity__button">{{ button_label }}</p>
+          {% endif %}
+        </div>
+        {%- endif -%}
+      </div>
+    {% if link != blank or button_url != blank %}
+    </a>
+    {% endif %}
+  </div>
+</div>

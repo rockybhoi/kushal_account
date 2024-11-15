@@ -1,0 +1,164 @@
+<style>
+  .Round-collection-box-main .main_title {
+    font-family: Lato;
+    font-size: 29px;
+    margin-bottom: 20px;
+    color: #454545;
+    text-align:center;
+    line-height: normal;
+}
+  .Round-collection-box-main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 630px;
+}
+  .Round-collection-box-inner {
+    display: flex;
+    gap: 22px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  a.Round-box {
+    width: calc(25% - 17px );
+    line-height: 0;
+}
+  a.Round-box:first-child{
+    margin-bottom:10px;
+  }
+a.Round-box img {
+    border-radius: 100%;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgba(207, 34, 40, 1);
+    padding: 2px;
+      aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+  .Round-box-title {
+    color: rgba(69, 68, 68, 1);
+    margin-top: 8px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    text-align: center;
+} 
+  .Bottom_link_btn {
+    border: 1px solid #454545;
+    color: #454545;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+  .Round-collection-box-main {
+    text-align: center;
+}
+ 
+    @media(max-width:750px){
+      .Round-collection-box-main .main_title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: left;
+}
+  .Round-box-title {
+    font-size: 14px;
+    line-height: 18px;
+}
+      a.Round-box:first-child{
+        margin-bottom:10px;
+      }
+      .Round-collection-box-inner {
+    gap: 10px;
+    justify-content: center; 
+}
+      a.Round-box {
+    width: calc(25% - 9px);
+}
+      .Round-collection-box-main {
+    margin-top: 32px;
+    margin-bottom: 22px;
+}
+      a.Round-box img {
+    border: 1px solid rgba(207, 34, 40, 1);
+    padding: 1px;
+}
+    }
+</style>
+<div class="Round-collection-box-main container">
+  {% if section.settings.title !=blank %}
+  <div class="main_title">{{ section.settings.title }}</div>
+    {% endif %}
+  <div class="Round-collection-box-inner">
+    {% for block in section.blocks %}
+    <a href="{{ block.settings.link }}" class="Round-box">
+      {% if block.settings.img !=blank %}
+      {{ block.settings.img | image_url: width: 500 | image_tag: widths: '500,300' , class:'Round-box-image' }}
+      {% endif %}
+      <div class="Round-box-title">{{ block.settings.title }}</div>
+    </a>
+    {% endfor %}
+  </div>
+  {% if section.settings.link != blank %}
+    <a class="Bottom_link_btn" href="{{ section.settings.link }}">{{ section.settings.link-text }}</a>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Round-collection-box",
+    "class": "Round-collection-box",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Main title"
+      },
+      {
+          "type": "text",
+          "id": "link-text",
+          "label": "Button Text"
+      },
+      {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+      }
+    ],
+    "blocks": [{
+      "type": "Collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Collection link"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Collection text"
+        }
+
+
+      ]
+    }],
+    "presets": [{
+      "name": "Round-collection-box"
+    }]
+  }
+{% endschema %}

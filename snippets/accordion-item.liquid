@@ -1,0 +1,50 @@
+{% comment %}
+  Parameters:
+  - title {string} [required] - The item title or summary
+  - content {string} [required] - The item content
+  - add_content_class {string} [optional] - Additional class(es) to add to the content element
+  - toggle_icon {string} [optional] - Custom icon markup, e.g. '<span class="icon">...</span>'
+  - item_open {boolean} [optional] - Whether the item should be open on page load. Default is false.
+{% endcomment %}
+
+{%- liquid
+  assign item_attr = 'class="cc-accordion-item"'
+
+  if item_open == true
+    assign item_attr = 'class="cc-accordion-item is-open" open'
+  endif
+
+  if add_content_class
+    assign content_class = add_content_class | prepend: ' '
+  endif
+-%}
+
+<details {{ item_attr }}>
+  <summary class="cc-accordion-item__title ct_cc-accordion-item__title">{{- title -}}{{- toggle_icon -}}
+
+  
+    {% if template.name == 'product' %}
+      <svg class="cc-accordion_icon cc-accordion_icon_plus" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1532_1096)"> <rect width="12" height="12" fill="white"></rect> <rect x="5" width="2" height="12" rx="1" fill="#454545" fill-opacity="0.6"></rect> <rect x="12" y="5" width="2" height="12" rx="1" transform="rotate(90 12 5)" fill="#454545" fill-opacity="0.6"></rect> </g> <defs> <clipPath id="clip0_1532_1096"> <rect width="12" height="12" fill="white"></rect> </clipPath> </defs> </svg>
+    {% else %}
+         <svg class="cc-accordion_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M12 17.3C11.3 17.3 10.6 17.03 10.07 16.5L3.55002 9.98001C3.26002 9.69001 3.26002 9.21001 3.55002 8.92001C3.84002 8.63001 4.32002 8.63001 4.61002 8.92001L11.13 15.44C11.61 15.92 12.39 15.92 12.87 15.44L19.39 8.92001C19.68 8.63001 20.16 8.63001 20.45 8.92001C20.74 9.21001 20.74 9.69001 20.45 9.98001L13.93 16.5C13.4 17.03 12.7 17.3 12 17.3Z" fill="#292D32"/>
+</svg>
+    {% endif %}
+    
+ 
+  </summary>
+  <div class="cc-accordion-item__panel">
+    <div class=" cc-accordion-description  cc-accordion-item__content{{ content_class }}">
+      {{- content -}}
+
+      {%- if template == "product" -%}
+<div class="pro_info_main">
+        <p class="pro_infP">Additional Information</p>
+  <p><strong>Country of Origin:</strong>India<br><strong style="margin-top: 8px;display: inline-block;">Brand Owned and Marketed by: </strong> Kushal's Retail Pvt. Ltd. <br>#54/2, 2nd Floor, Police Station Road, Basavanagudi, Bangalore 560004<br></p>
+</div>
+      {% endif %}
+
+      
+    </div>
+  </div>
+</details>

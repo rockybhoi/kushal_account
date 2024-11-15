@@ -1,0 +1,47 @@
+<style>
+  .WSW-Banner-main{
+    width:100%;
+    line-height: 0;
+  }
+  .WSW-Banner-main img{
+    width:100%;
+  }
+  .WSW-Banner-mob{
+    display:none;
+  }
+  @media(max-width:750px){
+  .WSW-Banner-mob{
+    display:block;
+  }
+  .WSW-Banner-desk{
+    display:none;
+  }
+  }
+</style>
+<div class="WSW-Banner-main">
+  <img src="{{ section.settings.img1 | img_url:'master' }}" class="WSW-Banner-desk" alt="">
+  <img src="{{ section.settings.img2 | img_url:'master' }}" class="WSW-Banner-mob" alt="">
+</div>
+
+{% schema %}
+  {
+    "name": "WSW-Banner",
+    "class": "WSW-Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Mobile Image"
+      }
+
+    ],
+    "presets":[{
+    "name": "WSW-Banner"
+    }]
+  }
+{% endschema %}

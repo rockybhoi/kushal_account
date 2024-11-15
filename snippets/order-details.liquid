@@ -1,0 +1,629 @@
+<div class="order-box-content" id="tab-1">
+  <div class="order-box-content_inneer_main">
+    <div class="order-box-content_inneer order-box-content_secend">
+      <div class="order-box_header">
+        <span class="ct_main_status"></span>
+      </div>
+      <div class="order-box_mid_content">
+        <div class="ct_order_dit">
+          {% for line_item in order.line_items %}
+            {% if line_item.sku == ct_param_sku %}
+              <div
+                class="ct_order_wrap"
+                data-waybill="{{ ct_param_value }}"
+                data-sku="{{ line_item.sku }}"
+                data-qty="{{ line_item.quantity }}"
+                data-order="{{ order.id }}"
+              >
+                <div class="ct_order_product_main  {{ forloop.index }}">
+                  <img class="ct_order_product_img" src="{{ line_item.product.featured_image | img_url:'master' }}">
+
+                  <div class="ct_order_product_content">
+                    <div class="order_product_title">{{ line_item.product.title }}</div>
+                    <div class="order_quantity">Qty: {{ line_item.quantity }}</div>
+                    {% if line_item.product.variants.size > 1 %}
+                      <div class="variant">{{ line_item.variant.title }}</div>
+                    {% endif %}
+                    <div class="order_total">
+                      {{ line_item.final_price | money }}
+                      <div class="payment_type">| {{ order.gateway }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order_del_main " style="display:none">
+                  <div class="order_del_stetus">
+                    <div class="order_del_stetus_inner">
+                      <div class="order_del_header">
+                        <div class="order_del_date">
+                          <span class="order_del_date_fisrt">Jun 31</span>
+                          <span class="order_del_date_last">Jul 10</span>
+                        </div>
+                      </div>
+                      <div class="order_progress">
+                        <div class="order_progress_inner" style=""></div>
+                      </div>
+                      <div class="order_progress_step"></div>
+                    </div>
+                    <div class="ct_track_no" style="display:none"></div>
+
+                    <div class="order_footer_btn"></div>
+                  </div>
+
+                  <div class="ct-popup-background"></div>
+                  <div class="ct-popup-modal">
+                    <p class="ct-exchange-title">Exchange Guidelines</p>
+                    <ul class="ct-exchange-lists">
+                      <li>
+                        <strong>Visit at store:</strong> Exchange of products is only possible by visiting any of our
+                        Kushals stores.
+                      </li>
+                      <li>
+                        <strong>Exchange of products:</strong> You can swap your product for any other product in the
+                        store of equal or greater value.
+                      </li>
+                      <li>
+                        <strong>Condition of item:</strong> Items need to be in new, unused, and original condition.
+                      </li>
+                      <li><strong>Receipt:</strong> Always bring the original receipt or proof of purchase.</li>
+                      <li><strong>Exchange window:</strong> Visit store on or before the return window closes.</li>
+                    </ul>
+                    <div class="ct-popup-buttons">
+                      <button class="ct_back_item">Back</button>
+                      <button onclick="window.location.href='/pages/stores'" class="store-locator">
+                        Store Locator
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="ct_border"></div>
+                </div>
+              </div>
+            {% else %}
+              {% capture after_html %}
+                       {% if line_item.fulfillment.tracking_number == ct_param_value and  line_item.sku == ct_param_sku  %}
+                         {% assign flag_show= true %}
+                         {% elsif ct_param_value == blank and ct_param_sku != blank %}
+                         {% assign flag_show= true %}
+                         
+                         {% else %}
+                         {% assign flag_show= false %}
+                         
+                         {% endif %}
+                      {% if flag_show %}
+                      <div class="ct_other_prod_wrap" style="display:none">
+                        <a href="{{ order.customer_url | append:"?waybill=" | append:  line_item.fulfillment.tracking_number | append:"&sku=" | append:  line_item.sku  }}">
+                        <div class="ct_order_product_main  {{ forloop.index }}">
+                          <img class="ct_order_product_img" src="{{ line_item.product.featured_image | img_url:'master' }}">
+        
+                          <div class="ct_order_product_content">
+                          
+                            <div class="order_product_title">{{ line_item.product.title }}</div>
+                            <div class="order_quantity">Qty: {{ line_item.quantity }}</div>
+                            {% if line_item.product.variants.size > 1 %}
+                              <div class="variant">{{ line_item.variant.title }}</div>
+                            {% endif %}
+                            <div class="order_total">
+                              {{ line_item.final_price | money }}
+                              <div class="payment_type">| {{ order.gateway }}</div>
+                            </div>
+                          </div>
+                        </div>
+                        </a>
+                      </div>
+                         {% endif %}
+                      {% endcapture %}
+              {% assign all_products_html = all_products_html | append: after_html %}
+            {% endif %}
+          {% endfor %}
+
+          {{ all_products_html }}
+
+          <div class="order_address_main">
+            <div class="order_address_head">Delivery Address</div>
+            <div class="order_address_detils">
+              <div class="order_name">
+                {{ order.billing_address.name }}
+                {% if order.billing_address.phone != blank -%}
+                  <span> | {{ order.billing_address.phone }}</span>
+                {%- endif %}
+              </div>
+              <div class="order_address">
+                <p>
+                  {{ order.shipping_address.street }}
+                  {{ order.shipping_address.city }}, {{ order.shipping_address.province }}
+                </p>
+                <p>
+                  {{ order.shipping_address.country }}
+                  {{ order.shipping_address.zip }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct_border"></div>
+
+          <div class="view_order">
+            <span>View Order Details</span>
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.6705 6.4545C8.10982 6.89381 8.10982 7.60616 7.6705 8.04547L2.0455 13.6705C1.60616 14.1098 0.893849 14.1098 0.454502 13.6705C0.015166 13.2312 0.0151659 12.5188 0.454502 12.0795L5.28404 7.24999L0.454501 2.42046C0.0151655 1.98115 0.0151655 1.2688 0.454501 0.829485C0.893849 0.390171 1.60616 0.390171 2.0455 0.829485L7.6705 6.4545Z" fill="#454545"/>
+            </svg>
+          </div>
+
+          <div class="ct_help_btn">
+            <span>Need Help ?</span>
+            <button class="ct_help">Talk to us</button>
+          </div>
+        </div>
+
+        <div class="order_pro_full_detils">
+          <div class="order-box_backBtn_sec">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292885 6.70711C-0.097616 6.31661 -0.097616 5.68341 0.292885 5.29291L5.29289 0.292891C5.68342 -0.0976303 6.31658 -0.0976302 6.70711 0.292891C7.09763 0.683421 7.09763 1.31658 6.70711 1.70711L2.41419 6.00001L6.70711 10.2929C7.09763 10.6834 7.09763 11.3166 6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292885 6.70711Z" fill="#454545"></path>
+            </svg>
+            <span>Return to order</span>
+          </div>
+          <div class="order_pro_head">
+            <div class="order_pro_title">Shipping Soon</div>
+            <div class="order_date">
+              <span>Order Date</span>
+              <b>{{ order.created_at | date: format: 'month_date_year' }}</b>
+            </div>
+            <div class="order_num">
+              <span>Order #</span>
+              <b>{{ order.name }}</b>
+            </div>
+            <div class="order_total  ">
+              <span>Order Total</span>
+              <b>
+                {%- if settings.cart_currency_code_enabled -%}
+                  {{- order.total_price | money_with_currency -}}
+                {%- else -%}
+                  {{- order.total_price | money -}}
+                {%- endif -%}
+              </b>
+            </div>
+            <div class="order_pay">
+              <span>Payment</span>
+              <b>{{ order.gateway }}</b>
+            </div>
+          </div>
+
+          <div class="order_pro_body">
+            <div class="order_pro_body_title">Item Details</div>
+            {% for line_item in order.line_items %}
+              <div class="ct_order_product_main  {{ forloop.index }}">
+                <img class="ct_order_product_img" src="{{ line_item.product.featured_image | img_url:'master' }}">
+
+                <div class="ct_order_product_content">
+                  <div class="order_product_title">{{ line_item.product.title }}</div>
+                  <!-- <div class="order_quantity">Qty: {{ line_item.quantity }}</div> -->
+                  {% if line_item.product.variants.size > 1 %}
+                    <!-- <div class="variant">{{ line_item.variant.title }}</div> -->
+                  {% endif %}
+                  <div class="order_total">
+                    {{ line_item.final_price | money }}
+                    <!-- <div class="payment_type">| {{ order.gateway }}</div> -->
+                  </div>
+                  <div class="order_status rd_{{ line_item.sku }}">
+                    <div class="order_status_inner">
+                      Confirmed
+                      <span>Shipping soon</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+
+            <div class="ct_border"></div>
+
+            <div class="order_address_main">
+              <div class="order_address_head">Delivery Address</div>
+              <div class="order_address_detils">
+                <div class="order_name">
+                  {{ order.billing_address.name }}
+                  {% if order.billing_address.phone != blank -%}
+                    <span> | {{ order.billing_address.phone }}</span>
+                  {%- endif %}
+                </div>
+                <div class="order_address">
+                  <p>
+                    {{ order.shipping_address.street }}
+                    {{ order.shipping_address.city }}, {{ order.shipping_address.province }}
+                  </p>
+                  <p>
+                    {{ order.shipping_address.country }}
+                    {{ order.shipping_address.zip }}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ct_border"></div>
+
+            <div class="ct_order_summary">
+              <div class="ct_order_summary_heading">
+                <span>Order Summary</span>
+                <a href="#">Download Invoice</a>
+              </div>
+              <div class="order_summary_body">
+                <div class="item item_total">
+                  <span>Item Total (inclusive of Taxes)</span>
+                  <b>
+                    {%- if settings.cart_currency_code_enabled -%}
+                      {{- order.total_price | money_with_currency -}}
+                    {%- else -%}
+                      {{- order.total_price | money -}}
+                    {%- endif -%}
+                  </b>
+                </div>
+
+                {%- if order.cart_level_discount_applications != blank -%}
+                  {%- for discount_application in order.cart_level_discount_applications -%}
+                    <div class="item item_discount">
+                      <span>Discount</span><b>{{ discount_application.total_allocated_amount | money }}</b>
+                    </div>
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {% for shipping_method in order.shipping_methods %}
+                  <div class="item item_fee">
+                    <span>Shipping Fee</span><b>{{ shipping_method.price | money }}</b>
+                  </div>
+                {% endfor %}
+
+                <div class="item item_total_amount">
+                  <span>Total Amount Paid</span
+                  ><b>
+                    {%- if settings.cart_currency_code_enabled -%}
+                      {{- order.total_price | money_with_currency -}}
+                    {%- else -%}
+                      {{- order.total_price | money -}}
+                    {%- endif -%}
+                  </b>
+                </div>
+              </div>
+            </div>
+
+            <div class="ct_help_btn">
+              <span>Need Help ?</span>
+              <button>Talk to us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.order-box_backBtn_sec').on('click', function () {
+    $('.order-box-content_inneer_main').removeClass('active');
+  });
+
+  // Get the order Status
+  var order_date = '{{ order.created_at  }}';
+  var formattedDate = order_date.substring(0, 10);
+  var settings = {
+    url: `https://dev-middleware.technoboost.in/api/v1/customer/order-tracking/{{order.name}}/${formattedDate}`,
+    //"url": `https://dev-middleware.technoboost.in/api/v1/customer/order-tracking/{{order.name}}`,
+    method: 'GET',
+    timeout: 0,
+  };
+
+  $.ajax(settings).done(function (response) {
+    if ($.isEmptyObject(response)) {
+      empty_response(response);
+    } else {
+      all_details(response);
+      var empty_flag = '';
+      $.each(response, function (s, val) {
+        var way_bill = '{{ ct_param_value }}';
+        var sku_flag = false;
+        var empty_flag = '';
+        //  this is the checking the sku matching from api
+        $.each(val.sku, function (sk, sku_val) {
+          if (sku_val != null) {
+            if ((s == way_bill || s == '') && jQuery.inArray('{{ ct_param_sku }}', val.sku) == 0) {
+              sku_flag = true;
+              return false;
+            }
+          }
+        });
+
+        if ((s == way_bill || s == '') && sku_flag == true) {
+          empty_flag = false;
+          if (val && val.trackDetailDTOMap && val.trackDetailDTOMap.length > 0) {
+            var step = ``;
+            var mapLength = val.trackDetailDTOMap.length;
+            jQuery('.order_del_stetus_inner').addClass(`ct_show_${mapLength}`);
+            var dispatch_true = false;
+            mapLength = mapLength - 1;
+
+            $.each(val.trackDetailDTOMap, function (index, det) {
+              var isFirst = index === 0;
+              var isLast = index === mapLength - 1;
+
+              var date = new Date(det.dateTime);
+              var formattedNewDate = '';
+              if (det.dateTime != '') {
+                dispatch_true = det.status;
+                var time = det.dateTime;
+                var dateObj = new Date(time);
+
+                // Format the date to show the month in text and the day
+                var options = { month: 'short', day: 'numeric' };
+                formattedNewDate = date.toLocaleDateString('en-US', options);
+              }
+              var cancel_class = '';
+              if (det.iconIndicator == 'cross') {
+                cancel_class = 'rd_cancel_wrap';
+              }
+              console.log(det.status);
+              step += `<div class="order-step order-step-one ${cancel_class} ${det.dateTime ? 'active' : ''} ${
+                isFirst ? 'first-step' : ''
+              } ${isLast ? 'last-step' : ''}">
+                                             <div class="ct_date">${formattedNewDate}</div>
+                                                    <div class="order_step_check"></div>
+                                                    <span>${det.status}</span>
+                                                 </div>`;
+
+              if (det.iconFlag != false) {
+                var index_val = index + 1;
+                // mapLength=mapLength;
+                if (mapLength >= 1 && index != 0) {
+                  var progress_bar = 100 / mapLength;
+                  var progress = progress_bar * index;
+                } else {
+                  var progress = 20;
+                }
+
+                //progress=100-progress;
+                console.log(progress + ' = ' + index_val);
+                jQuery('.order_progress .order_progress_inner').css('width', progress + '%');
+              }
+            });
+            jQuery('.order_progress_step').html(step);
+
+            var date = new Date(val.dateTime);
+
+            jQuery('.order_del_main').show();
+
+            const options = { month: 'short', day: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+
+            // Get the day and month
+            // var day = date.getDate();
+            // var month = date.toLocaleString('en-US', { month: 'long' });
+
+            // var formattedDate = day + " " + month;
+
+            var jsLang = dispatch_true;
+            switch (jsLang) {
+              case 'Order Placed':
+                jQuery('.order_footer_btn').html(`<button class="ct_cancel_item">Cancel Item</button>`);
+                //jQuery(".ct_track_no").hide();
+                jQuery('.ct_other_prod_wrap').show();
+                break;
+              case 'Dispatched':
+                jQuery('.order_footer_btn').html(
+                  `<a trarger="_blank" href='https://track.kushals.com/?waybill={{ct_param_value  }}' class="ct_track_order">Track order</a><button class="ct_cancel_item">Cancel Item</button>`
+                );
+                jQuery('.ct_other_prod_wrap').show();
+                //jQuery(".ct_track_no").hide();
+
+                break;
+              case 'In Transit':
+                jQuery('.order_footer_btn').html(
+                  `<a trarger="_blank" href='https://track.kushals.com/?waybill={{ct_param_value  }}' class="ct_track_order">Track order</a><button class="ct_cancel_item">Cancel Item</button>`
+                );
+                jQuery('.ct_other_prod_wrap').show();
+                //jQuery(".ct_track_no").hide();
+
+                break;
+              case 'Out For Delivery':
+                jQuery('.order_footer_btn').html(
+                  `<a trarger="_blank" href='https://track.kushals.com/?waybill={{ct_param_value  }}' class="ct_track_order">Track order</a>`
+                );
+                jQuery('.ct_other_prod_wrap').show();
+                //jQuery(".ct_track_no").hide();
+                break;
+              case 'Delivered':
+                jQuery('.order_footer_btn').html(
+                  `<button class="ct_track_order">Return Item</button><button  class="ct_exchange_item">Exchange At Store</button>`
+                );
+                jQuery('.ct_track_no').html(`${val.returnableMessage}`);
+                jQuery('.ct_track_no').show();
+                break;
+              case 'Return Request Rejected':
+                jQuery('.order_footer_btn').html(
+                  `<a class="ct_track_order" href="https://track.kushals.com/returns">Request Again</a>`
+                );
+                jQuery('.ct_track_no').html(`${val.returnableMessage}`);
+                jQuery('.ct_track_no').show();
+              case 'Cancelled':
+                //jQuery(".ct_track_no").hide();
+                break;
+              default:
+              //jQuery(".order_del_main").hide();
+            }
+
+            if (val.status == 'Canceled') {
+              jQuery('.ct_main_status').text(val.status + ' on ' + formattedDate);
+            } else {
+              jQuery('.ct_main_status').text(val.status + ' on ' + formattedDate);
+            }
+            return false;
+          }
+        } else {
+          empty_flag = true;
+        }
+      });
+
+      if (empty_flag == true) {
+        empty_response(response);
+      }
+    }
+  });
+  function all_details(res) {
+    $.each(res, function (s, val) {
+      if (s != 0) {
+        $.each(val.sku, function (sk, sku_val) {
+          jQuery('.rd_' + sku_val).html(`<div class="order_status_inner">
+                                                                    ${val.status}
+                                                                    <span>${val.remark}</span>
+                                                                  </div>`);
+        });
+      }
+    });
+  }
+  function empty_response(response) {
+    // Sample order data if response is empty
+    var order_place_json = {
+      trackDetailDTOMap: [
+        {
+          status: 'Order Placed',
+          dateTime: '{{ order.created_at }}',
+          iconFlag: true,
+        },
+        {
+          status: 'Dispatched',
+          dateTime: '',
+          iconFlag: false,
+        },
+        {
+          status: 'In Transit',
+          dateTime: '',
+          iconFlag: false,
+        },
+        {
+          status: 'Out For Delivery',
+          dateTime: '',
+          iconFlag: false,
+        },
+        {
+          status: 'Delivered',
+          dateTime: '',
+          iconFlag: false,
+        },
+      ],
+    };
+    var step = ``;
+    // Loop through each track detail
+    var formattedDate = '';
+    $.each(order_place_json.trackDetailDTOMap, function (index, det) {
+      console.log(index);
+      console.log(det.status); // Access the status
+      console.log(det.dateTime); // Access the dateTime
+
+      var date = new Date(det.dateTime);
+
+      if (det.dateTime != '') {
+        dispatch_true = det.status;
+        var time = det.dateTime;
+        var dateObj = new Date(time);
+
+        // Format the date to show the month in text and the day
+        var options = { month: 'short', day: 'numeric' };
+        formattedDate = date.toLocaleDateString('en-US', options);
+      }
+      step += `<div class="order-step order-step-one ${det.dateTime ? 'active' : ''}">
+                                             <div class="ct_date">${formattedDate}</div>
+                                                    <div class="order_step_check"></div>
+                                                    <span>${det.status}</span>
+                                                 </div>`;
+    });
+    jQuery('.order_progress_step').html(step);
+    jQuery('.order_progress .order_progress_inner').css('width', '10%');
+    // Assuming dispatch_true is the status you want to check
+    var dispatch_true = order_place_json.trackDetailDTOMap[0].status; // Get the first status
+
+    // Perform actions based on status
+    switch (dispatch_true) {
+      case 'Order Placed':
+        jQuery('.order_footer_btn').html(`<button class="ct_cancel_item">Cancel Item</button>`);
+        jQuery('.ct_other_prod_wrap').show();
+        jQuery('.ct_track_no').hide();
+        break;
+      case 'Dispatched':
+        jQuery('.order_footer_btn').html(
+          `<a trarger="_blank" href='https://track.kushals.com/?waybill={{ct_param_value  }}' class="ct_track_order">Track order</a><button class="ct_cancel_item">Cancel Item</button>`
+        );
+        jQuery('.ct_other_prod_wrap').show();
+        break;
+      case 'In Transit':
+        jQuery('.order_footer_btn').html(
+          `<a trarger="_blank" href='https://track.kushals.com/?waybill={{ct_param_value  }}' class="ct_track_order">Track order</a><button class="ct_cancel_item">Cancel Item</button>`
+        );
+        jQuery('.ct_other_prod_wrap').show();
+        break;
+      case 'Out For Delivery':
+        jQuery('.order_footer_btn').html(
+          `<a trarger="_blank" href='https://track.kushals.com/?waybill={{ct_param_value  }}' class="ct_track_order">Track order</a>`
+        );
+        jQuery('.ct_other_prod_wrap').show();
+        break;
+      case 'Delivered':
+        jQuery('.order_footer_btn').html(
+          `<button class="ct_track_order">Return Item</button><button class="ct_exchange_item">Exchange at Store</button>`
+        );
+        jQuery('.ct_track_no').html(`Return before Sat, 25 July testing data`);
+        break;
+      default:
+        jQuery('.order_del_main').hide();
+        console.log('Unknown status');
+    }
+  }
+
+  jQuery(document).on('click', '.ct_cancel_item', function () {
+    if (window.fcWidget) {
+      window.fcWidget.open(); // This will open the Freshchat widget
+    } else {
+      console.error('Freshchat widget not loaded');
+    }
+    //   var waybill=jQuery(this).closest(".ct_order_wrap").data("waybill");
+    //   var order_id=jQuery(this).closest(".ct_order_wrap").data("order");
+    //   var main_sku=jQuery(this).closest(".ct_order_wrap").data("sku");
+
+    // var data={
+    //   "method_call":"cancel_order_details",
+    //   "order_id":order_id,
+    //   "main_sku":main_sku,
+    //   "waybill":waybill
+    // }
+    //    var settings = {
+    //       "url": "https://gifting.kushals.com/my_account/admin_data.php",
+    //       "method": "POST",
+    //        "data":data,
+    //       "timeout": 0,
+    //     };
+
+    //     $.ajax(settings).done(function (response) {
+    //         console.log(response);
+    //     })
+  });
+  jQuery(document).on('click', '.ct_help_btn .ct_help', function () {
+    if (window.fcWidget) {
+      window.fcWidget.open(); // This will open the Freshchat widget
+    } else {
+      console.error('Freshchat widget not loaded');
+    }
+  });
+
+  jQuery(document).ready(function ($) {
+    // Show popup on button click
+    $('.ct_exchange_item').on('click', function () {
+      $('.ct-popup-background, .ct-popup-modal').show();
+    });
+
+    // Hide popup on back button click
+    $('.ct_back_item').on('click', function () {
+      $('.ct-popup-background, .ct-popup-modal').hide();
+    });
+
+    // Hide popup if clicking on the background overlay
+    $('.ct-popup-background').on('click', function () {
+      $('.ct-popup-background, .ct-popup-modal').hide();
+    });
+  });
+</script>

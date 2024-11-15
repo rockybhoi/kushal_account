@@ -1,0 +1,247 @@
+<style>
+  /* ct-complete-checkout-main css start */
+.ct-complete-checkout-main{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid #BBEE68;
+    background: #D7FF95;
+    position: fixed;
+    left: 0;
+    z-index: 4;
+    bottom: 0;
+  display:none;
+}
+.ct-complete-checkout-inner {
+    width: 100%;
+  padding: 15px 15px 15px 10px;
+  /* padding: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  gap: 10px;
+}
+.ct-complete-checkout-image-main, .ct-complete-checkout-title-main, .ct-complete-checkout-view-btn{
+    width: 100%;
+    max-width: fit-content;
+}
+.ct-complete-checkout-image-main{
+    position: relative;
+}
+.ct-complete-checkout-image-main svg {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+  fill: transparent;
+}
+.ct-complete-checkout-title {
+    color: #35431E;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    max-width: 197px;
+  display:none;
+}
+ .ct-complete-checkout-main_Andriod .and_title{
+    display:block;   
+  }
+  .ct-complete-checkout-main_IOS .ios_title {
+    display:block;   
+  }
+.ct-complete-checkout-view-btn button {
+       color: #35431E;
+    font-family: Lato;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-underline-offset: 4px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+.ct-complete-checkout-view-btn button svg {
+   width: 6px;
+    margin-left: 10px;
+    fill: transparent !important;
+    margin-top: 4px;
+}
+
+.ct-complete-checkout-close-main {
+        position: absolute;
+    top: -15px;
+    right: 4px;
+    display: flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+}
+.ct-complete-checkout-close-main svg{
+    border-radius: 100%;
+    display: flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.ct-complete-checkout-close-main svg path{
+    width: 100%;
+    height: 100%;
+}
+.ct-complete-checkout-image-count {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+}
+.ct-complete-checkout-image-count svg {
+    width: 17px;
+    height: 17px;
+}
+span.ct-complete-checkout--count {
+  filter: drop-shadow(0px 4.667px 4.667px rgba(0, 0, 0, 0.25));
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+  .ct-complete-checkout-title b {
+    font-weight: 700;
+}
+  .ct-complete-checkout-main_Andriod .ios_link_bottom {
+    display: none;
+}
+  .ct-complete-checkout-main_IOS .ios_link_bottom {
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.ct-complete-checkout-view-btn button span{
+  display:none;
+}
+  .ct-complete-checkout-main_Andriod .ANDD-TEXT{
+    display:block;
+     border-bottom: 1px solid #35431E;
+  }
+  .ct-complete-checkout-main_IOS .IOS-TEXT{
+    display:block;
+     border-bottom: 1px solid #35431E;
+  }
+
+
+  @media(max-width:750px){
+    .ct-complete-checkout-main{
+  display:block;
+}
+      @media(max-width:370px){
+        .ct-complete-checkout-main {
+    padding: 12px 10px 12px 10px;
+}
+        .ct-complete-checkout-image-main svg {
+    width: 34px;
+    height: 34px;
+        }
+        .ct-complete-checkout-view-btn a {
+    font-size: 12px;
+        }
+      }
+  }
+/* ct-complete-checkout-main css End */
+</style>
+
+    {% comment %}
+
+{% if cart.item_count > 0 %}
+
+
+
+<div class="ct-complete-checkout-main ct_btm_main ">
+
+  <a class="ios_link_bottom" href="/checkout"></a>
+  
+        <div class="ct-complete-checkout-inner ct_btm_cart_btn">
+            <div class="ct-complete-checkout-image-main">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44" fill="none">
+                    <path d="M15.5922 12.0136H28.728C34.931 12.0136 35.5513 14.9145 35.9709 18.4538L37.6129 32.137C38.142 36.625 36.7554 40.2921 30.37 40.2921H13.9684C7.56474 40.2921 6.17818 36.625 6.72551 32.137L8.3675 18.4538C8.76887 14.9145 9.38915 12.0136 15.5922 12.0136Z" stroke="#5D7634" stroke-width="2.45126" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.8624 14.7502V8.36478C14.8624 5.62816 16.6868 3.80374 19.4235 3.80374H24.8967C27.6333 3.80374 29.4578 5.62816 29.4578 8.36478V14.7502" stroke="#5D7634" stroke-width="2.45126" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M37.5034 31.2247H14.8624" stroke="#5D7634" stroke-width="2.8598" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <div class="ct-complete-checkout-image-count">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10.1968" cy="10.2321" r="9.23904" fill="#CF2228" stroke="#D7FF95"/>
+                    </svg> -->
+                            
+                    <span class="ct-complete-checkout--count cart-link__count">{{ cart.item_count }}</span>
+                  </div>
+            </div>
+            <div class="ct-complete-checkout-title-main">
+                <div class="ct-complete-checkout-title and_title">Your jewellery may go out of stock <b>Complete the checkout!</b></div>
+                <div class="ct-complete-checkout-title ios_title">Your jewellery may go out of stock <b>Proceed to checkout!</b></div>
+            </div>
+            <div class="ct-complete-checkout-view-btn">
+            <button class="">
+              <span class="ANDD-TEXT">View Cart</span> 
+              <span class="IOS-TEXT">Checkout</span> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" viewBox="0 0 6 9" fill="none">
+                    <path d="M1.38062 1.10327L4.86529 4.06522L1.38062 7.5499" stroke="#35431E" stroke-width="1.15984" stroke-linecap="round"/>
+                </svg>
+            </button>
+            </div>
+        </div>
+        <div class="ct-complete-checkout-close-main ct_close_btm_cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="38" viewBox="0 0 35 38" fill="none">
+                <g filter="url(#filter0_d_11_44)">
+                <path d="M17.3215 26.8923C23.8855 26.8923 29.2561 21.5217 29.2561 14.9577C29.2561 8.3937 23.8855 3.02313 17.3215 3.02313C10.7575 3.02313 5.3869 8.3937 5.3869 14.9577C5.3869 21.5217 10.7575 26.8923 17.3215 26.8923Z" fill="white"/>
+                <path d="M13.944 18.3352L20.699 11.5802" stroke="#35431E" stroke-width="1.43215" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.699 18.3352L13.944 11.5802" stroke="#35431E" stroke-width="1.43215" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_11_44" x="-2.24729" y="0.63623" width="39.1376" height="39.1376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="5.24729"/>
+                <feGaussianBlur stdDeviation="2.62365"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_44"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_44" result="shape"/>
+                </filter>
+                </defs>
+                </svg>
+        </div>
+    </div>
+                  
+{% endif %}
+
+
+        <script>
+          jQuery(document).ready(function(){
+            jQuery('.ct_close_btm_cart').on("click",function(){
+              jQuery(".ct_btm_main").hide();
+            })
+            jQuery('.ct_btm_cart_btn').on("click",function(){
+                mmajaxcart.AjaxcartOpen();
+                mmajaxcart.AjaxcartRender();
+            })
+          })
+          
+        </script>
+    {% endcomment %}
+

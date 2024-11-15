@@ -1,0 +1,215 @@
+<div class="city_list-main container">
+  <div class="ct_store_breadcrumbs">
+        <div class="breadcrumbs">
+        <a href="/">
+          Home
+          <svg
+            class="breadcrumbs_svg"
+            width="7"
+            height="13"
+            viewBox="0 0 7 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+          </svg>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+      
+          Stores
+            <svg
+              class="breadcrumbs_svg"
+              width="7"
+              height="13"
+              viewBox="0 0 7 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+            </svg>
+          
+        </div>
+      </div>
+  <div class="popular-city-main-heading">Popular Cities</div>
+    <div class="popular-city ct_list">
+
+      
+
+    </div>
+
+  <div class="other-cities-main">
+      <div class="other-cities-main-heading">Other Cities</div>
+      <div class="other-cities-inner">
+        <div class="other-cities-box">
+          <div class="other-cities-box-head">Karnataka</div>
+          <div class="other-cities-name">Mysore</div>
+          <div class="other-cities-name">Mangalore</div>
+          <div class="other-cities-name">Belgaum</div>
+          <div class="other-cities-name">Hubli</div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+<script>
+    var get_city_data = localStorage.getItem('city_data');
+  //console.log(get_city_data);
+   function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+    
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+    
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    };
+  
+  if(get_city_data != null)
+  {
+    var obj = JSON.parse(get_city_data);
+    obj.sort((a, b) => {
+      const totalStoreA = parseInt(a.totalStore);
+      const totalStoreB = parseInt(b.totalStore);
+      return totalStoreB - totalStoreA;
+  });
+    createStoreHtml(obj);
+  }
+  else
+  {
+    
+    jQuery.get(storeApiUrl+'/store-city')
+    .then(data => {
+    //  console.log(data);
+     localStorage.setItem('city_data', JSON.stringify(data));
+      data.sort((a, b) => {
+          const totalStoreA = parseInt(a.totalStore);
+          const totalStoreB = parseInt(b.totalStore);
+          return totalStoreB - totalStoreA;
+      });
+      createStoreHtml(data);
+    })
+    .catch(error => {
+      console.error('Error fetching store cities:', error);
+    });
+  }
+
+  
+    jQuery.get(storeApiUrl+'/state-by-store')
+    .then(data => {
+      ct_other_store(data)
+    }).catch(error => {
+      console.error('Error fetching store cities:', error);
+    });
+
+   
+
+  function createStoreHtml(store_city)
+  {
+    var check_app_url=getUrlParameter('webview');
+      var bread_url=``;
+        if(check_app_url != "")
+        {
+          bread_url=`?webview=app`;
+        }
+    var city_html="";
+    store_city.forEach(storeCity => {
+        var cities = ["Bengaluru", "Hyderabad", "Chennai", "Indore", "Pune", "Kochi", "Lucknow", "Coimbatore","Ahmedabad"];
+          if ($.inArray(storeCity.name, cities) !== -1) {
+            
+            city_html+=`
+                <div class="popular-city-box">
+                  <a href="https://www.kushals.com/pages/store/${storeCity.slug}${bread_url}" >
+                    <div class="popular-city-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/${storeCity.name}_new.png?v=1720070297" alt="">
+                    </div>
+                    <div class="popular-city-content">
+                      <div class="popular-city-name">${storeCity.name}</div>
+                      <div class="popular-city-store">${storeCity.totalStore}</div>
+                    </div>
+                  </a>
+              </div>`
+        } 
+     
+    })
+    jQuery(".ct_list").html(city_html);
+  }
+
+  function ct_other_store(o_store)
+  {
+    var other_store_html="";
+    o_store.forEach(otherStore => {
+      
+      var city_count=otherStore.cityDTOS.length;
+      if(city_count > 1)
+      {
+        var count_city_length=`<div class="ct_city_count">${city_count} Cities</div>`
+      }
+      else if(city_count == 1)
+      {
+        var count_city_length=`<div class="ct_city_count">${city_count} City</div>`
+      }
+      else
+      {
+        var count_city_length=``;
+      }
+
+      var check_app_url=getUrlParameter('webview');
+  var bread_url=``;
+    if(check_app_url != "")
+    {
+      bread_url=`?webview=app`;
+    }
+      
+      other_store_html+=`
+        <div class="other-cities-box">
+            <div class="other-cities-box-head ct_acc_btn"><span>${otherStore.name}</span><svg class="minus" width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="11.9961" y="-0.00338745" width="2" height="12" rx="1" transform="rotate(90 11.9961 -0.00338745)" fill="#454545"  /> </svg><svg class="plus" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1532_1096)"> <rect width="12" height="12" fill="white"/> <rect x="5" width="2" height="12" rx="1" fill="#454545" fill-opacity="0.6"/> <rect x="12" y="5" width="2" height="12" rx="1" transform="rotate(90 12 5)" fill="#454545" fill-opacity="0.6"/> </g> <defs> <clipPath id="clip0_1532_1096"> <rect width="12" height="12" fill="white"/> </clipPath> </defs> </svg>
+            ${count_city_length}
+            </div>`;
+       other_store_html+=` <div class="other-cities-box_main">`
+            otherStore.cityDTOS.forEach(city_name => {
+            other_store_html+=`
+            
+            <a href="https://www.kushals.com/pages/store/${city_name.slug}${bread_url}"><div class="other-cities-name">${city_name.name}</div></a>`
+
+              
+            })
+                    
+          other_store_html+=`</div></div>`
+    })
+    jQuery(".other-cities-inner").html(other_store_html);  
+  }
+
+
+  jQuery(document).on("click",".other-cities-inner .other-cities-box .ct_acc_btn",function(){
+    
+    if(jQuery(this).parent().hasClass("active"))
+    {
+        jQuery(this).parent().removeClass("active");
+          
+    }
+    else{
+        jQuery(".other-cities-box").removeClass("active");
+        jQuery(this).parent().addClass("active");
+        
+    }
+})
+
+</script>
+
+{% schema %}
+  {
+    "name": "city-list",
+    "class": "city-list",
+    "settings": [],
+    "presets": [{
+      "name": "city-list"
+    }]
+  }
+{% endschema %}

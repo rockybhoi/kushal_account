@@ -1,0 +1,92 @@
+<style>
+  .Ct-Video-main , .Ct-Video-main video{
+    width:100%;
+     position: relative;
+    height:100%;
+  }
+  .Ct-Video-main a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+  .CT_mob{
+    display:none;
+    width: 100%;
+  }
+  img.CT_dektop {
+    width: 100%;
+}
+  @font-face {
+    font-family: 'Marcellus';
+    src: url('https://cdn.shopify.com/s/files/1/0796/1959/files/Marcellus-Regular.woff2?v=1706507125') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+  
+  @media(max-width:750px){
+      .CT_mob{
+    display:block;
+  }
+      .CT_dektop{
+    display:none;
+  }
+  }
+</style>
+<div class="Ct-Video-main">
+  {% if section.settings.link !=blank %}<a href="{{ section.settings.link }}"></a>{% endif %}
+  {% if section.settings.img_d !=blank %}
+  <img class="CT_dektop" src="{{ section.settings.img_d | img_url:'master' }}" />
+  <img class="CT_mob" src="{{ section.settings.img_m  | img_url:'master' }}" />
+  {% else %}
+  <video class="CT_dektop" src="{{ section.settings.video_d }}" playsinline="" autoplay="" muted="" loop=""></video>  
+  <video class="CT_mob" src="{{ section.settings.video_m }}" playsinline="" autoplay="" muted="" loop=""></video>  
+  {% endif %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Ct-Video",
+    "class": "Ct-Video",
+    "settings": [
+      {
+        "type":"url",
+        "id":"link",
+        "label":"Full box click link"
+      },
+      {
+        "type":"text",
+        "id":"video_d",
+        "label":"Video Link For Desktop"
+      },
+       {
+        "type":"text",
+        "id":"video_m",
+        "label":"Video Link For Mobile"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_d",
+        "label": "Image For Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_m",
+        "label": "Image For Mobile"
+      }
+
+
+    ],
+    "presets": [{
+      "name": "Ct-Video"
+    }
+    ]
+  }
+{% endschema %}

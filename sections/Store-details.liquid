@@ -1,0 +1,797 @@
+<style>
+  
+</style>
+
+<div class="store-details-main">
+  <div class="skeleton-main">
+    <div class="skeleton">
+      <div class="skeleton-header"></div>
+      <div class="skeleton-content">
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="content-hide-btn">
+      <span>Content</span>
+      <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L7.32459 6.42108C7.7097 6.75117 8.28095 6.74066 8.65366 6.39662L14.5 1" stroke="#454545" stroke-linecap="round"/>
+      </svg>
+    </div>
+        <div class="wrap_seo_container container">
+                <div class="store_seo-content">
+                  <div class="store_seo_head">Shop Exclusive Unique Mangalsutra Design Collection at Kushal’s</div>
+                  <div class="store_seo-inner">
+                    <h4>Long Mangalsutra Chain:</h4>
+                    <p>A type of mangalsutra chain, these designs usually consists of 20-26 Inches Long Black Beaded Chain with a Pendant of the desired design, also called Nallapusalu. These long-chain Mangalsutras were popular in the past and is still an excellent match when worn on Sarees, and thus are easily available in multiple artificial mangalsutra variations. A must-have traditional mangalsutra design, long mangalsutras design have their own keepsake charm. </p>
+                    
+                    <h4>Short Mangalsutra Chain:</h4>
+                    <p>As the name suggests, these Mangalsutras are shorter and often have simple mangalsutra design. It consists of 14-18 Inches Long Chain. This Short Style mangalsutra chain is more modern in terms of design and is hugely preferred by contemporary women as they go decorous with plenty of outfits.</p>
+                    
+                    <h4>Floral Design Mangalsutra</h4>
+                    <p>This Contemporary Style Mangalsutra Pendant is a Classic Hit and a Best Friend of Women for its style purposes. This State-of-the-art, ladylike pendant is perfect when worn on Kurtis and Sarees. These Pendants consist of flower, creepers and leafy designs with a pearl or zircon stone and are very fashionable when it comes as fancy short mangalsutra designs.</p>
+                  </div>
+                </div>
+                
+                <ul class="store_seo_list">
+                  <li>Antique Bangle for Festive</li>
+                  <li>Antique Bangle for Bridal</li>
+                  <li>Antique Bangle for Festive</li>
+                  <li>Antique Bangle for Bridal</li>
+                  <li>Antique Bangle for Festive</li>
+                  <li>Antique Bangle for Bridal</li>
+                  <li>Antique Bangle for Festive</li>
+                  <li>Antique Bangle for Bridal</li>
+                </ul>
+    </div>
+
+        <div class="view_all_review_main ct_all_review_data" style="display:none">
+            <div class="view_all_bg"></div>
+            <div class="view_all_review_inner container">
+              <div class="view_all_header">
+                <span>Customer Reviews</span>
+                <div class="view_all_close ct_review_close_btn">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.834 32.0765L32.0763 19.8342" stroke="#242424" stroke-width="1.94665" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M32.0763 32.0765L19.834 19.8342" stroke="#242424" stroke-width="1.94665" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+          
+              <div class="ct_all_reviews">
+                
+              </div>
+          
+          
+            </div>
+          </div>
+
+
+<script>
+
+  // Function to get URL parameter
+// function getUrlParameter(sParam) {
+//     const sPageURL = window.location.search.substring(1);
+//     const sURLVariables = sPageURL.split('&');
+
+//     for (let i = 0; i < sURLVariables.length; i++) {
+//         const sParameterName = sURLVariables[i].split('=');
+//         if (sParameterName[0] === sParam) {
+//             return sParameterName[1] ? decodeURIComponent(sParameterName[1]) : true;
+//         }
+//     }
+//     return false;
+// }
+
+  function getUrlParameter_app(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+    
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+    
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    };
+
+
+function getUrlParameter()
+  {
+     let url = window.location.href;
+    let parts = url.split('/');
+   // let lastPart = parts.pop() || parts.pop();  // Handle trailing slash
+    var lastPart = parts[parts.length - 1];
+  
+    var r_split=lastPart.split("-");
+    
+    r_split.shift();
+    var result = r_split.join("-");
+    
+
+    
+    if(result !== '') 
+    {
+      return result;
+    }
+      else
+    {
+      return false;      
+    }
+  }
+
+  
+// Get store_id from URL
+const store_id = getUrlParameter();
+if (!store_id) {
+     // window.location.href="https://www.kushals.com/pages/stores";
+}
+
+// Function to update the store status
+
+
+// Function to convert time to 12-hour format
+function convertTo12HourFormat(time) {
+    let [hours, minutes] = time.split(':').map(Number);
+    const period = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12; // Convert hour to 12-hour format
+    return `${hours}:${minutes.toString().padStart(2, '0')} ${period}`;
+}
+
+// Function to get initials from name
+function getInitials(name) {
+    return name.split(' ').map(word => word.charAt(0)).join('');
+}
+
+
+   // function getStoreReviews() {
+   //          if (navigator.geolocation) {
+   //              navigator.geolocation.getCurrentPosition(showPosition_store);
+   //          } else {
+   //              console.log("Geolocation is not supported by this browser.");
+   //          }
+   //      }
+
+        function showPosition_store(position_latitude, position_longitude, city, city_id) {
+            const latitude = position_latitude;
+            const longitude = position_longitude;
+
+            callStoreAPI(latitude, longitude)
+                .then(data => {
+                  var str_length=data['storeList'].length;
+                  var storeHTML="";
+                  if(str_length > 1)
+                  {
+                    var i=1;
+                    data['storeList'].forEach(store => {
+                      if(store_id != store.slug && i<=5 ){
+                          var openingTime = convertTo12HourFormat(store.openingTime);
+                          var closingTime = convertTo12HourFormat(store.closingTime);
+                          var open_time=openingTime.split(" ");
+                          var close_time=closingTime.split(" ");
+                        
+                          var time_check_store_open_close=updateStoreTime(open_time[0], store.closingTime, closingTime);
+
+                           var check_app_url=getUrlParameter_app('webview');
+                            var bread_url_view=``;
+                              if(check_app_url != "")
+                              {
+                                bread_url_view=`?webview=app`;
+                              }
+                        
+                         storeHTML += `
+                            <div class="store-more-box">
+                                <a href="https://www.kushals.com/pages/store-details/${city.toLowerCase()}-${store.slug}${bread_url_view}" class="ct_store_click" data-store="${store.name}">
+                                  <div class="store-more-box-head">
+                                      <div class="store-more-name">
+                                          <span>${store.name}</span>
+                                      </div>
+                                      <div class="store-more-star">
+                                          
+                                          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/google.png?v=1721205440" width="30" height="30">
+                                          <span>${store.rating}</span>
+                                      </div>
+                                  </div>
+                                
+                                <div class="store-more-text">
+                                    ${store.address}
+                                </div>
+                                </a>
+                                <div class="call-dir-main">
+                                    
+                                        <a href="tel:+91${store.phone}" class="ct_store_call" data-store="${store.name}">
+                                          <div class="call-main">
+                                                <div class="call-icon">
+                                                    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/fluent_call.png?v=1721214863" alt="">
+                                                </div>
+                                                <span>Call Store</span>
+                                          </div>
+                                        </a>
+                                        <div class="direction-main">
+                                          <div class="direction-icon">
+                                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="">
+                                          </div>
+                                          <span><a class="ct_store_map"  data-store="${store.name}" href="${store.direction}" target="_blank">Get Direction</a>
+                                          </span>
+                                        </div>
+                                        ${time_check_store_open_close}
+                                  </div>
+                      
+                                <div class="store-more-footer">
+                                    <div class="store-more-direction">
+                                        <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="Store Image">
+                                        <span><a href="${store.direction}" target="_blank">Direction</a></span>
+                                    </div>
+                                    <div class="store-more-call">
+                                        <a href="tel:+91${store.phone}">
+                                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/fluent_call-28-regular.png?v=1719300254" alt="Call Icon">
+                                            <span>Call +91-${store.phone}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>`;
+                      }
+                     i++;
+                    });
+                    if(str_length <= 4)
+                    {
+                      var hidden_class="hidden"
+                    }
+                    else
+                    {
+                      var hidden_class=""                      
+                    }
+                    var check_app_url=getUrlParameter_app('webview');
+                            var bread_url_view=``;
+                              if(check_app_url != "")
+                              {
+                                bread_url_view=`?webview=app`;
+                              }
+                    var S_html=`<div class="store-more-head">
+                      <span>More Stores</span>
+                      <div class="store-more-all ${hidden_class}"><a href="https://www.kushals.com/pages/store/${city.toLowerCase()}${bread_url_view}">View All</a></div>
+                    </div>
+                    <div class="store-more-content store-more-deatails">${storeHTML}
+                    </div>`;
+                         jQuery(".ct_more_store").html(S_html);
+                  }
+                  else
+                  {
+                    jQuery(".ct_more_store").hide()
+                  }
+                })
+                .catch(error => {
+                    console.error('Error fetching store data:', error);
+                });
+        }
+
+        function callStoreAPI(latitude, longitude) {
+           latitude = latitude.slice(0, -1);
+           longitude = longitude.slice(0, -1);
+            const url = `${storeApiUrl}/near-by?latitude=${latitude}&longitude=${longitude}&distance=15`;
+            
+            return new Promise((resolve, reject) => {
+                $.get(url)
+                    .done(data => resolve(data))
+                    .fail(error => reject(error));
+            });
+        }
+
+
+
+
+
+
+
+  
+
+// Function to fetch store reviews
+function fetchStoreReviews(storeId) {
+    return $.get(`${storeApiUrl}/store-review?storeId=${storeId}`)
+        .then(reviews => {
+            let i = 1; // Initialize the counter outside the map function
+            return reviews.map(review => {
+                if (i <= 4) {
+                    const initials = getInitials(review.name);
+                    const commentLength = review.comment.length;
+
+                    let truncatedComment = review.comment;
+                    let moreSpan = '';
+
+                    if (commentLength > 430) {
+                        truncatedComment = review.comment.substring(0, 430) + '...';
+                        moreSpan = `<span class="ct_text_more" data-id="${storeId}">more</span>`;
+                    }
+
+                    const spanCmt = `<div class="store-review-text">${truncatedComment} ${moreSpan}</div>`;
+
+                    i++; // Increment the counter inside the loop
+
+                    return `
+                        <div class="store-review-box ctreview-box">
+                            <div class="store-review-box-head">
+                                <div class="store-customer-name">
+                                    <div class="store-customer-symbol">${initials}</div>
+                                    <span>${review.name}</span>
+                                </div>
+                                <div class="store-customer-star">
+                                    <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/google.png?v=1721205440" width="30" height="30">
+                                    <span>${review.rating}</span>
+                                </div>
+                            </div>
+                            ${spanCmt}
+                        </div>`;
+                }
+                return ''; // Return an empty string for reviews beyond the first 4
+            }).join('');
+        })
+        .catch(error => {
+            console.error("Error fetching store reviews:", error);
+            return ""; // Return empty string on error
+        });
+}
+
+
+
+// Function to fetch store details
+function fetchStoreDetails(storeId) {
+    return $.get(`${storeApiUrl}/store-details/${storeId}`);
+}
+
+function updateStatus(open_time, close_time, store_close_time) {
+    
+  
+    var currentTime = new Date();
+    var openingDate = new Date(currentTime);
+    var closingDate = new Date(currentTime);
+    var closingDate_new = new Date(close_time);
+  
+
+    // Parse opening time
+    var [openHours, openMinutes, openSeconds] = open_time.split(':').map(Number);
+    openSeconds = openSeconds || 0; // Default to 0 if seconds are not provided
+    openingDate.setHours(openHours, openMinutes, openSeconds);
+
+    // Parse closing time
+    var [closeHours, closeMinutes, closeSeconds] = close_time.split(':').map(Number);
+    closeSeconds = closeSeconds || 0; // Default to 0 if seconds are not provided
+    closingDate.setHours(closeHours, closeMinutes, closeSeconds);
+
+    // Adjust for cases where the closing time is past midnight
+    if (closingDate <= openingDate) {
+        closingDate.setDate(closingDate.getDate() + 1);
+    }
+
+    var check_store_time;
+
+    // console.log(`Current Time: ${currentTime}`);
+    // console.log(`Opening Time: ${openingDate}`);
+    // console.log(`Closing Time: ${closingDate}`);
+
+    if (currentTime >= openingDate && currentTime < closingDate) {
+        check_store_time = `<div class="store-open">Open Now <span>-</span></div><div class="store-time-text">&nbsp; Closes at ${store_close_time}</div>`;
+    } else {
+        check_store_time = `<div class="store-close">Closed <span>-</span> </div><div class="store-time-text">&nbsp; Opens at ${open_time}</div>`;
+    }
+
+    return check_store_time;
+}
+
+
+  function updateStoreTime(open_time, close_time, store_close_time) {
+
+    var currentTime = new Date();
+    var openingDate = new Date(currentTime);
+    var closingDate = new Date(currentTime);
+    var closingDate_new = new Date(close_time);
+  
+
+    // Parse opening time
+    var [openHours, openMinutes, openSeconds] = open_time.split(':').map(Number);
+    openSeconds = openSeconds || 0; // Default to 0 if seconds are not provided
+    openingDate.setHours(openHours, openMinutes, openSeconds);
+
+    // Parse closing time
+    var [closeHours, closeMinutes, closeSeconds] = close_time.split(':').map(Number);
+    closeSeconds = closeSeconds || 0; // Default to 0 if seconds are not provided
+    closingDate.setHours(closeHours, closeMinutes, closeSeconds);
+
+    // Adjust for cases where the closing time is past midnight
+    if (closingDate <= openingDate) {
+        closingDate.setDate(closingDate.getDate() + 1);
+    }
+
+    var check_store_time;
+
+    // console.log(`Current Time: ${currentTime}`);
+    // console.log(`Opening Time: ${openingDate}`);
+    // console.log(`Closing Time: ${closingDate}`);
+
+    if (currentTime >= openingDate && currentTime < closingDate) {
+        check_store_time = `<div class="open-close-store"> <div class="dot"></div> <span>Open</span> </div>`;
+    } else {
+        check_store_time = `<div class="open-close-store close_store"> <div class="dot"></div> <span>Closed</span> </div>`;
+    }
+
+    return check_store_time;
+}
+
+
+// Function to generate and append store HTML
+function generateStoreHtml(storeData, reviewsHtml) {
+  
+    var openingTime = convertTo12HourFormat(storeData.openingTime);
+    var closingTime = convertTo12HourFormat(storeData.closingTime);
+    var open_time=openingTime.split(" ");
+    var close_time=closingTime.split(" ");
+  
+    var time_check_store=updateStatus(open_time[0], storeData.closingTime, closingTime);
+  if(reviewsHtml == "")
+  {
+    var hidden_class="hidden";
+  }
+  else
+  {
+    var hidden_class=""; 
+  }
+
+    const static_data=`<div class="store-trust-box">
+          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/shop.png?v=1721286947" class="store_png" alt="">
+          <span>90+ Stores Across India</span>
+        </div>
+        <div class="store-trust-box">
+          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/trust.png?v=1719830043" class="trust_png" alt="">
+          <span>18+ Years Of Legacy</span>
+        </div>
+        <div class="store-trust-box">
+          <img src="https://www.kushals.com/cdn/shop/files/PDP_20lakh.svg?v=172130354500" class="medal_star" alt="">
+          <span>20 Lakh+ Happy Customers</span>
+        </div>`;
+
+    var check_app_url=getUrlParameter_app('webview');
+    var bread_url_view=``;
+      if(check_app_url != "")
+      {
+        bread_url_view=`?webview=app`;
+      }
+
+
+  var breadcrumb=`<div class="ct_store_breadcrumbs">
+        <div class="breadcrumbs">
+        <a href="/">
+          Home
+          <svg
+            class="breadcrumbs_svg"
+            width="7"
+            height="13"
+            viewBox="0 0 7 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+          </svg>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+        <a href="https://www.kushals.com/pages/stores${bread_url_view}">
+          Stores
+            <svg
+              class="breadcrumbs_svg"
+              width="7"
+              height="13"
+              viewBox="0 0 7 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+        <a href="https://www.kushals.com/pages/store/${storeData.city.toLowerCase()}${bread_url_view}">
+          ${storeData.city}
+          <svg
+            class="breadcrumbs_svg"
+            width="7"
+            height="13"
+            viewBox="0 0 7 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+          </svg>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+          ${storeData.name}
+          <svg
+            class="breadcrumbs_svg"
+            width="7"
+            height="13"
+            viewBox="0 0 7 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>`;
+
+    const storeHtml = `
+        <div class="footert-btn">
+          <a class="footert-btn_direction" href="${storeData.direction}" target="_blank">
+          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="">
+          Get Direction</a>
+          <a class="footert-btn_call ct_store_call" data-store="${storeData.name}" href="tel:+91${storeData.phone}">
+          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/fluent_call-28-regular_30874d9f-ed9a-431a-aee5-67ea2bede1f1.png?v=1721645944" alt="">
+          Call Store</a>
+        </div>
+        <div class="store-details-inner container">
+            <div class="store-image">
+           
+                ${breadcrumb}
+                <img src="${storeData.image}" alt="Store Image">
+            </div>
+            <div class="store-content">
+             
+                ${breadcrumb}
+                <div class="store-rating">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7141 2.53738L12.2201 5.54419C12.4254 5.96275 12.9731 6.36423 13.4351 6.44111L16.1648 6.89384C17.9104 7.18427 18.3211 8.4485 17.0633 9.69565L14.9412 11.8141C14.5818 12.1729 14.385 12.8648 14.4962 13.3602L15.1037 15.9826C15.5829 18.0584 14.4791 18.8613 12.6394 17.7765L10.0808 16.2645C9.61877 15.9912 8.85721 15.9912 8.38658 16.2645L5.82807 17.7765C3.99689 18.8613 2.8845 18.0498 3.36368 15.9826L3.97122 13.3602C4.08246 12.8648 3.88566 12.1729 3.52627 11.8141L1.40416 9.69565C0.154851 8.4485 0.557025 7.18427 2.30263 6.89384L5.03228 6.44111C5.48579 6.36423 6.03343 5.96275 6.2388 5.54419L7.74481 2.53738C8.56628 0.905836 9.90115 0.905836 10.7141 2.53738Z" stroke="#454545" stroke-width="1.03389" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.02337 12.9097C3.77535 14.0486 3.2793 16.4454 3.2793 16.9207C3.2793 17.515 3.2793 18.1092 4.17219 18.4063C5.06508 18.7034 8.19021 16.0294 9.0831 16.0294C9.97599 16.0294 13.5476 18.4063 13.994 18.4063" stroke="#A02828" stroke-width="1.03389" stroke-linecap="round"/>
+                    </svg>
+                    <span>${storeData.rating}</span>
+                </div>
+            
+            <div class="store-title">${storeData.name}, ${storeData.city}</div>
+            <div class="store-address">${storeData.address}</div>
+            <div class="store-time">
+                  ${time_check_store}
+                <div class="line"></div>
+                <div class="store-time-text store-time-second-text">Mon - Sun: ${openingTime} - ${closingTime}</div>
+            </div>
+            
+            <div class="store-review ${hidden_class}">
+              <div class="store-review-head">
+                <span>Store Rating & Reviews</span>
+                <div class="store-review-all ct_all_review" data-id="${storeData.id}">View All</div>
+              </div>
+              
+              <div class="google-icon-review-main">
+                <div class="google-icon-review">
+                  <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/google.png?v=1721205440" alt="" class="google-img">
+                  <div class="ct_google-review">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.86847 3.74921C9.26177 1.24974 9.9584 0 11 0C12.0416 0 12.7382 1.24973 14.1315 3.7492L14.4919 4.39585C14.8879 5.10612 15.0858 5.46126 15.3946 5.69559C15.7033 5.92991 16.0876 6.01688 16.8565 6.19085L17.5565 6.34923C20.2621 6.96141 21.615 7.26749 21.9368 8.30249C22.2587 9.33745 21.3365 10.416 19.4919 12.5729L19.0147 13.1309C18.4905 13.7438 18.2284 14.0503 18.1105 14.4295C17.9927 14.8086 18.0323 15.2175 18.1115 16.0353L18.1836 16.7798C18.4625 19.6576 18.602 21.0965 17.7594 21.7362C16.9167 22.3758 15.65 21.7926 13.1167 20.6263L12.4613 20.3245C11.7415 19.993 11.3816 19.8273 11 19.8273C10.6184 19.8273 10.2585 19.993 9.53864 20.3245L8.88326 20.6263C6.34994 21.7926 5.08329 22.3758 4.24066 21.7362C3.39803 21.0965 3.53747 19.6576 3.81634 16.7798L3.88847 16.0353C3.96773 15.2175 4.00735 14.8086 3.88944 14.4295C3.77155 14.0503 3.50947 13.7438 2.98531 13.1309L2.50811 12.5729C0.663576 10.416 -0.258696 9.33745 0.0631641 8.30249C0.385024 7.26749 1.73785 6.96141 4.44349 6.34923L5.14347 6.19085C5.91233 6.01688 6.29676 5.92991 6.60543 5.69559C6.9141 5.46126 7.11208 5.10613 7.50801 4.39585L7.86847 3.74921Z" fill="#EDB61A" fill-opacity="0.7"/>
+                    </svg>
+                    <span>${storeData.rating}</span>
+                  </div>
+                </div>
+                <div class="store-review-content items_scroll">
+                  ${reviewsHtml}
+                </div>
+              </div>
+              
+            </div>
+            <div class="more-store ct_more_store">
+               
+            </div>
+            <div class="store-trust">
+              ${static_data}
+            </div>
+          </div>
+        </div>`;
+
+  var custom_html_SEO=`<div class="store_seo-content">${storeData.seoBodyContent}</div>`
+             custom_html_SEO+=`<ul class="store_seo_list">`;
+                jQuery(storeData.seoKeyword).each(function(e, val){
+                  custom_html_SEO+=`<li>${val}</li>`;
+                })
+                  custom_html_SEO+=`</ul>`;
+                
+
+    // Append to container
+    $('.store-details-main').html(storeHtml);
+    $('.wrap_seo_container').html(custom_html_SEO)
+  showPosition_store(storeData.latitude, storeData.longitude, storeData.city, storeData.cityId)
+    getStoreReviews();
+var sliders = document.querySelectorAll('.items_scroll');
+var isDown = false;
+var startX;
+var scrollLeft;
+
+sliders.forEach(slider => {
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse leave
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse up
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1; // scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    disableLinks(); // Disable links when scrolling horizontally
+  });
+});
+}
+
+// Main function to execute when document is ready
+$(document).ready(function() {
+    if (store_id) {
+        // Fetch store details
+        fetchStoreDetails(store_id)
+            .done(function(storeResponse) {
+                if (!storeResponse || storeResponse.length === 0) {
+                    window.location.href = "https://www.kushals.com/pages/stores";
+                    return;
+                }
+
+                const storeData = storeResponse; // Get data from response
+
+                // Fetch store reviews
+                fetchStoreReviews(storeResponse.id)
+                    .done(function(reviewsHtml) {
+                        generateStoreHtml(storeData, reviewsHtml);
+                    })
+                    .fail(function(error) {
+                        console.error('Error fetching store reviews:', error);
+                    });
+            })
+            .fail(function(error) {
+                console.error('Error fetching store details:', error);
+            });
+    }
+});
+
+
+
+
+
+
+function disableLinks() {
+  var links = document.querySelectorAll('.items_scroll .ctreview-box');
+  links.forEach(link => {
+    link.style.pointerEvents = 'none'; // Disable link clicks
+  });
+}
+
+function enableLinks() {
+  var links = document.querySelectorAll('.items_scroll .ctreview-box');
+  links.forEach(link => {
+    link.style.pointerEvents = 'auto'; // Re-enable link clicks
+  });
+}
+
+
+  jQuery(document).on("click",".ct_all_review, .ct_text_more",function(){
+      var s_id=jQuery(this).attr("data-id");
+      fetchAllStoreReviews(s_id).then(data =>{
+        jQuery(".ct_all_reviews").html(data);
+        jQuery(".ct_all_review_data").show();
+        jQuery('body').addClass("mm-no-scroll");
+        
+      });;
+
+      
+  })
+
+  function fetchAllStoreReviews(storeId) {
+    return $.get(`${storeApiUrl}/store-review?storeId=${storeId}`)
+        .then(reviews => {
+            return reviews.map(review => {
+                const single_char_name = getInitials(review.name);
+                  if(review.image != null && review.image != "" ){
+                    var review_img=`<div class="review-img-content">
+                                      <img src="${review.image}" alt="">
+                                    </div>`
+                  }
+                  else
+                  {
+                    var review_img="";
+                  }
+              
+                return `
+                    <div class="review-text-box">
+                      <div class="review-text-head">
+                        <div class="view_all_header_title">
+                          <div class="view_all_label">${single_char_name}</div>
+                          <span>${review.name}</span>
+                        </div>
+                
+                        <div class="view_all-star">
+                          <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/google.png?v=1721205440" width="30" height="30">
+                          <span>${review.rating}</span>
+                        </div>
+                      </div>
+                
+                      <div class="review-text-content">
+                        <p>${review.comment}</p>
+                      </div>
+                
+                      ${review_img}
+                    </div>
+                    `;
+            }).join('');
+        })
+        .catch(error => {
+            console.error("Error fetching store reviews:", error);
+            return ""; // Return empty string on error
+        });
+}
+
+  jQuery(document).on("click",".ct_review_close_btn, .view_all_bg",function(){
+    jQuery(".ct_all_review_data").hide();
+    jQuery('body').removeClass("mm-no-scroll");
+  })
+
+
+  let content_box = document.querySelector('.wrap_seo_container');
+  let content_btn = document.querySelector('.content-hide-btn');
+  
+  content_btn.addEventListener('click', function(){
+      content_btn.classList.toggle('btn_active');
+      content_box.classList.toggle('Show_content');
+  });
+
+    jQuery(document).on("click",".ct_store_call",function(){
+      var store_name=jQuery(this).attr("data-store");
+               clevertap.event.push("Call_Store", {
+                         "CallStore_Name":store_name
+                  });
+    })
+    jQuery(document).on("click",".ct_store_click",function(){
+      var store_name=jQuery(this).attr("data-store");
+               clevertap.event.push("Store_Name", {
+                         "Store Name":store_name
+                  });
+    })
+  jQuery(document).on("click",".ct_store_map",function(){
+      var store_name=jQuery(this).attr("data-store");
+               clevertap.event.push("Store_Name_Direction", {
+                         "Store Name direction":store_name
+                  });
+    })
+
+  jQuery(document).on("click",".store-more-all a",function(){
+                             clevertap.event.push("MoreStores");
+                  })
+  
+</script>
+
+{% schema %}
+{
+  "name": "Store-details",
+  "class": "Store-details",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Store-details"
+    }
+  ]
+}
+{% endschema %}

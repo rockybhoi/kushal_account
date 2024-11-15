@@ -1,0 +1,123 @@
+<style>
+.Velentine-Icon-inner {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  gap: 22px;
+}
+.Velentine-Icon-box {
+    border-radius: 12.095px;
+    border: 0.806px solid rgba(255, 55, 139, 0.25);
+    background: #FFF;
+    box-shadow: 0px 2.53px 13.411px 0px rgba(0, 0, 0, 0.16);
+    text-align: center;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: center;
+}
+  .Velentine-Icon-main {
+    margin-bottom: 40px;
+}
+  
+  .Velentine-Icon-box img {
+    width: 100%;
+    max-width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0px auto 8px auto;
+}
+  .Velentine-Icon-box-text {
+    color: #656565;
+    text-align: center;
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 122.023%;
+    width: 100%;
+    max-width: 124px;
+}
+      @media(max-width:600px){
+    .Velentine-Icon-box {
+    width: 33.33%;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+        .Velentine-Icon-inner {
+    padding: 0 30px;
+}
+        .Velentine-Icon-box img {
+    max-width: 30px;
+    height: 30px;
+    margin: 0px auto 8px auto;
+}
+        .Velentine-Icon-box-text {
+    font-size: 11px;
+    max-width: 84px;
+}
+  }
+</style>
+<div class="Velentine-Icon-main">
+    <div class="Velentine-Icon-inner">
+      <div class="Velentine-Icon-box">
+        <img src="{{ section.settings.icon1 | img_url:'master' }}" alt="">
+        <div class="Velentine-Icon-box-text">{{ section.settings.icontext1 }}</div>
+      </div>
+      <div class="Velentine-Icon-box">
+        <img src="{{ section.settings.icon2 | img_url:'master' }}" alt="">
+        <div class="Velentine-Icon-box-text">{{ section.settings.icontext2 }}</div>
+      </div>
+      <div class="Velentine-Icon-box">
+        <img src="{{ section.settings.icon3 | img_url:'master' }}" alt="">
+        <div class="Velentine-Icon-box-text">{{ section.settings.icontext3 }}</div>
+      </div>
+    </div>
+  </div>
+{% schema %}
+  {
+    "name": "Velentine-Icon",
+    "class": "Velentine-Icon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "icon1",
+        "label": "Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "icontext1",
+        "label": "Text"
+      },
+       {
+        "type": "image_picker",
+        "id": "icon2",
+        "label": "Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "icontext2",
+        "label": "Text"
+      },
+       {
+        "type": "image_picker",
+        "id": "icon3",
+        "label": "Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "icontext3",
+        "label": "Text"
+      }
+
+
+    ],
+    "presets":[{
+    "name": "Velentine-Icon"
+    }]
+  }
+{% endschema %}

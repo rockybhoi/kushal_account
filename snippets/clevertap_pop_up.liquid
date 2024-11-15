@@ -1,0 +1,171 @@
+<style>
+  .clevertap-pop-up-head {
+    display: flex;
+    align-items: center;
+    color: rgba(69, 69, 69, 1);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: left;
+    justify-content: center;
+  }
+  .clevertap-pop-up {
+    border: 0.5px solid rgba(255, 192, 197, 1);
+    background-color: rgb(255 245 245);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    position: fixed;
+    width: calc(100% - 20px);
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    z-index: 1111;
+    display: none;
+  }
+  .clevertap-pop-up-head span {
+    background: linear-gradient(0deg, #c71d22, #c71d22),
+      linear-gradient(
+        270deg,
+        #e30058 7.05%,
+        rgba(223, 0, 86, 0.931628) 23.65%,
+        rgba(218, 0, 84, 0.82) 33.57%,
+        rgba(194, 0, 75, 0) 85.12%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19.2px;
+    text-align: left;
+    padding: 0 4px;
+  }
+  .cl_cart_icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+  .save_icon {
+    width: 95px;
+    height: auto;
+    margin-left: 8px;
+  }
+  .template-product .clevertap-pop-up  , .template--ct-titlestore-details .clevertap-pop-up , .template-collection .clevertap-pop-up  {
+    bottom: 75px;
+  }
+  @media(max-width: 550px) {
+    .clevertap-pop-up {
+      display: block;
+    }
+  }
+  @media(max-width: 420px) {
+    .clevertap-pop-up-head {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+    .clevertap-pop-up-head span {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+    .save_icon {
+      width: 86px;
+    }
+  }
+</style>
+<div class="clevertap-pop-up" style='display:none'>
+  <div class="clevertap-pop-up-head ct_clever_head">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0796/1959/files/bottom_cart_icon_fc859240-fc0d-4ff6-9270-747c019e991b.png?v=1720524342"
+      class="cl_cart_icon"
+      alt=""
+    >
+    Checkout in <span >05:00</span>
+    to avail  <span class='ct_gift_money'>₹100</span>
+    <img
+      src="https://cdn.shopify.com/s/files/1/0796/1959/files/Get100.png?v=1720618152"
+      class="save_icon"
+      alt=""
+    >
+  </div>
+</div>
+
+<script>
+  var timeLeft;
+var timerInterval;
+
+function updateTimer() {
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  var totalMainPrice = parseFloat(jQuery(".theme-money-price").attr("data-price"));
+  
+  if (totalMainPrice >= 500 && totalMainPrice <= 999) {
+    jQuery(".ct_clever_head .ct_gift_money").text("₹100");
+    jQuery(".ct_clever_head .save_icon").attr("src","https://cdn.shopify.com/s/files/1/0796/1959/files/FAST100.png?v=1720766239")
+  } else if (totalMainPrice >=1000 && totalMainPrice <= 1999) {
+    jQuery(".ct_clever_head .ct_gift_money").text("₹150");
+    jQuery(".ct_clever_head .save_icon").attr("src","https://cdn.shopify.com/s/files/1/0796/1959/files/FAST150.png?v=1720766239")
+  } else if (totalMainPrice >= 2000 && totalMainPrice <= 3999) {
+    jQuery(".ct_clever_head .ct_gift_money").text("₹200");
+    jQuery(".ct_clever_head .save_icon").attr("src","https://cdn.shopify.com/s/files/1/0796/1959/files/FAST200.png?v=1720766239")
+    
+  } else if (totalMainPrice >= 4000 && totalMainPrice <= 4999) {
+    jQuery(".ct_clever_head .ct_gift_money").text("₹300");
+    jQuery(".ct_clever_head .save_icon").attr("src","https://cdn.shopify.com/s/files/1/0796/1959/files/FAST300.png?v=1720766239")
+    
+  } else if (totalMainPrice >= 5000 && totalMainPrice <= 9999) {
+    jQuery(".ct_clever_head .ct_gift_money").text("₹500");
+    jQuery(".ct_clever_head .save_icon").attr("src","https://cdn.shopify.com/s/files/1/0796/1959/files/FAST500.png?v=1720766239")
+    
+  } else if (totalMainPrice >= 10000) {
+    jQuery(".ct_clever_head .ct_gift_money").text("₹1000");
+    jQuery(".ct_clever_head .save_icon").attr("src","https://cdn.shopify.com/s/files/1/0796/1959/files/FAST1000.png?v=1720766239")
+    
+  }
+   document.querySelector(".clevertap-pop-up").style.display = "block"; // Show the pop-up
+  
+  // Update the timer display
+  document.querySelector(".clevertap-pop-up-head span").innerHTML = "0" + minutes + ":" + seconds;
+
+  timeLeft--;
+
+  if (timeLeft < 0) {
+    clearInterval(timerInterval); // Stop the timer when it reaches zero
+    document.querySelector(".clevertap-pop-up").style.display = "none"; // Hide the pop-up
+    localStorage.removeItem("timeLeft"); // Clear the stored time
+  } else {
+    localStorage.setItem("timeLeft", timeLeft); // Update localStorage
+  }
+}
+
+function startTimer() {
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function start_new_timer() {
+  timeLeft = localStorage.getItem("timeLeft") ? parseInt(localStorage.getItem("timeLeft")) : 300;
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+  
+  // Set the initial timer display
+  document.querySelector(".clevertap-pop-up-head span").innerHTML = "0" + minutes + ":" + seconds;
+  
+  //document.querySelector(".clevertap-pop-up").style.display = "block"; // Show the pop-up
+  startTimer();
+}
+
+// Check if there is a remaining time in localStorage and start the timer
+var remain_pop_timer = localStorage.getItem("timeLeft");
+if (remain_pop_timer > 0) {
+  start_new_timer();
+} else {
+  // Optionally, start a new timer if no remaining time is found
+  // timeLeft = 300; // Initialize to 5 minutes
+  // start_new_timer();
+}
+
+</script>

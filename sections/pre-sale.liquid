@@ -1,0 +1,612 @@
+{{ 'pre-sale.css' | asset_url | stylesheet_tag: preload: true }}
+
+
+
+<div class="pre-sale-main">
+  <div class="pre-sale-bg" style=" background-image: url(https://cdn.shopify.com/s/files/1/0796/1959/files/presale-bg.png?v=1708679021); ">
+    <div class="pre-sale-inner">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'time' %}
+            <div class="pre-sale-time">
+              <div class="pre-sale-time-heading">{{ block.settings.head }}</div>
+              <div class="pre-sale-time-box">
+                <div class="timer_body">
+                  <div class="rightt">
+                    {% assign end_date = block.settings.time %}
+
+                    {% if end_date != blank %}
+                      <div class="timer">
+                        <div class="timer-display">
+                          <div class="timer-block">
+                            <span class="timer-block__num js-timer-days">00</span>
+                            <span class="timer-block__unit">Days</span>
+                          </div>
+
+                            <sapn class="dot">|</sapn>
+                          <div class="timer-block">
+                            <span class="timer-block__num js-timer-hours">00</span>
+                            <span class="timer-block__unit">Hours</span>
+                          </div>
+
+                            <sapn class="dot">|</sapn>
+                          <div class="timer-block">
+                            <span class="timer-block__num js-timer-minutes">00</span>
+                            <span class="timer-block__unit">Minutes</span>
+                          </div>
+
+                            <sapn class="dot">|</sapn>
+                          <div class="timer-block">
+                            <span class="timer-block__num js-timer-seconds">00</span>
+                            <span class="timer-block__unit">Seconds</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <script type="text/javascript">
+                        // var second = 1000,
+                        //     minute = second * 60,
+                        //     hour = minute * 60,
+                        //     day = hour * 24;
+                        // var countDown = new Date('{{- end_date -}}').getTime(),
+                        //     x = setInterval(function() {
+                        //     var now = new Date().getTime(),
+                        //     distance = countDown - now;
+                        //   document.querySelector('.js-timer-days').innerText = Math.floor(distance / (day)),
+                        //     document.querySelector('.js-timer-hours').innerText = Math.floor((distance % (day)) / (hour)),
+                        //   document.querySelector('.js-timer-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                        //   document.querySelector('.js-timer-seconds').innerText = Math.floor((distance % (minute)) / second);
+
+                        //   }, second)
+                      </script>
+
+
+                      <script type="text/javascript">
+                          var second = 1000,
+                              minute = second * 60,
+                              hour = minute * 60,
+                              day = hour * 24;
+                      
+                          var countDown = new Date('{{- end_date -}}').getTime();
+                          var x = setInterval(function() {
+                              var now = new Date().getTime();
+                              var distance = countDown - now;
+                      
+                              var remainingHours = Math.floor(distance / (hour));
+                              var remainingMinutes = Math.floor((distance % (hour)) / (minute));
+                              var remainingSeconds = Math.floor((distance % (minute)) / second);
+                      
+                              // Display remaining time in hours, minutes, and seconds
+                              document.querySelector('.js-timer-hours').innerText = remainingHours;
+                              document.querySelector('.js-timer-minutes').innerText = remainingMinutes;
+                              document.querySelector('.js-timer-seconds').innerText = remainingSeconds;
+                          }, second);
+                      </script>
+
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {% when 'banner' %}
+            <div class="pre-sale-banner">
+              <img
+                loading="lazy"
+                src="{{ block.settings.image | img_url: '750x750' }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                class="rimage__image"
+              >
+            </div>
+
+          {% when 'slider' %}
+            <div class="pre-sale-imgg">
+              <div class="swiper preSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                  <div class="swiper-slideimg">
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-one1 | img_url: '750x750' }}"
+                      class=" desk-img rimage__image"
+                    >
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-two1 | img_url: '390x390' }}"
+                      class="mob-img rimage__image"
+                    >
+                    <div class="img_pre-text">{{ block.settings.headd1 }}</div>
+
+                    </div>
+
+                    
+                  </div>
+                  <div class="swiper-slide">
+                  <div class="swiper-slideimg">
+                    
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-one2 | img_url: '750x750' }}"
+                      class="desk-img rimage__image"
+                    >
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-two2 | img_url: '390x390' }}"
+                      class="mob-img rimage__image"
+                    >
+                    <div class="img_pre-text">{{ block.settings.headd2 }}</div>
+                    </div>
+
+                    
+                  </div>
+                  <div class="swiper-slide">
+                  <div class="swiper-slideimg">                   
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-one3 | img_url: '750x750' }}"
+                      class="desk-img rimage__image"
+                    >
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-two3 | img_url: '390x390' }}"
+                      class="mob-img rimage__image">
+                    <div class="img_pre-text">{{ block.settings.headd3 }}</div>
+                    </div>                    
+                  </div>
+
+            {% if block.settings.image-one4 !=blank %}      
+                  <div class="swiper-slide">
+                  <div class="swiper-slideimg">                   
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-one4 | img_url: '750x750' }}"
+                      class="desk-img rimage__image"
+                    >
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-two4 | img_url: '390x390' }}"
+                      class="mob-img rimage__image">
+                    <div class="img_pre-text">{{ block.settings.headd4 }}</div>
+                    </div>                    
+                  </div>
+                  {% endif %}
+
+          {% if block.settings.image-one5 !=blank %}
+                  <div class="swiper-slide">
+                  <div class="swiper-slideimg">                   
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-one5 | img_url: '750x750' }}"
+                      class="desk-img rimage__image"
+                    >
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-two5 | img_url: '390x390' }}"
+                      class="mob-img rimage__image">
+                    <div class="img_pre-text">{{ block.settings.headd5 }}</div>
+                    </div>                    
+                  </div>
+                  {% endif %}
+{% if block.settings.image-one6 !=blank %}
+                  <div class="swiper-slide">
+                  <div class="swiper-slideimg">                   
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-one6 | img_url: '750x750' }}"
+                      class="desk-img rimage__image"
+                    >
+                    <img
+                      loading="lazy"
+                      src="{{ block.settings.image-two6 | img_url: '390x390' }}"
+                      class="mob-img rimage__image">
+                    <div class="img_pre-text">{{ block.settings.headd6 }}</div>
+                    </div>                    
+                  </div>
+                  {% endif %}
+
+                  
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+
+      <div class="pre-sale-btn">
+        {% if customer %}
+        <button class="ct_login_cust" onclick="showPopupsec()" data-email="{{ customer.email }}" data-number="{{ customer.phone }}">Notify Me</button>
+          {% else %}
+        <button onclick="showPopup()" >Notify Me</button>
+          {% endif %}
+        
+      </div>
+
+      
+    
+<div class="popup">
+  <div class="blocker" onclick="hidePopup()"></div>
+  <div class="contents">
+    <div class="close-pre-pop" onclick="hidePopup()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+        <path d="M27.9284 50.1539C40.2876 50.1539 50.3997 40.0418 50.3997 27.6825C50.3997 15.3233 40.2876 5.21118 27.9284 5.21118C15.5691 5.21118 5.45703 15.3233 5.45703 27.6825C5.45703 40.0418 15.5691 50.1539 27.9284 50.1539Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2.52803" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.5684 34.042L34.2871 21.3232" stroke="#A02828" stroke-width="2.52803" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34.2871 34.042L21.5684 21.3232" stroke="#A02828" stroke-width="2.52803" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  <div class="pre-pop-head">Get early access to the beat deals</div>
+  <div class="pre-pop-input">
+    <div class="gradient-border" id="ctt-box">
+    <input type="tel" placeholder="Enter Whatsapp Number" class="ct_wp_number">
+      </div>
+    <div class="ct_no_error" style="display:none">Please enter a valid mobile number</div>
+    <div class="pre-popwhat">
+      <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"> <g clip-path="url(#clip0_376_92)"> <path d="M1.03389 19.257C1.03298 22.5139 1.89061 25.694 3.52139 28.4969L0.87793 38.0738L10.7552 35.504C13.4872 36.9797 16.5481 37.753 19.6586 37.7532H19.6668C29.9352 37.7532 38.294 29.4622 38.2984 19.2716C38.3003 14.3335 36.364 9.69007 32.846 6.19659C29.3285 2.7034 24.6504 0.778621 19.6661 0.776367C9.39642 0.776367 1.03828 9.06686 1.03404 19.257" fill="url(#paint0_linear_376_92)"/> <path d="M0.368072 19.2511C0.367012 22.6251 1.25538 25.9189 2.9443 28.8223L0.206055 38.7425L10.4375 36.0806C13.2566 37.6057 16.4307 38.4098 19.6604 38.411H19.6688C30.3056 38.411 38.9646 29.8218 38.9691 19.2664C38.9709 14.1509 36.965 9.34052 33.3212 5.72188C29.677 2.10369 24.8317 0.109647 19.6688 0.107544C9.0301 0.107544 0.372312 8.69552 0.368072 19.2511ZM6.46129 28.3223L6.07927 27.7205C4.47332 25.1868 3.62568 22.2588 3.6269 19.2523C3.63023 10.4788 10.8262 3.3408 19.6748 3.3408C23.9599 3.34261 27.9871 5.0001 31.016 8.0074C34.0449 11.015 35.7115 15.013 35.7105 19.2652C35.7065 28.0387 28.5104 35.1776 19.6688 35.1776H19.6624C16.7835 35.1761 13.96 34.409 11.4976 32.9592L10.9116 32.6144L4.84006 34.194L6.46129 28.3223Z" fill="url(#paint1_linear_376_92)"/> <path d="M14.8455 11.2478C14.4842 10.4511 14.104 10.435 13.7604 10.421C13.4791 10.409 13.1575 10.4099 12.8362 10.4099C12.5145 10.4099 11.992 10.53 11.5503 11.0085C11.1082 11.4875 9.8623 12.645 9.8623 14.9991C9.8623 17.3535 11.5904 19.6286 11.8313 19.9482C12.0726 20.2672 15.1675 25.2529 20.0693 27.1709C24.143 28.7648 24.972 28.4478 25.8562 28.3679C26.7404 28.2883 28.7095 27.2107 29.1112 26.0933C29.5132 24.9761 29.5132 24.0185 29.3927 23.8183C29.2722 23.619 28.9505 23.4992 28.4683 23.26C27.9859 23.0207 25.6149 21.8631 25.173 21.7034C24.7308 21.5438 24.4094 21.4642 24.0877 21.9433C23.7661 22.4217 22.8426 23.4992 22.5611 23.8183C22.28 24.1382 21.9985 24.178 21.5164 23.9387C21.0338 23.6986 19.4807 23.1939 17.6381 21.5639C16.2045 20.2956 15.2366 18.7293 14.9553 18.2501C14.6739 17.7718 14.9251 17.5124 15.1669 17.274C15.3836 17.0596 15.6494 16.7152 15.8907 16.4359C16.1312 16.1565 16.2114 15.9571 16.3722 15.638C16.5332 15.3186 16.4526 15.0391 16.3323 14.7998C16.2114 14.5604 15.2743 12.1939 14.8455 11.2478Z" fill="white"/> </g> <defs> <linearGradient id="paint0_linear_376_92" x1="1871.9" y1="3730.52" x2="1871.9" y2="0.776367" gradientUnits="userSpaceOnUse"> <stop stop-color="#1FAF38"/> <stop offset="1" stop-color="#60D669"/> </linearGradient> <linearGradient id="paint1_linear_376_92" x1="1938.36" y1="3863.6" x2="1938.36" y2="0.107544" gradientUnits="userSpaceOnUse"> <stop stop-color="#F9F9F9"/> <stop offset="1" stop-color="white"/> </linearGradient> <clipPath id="clip0_376_92"> <rect width="38.7631" height="38.7631" fill="white" transform="translate(0.206055 0.107544)"/> </clipPath> </defs> </svg>
+      <svg  xmlns="http://www.w3.org/2000/svg" width="28" height="25" viewBox="0 0 28 25" fill="none"> <path d="M22.6028 12.489L13.0615 21.0687C12.9829 21.1379 12.9208 21.22 12.8788 21.3103C12.8367 21.4005 12.8155 21.4972 12.8165 21.5947C12.8174 21.6922 12.8404 21.7886 12.8842 21.8782C12.9279 21.9679 12.9916 22.0491 13.0714 22.117C13.1513 22.185 13.2458 22.2385 13.3494 22.2743C13.453 22.3102 13.5637 22.3276 13.6751 22.3258C13.7865 22.3239 13.8964 22.3028 13.9984 22.2635C14.1004 22.2243 14.1925 22.1677 14.2693 22.0971L24.3814 13.0032C24.5345 12.8656 24.6201 12.6811 24.6201 12.489C24.6201 12.297 24.5345 12.1125 24.3814 11.9749L14.2693 2.881C14.1925 2.8104 14.1004 2.75383 13.9984 2.71457C13.8964 2.67532 13.7865 2.65415 13.6751 2.65229C13.5637 2.65044 13.453 2.66793 13.3494 2.70376C13.2458 2.73959 13.1513 2.79305 13.0714 2.86104C12.9916 2.92903 12.9279 3.0102 12.8842 3.09986C12.8404 3.18952 12.8174 3.28588 12.8165 3.38337C12.8155 3.48087 12.8367 3.57755 12.8788 3.66783C12.9208 3.75811 12.9829 3.8402 13.0615 3.90934L22.6028 12.489Z" fill="#292929"/> </svg>
+    </div>
+  <button class="pre-pop-brn ct_btn_submit">Notify Me</button>
+    
+
+        
+  </div>
+          
+  </div>
+</div>
+
+
+
+
+
+   <div class="pre-pop-sec">
+     <div class="blocker CT_blocker" onclick="hidePopupsec()"></div>
+    <div class="pre-pop-sec-inner">
+       <div class="close-pre-pop" onclick="hidePopupsec()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+        <path d="M27.9284 50.1539C40.2876 50.1539 50.3997 40.0418 50.3997 27.6825C50.3997 15.3233 40.2876 5.21118 27.9284 5.21118C15.5691 5.21118 5.45703 15.3233 5.45703 27.6825C5.45703 40.0418 15.5691 50.1539 27.9284 50.1539Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2.52803" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.5684 34.042L34.2871 21.3232" stroke="#A02828" stroke-width="2.52803" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34.2871 34.042L21.5684 21.3232" stroke="#A02828" stroke-width="2.52803" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+      
+      <div class="pri-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none"> <path d="M54.5603 27.5166L51.1604 23.5667C50.5104 22.8167 49.9853 21.4167 49.9853 20.4167V16.1666C49.9853 13.5167 47.8103 11.3417 45.1603 11.3417H40.9103C39.9353 11.3417 38.5103 10.8166 37.7603 10.1667L33.8103 6.76665C32.0854 5.29165 29.2603 5.29165 27.5103 6.76665L23.5854 10.1916C22.8354 10.8166 21.4103 11.3417 20.4353 11.3417H16.1103C13.4604 11.3417 11.2854 13.5167 11.2854 16.1666V20.4417C11.2854 21.4166 10.7604 22.8167 10.1354 23.5667L6.76035 27.5416C5.31035 29.2666 5.31035 32.0666 6.76035 33.7916L10.1354 37.7667C10.7604 38.5167 11.2854 39.9166 11.2854 40.8917V45.1666C11.2854 47.8166 13.4604 49.9916 16.1103 49.9916H20.4353C21.4103 49.9916 22.8354 50.5167 23.5854 51.1667L27.5353 54.5667C29.2603 56.0416 32.0854 56.0416 33.8354 54.5667L37.7854 51.1667C38.5354 50.5167 39.9353 49.9916 40.9353 49.9916H45.1853C47.8353 49.9916 50.0103 47.8166 50.0103 45.1666V40.9166C50.0103 39.9417 50.5353 38.5167 51.1853 37.7667L54.5854 33.8167C56.0353 32.0917 56.0353 29.2416 54.5603 27.5166ZM41.0603 25.9416L28.9853 38.0166C28.6353 38.3666 28.1603 38.5667 27.6603 38.5667C27.1603 38.5667 26.6854 38.3666 26.3354 38.0166L20.2853 31.9667C19.5603 31.2416 19.5603 30.0416 20.2853 29.3167C21.0103 28.5917 22.2104 28.5917 22.9353 29.3167L27.6603 34.0417L38.4104 23.2917C39.1353 22.5667 40.3353 22.5667 41.0603 23.2917C41.7853 24.0167 41.7853 25.2166 41.0603 25.9416Z" fill="#08A217"/> </svg>
+      </div>
+      <div class="pri-head">You’ll be notified</div>
+      <div class="pri-line"></div>
+      <div class="pri-head">Start building your wishlist now</div>
+      <a href="/pages/wishlist" class="pri-btn">Wishlist</a>
+    </div>
+  </div>
+
+
+
+        
+
+
+      
+    </div>
+  </div>
+</div>
+          <script>
+  var btn_show=localStorage.getItem('btn_notify_show');
+  
+  if(btn_show)
+  {
+ 
+    jQuery(".pre-sale-inner .pre-sale-btn").hide();
+  }
+  else
+  {
+  
+    jQuery(".pre-sale-inner .pre-sale-btn").show();
+  }
+</script>
+
+<script>
+    if (window.location.search == "?name=rocky") {
+        var url = "http://localhost/kushals_giftapp/data_gift_request.php";
+    } else {
+        var url = "https://gifting.kushals.com/pre_sale/ajaxcall.php"
+    }
+  var preswiper = new Swiper(".preSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+      breakpoints: {
+       768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+       
+      },
+  });
+
+
+  const popup = document.querySelector('.popup');
+function showPopup() {
+  popup.classList.add('open');
+}
+function hidePopup() {
+  popup.classList.remove('open');
+}
+
+
+    const popupsec = document.querySelector('.pre-pop-sec');
+function showPopupsec() {
+var email=jQuery(".ct_login_cust").attr("data-email");
+  
+   var data={
+        "phone_no": email,
+        "type": "1",
+        "method_call":"get_data"
+    }
+   $.ajax({
+          url: url,
+          cache: false,
+          type: "POST",
+          data: data,
+          dataType: "json",
+          success: function(response){
+           
+            if(response.success == true)
+            {
+              popupsec.classList.add('open');
+              localStorage.setItem('btn_notify_show', true);
+            }
+          }
+        });
+
+  
+}
+function hidePopupsec() {
+  popupsec.classList.remove('open');
+}
+
+  jQuery('.ct_btn_submit').click(function(){
+    var mobile_no=jQuery(".ct_wp_number").val();            
+    var cust_contact_no_length=jQuery(".ct_wp_number").val().length
+    var flag = false;
+
+    if(mobile_no != "" && cust_contact_no_length == 10)
+    {
+      flag = true
+    }
+    
+   
+    var data={
+        "phone_no": mobile_no,
+        "type": "0",
+        "method_call":"get_data"
+    }
+
+    if(flag)
+    { 
+      jQuery(".ct_wp_number").removeClass("ct_error");
+       jQuery(".ct_no_error").hide();
+        $.ajax({
+          url: url,
+          cache: false,
+          type: "POST",
+          data: data,
+          dataType: "json",
+          success: function(response){
+           
+            if(response.success == true)
+            {
+               localStorage.setItem('btn_notify_show', true);
+              jQuery(".pre-sale-btn").hide()
+              jQuery(".ct_wp_number").val("");  
+              jQuery(".popup").removeClass("open");
+              jQuery(".pre-pop-sec").addClass("open");
+            }
+          }
+        });
+    }
+    else
+    {
+       jQuery(".ct_wp_number").addClass("ct_error");
+       jQuery(".ct_no_error").show();
+    }
+})  
+
+  jQuery(document).on("input", ".ct_wp_number", function(e) {
+
+        var value = jQuery(this).val();
+        jQuery(".ct_wp_number").val(value);
+
+       $(this).val($(this).val().replace(/\D/g, '')); // Remove non-digit characters
+        if ($(this).val().length > 10) {
+            $(this).val($(this).val().slice(0, 10));
+        }
+
+        setTimeout(function() {
+
+            var content = jQuery(".ct_wp_number").val()[0]
+
+            console.log(content);
+            // var entered = $(this).val(),
+            //   content = parseInt(entered,10);    
+            if (content <= 5) {
+                jQuery(".ct_wp_number").addClass("ct_error");
+                jQuery(".ct_no_error").show();
+                return false;
+            } else {
+                jQuery(".ct_wp_number").removeClass("ct_error");
+                jQuery(".ct_no_error").hide();
+            }
+        }, 100)
+        var charCode = (e.which) ? e.which : event.keyCode;
+        if (String.fromCharCode(charCode).match(/[^0-9]/g)) {
+            jQuery(".ct_no_error").hide();
+            return false;
+        }
+    });
+</script>
+
+{% schema %}
+{
+  "name": "pre-sale",
+  "class": "pre-sale",
+  "settings": [],
+  "blocks":[{
+    "type":"time",
+    "name":"Time",
+    "settings":[
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Time Heading",
+        "default": "Sale Goes Live In"
+      },
+       {
+      "type":"text",
+      "id":"time",
+      "label":"June 31, 2023",
+      "info":"Date Format ( Dec 31, 2020 ) "
+    }
+
+    ]
+  },
+    {
+    "type":"banner",
+    "name":"banner",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+    "type":"slider",
+    "name":"Slider",
+      "settings":[
+        {
+          "type":"header",
+          "content":"Slider box one"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-one1",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-two1",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "headd1",
+          "label": "image text"
+        },
+        {
+          "type":"header",
+          "content":"Slider box Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-one2",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-two2",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "headd2",
+          "label": "image text"
+        },
+        {
+          "type":"header",
+          "content":"Slider box three"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-one3",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-two3",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "headd3",
+          "label": "image text"
+        },
+        {
+          "type":"header",
+          "content":"Slider box Four"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-one4",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-two4",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "headd4",
+          "label": "image text"
+        },
+        {
+          "type":"header",
+          "content":"Slider box Five"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-one5",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-two5",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "headd5",
+          "label": "image text"
+        },
+        {
+          "type":"header",
+          "content":"Slider box Six"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-one6",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-two6",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "headd6",
+          "label": "image text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+          "name": "Pre Sale"
+    }
+  ]
+}
+{% endschema %}

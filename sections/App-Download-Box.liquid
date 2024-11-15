@@ -1,0 +1,285 @@
+<style>
+  .App-Download-Box {
+    display: none;
+}
+  .home_app_img img {
+    width: 100px;
+    max-width: 100px;
+}
+  .home_app_detright img {
+    width: 100%;
+    max-width: 160px;
+    display:none;
+}
+  .home_app_detright {
+    margin-left: 90px;
+    position: relative;
+}
+  .linkFix {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+  .home_app_box_inner {
+    display: flex;
+}
+  .home_app_det {
+    display: flex;
+    align-items: center;
+        width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(270deg, #FEE 0.98%, rgba(255, 238, 238, 0.00) 99.89%);
+    padding: 3px 4px 3px 12px;
+}
+  .home_app_box {
+    padding: 20px 10px 0 10px;
+}
+  .top_home_title {
+    color: #343434;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+  .middle_home_title {
+    color: #fff;
+    font-family: Inter;
+    position: relative;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    z-index: 1;
+    padding: 0px 0 0 8px;
+    margin-top: 6px;
+}
+  .middle_home_title:before {
+    content: '';
+    width: 310px;
+    height: 79px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0796/1959/files/Group_54.png?v=1701233445);
+    position: absolute;
+    background-size: 100%;
+    left: 0;
+    top: -30px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+  
+  .Bottom_home_title {
+    display: inline-flex;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 175px;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    margin-top: 12px;
+    padding-top: 0;
+    background-image: url(https://cdn.shopify.com/s/files/1/0796/1959/files/Group_65.png?v=1701233251);
+    color: #CF2228;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+  .home_app_detbg {
+    display: flex;
+    align-items: center;
+    width: 100%;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='352' height='98' viewBox='0 0 352 98' fill='none'%3E%3Cpath d='M1.29529 0.708374H340.889C346.412 0.708374 350.889 5.18553 350.889 10.7084V86.8991C350.889 92.4219 346.412 96.899 340.889 96.899H1.29529' stroke='url(%23paint0_linear_678_753)' stroke-linecap='round' stroke-dasharray='4 4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_678_753' x1='350.889' y1='48.8037' x2='-32.9917' y2='48.8037' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23CECECE'/%3E%3Cstop offset='1' stop-color='%23CECECE' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+   background-size: cover;
+       height: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    justify-content: center;
+    padding: 0 14px 0 0;
+    
+}
+  
+
+  
+  @media(max-width:650px){
+    .top_home_title {
+    font-size: 17px;
+    }
+    .middle_home_title:before {
+    width: 220px;
+    height: 56px;
+    top: -11px;
+    }
+    .middle_home_title {
+    padding: 9px 0 0 8px;
+    margin-top: 0px;
+      font-size: 16px;
+}
+    .Bottom_home_title {
+    height: 30px;
+    width: 150px;
+    margin-top: 8px;
+    padding-top: 0;
+    font-size: 16px;
+}
+    .home_app_detright {
+    margin-left: 70px;
+}
+  }
+    @media(max-width:550px){
+      .home_app_detright img {
+    max-width: 130px;
+}
+    }
+    @media(max-width:500px){
+      .home_app_img img {
+    width: 70px;
+    max-width: 70px;
+}
+      .middle_home_title:before {
+    width: 200px;
+    height: 50px;
+    top: -11px;
+}
+      .top_home_title {
+    font-size: 15px;
+}
+      .Bottom_home_title {
+    height: 27px;
+    width: 140px;
+    font-size: 14px;
+}
+      .home_app_detbg {
+    justify-content: space-between;
+    }
+      .home_app_detright {
+    margin-left: 40px;
+}
+      @media(max-width:450px){
+        .home_app_img img {
+    width: 52px;
+    max-width: 52px;
+}
+        .middle_home_title {
+    padding: 4px 0 0 8px;
+}
+        .middle_home_title:before {
+    width: 190px;
+    height: 47px;
+    top: -13px;
+}
+        .Bottom_home_title {
+    height: 25px;
+    width: 130px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+        .home_app_detright {
+    margin-left: 43px;
+}
+        .home_app_detright img {
+    max-width: 110px;
+        }
+        .home_app_detbg {
+    justify-content: space-between;
+        }
+      }
+  @media(max-width:398px){
+    .home_app_detright img {
+    max-width: 90px;
+}
+    .top_home_title {
+    font-size: 13px;
+}
+    .middle_home_title {
+    font-size: 13px;
+    }
+    .middle_home_title:before {
+    width: 170px;
+    height: 43px;
+    top: -12px;
+}
+    .home_app_detbg {
+    padding: 0 8px 0 0;
+}
+    .home_app_img img {
+    width: 44px;
+    max-width: 44px;
+}
+  }
+  
+  @media(max-width:750px){
+    .App-Download-Box {
+    display: block;
+}
+  }
+</style>
+
+
+
+
+
+
+<div class="home_app_box">
+  <div class="home_app_box_inner">
+    <div class="home_app_img">
+
+       <img  src="https://cdn.shopify.com/s/files/1/0796/1959/files/Home.png?v=1701253609" data-src="https://cdn.shopify.com/s/files/1/0796/1959/files/Home.png?v=1701253609" 
+         width="200" height="200" alt="" class="" />
+    </div>
+    <div class="home_app_det">
+    <div class="home_app_detbg">
+      
+      <div class="home_app_detleft">
+        <div class="top_home_title">Download our App &</div>
+        <div class="middle_home_title">Save ₹200</div>
+        <div class="Bottom_home_title">APP200</div>
+      </div>
+      <div class="home_app_detright">
+        <a class="linkFix" href="http://share.shopney.co/sNPc2pRBty" ></a>
+        <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0796/1959/files/image_4_1_4283b4ca-1836-47cc-a64c-969cc845debe.png?v=1698744876" data-src="https://cdn.shopify.com/s/files/1/0796/1959/files/image_4_1_4283b4ca-1836-47cc-a64c-969cc845debe.png?v=1698744876" 
+         width="" height="" alt="" class=" ct_android_sec" />
+        <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0796/1959/files/image_5_2_cc0f268d-b7eb-472c-8c3a-97ecaf218c2c.png?v=1698744876" data-src="https://cdn.shopify.com/s/files/1/0796/1959/files/image_5_2_cc0f268d-b7eb-472c-8c3a-97ecaf218c2c.png?v=1698744876" 
+         width="" height="" alt="" class=" ct_iphone_sec" />
+      </div>
+
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  if ($(window).width() < 760) {
+   if (navigator.userAgent.match(/Android|Opera Mini|IEMobile/i))
+  {    
+    jQuery('.home_app_detright .ct_android_sec').show();
+  }
+  else
+  {    
+    jQuery('.home_app_detright .ct_iphone_sec').show();
+  }
+  }
+</script>
+{% schema %}
+{
+  "name": "App-Download-Box",
+  "class": "App-Download-Box",
+  
+  "settings": [],
+  "presets":[{
+  "name": "App-Download-Box"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

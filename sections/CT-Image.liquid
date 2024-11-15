@@ -1,0 +1,202 @@
+<style>
+  img.imgmobile {
+    display: none;
+}
+  .CT-Image-Inner img{
+    width:100%;
+  }
+  .CT-Image-Inner-small {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+  .CT-Image-Inner-part2 {
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+  .CT-Image-Inner-part3 {
+    margin-bottom: 150px;
+}
+  .CT-Image-Inner-part5 {
+    margin-top: 130px;
+    margin-bottom: 160px;
+}
+  .CT-Image-Inner-part7 {
+    margin-top: 170px;
+    margin-bottom: 240px;
+}
+  .CT-Image-Inner-part8 {
+    margin-bottom: 170px;
+}
+  .CT-Image-Inner-part12 {
+    margin-top: 130px;
+}
+  .CT-Image-Inner-part13 {
+    margin-top: 150px;
+    margin-bottom: 300px;
+}
+  a.CT-Image-Inner-part-btn {
+    display: flex;
+    width: 357.663px;
+    height: 88px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-radius: 108.411px;
+    background: var(--Pink-Gradient, linear-gradient(270deg, #E30058 7.05%, rgba(223, 0, 86, 0.93) 23.65%, rgba(218, 0, 84, 0.82) 33.57%, rgba(194, 0, 75, 0.00) 85.12%), #C71D22);
+    box-shadow: 0px 57.178px 112.313px 0px rgba(0, 0, 0, 0.33);
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 0.408px;
+    position: absolute;
+        top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  .CT-Image-Inner {
+    position: relative;
+}
+
+  @media(max-width:600px){
+    img.imgdesk {
+    display: none;
+}
+    img.imgmobile {
+    display: block;
+}
+    .CT-Image-Inner-part2 .imgmobile {
+    max-width: 350px;
+}
+    img.imgmobile {
+    margin: 0 auto;
+}
+    .CT-Image-Inner-part2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+    .CT-Image-Inner-part3 .imgmobile {
+    max-width: 100%;
+}
+    .CT-Image-Inner-part3 {
+    margin-bottom: 50px;
+}
+    .CT-Image-Inner-part5 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 0 30px;
+}
+    .CT-Image-Inner-part6 img.imgmobile {
+    max-width: 100%;
+}
+    .CT-Image-Inner-part11 {
+    margin-bottom: 150px;
+}
+    .CT-Image-Inner-part7 {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+    .CT-Image-Inner-part8 {
+    margin-bottom: 60px;
+}
+    .CT-Image-Inner-part10 {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+    .CT-Image-Inner-part12 {
+    margin-top: 0;
+    padding: 0 0px;
+}
+    .CT-Image-Inner-part13 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 0 50px;
+}
+    a.CT-Image-Inner-part-btn {
+    width: 190px;
+    height: 55px;
+    font-size: 20px;
+    top: -28px;
+}
+  }
+</style>
+<div class="CT-Image_main">
+  {% for block in section.blocks %}
+    <div class="CT-Image-Inner-part{{ forloop.index }} CT-Image-Inner {{ block.settings.style }}" {% if block.settings.max !=blank %} style="max-width: {{ block.settings.max }}px;"{% endif %} >
+      <!-- <img class="imgdesk" src="{{ block.settings.imgdesk | img_url:'master' }}" /> -->
+      {{- block.settings.imgdesk | image_url: width: '1400' | image_tag: id: image_id, loading: "lazy",  sizes: 'min(100vw, 1400px)', widths: '800,1200,1400', class: 'imgdesk' -}}
+
+      {{- block.settings.imgmob | image_url: width: '900' | image_tag: id: image_id, loading: "lazy",  sizes: 'min(100vw, 900px)', widths: '900', class: 'imgmobile' -}}
+      
+      
+      <!-- <img class="imgmobile" src="{{ block.settings.imgmob | img_url:'master' }}" /> -->
+      {% if block.settings.btn %}<a class="CT-Image-Inner-part-btn" href="https://www.kushals.com/">Hello 2024</a>{% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "CT-Image",
+    "settings": [],
+    "blocks":[{
+      "type":"Box",
+      "name":"Box",
+      "settings":[
+        {
+            "type": "checkbox",
+            "id": "btn",
+            "label": "Top Button",
+            "default": false
+          },
+
+          {
+            "type": "select",
+            "id": "style",
+            "label": "Page Width Style",
+            "options": [
+              {
+                "value": "CT-Image-Inner_full",
+                "label": "Full Width"
+              },
+              {
+                "value": "CT-Image-Inner-small",
+                "label": "Page Width"
+              }
+            ],
+            "default": "CT-Image-Inner-small"
+          },
+        {
+          "type": "text",
+          "id": "max",
+          "label": "Max-Width"
+        },
+        {
+          "type": "image_picker",
+          "id": "imgdesk",
+          "label": "Image For Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "imgmob",
+          "label": "Image For Mobile"
+        }
+
+
+      ]
+    }],
+    "presets":[{
+          "name": "CT-Image"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,95 @@
+<style>
+  .Shop-by-Price-head {
+    margin-top: 80px;
+    color: #000;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    margin-bottom: 45px;
+    font-size: 29px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+  .Shop-by-Price-box {
+    width: 100%;
+    display: inline-block;
+    max-width: 225px;
+    margin-left: 68px;
+}
+    .Shop-by-Price-box:first-child{
+        margin-left: 0px;
+      
+    }
+   .Shop-by-Price-box img{
+     width:100%;
+   }
+  .Shop-by-Pricebox-main {
+    display: flex;
+    justify-content: center;
+}
+  @media(max-width:750px){
+  .Shop-by-Price-box {
+    max-width: 120px;
+}   
+    .Shop-by-Price-head {
+    font-size: 26px;
+    }
+  }
+</style>
+
+
+<div class="Shop-by-Price">
+    <div class="Shop-by-Price-inner">
+        <div class="Shop-by-Price-head">{{ section.settings.title }}</div>
+        <div class="Shop-by-Pricebox-main">
+          {% for block in section.blocks %}
+            <a href="{{ block.settings.collection.url }}" class="Shop-by-Price-box">
+                <img loading="lazy" src="{{ block.settings.image | img_url: '1024x1024' }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" alt="{{ block.settings.image.alt | escape }}" class="rimage__image">
+             </a>
+          {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Shop-by-Price",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "SHOP BY PRICE"
+      }
+    ],
+    "blocks":[{
+      "type":"img",
+      "name":"Box",
+      "limit":3,
+      "settings":[
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+
+      ]
+    }],
+    "presets":[{
+          "name": "Shop-by-Price"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

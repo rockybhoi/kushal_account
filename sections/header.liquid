@@ -1,0 +1,1825 @@
+{%- assign mobile_expand_with_entire_link = true -%}
+
+{% style %}
+   .logo img {
+     width: {{ section.settings.logo_img_width_int }}px;
+   }
+   .logo-area__middle--logo-image {
+     max-width: {{ section.settings.logo_img_width_int }}px;
+   }
+   @media (max-width: 767px) {
+     .logo img {
+       width: {{ section.settings.mobile_logo_img_width_int }}px;
+     }
+   }
+   {%- if section.settings.enable_sticky -%}
+   .section-header {
+  background: #fff;
+   }
+   .nav-sticky-bar {
+  position: -webkit-sticky;
+     position: sticky;
+  background: transparent;
+   }
+   .nav-sticky-bar #main-nav {
+     top: 82.25px;
+     position: fixed;
+  width: 100%;
+     z-index: 99999;
+   }
+   #main-nav {
+     top: unset;
+     position: relative;
+  margin-top: -1px;
+   }
+   .section-header .pageheader {
+  transition: transform 400ms ease-in, opacity 400ms ease-in, visibility 400ms;
+  transform: translateY(-1px);
+   }
+   /* .section-header .pageheader.nav-down {
+   	transform: translateY(-15px);
+  transition: transform 0ms ease-in, opacity 0ms ease-in, visibility 0ms;
+   } */
+   {%- endif -%}
+{% endstyle %}
+
+  <div class="ct_descktop">
+   {% render 'location-header' , icon: 'desktop' %}
+  </div>
+{% if template == 'gift_card' %}
+  {% comment %} Gift card template logo {% endcomment %}
+  <meta itemprop="url" content="{{ shop.url }}">
+  <meta itemprop="name" content="{{ shop.name }}">
+  {% if section.settings.logo != blank %}
+    <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
+      {% capture img_size %}{{ section.settings.logo_img_width_int | times: 2 }}x{% endcapture %}
+      <img
+        loading="lazy"
+        src="{{ section.settings.logo | img_url: img_size }}"
+        alt="{{ section.settings.logo.alt | escape }}"
+        itemprop="logo"
+        width="{{ section.settings.logo.width }}"
+        height="{{ section.settings.logo.height }}"
+      >
+    </h1>
+  {% else %}
+    <h1>{{ shop.name }}</h1>
+  {% endif %}
+
+{% else %}
+  {%- assign featured_links = section.settings.nav_featured_link | split: ', ' -%}
+  <div data-section-type="header" data-cc-animate>
+    <div id="pageheader" class="pageheader pageheader--layout-{{ section.settings.menu_layout }}">
+      {%- capture logo_html -%}
+        {% if template.name == 'index'  %}
+      <h1 class="logo">
+        <a href="{{ routes.root_url }}" title="{{ shop.name }}">
+          {%- if section.settings.logo != blank -%}
+            {%- capture img_size -%}{{ section.settings.logo_img_width_int | times: 2 }}x{%- endcapture -%}           
+            <img src="{{ section.settings.logo | image_url: width: 200  }}" alt="{{ section.settings.logo.alt | escape }}" itemprop="logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" />
+          {%- else -%}
+            <span class="logotext">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+      </h1>
+          {% else %}
+          <h2 class="logo">
+          <a href="{{ routes.root_url }}" title="{{ shop.name }}">
+          {%- if section.settings.logo != blank -%}
+            {%- capture img_size -%}{{ section.settings.logo_img_width_int | times: 2 }}x{%- endcapture -%}           
+            <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ section.settings.logo.alt | escape }}" itemprop="logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" />
+          {%- else -%}
+            <span class="logotext">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+          </h2>
+          {% endif %}
+    {%- endcapture -%}
+
+      <div class="logo-area container container--no-max">
+        <div class="logo-area__left header-logo-menu">
+          <div class="logo-area__left__inner">
+            <button
+              class="button notabutton mobile-nav-toggle"
+              aria-label="{{ 'general.navigation.menu_toggle_aria_label' | t | escape }}"
+              aria-controls="main-nav"
+            >
+              {% render 'svg-menu' %}
+            </button>
+            
+            {% if section.settings.menu_layout contains 'inline' %}
+              <div
+                class="navigation navigation--left"
+                role="navigation"
+                aria-label="{{ 'general.navigation.main_navigation_aria_label' | t | escape }}"
+              >
+                <div class="navigation__tier-1-container">
+                  <ul class="navigation__tier-1">
+                    {% for link in linklists[section.settings.menu_linklist].links %}
+                      {%- assign has_dropdown = false -%}
+                      {%- if link.links != blank -%}
+                        {%- assign has_dropdown = true -%}
+                      {%- else -%}
+                        {%- for block in section.blocks -%}
+                          {%- if block.settings.dropdown_link_title == link.title -%}
+                            {%- assign has_dropdown = true -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endif -%}
+                      <li class=" navigation__item{% if has_dropdown %} navigation__item--with-children{% endif %}{% if featured_links contains link.title %} featured-link{% endif %}{% if link.active %} navigation__item--active{% endif %}">
+                        <a
+                          href="{{ link.url }}"
+                          class="navigation__link"
+                          {% if has_dropdown %}
+                            aria-haspopup="true" aria-expanded="false"
+                            aria-controls="NavigationTier2-{{ forloop.index }}"
+                          {% endif %}
+                        >
+                          {{- link.title -}}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="logo-area__middle logo-area__middle--logo-{% if section.settings.logo != blank %}image{% else %}text{% endif %}">
+          <div class="logo-area__middle__inner ct-logo-area__middle__inner">
+            {{- logo_html -}}
+          </div>
+  <div class="ct_Store_mobile">
+          {% render 'location-header' , icon: 'desktop' %}
+  </div>
+  
+        </div>
+
+        <div class="logo-area__right">
+
+          
+          
+          <div class="logo-area__right__inner">
+            
+            <div class="app-header-icon">
+               <a href="{{ section.settings.full }}" class="head-app-link">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Group_48099077.png?v=1716199558">
+               </a>
+              <div class="app-header-icon-border"></div>
+          </div>
+         
+  
+
+            <script>
+
+              if ($(window).width() < 760) {
+                 if (navigator.userAgent.match(/Android|Opera Mini|IEMobile/i))
+              {
+                 jQuery('.head-app-link').addClass('ct_Andriod_link');
+                jQuery('.head-app-link').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+                jQuery('.app-header-icon a').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+                
+              }
+              else
+              {    
+                 jQuery('.head-app-link').addClass('ct_IOS_link');
+                    jQuery('.head-app-link').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+                    jQuery('.app-header-icon a').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+                
+              }
+              }
+            
+            </script>
+   
+
+            
+            
+            {%- if section.settings.enable_search -%}
+              {%- liquid
+                assign show_search_suggestions = false
+                if section.settings.search_suggestions_title != blank or section.settings.search_suggestions_menu != blank
+                  assign show_search_suggestions = true
+                endif
+              -%}
+              {%- unless template.name == 'cart' -%}
+                <div
+                  id="main-search"
+                  class="main-search header-search-bar-wrap desktop-only{% if show_search_suggestions %}main-search--with-suggestions{% endif %}"
+                  data-live-search="{{ settings.enable_live_search }}"
+                  data-live-search-price="{{ settings.live_search_show_price }}"
+                  data-live-search-vendor="{{ settings.live_search_show_vendor }}"
+                  data-live-search-meta="{{ settings.live_search_search_meta }}"
+                  data-per-row-mob="{{ settings.prod_thumb_mob_per_row }}"
+                >
+                  <div class=" main-search__container container">
+                    <button
+                      class="main-search__close button notabutton"
+                      aria-label="{{ 'layout.search.close' | t | escape }}"
+                    >
+                      {% render 'svg-x' %}
+                    </button>
+
+                    <form class="wizzy-custom-search-form" method="get" autocomplete="off">
+                      <input type="hidden" name="type" value="{{ settings.search_type }}">
+                      <input tz-index type="hidden" name="options[prefix]" value="last">
+                      <div class="main-search__input-container">
+                        <input
+                          class=" main-search__input_st wizzy-search-input"
+                          type="text"
+                          name="q"
+                          autocomplete="off"
+                          placeholder="{{ 'layout.search.placeholder' | t | escape }}"
+                          aria-label="{{ 'layout.search.title' | t | escape }}"
+                        >
+                      </div>
+                      <button
+                        class="main-search__button button notabutton"
+                        type="submit"
+                        aria-label="{{ 'layout.header.search_submit' | t }}"
+                      >
+                        {% render 'svg-search' %}
+                      </button>
+                    </form>
+
+                    <div class="main-search__results"></div>
+
+                    {% if show_search_suggestions %}
+                      <div class="main-search__suggestions">
+                        {% if section.settings.search_suggestions_title != blank %}
+                          <div class="h4-style heading-font">{{ section.settings.search_suggestions_title }}</div>
+                        {% endif %}
+                        {% if section.settings.search_suggestions_menu != blank %}
+                          {%- liquid
+                            assign suggestions_menu = linklists[section.settings.search_suggestions_menu]
+
+                            if settings.coll_grid_image_shape == 'portrait-23'
+                              assign collection_aspect_ratio = 0.67
+                            elsif settings.coll_grid_image_shape == 'portrait-45'
+                              assign collection_aspect_ratio = 0.8
+                            elsif settings.coll_grid_image_shape == 'square'
+                              assign collection_aspect_ratio = 1.0
+                            elsif settings.coll_grid_image_shape == 'landscape-54'
+                              assign collection_aspect_ratio = 1.25
+                            elsif settings.coll_grid_image_shape == 'landscape-32'
+                              assign collection_aspect_ratio = 1.50
+                            elsif settings.coll_grid_image_shape == 'tallest'
+                              assign collection_aspect_ratio = 999
+                              for link in suggestions_menu.links
+                                for child_link in link.links
+                                  if child_link.type == 'collection_link'
+                                    if child_link.object.featured_image.aspect_ratio < collection_aspect_ratio
+                                      assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
+                                    endif
+                                  endif
+                                endfor
+
+                                if link.type == 'collection_link'
+                                  if link.object.featured_image.aspect_ratio < collection_aspect_ratio
+                                    assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
+                                  endif
+                                endif
+                              endfor
+                            else
+                              assign collection_aspect_ratio = 0
+                              for link in suggestions_menu.links
+                                for child_link in link.links
+                                  if child_link.type == 'collection_link' and child_link.object.featured_image.aspect_ratio > collection_aspect_ratio
+                                    assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
+                                  endif
+                                endfor
+
+                                if link.type == 'collection_link' and link.object.featured_image.aspect_ratio > collection_aspect_ratio
+                                  assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
+                                endif
+                              endfor
+                            endif
+
+                            if settings.prod_thumb_shape == 'portrait-23'
+                              assign product_aspect_ratio = 0.67
+                            elsif settings.prod_thumb_shape == 'portrait-45'
+                              assign product_aspect_ratio = 0.8
+                            elsif settings.prod_thumb_shape == 'square'
+                              assign product_aspect_ratio = 1.0
+                            elsif settings.prod_thumb_shape == 'landscape-54'
+                              assign product_aspect_ratio = 1.25
+                            elsif settings.prod_thumb_shape == 'landscape-32'
+                              assign product_aspect_ratio = 1.50
+                            elsif settings.prod_thumb_shape == 'tallest'
+                              assign product_aspect_ratio = 99
+                              for link in suggestions_menu.links
+                                for child_link in link.links
+                                  if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
+                                    assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
+                                  endif
+                                endfor
+                                if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
+                                  assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
+                                endif
+                              endfor
+                            else
+                              assign product_aspect_ratio = 0
+                              for link in suggestions_menu.links
+                                for child_link in link.links
+                                  if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
+                                    assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
+                                  endif
+                                endfor
+                                if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
+                                  assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
+                                endif
+                              endfor
+                            endif
+                          -%}
+                          <div class="search-suggestions">
+                            <div class="search-suggestions__item-row">
+                              {% for link in suggestions_menu.links %}
+                                {% if link.links != blank %}
+                                  <div class="search-suggestions__item search-suggestions__item--with-row">
+                                    <div class="search-suggestions__heading h5-style heading-font">
+                                      <a href="{{ link.url }}">{{ link.title }}</a>
+                                    </div>
+                                    <div class="search-suggestions__item-row">
+                                      {% for child_link in link.links %}
+                                        <div class="search-suggestions__item">
+                                          {% if child_link.type == 'collection_link' %}
+                                            {% render 'collection-block',
+                                              collection: child_link.object,
+                                              custom_aspect_ratio: collection_aspect_ratio,
+                                              manual_image_load: true
+                                            %}
+                                          {% elsif child_link.type == 'product_link' %}
+                                            {% render 'product-block',
+                                              product: child_link.object,
+                                              custom_aspect_ratio: product_aspect_ratio,
+                                              manual_image_load: true
+                                            %}
+                                          {% else %}
+                                            <a class="search-suggestions__link" href="{{ child_link.url }}">
+                                              {{- child_link.title -}}
+                                            </a>
+                                          {% endif %}
+                                        </div>
+                                      {% endfor %}
+                                    </div>
+                                  </div>
+                                {% else %}
+                                  <div class="search-suggestions__item">
+                                    {% if link.type == 'collection_link' %}
+                                      {% render 'collection-block',
+                                        collection: link.object,
+                                        custom_aspect_ratio: collection_aspect_ratio,
+                                        manual_image_load: true
+                                      %}
+                                    {% elsif link.type == 'product_link' %}
+                                      {% render 'product-block',
+                                        product: link.object,
+                                        custom_aspect_ratio: product_aspect_ratio,
+                                        manual_image_load: true
+                                      %}
+                                    {% else %}
+                                      <a class="search-suggestions__link" href="{{ link.url }}">{{ link.title }}</a>
+                                    {% endif %}
+                                  </div>
+                                {% endif %}
+                              {% endfor %}
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {%- endunless -%}
+            {%- endif -%}
+
+            <a  aria-label="zooomy__hhrt" 
+              class="zooomy__hhrt header_hhrt"
+              href="/pages/wishlist"
+              style="height: 30px;margin-right: 15px;background: transparent !important;"
+              >
+
+
+<svg class="cart-link__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.69001C2 5.60001 4.49 3.10001 7.56 3.10001C9.38 3.10001 10.99 3.98001 12 5.34001C13.01 3.98001 14.63 3.10001 16.44 3.10001C19.51 3.10001 22 5.60001 22 8.69001C22 15.69 15.52 19.82 12.62 20.81Z" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.301 21.1265C12.6978 20.7297 14.6818 20.7297 18.253 17.1585C21.8243 13.5872 22.2211 10.4128 21.8243 7.23834" stroke="#C41011" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  </a>
+
+            {% if shop.customer_accounts_enabled %}
+              {% capture the_snippet_fave_icon_menu %}{% render 'ssw-widget-faveicon-menu' with product.id %}{% endcapture %}
+              {% unless the_snippet_fave_icon_menu contains 'Liquid error' %}
+                {% if shop.customer_accounts_enabled or shop.metafields.ssw.settings.wishlist_users_only != 1 %}
+                  {% assign customer_locale = shop.locale | prepend: 'lang_' %}
+                  {% unless shop.metafields.ssw[customer_locale] %}
+                    {% for published_locale in shop.published_locales %}
+                      {% if published_locale.primary == true %}
+                        {% assign customer_locale = published_locale.iso_code | prepend: 'lang_' %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endunless %}
+                  {% assign ssw_fave_enabled = 1 %}
+                  {% if shop.metafields.ssw.fave_enabled %}
+                    {% assign ssw_fave_enabled = shop.metafields.ssw.fave_enabled | plus: 0 %}
+                  {% endif %}
+                  {% if ssw_fave_enabled == 1 %}
+                    <a
+                      class="ssw-link-fave-menu ssw-link-fave-menu-hide-count"
+                      onclick="ssw('.ssw-fave-caption').click();"
+                      href="#"
+                      aria-label="{{ shop.metafields.ssw[customer_locale].value.my_faves }}"
+                      ><i class="ssw-icon-heart-o"></i><span class="ssw-counter-fave-menu ssw-hide"></span
+                    ></a>
+                    <script defer>
+                      var sswFaveCounterMenuLoaded=true;
+                    </script>
+                  {% endif %}
+                {% endif %}
+              {% endunless %}
+              {% if customer %}
+                <a
+                  class="header-account-link"
+                  href="{{ routes.account_url }}"
+                  aria-label="{{ 'layout.customer.account' | t | escape }}"
+                >
+                  <span class="desktop-only">
+                <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+  <path d="M15.824 15.975C15.7365 15.9625 15.624 15.9625 15.524 15.975C13.324 15.9 11.574 14.1 11.574 11.8875C11.574 9.62498 13.399 7.78748 15.674 7.78748C17.9365 7.78748 19.774 9.62498 19.774 11.8875C19.7615 14.1 18.024 15.9 15.824 15.975Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24.099 24.2251C21.874 26.2626 18.924 27.5001 15.674 27.5001C12.424 27.5001 9.47404 26.2626 7.24904 24.2251C7.37404 23.0501 8.12404 21.9001 9.46154 21.0001C12.8865 18.7251 18.4865 18.7251 21.8865 21.0001C23.224 21.9001 23.974 23.0501 24.099 24.2251Z" stroke="#C41011" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.6743 27.4999C22.5779 27.4999 28.1743 21.9034 28.1743 14.9999C28.1743 8.09633 22.5779 2.49989 15.6743 2.49989C8.77077 2.49989 3.17433 8.09633 3.17433 14.9999C3.17433 21.9034 8.77077 27.4999 15.6743 27.4999Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <!-- {% render 'svg-user' %} -->
+                
+                </span>
+                  <span class="mobile-only">
+          
+                    
+<svg class="cart-link__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.1197 12.78C12.0497 12.77 11.9597 12.77 11.8797 12.78C10.1197 12.72 8.71973 11.28 8.71973 9.50998C8.71973 7.69998 10.1797 6.22998 11.9997 6.22998C13.8097 6.22998 15.2797 7.69998 15.2797 9.50998C15.2697 11.28 13.8797 12.72 12.1197 12.78Z" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 21.9999C17.5228 21.9999 22 17.5228 22 11.9999C22 6.47706 17.5228 1.99991 12 1.99991C6.47715 1.99991 2 6.47706 2 11.9999C2 17.5228 6.47715 21.9999 12 21.9999Z" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.7398 19.3801C16.9598 21.0101 14.5998 22.0001 11.9998 22.0001C9.39977 22.0001 7.03977 21.0101 5.25977 19.3801C5.35977 18.4401 5.95977 17.5201 7.02977 16.8001C9.76977 14.9801 14.2498 14.9801 16.9698 16.8001C18.0398 17.5201 18.6398 18.4401 18.7398 19.3801Z" stroke="#C41011" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                <!-- {% render 'svg-user' %} -->
+                
+                </span>
+                </a>
+              {% else %}
+                <a
+                  class="header-account-link"
+                  href="{{ routes.account_login_url }}"
+                  aria-label="{{ 'layout.customer.account' | t | escape }}"
+                >
+                  <span class="desktop-only">
+                <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+  <path d="M15.824 15.975C15.7365 15.9625 15.624 15.9625 15.524 15.975C13.324 15.9 11.574 14.1 11.574 11.8875C11.574 9.62498 13.399 7.78748 15.674 7.78748C17.9365 7.78748 19.774 9.62498 19.774 11.8875C19.7615 14.1 18.024 15.9 15.824 15.975Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24.099 24.2251C21.874 26.2626 18.924 27.5001 15.674 27.5001C12.424 27.5001 9.47404 26.2626 7.24904 24.2251C7.37404 23.0501 8.12404 21.9001 9.46154 21.0001C12.8865 18.7251 18.4865 18.7251 21.8865 21.0001C23.224 21.9001 23.974 23.0501 24.099 24.2251Z" stroke="#C41011" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.6743 27.4999C22.5779 27.4999 28.1743 21.9034 28.1743 14.9999C28.1743 8.09633 22.5779 2.49989 15.6743 2.49989C8.77077 2.49989 3.17433 8.09633 3.17433 14.9999C3.17433 21.9034 8.77077 27.4999 15.6743 27.4999Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <!-- {% render 'svg-user' %} -->
+                </span>
+                  <span class="mobile-only">
+             
+                    
+<svg class="cart-link__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.1197 12.78C12.0497 12.77 11.9597 12.77 11.8797 12.78C10.1197 12.72 8.71973 11.28 8.71973 9.50998C8.71973 7.69998 10.1797 6.22998 11.9997 6.22998C13.8097 6.22998 15.2797 7.69998 15.2797 9.50998C15.2697 11.28 13.8797 12.72 12.1197 12.78Z" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 21.9999C17.5228 21.9999 22 17.5228 22 11.9999C22 6.47706 17.5228 1.99991 12 1.99991C6.47715 1.99991 2 6.47706 2 11.9999C2 17.5228 6.47715 21.9999 12 21.9999Z" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.7398 19.3801C16.9598 21.0101 14.5998 22.0001 11.9998 22.0001C9.39977 22.0001 7.03977 21.0101 5.25977 19.3801C5.35977 18.4401 5.95977 17.5201 7.02977 16.8001C9.76977 14.9801 14.2498 14.9801 16.9698 16.8001C18.0398 17.5201 18.6398 18.4401 18.7398 19.3801Z" stroke="#C41011" stroke-width="1.42109" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                <!-- {% render 'svg-user' %} -->
+                </span>
+                </a>
+              {% endif %}
+            {% endif %}
+            {% capture cart_html %}
+            
+            
+            <div class="utils__item header-cart  hide-for-search">
+              <a href="{{ routes.cart_url }}" class="mm-ajaxcart-open cart-link">
+              <span class="cart-link__icon">
+              
+                
+<svg class="cart-link__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.39996 6.5H15.6C19 6.5 19.34 8.09 19.57 10.03L20.47 17.53C20.76 19.99 20 22 16.5 22H7.50996C3.99996 22 3.23996 19.99 3.53996 17.53L4.43997 10.03C4.65997 8.09 4.99996 6.5 8.39996 6.5Z" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.33227" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 8V4.5C8 3 9 2 10.5 2H13.5C15 2 16 3 16 4.5V8" stroke="#292D32" stroke-opacity="0.8" stroke-width="1.33227" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.41 17.03H8" stroke="#C41011" stroke-width="1.55432" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+              <!-- {%- render 'svg-cart' -%} -->
+                {%- if cart.item_count > 0 -%}
+                    <span class="cart-link__count header-cart__count">{{ cart.item_count }}</span>
+                  {%- endif -%}
+            </span>
+              </a>             
+            </div>
+            {% endcapture %}
+            {{ cart_html }}
+          </div>
+        </div>
+      </div>
+
+      {%- if section.settings.enable_search -%}
+        {%- liquid
+          assign show_search_suggestions = false
+          if section.settings.search_suggestions_title != blank or section.settings.search_suggestions_menu != blank
+            assign show_search_suggestions = true
+          endif
+        -%}
+        {%- unless template.name == 'cart' -%}
+          <div
+            id="main-search"
+            class="main-search {% if show_search_suggestions %}main-search--with-suggestions{% endif %}"
+            data-live-search="{{ settings.enable_live_search }}"
+            data-live-search-price="{{ settings.live_search_show_price }}"
+            data-live-search-vendor="{{ settings.live_search_show_vendor }}"
+            data-live-search-meta="{{ settings.live_search_search_meta }}"
+            data-per-row-mob="{{ settings.prod_thumb_mob_per_row }}"
+          >
+            <div class="ct_main-search__container main-search__container container">
+              <button
+                class="main-search__close button notabutton"
+                aria-label="{{ 'layout.search.close' | t | escape }}"
+              >
+                {% render 'svg-x' %}
+              </button>
+
+              <form class="main-search__form" action="{{ routes.search_url }}" method="get" autocomplete="off">
+                <input type="hidden" name="type" value="{{ settings.search_type }}">
+                <input type="hidden" name="options[prefix]" value="last">
+                <div class="main-search__input-container">
+                  <input
+                    class="ct_main-search__input main-search__input_st wizzy-search-input"
+                    type="text"
+                    name="q"
+                    autocomplete="off"
+                    placeholder="{{ 'layout.search.placeholder' | t | escape }}"
+                    aria-label="{{ 'layout.search.title' | t | escape }}"
+                  >
+                </div>
+                <button
+                  class="main-search__button button notabutton"
+                  type="submit"
+                  aria-label="{{ 'layout.header.search_submit' | t }}"
+                >
+                  {% render 'svg-search' %}
+                </button>
+              </form>
+
+              <div class="main-search__results"></div>
+
+              {% if show_search_suggestions %}
+                <div class="main-search__suggestions">
+                  {% if section.settings.search_suggestions_title != blank %}
+                    <div class="h4-style heading-font">{{ section.settings.search_suggestions_title }}</div>
+                  {% endif %}
+                  {% if section.settings.search_suggestions_menu != blank %}
+                    {%- liquid
+                      assign suggestions_menu = linklists[section.settings.search_suggestions_menu]
+
+                      if settings.coll_grid_image_shape == 'portrait-23'
+                        assign collection_aspect_ratio = 0.67
+                      elsif settings.coll_grid_image_shape == 'portrait-45'
+                        assign collection_aspect_ratio = 0.8
+                      elsif settings.coll_grid_image_shape == 'square'
+                        assign collection_aspect_ratio = 1.0
+                      elsif settings.coll_grid_image_shape == 'landscape-54'
+                        assign collection_aspect_ratio = 1.25
+                      elsif settings.coll_grid_image_shape == 'landscape-32'
+                        assign collection_aspect_ratio = 1.50
+                      elsif settings.coll_grid_image_shape == 'tallest'
+                        assign collection_aspect_ratio = 999
+                        for link in suggestions_menu.links
+                          for child_link in link.links
+                            if child_link.type == 'collection_link'
+                              if child_link.object.featured_image.aspect_ratio < collection_aspect_ratio
+                                assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
+                              endif
+                            endif
+                          endfor
+
+                          if link.type == 'collection_link'
+                            if link.object.featured_image.aspect_ratio < collection_aspect_ratio
+                              assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
+                            endif
+                          endif
+                        endfor
+                      else
+                        assign collection_aspect_ratio = 0
+                        for link in suggestions_menu.links
+                          for child_link in link.links
+                            if child_link.type == 'collection_link' and child_link.object.featured_image.aspect_ratio > collection_aspect_ratio
+                              assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
+                            endif
+                          endfor
+
+                          if link.type == 'collection_link' and link.object.featured_image.aspect_ratio > collection_aspect_ratio
+                            assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
+                          endif
+                        endfor
+                      endif
+
+                      if settings.prod_thumb_shape == 'portrait-23'
+                        assign product_aspect_ratio = 0.67
+                      elsif settings.prod_thumb_shape == 'portrait-45'
+                        assign product_aspect_ratio = 0.8
+                      elsif settings.prod_thumb_shape == 'square'
+                        assign product_aspect_ratio = 1.0
+                      elsif settings.prod_thumb_shape == 'landscape-54'
+                        assign product_aspect_ratio = 1.25
+                      elsif settings.prod_thumb_shape == 'landscape-32'
+                        assign product_aspect_ratio = 1.50
+                      elsif settings.prod_thumb_shape == 'tallest'
+                        assign product_aspect_ratio = 99
+                        for link in suggestions_menu.links
+                          for child_link in link.links
+                            if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
+                              assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
+                            endif
+                          endfor
+                          if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
+                            assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
+                          endif
+                        endfor
+                      else
+                        assign product_aspect_ratio = 0
+                        for link in suggestions_menu.links
+                          for child_link in link.links
+                            if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
+                              assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
+                            endif
+                          endfor
+                          if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
+                            assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
+                          endif
+                        endfor
+                      endif
+                    -%}
+                    <div class="search-suggestions">
+                      <div class="search-suggestions__item-row">
+                        {% for link in suggestions_menu.links %}
+                          {% if link.links != blank %}
+                            <div class="search-suggestions__item search-suggestions__item--with-row">
+                              <div class="search-suggestions__heading h5-style heading-font">
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                              </div>
+                              <div class="search-suggestions__item-row">
+                                {% for child_link in link.links %}
+                                  <div class="search-suggestions__item">
+                                    {% if child_link.type == 'collection_link' %}
+                                      {% render 'collection-block',
+                                        collection: child_link.object,
+                                        custom_aspect_ratio: collection_aspect_ratio,
+                                        manual_image_load: true
+                                      %}
+                                    {% elsif child_link.type == 'product_link' %}
+                                      {% render 'product-block',
+                                        product: child_link.object,
+                                        custom_aspect_ratio: product_aspect_ratio,
+                                        manual_image_load: true
+                                      %}
+                                    {% else %}
+                                      <a class="search-suggestions__link" href="{{ child_link.url }}">
+                                        {{- child_link.title -}}
+                                      </a>
+                                    {% endif %}
+                                  </div>
+                                {% endfor %}
+                              </div>
+                            </div>
+                          {% else %}
+                            <div class="search-suggestions__item">
+                              {% if link.type == 'collection_link' %}
+                                {% render 'collection-block',
+                                  collection: link.object,
+                                  custom_aspect_ratio: collection_aspect_ratio,
+                                  manual_image_load: true
+                                %}
+                              {% elsif link.type == 'product_link' %}
+                                {% render 'product-block',
+                                  product: link.object,
+                                  custom_aspect_ratio: product_aspect_ratio,
+                                  manual_image_load: true
+                                %}
+                              {% else %}
+                                <a class="search-suggestions__link" href="{{ link.url }}">{{ link.title }}</a>
+                              {% endif %}
+                            </div>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {%- endunless -%}
+      {%- endif -%}
+    </div>
+
+    <div id="main-nav" class="desktop-only">
+
+      
+      <div
+        class="navigation navigation--main"
+        role="navigation"
+        aria-label="{{ 'general.navigation.main_navigation_aria_label' | t | escape }}"
+        data-mobile-expand-with-entire-link="{{ mobile_expand_with_entire_link }}"
+      >
+
+
+{% render 'mobile-menu-footer' %}
+
+  
+        <div class="navigation__tier-1-container">
+          <div class="mobile-only-flex navigation__mobile-header">
+            <a href="#" class="mobile-nav-back">{% render 'icon-toggle-menu', stroke_width: 1.3 %}</a>
+            <span class="mobile-nav-title"></span>
+            <a href="#" class="mobile-nav-toggle">{% render 'svg-x', stroke_width: 1.3 %}</a>
+          </div>
+
+
+  {% if section.settings.banner_mob !=blank %}
+    <style>
+  .CT_menu_Mobile_bannner{
+  display:none;
+  }
+  @media(max-width:750px){
+    .CT_menu_Mobile_bannner{
+  display:block;
+      line-height: 0;
+    padding: 6px 6px 6px 6px;
+    border-bottom: 1px solid #DEDEDE;
+  }
+  }
+  </style>
+  <div class="CT_menu_Mobile_bannner">
+  <a href="{{ section.settings.banner_link  }}">
+  {% if section.settings.banner_mob !=blank %}
+    {{- section.settings.banner_mob | image_url: width: '500' | image_tag: id: image_id, loading: "eager",  fetchpriority:'high' , sizes: 'min(100vw, 500px)', widths: '500', class: 'notlazy rimage__image ' -}}
+    
+    
+  {% endif %}
+    </a>
+  </div>
+{% endif %}
+
+
+
+           <div class="app-download-banner-inner app-download-banner-menu">
+                          <a href="{{ section.settings.full }}" class="bottom_pop_inner">
+                        
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/menu-android_new.png?v=1718783020" width="500" height="250" alt="app-banner-android" class='app-banner app-banner-android '>
+                            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/menu-ios.png?v=1715860367" width="500" height="250" alt="app-banner-android" class='app-banner app-banner-iphone  '>
+                            
+                           </a>
+                        </div>
+          
+
+
+
+          <script>
+
+  if ($(window).width() < 760) {
+     if (navigator.userAgent.match(/Android|Opera Mini|IEMobile/i))
+  {
+     jQuery('.bottom_pop_inner').addClass('ct_Andriod_link');
+    jQuery('.bottom_pop_inner').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+    jQuery('.app-download-banner-inner a').prop('href', 'https://play.google.com/store/apps/details?id=co.kushals');
+    
+  }
+  else
+  {    
+     jQuery('.bottom_pop_inner').addClass('ct_IOS_link');
+        jQuery('.bottom_pop_inner').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+        jQuery('.app-download-banner-inner a').prop('href', 'https://apps.apple.com/in/app/kushals-fashion-jewellery/id6450987987');
+    
+  }
+  }
+
+</script>
+
+
+           
+          
+  
+          <ul class="navigation__tier-1">
+            {% for link in linklists[section.settings.menu_linklist].links %}
+              {%- liquid
+                assign has_dropdown = false
+                if link.links != blank
+                  assign has_dropdown = true
+                endif
+                assign use_columns = false
+                if link.levels >= 2
+                  assign use_columns = true
+                else
+                  for block in section.blocks
+                    if block.settings.dropdown_link_title == link.title
+                      assign use_columns = true
+                      assign has_dropdown = true
+                    endif
+                  endfor
+                endif
+              -%}
+              <li class="ct_navigation__item  navigation__item{% if has_dropdown %} navigation__item--with-children {% if use_columns %}navigation__item--with-mega-menu{% else %}navigation__item--with-small-menu{% endif %}{% endif %}{% if featured_links contains link.title %} featured-link{% endif %}{% if link.active %} navigation__item--active{% endif %}">
+                <a
+                  href="{{ link.url }}"
+                  class="navigation__link"
+                  {% if has_dropdown %}
+                    aria-haspopup="true" aria-expanded="false" aria-controls="NavigationTier2-{{ forloop.index }}"
+                  {% endif %}
+                >
+                  {% if featured_links contains link.title %}
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.79476 5.05613C2.79476 3.80713 3.80676 2.79513 5.05576 2.79413H6.08476C6.68176 2.79413 7.25376 2.55713 7.67776 2.13713L8.39676 1.41713C9.27776 0.531134 10.7098 0.527134 11.5958 1.40813L11.5968 1.40913L11.6058 1.41713L12.3258 2.13713C12.7498 2.55813 13.3218 2.79413 13.9188 2.79413H14.9468C16.1958 2.79413 17.2088 3.80613 17.2088 5.05613V6.08313C17.2088 6.68013 17.4448 7.25313 17.8658 7.67713L18.5858 8.39713C19.4718 9.27813 19.4768 10.7101 18.5958 11.5961L18.5948 11.5971L18.5858 11.6061L17.8658 12.3261C17.4448 12.7491 17.2088 13.3211 17.2088 13.9181V14.9471C17.2088 16.1961 16.1968 17.2081 14.9478 17.2081H14.9468H13.9168C13.3198 17.2081 12.7468 17.4451 12.3238 17.8661L11.6038 18.5851C10.7238 19.4711 9.29276 19.4761 8.40676 18.5971C8.40576 18.5961 8.40476 18.5951 8.40376 18.5941L8.39476 18.5851L7.67576 17.8661C7.25276 17.4451 6.67976 17.2091 6.08276 17.2081H5.05576C3.80676 17.2081 2.79476 16.1961 2.79476 14.9471V13.9161C2.79476 13.3191 2.55776 12.7471 2.13676 12.3241L1.41776 11.6041C0.531764 10.7241 0.526764 9.29313 1.40676 8.40713C1.40676 8.40613 1.40776 8.40513 1.40876 8.40413L1.41776 8.39513L2.13676 7.67513C2.55776 7.25113 2.79476 6.67913 2.79476 6.08113V5.05613" stroke="#C71D22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.43164 12.5716L12.5716 7.43164" stroke="#C71D22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.4955 12.5H12.5045" stroke="#C71D22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.4955 7.5H7.5045" stroke="#C71D22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  {% endif %}
+                  {{- link.title -}}
+                </a>
+
+                {% if has_dropdown %}
+                  <a class="navigation__children-toggle" href="#">{% render 'icon-toggle-menu', stroke_width: 1.3 %}</a>
+
+                  {%- assign promo_count = 0 -%}
+                  {%- capture menu_promotion_html -%}
+                  {%- for block in section.blocks -%}
+                    {%- if block.settings.dropdown_link_title == link.title -%}
+                      {%- assign promo_count = promo_count | plus: 1 -%}
+                      <div class="menu-promotion">
+                        {%- if block.settings.link_url != blank -%}
+                          <a class="menu-promotion__link" href="{{ block.settings.link_url }}">
+                        {%- endif -%}
+                        <div class="menu-promotion__image">
+                          {%- render 'responsive-image', image: block.settings.image, manual_image_load: true -%}
+                        </div>
+                        {%- if block.settings.title != blank -%}
+                          <div class="menu-promotion__text">{{ block.settings.title }}</div>
+                        {%- endif -%}
+                        {%- if block.settings.link_url != blank -%}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endcapture -%}
+                  {%- assign column_count = promo_count | plus: link.links.size -%}
+
+                  <div
+                    id="NavigationTier2-{{ forloop.index }}"
+                    class="navigation__tier-2-container navigation__child-tier"
+                  >
+                    <ul class="navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count > 5 %} navigation__columns--wraps{% endif %}{% endif %}">
+                      {% for child_link in link.links %}
+                        <li class="navigation__item{% if child_link.links != blank %} navigation__item--with-children{% endif %}{% if use_columns %} navigation__column{% endif %}{% if featured_links contains child_link.title %} featured-link{% endif %}">
+                          <a
+                            href="{{ child_link.url }}"
+                            class="navigation__link{% if child_link.links != blank %} navigation__column-title{% endif %}"
+                            {% if child_link.links != blank %}
+                              aria-haspopup="true" aria-expanded="false"
+                            {% endif %}
+                          >
+                            {{- child_link.title -}}
+                          </a>
+                          {% if child_link.links != blank %}
+                            <a class="navigation__children-toggle" href="#">
+                              {%- render 'icon-toggle-menu', stroke_width: 1.3 -%}
+                            </a>
+                          {% endif %}
+
+                          {% if child_link.links != blank %}
+                            <div class="navigation__tier-3-container navigation__child-tier">
+                              <ul class="navigation__tier-3">
+                                {% for child_child_link in child_link.links %}
+                                  <li class="navigation__item{% if featured_links contains child_child_link.title %} featured-link{% endif %}">
+                                    <a class="navigation__link" href="{{ child_child_link.url }}">
+                                      {{- child_child_link.title -}}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+
+                      {%- if promo_count > 0 -%}
+                        <li class="navigation__column navigation__column--promotion navigation__column--promotion-count-{{ promo_count }}{% if section.settings.enable_mobile_promo_carousel and link.links.size > 0 %} navigation__column--promotion-carousel{% endif %}">
+                          {{ menu_promotion_html }}
+                        </li>
+                      {%- endif -%}
+                    </ul>
+                  </div>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+           
+          {% if section.settings.enable_nav_mob_products %}
+            <div class="mobile-only navigation__mobile-products">
+              <div class="navigation__mobile-products-title">
+                {{ section.settings.nav_mob_products_title | escape }}
+              </div>
+              <div class="product-list product-list--scrollarea">
+                {% for product in collections[section.settings.nav_mob_products_collection].products limit: 10 %}
+                  {% render 'product-block',
+                    product: product,
+                    no_swiping: true,
+                    no_quick_buy_markup: true,
+                    manual_image_load: true
+                  %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
+
+                        
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#"
+      class="header-shade mobile-nav-toggle"
+      aria-label="{{ 'general.navigation_menu.toggle_aria_label' }}"
+    ></a>
+  </div>
+
+  {%- if section.settings.menu_layout contains 'inline' -%}
+    <script id="InlineNavigationCheckScript">
+      theme.inlineNavigationCheck = function() {
+        var pageHeader = document.querySelector('.pageheader'),
+            inlineNavContainer = pageHeader.querySelector('.logo-area__left__inner'),
+            inlineNav = inlineNavContainer.querySelector('.navigation--left');
+        if (inlineNav && getComputedStyle(inlineNav).display != 'none') {
+          var inlineMenuCentered = document.querySelector('.pageheader--layout-inline-menu-center'),
+              logoContainer = document.querySelector('.logo-area__middle__inner');
+          if(inlineMenuCentered) {
+            var rightWidth = document.querySelector('.logo-area__right__inner').clientWidth,
+                middleWidth = logoContainer.clientWidth,
+                logoArea = document.querySelector('.logo-area'),
+                computedLogoAreaStyle = getComputedStyle(logoArea),
+                logoAreaInnerWidth = logoArea.clientWidth - Math.ceil(parseFloat(computedLogoAreaStyle.paddingLeft)) - Math.ceil(parseFloat(computedLogoAreaStyle.paddingRight)),
+                availableNavWidth = logoAreaInnerWidth - Math.max(rightWidth, middleWidth) * 2 - 40;
+            inlineNavContainer.style.maxWidth = availableNavWidth + 'px';
+          }
+
+          var lastInlineNavLink = inlineNav.querySelector('.navigation__item:last-child');
+          if (lastInlineNavLink) {
+            var inlineNavWidth = lastInlineNavLink.offsetLeft + lastInlineNavLink.offsetWidth;
+            if (inlineNavContainer.offsetWidth >= inlineNavWidth) {
+              pageHeader.classList.add('pageheader--layout-inline-permitted');
+              var tallLogo = logoContainer.clientHeight > lastInlineNavLink.clientHeight + 1;
+              if (tallLogo) {
+                inlineNav.classList.add('navigation--tight-underline');
+              } else {
+                inlineNav.classList.remove('navigation--tight-underline');
+              }
+            } else {
+              pageHeader.classList.remove('pageheader--layout-inline-permitted');
+            }
+          }
+        }
+      }
+
+      theme.inlineNavigationCheck();
+
+      var lastScrollTop = 0;
+      $(window).scroll(function(event){
+        var height = $(this).scrollTop();
+        if (height > lastScrollTop){
+          if(height > 50){
+            $('.pageheader').addClass('nav-down');
+            $('.section-header').addClass('nav-sticky-bar');
+            $(".section-header").css({"position": "sticky", "width": "100%"});
+          }
+        }else if(height < 50) {
+          $(".section-header").css({"position": "relative"});
+        }else{
+          $('.pageheader').removeClass('nav-down');
+          $('.section-header').removeClass('nav-sticky-bar');
+        }
+        lastScrollTop = height;
+      });
+    </script>
+  {%- endif -%}
+{% endif %}
+
+<script>
+  $(".main-search__close").click(function(){
+    location.reload();
+  });
+</script>
+                        
+ {% if template.name == 'index' or template.name == 'product' or template.name == 'collection' or page.handle == 'stores' or page.handle == 'store' or page.handle == 'store-details' or page.handle == 'varamahalakshmi-stores' %}
+<script>
+
+  $(document).ready(function () {
+    var store_data=localStorage.getItem('location_store');
+    if(store_data == null)
+    {
+        $.get('https://api.ipify.org?format=json', function (responseData) {
+            
+
+            $.get('https://ipinfo.io/' + responseData.ip + '/json', function (locationData) {
+                console.log(locationData.city);
+                 var locationInfo = locationData.city + ', ' + locationData.region + ', ' + locationData.country;
+                  var lt_lg =locationData.loc;    
+                // Display location information
+              //alert("Your location is " + locationInfo);
+                 var splitCoords = lt_lg.split(',');
+              
+                // Extract latitude and longitude
+                var latitude = splitCoords[0].trim();
+                var longitude = splitCoords[1].trim();
+              jQuery('.ct_store_header').attr("data-lat", latitude);
+              jQuery('.ct_store_header').attr("data-long", longitude);
+              var current_city=locationData.city;
+                $.get(storeApiUrl+"/near-by?city="+current_city,function(city){
+                      console.log(city.nearBy)
+                  if(city.nearBy != 'undefined')
+                  {
+                      var number = city.nearBy.match(/\d+/);
+                        if (number) {
+                            // Convert the matched string to a number
+                            number = parseInt(number[0], 10);
+            
+                            // Check if the number is greater than 1
+                              if (number > 1) {
+                                
+                               jQuery(".ct_wrap_store").show();
+                                jQuery(".ct_select_store .ct_stores").html(city.nearBy+" Stores");
+                              } else {
+                               //jQuery(".ct_wrap_store").hide();
+                                jQuery(".ct_select_store .ct_stores").html("90+ Stores");
+                              }
+                        } else {
+                           jQuery(".ct_wrap_store").hide();
+                        }
+                        
+                        
+                        jQuery(".ct_state").text(locationData.city)
+               
+                        jQuery(".ct_main_head").show();
+                        var local_arr={"store":city.nearBy, "state":locationData.city, "postal":"", "latitude":latitude, "longitude":longitude}
+
+                        var apiUrl = storeApiUrl+'/store-city';
+                        $.ajax({
+                            url: apiUrl,
+                            type: 'GET',
+                            success: function(data) {
+                                // Assuming the data is an array of objects
+                                var cityData = data;
+                
+                                // Find the entry for Bengaluru
+                                var bengaluruData = cityData.find(function(city) {
+                                    return city.name === current_city;
+                                });
+                
+                                if (bengaluruData) {
+                                      // Log the details of Bengaluru
+                                  
+                                      city_id=bengaluruData.id;
+                                  console.log("found")
+                                  local_arr['city_id']=bengaluruData.id
+                                     jQuery(".ct_wrap_store a").attr("href","https://www.kushals.com/pages/store/"+bengaluruData.slug)
+                                  //console.log(bengaluruData)
+                                   localStorage.setItem('location_store', JSON.stringify(local_arr));
+                                  
+                                    } else {
+                                  localStorage.setItem('location_store', JSON.stringify(local_arr));
+                                    console.log('Bengaluru not found.');
+                                }
+                            },
+                            error: function(error) {
+                                console.log('Error fetching data: ', error);
+                            }
+                        });
+                    
+                  }
+                })
+            });
+        });
+    }
+    else
+    {
+      
+      var obj = JSON.parse(store_data);
+      if(obj.store !== null && obj.store !== "")
+      {
+        jQuery(".ct_wrap_store").show();
+        jQuery(".ct_wrap_store a").attr("href","https://www.kushals.com/pages/store/"+obj.state.toLowerCase())
+        jQuery(".ct_store_header").removeClass("hide_store");
+        var s=obj.store;
+        if (s.includes("store") || s.includes("Store")) {
+         jQuery(".ct_select_store .ct_stores").html(obj.store);  
+        }
+       else
+        { 
+          if(obj.store > 0)
+          {
+             jQuery(".ct_select_store .ct_stores").html(obj.store+" Stores");
+                        
+          }else
+          {
+             jQuery(".ct_select_store .ct_stores").html("90+ Stores");
+          }
+        }
+      }
+      else
+      {
+          jQuery(".ct_wrap_store a").attr("href","https://www.kushals.com/pages/stores")
+        jQuery(".ct_wrap_store .ct_store_title .ct_select_store").hide();
+        
+        jQuery(".ct_wrap_store .ct_store_title .ct_no_store").show();
+        
+        //jQuery(".ct_wrap_store").hide();
+        //jQuery(".ct_store_header").addClass("hide_store");
+      }
+    
+        //jQuery(".ct_state").text(obj.state)
+      var ct_length= obj.state.length;
+      if(ct_length > 9)
+            {
+              var s = obj.state.slice(0, 9) + "...";
+                jQuery(".ct_state").text(s+",")
+            }
+            else
+            {
+              if(obj.postal == "")
+              {
+                jQuery(".ct_state").text(obj.state)
+              }
+              else
+              {
+                
+                jQuery(".ct_state").text(obj.state+",")
+              }
+            }
+        jQuery(".ct_pincode").text(obj.postal)
+        jQuery(".ct_main_head").show();
+      jQuery('.ct_store_header').attr("data-lat", obj.latitude);
+      jQuery('.ct_store_header').attr("data-long", obj.longitude);
+    }
+      
+    jQuery(document).on("click",".ct_edit_btn", function(){
+      jQuery(".ct_location_popup").show();
+      jQuery("body").addClass("mm-no-scroll");
+      var page_title="";
+      if(__st.p == "home")
+      {
+        page_title="HP";
+      }
+      else if(__st.p == "product"){
+        page_title="PDP";
+      }
+      else if(__st.p == "collection"){
+        page_title="PLP";
+      }
+      else {
+        page_title="Stores";
+      }
+      
+       clevertap.event.push("Edit_Location", {
+          "Pages":page_title
+          });
+    })
+    
+    jQuery(document).on("click",".location-popup-close", function(){
+      jQuery(".ct_location_popup").hide();
+      jQuery("body").removeClass("mm-no-scroll");
+       jQuery(".ct_pin_checker").hide();
+    });
+  
+
+
+        var latitude, longitude;
+    
+        // Click event for the button to get location
+        $('.ct_detect_location').click(function() {
+          
+            if (navigator.geolocation) {
+              
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+             
+            }
+        });
+    
+       
+
+
+     jQuery(document).on("input", ".ct_pin_check", function () {
+      var pin=jQuery(".ct_pin_check").val();
+                            if (pin.length === 6) {
+                                 pin_check(pin)
+                              }
+                              else if(pin == "")
+                              {
+                                 jQuery(".ct_pin_checker").show()
+                              }
+                          }); 
+
+    jQuery(document).on("click",".ct_pin_check_btn",function(){
+      var pin=jQuery(".ct_pin_check").val();
+      if (pin.length === 6) {
+         pin_check(pin)
+      }
+      else if(pin == "")
+      {
+         jQuery(".ct_pin_checker").show()
+      }
+    })
+   
+  });
+
+    function pin_check(pin)
+      {
+          var data={
+                "pin":pin,
+                "method_call":"pin_location"
+              }
+            // Use jQuery to send a GET request to the API
+             $.ajax({
+              type: "POST",
+              url: "https://gifting.kushals.com/location_api/location.php",
+              data: data,
+              cache: false,
+              success: function(data){
+                if ($(window).width() <= 750) {
+                  mobile_update_state_details(data,"pin")
+                }
+                else
+                {
+                  desktop_update_state_details(data,"pin")
+                }
+                jQuery(".ct_pin_check").val("");
+              }
+            });
+      }
+
+    function mobile_update_state_details(data, location_detect_type)
+      {
+         var myArray = jQuery.parseJSON(data);
+       // console.log(data)
+        
+           localStorage.setItem('pin', myArray.postal);
+         
+  
+         if(location_detect_type == "pin")
+         {
+              clevertap.event.push("Change_Location", {
+                "Pincode":myArray.postal,
+                "City":myArray.city,
+                "state":myArray.state
+                });  
+         }
+         else
+         {
+             clevertap.event.push("Autodetect_Location", {
+               "Pincode":myArray.postal,
+                "City":myArray.city,
+                "state":myArray.state
+                });
+         }
+
+          if(myArray.status == true)
+          {
+             jQuery(".ct_pin_checker").hide();
+            jQuery(".popup_success_address").text(myArray.full_addr)
+            var ct_length=myArray.city.length;
+            
+            if(ct_length > 9)
+            {
+              var s = myArray.city.slice(0, 9) + "...";
+                jQuery(".ct_state").text(s)
+            }
+            else
+            {
+                jQuery(".ct_state").text(myArray.city)
+            }
+            jQuery(".ct_pincode").text(", "+myArray.postal)
+            jQuery(".popup-content-inner").hide();
+            jQuery(".ct_store_detected").show();
+            jQuery(".ct_store_detected_inner").show();
+            jQuery(".ct_store_title .ct_select_store").show();
+            jQuery(".ct_store_title .ct_no_store").hide();
+            
+            jQuery(".ct_select_store .ct_stores").html(myArray.store);
+            jQuery(".ct_store_header").removeClass("hide_store");
+            jQuery(".ct_wrap_store").show();
+             jQuery(".ct_location_popup").hide();
+              jQuery(".ct_wrap_store a").attr("href","https://www.kushals.com/pages/store/"+myArray.city)
+        
+             var jsonString = localStorage.getItem('location_store');;
+          
+             var jsonObject = JSON.parse(jsonString);
+            
+            // Update the postal code
+            jsonObject.postal = myArray.postal; // Example postal code
+            jsonObject.state=myArray.city;
+            jsonObject.store=myArray.store;
+            jsonObject.latitude=myArray.lat;
+            jsonObject.longitude=myArray.lan;
+             jsonObject.city_id=myArray.store_id;
+            
+            
+            
+            // Convert the object back to a JSON string
+            var updatedJsonString = JSON.stringify(jsonObject);
+            
+            // Store the updated JSON string in localStorage
+            localStorage.setItem('location_store', updatedJsonString);
+
+             
+              setTimeout(function(){
+              jQuery(".ct_detect_location span").css("opacity","1")
+                jQuery(".city_loader").hide();
+                jQuery(".ct_store_detected").hide();
+                jQuery(".popup-content-inner").show();
+                jQuery(".ct_store_detected_inner").hide();
+                jQuery("body").removeClass("mm-no-scroll");
+            },3000)   
+
+             if ( typeof handleStoreData == 'function' ) {
+                   handleStoreData(myArray.lat, myArray.lan);        
+            }
+            if ( typeof pin_checker == 'function' ) {
+                   pin_checker(myArray.postal);        
+            }
+          }
+        else if( myArray.status ==  "false_pin")
+          {
+            
+            
+            jQuery(".ct_pin_checker").show();
+          }
+          else
+          {
+             jQuery(".ct_pin_checker").hide();
+            jQuery(".popup_success_address").text(myArray.full_addr)
+             jQuery(".ct_store_detected").show();
+            jQuery(".ct_store_detected_inner").show();
+            
+            jQuery(".ct_store_title .ct_select_store").hide();
+            jQuery(".ct_store_title .ct_no_store").show();
+            
+            jQuery(".popup-content-inner").hide();
+            jQuery(".ct_wrap_store").show(); 
+          //  jQuery(".ct_store_header").addClass("hide_store");
+            //jQuery(".ct_location").text(myArray.city+", "+myArray.postal)
+              var ct_length=myArray.city.length;
+            if(ct_length > 9)
+            {
+              var s = myArray.city.slice(0, 9) + "...";
+                jQuery(".ct_state").text(s)
+            }
+            else
+            {
+                jQuery(".ct_state").text(myArray.city)
+            }
+            jQuery(".ct_pincode").text(", "+myArray.postal)
+              
+             jQuery(".ct_location_popup").hide();
+
+             
+                 var jsonString = localStorage.getItem('location_store');;
+          
+             var jsonObject = JSON.parse(jsonString);
+            
+            // Update the postal code
+            jsonObject.postal = myArray.postal; // Example postal code
+            jsonObject.state=myArray.city;
+            jsonObject.store=myArray.store;
+
+            jsonObject.latitude=myArray.lat;
+            jsonObject.longitude=myArray.lan;
+            
+            
+            // Convert the object back to a JSON string
+            var updatedJsonString = JSON.stringify(jsonObject);
+            
+            // Store the updated JSON string in localStorage
+            localStorage.setItem('location_store', updatedJsonString);
+
+             
+              setTimeout(function(){
+              jQuery(".ct_detect_location span").css("opacity","1")
+               jQuery(".city_loader").hide();
+                jQuery(".popup-content-inner").show();
+                jQuery(".ct_store_detected").hide();
+                jQuery(".ct_store_detected_inner").hide();
+                jQuery("body").removeClass("mm-no-scroll");
+            },3000)   
+
+             if ( typeof handleStoreData  == 'function' ) {
+                   handleStoreData(myArray.lat, myArray.lan);        
+            }
+            if ( typeof pin_checker == 'function' ) {
+                   pin_checker(myArray.postal);        
+            }
+          }
+               
+    }
+
+    function desktop_update_state_details(data, location_detect_type)
+      {
+         var myArray = jQuery.parseJSON(data);
+         
+           localStorage.setItem('pin', myArray.postal);
+       
+        if(location_detect_type == "pin")
+         {
+              clevertap.event.push("Change_Location", {
+                "Pincode":myArray.postal,
+                "City":myArray.city,
+                "state":myArray.state
+                });  
+         }
+         else
+         {
+             clevertap.event.push("Autodetect_Location", {
+               "Pincode":myArray.postal,
+                "City":myArray.city,
+                "state":myArray.state
+                });
+         }
+
+        
+          if(myArray.status == true)
+          {
+               jQuery(".ct_pin_checker").hide();
+            jQuery(".popup_success_address").text(myArray.full_addr)
+            //jQuery(".ct_location").text(myArray.city+", "+myArray.postal)
+              var ct_length=myArray.city.length;
+            if(ct_length > 9)
+            {
+              var s = myArray.city.slice(0, 9) + "...";
+                jQuery(".ct_state").text(s)
+            }
+            else
+            {
+                jQuery(".ct_state").text(myArray.city)
+            }
+            jQuery(".ct_pincode").text(", "+myArray.postal)
+            jQuery(".popup-content-inner").hide();
+            jQuery(".popup_success").show();
+            jQuery(".ct_select_store .ct_stores").html(myArray.store);
+            jQuery(".ct_wrap_store").show();
+              jQuery(".ct_store_title .ct_select_store").show();
+            jQuery(".ct_store_title .ct_no_store").hide();
+            jQuery(".ct_wrap_store a").attr("href","https://www.kushals.com/pages/store/"+myArray.city)
+              var jsonString = localStorage.getItem('location_store');;
+          
+             var jsonObject = JSON.parse(jsonString);
+            
+            // Update the postal code
+            jsonObject.postal = myArray.postal; // Example postal code
+            jsonObject.state=myArray.city;
+            
+            jsonObject.latitude=myArray.lat;
+            jsonObject.longitude=myArray.lan;
+            jsonObject.city_id=myArray.store_id;
+            if(myArray.store == null)
+            {
+              jsonObject.store="";
+            }
+            else
+            {
+              jsonObject.store=myArray.store;
+            }
+            
+            
+            // Convert the object back to a JSON string
+            var updatedJsonString = JSON.stringify(jsonObject);
+            
+            // Store the updated JSON string in localStorage
+            localStorage.setItem('location_store', updatedJsonString);
+
+          
+            
+            setTimeout(function(){
+              jQuery(".ct_detect_location span").css("opacity","1")
+              jQuery(".city_loader").hide();
+                jQuery(".ct_location_popup").hide();
+                jQuery(".popup-content-inner").show();
+                jQuery(".popup_success").hide();
+                jQuery("body").removeClass("mm-no-scroll");
+            },3000)   
+
+             if ( typeof handleStoreData == 'function' ) {
+                   handleStoreData(myArray.lat, myArray.lan);        
+            }
+            if ( typeof pin_checker == 'function' ) {
+                   pin_checker(myArray.postal);        
+            }
+            
+          }
+        else if( myArray.status ==  "false_pin")
+          {
+              jQuery(".ct_pin_checker").show();
+          }
+          else
+          {
+               jQuery(".ct_pin_checker").hide();
+            jQuery(".popup_success_address").text(myArray.full_addr)
+             jQuery(".popup_success").show();
+            jQuery(".popup-content-inner").hide();
+              jQuery(".ct_store_title .ct_select_store").hide();
+            jQuery(".ct_store_title .ct_no_store").show();
+             jQuery(".ct_wrap_store a").attr("href","https://www.kushals.com/pages/stores/")
+           // jQuery(".ct_location").text(myArray.city+", "+myArray.postal)
+
+              var ct_length=myArray.city.length;
+            if(ct_length > 9)
+            {
+              var s = myArray.city.slice(0, 9) + "...";
+                jQuery(".ct_state").text(s)
+            }
+            else
+            {
+                jQuery(".ct_state").text(myArray.city)
+            }
+            jQuery(".ct_pincode").text(", "+myArray.postal)
+              var jsonString = localStorage.getItem('location_store');;
+          
+             var jsonObject = JSON.parse(jsonString);
+            jsonObject.store=null;
+            // Update the postal code
+            jsonObject.postal = myArray.postal; // Example postal code
+            jsonObject.state=myArray.city;
+
+            jsonObject.latitude=myArray.lat;
+            jsonObject.longitude=myArray.lan;
+                        
+            // Convert the object back to a JSON string
+            var updatedJsonString = JSON.stringify(jsonObject);
+            
+            // Store the updated JSON string in localStorage
+            localStorage.setItem('location_store', updatedJsonString);
+            
+            setTimeout(function(){
+              jQuery(".ct_detect_location span").css("opacity","1")
+              
+              jQuery(".city_loader").hide();
+                jQuery(".ct_location_popup").hide();
+                jQuery(".popup-content-inner").show();
+                jQuery(".popup_success").hide();
+                jQuery("body").removeClass("mm-no-scroll");
+            },3000)
+
+             if ( typeof handleStoreData == 'function' ) {
+                   handleStoreData(myArray.lat, myArray.lan);        
+            }
+            if ( typeof pin_checker == 'function' ) {
+                   pin_checker(myArray.postal);        
+            }
+          }
+                 
+      }
+   // Function to display position and set latitude and longitude
+    function showPosition(position) {
+       var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+      
+
+        // Call the API with the latitude and longitude
+        callAPI(latitude, longitude);
+    }
+
+    // Function to handle errors
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                jQuery(".ct_error").show()
+               //  console.log("User denied the request for Geolocation.");
+            
+               //   var get_lat_lng=localStorage.getItem('location_store');
+               // var latitude= get_lat_lng['latitude'];
+               //  var longitude= get_lat_lng['longitude'];
+               //   callAPI(latitude, longitude);
+                break;
+            case error.POSITION_UNAVAILABLE:
+                console.log("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                console.log("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                console.log("An unknown error occurred.");
+                break;
+        }
+    }
+
+    // Function to call an API with latitude and longitude
+    function callAPI(lat, lon) {
+      jQuery(".ct_detect_location span").css("opacity","0")
+      jQuery(".city_loader").show();
+        // Example URL, replace with your actual API endpoint
+        var data={
+          "lat":lat,
+          "lng":lon,
+          "method_call":"get_location"
+        }
+        // Use jQuery to send a GET request to the API
+         $.ajax({
+          type: "POST",
+          url: "https://gifting.kushals.com/location_api/location.php",
+          data: data,
+          cache: false,
+          success: function(data){
+            if ($(window).width() <= 750) {
+            mobile_update_state_details(data, "auto_detect")
+          }
+          else
+          {
+            desktop_update_state_details(data ,"auto_detect")
+          }
+          jQuery(".ct_pin_check").val("");
+          }
+        });
+    }
+</script>
+    {% endif %}
+{% schema %}
+{
+  "name": "Header",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "520 x 200px (recommended)"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "banner_mob",
+      "label": "Banner For Mobile Menu",
+      "info": "1100 x 310px (recommended)"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner Link For Mobile Menu"
+    },
+
+    
+    {
+      "type": "range",
+      "id": "logo_img_width_int",
+      "min": 30,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 180
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_img_width_int",
+      "min": 30,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile logo width",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky",
+      "label": "Enable sticky header",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_linklist",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "select",
+      "id": "menu_layout",
+      "label": "Menu alignment",
+      "info": "Alignment will switch to 'Underneath' if the links do not fit beside the logo",
+      "options": [
+        {
+          "value": "inline-menu-left",
+          "label": "Left"
+        },
+        {
+          "value": "inline-menu-center",
+          "label": "Center"
+        },
+        {
+          "value": "underneath",
+          "label": "Underneath"
+        }
+      ],
+      "default": "underneath"
+    },
+    {
+      "type": "text",
+      "id": "nav_featured_link",
+      "label": "Featured link",
+      "info": "Enter the title of a link to highlight it in a different color",
+      "default": "Sale"
+    },
+    {
+      "type": "header",
+      "content": "Mobile navigation"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_promo_carousel",
+      "label": "Enable carousel layout for menu promotions",
+      "info": "Disabled for dropdown menus containing only promotions",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_nav_mob_products",
+      "label": "Enable featured products",
+      "info": "Shows beneath the main menu",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "nav_mob_products_title",
+      "label": "Featured products title",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "collection",
+      "id": "nav_mob_products_collection",
+      "label": "Featured products collection"
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "Enable search",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_suggestions_title",
+      "label": "Suggestions title",
+      "info": "Suggestions show when the search is opened."
+    },
+    {
+      "type": "link_list",
+      "id": "search_suggestions_menu",
+      "label": "Suggestions menu",
+      "info": "Dropdown menus will show as separate rows. Links to collections and products will show images."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu-promotion",
+      "name": "Menu promotion",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Menu promotions are shown in dropdown menus. [Read more](https://cleancanvas.co.uk/support/symmetry/header)"
+        },
+        {
+          "type": "text",
+          "id": "dropdown_link_title",
+          "label": "Link name",
+          "info": "The name of any top-level link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

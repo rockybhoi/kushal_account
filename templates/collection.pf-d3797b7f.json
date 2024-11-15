@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_image_behind_heading": true,
+        "heading_image_height": "large",
+        "overlay_style": "shadow",
+        "coll_num_per_page_int": 16,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": true,
+        "coll_desc_pos": "below",
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "none",
+        "show_filter_counts": true,
+        "show_disabled_filters": true,
+        "ajax_products": true,
+        "enable_sticky_filter": false,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_feat": true,
+        "enable_subcoll": true,
+        "subcoll_menu": "main-menu-new",
+        "subcoll_style": "gallery",
+        "subcoll_gall_shape": "l-21",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "no_background",
+        "subcoll_gall_text_alignment": "bottom left",
+        "subcoll_gall_mobile_layout": "2"
+      }
+    },
+    "pf-d3797b7f": {
+      "type": "pf-d3797b7f",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "pf-d3797b7f"
+  ]
+}

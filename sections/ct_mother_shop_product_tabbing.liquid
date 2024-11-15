@@ -1,0 +1,595 @@
+<style>
+  .ct-shop-all-main {
+    display: flex !important;
+    height: 100% !important;
+    margin-top: 140px;
+}
+ul.tabs {
+    border-bottom: 0px solid #DDDDDD;
+    padding: 0;
+    display: inline-flex;
+    width: auto;
+    margin: 20px auto 20px auto !important;
+}
+ .tab_main_perent-mother  ul.tabs {
+    margin: 20px auto 0px auto !important;
+}
+  .custom_tabing  .container--no-max .collection-slider .collection-listing {
+    margin-left: 0;
+  }
+
+ul.tabs li a {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    min-width: 90px;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 0 12px 0;
+    border-bottom: 3px solid #ccc;
+}
+
+ .tab_main_perent-mother ul.tabs li a {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    min-width: 90px;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 0 12px 0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 100px;
+   background-color: #fff;
+}
+ .tab_main_perent-mother ul.tabs li {
+    margin: 0 20px 0 0;
+   opacity: 80%;
+}
+
+
+   ul.tabs li a.active {
+  border-color:#CF2228 !important;
+}
+  
+  .tab_main_perent-mother ul.tabs li a.active {
+  border-color:#29297C !important;
+    opacity: 100%;
+    color: #29297C;
+}
+ul.tabs li {
+    margin: 0 40px 0 0;
+}
+  ul.tabs li:last-child {
+    margin: 0 0px 0 0;
+}
+
+
+ul.tabs:before, ul.tabs:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+ul.tabs:after {
+  clear: both;
+}
+  .coll_head {
+        margin-top: 20px;
+    color: #000;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    font-size: 29px !important;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+ .custom_tabing .container {
+    padding-top: 15px;
+}
+  .tabs.items_scroll{
+        border-bottom: 0px solid #DDDDDD;
+    margin: 47px 0 0 0;
+    padding:0 20px 0 20px !important;
+    display: inline-flex;
+    width: auto !important;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .items_scroll::-webkit-scrollbar {
+  display: none;
+}
+  .custom_tabing {
+    width: 100%;
+    overflow: hidden;
+}
+
+  .motherday-Collection .Velen_title {
+    font-family: 'Arista Pro';
+    font-size: 34px;
+    line-height: 27.39px;
+    text-align: left;
+    color: #29297C;
+    font-weight: 700;
+}
+  /* .coll-head-mother span {
+    font-size: 34px;
+    font-weight: 100;
+    line-height: 27.39px;
+    text-align: left;
+    color: #29297C;
+    font-family: 'Arista Pro';
+    font-weight: 700;
+} */
+  .WSW-Tabing-header span {
+    font-size: 34px;
+    font-weight: 100;
+    line-height: 27.39px;
+    text-align: left;
+    color: #29297C;
+    font-family: 'Arista Pro';
+    font-weight: 700;
+}
+  @media(max-width:750px){
+    .ct-shop-all-main {
+    margin-top: 116px !important;
+}
+    ul.tabs {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 10px 0 20px !important;
+}
+    ul.tabs::-webkit-scrollbar {
+  display: none;
+}
+    ul.tabs li a {
+    font-size: 14px;
+    }
+    .tabs.items_scroll{
+        padding: 0 20px 0 40% !important;
+      margin: 20px auto 40px auto !important;
+  }
+.tab_main_perent-mother .tabs.items_scroll {
+    padding: 0 20px 0 10px !important;
+    margin: 0px auto 20px auto !important;
+    width: 100% !important;
+}
+    .coll_head {
+    margin-top: 35px;
+    margin-bottom: 10px;
+      font-size:29px !important;
+    }
+    .coll-head-mother {
+    margin-bottom: 20px;
+    }
+  .custom_tabing-mother  .strongly-spaced-row {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+    /* .coll-head-mother span {
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 27.39px;
+    text-align: left;
+    color: #29297C;
+      font-family: 'Arista Pro';
+      font-weight: 700;
+} */
+
+
+    
+  }
+
+ .tab_main_perent-mother  .img_icon {
+    display: none;
+  }
+  .custom_tabing-mother {
+    background: transparent;
+}
+  /* .custom_tabing-mother .product-block .block-inner {
+    background: #fff;
+} */
+
+  @media(max-width:575px){
+    .ct-shop-all-main {
+    margin-top: 75px !important;
+}
+  }
+</style>
+
+
+{%- liquid
+  if section.settings.enable_carousel
+    assign product_limit = 12
+  else
+    assign product_limit = section.settings.grid | times: section.settings.rows
+  endif
+  assign collection = collections[section.settings.collection]
+-%}
+<div class="coll_head  {% if section.settings.mother %}coll-head-mother  {% endif %} ">{{ section.settings.title }} {% if section.settings.sec !=blank %}<span>{{ section.settings.sec }}</span>{% endif %}</div>
+<div class="tab_main_perent  {% if section.settings.mother %}tab_main_perent-mother  {% endif %}"> 
+ <ul class="tabs items_scroll">
+  {% for block in section.blocks %}
+    {% if block.settings.coll_name !=blank %}
+    <li><a href="#{{ section.settings.id }}tab-{{ forloop.index }}">
+    {% if block.settings.img_icon !=blank %}
+    <img
+          loading="lazy"
+          src="{{ block.settings.img_icon | img_url: '1024x1024' }}"
+          width="{{ block.settings.img_icon.width }}"
+          height="{{ block.settings.img_icon.height }}"
+          alt="{{ block.settings.img_icon.alt | escape }}"
+          class="img_icon"
+        >
+      {% endif %}
+    {{ block.settings.coll_name }}</a></li>
+   {% endif %}
+  {% endfor %}
+  </ul>
+</div>
+<div class="{% if section.settings.mother %}custom_tabing-mother  {% endif %} custom_tabing  {% if section.settings.enable_carousel %}home_featured_collection{% endif %} section-id-{{ section.id }} collection-slider-row {% if section.settings.use_alt_bg %}use-alt-bg{% endif %}" data-section-type="featured-collection" data-components="accordion,modal,price-range">
+  <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %} strongly-spaced-row blog-row" data-section-type="featured-blog">
+    
+    
+    <div class="{% if section.settings.enable_carousel %}collection-slider{% endif %}">
+
+<div>
+ 
+
+
+
+  
+  
+
+  {% for block in section.blocks %}
+  <div id="{{ section.settings.id }}tab-{{ forloop.index }}">
+     <div class="collection-listing {% if section.settings.enable_carousel %}new_featured_pro_slider{% endif %}" {% if section.settings.enable_carousel %}id="basic--{{section.id}}{{ forloop.index }}"{% endif %} data-cc-animate="cc-fade-in-up">
+        <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
+          {% if block.settings.collection == blank %}
+            {% for i in (1..product_limit) %}
+              {% render 'onboarding-product-block', forloop: forloop %}
+            {% endfor %}
+          {% else %}
+            {%- liquid
+              if settings.prod_thumb_shape == 'portrait-23'
+                assign chosen_aspect_ratio = 0.67
+              elsif settings.prod_thumb_shape == 'portrait-45'
+                assign chosen_aspect_ratio = 0.8
+              elsif settings.prod_thumb_shape == 'square'
+                assign chosen_aspect_ratio = 1.0
+              elsif settings.prod_thumb_shape == 'landscape-54'
+                assign chosen_aspect_ratio = 1.25
+              elsif settings.prod_thumb_shape == 'landscape-32'
+                assign chosen_aspect_ratio = 1.50
+              elsif settings.prod_thumb_shape == 'tallest'
+                assign chosen_aspect_ratio = 99
+                for product in block.settings.collection.products limit: product_limit
+                  if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                    assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                  endif
+                endfor
+              else
+                assign chosen_aspect_ratio = 0
+                for product in collection.products limit: product_limit
+                  if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                    assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                  endif
+                endfor
+              endif
+            -%}
+
+       {% comment %}     
+     {% for product in block.settings.collection.products limit: product_limit %}
+           {% render 'product-block', numb: forloop.index, per_row: section.settings.grid, product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
+      {% endfor %}
+       {% endcomment %}     
+            
+
+
+             {% assign pro3 = block.settings.product_list %}
+              {% for product in pro3 %}
+           {% render 'product-block', numb: forloop.index, per_row: section.settings.grid, product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
+                
+                {% endfor %}
+
+<div class="ct-shop-all-main CT_product-block product-block">
+      <a href="{{ block.settings.collection.url }}" class="button ct-shop-all-btn" >Shop All</a>
+</div>
+            
+            {% endif %}
+        </div>
+      </div>
+  </div>                 
+
+                    
+  {% endfor %}
+    {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
+    <div class="quickbuy-container">
+      <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+      <div class="inner"></div>
+    </div>
+  {% endif %}
+
+
+  
+
+</div>
+</div>
+</div>
+</div>
+  
+    <div class="quickbuy-container">
+      <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+      <div class="inner"></div>
+    </div>
+  
+
+
+ <script>
+  $(document).ready(function(){
+$('.product-block').removeClass('hide');
+    jQuery(function($){
+      'use strict';
+      (function () {
+    
+        
+      }());
+    });
+  });
+
+
+
+  var sliders = document.querySelectorAll('.items_scroll');
+var isDown = false;
+var startX;
+var scrollLeft;
+
+sliders.forEach(slider => {
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse leave
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    enableLinks(); // Re-enable links on mouse up
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1; // scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    disableLinks(); // Disable links when scrolling horizontally
+  });
+});
+
+function disableLinks() {
+  var links = document.querySelectorAll('.items_scroll a');
+  links.forEach(link => {
+    link.style.pointerEvents = 'none'; // Disable link clicks
+  });
+}
+
+function enableLinks() {
+  var links = document.querySelectorAll('.items_scroll a');
+  links.forEach(link => {
+    link.style.pointerEvents = 'auto'; // Re-enable link clicks
+  });
+}
+
+</script>
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function() {
+
+        var $frame = $('.new_featured_pro_slider');
+        console.log("--------"+$frame.length);
+        for(var i=0; i<$frame.length;i++)
+          {
+            
+            //console.log($('.new_featured_pro_slider'));
+            var $frame = $('.new_featured_pro_slider');
+            
+            var $wrap  = jQuery('.new_featured_pro_slider').parent();
+            jQuery("#"+$frame[i].id).sly({
+              horizontal: 1,
+              itemNav: 'basic',
+              smart: 1,
+              activateOn: null,
+              mouseDragging: 1,
+              touchDragging: 1,
+              releaseSwing: 1,
+              startAt: 0,
+              scrollBar: $wrap.find('.scrollbar'),
+              scrollBy: 1,
+              activatePageOn: 'click',
+              speed: 300,
+              elasticBounds: 1,
+              easing: 'easeOutExpo',
+              dragHandle: 1,
+              dynamicHandle: 1,
+              clickBar: 1,
+              prevPage: $wrap.find('.prev'),
+              nextPage: $wrap.find('.next')
+            });
+          }
+
+    
+    $('ul.tabs').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "CT_mother_product_tabbing",
+    "settings": [  
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "full-width",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "mother",
+        "label": "Mother day page",
+        "default": false
+      },
+
+      {
+        "type": "text",
+        "id": "id",
+        "label": "Custom id"
+      },
+      {
+        "type": "text",
+        "id": "sec",
+        "label": "Secend heading"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured collection"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Show product vendor",
+        "default": false
+      },
+      {
+        "type": "radio",
+        "id": "enable_carousel",
+        "label": "Grid Option",
+        "options": [
+          { 
+            "value": "carousel", 
+            "label": "Carousel" 
+          }
+        ],
+        "default": "carousel"
+      },
+      {
+        "type": "range",
+        "id": "grid",
+        "label": "Products per row",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "range",
+        "id": "rows",
+        "label": "Rows",
+        "info": "Does not apply to carousel layout",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 1
+      },
+      {
+        "type": "checkbox",
+        "id": "use_alt_bg",
+        "label": "Use alternate section color",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_view_all",
+        "label": "Show 'View all' link",
+        "default": true
+      }
+    ],
+    "blocks":[{
+    "type":"Collection",
+    "name":"Collection",
+    "limit":12,
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "img_icon",
+        "label": "Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "coll_name",
+        "label": "Collection Name"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 10
+    }
+    ]
+  }],
+    "presets":[{
+    "name": "CT_mother_product_tabbing"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,542 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "slideshow_TUmmGP": {
+      "type": "slideshow",
+      "blocks": {
+        "image_QxHMFb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bnner.png",
+            "mobile_image": "shopify://shop_images/Mobile_banner--100.jpg",
+            "slide_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_QxHMFb"
+      ],
+      "settings": {
+        "img_org": false,
+        "height": "fixed",
+        "height_desktop": 400,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "wsw_tabing_4UdYPL": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_izRxnX": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-wishlisted-silver-necklaces",
+            "heading": "Silver",
+            "heading1": "Chic • Classy • Elite",
+            "sub": "The <em><strong>ideal everyday</strong></em> edit of <em><strong>unique designs </strong></em>",
+            "img1": "shopify://shop_images/Silver_Neckalce.jpg",
+            "img2": "shopify://shop_images/Silver_Neckalce.jpg"
+          }
+        },
+        "tabing_q34MyV": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-wishlisted-zircon-necklaces",
+            "heading": "Zircon",
+            "heading1": "Enticing • Modish • Elegant",
+            "sub": "Boast a dazzling array of <em><strong>colors and styles</strong></em>",
+            "img1": "shopify://shop_images/Zircon_Necklace.jpg",
+            "img2": "shopify://shop_images/Zircon_Necklace.jpg"
+          }
+        },
+        "tabing_HKnBy3": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-wishlisted-trendy-necklaces",
+            "heading": "Trendy",
+            "heading1": "Playful • Vogue • Modern",
+            "sub": "<em><strong>Spirit of contemporary fashion,</strong></em> chic accents for any ensemble",
+            "img1": "shopify://shop_images/Trendy_Necklace.jpg",
+            "img2": "shopify://shop_images/Trendy_Necklace.jpg"
+          }
+        },
+        "tabing_9inVaH": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-wishlisted-antique-necklaces",
+            "heading": "Antique",
+            "heading1": "Traditional • Mysterious •  Feminine",
+            "sub": "Embodies the <em><strong>elegance and craftsmanship</strong></em> of bygone eras",
+            "img1": "shopify://shop_images/Antique_Necklaces_ab521b05-0a58-488d-8355-e7e1c189c1ba.jpg",
+            "img2": "shopify://shop_images/Antique_Necklaces_ab521b05-0a58-488d-8355-e7e1c189c1ba.jpg"
+          }
+        },
+        "tabing_D8UnEN": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-wishlisted-temple-necklaces",
+            "heading": "Temple",
+            "heading1": "Authentic • Majestic • Lavish",
+            "sub": "Embrace traditions in <em><strong>divine craftsmanship</strong></em>",
+            "img1": "shopify://shop_images/Temple_Necklace.jpg",
+            "img2": "shopify://shop_images/Temple_Necklace.jpg"
+          }
+        },
+        "tabing_ieGpcn": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-wishlisted-kundan-necklace",
+            "heading": "Kundan",
+            "heading1": "Regal • Alluring • Graceful",
+            "sub": "The luxurious charms of <em><strong>Royal Designs</strong></em>",
+            "img1": "shopify://shop_images/Kundan_Neckalce.jpg",
+            "img2": "shopify://shop_images/Kundan_Neckalce.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_izRxnX",
+        "tabing_q34MyV",
+        "tabing_HKnBy3",
+        "tabing_9inVaH",
+        "tabing_D8UnEN",
+        "tabing_ieGpcn"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>NECKLACES</span>"
+      }
+    },
+    "wsw_tabing_k9tKJL": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_BiGHjy": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-coveted-silver-earring-designs",
+            "heading": "Silver",
+            "heading1": "Fine • Refining • Stylish",
+            "sub": "Relishing styles of <em><strong>elegance in alluring sparkles</strong></em>",
+            "img1": "shopify://shop_images/Silver_Earring.jpg",
+            "img2": "shopify://shop_images/Silver_Earring.jpg"
+          }
+        },
+        "tabing_AaDTDp": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-coveted-zircon-earring-designs",
+            "heading": "Zircon",
+            "heading1": "Modish • Exquisite • Classy",
+            "sub": "Indulge in a <em><strong>spectrum of vibrant hues</strong></em>",
+            "img1": "shopify://shop_images/Zircon_Earring.jpg",
+            "img2": "shopify://shop_images/Zircon_Earring.jpg"
+          }
+        },
+        "tabing_z3gPGm": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-coveted-trendy-earring-designs",
+            "heading": "Trendy",
+            "heading1": "Fashionable • Quirky • Stylish",
+            "sub": "A kaleidoscope of <em><strong>colors and styles</strong></em>",
+            "img1": "shopify://shop_images/Trendy_Earring.jpg",
+            "img2": "shopify://shop_images/Trendy_Earring.jpg"
+          }
+        },
+        "tabing_TDKmQq": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-coveted-antique-earring-designs",
+            "heading": "Antique",
+            "heading1": "Classic • Enigmatic • Graceful",
+            "sub": "Adding a touch of <em><strong>antique allure</strong></em> to your ears",
+            "img1": "shopify://shop_images/Antique_Earring.jpg",
+            "img2": "shopify://shop_images/Antique_Earring.jpg"
+          }
+        },
+        "tabing_BfWk9g": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-coveted-silver-temple-earring-designs",
+            "heading": "Temple",
+            "heading1": "Divinity • Opulence • Reliable",
+            "sub": "Adorning designs of <em><strong>cultural beauty in deific charms</strong></em>",
+            "img1": "shopify://shop_images/Temple_Earring.jpg",
+            "img2": "shopify://shop_images/Temple_Earring.jpg"
+          }
+        },
+        "tabing_6wqwrP": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-coveted-kundan-earring-designs",
+            "heading": "Kundan",
+            "heading1": "Elite • Charming • Queenly",
+            "sub": "Amplifying styles in <em><strong>enchanting designs of beauty</strong></em>",
+            "img1": "shopify://shop_images/Kundan_Neckalce_cf4d0ed3-8749-40d5-8868-05cbd2a20fc4.jpg",
+            "img2": "shopify://shop_images/Kundan_Neckalce_cf4d0ed3-8749-40d5-8868-05cbd2a20fc4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_BiGHjy",
+        "tabing_AaDTDp",
+        "tabing_z3gPGm",
+        "tabing_TDKmQq",
+        "tabing_BfWk9g",
+        "tabing_6wqwrP"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>EARRINGS</span>"
+      }
+    },
+    "wsw_tabing_aarzpa": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_HVYrFU": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-admired-zircon-bangle-selects",
+            "heading": "Zircon",
+            "heading1": "Radiant • Ornate • Faceted",
+            "sub": "A palette of <em><strong>rich and dynamic</strong></em> shades",
+            "img1": "shopify://shop_images/Zircon_Bangle.jpg",
+            "img2": "shopify://shop_images/Zircon_Bangle.jpg"
+          }
+        },
+        "tabing_xnrTxL": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-admired-kundan-bangles",
+            "heading": "Kundan",
+            "heading1": "Luxurious • Enticing • Modern",
+            "sub": "The regal <em><strong>charms of uncut beauty</strong></em> in ethnic designs",
+            "img1": "shopify://shop_images/Kundan_Bangle.jpg",
+            "img2": "shopify://shop_images/Kundan_Bangle.jpg"
+          }
+        },
+        "tabing_UEMdH6": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-admired-antique-bangle-selects",
+            "heading": "Antique",
+            "heading1": "Ornate • Ethnic • Timeless",
+            "sub": "A realm of <em><strong>boundless creativity</strong></em>",
+            "img1": "shopify://shop_images/Antique_Bangle.jpg",
+            "img2": "shopify://shop_images/Antique_Bangle.jpg"
+          }
+        },
+        "tabing_xTihac": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-admired-silver-temple-bangles",
+            "heading": "Temple",
+            "heading1": "Playful • Chic • Modern",
+            "sub": "<em><strong>Spirit of contemporary fashion,</strong></em> chic accents for any ensemble",
+            "img1": "shopify://shop_images/Temple_Bangle.jpg",
+            "img2": "shopify://shop_images/Temple_Bangle.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_HVYrFU",
+        "tabing_xnrTxL",
+        "tabing_UEMdH6",
+        "tabing_xTihac"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>BANGLES</span>"
+      }
+    },
+    "wsw_tabing_zzwbTd": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_dtj8yE": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/the-most-desired-92-5-silver-kadas",
+            "heading": "Silver",
+            "heading1": "Posh • Striking",
+            "sub": "<em><strong>Stylish and modish</strong></em> flairs of Silver",
+            "img1": "shopify://shop_images/Silver_Kada.jpg",
+            "img2": "shopify://shop_images/Silver_Kada.jpg"
+          }
+        },
+        "tabing_XngKbA": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/the-most-desired-zircon-kada-edit",
+            "heading": "Zircon",
+            "heading1": "Radiant • Scintillating • Euphoric",
+            "sub": "Exhilarating designs in the shimmers of <em><strong>Zircons for every style</strong></em>",
+            "img1": "shopify://shop_images/Zircon_Kada.jpg",
+            "img2": "shopify://shop_images/Zircon_Kada.jpg"
+          }
+        },
+        "tabing_p3NYJT": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/the-most-desired-trendy-kada-edit",
+            "heading": "Trendy",
+            "heading1": "Refreshing • Bold • Debonair",
+            "sub": "Keep up with the <em><strong>trendy designs </strong></em>of <em><strong>stunning jewellery</strong></em>",
+            "img1": "shopify://shop_images/Trendy_Kada.jpg",
+            "img2": "shopify://shop_images/Trendy_Kada.jpg"
+          }
+        },
+        "tabing_yteCy9": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/the-most-desired-antique-kada-edit",
+            "heading": "Antique",
+            "heading1": "Enchanting • Elegant • Elevating",
+            "sub": "Designs inspired and crafted in <em><strong>divinity of traditions</strong></em>",
+            "img1": "shopify://shop_images/Antique_Kada.jpg",
+            "img2": "shopify://shop_images/Antique_Kada.jpg"
+          }
+        },
+        "tabing_hFgYNc": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/the-most-desired-silver-temple-kada-edit",
+            "heading": "Silver Temple",
+            "heading1": "Imperial • Exalting • Extravagant",
+            "sub": "<em><strong>Elevating and Deific</strong></em> designs embracing traditions",
+            "img1": "shopify://shop_images/Silver_Temple_Kada.jpg",
+            "img2": "shopify://shop_images/Silver_Temple_Kada.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_dtj8yE",
+        "tabing_XngKbA",
+        "tabing_p3NYJT",
+        "tabing_yteCy9",
+        "tabing_hFgYNc"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>KADA</span>"
+      }
+    },
+    "wsw_tabing_hBQYgp": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_V6jAzg": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/sought-after-92-5-silver-finger-rings",
+            "heading": "92.5 Silver",
+            "heading1": "Chic • Classy • Graceful",
+            "sub": "Selects of the <em><strong>finest Silver</strong></em> in the most <em><strong>modish designs</strong></em>",
+            "img1": "shopify://shop_images/92.5_Silver_Ring.jpg",
+            "img2": "shopify://shop_images/92.5_Silver_Ring.jpg"
+          }
+        },
+        "tabing_UExHPT": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/sought-after-zircon-finger-rings",
+            "heading": "Zircon",
+            "heading1": "Chic • Elegant • Fashionable",
+            "sub": "Zircon shimmers for your <em><strong>moments of love that shines</strong></em>",
+            "img1": "shopify://shop_images/Zircon_Ring.jpg",
+            "img2": "shopify://shop_images/Zircon_Ring.jpg"
+          }
+        },
+        "tabing_JFzTgk": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/sought-after-trendy-finger-rings",
+            "heading": "Trendy",
+            "heading1": "Stylish • Flair • Enticing",
+            "sub": "<em><strong>Entice your style statements</strong></em> with the latest designs",
+            "img1": "shopify://shop_images/Trendy_Ring.jpg",
+            "img2": "shopify://shop_images/Trendy_Ring.jpg"
+          }
+        },
+        "tabing_xz7eAj": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/sought-after-antique-finger-rings",
+            "heading": "Antique",
+            "heading1": "Unique • Charming",
+            "sub": "<em><strong>Rings of beauty</strong></em> for your ethnic charms",
+            "img1": "shopify://shop_images/Antique_Ring.jpg",
+            "img2": "shopify://shop_images/Antique_Ring.jpg"
+          }
+        },
+        "tabing_rqBkxC": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/sought-after-kundan-finger-rings",
+            "heading": "Kundan",
+            "heading1": "Queenly • Majestic • Lavish",
+            "sub": "The lavish beauty of Kundan for your<em><strong> moments of royal styles</strong></em>",
+            "img1": "shopify://shop_images/Kundan_Ring.jpg",
+            "img2": "shopify://shop_images/Kundan_Ring.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_V6jAzg",
+        "tabing_UExHPT",
+        "tabing_JFzTgk",
+        "tabing_xz7eAj",
+        "tabing_rqBkxC"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>RINGS</span>"
+      }
+    },
+    "wsw_tabing_P6ffMx": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_BxFJMA": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-desired-zircon-pendants",
+            "heading": "Zircon",
+            "heading1": "Scintillating • Glistening • Glamorous",
+            "sub": "Elegant and chic designs for the <em><strong>minimally glamorous style</strong></em>",
+            "img1": "shopify://shop_images/Zircon_Pendants.jpg",
+            "img2": "shopify://shop_images/Zircon_Pendants.jpg"
+          }
+        },
+        "tabing_BMC6jQ": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/most-desired-silver-temple-pendants",
+            "heading": "Temple",
+            "heading1": "Auspicious • Heritage • Legacy",
+            "sub": "For <em><strong>the simple styles</strong></em> with <em><strong>bold touch of traditional </strong></em>",
+            "img1": "shopify://shop_images/Temple_Pendants.jpg",
+            "img2": "shopify://shop_images/Temple_Pendants.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_BxFJMA",
+        "tabing_BMC6jQ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "stylee": false,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>PENDANTS</span>"
+      }
+    },
+    "wsw_tabing_nQ3rCU": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_kHJ78c": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/coveted-92-5-silver-bracelet-edit",
+            "heading": "Silver",
+            "heading1": "Elite • Magnifying",
+            "sub": "Keep the beauty of <em><strong>casual enhanced</strong></em> with the <em><strong>shimmers of 92.5 silver</strong></em>",
+            "img1": "shopify://shop_images/Silver_Bracelet.jpg",
+            "img2": "shopify://shop_images/Silver_Bracelet.jpg"
+          }
+        },
+        "tabing_Cq6GUh": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/coveted-zircon-bracelet-edit",
+            "heading": "Zircon",
+            "heading1": "Stylish • Modish",
+            "sub": "Glistening glamor of zircons <em><strong>designed in modish styles</strong></em>",
+            "img1": "shopify://shop_images/Zircon_Bracelet.jpg",
+            "img2": "shopify://shop_images/Zircon_Bracelet.jpg"
+          }
+        },
+        "tabing_Px9QUk": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/coveted-trendy-bracelet-edit",
+            "heading": "Trendy",
+            "heading1": "Vogue • Chic",
+            "sub": "Latest designs to<em><strong> manifest the ever charming styles  </strong></em>",
+            "img1": "shopify://shop_images/Trendy_Bracelet.jpg",
+            "img2": "shopify://shop_images/Trendy_Bracelet.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_kHJ78c",
+        "tabing_Cq6GUh",
+        "tabing_Px9QUk"
+      ],
+      "settings": {
+        "stylee": false,
+        "mother": false,
+        "idd": "",
+        "heading": "MOST DESIRED <span>BRACELETS</span>"
+      }
+    },
+    "wsw_banner_8xJ9UB": {
+      "type": "WSW-Banner",
+      "disabled": true,
+      "settings": {
+        "img1": "shopify://shop_images/Group_4441.png",
+        "img2": "shopify://shop_images/Group_4211.png"
+      }
+    },
+    "wsw_banner_UJhd39": {
+      "type": "WSW-Banner",
+      "disabled": true,
+      "settings": {
+        "img1": "shopify://shop_images/Group_44411.png",
+        "img2": "shopify://shop_images/Group_42111.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_TUmmGP",
+    "wsw_tabing_4UdYPL",
+    "wsw_tabing_k9tKJL",
+    "wsw_tabing_aarzpa",
+    "wsw_tabing_zzwbTd",
+    "wsw_tabing_hBQYgp",
+    "wsw_tabing_P6ffMx",
+    "wsw_tabing_nQ3rCU",
+    "wsw_banner_8xJ9UB",
+    "wsw_banner_UJhd39"
+  ]
+}

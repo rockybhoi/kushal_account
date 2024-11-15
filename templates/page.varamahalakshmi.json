@@ -1,0 +1,409 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "slideshow_KmaN7p": {
+      "type": "slideshow",
+      "blocks": {
+        "image_6tizk3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/web_banner_2a712a0b-035b-4ad8-b764-846fa3aef7c0.jpg",
+            "mobile_image": "shopify://shop_images/Mobile_Banner_50e618a0-a85f-4456-884b-4bc4d3abb2d7.jpg",
+            "slide_link": "shopify://collections/varamahalakshmi-collection"
+          }
+        }
+      },
+      "block_order": [
+        "image_6tizk3"
+      ],
+      "custom_css": [
+        ".ct-dots-main {display: none;}",
+        ".container {padding-left: 0; padding-right: 0; margin-top: 0px;}",
+        "@media (max-width: 700px) {.fully-spaced-row--not-mobile {margin-top: 0; margin-bottom: 0; }}"
+      ],
+      "settings": {
+        "img_org": true,
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "section_brecker_img_J7wfFC": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        ".brecker-img-inner {margin: 50px 0 0 0;}",
+        "@media (max-width: 750px) {.brecker-img-inner {margin: 0px 0 0 0; }}"
+      ],
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099178.png",
+        "text": "Elevate the Goddess in You <br>with Our Divine Jewellery Collection",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "round_collection_box_JRmBCB": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_Vgnjbm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Frame_48099131_c408ede6-c1f3-4725-99f7-1eb078ce65a1.png",
+            "link": "shopify://collections/varamahalakshmi-edit-lakshmi-necklaces",
+            "title": "Necklaces"
+          }
+        },
+        "collection_rFrhCN": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Frame_48099132.png",
+            "link": "shopify://collections/varamahalakshmi-edit-lakshmi-earrings",
+            "title": "Earrings"
+          }
+        },
+        "collection_crjEbi": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Frame_48099129.png",
+            "link": "shopify://collections/varamahalakshmi-edit-lakshmi-bangles",
+            "title": "Bangles"
+          }
+        },
+        "collection_KYHiiA": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Frame_48099148.png",
+            "link": "shopify://collections/varamahalakshmi-edit-lakshmi-design-belts",
+            "title": "Belts"
+          }
+        },
+        "collection_kzQBaq": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/Frame_48099130.png",
+            "link": "shopify://collections/varamahalakshmi-special-finger-rings",
+            "title": "Finger Rings"
+          }
+        },
+        "collection_4nPkyt": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Vgnjbm",
+        "collection_rFrhCN",
+        "collection_crjEbi",
+        "collection_KYHiiA",
+        "collection_kzQBaq",
+        "collection_4nPkyt"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.main_title {margin-bottom: 15px; text-align: left; }}"
+      ],
+      "settings": {
+        "title": "Divine Lakshmi Motif"
+      }
+    },
+    "section_brecker_img_t3zrWR": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        ".brecker-img-inner {margin: 0px 0 50px 0;}",
+        "@media (max-width: 750px) {.brecker-img-inner {margin: 0px 0 0 0; }}"
+      ],
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099236.png",
+        "text": "Magnify Every Occasional Moment with <br>\nSelections of Temple Styles",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "wsw_tabing_cgNthQ": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_BDTWen": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/varamahalakshmi-antique-jewellery-edit",
+            "heading": "Antique",
+            "heading1": "Traditional • Admiring  • Feminine",
+            "sub": "Embodies the <em><strong>elegance and craftsmanship</strong></em> of bygone eras",
+            "img1": "shopify://shop_images/Group_48099216_f03b91ae-9ff8-4ed5-8cf9-abb932d599b7.png",
+            "img2": "shopify://shop_images/Group_48099216_f03b91ae-9ff8-4ed5-8cf9-abb932d599b7.png"
+          }
+        },
+        "tabing_yhVKgx": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/varamahalakshmi-temple-jewellery-edit",
+            "heading": "Temple",
+            "heading1": "Authentic • Majestic • Lavish",
+            "sub": "Embrace traditions in <em><strong>divine craftsmanship</strong></em>",
+            "img1": "shopify://shop_images/Group_48099215_2768c023-bc18-4d9e-a855-a42d8e42899b.png",
+            "img2": "shopify://shop_images/Group_48099215_2768c023-bc18-4d9e-a855-a42d8e42899b.png"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_BDTWen",
+        "tabing_yhVKgx"
+      ],
+      "custom_css": [
+        ".WSW-Tabing-header {color: #454545;}",
+        "@media (max-width: 750px) {.tabswsw {justify-content: center; }}"
+      ],
+      "settings": {
+        "stylee": false,
+        "mother": false,
+        "idd": "",
+        "heading": "Seek Your Style"
+      }
+    },
+    "section_brecker_img_3jhpb6": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        ".brecker-img-inner {margin: 50px 0;}",
+        "@media (max-width: 750px) {.brecker-img-inner {margin: 0px 0 0 0; }}"
+      ],
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099237.png",
+        "text": "Discover the Goddess In You with <br>\nWork of Craftsmanship ",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "wedding_collection_MJqRTw": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "box_qkfEkG": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099137.png",
+            "heading": "Earrings",
+            "text": "Every design is an intricate work defining the beauty of our traditional and culture",
+            "link": "shopify://collections/varamahalakshmi-special-earrings",
+            "link_text": "Explore"
+          }
+        },
+        "box_KQh4bT": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099138_26b42a5e-bfde-452b-88e3-4da0cb18af63.png",
+            "heading": "Necklaces",
+            "text": "Adorn your traditional attires with the beauty of Goddess Lakshmi",
+            "link": "shopify://collections/varamahalakshmi-special-necklaces",
+            "link_text": "Explore"
+          }
+        },
+        "box_wbRBgU": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099139.png",
+            "heading": "Bangles",
+            "text": "Embrace the Divine Goddess in you with our handpicked selects of bangles",
+            "link": "shopify://collections/varamahalakshmi-special-bangle-edit",
+            "link_text": "Explore"
+          }
+        },
+        "box_D4Gn7M": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Frame_48099140.png",
+            "heading": "Maang Tikka",
+            "text": "Made for your traditional moments, adorn yourself in our curated picks",
+            "link": "shopify://collections/varamahalakshmi-special-maang-tikka-edit",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "box_qkfEkG",
+        "box_KQh4bT",
+        "box_wbRBgU",
+        "box_D4Gn7M"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.Wedding-Collection {margin: 32px 0; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "Explore Godly Designs",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": false
+      }
+    },
+    "section_brecker_img_63rmAp": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        ".brecker-img-inner {margin: 50px 0;}",
+        "@media (max-width: 750px) {.brecker-img-inner {margin: 0px 0 0 0; }}"
+      ],
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099238.png",
+        "text": "And Manifest the Beauty of Lakshmi <br> Within You",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "new_shop_the_look_zkUKxW": {
+      "type": "New-shop-the-look",
+      "disabled": true,
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/Kushal_s0181_1_1.png",
+        "img_icon_banner_mob": "shopify://shop_images/Kushal_s0181_1_1.png",
+        "head": "Shop The Look",
+        "sec": "The Bloom of Divine Beauty",
+        "sec_text": "",
+        "product_list": [],
+        "coll_name": "Collection Name"
+      }
+    },
+    "new_shop_the_look_G6FLQC": {
+      "type": "New-shop-the-look",
+      "custom_css": [
+        "@media (max-width: 750px) {.look-main {margin: 32px 0; }}"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/VL_Master_Web_HQ.mp4",
+        "head": "Shop Similar",
+        "sec": "The Divine Varamahalakshmi Edit",
+        "sec_text": "",
+        "product_list": [
+          "antique-necklace-172357",
+          "antique-necklace-165916",
+          "antique-bangle-173874",
+          "silver-temple-bangle-162674",
+          "antique-belt-166057",
+          "antique-finger-ring-164114",
+          "antique-finger-ring-172321",
+          "antique-choti-172337",
+          "antique-payal-173881",
+          "antique-toe-ring-173529"
+        ],
+        "coll_name": "The Divine Varamahalakshmi Edit"
+      }
+    },
+    "section_brecker_img_WmEdYk": {
+      "type": "section-brecker-img",
+      "custom_css": [
+        ".brecker-img-inner {margin: 50px 0 0px 0;}",
+        "@media (max-width: 750px) {.brecker-img-inner {margin: 0px 0 0 0; }}"
+      ],
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099239.png",
+        "text": "Blossom to Embrace Traditions, Your Way",
+        "link": "",
+        "link-text": ""
+      }
+    },
+    "featured_collection_xGc7xA": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".use-alt-bg {background-color: #ffffff; color: #000000;}"
+      ],
+      "settings": {
+        "title": "Best Sellers",
+        "collection": "varamahalakshmi-jewellery-best-sellers-edit",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 5,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "varamahalakshmi-special-accessories",
+            "product_list": [
+              "antique-finger-ring-166032",
+              "antique-sindhoor-dabi-162711",
+              "silver-temple-tikka-169646",
+              "antique-tikka-172329",
+              "antique-finger-ring-172457"
+            ],
+            "view_text": "View All Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 50px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; } .style_main_head {margin-bottom: 15px; font-weight: 700; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Divine Accessories You Love"
+      }
+    },
+    "section_brecker_img_dgLetJ": {
+      "type": "section-brecker-img",
+      "settings": {
+        "img_br": "shopify://shop_images/Group_48099194.png",
+        "img": "shopify://shop_images/Group_48099240.png",
+        "text": "This Varamahalakshmi Vratam <br>Adorn the Goddess In You",
+        "link": "shopify://collections/varamahalakshmi-collection",
+        "link-text": "Shop The Collection"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_KmaN7p",
+    "section_brecker_img_J7wfFC",
+    "round_collection_box_JRmBCB",
+    "section_brecker_img_t3zrWR",
+    "wsw_tabing_cgNthQ",
+    "section_brecker_img_3jhpb6",
+    "wedding_collection_MJqRTw",
+    "section_brecker_img_63rmAp",
+    "new_shop_the_look_zkUKxW",
+    "new_shop_the_look_G6FLQC",
+    "section_brecker_img_WmEdYk",
+    "featured_collection_xGc7xA",
+    "pearls_collection_tabing_7xNG47",
+    "section_brecker_img_dgLetJ"
+  ]
+}

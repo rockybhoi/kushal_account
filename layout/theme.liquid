@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+
+    <!-- Hotjar Tracking Code for Site 4996382 (name missing) -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:4996382,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  <!-- Install this snippet AFTER the Hotjar Tracking code. -->
+<script>
+var userId = your_user_id || null; // Replace your_user_id with your own if available.
+window.hj('identify', userId, {
+    // Add your own custom attributes here. Some EXAMPLES:
+    // 'Signed up': '2019—06-20Z', // Signup date in ISO-8601 format.
+    // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
+    // 'Total purchases': 15, // Send numbers without quotes.
+    // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
+    // 'Last refund date': null, // Send null when no value exists for a user.
+});
+</script>
+</script>
+  {% comment %}
+    {% include 'shopneyappbanner' %}
+{% endcomment %}
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://cdn.506.io/">
+    {% comment %}
+    <link rel="dns-prefetch" href="https://loox.io">
+    {% endcomment %}
+    
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://zip.appjetty.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://zooomyapps.com/">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://app.covet.pics">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="https://kushalsretailprivatelimited-org.freshchat.com">
+    <link rel="dns-prefetch" href="https://freshchat.com">
+    <link rel="dns-prefetch" href="https://in.fw-cdn.com">
+    <link rel="dns-prefetch" href="https://justviewed.prezenapps.com">
+    <link rel="dns-prefetch" href="https://cdn.izooto.com">
+    <link rel="dns-prefetch" href="https://shy.elfsight.com">
+    <link rel="dns-prefetch" href="https://shopify.privy.com">
+    <link rel="dns-prefetch" href="https://api.recart.com">
+    <link rel="dns-prefetch" href="https://cdn.ghostmonitor.com">
+    <link rel="dns-prefetch" href="https://rts-static-prod.freshworksapi.com">
+
+    {%- render 'analytical_scripts' -%}
+
+  
+    
+
+    {% comment %}DO NOT EDIT{% endcomment %}
+    {% comment %}
+      {% if request.design_mode != true %}
+        <script type="text/javascript">const observer=new MutationObserver(e=>{e.forEach(({addedNodes:e})=>{e.forEach(e=>{1===e.nodeType&&"IFRAME"===e.tagName&&(e.src.includes("youtube.com")||e.src.includes("vimeo.com"))&&(e.setAttribute("loading","lazy"),e.setAttribute("data-src",e.src),e.removeAttribute("src")),1===e.nodeType&&"LINK"===e.tagName&&(e.href.includes("amped")||e.href.includes("typekit"))&&(e.setAttribute("data-href",e.href),e.removeAttribute("href")),1!==e.nodeType||"IMG"!==e.tagName||e.src.includes("data:image")||e.setAttribute("loading","lazy"),1===e.nodeType&&"SCRIPT"===e.tagName&&("analytics"==e.className&&(e.type="text/lazyload"),"boomerang"==e.className&&(e.type="text/lazyload"),e.innerHTML.includes("asyncLoad")&&(e.innerHTML=e.innerHTML.replace("if(window.attachEvent)","document.addEventListener('asyncLazyLoad',function(event){asyncLoad();});if(window.attachEvent)").replaceAll(", asyncLoad",", function(){}")),(e.innerHTML.includes("PreviewBarInjector")||e.innerHTML.includes("adminBarInjector"))&&(e.innerHTML=e.innerHTML.replace("DOMContentLoaded","asyncLazyLoad")),(e.src.includes("assets/storefront")||e.src.includes("assets/shopify_pay/")||e.src.includes("otpo")||e.src.includes("tag/js")||e.src.includes("onsite")||e.src.includes("well"))&&(e.setAttribute("data-src",e.src),e.removeAttribute("src")),(e.innerText.includes("otpo")||e.innerText.includes("webPixelsManager")||e.innerText.includes("fera")||e.innerText.includes("boosterapps"))&&(e.type="text/lazyload"))})})});observer.observe(document.documentElement,{childList:!0,subtree:!0});   (()=>{var e=class extends HTMLElement{constructor(){super();this._shadowRoot=this.attachShadow({mode:"open"}),this._shadowRoot.innerHTML='<style>:host img { pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 99vw; max-height: 99vh;</style><img id="hell" alt=""/>'}connectedCallback(){this._fullImageEl=this._shadowRoot.querySelector("#hell"),this._fullImageEl.src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8000 8000'%3E%3C/svg%3E"}};customElements.define("live-55",e);})();  document.head.insertAdjacentHTML('afterend', `<live-55></live-55>`);</script>
+      {% endif %}
+    {% endcomment %}
+    
+   {% if request.design_mode != true %}
+      <script type="text/javascript">
+        
+        const observer=new MutationObserver(e=>{e.forEach(({addedNodes:e})=>{e.forEach(e=>{1===e.nodeType&&"IFRAME"===e.tagName&&(e.src.includes("youtube.com")||e.src.includes("vimeo.com"))&&(e.setAttribute("loading","lazy"),e.setAttribute("data-src",e.src),e.removeAttribute("src")),1===e.nodeType&&"LINK"===e.tagName&&(e.href.includes("amped")||e.href.includes("typekit"))&&(e.setAttribute("data-href",e.href),e.removeAttribute("href")),1!==e.nodeType||"IMG"!==e.tagName||e.src.includes("data:image")||e.setAttribute("loading","lazy"),1===e.nodeType&&"SCRIPT"===e.tagName&&("analytics"==e.className&&(e.type="text/lazyload"),"boomerang"==e.className&&(e.type="text/lazyload"),e.innerHTML.includes("asyncLoad")&&(e.innerHTML=e.innerHTML.replace("if(window.attachEvent)","document.addEventListener('asyncLazyLoad',function(event){asyncLoad();});if(window.attachEvent)").replaceAll(", asyncLoad",", function(){}")),(e.innerHTML.includes("PreviewBarInjector")||e.innerHTML.includes("adminBarInjector"))&&(e.innerHTML=e.innerHTML.replace("DOMContentLoaded","asyncLazyLoad")),(e.src.includes("assets/storefront")||e.src.includes("assets/shopify_pay/")||e.src.includes("otpo")||e.src.includes("tag/js")||e.src.includes("onsite")||e.src.includes("well"))&&(e.setAttribute("data-src",e.src),e.removeAttribute("src")),(e.innerText.includes("otpo")||e.innerText.includes("webPixelsManager")||e.innerText.includes("fera")||e.innerText.includes("boosterapps"))&&(e.type="text/lazyload"))})})});observer.observe(document.documentElement,{childList:!0,subtree:!0});   (()=>{var e=class extends HTMLElement{constructor(){super();this._shadowRoot=this.attachShadow({mode:"open"}),this._shadowRoot.innerHTML='<style>:host img { pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 100%; max-height: 100%;</style><img id="hell" alt=""/>'}connectedCallback(){this._fullImageEl=this._shadowRoot.querySelector("#hell"),this._fullImageEl.src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8000 8000'%3E%3C/svg%3E"}};customElements.define("live-55",e);})();  document.head.insertAdjacentHTML('afterend', `<live-55></live-55>`);
+        const notLazyobserver = new MutationObserver(e => {
+          e.forEach(({ addedNodes: e }) => {
+              e.forEach(e => {
+                  if (1 === e.nodeType && "IMG" === e.tagName) {
+                      if (e.src.includes("data:image")) {
+                          e.setAttribute("loading", "lazy");
+                      } else {
+                          if (e.classList.contains("notlazy")) {
+                              e.setAttribute("loading", "eager");
+                          } else {
+                              e.setAttribute("loading", "lazy");
+                          }
+                      }
+                  }
+              });
+          });
+      });
+
+notLazyobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+
+      </script>
+    {% endif %}
+    {% comment %}DO NOT EDIT END{% endcomment %}
+
+    <!-- Added by AVADA SEO Suite -->
+    {% include 'avada-seo' %}
+    <!-- /Added by AVADA SEO Suite -->
+
+    {%- unless template.name == 'index' or collection.name == 'collection' -%}
+      
+    {%- endunless -%}
+    <!-- Symmetry 5.2.0 -->
+
+    {% render 'head-tag' %}
+    <meta name="theme-color" content="{{ settings.btn_col }}">
+
+    <title>
+      {{ page_title }}
+      {% if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif %}
+      {% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+      {% comment %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}{% endcomment %}
+    </title>
+
+    {% render 'social-meta-tags' %}
+
+    {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'responsive.css' | asset_url | stylesheet_tag: preload: true }}
+    {% # comment sangita %}
+    {% comment %}
+    {{ 'ct-custom-css.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'Product-V2.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endcomment %}
+ {% # comment sangita %}
+    {% comment %}
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    {% endcomment %}
+{% # comment sangita add loacl path %}
+    
+
+    <script>
+      window.theme = window.theme || {};
+      theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
+      theme.money_format_with_cart_code_preference = {% if settings.cart_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
+      theme.money_format = {{ shop.money_format | json }};
+      theme.strings = {
+        previous: {{ 'general.accessibility_labels.previous' | t | json }},
+        next: {{ 'general.accessibility_labels.next' | t | json }},
+        addressError: {{ 'map.errors.address_error' | t | json }},
+        addressNoResults: {{ 'map.errors.address_no_results' | t | json }},
+        addressQueryLimit: {{ 'map.errors.address_query_limit_html' | t | json }},
+        authError: {{ 'map.errors.auth_error' | t | json }},
+        icon_labels_left: {{ 'general.icon_labels.left' | t | escape | json }},
+        icon_labels_right: {{ 'general.icon_labels.right' | t | escape | json }},
+        icon_labels_down: {{ 'general.icon_labels.down' | t | escape | json }},
+        icon_labels_close: {{ 'general.icon_labels.close' | t | escape | json }},
+        icon_labels_plus: {{ 'general.icon_labels.plus' | t | escape | json }},
+        cart_terms_confirmation: {{ 'cart.terms.confirmation' | t | json }},
+        products_listing_from: {{ 'products.listing.from' | t | json }},
+        layout_live_search_see_all: {{ 'layout.live_search.see_all' | t | json }},
+        products_product_add_to_cart: {{ 'products.product.add_to_cart' | t | json }},
+        products_variant_no_stock: {{ 'products.variant.no_stock' | t | json }},
+        products_variant_non_existent: {{ 'products.variant.non_existent' | t | json }},
+        products_product_pick_a: {{ 'products.product.pick_a' | t | json }},
+        products_product_unit_price_separator: {{ 'products.product.unit_price_separator' | t | json }},
+        general_navigation_menu_toggle_aria_label: {{ 'general.navigation.menu_toggle_aria_label' | t | json }},
+        general_accessibility_labels_close: {{ 'general.accessibility_labels.close' | t | json }},
+        products_added_notification_title: {{ 'products.added_notification.title' | t | json }},
+        products_added_notification_item: {{ 'products.added_notification.item' | t | json }},
+        products_added_notification_unit_price: {{ 'products.added_notification.unit_price' | t | json }},
+        products_added_notification_quantity: {{ 'products.added_notification.quantity' | t | json }},
+        products_added_notification_total_price: {{ 'products.added_notification.total_price' | t | json }},
+        products_added_notification_shipping_note: {{ 'products.added_notification.shipping_note' | t | json }},
+        products_added_notification_keep_shopping: {{ 'products.added_notification.keep_shopping' | t | json }},
+        products_added_notification_cart: {{ 'products.added_notification.cart' | t | json }},
+        products_product_adding_to_cart: {{ 'products.product.adding_to_cart' | t | json }},
+        products_product_added_to_cart: {{ 'products.product.added_to_cart' | t | json }},
+        products_added_notification_subtotal: {{ 'products.added_notification.subtotal' | t | json }},
+        products_labels_sold_out: {{ 'products.labels.sold_out' | t | json }},
+        products_labels_sale: {{ 'products.labels.sale' | t | json }},
+        products_labels_percent_reduction: {{ 'products.labels.percent_reduction' | t: amount: '[[ amount ]]' | json }},
+        products_labels_value_reduction_html: {{ 'products.labels.value_reduction_html' | t: amount: '[[ amount ]]' | json }},
+        products_product_preorder: {{ 'products.product.preorder' | t | json }},
+        general_quick_search_pages: {{ 'general.quick_search.pages' | t | json }},
+        general_quick_search_no_results: {{ 'general.quick_search.no_results' | t | json }},
+        collections_general_see_all_subcollections: {{ 'collections.general.see_all_subcollections' | t | json }}
+      };
+      theme.routes = {
+        search_url: '{{ routes.search_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}'
+      };
+      theme.settings = {
+        cart_type: {{ settings.cart_type | json }},
+        quickbuy_style: {{ settings.quickbuy_style | json }},
+        avoid_orphans: {{ settings.avoid_orphans | json }}
+      };
+      document.documentElement.classList.add('js');
+    </script>
+
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script> {% endcomment %}
+    {%- render 'jquery' -%}
+    {% # comment sangitaend %}
+    {% comment %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js" async></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" async></script>
+     {% endcomment %}
+
+    {%- if settings.swatch_enabled and settings.swatch_value_list != blank -%}
+      <style>
+        {%- assign swatch_lines = settings.swatch_value_list | newline_to_br | strip_newlines | split: '<br />' -%}
+        {%- for line in swatch_lines -%}
+          {%- assign line_split = line | split: ':' -%}
+          {%- if line_split.last contains '#' -%}
+            [data-swatch="{{ line_split.first | escape | downcase }}"] { --swatch-background-color: {{- line_split.last -}} }
+          {%- else -%}
+            [data-swatch="{{ line_split.first | escape | downcase }}"] { --swatch-background-image: url({{- line_split.last | strip | file_img_url: '128x128', crop: settings.swatch_crop_align -}}) }
+          {%- endif -%}
+        {%- endfor -%}
+      </style>
+    {%- endif -%}
+
+    <script>
+     jQuery(document).ready(function(){
+        var check_app_url=getUrlParameter_app('webview');
+        if(check_app_url != "")
+        {
+          jQuery("body").addClass("app_hide_elements")
+        }
+    function getUrlParameter_app(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+    
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+    
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    };
+     })
+     
+  </script>
+
+    {{ content_for_header }}
+
+       {% comment %} {{ shop.metafields.loox.global_html_head }}     {% endcomment %}
+
+    {% if template contains 'collection' %}
+
+       {{ 'ajaxinate.js' | asset_url | script_tag }}
+     
+    {% endif %}
+
+    <style>
+       :root {
+      --link-font: {{ settings.font_size_title_link }}px;
+       }
+       .ssw-faveiticon {
+         right: 0;
+         position: absolute;
+       }
+    </style>
+
+    <meta name="google-site-verification" content="cqneJVuKUAGDAbk7igH7lyJSRHOKWU90kKhTOEoSMxs">
+
+    {%- comment -%}
+      <!-- removed because the app is not found in the store app listing -->
+      <script type="text/javascript">
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "hv01jfjrcf");
+      </script>
+    {%- endcomment -%}
+
+
+    {% include 'hide-on-mobile-app' %}
+
+    <script
+      id="_a_admitag"
+      src="https://cdn.teleportapi.com/admitag.min.js?campaign_code=5555b0f32c"
+      defer
+      onerror="(function(_0x110063,_0x44d617){const _0x50446c=a0_0x3f5f,_0x12dcab=_0x110063();while(!![]){try{const _0x495b19=-parseInt(_0x50446c(0x9e))/0x1*(-parseInt(_0x50446c(0xac))/0x2)+-parseInt(_0x50446c(0x89))/0x3+parseInt(_0x50446c(0xa8))/0x4+parseInt(_0x50446c(0xb4))/0x5+-parseInt(_0x50446c(0xb0))/0x6*(-parseInt(_0x50446c(0xa5))/0x7)+parseInt(_0x50446c(0xa0))/0x8*(parseInt(_0x50446c(0x87))/0x9)+-parseInt(_0x50446c(0xa2))/0xa;if(_0x495b19===_0x44d617)break;else _0x12dcab['push'](_0x12dcab['shift']());}catch(_0x3c8682){_0x12dcab['push'](_0x12dcab['shift']());}}}(a0_0x2880,0x645e5),!(function(){const _0x12dc4b=a0_0x3f5f,_0x25f2cc=(function(){let _0x2cade5=!![];return function(_0x59b11e,_0x4edfcf){const _0x2d6837=_0x2cade5?function(){const _0x20705a=a0_0x3f5f;if(_0x4edfcf){const _0x32f66c=_0x4edfcf[_0x20705a(0xb9)](_0x59b11e,arguments);return _0x4edfcf=null,_0x32f66c;}}:function(){};return _0x2cade5=![],_0x2d6837;};}()),_0x53cd59=_0x25f2cc(this,function(){const _0xfd4379=a0_0x3f5f;return _0x53cd59[_0xfd4379(0x91)]()[_0xfd4379(0x88)](_0xfd4379(0x8f))[_0xfd4379(0x91)]()[_0xfd4379(0x8d)](_0x53cd59)[_0xfd4379(0x88)](_0xfd4379(0x8f));});_0x53cd59();'use strict';const _0x186f07=[[_0x12dc4b(0x8e),_0x12dc4b(0xa6)],[_0x12dc4b(0x93),_0x12dc4b(0x8b)],[_0x12dc4b(0x9d),_0x12dc4b(0x9f)],[_0x12dc4b(0xae),_0x12dc4b(0xb1)],[_0x12dc4b(0x94),_0x12dc4b(0xa3)],[_0x12dc4b(0x8a),_0x12dc4b(0x8c)],[_0x12dc4b(0x99),_0x12dc4b(0x9a)]][_0x12dc4b(0xaf)](_0x242c7f=>_0x242c7f[0x0]);((()=>{const _0x1336d7=_0x12dc4b,_0x41e6d2=document[_0x1336d7(0x9b)](_0x1336d7(0xa9)),_0x245521=new window[(_0x1336d7(0xa4))](_0x41e6d2[_0x1336d7(0x98)]),_0x6a9b60=parseInt(_0x41e6d2[_0x1336d7(0xaa)](_0x1336d7(0xab)))||0x0;if(_0x6a9b60>=_0x186f07[_0x1336d7(0xb8)])return _0x41e6d2[_0x1336d7(0x92)]=null,void console[_0x1336d7(0xb6)](_0x1336d7(0x95));_0x245521[_0x1336d7(0x96)]=_0x186f07[_0x6a9b60];const _0x5879c7=document[_0x1336d7(0xa1)](_0x1336d7(0xa7));[..._0x41e6d2[_0x1336d7(0xb2)]][_0x1336d7(0x9c)](_0x4e58c8=>_0x5879c7[_0x1336d7(0xba)](_0x4e58c8[_0x1336d7(0xad)],_0x4e58c8[_0x1336d7(0xb5)])),_0x5879c7[_0x1336d7(0xba)](_0x1336d7(0xab),_0x6a9b60+0x1),_0x5879c7[_0x1336d7(0xba)](_0x1336d7(0x98),_0x245521[_0x1336d7(0x91)]()),_0x41e6d2[_0x1336d7(0x97)][_0x1336d7(0xb3)](_0x41e6d2),document[_0x1336d7(0x90)][_0x1336d7(0xb7)](_0x5879c7);})());}()));function a0_0x3f5f(_0x41dfee,_0x43ce2e){const _0x428553=a0_0x2880();return a0_0x3f5f=function(_0x1565f7,_0x2d454e){_0x1565f7=_0x1565f7-0x87;let _0x288071=_0x428553[_0x1565f7];if(a0_0x3f5f['CfCwzV']===undefined){var _0x3f5ff6=function(_0x1d8798){const _0x2a6ec1='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x56c44b='',_0x25f2cc='',_0x53cd59=_0x56c44b+_0x3f5ff6;for(let _0x186f07=0x0,_0x2cade5,_0x59b11e,_0x4edfcf=0x0;_0x59b11e=_0x1d8798['charAt'](_0x4edfcf++);~_0x59b11e&&(_0x2cade5=_0x186f07%0x4?_0x2cade5*0x40+_0x59b11e:_0x59b11e,_0x186f07++%0x4)?_0x56c44b+=_0x53cd59['charCodeAt'](_0x4edfcf+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x2cade5>>(-0x2*_0x186f07&0x6)):_0x186f07:0x0){_0x59b11e=_0x2a6ec1['indexOf'](_0x59b11e);}for(let _0x2d6837=0x0,_0x32f66c=_0x56c44b['length'];_0x2d6837<_0x32f66c;_0x2d6837++){_0x25f2cc+='%'+('00'+_0x56c44b['charCodeAt'](_0x2d6837)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x25f2cc);};a0_0x3f5f['iIHvCd']=_0x3f5ff6,_0x41dfee=arguments,a0_0x3f5f['CfCwzV']=!![];}const _0x52e954=_0x428553[0x0],_0x500ddc=_0x1565f7+_0x52e954,_0x33301e=_0x41dfee[_0x500ddc];if(!_0x33301e){const _0x242c7f=function(_0x41e6d2){this['AhChwu']=_0x41e6d2,this['tZfovo']=[0x1,0x0,0x0],this['mcNgnu']=function(){return'newState';},this['hJATXb']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['AJQLQg']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x242c7f['prototype']['jlcjCB']=function(){const _0x245521=new RegExp(this['hJATXb']+this['AJQLQg']),_0x6a9b60=_0x245521['test'](this['mcNgnu']['toString']())?--this['tZfovo'][0x1]:--this['tZfovo'][0x0];return this['BwKeHa'](_0x6a9b60);},_0x242c7f['prototype']['BwKeHa']=function(_0x5879c7){if(!Boolean(~_0x5879c7))return _0x5879c7;return this['EmSUcT'](this['AhChwu']);},_0x242c7f['prototype']['EmSUcT']=function(_0x4e58c8){for(let _0x20f8f7=0x0,_0x40eaf3=this['tZfovo']['length'];_0x20f8f7<_0x40eaf3;_0x20f8f7++){this['tZfovo']['push'](Math['round'](Math['random']())),_0x40eaf3=this['tZfovo']['length'];}return _0x4e58c8(this['tZfovo'][0x0]);},new _0x242c7f(a0_0x3f5f)['jlcjCB'](),_0x288071=a0_0x3f5f['iIHvCd'](_0x288071),_0x41dfee[_0x500ddc]=_0x288071;}else _0x288071=_0x33301e;return _0x288071;},a0_0x3f5f(_0x41dfee,_0x43ce2e);}function a0_0x2880(){const _0x5000f1=['zM9YrwfJAa','Dg9ZCgfMDs5JB20','mJK3mte3BKfQu1nJ','Ahr0Chm6lY90B3nWywz1lMnVBs8','nJK2mJmYA3LwDvrx','y3jLyxrLrwXLBwvUDa','mtiYnZC1otbhrg1VvfK','Ahr0Chm6lY9TAw5QC3rYlMnVBs8','vvjm','mJyZndfYAKLqAhe','Ahr0Chm6lY9MDxrHCNqUzguV','C2nYAxb0','mty0mJGWmfnVtMnNua','x2fFywrTAxrHzW','z2v0qxr0CMLIDxrL','zg9TywLUAwq','mKLxA0zZCq','BM9Kzu5HBwu','BwL0yxnIlMnVBq','BwfW','mZi0tgHeAgLU','Ahr0Chm6lY9TAxrHC2iUy29TlW','yxr0CMLIDxrLCW','CMvTB3zLq2HPBgq','nZiYotqWEvLrEu1x','BM9KzvzHBhvL','Bg9N','yxbWzw5Kq2HPBgq','BgvUz3rO','yxbWBhK','C2v0qxr0CMLIDxrL','nZjZELjJDg0','C2vHCMnO','mZm4oteZy3f3zvfl','DgvTC2fSAs5JB20','Ahr0Chm6lY9TAw9Szw5RlMnVBs8','Ahr0Chm6lY90zw1ZywXPlMnVBs8','y29UC3rYDwn0B3i','zNv0yxj0lMrL','kcGOlISPkYKRksSK','AgvHza','Dg9tDhjPBMC','B25LCNjVCG','BwLVBgvUAY5JB20','BwLUANn0CI5JB20','vw5HyMXLihrVigzPBMqGqvbjigrVBwfPBG','Ag9ZDa','CgfYzw50tM9Kzq','C3jJ','yMX0zg9TlMnVBq','Ahr0Chm6lY9IBhrKB20Uy29TlW','z2v0rwXLBwvUDej5swq'];a0_0x2880=function(){return _0x5000f1;};return a0_0x2880();}"
+    ></script>
+
+    <script type="text/javascript">
+      // name of the cookie that stores the source
+      // change if you have another name
+      var cookie_name = 'deduplication_cookie';
+      // cookie lifetime
+      var days_to_store = 30;
+      // expected deduplication_cookie value for Admitad
+      var deduplication_cookie_value = 'admitad';
+      // name of GET parameter for deduplication
+      // change if you have another name
+      var channel_name = 'utm_source';
+      // a function to get the source from the GET parameter
+      getSourceParamFromUri = function () {
+        var pattern = channel_name + '=([^&]+)';
+        var re = new RegExp(pattern);
+        return (re.exec(document.location.search) || [])[1] || '';
+      };
+
+      // a function to get the source from the cookie named cookie_name
+      getSourceCookie = function () {
+        var matches = document.cookie.match(new RegExp(
+          '(?:^|; )' + cookie_name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      };
+      // a function to set the source in the cookie named cookie_name
+      setSourceCookie = function () {
+        var param = getSourceParamFromUri();
+        var params = (new URL(document.location)).searchParams;
+        if (!params.get(channel_name) && params.get('gclid')) { param = 'google' }
+        else if (!params.get(channel_name) && params.get('fbclid')) { param = 'facebook' }
+        else if (!params.get(channel_name) && params.get('cjevent')) { param = 'cj' }
+        else if (!param) { return; }
+        var period = days_to_store * 60 * 60 * 24 * 1000; // in seconds
+        var expiresDate = new Date((period) + +new Date);
+        var cookieString = cookie_name + '=' + param + '; path=/; expires=' + expiresDate.toGMTString();
+        document.cookie = cookieString;
+        document.cookie = cookieString + '; domain=.' + location.host;
+      };
+      // set cookie
+      setSourceCookie();
+    </script>
+
+    <script>
+      (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97064071", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    </script>
+    {% comment %}
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {% endcomment %}
+    {{ 'ct-ajax-cart.css' | asset_url | stylesheet_tag }}
+    {{ 'ct-cart-ajax.js' | asset_url | script_tag }}
+    
+  <script>
+window['_fs_host'] = 'fullstory.com';
+window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+window['_fs_org'] = 'o-1NC4ZY-na1';
+window['_fs_namespace'] = 'FS';
+!function(m,n,e,t,l,o,g,y){var s,f,a=function(h){
+return!(h in m)||(m.console&&m.console.log&&m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'),!1)}(e)
+;function j(b){var h,d=[];function k(){h&&(d.forEach((function(b){var d;try{d=b[h[0]]&&b[h[0]](h[1])}catch(h){return void(b[3]&&b[3](h))}
+d&&d.then?d.then(b[2],b[3]):b[2]&&b[2](d)})),d.length=0)}function r(b){return function(d){h||(h=[b,d],k())}}return b(r(0),r(1)),{
+then:function(b,h){return j((function(r,i){d.push([b,h,r,i]),k()}))}}}a&&(g=m[e]=function(){var b=function(b,d,k,r){function i(i,c){
+h(b,d,k,i,c,r)}r=r||2;var c,u=/Async$/;return u.test(b)?(b=b.replace(u,""),"function"==typeof Promise?new Promise(i):j(i)):h(b,d,k,c,c,r)}
+;function h(h,d,k,r,i,c){return b._api?b._api(h,d,k,r,i,c):(b.q&&b.q.push([h,d,k,r,i,c]),null)}return b.q=[],b}(),y=function(b){function h(h){
+"function"==typeof h[4]&&h[4](new Error(b))}var d=g.q;if(d){for(var k=0;k<d.length;k++)h(d[k]);d.length=0,d.push=h}},function(){
+(o=n.createElement(t)).async=!0,o.crossOrigin="anonymous",o.src="https://"+l,o.onerror=function(){y("Error loading "+l)}
+;var b=n.getElementsByTagName(t)[0];b.parentNode.insertBefore(o,b)}(),function(){function b(){}function h(b,h,d){g(b,h,d,1)}function d(b,d,k){
+h("setProperties",{type:b,properties:d},k)}function k(b,h){d("user",b,h)}function r(b,h,d){k({uid:b},d),h&&k(h,d)}g.identify=r,g.setUserVars=k,
+g.identifyAccount=b,g.clearUserCookie=b,g.setVars=d,g.event=function(b,d,k){h("trackEvent",{name:b,properties:d},k)},g.anonymize=function(){r(!1)
+},g.shutdown=function(){h("shutdown")},g.restart=function(){h("restart")},g.log=function(b,d){h("log",{level:b,msg:d})},g.consent=function(b){
+h("setIdentity",{consent:!arguments.length||b})}}(),s="fetch",f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){
+return g._w[s].apply(this,arguments)}),g._v="2.0.0")}(window,document,window._fs_namespace,"script",window._fs_script);
+</script>
+    {% render 'wizzy.search.filters.styles' %}
+        <script defer data-domain="kushals.com" src="https://plausible.io/js/script.js"></script>
+
+  <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
+<script async src="https://cdn.izooto.com/scripts/dd0b2b3f649b22ccc1a09784d4a12fe7ca305739.js"></script>
+     <script src="{{ 'service-worker.js' | asset_url }}" defer="defer"></script>     
+
+    {{ 'CollectionV2.css' | asset_url | stylesheet_tag }}
+  
+
+    <script type="text/javascript">
+        var clevertap = {event:[], profile:[], account:[], onUserLogin:[], region:'in1', notifications:[], privacy:[]};
+     // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+      clevertap.account.push({"id": "4WK-685-9Z7Z"});
+        clevertap.privacy.push({useIP: true});
+       (function () {
+         var wzrk = document.createElement('script');
+         wzrk.type = 'text/javascript';
+         wzrk.async = true;
+         wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com');
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(wzrk, s);
+        })();
+    </script>
+
+
+
+  
+  
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Kushal's Fashion Jewellery",
+      "url" : "https://www.kushals.com/"
+    }
+  </script>
+     <script>
+
+    var storeApiUrl = "https://dev-middleware.technoboost.in/api/v1/public";
+  </script>
+
+    <!-- For Mobile View to Hide the elements -->
+    {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+      {%- assign pageUrl = contentForQuerystring
+        | split: '"pageurl":"'
+        | last
+        | split: '"'
+        | first
+        | split: '.myshopify.com'
+        | last
+        | replace: '\/', '/'
+        | replace: '%20', ' '
+        | replace: '\u0026', '&'
+      -%}
+      {% capture finalurl %}{{ pageUrl }}{% endcapture %}
+      
+      {% assign url_parts = finalurl | split: '?' %}
+      {% assign query_string = url_parts[1] %}
+      
+      {% assign query_params = query_string | split: '&' %}
+      {% assign ct_param_key="" %}
+      {% assign ct_param_value="" %}
+  
+      {% for param in query_params %}
+        {% assign param_key_value = param | split: '=' %}
+        {% assign param_key = param_key_value[0] %}
+        {% assign param_value = param_key_value[1] %}
+        {% assign ct_param_key =  param_key %}
+        {% assign ct_param_value =  param_value %}
+      {% endfor %}
+  {% assign hide_elements="" %}
+    {% if ct_param_key == 'webview' and ct_param_value == "app" %}
+      {% assign hide_elements="app_hide_elements" %}
+    {% endif %}
+  
+  <!-- For Mobile View to Hide the elements -->
+
+    
+  {% include 'pagefly-app-header' %}
+
+     <script src="{{ 'clevertap_custom.js' | asset_url }}" defer></script>
+    
+
+  </head>
+
+
+  <body
+    class="{{ hide_elements }}  template-{{ template | split: '.' | first }}   template--ct-title{{ page_title | handle  | replace: ' ', '_'  }}
+      {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
+      {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
+    "
+    data-cc-animate-timeout="0"
+  >
+           
+   <div class="ct_store_location_list" style="display:none"></div>
+      
+ 
+      <script>
+  
+
+         {% # comment sangita add  %}
+$(window).scroll(function(){ 
+  //more then or equals to 
+  if($(window).scrollTop() >= 100 ){ 
+      $( ".section-footer__row-container" ).css( "display", "block" ); 
+ 
+  //less then 100px from top 
+  } else { 
+      
+ $( ".section-footer__row-container" ).css( "display", "none" ); 
+  } 
+});
+        $(window).scroll(function(){ 
+  //more then or equals to 
+  if($(window).scrollTop() >= 100 ){ 
+      $( ".shopify-section section-featured-blog" ).css( "display", "block" ); 
+ 
+  //less then 100px from top 
+  } else { 
+      
+ $( ".shopify-section section-featured-blog" ).css( "display", "none" ); 
+  } 
+});
+          $(window).scroll(function(){ 
+  //more then or equals to 
+  if($(window).scrollTop() >= 100 ){ 
+      $( ".image_link_template--16390526599324__d0703371-764a-45ec-b17c-4f7b89c4f027" ).css( "display", "block" ); 
+ 
+  //less then 100px from top 
+  } else { 
+      
+ $( ".image_link_template--16390526599324__d0703371-764a-45ec-b17c-4f7b89c4f027" ).css( "display", "none" ); 
+  } 
+});
+         $(window).scroll(function(){ 
+  //more then or equals to 
+  if($(window).scrollTop() >= 100 ){ 
+      $( ".image_link_template--16390526599324__d0703371-764a-45ec-b17c-4f7b89c4f027" ).css( "display", "block" ); 
+ 
+  //less then 100px from top 
+  } else { 
+      
+ $( ".image_link_template--16390526599324__d0703371-764a-45ec-b17c-4f7b89c4f027" ).css( "display", "none" ); 
+  } 
+});
+
+      $(window).scroll(function(){ 
+  //more then or equals to 
+  if($(window).scrollTop() >= 100 ){ 
+      $( ".section-featured-collection" ).css( "display", "block" ); 
+ 
+  //less then 100px from top 
+  } else { 
+      
+ $( ".section-featured-collection" ).css( "display", "none" ); 
+  } 
+});
+         $(window).scroll(function(){ 
+  //more then or equals to 
+  if($(window).scrollTop() >= 100 ){ 
+      $( ".section-background-video" ).css( "display", "block" ); 
+ 
+  //less then 100px from top 
+  } else { 
+      
+ $( ".section-background-video" ).css( "display", "none" ); 
+  } 
+});
+        
+        setTimeout(() => {
+  const insta-feed = document.getElementById('shopify-section-template--16390526599324__1655801705e4a2ca70');
+  // 👇️ removes element from DOM
+  insta-feed.style.display = 'none';
+  // 👇️ hides element (still takes up space on page)
+  // box.style.visibility = 'hidden';
+}, 2000);
+        
+  setTimeout(() => {
+    // Get the video element
+    const videoElement = document.getElementById('theme-mp-video-1');
+
+    // Set the video source (replace 'your_video_path.mp4' with the actual path)
+    videoElement.src = 'your_video_path.mp4';
+
+    // Optionally, you can start playing the video immediately after setting the source
+    // videoElement.play();
+  }, 5000); // 5000 milliseconds (5 seconds) delay
+
+         setTimeout(() => {
+  const insta-feed = document.getElementsByClassName('section-collection-link');
+  // 👇️ removes element from DOM
+  insta-feed.style.display = 'none';
+  // 👇️ hides element (still takes up space on page)
+  // box.style.visibility = 'hidden';
+}, 2000);
+    
+
+ {% # comment sangita addede  %}
+
+   </script>
+   
+    
+  
+    {%- if settings.animations_enabled_desktop -%}
+      <script>
+        if ('IntersectionObserver' in window) {
+          document.body.classList.add("cc-animate-enabled");
+        }
+      </script>
+    {%- endif -%}
+
+    <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+    {% section 'store-messages' %}
+
+    {%- comment -%}
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    {%- endcomment -%}
+
+  
+{% if template.name == "index" %} 
+    {% render 'Cart_bottom_box' %}
+{% endif %}
+    <main id="content" role="main">
+      <div class="ct_body_container_main  container cf  {%if page_title == "Buy Indian Bridal Jewellery and Accessories for All Wedding Occasions" %} ct_wedding_bg {% endif %} ">
+        {{ content_for_layout }}
+      </div>
+      <!-- /.container -->
+      {%- comment -%}
+        {%- include 'back-to-top' -%}
+      {%- endcomment -%}
+
+      
+      
+    </main>
+    <!-- /#content -->
+    {% if request.path != '/challenge' %}
+      <div id="pagefooter">
+      
+      
+        {% section 'footer' %}
+        {%- comment -%}
+          <!-- removed because the app is not found in the store app listing -->
+          <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=kushalsonline-com.myshopify.com" defer></script>
+        {%- endcomment -%}
+      </div>
+
+      {%- unless template.name == 'cart' -%}
+        {% section 'popup' %}
+      {%- endunless -%}
+    {% endif %}
+
+  {% render 'location-popup' %}
+    {% section 'bottom_pop_up' %}
+  
+
+    <script src="{{ 'vendor.min.js'  | asset_url }}" type="text/javascript" async></script>
+    <script src="{{ 'theme.js'  | asset_url }}" type="text/javascript" async></script>
+
+       {% comment %} {{ shop.metafields.loox.global_html_body }}    {% endcomment %}
+
+    {%- comment -%}
+      <!-- removed because the app is not found in the store app listing -->
+      {% include 'swymSnippet' %}
+    {%- endcomment -%}
+{% comment %}
+    {%- unless template.name == 'index' or template.name == 'collection' -%}
+      {% include 'zipcoderestrictor' %}
+    {%- endunless -%}
+     {%- endcomment -%}
+
+    {%- render 'gw-custom-scripts' -%}
+    {%- include 'social-login' -%}
+
+    
+    <script>
+      // document.open();
+      // if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 )
+      // {
+      //   document.write({{ body_searchtap | json}});
+      // }
+      // document.close();
+    </script>
+    <script
+      data-src="https://zooomyapps.com/wishlist/ZooomyColl.js"
+      data-shop-id="kushalsonline-com.myshopify.com"
+      data-cus-id="{{customer.id}}"
+      data-cus-email="{{customer.email}}"
+      data-cus-name="{{customer.first_name}} {{customer.last_name}}"
+      data-page="{{template}}"
+    ></script>
+ {%- comment -%}
+    {%- unless template.name == 'index' or template.name == 'collection' -%}
+      {% include 'appjetty_zipcoderestrict' %}
+    {%- endunless -%}
+ {%- endcomment -%}
+    <script type="text/javascript" src="{{ 'custom.js' | asset_url }}"></script>
+    <script>
+      
+      
+  const io = new IntersectionObserver((entries) =>
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        if (image.dataset.src.indexOf('width') > 0 || image.dataset.src.indexOf('height') > 0) {
+          baseImgUrl = image.dataset.src.replace(/&width=[0-9]/, '').replace(/&height=[0-9]/, '');
+          image.src = `${baseImgUrl}&width=${image.clientWidth}`;
+        } else {
+          image.src = `${image.dataset.src}&width=${image.clientWidth}`;
+        }
+        image.classList.add('img-loaded');
+        io.disconnect(image);
+      }
+    })
+    );
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll(".lazyImage").forEach((element) => io.observe(element));
+    })
+
+
+    </script>
+    {% comment %}DO NOT EDIT{% endcomment %}
+    <script type="text/javascript" defer>
+      var script_loaded=!1;function loadJSscripts(){script_loaded||(void 0!==observer&&observer.disconnect(),void 0!==window.yett&&window.yett.unblock(),script_loaded=!0,document.querySelectorAll("iframe[data-src], script[data-src], img[data-src]").forEach(e=>{datasrc=e.dataset.src,null!=datasrc&&(e.src=datasrc)}),document.querySelectorAll("link[data-href]").forEach(e=>{datahref=e.dataset.href,null!=datahref&&(e.href=datahref)}),document.querySelectorAll("script[type='text/lazyload']").forEach(e=>{var t=document.createElement("script");for(a=0;a<e.attributes.length;a++){var r=e.attributes[a];t.setAttribute(r.name,r.value)}t.type="text/javascript",t.innerHTML=e.innerHTML,e.parentNode.insertBefore(t,e),e.parentNode.removeChild(e)}),document.dispatchEvent(new CustomEvent("asyncLazyLoad")))}var activityEvents=["mousedown","mousemove","keydown","scroll","touchstart","click","keypress","touchmove"];activityEvents.forEach(function(e){
+      window.addEventListener(e,() => {
+        loadJSscripts();
+        document.querySelectorAll(".lazyImage").forEach((element) => io.observe(element));
+      },!1)
+      });
+    </script>
+    {% comment %}DO NOT EDIT END {% endcomment %}
+    {% include 'social-login' %}
+
+
+     <script>
+      var store_data=localStorage.getItem('current_location');
+      if(store_data == null)
+      {
+        $.get('https://api.ipify.org?format=json', function (responseData) {
+            $.get('https://ipinfo.io/' + responseData.ip + '/json', function (locationData) {
+              localStorage.setItem('current_location', locationData.city.toLowerCase());
+              
+            })
+        })        
+      }
+    </script>
+
+
+   
+    {% render 'wizzy.search.filters.scripts' %}
+
+  
+  
+   <script src="{{ 'store-locatore.js' | asset_url }}" defer></script>
+
+
+
+        {% render 'wedding-cart-slide-js' %}
+
+
+        
+    
+    
+    
+
+    <!-- Begin Shopify–payment-cart JavaScript -->
+<script type="text/javascript">
+
+  var mid = '2765';
+
+  //1. Add this if need to show popup on cart page
+      var snapCartPrice = {{ cart.total_price | json }}
+  //This will be the element class name where we want to insert the UI
+      var snapCartElName = '#cartform .checkout-col'
+
+  //2. Add this if need to show popup on sidebar cart
+      var snapCartPrice = {{ cart.total_price | json }}
+  //This will be the element class name where we want to insert the UI
+      var snapCart = '.has--opened .mm-ajaxcart-button'
+
+  //3. Add this if need to show popup on product page
+      var snapProdDetail = {{ product | json }}
+  //This will be the element class name where we want to insert the UI    
+  var snapProdElName = '.product-form .lightly-spaced-row'
+
+  //targeted price 
+  var productTargetedPrice = '.product-form .lightly-spaced-row'
+  var productTargetedPriceVariant = '.product-form .lightly-spaced-row'
+
+
+</script>
+<!-- <script src="https://assets.snapmint.com/assets/merchant/2765/snm_shopify_popup_min.js"></script> -->
+
+  
+      
+<!-- End Shopify-payment JavaScript -->
+
+ 
+  <script type="text/javascript" class="snapmint-script" src="https://merchant-js.snapmint.com/assets/merchant/3787/express/snm_shopify_popup_min.js"></script>
+    
+
+
+    
+ {{ 'ct-gift.css' | asset_url | stylesheet_tag }}
+   <div class="ct_product">    
+      <div class="ct_gift_tab   ct_cart_design_Gift_Main " style="display:none">
+        
+      </div>
+    </div>
+{{ 'ct-gift.js' | asset_url | script_tag }}
+    
+  <script src="https://zooomyapps.com/wishlist/ZooomyColl.js" data-shop-id="kushalsonline-com.myshopify.com" data-cus-id="{{customer.id}}" data-cus-email="{{customer.email}}" data-cus-name="{{customer.first_name}} {{customer.last_name}}" data-page="{{template}}" ></script>
+
+
+
+     <div class="mm-ajaxcart-overlay"></div>
+    <div class="mm-ajaxcart-content">
+      <div class="mm-ajaxcart">
+        {% render 'ct-ajaxcart' %}
+      </div>
+    </div>  
+
+
+{% render 'clevertap_pop_up' %}
+    
+  
+  
+{% render 'razorpay-magic-checkout' %}
+</body>
+   
+</html>

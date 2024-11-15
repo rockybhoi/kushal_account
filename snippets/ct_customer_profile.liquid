@@ -1,0 +1,654 @@
+<div class="order-box-content" id="tab-2">
+
+
+
+       <div class="address-box-content-main" id="tab-22">
+      <div class="address-box-inner">
+        <div class="order-box_backBtn">
+          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292885 6.70711C-0.097616 6.31661 -0.097616 5.68341 0.292885 5.29291L5.29289 0.292891C5.68342 -0.0976303 6.31658 -0.0976302 6.70711 0.292891C7.09763 0.683421 7.09763 1.31658 6.70711 1.70711L2.41419 6.00001L6.70711 10.2929C7.09763 10.6834 7.09763 11.3166 6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292885 6.70711Z" fill="#454545"/>
+          </svg>
+          <span>Return to Profile</span>
+        </div>
+        <div class="address-box-header">
+          <h2>Your Addresses ({{ customer.addresses_count }})</h2>
+          <div id="action" class="ct_action_link action_link action_add note">
+            <a href="#" class="" onclick="$('#add_address').toggleClass('hidden'); return false;">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/Group_48099267.png?v=1725257407" alt="">
+              <span>Add New Address</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="add_address" class="ct_customer_address customer_address edit_address small-form hidden">
+          <div class="ct_address_wrap">
+            <div class="add-address-box-header">
+              <h4 id="add_address_title">{{ 'customer.addresses.add_new' | t }}</h4>
+              <a href="#" onclick="$('#add_address').toggleClass('hidden'); return false;">
+                {% render 'svg-x' %}
+              </a>
+            </div>
+
+            <div class="location_main_box">
+              <div class="location_box_inner">
+                <button class="location-fetch ct_detect_location">Auto Detect My Location</button>
+                <div class="or_box"><span>OR</span></div>
+                <div class="input_pincode_box">
+                  <svg width="23" height="24" viewBox="0 0 23 24" fill="none"> <path d="M11.0934 20.5774C16.0864 20.5774 20.1341 16.5298 20.1341 11.5367C20.1341 6.54371 16.0864 2.49606 11.0934 2.49606C6.10038 2.49606 2.05273 6.54371 2.05273 11.5367C2.05273 16.5298 6.10038 20.5774 11.0934 20.5774Z" stroke="#292D32" stroke-width="1.07061" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21.0857 21.5291L19.1824 19.6258" stroke="#A02828" stroke-width="1.07061" stroke-linecap="round" stroke-linejoin="round"></path> </svg>
+                
+                    <input placeholder="Pincode" class="ct_address_pincode" type="text" maxlength="6"  name="zipcode" pattern="\d{6}" >
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="address_main_container ct_address_form" style="display:none;">
+           {% form 'customer_address', customer.new_address %}
+
+            <div class="input-row">
+              <!-- <label for="address_address1_new">{{ 'customer.addresses.address1' | t }}</label> -->
+              <input
+                type="text"
+                id="address_address1_new"
+                class="address_form"
+                name="address[address1]"
+                required
+                value="{{form.address1}}"
+                size="40"
+                placeholder="Enter Flat / House no / Building Name*"
+              >
+            </div>
+
+            <div class="input-row">
+              <!-- <label for="address_address2_new">{{ 'customer.addresses.address2' | t }}</label> -->
+              <input
+                type="text"
+                id="address_address2_new"
+                class="address_form"
+                name="address[address2]"
+                value="{{form.address2}}"
+                size="40"
+                placeholder="Enter Street / Road *"
+              >
+            </div>
+
+            <div class="input-flex">
+              <div class="input-row">
+                <!-- <label for="address_zip_new">Pincode *</label> -->
+                <input
+                  type="text"
+                  id="address_zip_new"
+                  class="address_form"
+                  name="address[zip]"
+                  value="{{form.zip}}"
+                  size="40"
+                  placeholder="Pincode *"
+                  required
+                >
+              </div>
+
+              <div class="input-row">
+                <!-- <label for="address_city_new">{{ 'customer.addresses.city' | t }}</label> -->
+                <input
+                  type="text"
+                  id="address_city_new"
+                  class="address_form"
+                  name="address[city]"
+                  required
+                  value="{{form.city}}"
+                  size="40"
+                  placeholder="{{ 'customer.addresses.city' | t }}"
+                >
+              </div>
+            </div>
+
+            <div class="personal_details">
+              <h2>Edit Personal Details</h2>
+              <div class="input-row">
+                <!-- <label for="address_first_name_new">{{ 'customer.addresses.first_name' | t }}</label> -->
+                <input
+                  type="text"
+                  id="address_first_name_new"
+                  class="address_form"
+                  name="address[first_name]"
+                  value="{{form.first_name}}"
+                  size="40"
+                  placeholder="Name"
+                  required
+                >
+              </div>
+
+              <div class="input-row">
+                <!-- <label for="address_phone_new">{{ 'customer.addresses.phone' | t }}</label> -->
+                <input
+                  type="text"
+                  id="address_phone_new"
+                  class="address_form"
+                  name="address[phone]"
+                  value="{{form.phone}}"
+                  placeholder="Phone"
+                  required
+                  size="40"
+                >
+                <small>Please enter at max 10 digits without country code</small>
+              </div>
+            </div>
+
+            <!--
+              <div class="input-row">
+                <label for="address_last_name_new">{{ 'customer.addresses.last_name' | t }}</label>
+                <input
+                  type="text"
+                  id="address_last_name_new"
+                  class="address_form"
+                  name="address[last_name]"
+                  value="{{form.last_name}}"
+                  size="40"
+                  required
+                >
+              </div>
+
+              <div class="input-row">
+                <label for="address_company_new">{{ 'customer.addresses.company' | t }}</label>
+                <input
+                  type="text"
+                  id="address_company_new"
+                  class="address_form"
+                  name="address[company]"
+                  value="{{form.company}}"
+                  required
+                  size="40"
+                >
+              </div>
+            -->
+
+            <div class="input-row" style="display: none;">
+              <label for="address_country_new">{{ 'customer.addresses.country' | t }}</label>
+              <span class="lightly-styled-select">
+                <select id="address_country_new" name="address[country]" data-default="{{form.country}}" required>
+                  {{ all_country_option_tags }}
+                </select>
+              </span>
+            </div>
+
+            <div id="address_province_container_new" class="input-row" style="display: none;">
+              <label for="address_province_new">{{ 'customer.addresses.province' | t }}</label>
+              <span class="lightly-styled-select">
+                <select
+                  id="address_province_new"
+                  class="address_form"
+                  required
+                  name="address[province]"
+                  data-default="{{form.province}}"
+                ></select>
+              </span>
+            </div>
+
+            <div class="input-row">
+              <label class="default_check">
+                {{ form.set_as_default_checkbox }}
+                {{ 'customer.addresses.set_default' | t }}
+              </label>
+            </div>
+            <div class="action_bottom add_address_footer">
+              <a href="#" class="ct_addrs_btn_cancel" onclick="$('#add_address').toggleClass('hidden'); return false;"> Cancel </a>
+              <button class="btn" type="submit">Save</button>
+            </div>
+
+            
+          {% endform %}
+            </div>
+        </div>
+        <div class="address-box-content">
+          <div class="address-box-inner">
+            <div id="address_tables" class="ct_address_tables" data-cc-animate>
+              {% paginate customer.addresses by 10 %}
+                {% for address in customer.addresses %}
+                  <div class="address_table ct_address_table spaced-row  {% if address == customer.default_address %}default_select{% endif %}">
+                    <div id="view_address_{{address.id}}" class="customer_address">
+                      {% comment %}
+                        <h4 class="address_title">
+                          {{ address.street }}
+                          {% if address == customer.default_address %}<span class="default_address note">({{ 'customer.addresses.default' | t }})</span>{% endif %}
+                        </h4>
+                      {% endcomment %}
+
+                      <h3 class="user_name">
+                        {{ address.first_name }}
+                        {{ address.last_name }}
+                      </h3>
+                      <div class="user_address">
+                        {{ address.street }} ,
+                        <span>
+                          {{- address.country }}
+                          {{ address.zip -}}
+                        </span>
+                      </div>
+                      <div class="user_number">Mobile - {{ address.phone }}</div>
+
+                      {% comment %}
+                        <div class="view_address lightly-spaced-row">
+                          <div>{{ address.first_name }} {{address.last_name }}</div>
+                          <div>{{ address.company }}</div>
+                          <div>{{ address.street }}</div>
+                          <div>{{ address.city }} {% if address.province_code %}, {{ address.province_code }}{% endif %}</div>
+                          <div>{{ address.country }} {{ address.zip }}</div>
+                          <div>{{ address.phone }}</div>
+                        </div>
+                      {% endcomment %}
+
+                      <div class="address_table_footer ">
+                        {% if address == customer.default_address %}
+                          <div class="default_address_text">Default</div>
+                        {% else %}
+                          <!-- <div class="make_default_address_text">Make This Default</div> -->
+                          <!-- some other code... -->
+                             {%- form 'customer_address', address -%}
+                               <input
+                                 type="hidden"
+                                 id="address_default_address_new"
+                                 name="address[default]"
+                                 value="1"
+                               >
+                               <button class="make_default_address_text" type="submit" value="Make This Default">
+                                Make This Default
+                               </button>
+                             {%- endform -%}
+                     
+                        {% endif %}
+
+                        <p class="address_actions ct_address_actions">
+                          <span class="action_link action_edit">
+                            <a
+                              href="#"
+                              class="address-edit-toggle"
+                              data-form-id="{{ address.id }}"
+                              aria-owns="edit_address_{{ address.id }}"
+                              aria-expanded="false"
+                            >
+                              {{ 'customer.addresses.edit' | t }}
+                            </a>
+                          </span>
+                          <span class="action_link action_delete">
+                            <!-- <a
+                              href="#"
+                              class="address-delete"
+                              data-target="{{ address.url }}"
+                              data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                            >
+                              {{ 'customer.addresses.delete' | t }}
+                            </a> -->
+                           
+
+
+
+                            
+                              
+                          </span>
+                        </p>
+                         <div class=" ct_address-delete" >{{ 'customer.addresses.delete' | t }}</div>
+
+
+
+                               <div class="delet_add_main">
+                                <div class="delet_add_bg"></div>
+                                <div class="delet_add_inner">
+                                  <div class="delet_add_header">
+                                    <h4>Delete Address</h4>
+                                    {% render 'svg-x' %}
+                                  </div>
+                                  <div class="delet_add_body">
+                                    <p>Are you sure you want to delete this address?</p>
+                                    <div class="delet_add_footer">
+                                      <button class="delet_cancel">Cancel</button>
+                                    
+                                      <form class="address-delete-form" method="post" action="/account/addresses/{{ address.id }}">
+                                        <input type="hidden" name="_method" value="delete">
+                                        <button type="submit">Delete</button>
+                                      </form>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                    </div>
+
+                    <div id="edit_address_{{ address.id }}" class="customer_address edit_address small-form hidden">
+                      <div class="default_edit_address">
+                        <div class="default_edit_address_inner">
+
+                          <div class="add-address-box-header">
+              <h4>{{ 'customer.addresses.edit_address' | t }}</h4>
+             <a href="#" onclick="$(this).closest('.edit_address').toggleClass('hidden'); return false;">             
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </a>
+            </div>
+                          
+                          
+
+                          {% form 'customer_address', address %}
+                            <!--
+                              <div class="input-row">
+                                <label for="address_last_name_{{form.id}}">{{ 'customer.addresses.last_name' | t }}</label>
+                                <input
+                                  type="text"
+                                  id="address_last_name_{{form.id}}"
+                                  class="address_form"
+                                  required
+                                  name="address[last_name]"
+                                  value="{{form.last_name}}"
+                                  size="40"
+                                >
+                              </div>
+                            -->
+                            <div class="input-row" style="display: none;">
+                              <label for="address_company_{{form.id}}">{{ 'customer.addresses.company' | t }}</label>
+                              <input
+                                type="text"
+                                id="address_company_{{form.id}}"
+                                class="address_form"
+                                
+                                name="address[company]"
+                                value="{{form.company}}"
+                                size="40"
+                              >
+                            </div>
+                            <div class="input-row">
+                              <!--
+                                <label for="address_address1_{{form.id}}">{{ 'customer.addresses.address1' | t }}</label>
+                              -->
+                              <input
+                                type="text"
+                                id="address_address1_{{form.id}}"
+                                class="address_form"
+                                required
+                                name="address[address1]"
+                                value="{{form.address1}}"
+                                placeholder="Enter Flat / House no / Building Name*"
+                                size="40"
+                              >
+                            </div>
+                            <div class="input-row">
+                              <!--
+                                <label for="address_address2_{{form.id}}">{{ 'customer.addresses.address2' | t }}</label>
+                              -->
+                              <input
+                                type="text"
+                                id="address_address2_{{form.id}}"
+                                class="address_form"
+                                name="address[address2]"
+                                value="{{form.address2}}"
+                                placeholder="Enter Street / Road *"
+                                size="40"
+                              >
+                            </div>
+
+                            <div class="input-flex">
+                              <div class="input-row">
+                                <!-- <label for="address_zip_{{form.id}}">{{ 'customer.addresses.zip' | t }}</label> -->
+                                <input
+                                  type="text"
+                                  id="address_zip_{{form.id}}"
+                                  class="address_form"
+                                  required
+                                  name="address[zip]"
+                                  value="{{form.zip}}"
+                                  placeholder="Pincode *"
+                                  size="40"
+                                >
+                              </div>
+
+                              <div class="input-row">
+                                <!--
+                                  <label for="address_city_{{form.id}}">{{ 'customer.addresses.city' | t }}</label>
+                                -->
+                                <input
+                                  type="text"
+                                  id="address_city_{{form.id}}"
+                                  class="address_form"
+                                  required
+                                  name="address[city]"
+                                  value="{{form.city}}"
+                                  placeholder="City"
+                                  size="40"
+                                >
+                              </div>
+                            </div>
+                            <div class="input-row" style="display: none;">
+                              <label for="address_country_{{form.id}}">{{ 'customer.addresses.country' | t }}</label>
+                              <span class="lightly-styled-select">
+                                <select
+                                  id="address_country_{{form.id}}"
+                                  name="address[country]"
+                                  required
+                                  data-default="{{form.country}}"
+                                >
+                                  {{ all_country_option_tags }}
+                                </select>
+                              </span>
+                            </div>
+                            <div
+                              id="address_province_container_{{form.id}}"
+                              class="input-row address_province_container"
+                              style="display:none"
+                            >
+                              <label for="address_province_{{form.id}}">{{ 'customer.addresses.province' | t }}</label>
+                              <span class="lightly-styled-select">
+                                <select
+                                  id="address_province_{{form.id}}"
+                                  class="address_form"
+                                  required
+                                  name="address[province]"
+                                  data-default="{{form.province}}"
+                                ></select>
+                              </span>
+                            </div>
+
+                            <div class="personal_details">
+                              <h2>Edit Personal Details</h2>
+
+                              <div class="input-row">
+                                <!-- <label for="address_first_name_{{form.id}}">
+                                  {{- 'customer.addresses.first_name' | t -}}
+                                </label> -->
+                                <input
+                                  type="text"
+                                  id="address_first_name_{{form.id}}"
+                                  class="address_form"
+                                  required
+                                  name="address[first_name]"
+                                  value="{{form.first_name}}"
+                                  placeholder="Name"
+                                  size="40"
+                                >
+                              </div>
+                              <div class="input-row">
+                                <!--
+                                  <label for="address_phone_{{form.id}}">{{ 'customer.addresses.phone' | t }}</label>
+                                -->
+                                <input
+                                  type="text"
+                                  id="address_phone_{{form.id}}"
+                                  class="address_form"
+                                  required
+                                  name="address[phone]"
+                                  value="{{form.phone}}"
+                                  size="40"
+                                  placeholder="Phone"
+                                >
+                                <small>Please enter at max 10 digits without country code</small>
+                              </div>
+
+                              <div class="input-row">
+                                <label class="default_checkbox default_check">
+                                  {{ form.set_as_default_checkbox }}
+                                  {{ 'customer.addresses.set_default' | t }}
+                                </label>
+                              </div>
+                            </div>
+                            <div class="action_bottom add_address_footer">
+                              
+                              
+                             
+                               <a
+                                    href="#"
+                                    onclick="$(this).closest('.edit_address').toggleClass('hidden'); return false;"
+                                  >
+                                    {{- 'customer.addresses.cancel' | t -}}
+                                  </a>
+                              
+                                <button class="btn" type="submit">{{ 'customer.addresses.update' | t }}</button>
+                             
+                            </div>
+                          {% endform %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end .address_table -->
+                {% endfor %}
+
+                <div id="address_pagination">{{ paginate | default_pagination }}</div>
+              {% endpaginate %}
+            </div>
+            <!-- end #address_tables -->
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+  <script>
+
+    
+
+          $('.ct_address-delete').on('click', function() {
+        $('.delet_add_main').addClass('active');
+    });
+    
+  
+    $('.delet_add_header svg').on('click', function() {
+        $('.delet_add_main').removeClass('active');
+    });
+    
+    $('.delet_cancel').on('click', function() {
+        $('.delet_add_main').removeClass('active');
+    });
+    
+    $('.delet_add_bg').on('click', function() {
+        $('.delet_add_main').removeClass('active');
+    });
+
+
+
+    
+       function callAPI(lat, lon) {
+            // Example URL, replace with your actual API endpoint
+            var data={
+              "lat":lat,
+              "lng":lon,
+              "method_call":"get_location"
+            }
+            // Use jQuery to send a GET request to the API
+             $.ajax({
+              type: "POST",
+              url: "https://gifting.kushals.com/my_account/admin_data.php",
+              data: data,
+              cache: false,
+              success: function(data){
+                  var obj = jQuery.parseJSON(data);
+                  jQuery("#address_zip_new").val(obj.postal);
+                  jQuery("#address_city_new").val(obj.city);
+                  jQuery("#address_address1_new").val(obj.full_addr);
+                  jQuery("#address_address2_new").val(obj.locality);
+                  jQuery(".ct_address_wrap").hide();  
+                  jQuery(".ct_address_form").show();
+                }
+            });
+        }
+    
+    
+        function showPosition(position) {
+          var latitude = position.coords.latitude;
+           var longitude = position.coords.longitude;
+         
+    
+           // Call the API with the latitude and longitude
+           callAPI(latitude, longitude);
+       }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                jQuery(".ct_error").show()
+               //  console.log("User denied the request for Geolocation.");
+            
+               //   var get_lat_lng=localStorage.getItem('location_store');
+               // var latitude= get_lat_lng['latitude'];
+               //  var longitude= get_lat_lng['longitude'];
+               //   callAPI(latitude, longitude);
+                break;
+            case error.POSITION_UNAVAILABLE:
+                console.log("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                console.log("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                console.log("An unknown error occurred.");
+                break;
+        }
+    }
+       $('.ct_detect_location').click(function() {
+              
+        if (navigator.geolocation) {
+          
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+         
+        }
+    });
+
+    jQuery(document).on("click",".ct_addrs_btn_cancel",function(){
+      $('#address_form_new').trigger("reset");
+      jQuery(".ct_customer_address").addClass("hidden");
+      jQuery(".ct_address_wrap").show();
+      jQuery(".address_main_container").hide();
+    })
+
+      jQuery(document).on("input", ".ct_address_pincode", function () {
+      var pin=jQuery(".ct_address_pincode").val();
+        if (pin.length === 6) {
+             address_pin_check(pin)
+          }
+          else if(pin == "")
+          {
+             //jQuery(".ct_pin_checker").show()
+          }
+      }); 
+
+
+     function address_pin_check(pin)
+      {
+          var data={
+                "pin":pin,
+                "method_call":"pin_location"
+              }
+            // Use jQuery to send a GET request to the API
+             $.ajax({
+              type: "POST",
+              url: "https://gifting.kushals.com/my_account/admin_data.php",
+              data: data,
+              cache: false,
+              success: function(data){
+                 var obj = jQuery.parseJSON(data);
+                  jQuery("#address_zip_new").val(obj.postal);
+                  jQuery("#address_city_new").val(obj.city);
+                  jQuery("#address_address1_new").val(obj.full_addr);
+                  jQuery("#address_address2_new").val(obj.locality);
+                  jQuery(".ct_address_wrap").hide();  
+                  jQuery(".ct_address_form").show();
+              }
+             })
+      }
+  </script>

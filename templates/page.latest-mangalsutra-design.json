@@ -1,0 +1,660 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "banner_with_button_ifeC9H": {
+      "type": "banner_with_button",
+      "disabled": true,
+      "settings": {
+        "desk": "shopify://shop_images/Web_1_41c93f86-b55f-445a-b21c-fea1e6ea99df.jpg",
+        "mobile": "shopify://shop_images/Mob_d45a26ab-f395-4a10-aeae-87dc99c6a048.jpg",
+        "link": "shopify://collections/mangalsutra",
+        "link_text": "ss"
+      }
+    },
+    "slideshow_r9mMp4": {
+      "type": "slideshow",
+      "blocks": {
+        "image_VhQrHP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web_1_41c93f86-b55f-445a-b21c-fea1e6ea99df.jpg",
+            "mobile_image": "shopify://shop_images/Mob_d45a26ab-f395-4a10-aeae-87dc99c6a048.jpg",
+            "slide_link": "shopify://collections/mangalsutra"
+          }
+        }
+      },
+      "block_order": [
+        "image_VhQrHP"
+      ],
+      "custom_css": [
+        ".ct-dots-main {display: none;}",
+        ".container {padding-left: 0; padding-right: 0; margin-top: 0px;}",
+        "@media (max-width: 700px) {.fully-spaced-row--not-mobile {margin-top: 0; margin-bottom: 0; }}"
+      ],
+      "settings": {
+        "img_org": true,
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "cross_page_promos_yTe6LQ": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "custom_icon_HwwkEp": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/20_lakh_d11c423d-51f5-44dd-bb34-7b6a091d1ff2.svg",
+            "image_size": "icon",
+            "text": "20 Lakh+\nHappy Customers",
+            "link_url": ""
+          }
+        },
+        "custom_icon_C4jXcQ": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/global.svg",
+            "image_size": "icon",
+            "text": "Worldwide\nShipping",
+            "link_url": ""
+          }
+        },
+        "custom_icon_eTbaV4": {
+          "type": "custom-icon",
+          "settings": {
+            "image": "shopify://shop_images/Express.svg",
+            "image_size": "icon",
+            "text": "Express\nDelivery",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_icon_HwwkEp",
+        "custom_icon_C4jXcQ",
+        "custom_icon_eTbaV4"
+      ],
+      "custom_css": [
+        ".rimage-wrapper.lazyload--placeholder {background: none;}",
+        ".icon-with-caption {background: #fbfbfb; border: 1px solid #e5e5e5; border: 0px solid #e5e5e5; background: transparent;}",
+        ".container {height: 170px; opacity: 1; background: linear-gradient( 246deg, #e3e3e3 0%, rgba(227, 227, 227, 0) 103.16% ); margin-top: 0px;}",
+        ".flexible-layout .column,.fixed-layout .column {margin-bottom: 0; padding: 10px 0;}",
+        "@media (max-width: 748px) {.icon-with-caption .icon-with-caption__text {width: 100%; } .flexible-layout {flex-direction: row; }}"
+      ],
+      "settings": {
+        "visibility": "all"
+      }
+    },
+    "round_collection_box_JRmBCB": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_crjEbi": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Chain.png",
+            "link": "shopify://collections/chain-mangalsutra-designs",
+            "title": "Chain"
+          }
+        },
+        "collection_kzQBaq": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Bracelet.png",
+            "link": "shopify://collections/mangalsutra-bracelets",
+            "title": "Bracelet"
+          }
+        },
+        "collection_Vgnjbm": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Set.png",
+            "link": "shopify://collections/mangalsutra-sets",
+            "title": "Set"
+          }
+        },
+        "collection_rFrhCN": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/temple-earring-ruby-oxidised-gold-silver-temple-earring-160632-37085562831004_2f38189e-076d-4665-a561-fbea10fd06b6.jpg",
+            "link": "shopify://collections/temple-jhumkas",
+            "title": "Traditional"
+          }
+        }
+      },
+      "block_order": [
+        "collection_crjEbi",
+        "collection_kzQBaq",
+        "collection_Vgnjbm",
+        "collection_rFrhCN"
+      ],
+      "settings": {
+        "title": "Shop By Category"
+      }
+    },
+    "wsw_tabing_4UdYPL": {
+      "type": "WSW-Tabing",
+      "blocks": {
+        "tabing_izRxnX": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/holy-antique-mangalsutra",
+            "heading": "Antique",
+            "heading1": "Traditional • Gilded • Festive",
+            "sub": "For an adorable puja outfit, go for none other than a pair of <em><strong>antiques</strong></em>!",
+            "img1": "shopify://shop_images/dgdf.png",
+            "img2": "shopify://shop_images/dgdf.png"
+          }
+        },
+        "tabing_q34MyV": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/elite-zircon-mangalsutras",
+            "heading": "Zircon",
+            "heading1": "Shimmering • Unique • Bold",
+            "sub": "From statements pieces to floral elegance, find it all in <em><strong>stellar zircons!</strong></em>",
+            "img1": "shopify://shop_images/Group_48099257.png",
+            "img2": "shopify://shop_images/Group_48099257.png"
+          }
+        },
+        "tabing_ieGpcn": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/kundan-mangalsutra",
+            "heading": "Kundan",
+            "heading1": "Regal • Historic • Artistic",
+            "sub": "For the ultimate queenly aesthetics, style a <em><strong>polki-studded wonder!</strong></em>",
+            "img1": "shopify://shop_images/Group_48099258.png",
+            "img2": "shopify://shop_images/Group_48099258.png"
+          }
+        },
+        "tabing_D8UnEN": {
+          "type": "Tabing",
+          "settings": {
+            "link": "shopify://collections/silver-mangalsutra-designs",
+            "heading": "Silver",
+            "heading1": "Auspicious • Elite  • Ethereal",
+            "sub": "Behold the presence of <em><strong>auspicious motifs</strong></em> through Silver Mangalsutra",
+            "img1": "shopify://shop_images/Group_48099259.png",
+            "img2": "shopify://shop_images/Group_48099259.png"
+          }
+        },
+        "tabing_9inVaH": {
+          "type": "Tabing",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/most-popular-silver-jhumkas",
+            "heading": "Silver",
+            "heading1": "Boho • Vintage •  Celebratory",
+            "sub": "92.5 Oxidised Silver for the <em><strong>vintage appeal!</strong></em>",
+            "img1": "shopify://shop_images/oxidised-silver_1.jpg",
+            "img2": "shopify://shop_images/oxidised-silver_1.jpg"
+          }
+        },
+        "tabing_HKnBy3": {
+          "type": "Tabing",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/most-popular-trendy-jhumkas",
+            "heading": "Trendy",
+            "heading1": "Edgy • Unique • Casual",
+            "sub": "Your daily kurtis need this boost of <em><strong>desi earrings!</strong></em>",
+            "img1": "shopify://shop_images/trendy-earring.jpg",
+            "img2": "shopify://shop_images/trendy-earring.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tabing_izRxnX",
+        "tabing_q34MyV",
+        "tabing_ieGpcn",
+        "tabing_D8UnEN",
+        "tabing_9inVaH",
+        "tabing_HKnBy3"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.WSW-Tabing-main {padding-bottom: 0; padding-top: 0; } .WSW-Tabing-main {padding-top: 0; }}"
+      ],
+      "settings": {
+        "stylee": true,
+        "mother": false,
+        "idd": "",
+        "heading": "Shop By Style"
+      }
+    },
+    "gifts_by_price_i6Pxm6": {
+      "type": "gifts-by-price",
+      "custom_css": [
+        "@media (max-width: 750px) {}"
+      ],
+      "settings": {
+        "heading": "Shop By Price",
+        "first": "Under ₹999",
+        "link1": "shopify://collections/mangalsutra-designs-under-1000",
+        "seccend": "₹1000 - ₹1500",
+        "link2": "shopify://collections/mangalsutra-designs-from-rs-1000-1500",
+        "last": "Above ₹1500",
+        "link3": "shopify://collections/mangalsutra-designs-above-rs-1500"
+      }
+    },
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1": {
+      "type": "Wedding-Collection",
+      "blocks": {
+        "12edfc74-7abe-4811-9f7b-933a65332d4c": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Daily_Wear.png",
+            "heading": "Daily Wear",
+            "text": "A share of nature in your mangalsutras, arranged in a pleasing shine",
+            "link": "shopify://collections/daily-wear-mangalsutra-designs",
+            "link_text": "Explore"
+          }
+        },
+        "eaf55712-cda7-455b-af17-4a92a0fa7491": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Office_Wear_fb272320-0a87-4b57-a19c-efcd4ace0e95.png",
+            "heading": "Office Wear",
+            "text": "Modern selections for a<br>casual style",
+            "link": "shopify://collections/office-wear-mangalsutra-designs",
+            "link_text": "Explore"
+          }
+        },
+        "0748d546-8194-47f9-bb92-553a0cbdd539": {
+          "type": "Box",
+          "settings": {
+            "image": "shopify://shop_images/Bridal.png",
+            "heading": "Traditional",
+            "text": "The Flair of feathered elegance in a signature ethnic motif",
+            "link": "shopify://collections/traditional-mangalsutra-designs",
+            "link_text": "Explore"
+          }
+        },
+        "760699d3-8a82-44aa-83db-85a1f4fc9159": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/ganesha_earring_1.jpg",
+            "heading": "Ganesha",
+            "text": "Let the wisdom of elephant-headed God shine through your Jhumkas",
+            "link": "shopify://collections/ganesha-design-jhumkas",
+            "link_text": "Explore"
+          }
+        },
+        "49baafbf-d729-4708-a6f2-e99ad55347f6": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_1.png",
+            "heading": "Polki",
+            "text": "For the glimmering glow of raw-cut authenticity",
+            "link": "shopify://collections/kundan-jewellery",
+            "link_text": "Explore"
+          }
+        },
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_2.png",
+            "heading": "Meenakari",
+            "text": "Artistry etched through a spectrum of vibrancy",
+            "link": "shopify://collections/meenakari",
+            "link_text": "Explore"
+          }
+        },
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232": {
+          "type": "Box",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motif_7.png",
+            "heading": "Elephant",
+            "text": "Embrace wisdom through elephant details",
+            "link": "shopify://collections/elephant-elegance",
+            "link_text": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "12edfc74-7abe-4811-9f7b-933a65332d4c",
+        "eaf55712-cda7-455b-af17-4a92a0fa7491",
+        "0748d546-8194-47f9-bb92-553a0cbdd539",
+        "760699d3-8a82-44aa-83db-85a1f4fc9159",
+        "49baafbf-d729-4708-a6f2-e99ad55347f6",
+        "47b24ece-ccae-4a3d-ad93-0bba307a4dee",
+        "e249cb68-0d59-4e83-8e69-3b70b4e4e232"
+      ],
+      "custom_css": [
+        ".Wedding-Collection-head {font-family: \"Lato\"; padding-bottom: 20px; margin-top: 40px; font-size: 29px; color: rgba(69, 69, 69, 1);}",
+        ".Wedding-Collection {margin-bottom: 50px;}",
+        "@media (max-width: 750px) {.Wedding-Collection {margin-bottom: 32px; } .Wedding-Collection-head {margin-top: 32px; margin-bottom: 0px; }}"
+      ],
+      "settings": {
+        "velen_active": false,
+        "head": "Shop By Occassion",
+        "sec_tit": "",
+        "sbtext": "",
+        "style_sec": true
+      }
+    },
+    "new_shop_the_look_VUwBH6": {
+      "type": "New-shop-the-look",
+      "disabled": true,
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "img_icon_banner_mob": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "head": "Shop The Look",
+        "sec": "An Ode to the Past",
+        "sec_text": "A part of our heritage and rich cultural heritage, add a style of the past in your attire with our curated 92.5 Silver Temple Jhumkas.",
+        "product_list": [
+          "silver-temple-earring-165516",
+          "silver-temple-earring-167026",
+          "silver-temple-earring-168243",
+          "silver-temple-earring-161863"
+        ],
+        "coll_name": "Shop Similar"
+      }
+    },
+    "product_tabing_bwNUy3": {
+      "type": "product-tabing",
+      "blocks": {
+        "product_iU7ny6": {
+          "type": "Product",
+          "settings": {
+            "title": "Silver",
+            "product_list": [
+              "92-5-silver-temple-mangalsutra-152844"
+            ]
+          }
+        },
+        "product_4K3kBJ": {
+          "type": "Product",
+          "settings": {
+            "title": "Fashion Jewellery",
+            "product_list": [
+              "antique-mangalsutra-139976",
+              "kundan-mangalsutra-161578",
+              "zircon-mangalsutra-140173",
+              "antique-mangalsutra-146029",
+              "antique-mangalsutra-167526",
+              "antique-mangalsutra-168661",
+              "zircon-mangalsutra-135823",
+              "zircon-mangalsuta-131570",
+              "antique-mangalsutra-139971",
+              "zircon-mangalsutra-157992",
+              "antique-mangalsutra-165018",
+              "antique-mangalsutra-139970"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "product_iU7ny6",
+        "product_4K3kBJ"
+      ],
+      "settings": {
+        "title": "Shop By Material"
+      }
+    },
+    "round_collection_box_tHFRe3": {
+      "type": "Round-collection-box",
+      "blocks": {
+        "collection_b98PqW": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Antique.png",
+            "link": "shopify://collections/holy-antique-mangalsutra",
+            "title": "Antique"
+          }
+        },
+        "collection_fnAenf": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Rose_Gold.png",
+            "link": "shopify://collections/rose-gold-mangalsutra-designs",
+            "title": "Rose Gold"
+          }
+        },
+        "collection_PLXhnw": {
+          "type": "Collection",
+          "settings": {
+            "img": "shopify://shop_images/Gold.png",
+            "link": "shopify://collections/gold-mangalsutra-designs",
+            "title": "Gold"
+          }
+        }
+      },
+      "block_order": [
+        "collection_b98PqW",
+        "collection_fnAenf",
+        "collection_PLXhnw"
+      ],
+      "settings": {
+        "title": "Shop By Polish"
+      }
+    },
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534": {
+      "type": "ct-review",
+      "blocks": {
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "A pretty piece of craftmanship. Its not yellowish matte finish, but its golden antique finish. Worth the price."
+          }
+        },
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1_992e44f9-62ce-4b39-97e5-6805e5f45d29.webp",
+            "image1": "shopify://shop_images/5star_4da98a40-d9d5-4f7b-b1cc-0142c6a08e7e.png",
+            "re-text": "Mangalsutra was so nice I love it as I expect it’s too good"
+          }
+        },
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/2.webp",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "It is very elegant mangalsutra. I had many compliments while I wore this"
+          }
+        },
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/3_523c4254-705a-47da-b39a-3f6b707e1193.png",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Beautiful mangalsutra... value for money..go for it"
+          }
+        },
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/4_d379f6cd-0994-4a1a-9af6-6425d170a2a0.png",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Mangalsutra I have received it's awesome collection and quality is extraordinary i really liked the product and please maintain the super quality like this always and I want to shop more with kushal's fashion"
+          }
+        },
+        "fbbff485-6f70-4283-a0c8-495faddc4c17": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/5_2c091693-3ce7-44d2-8a17-abcb5f43e368.png",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Loved this delicate design of mangalsutra ❤️❤️ Bought matching earrings also from Kushal’s."
+          }
+        },
+        "5be492c4-776d-4b02-b72c-08bdba684c29": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/6_695de617-65f9-4f04-a98f-d602bf8da03d.png",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "Very very beautiful design 😍😍 just loved this delicate mangalsutra. You can use it with Western outfits too ❤️❤️💃🏻"
+          }
+        },
+        "f53e78af-618a-433d-a3be-e20520f945b8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/7_40a462e0-7dd5-48b3-9b51-55a241ad1ee8.png",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I am in just love with Kushal’s jewellery,it is superb the mangalsutra set is amazing .Please don’t think twice just go for it it’s worth it .Thank you"
+          }
+        },
+        "review_rQwbMp": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/8_ec278e09-3c91-4486-a950-024b74ca09d5.png",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "This mangalsutra is a beautiful piece and I order it for my bhabhi. She wears this precious ornaments from last 15 days and it's look like a same as I received it. Great Purchase"
+          }
+        },
+        "review_KAAU8L": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/antique-earring-ruby-gold-antique-earring-167519-36954933690524.jpg",
+            "image1": "shopify://shop_images/5star.png",
+            "re-text": "I have bought a lot of jewelry from Kushal's and have always been happy with the quality."
+          }
+        }
+      },
+      "block_order": [
+        "8fbac7c7-a27c-491a-b3f0-28c084da7735",
+        "b62b88c7-89b1-4254-bb24-c5233e6c068b",
+        "180dc04d-0076-4c9a-bbef-43cd5f3097ed",
+        "ceb87171-f777-4c56-9c7c-87656f33cc1e",
+        "e3720700-14f2-4a5b-b43b-ecb26f16c54f",
+        "fbbff485-6f70-4283-a0c8-495faddc4c17",
+        "5be492c4-776d-4b02-b72c-08bdba684c29",
+        "f53e78af-618a-433d-a3be-e20520f945b8",
+        "review_rQwbMp",
+        "review_KAAU8L"
+      ],
+      "settings": {}
+    },
+    "new_shop_the_look_VUwBH67": {
+      "type": "New-shop-the-look",
+      "disabled": true,
+      "settings": {
+        "img_icon_banner": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "img_icon_banner_mob": "shopify://shop_images/431e749063ab08c8b924eab132eb95e6.png",
+        "head": "Shop The Look",
+        "sec": "Collection Name",
+        "sec_text": "Picture yourself basking in the sun's golden rays, sand between your toes, and laughter filling the air. Introducing our \"Vibe in Pearls\" Collection - Trendy Picks for your Vacay Style!",
+        "product_list": [
+          "92-5-silver-bracelet-156741",
+          "92-5-silver-bracelet-157412",
+          "92-5-silver-bracelet-157413",
+          "92-5-silver-bracelet-157414"
+        ],
+        "coll_name": "Collection Name"
+      }
+    },
+    "pearls_collection_tabing_7xNG47": {
+      "type": "pearls-collection-tabing",
+      "blocks": {
+        "collection_tab_RNqWPp": {
+          "type": "Collection-tab",
+          "settings": {
+            "heading": "",
+            "collection": "best-seller-jhumkas",
+            "product_list": [
+              "antique-earring-138938",
+              "antique-earring-164104",
+              "antique-earring-160549",
+              "antique-earring-160552",
+              "antique-earring-139996"
+            ],
+            "view_text": "View All Jhumkas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_RNqWPp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".pearls-tab-box {margin: 0px auto 0px auto !important;}",
+        ".collection-listing {padding-bottom: 60px;}",
+        "@media (max-width: 750px) {.collection-listing {padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "link": "",
+        "style": true,
+        "title": "Shop Best Sellers"
+      }
+    },
+    "wedding_banner_arpEtM": {
+      "type": "wedding-banner",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "image": "shopify://shop_images/6272_x_2121.jpg",
+        "image_sec": "shopify://shop_images/1560_X_756.jpg"
+      }
+    },
+    "pearl_footer_iJpGnN": {
+      "type": "pearl-footer",
+      "disabled": true,
+      "settings": {
+        "text": "Effortlessly vintage and just as lively, <br> these are the jhumkas that will give your <br> ethnic style a reminiscence of traditional lore.",
+        "link": "/collections/vibe-in-pearls"
+      }
+    },
+    "featured_collection_PdJBFW": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Shop By Material",
+        "collection": "",
+        "show_vendor": false,
+        "enable_carousel": "carousel",
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_with_button_ifeC9H",
+    "slideshow_r9mMp4",
+    "cross_page_promos_yTe6LQ",
+    "round_collection_box_JRmBCB",
+    "wsw_tabing_4UdYPL",
+    "gifts_by_price_i6Pxm6",
+    "aaa4281f-2354-4f9d-8def-88c020a0f3d1",
+    "new_shop_the_look_VUwBH6",
+    "product_tabing_bwNUy3",
+    "round_collection_box_tHFRe3",
+    "9a7afc4f-d9eb-457c-8430-a18b6170c534",
+    "new_shop_the_look_VUwBH67",
+    "pearls_collection_tabing_7xNG47",
+    "wedding_banner_arpEtM",
+    "pearl_footer_iJpGnN",
+    "featured_collection_PdJBFW"
+  ]
+}

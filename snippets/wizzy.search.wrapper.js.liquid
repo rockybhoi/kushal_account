@@ -1,0 +1,103 @@
+    <div class="wizzy-search-wrapper [[#inOnCategoryPage]]wizzy-category-page[[/inOnCategoryPage]] [[#displayTileView]]display-tile-view[[/displayTileView]]
+    [[#hasFacets]]has-facets[[/hasFacets]]
+    [[#hasLeftFacets]]has-left-facets[[/hasLeftFacets]]
+    [[#hasTopFacets]]has-top-facets[[/hasTopFacets]]
+    [[#displayFacetsInDrawer]]has-facets-in-drawer facets-drawer-on-[[facetDrawerPosition]][[/displayFacetsInDrawer]]" [[#displayTileView]]wizzy-tile-view-level="[[tileViewLevel]]"[[/displayTileView]]>
+
+        <div class="wizzy-search-summary-wrapper">
+            [[#summary]]
+            [[&summary]]
+            [[/summary]]
+        </div>
+
+        <div class="wizzy-search-results-wrapper">
+            [[#hasFacets]]
+            <a href="#" class="wizzy-filters-mobile-entry [[^sort]]only-filters[[/sort]]">Filters</a>
+            [[/hasFacets]]
+
+            [[#hasLeftFacets]]
+            <div class="wizzy-search-filters-left">
+
+                <div class="wizzy-filters-bg"></div>
+                <div class="wizzy-filters-close-btn"></div>
+                <div class="wizzy-filters-header">
+                    <p class="header-title">Filters</p>
+                    [[#hasFilters]]
+                    <a href="#" class="wizzy-filters-clear-all">Clear All</a>
+                    [[/hasFilters]]
+                    <span class="toggle-btn__chevron">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                    <path d="M1.35355 0.646447C1.15829 0.451184 0.841709 0.451184 0.646447 0.646447C0.451184 0.841709 0.451184 1.15829 0.646447 1.35355L1.35355 0.646447ZM5 5L5.35355 5.35355C5.54882 5.15829 5.54882 4.84171 5.35355 4.64645L5 5ZM0.646447 8.64645C0.451184 8.84171 0.451184 9.15829 0.646447 9.35355C0.841709 9.54882 1.15829 9.54882 1.35355 9.35355L0.646447 8.64645ZM0.646447 1.35355L4.64645 5.35355L5.35355 4.64645L1.35355 0.646447L0.646447 1.35355ZM4.64645 4.64645L0.646447 8.64645L1.35355 9.35355L5.35355 5.35355L4.64645 4.64645Z" fill="#888888"></path>
+                    </svg></span>
+                </div>
+
+                <div class="wizzy-search-filters-left-wrapper">
+                    [[#leftFacets]]
+                    [[&html]]
+                    [[/leftFacets]]
+
+                    <div class="wizzy-search-filters-left-mobile-extra">
+                    </div><!-- ending of wizzy-search-filters-left-mobile-extra -->
+                </div>
+
+            </div><!-- ending of wizzy-search-filters-->
+            [[/hasLeftFacets]]
+
+            <div class="wizzy-search-results-container">
+
+                <div class="wizzy-search-filters-top">
+                [[#displayFacetsInDrawer]]
+                    <div class="wizzy-search-filters-drawer">
+                        <div class="wizzy-search-filters-drawer-button">
+                            <a href="#" class="wizzy-filters-desktop-entry">
+                                <span class="wizzy-filters-button"></span>
+                                <span>Filters</span>
+                            </a>
+                        </div>
+                    </div>
+                [[/displayFacetsInDrawer]]   
+                    <div class="search-filters-top-wrapper">
+                        <div class="wizzy-search-filters-list-top">
+                            [[#topFacets]]
+                            [[&html]]
+                            [[/topFacets]]
+
+                        </div><!-- ending of wizzy-search-filters-list-top -->
+
+                        <div class="wizzy-search-sort-wrapper">
+                            [[#sort]]
+                            [[&sort]]
+                            [[/sort]]
+                        </div><!-- ending of wizzy-search-sort-wrapper -->
+                    </div><!-- ending of search-filters-top-wrapper-->
+
+                    <div class="filters-list-top-values-wrapper">
+
+                    </div><!-- ending of filters-list-top-values-wrapper -->
+
+                    <div class="wizzy-selected-filters">
+                        [[&selectedFacets]]
+                    </div><!-- ending of wizzy-selected-filters -->
+
+                </div><!-- ending of wizzy-search-filters-->
+
+                <div class="wizzy-search-results filters-adjacent collection-listing">
+                    [[& products ]]
+                </div><!-- ending of wizzy-search-filters-->
+
+                <div class="wizzy-search-pagination">
+                    [[& pagination ]]
+                </div>
+
+            </div><!-- ending of wizzy-search-results-->
+
+        </div><!-- ending of wizzy-search-results-container -->
+    </div><!-- ending of wizzy-search-wrapper-->
+
+    [[#addMoveToTopWidget]]
+    <div class="wizzy-scroll-to-top-wrapper">
+        <div class="wizzy-scroll-to-top-button">
+
+        </div><!-- ending of wizzy-scroll-to-top-button -->
+    </div><!-- ending of wizzy-scroll-to-top-wrapper -->
+    [[/addMoveToTopWidget]]

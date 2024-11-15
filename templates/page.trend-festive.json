@@ -1,0 +1,209 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    },
+    "gsap_scrolltrigger_VFgMqQ": {
+      "type": "gsap-scrolltrigger",
+      "settings": {}
+    },
+    "trend_banner_zwfGBr": {
+      "type": "trend-banner",
+      "settings": {
+        "text": "Meenakari Sparkles",
+        "btext": "Vibrant meenakari with zircon for effortless elegance.",
+        "link": "shopify://collections/meenakari-sparkles",
+        "img": "shopify://shop_images/169781_169690_2.png",
+        "text2": "Meenakari Sparkles",
+        "btext2": "A rhythm of Meenakari and Zircons to celebrate all your noteworthy occasions.",
+        "img2": "shopify://shop_images/KSHLVP_04240886_VF_1_1.png",
+        "thredtext2": "Meenakari Sparkles",
+        "thredfoottext": "Cultural charm of Meenakari aligned with the contemporary flair of statement Zircons",
+        "video": "https://cdn.shopify.com/videos/c/o/v/b3c5f30744fb4d509f25c1e7a33ddaf7.mp4"
+      }
+    },
+    "revil_erk9fn": {
+      "type": "revil",
+      "settings": {
+        "product_list": [
+          "meenakari-zircon-kada-169690",
+          "meenakari-zircon-kada-169688",
+          "meenakari-zircon-kada-169692",
+          "meenakari-zircon-kada-169683"
+        ],
+        "link1": "shopify://collections/meenakari-sparkles-elegant-kadas",
+        "product_list1": [
+          "meenakari-zircon-earring-169721",
+          "meenakari-zircon-earring-169783",
+          "meenakari-zircon-earring-169718",
+          "meenakari-zircon-earring-169717"
+        ],
+        "link2": "shopify://collections/meenakari-sparkles-statement-earrings",
+        "product_list2": [
+          "meenakari-zircon-finger-ring-169708",
+          "meenakari-zircon-finger-ring-169709",
+          "meenakari-zircon-finger-ring-169784",
+          "meenakari-zircon-finger-ring-169785"
+        ],
+        "link3": "shopify://collections/meenakari-sparkles-chic-finger-rings",
+        "product_list4": [
+          "meenakari-zircon-pendant-earring-169733",
+          "meenakari-zircon-pendant-earring-169736",
+          "zircon-pendant-earring-169735",
+          "meenakari-zircon-pendant-earring-169732"
+        ],
+        "link5": "shopify://collections/meenakari-sparkles-minimalistic-pendant-sets",
+        "product_list3": [
+          "meenakari-zircon-necklace-169706",
+          "meenakari-zircon-necklace-169703",
+          "meenakari-zircon-necklace-169705",
+          "meenakari-zircon-necklace-169781"
+        ],
+        "link4": "",
+        "last-link": "shopify://collections/meenakari-sparkles"
+      }
+    },
+    "trend_meenakari_lookbook_R6yA7J": {
+      "type": "trend-meenakari-lookbook",
+      "blocks": {
+        "image_hkUjFY": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/2_021d400c-356f-45ce-a41e-e8d64824a20e.jpg"
+          }
+        },
+        "image_yiUn4j": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/3_e7f07aeb-0abd-44bf-835b-592735844c90.jpg"
+          }
+        },
+        "image_T4TjyD": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/4_9f3ca3b9-5b8c-4839-8689-8567bd4d549e.jpg"
+          }
+        },
+        "image_VDcetG": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/5_8ac911ad-6cc0-4d39-8ab6-b404fff60053.jpg"
+          }
+        },
+        "image_wPN8j4": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/6_8d2b7930-a8c0-4baf-89e2-af40f4a7e7e0.jpg"
+          }
+        },
+        "image_EzVmPF": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/7_a4ad7bf7-e8a2-4aad-9044-531b6cc774a4.jpg"
+          }
+        },
+        "image_WJMF8g": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/8_fe2e62fb-6bc2-4a00-a419-38211d045258.jpg"
+          }
+        },
+        "image_3LqtnN": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/9_437e183a-590d-464c-901c-d966f97989b7.jpg"
+          }
+        },
+        "image_BNnMKH": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/10_ff0b9219-c0e7-4f4d-babd-bb296708ee58.jpg"
+          }
+        },
+        "image_YDU3tU": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/11_554e1651-dd76-4b70-b51b-8c8bccecd162.jpg"
+          }
+        },
+        "image_y3x4UX": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/12_64167d05-9698-4568-bb76-0fad5fb5492b.jpg"
+          }
+        },
+        "image_3bVetf": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/13_da730dd5-d75f-4eac-b609-01dbd5790e71.jpg"
+          }
+        },
+        "image_Tcd7pJ": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/14_af07b74e-c6c2-4c5e-bb2a-514ea961eedd.jpg"
+          }
+        },
+        "image_xNcXH8": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/15_4e2a8d01-dd79-4c05-9f39-4e60669b4775.jpg"
+          }
+        },
+        "image_cVeA69": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/16_082167fc-8a71-4231-9018-0d59f808383d.jpg"
+          }
+        },
+        "image_cm3nVK": {
+          "type": "Image",
+          "settings": {
+            "img": "shopify://shop_images/17_a2a5e0ad-a5c1-41dd-828b-a1c6610a2a19.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_hkUjFY",
+        "image_yiUn4j",
+        "image_T4TjyD",
+        "image_VDcetG",
+        "image_wPN8j4",
+        "image_EzVmPF",
+        "image_WJMF8g",
+        "image_3LqtnN",
+        "image_BNnMKH",
+        "image_YDU3tU",
+        "image_y3x4UX",
+        "image_3bVetf",
+        "image_Tcd7pJ",
+        "image_xNcXH8",
+        "image_cVeA69",
+        "image_cm3nVK"
+      ],
+      "settings": {
+        "last-link": "shopify://collections/meenakari-sparkles"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "gsap_scrolltrigger_VFgMqQ",
+    "trend_banner_zwfGBr",
+    "revil_erk9fn",
+    "trend_meenakari_lookbook_R6yA7J"
+  ]
+}

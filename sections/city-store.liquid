@@ -1,0 +1,278 @@
+
+<div class="city_list-main">
+  <div class="ct_store_breadcrumbs"></div>
+  <ul class="ct_listing">
+    
+  </ul>
+</div>
+<script>
+  
+  let url = window.location.href;
+let parts = url.split('/');
+let lastPart = parts.pop() || parts.pop();  // Handle trailing slash
+
+  var len=parts.length;
+  
+if(len == 5 && lastPart !== '') 
+{
+  jQuery.get(`${storeApiUrl}/store-city/${lastPart}`)
+    .then(e_data => {
+     // console.log(e_data);
+     if(e_data == "")
+     {
+         window.location.href="https://www.kushals.com/pages/stores";
+     }
+      else
+     {
+      showHtmlData(e_data);
+     }
+    })
+    .catch(error => {
+      console.error('Error fetching detailed data:', error);
+    });
+}
+  else
+{
+ // window.location.href="https://www.kushals.com/pages/stores";
+  
+}
+
+function showHtmlData(e_data) {
+  var check_app_url=getUrlParameter('webview');
+  var bread_url=``;
+    if(check_app_url != "")
+    {
+      bread_url=`?webview=app`;
+    }
+    
+
+  var breadcrumb=`<div class="ct_store_breadcrumbs">
+        <div class="breadcrumbs">
+        <a href="/">
+          Home
+          <svg
+            class="breadcrumbs_svg"
+            width="7"
+            height="13"
+            viewBox="0 0 7 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+          </svg>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+        <a href="https://www.kushals.com/pages/stores${bread_url}">
+          Stores
+            <svg
+              class="breadcrumbs_svg"
+              width="7"
+              height="13"
+              viewBox="0 0 7 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+          ${e_data.name}
+          <svg
+            class="breadcrumbs_svg"
+            width="7"
+            height="13"
+            viewBox="0 0 7 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.697266 0.943359L6.00539 6.25149L0.697266 11.5596" stroke="black" stroke-width="1.32703" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>`;
+  
+  // Use .map() to create an array of HTML strings and then join them
+  
+  var html_inner_data = e_data['stores'].map(in_data => {
+
+
+  var openingTime = convertTo12HourFormat(in_data.openingTime);
+  var closingTime = convertTo12HourFormat(in_data.closingTime);
+  var open_time=openingTime.split(" ");
+  var close_time=closingTime.split(" ");
+
+  var time_check_store_open_close=updateStoreTime(open_time[0], in_data.closingTime, closingTime);
+    var check_app_url=getUrlParameter('webview');
+    var url=`${e_data.name.toLowerCase()}-${in_data.slug}`;
+    if(check_app_url != "")
+    {
+      url=`${e_data.name.toLowerCase()}-${in_data.slug}?webview=app`;
+    }
+    
+    return `
+      <div class="store_box ggg">
+        <a href="https://www.kushals.com/pages/store-details/${url}" class="ct_click_wrap ct_store_click" data-store="${in_data.name}">
+          <div class="store_box_header">
+            <span>${in_data.name}</span>
+            <div class="store_reating">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/google.png?v=1721205440" width="30" height="30">
+              <span>${in_data.rating}</span>
+            </div>
+          </div>
+          <div class="store_address">
+            ${in_data.address}
+          </div>
+        </a>
+
+
+        <div class="call-dir-main">
+          
+          <a href="tel:+91${in_data.phone}" class="ct_store_call" data-store="${in_data.name}">
+            <div class="call-main">
+              <div class="call-icon">
+                <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/fluent_call.png?v=1721214863" alt="">
+              </div>
+              <span>Call Store</span>
+            </div>
+          </a>
+          <div class="direction-main">
+            <div class="direction-icon">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="">
+            </div>
+            <span><a class="ct_store_map" data-store="${in_data.name}" href="${in_data.direction}" target="_blank">Get Direction</a>
+            </span>
+          </div>
+          ${time_check_store_open_close}
+        </div>
+        <div class="store_footer">
+          <div class="store-direction">
+            <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/teenyicons_direction-solid.png?v=1719300137" alt="">
+            <span>
+              <a class="ct_store_map" data-store="${in_data.name}" href="${in_data.direction}" target="_blank">Direction</a>
+            </span>
+          </div>
+          <div class="store-call">
+            <a href="tel:+91${in_data.phone}">
+              <img src="https://cdn.shopify.com/s/files/1/0796/1959/files/call.png?v=1721200366" alt="">
+              <span>Call +91-${in_data.phone}</span>
+            </a>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  var city_html = `
+    <li>
+      <div class="city_store">
+        <div class="city_store_count">
+          <span>${e_data.totalStore} in ${e_data.name}</span>
+        </div>
+        <div class="store_box_main">
+          ${html_inner_data}
+        </div>
+      </div>
+    </li>
+  `;
+jQuery(".ct_store_breadcrumbs").html(breadcrumb);
+  jQuery(".ct_listing").html(city_html);
+}
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+// Function to convert time to 12-hour format
+function convertTo12HourFormat(time) {
+    let [hours, minutes] = time.split(':').map(Number);
+    const period = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12; // Convert hour to 12-hour format
+    return `${hours}:${minutes.toString().padStart(2, '0')} ${period}`;
+}
+
+
+function updateStoreTime(open_time, close_time, store_close_time) {
+
+  var currentTime = new Date();
+  var openingDate = new Date(currentTime);
+  var closingDate = new Date(currentTime);
+  var closingDate_new = new Date(close_time);
+
+
+  // Parse opening time
+  var [openHours, openMinutes, openSeconds] = open_time.split(':').map(Number);
+  openSeconds = openSeconds || 0; // Default to 0 if seconds are not provided
+  openingDate.setHours(openHours, openMinutes, openSeconds);
+
+  // Parse closing time
+  var [closeHours, closeMinutes, closeSeconds] = close_time.split(':').map(Number);
+  closeSeconds = closeSeconds || 0; // Default to 0 if seconds are not provided
+  closingDate.setHours(closeHours, closeMinutes, closeSeconds);
+
+  // Adjust for cases where the closing time is past midnight
+  if (closingDate <= openingDate) {
+      closingDate.setDate(closingDate.getDate() + 1);
+  }
+
+  var check_store_time;
+
+  // console.log(`Current Time: ${currentTime}`);
+  // console.log(`Opening Time: ${openingDate}`);
+  // console.log(`Closing Time: ${closingDate}`);
+
+  if (currentTime >= openingDate && currentTime < closingDate) {
+      check_store_time = `<div class="open-close-store"> <div class="dot"></div> <span>Open</span> </div>`;
+  } else {
+      check_store_time = `<div class="open-close-store close_store"> <div class="dot"></div> <span>Closed</span> </div>`;
+  }
+
+  return check_store_time;
+}
+
+  jQuery(document).on("click",".ct_store_call",function(){
+    var store_name=jQuery(this).attr("data-store");
+             clevertap.event.push("Call_Store", {
+                       "CallStore_Name":store_name
+                });
+  })
+
+    jQuery(document).on("click",".ct_store_click",function(){
+      var store_name=jQuery(this).attr("data-store");
+               clevertap.event.push("Store_Name", {
+                         "Store Name":store_name
+                  });
+    })
+
+    jQuery(document).on("click",".ct_store_map",function(){
+      var store_name=jQuery(this).attr("data-store");
+               clevertap.event.push("Store_Name_Direction", {
+                         "Store Name direction":store_name
+                  });
+    })
+
+  jQuery(document).on("click",".ct_click_wrap",function(){
+    
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "city-store",
+    "class": "city-store",
+    "settings": [],
+    "presets": [{
+      "name": "city-store"
+    }]
+  }
+{% endschema %}

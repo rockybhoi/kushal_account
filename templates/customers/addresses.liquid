@@ -1,0 +1,466 @@
+{{ 'account.css' | asset_url | stylesheet_tag: preload: true }}
+{% section 'addresses' %}
+
+
+{% comment %}
+<div id="admin_header" data-cc-animate>
+  <div class="action_link action_return note" id='return_to_account'><a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a></div>
+  <h2 class="title">{{ 'customer.addresses.title' | t }}</h2>
+  <div class="action_top">
+    <div id="action" class="action_link action_add note"><a href="#" class="button altcolour" onclick="$('#add_address').toggleClass('hidden'); return false;">{{ 'customer.addresses.add_new' | t }}</a></div>
+  </div>
+</div>
+
+<div id="add_address" class="customer_address edit_address small-form hidden">
+  {% form 'customer_address', customer.new_address %}
+    <h4 id="add_address_title">{{ 'customer.addresses.add_new' | t }}</h4>
+
+      <div class="input-row">
+        <label for="address_first_name_new">{{ 'customer.addresses.first_name' | t }}</label>
+        <input type="text" id="address_first_name_new" class="address_form" name="address[first_name]" value="{{form.first_name}}" size="40" required />
+      </div>
+      <div class="input-row">
+        <label for="address_last_name_new">{{ 'customer.addresses.last_name' | t }}</label>
+        <input type="text" id="address_last_name_new" class="address_form" name="address[last_name]" value="{{form.last_name}}" size="40" required />
+      </div>
+      <div class="input-row">
+        <label for="address_company_new">{{ 'customer.addresses.company' | t }}</label>
+        <input type="text" id="address_company_new" class="address_form" name="address[company]" value="{{form.company}}" required size="40" />
+      </div>
+      <div class="input-row">
+        <label for="address_address1_new">{{ 'customer.addresses.address1' | t }}</label>
+        <input type="text" id="address_address1_new" class="address_form" name="address[address1]" required value="{{form.address1}}" size="40" />
+      </div>
+      <div class="input-row">
+        <label for="address_address2_new">{{ 'customer.addresses.address2' | t }}</label>
+        <input type="text" id="address_address2_new" class="address_form" name="address[address2]"  value="{{form.address2}}" size="40" />
+      </div>
+      <div class="input-row">
+        <label for="address_city_new">{{ 'customer.addresses.city' | t }}</label>
+        <input type="text" id="address_city_new" class="address_form" name="address[city]" required value="{{form.city}}" size="40" />
+      </div>
+      <div class="input-row">
+        <label for="address_country_new">{{ 'customer.addresses.country' | t }}</label>
+        <span class="lightly-styled-select">
+          <select id="address_country_new" name="address[country]"  data-default="{{form.country}}" required>{{ all_country_option_tags }}</select>
+        </span>
+      </div>
+      <div id="address_province_container_new" class="input-row" style="display:none">
+        <label for="address_province_new">{{ 'customer.addresses.province' | t }}</label>
+        <span class="lightly-styled-select">
+          <select id="address_province_new" class="address_form" required name="address[province]" data-default="{{form.province}}"></select>
+        </span>
+      </div>
+      <div class="input-row">
+        <label for="address_zip_new">{{ 'customer.addresses.zip' | t }}</label>
+        <input type="text" id="address_zip_new" class="address_form" name="address[zip]" value="{{form.zip}}" size="40" required />
+      </div>
+      <div class="input-row">
+        <label for="address_phone_new">{{ 'customer.addresses.phone' | t }}</label>
+        <input type="text" id="address_phone_new" class="address_form" name="address[phone]" value="{{form.phone}}" required size="40" />
+        <small>Please enter at max 10 digits without country code</small>
+      </div>
+      <div class="input-row">
+        <label>
+          {{ form.set_as_default_checkbox }} {{ 'customer.addresses.set_default' | t }}
+        </label>
+      </div>
+    <div class="action_bottom">
+      <p>
+        <button class="btn" type="submit">{{ 'customer.addresses.add' | t }}</button>
+      </p>
+      <span class="note"><a href="#" onclick="$('#add_address').toggleClass('hidden'); return false;">{{ 'customer.addresses.cancel' | t }}</a></span>
+    </div>
+  {% endform %}
+</div>
+
+
+
+
+<div id="address_tables" data-cc-animate>
+{% paginate customer.addresses by 10 %}
+
+  {% for address in customer.addresses %}
+  <div class="address_table spaced-row ">
+    <div id="view_address_{{address.id}}" class="customer_address">
+    
+      <h4 class="address_title">
+        {{ address.street }}
+        {% if address == customer.default_address %}<span class="default_address note">({{ 'customer.addresses.default' | t }})</span>{% endif %}
+      </h4>
+      
+    
+     
+      
+      
+      <div class="view_address lightly-spaced-row">
+        <div>{{ address.first_name }} {{address.last_name }}</div>
+        <div>{{ address.company }}</div>
+        <div>{{ address.street }}</div>
+        <div>{{ address.city }} {% if address.province_code %}, {{ address.province_code }}{% endif %}</div>
+        <div>{{ address.country }} {{ address.zip }}</div>
+        <div>{{ address.phone }}</div>
+      </div>
+
+      
+      <p class="address_actions">
+        <span class="action_link action_edit">
+          <a href="#"
+            class="address-edit-toggle"
+            data-form-id="{{ address.id }}"
+            aria-owns="edit_address_{{ address.id }}"
+            aria-expanded="false"
+          >
+            {{ 'customer.addresses.edit' | t }}
+          </a>
+        </span>
+        <span class="action_link action_delete">
+          <a href="#"
+            class="address-delete"
+            data-target="{{ address.url }}"
+            data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+          >
+            {{ 'customer.addresses.delete' | t }}
+        </a>
+        </span>
+      </p>
+    </div>
+    <div id="edit_address_{{ address.id }}" class="customer_address edit_address small-form hidden">
+      <h4>{{ 'customer.addresses.edit_address' | t }}</h4>
+
+      {% form 'customer_address', address %}
+
+          <div class="input-row">
+            <label for="address_first_name_{{form.id}}">{{ 'customer.addresses.first_name' | t }}</label>
+            <input type="text" id="address_first_name_{{form.id}}" class="address_form" required name="address[first_name]" value="{{form.first_name}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_last_name_{{form.id}}">{{ 'customer.addresses.last_name' | t }}</label>
+            <input type="text" id="address_last_name_{{form.id}}" class="address_form" required name="address[last_name]" value="{{form.last_name}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_company_{{form.id}}">{{ 'customer.addresses.company' | t }}</label>
+            <input type="text" id="address_company_{{form.id}}" class="address_form" required name="address[company]" value="{{form.company}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_address1_{{form.id}}">{{ 'customer.addresses.address1' | t }}</label>
+            <input type="text" id="address_address1_{{form.id}}" class="address_form" required name="address[address1]" value="{{form.address1}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_address2_{{form.id}}">{{ 'customer.addresses.address2' | t }}</label>
+            <input type="text" id="address_address2_{{form.id}}" class="address_form"  name="address[address2]" value="{{form.address2}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_city_{{form.id}}">{{ 'customer.addresses.city' | t }}</label>
+            <input type="text" id="address_city_{{form.id}}" class="address_form" required name="address[city]" value="{{form.city}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_country_{{form.id}}">{{ 'customer.addresses.country' | t }}</label>
+            <span class="lightly-styled-select">
+              <select id="address_country_{{form.id}}" name="address[country]" required data-default="{{form.country}}">{{ all_country_option_tags }}</select>
+            </span>
+          </div>
+          <div id="address_province_container_{{form.id}}" class="input-row" style="display:none">
+            <label for="address_province_{{form.id}}">{{ 'customer.addresses.province' | t }}</label>
+            <span class="lightly-styled-select">
+              <select id="address_province_{{form.id}}" class="address_form" required name="address[province]" data-default="{{form.province}}"></select>
+            </span>
+          </div>
+          <div class="input-row">
+            <label for="address_zip_{{form.id}}">{{ 'customer.addresses.zip' | t }}</label>
+            <input type="text" id="address_zip_{{form.id}}" class="address_form" required name="address[zip]" value="{{form.zip}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_phone_{{form.id}}">{{ 'customer.addresses.phone' | t }}</label>
+            <input type="text" id="address_phone_{{form.id}}" class="address_form" required name="address[phone]" value="{{form.phone}}" size="40" />
+            <small>Please enter at max 10 digits without country code</small>
+          </div>
+          <div class="input-row">
+            <label>
+              {{ form.set_as_default_checkbox }} {{ 'customer.addresses.set_default' | t }}
+            </label>
+          </div>
+        <div class="action_bottom">
+          <p><button class="btn" type="submit">{{ 'customer.addresses.update' | t }}</button></p>
+          <p><span class="note"><a href="#" onclick="$(this).closest('.edit_address').toggleClass('hidden'); return false;">{{ 'customer.addresses.cancel' | t }}</a></span></p>
+        </div>
+      {% endform %}
+    </div>
+  </div><!-- end .address_table -->
+  {% endfor %}
+
+  <div id="address_pagination">{{ paginate | default_pagination }}</div>
+{% endpaginate %}
+</div><!-- end #address_tables -->
+{% endcomment %}
+
+
+{% comment %}
+<script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+<script type="text/javascript" charset="utf-8">
+document.addEventListener("DOMContentLoaded", function(event) {
+  $('.address-delete').on('click', function(evt) {
+    evt.preventDefault();
+    var $el = $(this);
+    var target = $el.data('target');
+    var confirmMessage = $el.data('confirm-message');
+
+    if (
+      confirm(confirmMessage || 'Are you sure you wish to delete this address?')
+    ) {
+      Shopify.postLink(target, {
+        parameters: { _method: 'delete' }
+      });
+    }
+  });
+
+  $('.address-edit-toggle').on('click', function(evt) {
+    evt.preventDefault();
+    var formId = $(this).data('form-id');
+    var $editButton = $(this);
+    var $editAddress = $('#edit_address_' + formId);
+    var isExpanded = $editButton.attr('aria-expanded') === 'true';
+
+    $editAddress.toggleClass('hidden');
+    $editButton.attr('aria-expanded', !isExpanded).focus();
+
+
+
+
+
+const elem1 = document.getElementById('address_phone_'+formId);
+const zip1 = document.getElementById('address_zip_'+formId);
+  const element1 = document.createElement("p");
+   const error1 = document.createElement("p");
+      error1.innerHTML = 'Please enter at max 10 digits without country code';
+      element1.innerHTML='Delivery code unserviceable';
+      element1.style.display='none';
+let serviceableCode1 = {};
+         zip1.parentNode.insertBefore(element1, zip1.nextSibling);      
+      const validator1 = async () => {
+        let val1 = elem1.value.replace(/[^0-9]/g, '');
+        let val21 = zip1.value.replace(/[^0-9]/g, '');
+        const country1 = document.getElementById('address_country_'+formId).value;
+        if(country1 === 'India'){
+        	zip1.value = val21.substring(0,6);
+        }
+        if(val1[0] !== '6' && val1[0] !== '7' && val1[0] !== '8' && val1[0] !== '9'){
+        	val1 = '';
+        }
+        if(country1 === 'India'){
+        elem1.value = val1.substring(0,10);        
+        }
+        if(elem1.value.length  && elem1.value.length !== 10 && country1 === 'India'){
+        	error1.style.display = 'initial';
+        	//button.disabled = true;
+        } 
+      }
+  window.addEventListener("load",(event) => {
+      	setInterval(() => validator1(), 0);
+      })
+
+      elem.addEventListener("change", (event) => {
+			validator1();
+      })
+
+      document.querySelectorAll('input').forEach(item => {
+  			item.addEventListener('input', event => {
+    			validator1();
+  			})
+		})
+
+      $('#address_city_'+formId).attr({ maxLength : 50 });
+     // $('#address_phone_new').attr({ minLength : 10 });
+
+      
+
+    //   $("#address_city_"+formId).keypress(function(event){
+    //     var inputValue = event.charCode;
+    //     if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+    //         event.preventDefault();
+    //     }
+    // });
+
+
+
+  $("#address_city_"+formId).on('keypress', function (event) {
+    var regex = new RegExp("^[a-zA-Z ]+$");
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!regex.test(key)) {
+       event.preventDefault();
+       return false;
+    }
+});
+    
+    
+
+    
+
+
+
+    
+  });
+
+  // initialize observers on address selectors
+  new Shopify.CountryProvinceSelector('address_country_new', 'address_province_new', {hideElement: 'address_province_container_new'});
+  {% for address in customer.addresses %}
+    new Shopify.CountryProvinceSelector('address_country_{{address.id}}', 'address_province_{{address.id}}', {hideElement: 'address_province_container_{{address.id}}'});
+  {% endfor %}
+});
+</script>
+
+    
+<!--  Script for address validation    -->
+
+
+<script>
+  // function address_checker(char){
+  // 	if(char >= 'A' && char <= 'Z')return true;
+  //   if(char >='a' && char <='z')return true;
+  //   if(char >='0' && char <='9')return true;
+  //   if(char == ' ')return true;
+  //   if(char == '-')return true;
+  //   if(char == ',')return true;
+  //   if(char == '\/')return true;
+  //   return false;
+  // }
+  
+    	// const elem = document.getElementById('address_phone_new');
+     // 	const zip = document.getElementById('address_zip_new');
+     //  	const button = document.getElementById('continue_button');
+     //    const addr1 = document.getElementById('address_address2_new');
+     //  const name1 = document.getElementById('address_first_name_new');
+     //  const name2 = document.getElementById('address_last_name_new');
+     //  const addr2 = document.getElementById('address_address1_new');
+     //  const city = document.getElementById('address_city_new');
+     //  const error = document.createElement("p");
+     //  error.innerHTML = 'Please enter at max 10 digits without country code';
+
+
+// const element = document.createElement("p");
+//       element.innerHTML='Delivery code unserviceable';
+//       element.style.display='none';
+//       let serviceableCode = {};
+//          zip.parentNode.insertBefore(element, zip.nextSibling);      
+//       const validator = async () => {
+//         let val2 = zip.value.replace(/[^0-9]/g, ''); 
+//         const country = document.getElementById('address_country_new').value;
+//         if(country === 'India'){
+//         	zip.value = val2.substring(0,6);
+//         }
+
+  // edit address phonenumber validation
+  $(document).on('click','#address_tables [type="submit"]',function(){
+    let phonenumber = $(this).parents('form').find('input[name="address[phone]"]').val();
+    if(phonenumber.length == 10){
+      $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid #d9d9d9');
+      return true;
+    } else {
+      $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid red');
+      return false;
+    }
+  });
+
+  // clear phonenumber error
+  $(document).on('keyup','#address_tables input[name="address[phone]"]', function(){
+      let value = $(this).val();
+    if(value.length == 10){
+      $(this).css('border','1px solid #d9d9d9');
+    } else {
+      $(this).css('border','1px solid red');
+    }
+  });
+
+  // add address phonenumber validation
+  $(document).on('click','#add_address [type="submit"]',function(){
+    let phonenumber = $(this).parents('form').find('input[name="address[phone]"]').val();
+    if(phonenumber.length == 10){
+      $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid #d9d9d9');
+      return true;
+    } else {
+      $(this).parents('form').find('input[name="address[phone]"]').css('border','1px solid red');
+      return false;
+    }
+  });
+
+  // clear phonenumber error
+  $(document).on('keyup','#add_address input[name="address[phone]"]', function(){
+      let value = $(this).val();
+    if(value.length == 10){
+      $(this).css('border','1px solid #d9d9d9');
+    } else {
+      $(this).css('border','1px solid red');
+    }
+  });
+
+  const elem = document.getElementById('address_phone_new');
+const zip = document.getElementById('address_zip_new');
+  const element = document.createElement("p");
+   const error = document.createElement("p");
+      error.innerHTML = 'Please enter at max 10 digits without country code';
+      element.innerHTML='Delivery code unserviceable';
+      element.style.display='none';
+let serviceableCode = {};
+         zip.parentNode.insertBefore(element, zip.nextSibling);      
+      const validator = async () => {
+        let val = elem.value.replace(/[^0-9]/g, '');
+        let val2 = zip.value.replace(/[^0-9]/g, '');
+        const country = document.getElementById('address_country_new').value;
+        if(country === 'India'){
+        	zip.value = val2.substring(0,6);
+        }
+        if(val[0] !== '6' && val[0] !== '7' && val[0] !== '8' && val[0] !== '9'){
+        	val = '';
+        }
+        if(country === 'India'){
+        elem.value = val.substring(0,10);        
+        }
+        if(elem.value.length  && elem.value.length !== 10 && country === 'India'){
+        	error.style.display = 'initial';
+        	//button.disabled = true;
+        } 
+      }
+  window.addEventListener("load",(event) => {
+      	setInterval(() => validator(), 0);
+      })
+
+      elem.addEventListener("change", (event) => {
+			validator();
+      })
+
+      document.querySelectorAll('input').forEach(item => {
+  			item.addEventListener('input', event => {
+    			validator();
+  			})
+		})
+
+      $('#address_city_new').attr({ maxLength : 50 });
+     // $('#address_phone_new').attr({ minLength : 10 });
+
+      
+
+    //   $("#address_city_new").keypress(function(event){
+    //     var inputValue = event.charCode;
+    //     if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+    //         event.preventDefault();
+    //     }
+    // });
+
+
+
+  $('#address_city_new').on('keypress', function (event) {
+    var regex = new RegExp("^[a-zA-Z ]+$");
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!regex.test(key)) {
+       event.preventDefault();
+       return false;
+    }
+});
+
+    
+</script>
+{% endcomment %}
+
+
+
+
